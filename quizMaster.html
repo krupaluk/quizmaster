@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>quiz-master</title>
+    <style>
+        :root { --ios-blue: #007aff; --ios-bg: #f2f2f7; --ios-card: #ffffff; --ios-text: #000000; --ios-gray: #8e8e93; --soft-green: #f2faf5; --soft-red: #fff5f5; --border-green: #34c759; --border-red: #ff3b30; --neutral-bg: #f8f8f8; --neutral-border: #d1d1d6; }
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--ios-bg); color: var(--ios-text); margin: 0; padding: 15px; display: flex; justify-content: center; }
+        #app { width: 100%; max-width: 500px; }
+        header { text-align: center; font-size: 12px; color: var(--ios-gray); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+        .card { background: var(--ios-card); border-radius: 25px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        .question-text { font-size: 23px; font-weight: 700; margin-bottom: 25px; line-height: 1.25; }
+        .ans-group { margin-bottom: 12px; }
+        .btn { display: block; width: 100%; padding: 18px 20px; border: none; border-radius: 20px; font-size: 19px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-align: left; background: var(--ios-bg); color: var(--ios-blue); }
+        .btn-next { background: var(--ios-blue); color: white; text-align: center; font-weight: 600; width: 100%; padding: 18px; border-radius: 20px; border: none; font-size: 19px; margin-top: 10px; display: none; }
+        .sub-expl { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; font-size: 16px; line-height: 1.4; color: #333; margin: 0 5px; border-left: 4px solid transparent; background: var(--neutral-bg); }
+        .sub-expl.show { max-height: 400px; margin-top: 10px; margin-bottom: 12px; padding: 12px 15px; border-left-color: var(--neutral-border); }
+        .sub-expl.highlight-correct { background: var(--soft-green) !important; border-left-color: var(--border-green) !important; }
+        .sub-expl.highlight-wrong { background: var(--soft-red) !important; border-left-color: var(--border-red) !important; }
+        .btn.correct-btn { background: var(--border-green) !important; color: white !important; }
+        .btn.wrong-btn { background: var(--border-red) !important; color: white !important; }
+        select { width: 100%; padding: 18px; border-radius: 15px; border: 1px solid #ddd; font-size: 19px; background: #fff; margin-bottom: 20px; appearance: none; text-align: center; }
+        .hidden { display: none; }
+        .badge { display: inline-block; padding: 5px 12px; border-radius: 10px; background: #e5e5ea; color: #3a3a3c; font-size: 13px; font-weight: 700; }
+        .badge-green { background: var(--soft-green); color: var(--border-green); border: 1px solid var(--border-green); }
+        .badge-red { background: var(--soft-red); color: var(--border-red); border: 1px solid var(--border-red); }
+        .status-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .grade-display { font-size: 85px; font-weight: 800; color: var(--ios-blue); margin: 20px 0; text-align: center; }
+        .hub-item { display: flex; align-items: center; padding: 12px; background: var(--ios-bg); margin-bottom: 8px; border-radius: 15px; cursor: pointer; }
+        .hub-item input { margin-right: 15px; transform: scale(1.5); }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <header id="main-header">QUIZ-MASTER</header>
+
+    <div id="sc-hub" class="card">
+        <h2 style="font-size: 26px; text-align: center;">Vyberte témata</h2>
+        <div id="hub-list" style="margin-bottom: 20px;"></div>
+        <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="loadAndGoToSetup()">Pokračovat</button>
+    </div>
+
+    <div id="sc-setup" class="card hidden" style="text-align: center;">
+        <h2 style="font-size: 26px;">Nastavení</h2>
+        <p style="color: var(--ios-gray); margin-bottom: 25px;">Zvolte počet otázek z vybraných témat:</p>
+        <select id="sel-count"></select>
+        <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startQuiz()">Spustit test</button>
+        <button class="btn" style="margin-top: 10px; text-align: center;" onclick="location.reload()">Zpět k tématům</button>
+    </div>
+
+    <div id="sc-quiz" class="hidden">
+        <div class="status-bar">
+            <div id="quiz-status" class="badge">OTÁZKA</div>
+            <div>
+                <span id="count-correct" class="badge badge-green">0</span>
+                <span id="count-wrong" class="badge badge-red">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div id="q-text" class="question-text"></div>
+            <div id="ans-container"></div>
+            <button id="btn-continue" class="btn-next" onclick="next()">Pokračovat</button>
+        </div>
+    </div>
+
+    <div id="sc-res" class="hidden card">
+        <h2 style="text-align: center;">Výsledek</h2>
+        <div id="res-grade" class="grade-display"></div>
+        <p id="res-stat" style="font-size: 19px; text-align: center;"></p>
+        <div id="res-retry" class="hidden">
+            <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center;"></p>
+            <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
+        </div>
+        <button class="btn" style="margin-top: 15px; text-align: center;" onclick="location.reload()">Nový test</button>
+    </div>
+</div>
+
+<script src="quizMaster_config.js"></script>
+
+<script>
+let db = [];
+let activeQ = [], cur = 0, score = 0, errs = [], loop = false, total = 0;
+let sessCorrect = 0, sessWrong = 0;
+
+function initHub() {
+    const list = document.getElementById('hub-list');
+    if (typeof availableQuizzes !== 'undefined') {
+        availableQuizzes.forEach(q => {
+            const div = document.createElement('div');
+            div.className = 'hub-item';
+            div.innerHTML = `<input type="checkbox" value="${q.id}" data-file="${q.file}" class="quiz-check"> <span>${q.title}</span>`;
+            div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
+            list.appendChild(div);
+        });
+    } else {
+        list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
+    }
+}
+
+async function loadAndGoToSetup() {
+    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+    if (checks.length === 0) return alert("Vyberte aspoň jedno téma!");
+
+    db = [];
+    
+    for (let ch of checks) {
+        const file = ch.getAttribute('data-file');
+        const id = ch.value;
+
+        await new Promise((resolve) => {
+            // Smažeme starý skript, pokud tam zbyl z minula
+            const old = document.querySelector(`script[data-id="${id}"]`);
+            if (old) old.remove();
+
+            const s = document.createElement('script');
+            s.src = file;
+            s.setAttribute('data-id', id);
+            
+            s.onload = () => {
+                // Krátká pauza, aby se kód v souboru stihl vykonat
+                setTimeout(() => {
+                    const raw = window['data_' + id];
+                    if (raw) {
+                        const questionsToAdd = raw.questions ? raw.questions : (Array.isArray(raw) ? raw : []);
+                        db = db.concat(questionsToAdd);
+                        console.log(`Načteno ${questionsToAdd.length} otázek z ${id}`);
+                    } else {
+                        console.error(`CHYBA: window.data_${id} neexistuje. Zkontrolujte začátek souboru ${file}.`);
+                    }
+                    resolve();
+                }, 50);
+            };
+
+            s.onerror = () => {
+                console.error(`Soubor ${file} nebyl nalezen.`);
+                resolve();
+            };
+
+            document.head.appendChild(s);
+        });
+    }
+
+    if (db.length === 0) {
+        return alert("Chyba: Nepodařilo se načíst žádné otázky. Ujistěte se, že v .js souboru začínáte řádkem: window.data_" + checks[0].value + " = ...");
+    }
+
+    // Příprava výběru počtu (zůstává stejná)
+    const sel = document.getElementById('sel-count');
+    sel.innerHTML = '';
+    const maxQ = db.length;
+    if (maxQ < 5) {
+        let o = document.createElement('option'); o.value = maxQ; o.text = maxQ; sel.add(o);
+    } else {
+        for(let i=5; i<=maxQ; i+=5) { 
+            let o = document.createElement('option'); o.value=i; o.text=i; sel.add(o); 
+        }
+        if (maxQ % 5 !== 0) {
+            let o = document.createElement('option'); o.value=maxQ; o.text=maxQ; sel.add(o);
+        }
+    }
+    showScreen('sc-setup');
+}
+
+
+
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+function startQuiz() {
+    total = parseInt(document.getElementById('sel-count').value);
+    activeQ = [...db];
+    shuffle(activeQ);
+    activeQ = activeQ.slice(0, total);
+    cur = 0; score = 0; errs = []; loop = false;
+    sessCorrect = 0; sessWrong = 0;
+    updateStats();
+    showScreen('sc-quiz');
+    render();
+}
+
+function updateStats() {
+    document.getElementById('count-correct').innerText = sessCorrect;
+    document.getElementById('count-wrong').innerText = sessWrong;
+}
+
+function render() {
+    const q = activeQ[cur];
+    document.getElementById('quiz-status').innerText = loop ? "OPRAVA CHYB" : `OTÁZKA ${cur+1}/${total}`;
+    document.getElementById('q-text').innerText = q.q;
+    document.getElementById('btn-continue').style.display = 'none';
+    const box = document.getElementById('ans-container');
+    box.innerHTML = '';
+    ['a','b','c'].forEach(k => {
+        const group = document.createElement('div');
+        group.className = 'ans-group';
+        const b = document.createElement('button');
+        b.className = 'btn';
+        b.innerText = q[k];
+        b.id = 'btn-' + k;
+        b.onclick = () => check(k);
+        const ex = document.createElement('div');
+        ex.className = 'sub-expl';
+        ex.id = 'ex-' + k;
+        ex.innerText = q.expl[k];
+        group.appendChild(b);
+        group.appendChild(ex);
+        box.appendChild(group);
+    });
+}
+
+function check(k) {
+    const q = activeQ[cur];
+    const choices = ['a', 'b', 'c'];
+    choices.forEach(key => { document.getElementById('btn-' + key).onclick = () => toggleExpl(key); });
+    const selectedBtn = document.getElementById('btn-' + k);
+    const selectedEx = document.getElementById('ex-' + k);
+    const correctBtn = document.getElementById('btn-' + q.ans);
+    const correctEx = document.getElementById('ex-' + q.ans);
+    if (k === q.ans) {
+        selectedBtn.classList.add('correct-btn');
+        selectedEx.classList.add('show', 'highlight-correct');
+        if (!loop) { score++; sessCorrect++; }
+    } else {
+        selectedBtn.classList.add('wrong-btn');
+        selectedEx.classList.add('show', 'highlight-wrong');
+        correctBtn.classList.add('correct-btn');
+        correctEx.classList.add('show', 'highlight-correct');
+        errs.push(q);
+        if (!loop) sessWrong++;
+    }
+    updateStats();
+    document.getElementById('btn-continue').style.display = 'block';
+}
+
+function toggleExpl(k) {
+    const ex = document.getElementById('ex-' + k);
+    ex.classList.toggle('show');
+}
+
+function next() {
+    cur++;
+    if(cur < activeQ.length) render();
+    else finish();
+}
+
+function finish() {
+    showScreen('sc-res');
+    const hasErrors = errs.length > 0;
+    if(!loop) {
+        const p = (score / total) * 100;
+        let g = p >= 90 ? 'A' : p >= 80 ? 'B' : p >= 70 ? 'C' : p >= 60 ? 'D' : p >= 50 ? 'E' : 'F';
+        document.getElementById('res-grade').innerText = g;
+        document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${score} / ${total}</b> (${Math.round(p)}%)`;
+    } else {
+        if (!hasErrors) {
+            document.getElementById('res-grade').innerText = "✓";
+            document.getElementById('res-stat').innerText = "Všechny chyby byly opraveny!";
+        } else {
+            document.getElementById('res-grade').innerText = "!";
+            document.getElementById('res-stat').innerText = `Stále zbývá opravit ${errs.length} chyb.`;
+        }
+    }
+    document.getElementById('res-retry').className = hasErrors ? '' : 'hidden';
+    document.getElementById('res-retry-msg').innerText = loop ? `Zbývá opravit ${errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
+}
+
+function startErrorLoop() {
+    activeQ = [...errs]; errs = []; cur = 0; loop = true;
+    showScreen('sc-quiz');
+    render();
+}
+
+function showScreen(id) {
+    ['sc-hub', 'sc-setup', 'sc-quiz', 'sc-res'].forEach(s => document.getElementById(s).classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+}
+
+initHub();
+</script>
+</body>
+</html>
