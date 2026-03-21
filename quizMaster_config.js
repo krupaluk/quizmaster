@@ -6,6 +6,12 @@ const availableQuizzes = [
         desc: "Cesta ke kořenům západního myšlení. Od mýtů k logu, přes hledání pralátky (arché) až po vrcholné systémy Platóna a Aristotela."
     },
     { 
+        id: "filosofie_Helenismus", 
+        file: "quizdata_filosofie_ObdobiHelenismu.js",
+        title: "Filosofie: Období Helénismu",
+        desc: "Filosofická cesta za vnitřní svobodou v rozbouřeném světě, která skrze praktickou etiku stoiků, epikurejců a skeptiků hledá cestu k duševnímu klidu. Kromě kynické askeze Diogena, římské moudrosti Senecy a Marca Aurelia či Plótínova novoplatonismu probereme také eklektismus reprezentovaný Ciceronem, ranou křesťanskou syntézu Filóna Alexandrijského a systematický atomismus básníka Lucretia."
+    },	
+    { 
         id: "logika_DejinyAPredstavitele", 
         file: "quizdata_logika_dejiny_a_predstavitele.js", 
         title: "Logika: Dějiny a významní představitelé",
