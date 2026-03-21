@@ -14,4 +14,9 @@ const availableQuizzes = [
 		file: "quizdata_logika_formalniLogika.js", 
 		title: "Logika: Formální Logika" 
 	},	
+    { 
+		id: "prvouka_DomaciAHospodarskaZvirata", 
+		file: "quizdata_domaci_a_hospodarska_zvirata.js", 
+		title: "Prvouka: Domácí a hospodářská zvířata" 
+	},		
 ];
