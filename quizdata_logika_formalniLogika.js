@@ -1,410 +1,1004 @@
 window. data_logika_FormalniLogika = {
     "quizTitle": "Logika: Formální Logika",
     "questions": [
-// --- 1. NEGACE (10x) ---
         {
-            q: "Jaká je negace výroku 'Všichni studenti prospěli'?",
-            a: "Všichni studenti neprospěli", b: "Alespoň jeden student neprospěl", c: "Žádný student neprospěl",
-            ans: "b",
-            expl: {
-                a: "To je opačný extrém. K popření stačí jediný neúspěch.",
-                b: "Správně. Negací 'Všichni' je 'Existuje alespoň jeden, který ne'.",
-                c: "To je pouze silnější verze odpovědi A, logicky nesprávná negace."
-            }
-        },
-        {
-            q: "Negace výroku 'Prší a mrzne' je:",
-            a: "Neprší a nemrzne", b: "Neprší nebo nemrzne", c: "Prší nebo mrzne",
-            ans: "b",
-            expl: {
-                a: "Pozor na De Morganovy zákony. Negace spojky 'a' se mění na 'nebo'.",
-                b: "Správně. ¬(A ∧ B) ≡ ¬A ∨ ¬B.",
-                c: "To je nesmysl, musíte popřít obě složky."
-            }
-        },
-        {
-            q: "Negace výroku 'Někteří lidé nelžou' je:",
-            a: "Všichni lidé lžou", b: "Nikdo nelže", c: "Někteří lidé lžou",
+            q: "Co ve formální logice nejčastěji zastupují písmena jako P, Q nebo A, B?",
+            a: "Celé věty (výroky), které jsou buď pravdivé, nebo nepravdivé.", b: "Náhodná čísla.", c: "Jména slavných logiků.",
             ans: "a",
             expl: {
-                a: "Správně. Negací 'Někteří ne' (O) je 'Všichni' (A).",
-                b: "To by byla negace 'Někteří lžou'.",
-                c: "To není negace, ale pouze jiný popis stavu."
+                a: "Písmena jsou 'zkratky' za tvrzení typu 'Prší' nebo 'Sókratés je člověk'.",
+                b: "K práci s čísly slouží matematika, logika pracuje s pravdivostí tvrzení.",
+                c: "Jména se v zápisu nepoužívají, logika je abstraktní."
             }
         },
         {
-            q: "Jak negujeme 'Pokud prší, zůstanu doma'?",
-            a: "Neprší a zůstanu doma", b: "Prší a nezůstanu doma", c: "Pokud neprší, nezůstanu doma",
+            q: "Jak se nazývá symbol '¬' (někdy psaný jako '~') a co znamená?",
+            a: "Konjunkce (a zároveň)", b: "Negace (není pravda, že...)", c: "Implikace (jestliže... pak)",
             ans: "b",
             expl: {
-                a: "Negace implikace musí zachovat pravdivost předpokladu a popřít následek.",
-                b: "Správně. ¬(p → q) ≡ p ∧ ¬q. (Slib porušen: prší, ale venku jsem).",
-                c: "To je klam, změna předpokladu není negací slibu."
+                a: "Konjunkce má jiný symbol (∧).",
+                b: "Tento háček prostě otočí pravdivost věty na opak.",
+                c: "Implikace se značí šipkou (→)."
             }
         },
         {
-            q: "Negace 'Budu pít čaj nebo kávu' je:",
-            a: "Nebudu pít čaj a nebudu pít kávu", b: "Nebudu pít čaj nebo nebudu pít kávu", c: "Budu pít jen vodu",
+            q: "Symbol '∧' připomíná stříšku nebo velké 'A'. Co znamená?",
+            a: "Nebo (disjunkce)", b: "A zároveň (konjunkce)", c: "Rovná se",
+            ans: "b",
+            expl: {
+                a: "Pro 'nebo' se používá symbol '∨', který vypadá jako písmeno 'v'.",
+                b: "Mnemotechnická pomůcka: 'A' jako 'And' (anglicky 'a'). Musí platit obě části najednou.",
+                c: "Rovnost nebo ekvivalence má symbol '↔' nebo '≡'."
+            }
+        },
+        {
+            q: "Symbol '∨' vypadá jako rozevřený kalich. Co vyjadřuje?",
+            a: "Disjunkci (nebo)", b: "Negaci (ne)", c: "Vyloučení",
             ans: "a",
             expl: {
-                a: "Správně. ¬(A ∨ B) ≡ ¬A ∧ ¬B. Popřete obojí najednou.",
-                b: "Špatně, spojka 'nebo' se musí změnit na 'a'.",
-                c: "To je sice fakticky možné, ale logicky to není negace výroku."
+                a: "V logice to znamená, že platí alespoň jedna z možností (nebo obě).",
+                b: "Negace je háček před písmenem.",
+                c: "Vyloučení (buď, anebo) se značí speciálním symbolem, '∨' je mírnější."
             }
         },
         {
-            q: "Výrok 'Není pravda, že neposlouchám' je ekvivalentní s:",
-            a: "Neposlouchám", b: "Poslouchám", c: "Někdy poslouchám",
+            q: "Pokud 'P' znamená 'Venku prší', co znamená zápis '¬P'?",
+            a: "Venku sněží.", b: "Není pravda, že venku prší.", c: "Venku je hezky.",
             ans: "b",
             expl: {
-                a: "Dvě negace se v klasické logice ruší.",
-                b: "Správně. Zákon dvojí negace ¬(¬p) ≡ p.",
-                c: "Dvojí negace vrací plnou platnost, nikoliv jen částečnou."
+                a: "Logika neví o sněhu, jen o popření deště.",
+                b: "Negace pouze popírá původní výrok, neříká, co se děje místo toho.",
+                c: "To je interpretace, logicky je to jen 'ne-P'."
             }
         },
         {
-            q: "Negace 'Žádný učený z nebe nespadl' je:",
-            a: "Všichni učení z nebe spadli", b: "Alespoň jeden učený z nebe spadl", c: "Někteří učení spadli ze stromu",
+            q: "Mějme P = 'Jím' a Q = 'Piju'. Jak zapíšeme 'Jím a zároveň piju'?",
+            a: "P ∨ Q", b: "P ∧ Q", c: "P → Q",
             ans: "b",
             expl: {
-                a: "To je opačný extrém, nikoliv minimální logická negace.",
-                b: "Správně. Negací 'Žádný není' je 'Alespoň jeden je'.",
-                c: "To je irelevantní záměna pojmů."
+                a: "To by znamenalo, že dělám alespoň jedno z toho (možná jen jím).",
+                b: "Stříška spojuje obě činnosti do jednoho celku.",
+                c: "Šipka by znamenala, že když jím, tak z toho vyplývá, že piju."
             }
         },
         {
-            q: "Negace 'Mám auto i dům' je:",
-            a: "Nemám auto nebo nemám dům", b: "Nemám auto ani dům", c: "Mám auto, ale ne dům",
+            q: "Jak se čte symbol '→' v logické větě 'P → Q'?",
+            a: "P, právě když Q", b: "Jestliže P, pak Q", c: "P a zároveň Q",
+            ans: "b",
+            expl: {
+                a: "To je ekvivalence (obousměrná šipka).",
+                b: "Šipka ukazuje směr vyplývání – z předpokladu k následku.",
+                c: "To je konjunkce (stříška)."
+            }
+        },
+        {
+            q: "Co vyjadřuje symbol obousměrné šipky '↔'?",
+            a: "Ekvivalenci (P platí tehdy a jen tehdy, když platí Q)", b: "Rozpor (P se tluče s Q)", c: "Možnost",
             ans: "a",
             expl: {
-                a: "Správně. Stačí, když mi chybí jedna z věcí, aby tvrzení 'mám obojí' neplatilo.",
-                b: "To je silnější popření, k logické negaci stačí disjunkce záporů.",
-                c: "To je jen jeden z případů, kdy negace platí, ne její obecná forma."
+                a: "Obě strany musí mít vždy stejnou pravdivostní hodnotu.",
+                b: "Rozpor nemá vlastní jednoduchou šipku.",
+                c: "Možnost řeší modální logika jinými symboly."
             }
         },
         {
-            q: "Jak negujeme 'Půjdeš buď se mnou, nebo s ním' (exkluzivní)?",
-            a: "Nepůjdeš se mnou a nepůjdeš s ním", b: "Půjdeš s oběma nebo s nikým", c: "Půjdeš s ním",
+            q: "K čemu slouží v logických zápisech závorky, např. ¬(P ∧ Q)?",
+            a: "Pro ozdobu.", b: "Určují prioritu – co se má vyhodnotit jako celek.", c: "Označují šeptanou část věty.",
             ans: "b",
             expl: {
-                a: "To je jen polovina pravdy negace exkluzivity.",
-                b: "Správně. Negace 'buď, anebo' znamená, že nastanou obě možnosti nebo žádná.",
-                c: "To je pouze jedna z možností původního výroku."
+                a: "V logice má každý znak svůj přísný účel.",
+                b: "Podobně jako v matematice říkají, na co se vztahuje negace nebo jiná spojka.",
+                c: "Logika neřeší hlasitost ani emoce, jen pravdu."
             }
         },
         {
-            q: "Negace výroku 'Alespoň 3 lidé přišli' je:",
-            a: "Nejvýše 2 lidé přišli", b: "Žádný člověk nepřišel", c: "Méně než 3 lidé přišli",
+            q: "Pokud je výrok P pravdivý, jakou hodnotu má výrok ¬P?",
+            a: "Pravda", b: "Nepravda", c: "Nula",
+            ans: "b",
+            expl: {
+                a: "Negace pravdu vždy obrací.",
+                b: "Opakem pravdy je v klasické logice vždy nepravda.",
+                c: "Nula se používá v matematickém zápisu, ale logicky je to nepravda."
+            }
+        },
+        {
+            q: "Kdy je výrok 'P ∧ Q' (P a Q) pravdivý?",
+            a: "Když je pravdivý alespoň jeden z nich.", b: "Jen když jsou pravdivé oba současně.", c: "Když je jeden z nich nepravdivý.",
+            ans: "b",
+            expl: {
+                a: "To by platilo pro 'nebo' (∨).",
+                b: "Spojka 'a' je přísná – vyžaduje pravdu na obou stranách.",
+                c: "Pokud je jeden nepravdivý, celý 'balíček' je nepravdivý."
+            }
+        },
+        {
+            q: "Kdy je výrok 'P ∨ Q' (P nebo Q) nepravdivý?",
+            a: "Když jsou oba nepravdivé.", b: "Když je jeden z nich pravdivý.", c: "Nikdy, vždycky je to pravda.",
+            ans: "a",
+            expl: {
+                a: "Stačí jedna pravda a 'nebo' platí. Aby neplatilo, musí selhat oba.",
+                b: "Pokud je jeden pravdivý, celé 'nebo' je už zachráněno.",
+                c: "Výrok může být nepravdivý, pokud jsou obě možnosti lživé."
+            }
+        },
+        {
+            q: "Jak se v logice nazývá výrok, který je vždy pravdivý (např. P ∨ ¬P)?",
+            a: "Kontradikce", b: "Tautologie", c: "Axiom",
+            ans: "b",
+            expl: {
+                a: "Kontradikce je výrok, který je vždy nepravdivý.",
+                b: "Tautologie (např. 'Prší, nebo neprší') platí za všech okolností.",
+                c: "Axiom je základní předpoklad, tautologie je vlastnost složeného výroku."
+            }
+        },
+        {
+            q: "Co znamená výraz 'P ≡ Q'?",
+            a: "P je definováno jako Q (jsou identické).", b: "P je větší než Q.", c: "P popírá Q.",
+            ans: "a",
+            expl: {
+                a: "Tři čárky znamenají logickou identitu nebo ekvivalenci.",
+                b: "Logika nepoužívá 'větší/menší' pro výroky.",
+                c: "To by byl zápis P ∧ ¬Q."
+            }
+        },
+        {
+            q: "Představ si P='Svítí slunce'. Jak zapíšeš 'Není pravda, že nesvítí slunce'?",
+            a: "¬P", b: "¬¬P", c: "P ∧ P",
+            ans: "b",
+            expl: {
+                a: "To je jen 'Nesvítí slunce'.",
+                b: "Dvojitá negace se vyruší (v klasické logice), tedy 'není pravda (¬), že ne(¬)svítí(P)'.",
+                c: "To je jen zbytečné opakování téhož."
+            }
+        },
+        {
+            q: "Co znamená symbol '∀'?",
+            a: "Existuje alespoň jeden.", b: "Pro všechny (všeobecný kvantifikátor).", c: "Prázdná množina.",
+            ans: "b",
+            expl: {
+                a: "Pro existenci používáme obrácené 'E' (∃).",
+                b: "Vypadá jako obrácené 'A' (All - všichni).",
+                c: "Prázdná množina se značí přeškrtnutou nulou (∅)."
+            }
+        },
+        {
+            q: "Co znamená symbol '∃'?",
+            a: "Pro žádné.", b: "Existuje alespoň jeden (existenční kvantifikátor).", c: "Konec důkazu.",
+            ans: "b",
+            expl: {
+                a: "Žádné se zapisuje jako negace existence (¬∃).",
+                b: "Vypadá jako obrácené 'E' (Exists - existuje).",
+                c: "Konec důkazu se značí čtverečkem (∎)."
+            }
+        },
+        {
+            q: "Jak zapíšeme: 'Jestliže studuji (S), pak udělám zkoušku (Z)'?",
+            a: "S ∧ Z", b: "S → Z", c: "S ↔ Z",
+            ans: "b",
+            expl: {
+                a: "To říká, že studuji a dělám zkoušku zároveň.",
+                b: "Šipka vyjadřuje podmínku 'jestliže-pak'.",
+                c: "To by znamenalo, že studuji jen tehdy, když dělám zkoušku (a naopak)."
+            }
+        },
+        {
+            q: "Co v logice znamená 'logická hodnota'?",
+            a: "Cena knihy o logice.", b: "Pravda (1) nebo Nepravda (0).", c: "Důležitost argumentu.",
+            ans: "b",
+            expl: {
+                a: "Ekonomika do formální logiky nepatří.",
+                b: "Každý výrok má v klasické logice právě jednu z těchto dvou hodnot.",
+                c: "Logika neřeší, jak je téma důležité, ale zda je pravdivé."
+            }
+        },
+        {
+            q: "Která spojka odpovídá českému 'buď, anebo' (platí jen jedna možnost)?",
+            a: "Inkluzivní nebo (∨)", b: "Exkluzivní nebo (XOR / ⊕)", c: "Implikace (→)",
+            ans: "b",
+            expl: {
+                a: "Běžné '∨' dovoluje, aby platily obě možnosti.",
+                b: "XOR (exclusive or) vylučuje možnost, že by platilo obojí naráz.",
+                c: "Šipka není volba mezi možnostmi, ale závislost."
+            }
+        },
+		        {
+            q: "Jak přečteš zápis ¬(P ∧ Q)?",
+            a: "Není pravda, že P a zároveň Q.", b: "Ne-P a ne-Q.", c: "P nebo Q.",
+            ans: "a",
+            expl: {
+                a: "Negace před závorkou popírá celý obsah závorky jako celek.",
+                b: "To by se zapsalo jako ¬P ∧ ¬Q (bez velkých závorek).",
+                c: "To je úplně jiná spojka."
+            }
+        },
+        {
+            q: "Co znamená zápis (P → Q) ∧ P?",
+            a: "Jestliže P, pak Q, a navíc víme, že P platí.", b: "P a Q jsou stejné.", c: "P nebo Q, ale ne obojí.",
+            ans: "a",
+            expl: {
+                a: "První část je podmínka, druhá část potvrzuje, že předpoklad (P) nastal.",
+                b: "To by byla ekvivalence (↔).",
+                c: "To je exkluzivní disjunkce (⊕)."
+            }
+        },
+        {
+            q: "Který z těchto zápisů říká: 'Nenastane ani P, ani Q'?",
+            a: "¬P ∨ ¬Q", b: "¬P ∧ ¬Q", c: "¬(P → Q)",
+            ans: "b",
+            expl: {
+                a: "To říká, že neplatí alespoň jedno z nich.",
+                b: "Znamená to: 'Neplatí P a zároveň neplatí Q'.",
+                c: "To popírá vztah vyplývání, nikoliv oba jevy."
+            }
+        },
+        {
+            q: "Jak logicky zapíšeš: 'Půjdu ven (V) jen tehdy, když nebude pršet (¬P)'?",
+            a: "V ↔ ¬P", b: "V → ¬P", c: "P ∧ V",
+            ans: "b",
+            expl: {
+                a: "To by znamenalo, že ven chodíš vždy a jen tehdy, když neprší (nikdy jindy).",
+                b: "Šipka říká: 'Pokud jsem venku, nutně z toho plyne, že neprší'.",
+                c: "To říká, že prší a jsi venku."
+            }
+        },
+        {
+            q: "Máme výrok: 'P ∨ (Q ∧ R)'. Co musí platit, aby byl pravdivý?",
+            a: "Musí platit P, nebo musí platit Q i R zároveň.", b: "Musí platit všechna tři písmena.", c: "Nesmí platit P.",
+            ans: "a",
+            expl: {
+                a: "Spojka 'nebo' (∨) rozděluje výrok na dvě hlavní cesty: levou (P) a pravou (Q ∧ R).",
+                b: "Stačilo by jen P, ostatní nemusí být pravda.",
+                c: "P klidně platit může, je to jedna z možností."
+            }
+        },
+        {
+            q: "Co se stane s pravdivostí 'P → Q', pokud je P (předpoklad) nepravdivý?",
+            a: "Celý výrok je nepravdivý.", b: "Celý výrok je automaticky pravdivý.", c: "Výrok nemá žádnou hodnotu.",
+            ans: "b",
+            expl: {
+                a: "To je častá chyba. Implikace lže jen tehdy, když z pravdy plyne lež.",
+                b: "V logice z nepravdy (ex falso) může plynout cokoliv, proto je šipka 'pravdivá'.",
+                c: "V klasické logice má každý výrok vždy hodnotu 0 nebo 1."
+            }
+        },
+        {
+            q: "Jak zapíšeš 'Není pravda, že (P nebo Q)'?",
+            a: "¬P ∨ Q", b: "¬(P ∨ Q)", c: "P ∨ ¬Q",
+            ans: "b",
+            expl: {
+                a: "Zde neguješ jen P, nikoliv celou volbu.",
+                b: "Závorka s negací venku popírá celou disjunkci (nebo).",
+                c: "Zde neguješ jen Q."
+            }
+        },
+        {
+            q: "Představ si zápis ¬¬P ↔ P. Co nám říká?",
+            a: "Že dvě negace se vyruší a výsledek je stejný jako původní P.", b: "Že P je vždy nepravdivé.", c: "Že P a jeho negace jsou totéž.",
+            ans: "a",
+            expl: {
+                a: "Je to zákon dvojí negace – 'není pravda, že nejsem' znamená 'jsem'.",
+                b: "Zápis nic neříká o tom, zda je P pravda, jen že se rovná své dvojité negaci.",
+                c: "P a ¬P jsou opaky, nikoliv totéž."
+            }
+        },
+        {
+            q: "Co znamená symbol '⊥'?",
+            a: "Pravda", b: "Spor / Konstanta nepravda", c: "Kolmice",
+            ans: "b",
+            expl: {
+                a: "Pravda se značí '⊤' (top).",
+                b: "Tento symbol (falsum) reprezentuje výrok, který je vždy nepravdivý.",
+                c: "V geometrii ano, v logice je to symbol pro nepravdu/spor."
+            }
+        },
+        {
+            q: "Jaký je rozdíl mezi (P ∧ Q) ∨ R  a  P ∧ (Q ∨ R)?",
+            a: "Žádný, jsou stejné.", b: "Záleží na prioritě – v prvním případě je hlavní spojka 'nebo', v druhém 'a'.", c: "První je latinsky, druhý řecky.",
+            ans: "b",
+            expl: {
+                a: "Závorky zásadně mění strukturu. V prvním stačí, když platí R, aby to byla pravda.",
+                b: "U druhého musí platit P vždy, jinak je celý výrok nepravdivý.",
+                c: "Jazyk logiky je univerzální, neřeší národní jazyky."
+            }
+        },
+        {
+            q: "Jak zapíšeš 'A i B jsou nepravdivé'?",
+            a: "¬A ∧ ¬B", b: "¬(A ∧ B)", c: "A ↔ B",
+            ans: "a",
+            expl: {
+                a: "Tento zápis jasně říká: Ne-A a zároveň Ne-B.",
+                b: "To by znamenalo jen to, že neplatí obě naráz (jedna by platit mohla).",
+                c: "To říká jen to, že mají stejnou hodnotu (klidně obě pravdivé)."
+            }
+        },
+        {
+            q: "Který zápis odpovídá větě: 'Jestliže vyhraju (V), koupím auto (A) i dům (D)'?",
+            a: "V → (A ∧ D)", b: "(V → A) ∧ D", c: "V ∧ A ∧ D",
+            ans: "a",
+            expl: {
+                a: "Výhra je podmínkou pro obě věci v závorce najednou.",
+                b: "To by znamenalo: 'Když vyhraju, koupím auto, a k tomu (bez podmínek) koupím dům'.",
+                c: "To říká, že se staly všechny tři věci najednou."
+            }
+        },
+        {
+            q: "Co vyjadřuje zápis P ⊕ Q?",
+            a: "P a Q jsou přátelé.", b: "Buď P, nebo Q, ale nikdy obojí najednou.", c: "P plus Q.",
+            ans: "b",
+            expl: {
+                a: "Logika neřeší mezilidské vztahy.",
+                b: "Symbol s křížkem v kroužku (XOR) je ostré 'nebo'.",
+                c: "V logice 'plus' neexistuje, nejbližší je disjunkce (∨)."
+            }
+        },
+        {
+            q: "Pokud P ↔ Q je pravdivé, co to znamená pro hodnoty P a Q?",
+            a: "Musí být obě pravdivé.", b: "Musí mít stejnou hodnotu (buď obě pravda, nebo obě lež).", c: "P musí být pravdivé a Q nepravdivé.",
+            ans: "b",
+            expl: {
+                a: "Mohou být i obě nepravdivé a ekvivalence bude stále platit.",
+                b: "Ekvivalence (↔) je 'váha' – obě strany musí vážit stejně.",
+                c: "V tom případě by ekvivalence byla nepravdivá."
+            }
+        },
+        {
+            q: "Jak zapíšeš: 'Není pravda, že pokud prší (P), tak nepůjdu ven (¬V)'?",
+            a: "¬(P → ¬V)", b: "P → V", c: "¬P ∧ V",
+            ans: "a",
+            expl: {
+                a: "Negace před celou implikací (šipkou) popírá ono pravidlo 'když prší...'.",
+                b: "To je zjednodušení, ale ne přesný překlad popření původní věty.",
+                c: "To by znamenalo: 'Neprší a jdu ven'."
+            }
+        },
+        {
+            q: "Který symbol se používá pro 'vyplývání' (z premis plyne závěr)?",
+            a: "⊢", b: "+", c: "#",
+            ans: "a",
+            expl: {
+                a: "Tzv. 'tack' (připínáček) značí, že z předchozích tvrzení lze odvodit to následující.",
+                b: "Plus se v logice nepoužívá.",
+                c: "Hashtag nemá v logickém zápisu funkci."
+            }
+        },
+        {
+            q: "Co znamená zápis P ∨ ¬P?",
+            a: "Něco platí, nebo to neplatí (zákon vyloučení třetího).", b: "Někdy ano, někdy ne.", c: "P je nula.",
+            ans: "a",
+            expl: {
+                a: "Je to základní tautologie – jedna z těchto možností musí nastat vždy.",
+                b: "Logika nezná 'někdy', jen 'vždy' nebo 'nikdy' v rámci dané situace.",
+                c: "P je proměnná, nikoliv nutně nula."
+            }
+        },
+        {
+            q: "Jak se čte ¬P ∨ Q?",
+            a: "Ne-P nebo Q.", b: "Pokud P, pak Q (logicky ekvivalentní forma).", c: "Obě předchozí odpovědi jsou správně.",
             ans: "c",
             expl: {
-                a: "Správně, ale C je přesnější matematické vyjádření. V logice se obvykle uznává C.",
-                b: "To by platilo, kdyby jich přišlo 0, ale co když přišli 2?",
-                c: "Správně. Negací '3 a více' je '2 a méně' (ostře méně než 3)."
+                a: "To je doslovný překlad symbolů.",
+                b: "V logice je '¬P ∨ Q' přesná definice toho, jak funguje implikace P → Q.",
+                c: "Logika ukazuje, že 'jestliže P, pak Q' je totéž jako 'neplatí P, nebo platí Q'."
             }
         },
-		
-// --- 2. SPOJKY (10x) ---
         {
-            q: "Kdy je konjunkce (p ∧ q) pravdivá?",
-            a: "Když je aspoň jeden pravdivý", b: "Když jsou oba pravdivé", c: "Když je aspoň jeden nepravdivý",
+            q: "Co znamená zápis ∃x P(x)?",
+            a: "Všichni lidé mají vlastnost P.", b: "Existuje alespoň jeden objekt x, pro který platí vlastnost P.", c: "Žádné x nemá vlastnost P.",
             ans: "b",
             expl: {
-                a: "To je disjunkce.",
-                b: "Správně. Spojka 'a' vyžaduje současnou platnost obou částí.",
-                c: "To je definice nepravdivosti konjunkce."
+                a: "To by byl kvantifikátor ∀x.",
+                b: "Obrácené E (∃) hlásí přítomnost alespoň jednoho takového případu.",
+                c: "To by byla negace: ¬∃x P(x)."
             }
         },
         {
-            q: "Kdy je disjunkce (p ∨ q) nepravdivá?",
-            a: "Když je jeden pravdivý a druhý ne", b: "Když jsou oba nepravdivé", c: "Když je první nepravdivý",
+            q: "Jak zapíšeš: 'Některá jablka (J) jsou červená (C)'?",
+            a: "∀x (J(x) → C(x))", b: "∃x (J(x) ∧ C(x))", c: "J ∧ C",
             ans: "b",
             expl: {
-                a: "V disjunkci 'nebo' stačí jedna pravda k celkové pravdě.",
-                b: "Správně. 0 nebo 0 dává 0.",
-                c: "Druhý může být pravda, pak by disjunkce platila."
+                a: "To by znamenalo 'Všechna jablka jsou červená'.",
+                b: "Říkáme: 'Existuje něco, co je zároveň jablkem i červeným'.",
+                c: "To by znamenalo, že jablko a červená jsou jedna a tatáž věc obecně."
+            }
+        },
+		        {
+            q: "Kdy je implikace 'P → Q' nepravdivá?",
+            a: "Když je P pravda a Q lež.", b: "Když jsou P i Q lež.", c: "Když je P lež a Q pravda.",
+            ans: "a",
+            expl: {
+                a: "To je jediný případ, kdy šipka selže – z pravdy nesmí plynout lež.",
+                b: "Z nepravdy může plynout cokoliv, takže celá šipka je 'pravdivá'.",
+                c: "To je platný vztah, šipka zůstává pravdivá."
             }
         },
         {
-            q: "Která spojka odpovídá 'pokud..., pak...'?",
-            a: "Konjunkce", b: "Implikace", c: "Ekvivalence",
+            q: "Jak vypadá negace výroku 'P ∧ Q' podle De Morganových zákonů?",
+            a: "¬P ∧ ¬Q", b: "¬P ∨ ¬Q", c: "¬P → ¬Q",
             ans: "b",
             expl: {
-                a: "To je 'a'.",
-                b: "Správně. Vyjadřuje podmíněný vztah.",
-                c: "To je 'právě tehdy, když'."
+                a: "To je častá chyba – negace 'a' se mění na 'nebo'.",
+                b: "Negace 'P a Q' znamená, že 'neplatí P' NEBO 'neplatí Q'.",
+                c: "Implikace není negací konjunkce."
             }
         },
         {
-            q: "Co vyjadřuje ekvivalence (p ↔ q)?",
-            a: "Oba výroky mají stejnou hodnotu", b: "Jeden výrok vylučuje druhý", c: "Z p plyne q",
+            q: "Jak vypadá negace výroku 'P ∨ Q'?",
+            a: "¬P ∧ ¬Q", b: "¬P ∨ ¬Q", c: "P ∧ Q",
             ans: "a",
             expl: {
-                a: "Správně. Jsou-li oba 1 nebo oba 0, ekvivalence platí.",
-                b: "To by byla non-ekvivalence (XOR).",
-                c: "To je pouze jednostranná implikace."
+                a: "Negace 'P nebo Q' znamená, že neplatí ani jedno (Ne-P a zároveň Ne-Q).",
+                b: "To by byla negace 'a zároveň'.",
+                c: "To je původní výrok bez negací a se špatnou spojkou."
             }
         },
         {
-            q: "Výrok 'Prší nebo neprší' je:",
-            a: "Kontradikce", b: "Tautologie", c: "Empirický fakt",
+            q: "Kolik řádků má pravdivostní tabulka pro výrok se 3 proměnnými (P, Q, R)?",
+            a: "6", b: "8", c: "9",
             ans: "b",
             expl: {
-                a: "Kontradikce je vždy nepravda (Prší a neprší).",
-                b: "Správně. Výrok p ∨ ¬p je vždy pravdivý bez ohledu na počasí.",
-                c: "Není třeba se dívat z okna, abyste věděli, že toto platí."
+                a: "Počet řádků se řídí mocninou dvou (2 na n-tou).",
+                b: "2³ = 8. Pro každou proměnnou se počet kombinací zdvojnásobí.",
+                c: "Lichý počet kombinací v binární logice nenastává."
             }
         },
         {
-            q: "Pokud p=1 a q=0, jaká je hodnota p → q?",
-            a: "1", b: "0", c: "Nelze určit",
+            q: "Co znamená v tabulce zápis '1' pod výsledným sloupcem?",
+            a: "Že výrok je v daném případě pravdivý.", b: "Že ve větě je jedna chyba.", c: "Že výrok je první v pořadí.",
+            ans: "a",
+            expl: {
+                a: "Jednička zastupuje True (pravdu), nula False (nepravdu).",
+                b: "Tabulka nehledá chyby v psaní, ale logickou hodnotu.",
+                c: "Pořadí s hodnotou nesouvisí."
+            }
+        },
+        {
+            q: "Jak zapíšeme negaci věty 'Všichni lidé (L) jsou smrtelní (S)'?",
+            a: "Žádný člověk není smrtelný.", b: "Existuje alespoň jeden člověk, který není smrtelný.", c: "Všichni lidé jsou nesmrtelní.",
             ans: "b",
             expl: {
-                a: "Z pravdy nemůže plynout lež.",
-                b: "Správně. Toto je jediný případ, kdy je implikace nepravdivá.",
-                c: "V klasické logice jsou hodnoty pevně dané tabulkou."
+                a: "To je příliš silné tvrzení, stačí najít jeden protipříklad.",
+                b: "Negace 'všech' (∀) je 'existuje alespoň jeden, pro kterého to neplatí' (∃ + ¬).",
+                c: "To je opět opačný extrém, nikoliv logická negace."
             }
         },
         {
-            q: "Kdy je ekvivalence (0 ↔ 0) pravdivá?",
-            a: "Ne, 0 je nepravda", b: "Ano, hodnoty jsou stejné", c: "Jen v neděli",
+            q: "Co získáme negací existenčního kvantifikátoru ¬∃x P(x)?",
+            a: "∀x ¬P(x) (Pro všechny platí, že nemají vlastnost P)", b: "∃x ¬P(x)", c: "∀x P(x)",
+            ans: "a",
+            expl: {
+                a: "Říct 'neexistuje nikdo takový' je totéž jako 'všichni jsou opační'.",
+                b: "To by znamenalo, že někdo takový existuje, ale s opačnou vlastností.",
+                c: "To je přesný opak původního tvrzení."
+            }
+        },
+        {
+            q: "Výraz 'P ↔ Q' je pravdivý právě tehdy, když:",
+            a: "P i Q mají stejnou pravdivostní hodnotu.", b: "P je pravda a Q je lež.", c: "Alespoň jeden z nich je pravda.",
+            ans: "a",
+            expl: {
+                a: "Ekvivalence (↔) vyžaduje shodu – buď 1 a 1, nebo 0 a 0.",
+                b: "V tomto případě je ekvivalence nepravdivá.",
+                c: "To platí pro disjunkci (∨)."
+            }
+        },
+        {
+            q: "Jak lze zjednodušit zápis ¬¬¬P?",
+            a: "P", b: "¬P", c: "¬¬P",
             ans: "b",
             expl: {
-                a: "Hodnota výroku je 0, ale vztah ekvivalence mezi nimi je 1.",
-                b: "Správně. Ekvivalence říká, že obě strany 'souhlasí'.",
-                c: "Logika je nadčasová."
+                a: "Dvě negace se vyruší, ale třetí zůstává.",
+                b: "Lichý počet negací se vždy chová jako jedna negace.",
+                c: "To lze dále zjednodušit na P, takže to není konečný výsledek."
             }
         },
         {
-            q: "Výrok 'p ∧ ¬p' (Prší a neprší) je:",
-            a: "Kontradikce", b: "Tautologie", c: "Možný stav",
+            q: "Co říká zákon 'Distributivnosti' v logice?",
+            a: "P ∧ (Q ∨ R) je totéž jako (P ∧ Q) ∨ (P ∧ R).", b: "P ∧ Q je totéž jako Q ∧ P.", c: "Všechny výroky se musí rozdělit mezi lidi.",
             ans: "a",
             expl: {
-                a: "Správně. Jde o spor, který nemůže nastat.",
-                b: "Tautologie je vždy pravda.",
-                c: "V klasické logice není spor možný."
+                a: "Funguje to podobně jako roznásobování závorek v matematice.",
+                b: "To je zákon komutativnosti (pořadí u 'a' i 'nebo' nehraje roli).",
+                c: "To je sociální princip, nikoliv logický."
             }
         },
         {
-            q: "Spojka 'buď..., anebo...' se liší od 'nebo' tím, že:",
-            a: "Neliší se", b: "Vylučuje možnost, že platí oba", c: "Je vždy nepravdivá",
+            q: "Která z těchto tabulek odpovídá spojce '∧' (konjunkce)?",
+            a: "1-0-0-0", b: "1-1-1-0", c: "0-1-1-0",
+            ans: "a",
+            expl: {
+                a: "Pravda je jen v prvním případě (když jsou oba 1), zbytek jsou nuly.",
+                b: "To odpovídá spojce 'nebo' (∨).",
+                c: "To odpovídá spojce 'buď, anebo' (⊕)."
+            }
+        },
+        {
+            q: "Představ si zápis (P → Q) ∧ (Q → P). Čím ho lze nahradit?",
+            a: "P ∧ Q", b: "P ↔ Q", c: "P ∨ Q",
             ans: "b",
             expl: {
-                a: "Liší se zásadně v případě (1, 1).",
-                b: "Správně. Jde o exkluzivní disjunkci.",
-                c: "Je pravdivá právě v polovině případů."
+                a: "To je příliš silné, vyžadovalo by to, aby oba byli vždy pravdiví.",
+                b: "Ekvivalence je definována jako oboustranná implikace.",
+                c: "To s implikacemi nesouvisí."
             }
         },
         {
-            q: "Implikace 0 → 1 je:",
-            a: "0", b: "1", c: "Nesmysl",
+            q: "Co znamená, že logická spojka je 'binární'?",
+            a: "Že pracuje se dvěma výroky.", b: "Že má jen dvě barvy.", c: "Že ji vymysleli roboti.",
+            ans: "a",
+            expl: {
+                a: "Spojky jako ∧, ∨, → propojují dva argumenty. Negace (¬) je unární (stačí jí jeden).",
+                b: "Logika barvy neřeší.",
+                c: "Binární soustava je základem robotiky, ale termín označuje počet vstupů."
+            }
+        },
+        {
+            q: "Jak se nazývá výsledek negace tautologie?",
+            a: "Další tautologie.", b: "Kontradikce (vždy nepravdivý výrok).", c: "Splnitelný výrok.",
             ans: "b",
             expl: {
-                a: "Špatně. Pokud slibuji 'Když vyhraješ, dám ti kilo' a ty nevyhraješ, ale já ti kilo přesto dám, slib jsem neporušil.",
-                b: "Správně. Z nepravdy může plynout pravda.",
-                c: "V logice má toto jasnou hodnotu 1."
+                a: "Negace pravdy je lež, takže nemůže vzniknout tautologie.",
+                b: "Pokud je něco 'vždy pravda', jeho negace je 'vždy lež'.",
+                c: "Kontradikce není splnitelná (nikdy není pravda)."
             }
         },
-		
-    // --- 3. ÚSUDKY (10x) ---		
         {
-            q: "Máme úsudek: p → q, p. Co vyplývá?",
-            a: "q", b: "¬q", c: "Nic",
+            q: "Jak zapíšeš 'Není pravda, že (Prší a zároveň nesvítí slunce)'?",
+            a: "¬(P ∧ ¬S)", b: "¬P ∧ S", c: "¬P ∨ ¬S",
             ans: "a",
             expl: {
-                a: "Správně. Toto je pravidlo Modus Ponens.",
-                b: "To by byl spor s předpoklady.",
-                c: "Vyplývá jasný závěr q."
+                a: "Závorka drží situaci pohromadě, negace venku ji popírá jako celek.",
+                b: "To by znamenalo 'Neprší a svítí slunce'.",
+                c: "To by znamenalo 'Neprší nebo nesvítí slunce'."
             }
         },
         {
-            q: "Úsudek: p → q, ¬q. Co vyplývá?",
-            a: "p", b: "¬p", c: "Nic",
+            q: "Co nám říká 'Zákon absorpce'?",
+            a: "P ∧ (P ∨ Q) se rovná prostě P.", b: "P se vyruší s Q.", c: "Všechny nuly se změní na jedničky.",
+            ans: "a",
+            expl: {
+                a: "Pokud už víme, že platí P, pak přidání podmínky 'P nebo Q' nic nového nepřináší.",
+                b: "Absorpce neznamená vyrušení dvou různých proměnných.",
+                c: "Logika hodnoty nemění jen tak, musí k tomu být operátor."
+            }
+        },
+        {
+            q: "V pravdivostní tabulce implikace P → Q najdeme nulu (nepravdu) v kolika řádcích?",
+            a: "V jednom (1 → 0).", b: "Ve dvou.", c: "Ve všech.",
+            ans: "a",
+            expl: {
+                a: "Všechny ostatní kombinace (1→1, 0→1, 0→0) jsou v logice považovány za pravdivé.",
+                b: "To by platilo pro ekvivalenci nebo exkluzivní 'nebo'.",
+                c: "To by byla kontradikce."
+            }
+        },
+        {
+            q: "Jaký je význam symbolu '≡' mezi dvěma složitými zápisy?",
+            a: "Znamená to, že oba zápisy mají identickou pravdivostní tabulku.", b: "Znamená to, že první je důležitější.", c: "Znamená to, že se mají sečíst.",
+            ans: "a",
+            expl: {
+                a: "Používá se pro logickou ekvivalenci formulí (např. De Morganovy zákony).",
+                b: "V logice si jsou všechny správné formule rovny v hodnotě.",
+                c: "Logika nesčítá, ale vyhodnocuje pravdu."
+            }
+        },
+        {
+            q: "Který výrok je negací věty 'Někdo (∃) v této místnosti lže (L)'?",
+            a: "Někdo v této místnosti mluví pravdu.", b: "Všichni (∀) v této místnosti mluví pravdu (¬L).", c: "Nikdo v této místnosti neexistuje.",
             ans: "b",
             expl: {
-                a: "Kdyby platilo p, muselo by platit q, což víme, že neplatí.",
-                b: "Správně. Pravidlo Modus Tollens.",
-                c: "Vyplývá ¬p."
+                a: "To není negace, obojí může být pravda zároveň.",
+                b: "Negací 'aspoň jeden' je 'všichni ne' (nebo 'nikdo ne').",
+                c: "Logika neguje vlastnost (lhaní), nikoliv existenci místnosti."
             }
         },
         {
-            q: "Úsudek: p ∨ q, ¬p. Co vyplývá?",
-            a: "q", b: "¬q", c: "p ∧ q",
+            q: "Co vyjadřuje zápis P ∧ ¬P?",
+            a: "Spor (kontradikci).", b: "Hlubokou filozofickou pravdu.", c: "Možnost volby.",
             ans: "a",
             expl: {
-                a: "Správně. Disjunktivní sylogismus. Pokud musí platit aspoň jeden a první neplatí, musí druhý.",
-                b: "To by popřelo první předpoklad p ∨ q.",
-                c: "O p víme, že neplatí."
+                a: "Něco nemůže zároveň být i nebýt (v klasické logice). Výsledek je vždy 0.",
+                b: "Logika je technická disciplína, spor v ní není přípustný.",
+                c: "Volbu vyjadřuje disjunkce (∨)."
+            }
+        },
+		        {
+            q: "Zákon ¬(A ∨ B) ≡ ¬A ∧ ¬B se nazývá De Morganův. Jak se dá vyjádřit slovy?",
+            a: "Negace 'nebo' je 'ne-A a zároveň ne-B'.", b: "Negace 'nebo' zůstává 'nebo', jen se přidají háčky.", c: "A i B zmizí.",
+            ans: "a",
+            expl: {
+                a: "Když popřeme, že platí alespoň jedna z možností, říkáme tím, že neplatí ani jedna.",
+                b: "To je chyba – při negaci závorky se spojka '∨' vždy otočí na '∧'.",
+                c: "Proměnné v logice nikdy jen tak nemizí."
             }
         },
         {
-            q: "Klam 'Potvrzení následku' vypadá takto:",
-            a: "p → q, p, tedy q", b: "p → q, q, tedy p", c: "p → q, ¬p, tedy ¬q",
+            q: "Jak zní druhý De Morganův zákon pro negaci konjunkce: ¬(A ∧ B)?",
+            a: "¬A ∨ ¬B", b: "¬A ∧ ¬B", c: "A ∨ B",
+            ans: "a",
+            expl: {
+                a: "Negace 'A a zároveň B' znamená, že neplatí A, nebo neplatí B (nebo ani jedno).",
+                b: "To by byla negace disjunkce (nebo).",
+                c: "Negace musí obsahovat symboly pro popření (¬)."
+            }
+        },
+        {
+            q: "Výraz A → B je logicky totožný s ¬A ∨ B. Proč?",
+            a: "Protože implikace 'lže' jen když A platí a B ne (což přesně odpovídá pravé straně).", b: "Protože se to tak logici dohodli.", c: "Protože A a B jsou si rovni.",
+            ans: "a",
+            expl: {
+                a: "Zkus si tabulku: obě formy dají stejné výsledky (1-1-0-1).",
+                b: "Logika není o dohodě, ale o pravdivostních funkcích.",
+                c: "To by platilo jen pro ekvivalenci."
+            }
+        },
+        {
+            q: "Co získáš negací implikace ¬(A → B)?",
+            a: "A ∧ ¬B", b: "¬A → ¬B", c: "A ∨ ¬B",
+            ans: "a",
+            expl: {
+                a: "Popřít slib 'když vyhraju, dám ti peníze' znamená říct: 'vyhrál jsem, ale peníze jsem nedal'.",
+                b: "To je tzv. inverze, která není logicky ekvivalentní negaci.",
+                c: "Disjunkce zde neodpovídá selhání podmínky."
+            }
+        },
+        {
+            q: "Jak zjednodušíš výraz (A ∧ B) ∨ (A ∧ ¬B)?",
+            a: "A", b: "B", c: "A ∧ B",
+            ans: "a",
+            expl: {
+                a: "V obou případech platí A, a je jedno, zda B platí či ne (zákon distribuce a vyloučení třetího).",
+                b: "B se v tomto výrazu v podstatě 'vyruší'.",
+                c: "To by bylo příliš omezené."
+            }
+        },
+        {
+            q: "Čemu je rovno ¬(¬A ∨ ¬B)?",
+            a: "A ∧ B", b: "A ∨ B", c: "¬A ∧ ¬B",
+            ans: "a",
+            expl: {
+                a: "Podle De Morgana otočíme '∨' na '∧' a znegujeme obě strany. Dvojitá negace zmizí.",
+                b: "Spojka se musí otočit.",
+                c: "Negace před závorkou musí zrušit negace uvnitř."
+            }
+        },
+        {
+            q: "Výraz A ↔ B lze rozložit na:",
+            a: "(A → B) ∧ (B → A)", b: "(A → B) ∨ (B → A)", c: "A ∧ B",
+            ans: "a",
+            expl: {
+                a: "Ekvivalence je 'obousměrná šipka', tedy součin dvou implikací.",
+                b: "To by byla tautologie (vždy pravda).",
+                c: "Ekvivalence může platit, i když jsou oba nepravdiví (0 ↔ 0)."
+            }
+        },
+        {
+            q: "Co říká zákon kontrapozice pro implikaci A → B?",
+            a: "¬B → ¬A", b: "B → A", c: "¬A → ¬B",
+            ans: "a",
+            expl: {
+                a: "Tato forma je vždy ekvivalentní (např. 'Když prší, je mokro' = 'Když není mokro, neprší').",
+                b: "Obrácená implikace nemusí být pravdivá.",
+                c: "To je inverze, která také není logicky ekvivalentní."
+            }
+        },
+        {
+            q: "Jak zapíšeš 'A je nutnou podmínkou pro B'?",
+            a: "B → A", b: "A → B", c: "A ∧ B",
+            ans: "a",
+            expl: {
+                a: "Nutná podmínka znamená: 'pokud nastalo B, muselo předtím platit A'.",
+                b: "To by byla podmínka postačující.",
+                c: "To je jen konstatování, že nastaly oba jevy."
+            }
+        },
+        {
+            q: "Zápis A ∨ (B ∧ C) je ekvivalentní s:",
+            a: "(A ∨ B) ∧ (A ∨ C)", b: "(A ∧ B) ∨ (A ∧ C)", c: "A ∨ B ∨ C",
+            ans: "a",
+            expl: {
+                a: "Jde o distributivní zákon – 'nebo' roznásobí závorku s 'a'.",
+                b: "To by platilo, kdyby spojky byly prohozené.",
+                c: "To by platilo, kdyby uvnitř závorky bylo také 'nebo'."
+            }
+        },
+        {
+            q: "Čemu se rovná výraz A ∧ (A ∨ B)?",
+            a: "A", b: "B", c: "A ∨ B",
+            ans: "a",
+            expl: {
+                a: "Zákon absorpce: pokud platí A, pak celá závorka (A nebo B) je už splněna.",
+                b: "Hodnota B nemá na výsledek vliv, pokud známe A.",
+                c: "Vnější spojka '∧' vyžaduje platnost A."
+            }
+        },
+        {
+            q: "Jak zní negace věty: 'Pokud budu pít (P), nebudu řídit (¬Ř)'?",
+            a: "P ∧ Ř", b: "¬P → Ř", c: "P → Ř",
+            ans: "a",
+            expl: {
+                a: "Negace implikace (A → B) je (A ∧ ¬B). Tedy: Piju a zároveň řídím.",
+                b: "To by byla jiná podmínka.",
+                c: "To by znamenalo 'Když piju, tak řídím'."
+            }
+        },
+        {
+            q: "Co vyjadřuje zápis A ⊕ B (exkluzivní disjunkce) pomocí základních spojek?",
+            a: "(A ∨ B) ∧ ¬(A ∧ B)", b: "(A ∧ B) ∨ ¬(A ∨ B)", c: "A ↔ B",
+            ans: "a",
+            expl: {
+                a: "Říkáme: 'Platí A nebo B, ale neplatí obě zároveň'.",
+                b: "To by znamenalo 'Buď oba, nebo žádný'.",
+                c: "To je přesný opak (negace) exkluzivního nebo."
+            }
+        },
+        {
+            q: "Který z těchto výrazů je kontradikce (vždy nepravda)?",
+            a: "A ∧ ¬A", b: "A ∨ ¬A", c: "A → ¬A",
+            ans: "a",
+            expl: {
+                a: "Něco nemůže být a zároveň nebýt.",
+                b: "To je tautologie (vždy pravda).",
+                c: "Tato implikace může být pravdivá (pokud je A nepravda)."
+            }
+        },
+        {
+            q: "Jak zjednodušíš ¬(A ↔ B)?",
+            a: "A ⊕ B", b: "A ↔ ¬B", c: "Obě odpovědi jsou správně.",
+            ans: "c",
+            expl: {
+                a: "Negace ekvivalence je skutečně 'buď, anebo'.",
+                b: "Pokud A a B nejsou stejné, musí být A stejné jako 'ne-B'.",
+                c: "V logice existuje více způsobů, jak zapsat stejnou pravdivostní funkci."
+            }
+        },
+        {
+            q: "Co znamená v logice zápis T ⊨ A?",
+            a: "Z teorie T logicky vyplývá výrok A.", b: "T je rovno A.", c: "T je negací A.",
+            ans: "a",
+            expl: {
+                a: "Symbol 'dvojitého připínáčku' značí sémantické vyplývání.",
+                b: "Rovnost se značí symbolem ≡.",
+                c: "Negace se značí symbolem ¬."
+            }
+        },
+        {
+            q: "Čemu je ekvivalentní ¬A → ¬B?",
+            a: "B → A", b: "A → B", c: "¬(A → B)",
+            ans: "a",
+            expl: {
+                a: "Podle zákona kontrapozice otočíme směr šipky a znegujeme obě strany.",
+                b: "To by platilo jen v případě, že by A a B byly stejné.",
+                c: "Negace implikace není další implikace."
+            }
+        },
+        {
+            q: "Jak zapíšeš: 'Prší (P) tehdy a jen tehdy, když je mokro (M)'?",
+            a: "P ↔ M", b: "P → M", c: "P ∧ M",
+            ans: "a",
+            expl: {
+                a: "Spojení 'tehdy a jen tehdy' je standardní český obrat pro ekvivalenci.",
+                b: "To by byla pouze jedna cesta (jestliže prší, pak je mokro).",
+                c: "To jen konstatuje, že teď prší a je mokro."
+            }
+        },
+        {
+            q: "Zápis ∀x (P(x) ∧ Q(x)) je ekvivalentní s:",
+            a: "(∀x P(x)) ∧ (∀x Q(x))", b: "(∀x P(x)) ∨ (∀x Q(x))", c: "∃x (P(x) ∧ Q(x))",
+            ans: "a",
+            expl: {
+                a: "Kvantifikátor 'pro všechna' lze rozdělit přes konjunkci (a zároveň).",
+                b: "Přes 'nebo' se kvantifikátor takto jednoduše rozdělit nedá.",
+                c: "Existence je mnohem slabší tvrzení než všeobecnost."
+            }
+        },
+        {
+            q: "Jaký je výsledek (A → B) ∨ (B → A)?",
+            a: "Tautologie (vždy 1).", b: "Kontradikce (vždy 0).", c: "Záleží na hodnotách A a B.",
+            ans: "a",
+            expl: {
+                a: "Alespoň jedna šipka bude v klasické logice vždy pravdivá.",
+                b: "Nikdy to nebude vždy nepravda.",
+                c: "U tohoto konkrétního výrazu na hodnotách nezáleží, výsledek je vždy 1."
+            }
+        },
+		        {
+            q: "Jak se nazývá vlastnost formule, která je pravdivá aspoň v jednom řádku tabulky?",
+            a: "Tautologie", b: "Splnitelná", c: "Kontradikce",
             ans: "b",
             expl: {
-                a: "To je platný Modus Ponens.",
-                b: "Správně. To, že nastal následek, neznamená, že musela nastat zrovna tato příčina.",
-                c: "To je klam popření antecedentu."
+                a: "Tautologie musí být pravdivá ve všech řádcích.",
+                b: "Splnitelnost znamená, že existuje alespoň jedna interpretace, kde výrok platí.",
+                c: "Kontradikce není pravdivá v žádném řádku."
             }
         },
         {
-            q: "Co vyplývá z: 'Všichni lidé jsou smrtelní' a 'Sókratés je člověk'?",
-            a: "Sókratés je smrtelný", b: "Sókratés je bůh", c: "Lidé jsou Sókratové",
+            q: "Co nám říká 'Zákon rezoluce' používaný v programování (Prolog)?",
+            a: "Z (A ∨ B) a (¬A ∨ C) vyplývá (B ∨ C).", b: "A se vždy rovná B.", c: "Všechny závorky se musí smazat.",
             ans: "a",
             expl: {
-                a: "Správně. Klasický sylogismus (Barbara).",
-                b: "To odporuje první premisě.",
-                c: "To je logicky nesmyslná konverze."
+                a: "Pokud víme, že platí A nebo B, a zároveň víme, že neplatí A nebo platí C, pak musí platit B nebo C.",
+                b: "To není obecné pravidlo vyvozování.",
+                c: "Rezoluce je algoritmus pro důkazy, nikoliv pro mazání znaků."
             }
         },
         {
-            q: "Klam 'Popření antecedentu' je:",
-            a: "p → q, ¬p, tedy ¬q", b: "p → q, q, tedy p", c: "p → q, ¬q, tedy ¬p",
+            q: "Čemu je ekvivalentní zápis ¬(A ↔ B)?",
+            a: "A ↔ ¬B", b: "¬A ↔ ¬B", c: "A ∧ B",
             ans: "a",
             expl: {
-                a: "Správně. To, že nenastala jedna příčina, neznamená, že následek nezpůsobilo něco jiného.",
-                b: "To je klam potvrzení následku.",
-                c: "To je platný Modus Tollens."
+                a: "Popřít, že jsou stejné, je totéž jako říct, že jedno je rovno negaci druhého.",
+                b: "To je opět ekvivalence (stejnost), protože se obě negace vyruší.",
+                c: "To je jen jedna z mnoha možností, kdy ekvivalence neplatí."
             }
         },
         {
-            q: "Máme p ↔ q a ¬p. Co vyplývá?",
-            a: "q", b: "¬q", c: "p ∨ q",
+            q: "Jak zapíšeš: 'Existuje právě jedno x (unikitní), pro které platí P'?",
+            a: "∃x P(x)", b: "∃!x P(x)", c: "∀x P(x)",
             ans: "b",
             expl: {
-                a: "Ekvivalence vyžaduje stejnou hodnotu. p je 0, tedy i q musí být 0.",
-                b: "Správně. Jsou na 'stejné lodi'.",
-                c: "To by znamenalo, že aspoň jeden je 1, ale oba jsou 0."
+                a: "To znamená 'alespoň jedno', může jich být milion.",
+                b: "Vykřičník za symbolem existence značí jednoznačnost (unique existence).",
+                c: "To znamená, že vlastnost mají úplně všichni."
             }
         },
         {
-            q: "Úsudek 'A → B, B → C, tedy A → C' je:",
-            a: "Hypotetický sylogismus", b: "Klam", c: "Kontradikce",
+            q: "Co znamená sémantický zápis ⊨ A (bez levé strany)?",
+            a: "A je tautologie.", b: "A je nepravda.", c: "A je nedokazatelné.",
             ans: "a",
             expl: {
-                a: "Správně. Jde o tranzitivitu implikace.",
-                b: "Není to klam, je to jeden z nejpevnějších pilířů dedukce.",
-                c: "Není to spor, ale logická pravda."
+                a: "Pokud před symbolem vyplývání nic není, znamená to, že A platí samo o sobě (vždy).",
+                b: "Pro nepravdu by se použil symbol falsum (⊥).",
+                c: "Pro nedokazatelnost se používá přeškrtnutý symbol ⊬."
             }
         },
         {
-            q: "Co znamená v logice 'Ex falso quodlibet'?",
-            a: "Z nepravdy plyne cokoli", b: "Lež má krátké nohy", c: "Pravda zvítězí",
+            q: "Výraz (A ∧ (A → B)) → B je známý jako:",
+            a: "Modus Ponens", b: "Modus Tollens", c: "Reductio ad absurdum",
             ans: "a",
             expl: {
-                a: "Správně. Pokud přijmeme spor (0), můžeme dokázat jakýkoliv nesmysl.",
-                b: "To je přísloví, nikoliv logický princip.",
-                c: "To je motto, ale ne logické pravidlo."
+                a: "Je to základní pravidlo: 'Mám-li A a vím, že z A plyne B, pak mám B'.",
+                b: "Modus Tollens vyvozuje z negace následku negaci předpokladu.",
+                c: "To je důkaz sporem, nikoliv přímé vyvození."
             }
         },
         {
-            q: "Úsudek 'Někteří A jsou B, Někteří B jsou C, tedy Někteří A jsou C' je:",
-            a: "Platný", b: "Neplatný", c: "Tautologie",
+            q: "Jak vypadá pravidlo Modus Tollens v symbolickém zápisu?",
+            a: "((A → B) ∧ ¬B) → ¬A", b: "((A → B) ∧ B) → A", c: "A ∧ ¬A → B",
+            ans: "a",
+            expl: {
+                a: "Pokud z A plyne B, ale B nenastalo, nemohlo nastat ani A.",
+                b: "To je logická chyba (potvrzení následku nezaručuje předpoklad).",
+                c: "To je princip 'ex falso quodlibet' (ze sporu plyne cokoliv)."
+            }
+        },
+        {
+            q: "Co je to 'Prenexní normální forma'?",
+            a: "Zápis, kde jsou všechny kvantifikátory (∀, ∃) na úplném začátku formule.", b: "Zápis bez závorek.", c: "Zápis v latině.",
+            ans: "a",
+            expl: {
+                a: "Usnadňuje to automatické dokazování vět v počítačové logice.",
+                b: "Závorky jsou v této formě stále potřeba uvnitř jádra formule.",
+                c: "Název je z latiny (pre-nex), ale zápis je moderní symbolika."
+            }
+        },
+        {
+            q: "Jaký je vztah mezi ∃x ∀y P(x, y) a ∀y ∃x P(x, y)?",
+            a: "Jsou ekvivalentní.", b: "Z prvního vyplývá druhé, ale ne naopak.", c: "Z druhého vyplývá první.",
             ans: "b",
             expl: {
-                a: "Špatně. Množiny A a C se nemusí vůbec dotýkat.",
-                b: "Správně. Z dvou částečných premis nelze v sylogismu nic vyvodit.",
-                c: "Tautologie je pravda za všech okolností, toto je naopak chyba."
+                a: "Pořadí kvantifikátorů různých druhů zásadně mění význam.",
+                b: "Pokud existuje jedno x pro všechny y, tak pro každé y určitě najdeme to dané x.",
+                c: "To neplatí (např. 'Každý má matku' neznamená 'Existuje jedna žena, co je matkou všech')."
             }
         },
-// --- 4. EXPERTNÍ (10x - SLOŽITĚJŠÍ) ---
         {
-            q: "Jaká je negace výroku 'Pokud prší a fouká, zůstanu doma'?",
-            a: "Prší, fouká a nezůstanu doma", b: "Neprší nebo nefouká a zůstanu doma", c: "Pokud neprší, nezůstanu doma",
+            q: "Čemu je ekvivalentní negace implikace ¬(A → B)?",
+            a: "A ∧ ¬B", b: "¬A ∨ B", c: "B → A",
             ans: "a",
             expl: {
-                a: "Správně. ¬((p ∧ q) → r) ≡ (p ∧ q) ∧ ¬r. Předpoklad platí, slib (zůstat doma) porušen.",
-                b: "To je pokus o negaci částí, ale ne celého vztahu implikace.",
-                c: "To je klam záměny podmínky."
+                a: "Implikace tvrdí, že nenastane případ (A a zároveň ne-B). Negace tedy tvrdí, že nastal.",
+                b: "To je definice implikace, nikoliv její negace.",
+                c: "To je obrácená implikace, která má jinou tabulku."
             }
         },
         {
-            q: "Výrok 'p → (q → p)' je:",
-            a: "Tautologie", b: "Kontradikce", c: "Splnitelný, ale ne platný",
+            q: "Co znamená, že je logický systém 'Korektní' (Sound)?",
+            a: "Že všechno, co v něm dokážeme, je pravdivé.", b: "Že je v něm hodně symbolů.", c: "Že v něm nelze nic dokázat.",
             ans: "a",
             expl: {
-                a: "Správně. Jde o zákon zjednodušení. Pokud p platí, tak p plyne z čehokoliv.",
-                b: "Zkuste dosadit 0 a 1, nikdy nedostanete 0.",
-                c: "Je to platný zákon klasické logiky."
+                a: "Korektnost zaručuje, že nebudeme vyvozovat lži z pravd.",
+                b: "Počet symbolů s korektností nesouvisí.",
+                c: "To by byl systém neužitečný, nikoliv nutně nekorektní."
             }
         },
         {
-            q: "Co je kontrapozicí složeného výroku (p ∧ q) → r?",
-            a: "¬r → (¬p ∨ ¬q)", b: "r → (p ∧ q)", c: "¬(p ∧ q) → ¬r",
+            q: "Co znamená, že je logický systém 'Úplný' (Complete)?",
+            a: "Že v něm lze dokázat všechny pravdivé formule daného systému.", b: "Že má všechny strany v knize.", c: "Že ho nikdo nepoužívá.",
             ans: "a",
             expl: {
-                a: "Správně. Obrátíme směr a negujeme obě strany (včetně aplikace De Morgana na závorku).",
-                b: "To je konverze, která není ekvivalentní.",
-                c: "To je inverze, která není ekvivalentní."
+                a: "Úplnost znamená, že nám žádná pravda neproklouzne mezi prsty.",
+                b: "Fyzický stav knihy nemá s logickou vlastností nic společného.",
+                c: "Úplné systémy jsou naopak velmi žádané (např. výroková logika)."
             }
         },
         {
-            q: "Výrok ¬p ↔ p je:",
-            a: "Vždy pravdivý", b: "Vždy nepravdivý (kontradikce)", c: "Pravdivý, jen když p je 0",
-            ans: "b",
-            expl: {
-                a: "Ekvivalence vyžaduje stejné hodnoty, ale ¬p a p jsou vždy opačné.",
-                b: "Správně. Žádný výrok nemůže být ekvivalentní své negaci.",
-                c: "Když p=0, ¬p=1. 1 ↔ 0 je 0. Stále nepravda."
-            }
-        },
-        {
-            q: "Pokud platí ¬(p ↔ q), co to říká o hodnotách p a q?",
-            a: "Jsou stejné", b: "Jsou různé", c: "Obě jsou 1",
-            ans: "b",
-            expl: {
-                a: "To by platila ekvivalence bez negace.",
-                b: "Správně. Negace ekvivalence je XOR (exkluzivní disjunkce).",
-                c: "To by byla ekvivalence pravdivá."
-            }
-        },
-        {
-            q: "Úsudek: ((p → q) ∧ ¬q) → ¬p je:",
-            a: "Tautologie", b: "Kontradikce", c: "Závislý na obsahu p",
+            q: "Jak zapíšeš negaci '∀x (P(x) → Q(x))'?",
+            a: "∃x (P(x) ∧ ¬Q(x))", b: "∀x (¬P(x) ∨ Q(x))", c: "∃x (P(x) → ¬Q(x))",
             ans: "a",
             expl: {
-                a: "Správně. Je to zápis pravidla Modus Tollens jako jednoho výroku.",
-                b: "Modus Tollens není spor, je to zákon.",
-                c: "Zákony logiky na obsahu (počasí, barvy) nezávisí."
+                a: "Negujeme 'všechny' na 'existuje' a následně negujeme vnitřní implikaci.",
+                b: "To je původní výrok v jiné formě, nikoliv negace.",
+                c: "Negace implikace není implikace."
             }
         },
         {
-            q: "Co získáme negací ∀x (P(x) → Q(x))?",
-            a: "∃x (P(x) ∧ ¬Q(x))", b: "∀x (¬P(x) ∨ Q(x))", c: "∃x (¬P(x) → ¬Q(x))",
+            q: "Co je to 'Skolemizace'?",
+            a: "Odstranění existenčních kvantifikátorů (∃) pomocí speciálních funkcí.", b: "Učení logiky ve školách.", c: "Změna všech 'A' na 'B'.",
             ans: "a",
             expl: {
-                a: "Správně. Negace 'všech' je 'existuje' a negace implikace je konjunkce s negovaným následkem.",
-                b: "To je pouze přepis implikace, nikoliv negace.",
-                c: "Kvantifikátor se sice změnil, ale vnitřek je špatně negován."
+                a: "Používá se k převodu formulí do formy vhodné pro automatické řešiče (SAT solvers).",
+                b: "S pedagogikou tento technický termín nesouvisí.",
+                c: "To je jen přejmenování proměnných."
             }
         },
         {
-            q: "Výrok (p ∧ q) ∨ (¬p ∨ ¬q) je:",
-            a: "Tautologie", b: "Kontradikce", c: "Výrok o počasí",
+            q: "Jaký je výsledek operace (A ∧ B) ∨ (A ∧ ¬B) ∨ (¬A ∧ B) ∨ (¬A ∧ ¬B)?",
+            a: "Tautologie (1)", b: "Kontradikce (0)", c: "A ∧ B",
             ans: "a",
             expl: {
-                a: "Správně. Jde o (X) ∨ ¬(X). Buď platí konjunkce, nebo její negace. Jedno z toho vždy.",
-                b: "Spor by to byl se spojkou 'a' uprostřed.",
-                c: "Je to abstraktní logická forma."
+                a: "Tento výraz pokrývá všechny čtyři možné kombinace hodnot A a B, tedy vždy bude jedna závorka platit.",
+                b: "To by byl výsledek, kdyby mezi závorkami bylo 'a zároveň' a uvnitř spory.",
+                c: "To je jen jedna ze čtyř částí výrazu."
             }
         },
         {
-            q: "Který vztah je tranzitivní?",
-            a: "Implikace", b: "Negace", c: "Disjunkce",
+            q: "Co znamená symbol '≡' v kontextu formulí A ≡ B?",
+            a: "Formule jsou sémanticky ekvivalentní (mají stejné modely).", b: "Formule jsou napsány stejným fontem.", c: "První formule je delší.",
             ans: "a",
             expl: {
-                a: "Správně. Pokud p→q a q→r, pak p→r.",
-                b: "Negace se sčítá (negace negace), netvoří řetězce.",
-                c: "U disjunkce p∨q a q∨r nevyplývá p∨r."
+                a: "Označuje, že pro jakékoliv ohodnocení proměnných vyjdou obě formule stejně.",
+                b: "Grafika zápisu není logicky významná.",
+                c: "Délka formule neurčuje její logickou hodnotu."
             }
         },
         {
-            q: "V klasické logice výrok ¬(p → ¬p) odpovídá čemu?",
-            a: "p ∧ p (tedy p)", b: "¬p", c: "Vždy 1",
+            q: "Která spojka je funkčně úplná (sama o sobě stačí na vyjádření všech ostatních)?",
+            a: "NAND (Shefferova čárka |)", b: "Konjunkce (∧)", c: "Implikace (→)",
             ans: "a",
             expl: {
-                a: "Správně. ¬(p → ¬p) ≡ p ∧ ¬(¬p) ≡ p ∧ p ≡ p.",
-                b: "To by byla hodnota vnitřku závorky před negací.",
-                c: "Záleží na hodnotě p. Pokud p=0, výrok je 0."
+                a: "Pomocí NANDu (negovaný součin) lze sestavit 'ne', 'a' i 'nebo'.",
+                b: "Samotným 'a' nevyjádříte negaci ani disjunkci.",
+                c: "Samotná šipka bez negace také nestačí na všechny funkce."
+            }
+        },
+        {
+            q: "Jak zapíšeš 'Pravda' a 'Nepravda' jako logické konstanty?",
+            a: "⊤ (Top) a ⊥ (Bottom)", b: "1 a -1", c: "Y a N",
+            ans: "a",
+            expl: {
+                a: "Tato symbolika (verum a falsum) se používá v pokročilých důkazových systémech.",
+                b: "V logice se používá 0, nikoliv -1.",
+                c: "Yes/No se používá v mluvené řeči, ne ve formálním zápisu."
+            }
+        },
+        {
+            q: "Co říká 'Princip identity'?",
+            a: "∀x (x = x)", b: "∃x (x = x)", c: "∀x (x → x)",
+            ans: "a",
+            expl: {
+                a: "Každý objekt je identický sám se sebou. Základ predikátové logiky s rovností.",
+                b: "To říká jen, že existuje aspoň jeden takový objekt.",
+                c: "To je tautologie výrokové logiky, ale ne definice identity objektů."
+            }
+        },
+        {
+            q: "Pokud o systému víme, že je 'Bezesporný' (Consistent), znamená to, že:",
+            a: "V něm nelze dokázat formuli A a zároveň ¬A.", b: "V něm jsou všechny formule pravdivé.", c: "Je v něm jen jedna proměnná.",
+            ans: "a",
+            expl: {
+                a: "Bezespornost je minimální požadavek na smysluplný logický systém.",
+                b: "To by byl systém triviální a k ničemu.",
+                c: "Počet proměnných není pro bezespornost určující."
             }
         }
 
