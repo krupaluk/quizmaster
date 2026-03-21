@@ -1,4 +1,4 @@
-window. data_logika_FormalniLogika = {
+window. data_prvouka_DomaciAHospodarskaZvirata = {
     "quizTitle": "Prvouka: Domácí a hospodářská zvířata",
     "questions": [
                 {
