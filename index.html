@@ -5,60 +5,567 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>quiz-master</title>
     <style>
-        :root { --ios-blue: #007aff; --ios-bg: #f2f2f7; --ios-card: #ffffff; --ios-text: #000000; --ios-gray: #8e8e93; --soft-green: #f2faf5; --soft-red: #fff5f5; --border-green: #34c759; --border-red: #ff3b30; --neutral-bg: #f8f8f8; --neutral-border: #d1d1d6; }
-        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: var(--ios-bg); color: var(--ios-text); margin: 0; padding: 10px; display: flex; justify-content: center; }
-        #app { width: 100%; max-width: 500px; display: flex; flex-direction: column; }
-        
-        /* Status bar */
-        .status-bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; margin-bottom: 12px; gap: 5px; }
-        .header-mini { text-align: center; text-transform: uppercase; letter-spacing: 0.5px; color: var(--ios-gray); white-space: nowrap; margin-top: 12px; }
-        .app-name { font-size: 11px; font-weight: 800; }
-        .app-version { font-size: 9px; font-weight: 400; opacity: 0.6; margin-left: 2px; text-transform: none; }
-        .stats-group { display: flex; gap: 6px; justify-self: end; }
-        .stat-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
-        .stat-label { font-size: 8px; text-transform: uppercase; color: var(--ios-gray); font-weight: 700; letter-spacing: 0.2px; }
-
-        .badge { display: inline-block; padding: 4px 8px; border-radius: 8px; font-size: 13px; font-weight: 700; min-width: 32px; text-align: center; }
-        .badge-gray { background: #d1d1d6; color: #3a3a3c; }
-        .badge-green { background: var(--border-green); color: white; }
-        .badge-red { background: var(--border-red); color: white; }
-        
-        .exit-badge { 
-            background: #e5e5ea; color: #3a3a3c; border: none; 
-            padding: 7px 12px; border-radius: 10px; font-size: 10px; 
-            font-weight: 800; cursor: pointer; text-transform: uppercase;
-            justify-self: start; transition: all 0.1s; margin-top: 10px;
+        /* ===== CSS VARIABLES & RESET ===== */
+        :root { 
+            --ios-blue: #007aff; 
+            --ios-bg: #f2f2f7; 
+            --ios-card: #ffffff; 
+            --ios-text: #000000; 
+            --ios-gray: #8e8e93; 
+            --soft-green: #f2faf5; 
+            --soft-red: #fff5f5; 
+            --border-green: #34c759; 
+            --border-red: #ff3b30; 
+            --neutral-bg: #f8f8f8; 
+            --neutral-border: #d1d1d6; 
         }
-        .exit-badge:active { background: #d1d1d6; transform: scale(0.96); }
-
-        .card { background: var(--ios-card); border-radius: 25px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 15px; position: relative; overflow: hidden; min-height: 200px; }
-        .progress-container { position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #e5e5ea; }
-        .progress-bar { height: 100%; background: var(--ios-blue); width: 0%; transition: width 0.4s ease; }
-
-        .quiz-topic-info { font-size: 13px; color: var(--ios-gray); margin-bottom: 15px; line-height: 1.4; margin-top: 5px; }
-        .question-text { font-size: 23px; font-weight: 700; margin-bottom: 25px; line-height: 1.25; }
-        .ans-group { margin-bottom: 12px; }
-        .btn { display: block; width: 100%; padding: 18px 20px; border: none; border-radius: 20px; font-size: 19px; font-weight: 500; cursor: pointer; transition: all 0.2s; text-align: left; background: var(--ios-bg); color: var(--ios-blue); }
-        .btn-next { background: var(--ios-blue); color: white; text-align: center; font-weight: 600; width: 100%; padding: 18px; border-radius: 20px; border: none; font-size: 19px; margin-top: 10px; display: none; }
+        * { 
+            box-sizing: border-box; 
+            -webkit-tap-highlight-color: transparent; 
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: var(--ios-bg); 
+            color: var(--ios-text); 
+            margin: 0; 
+            padding: 10px; 
+            display: flex; 
+            justify-content: center; 
+        }
+        #app { 
+            width: 100%; 
+            max-width: 500px; 
+            display: flex; 
+            flex-direction: column; 
+        }
         
-        /* Design pro potvrzení ukončení */
-        #exit-confirm-ui { text-align: center; padding: 10px 0; }
-        .exit-warning-title { color: var(--border-red); font-size: 24px; font-weight: 800; margin-bottom: 10px; }
-        .countdown-circle { font-size: 60px; font-weight: 800; color: var(--ios-gray); margin: 15px 0; }
+        /* ===== UI COMPONENTS ===== */
+        /* Status Bar */
+        .status-bar { 
+            display: grid; 
+            grid-template-columns: 1fr auto 1fr; 
+            align-items: center; 
+            margin-bottom: 12px; 
+            gap: 5px; 
+        }
+        .header-mini { 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 0.5px; 
+            color: var(--ios-gray); 
+            white-space: nowrap; 
+            margin-top: 12px; 
+        }
+        .app-name { 
+            font-size: 11px; 
+            font-weight: 800; 
+        }
+        .app-version { 
+            font-size: 9px; 
+            font-weight: 400; 
+            opacity: 0.6; 
+            margin-left: 2px; 
+            text-transform: none; 
+        }
+        .stats-group { 
+            display: flex; 
+            gap: 6px; 
+            justify-self: end; 
+        }
+        .stat-item { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 2px; 
+        }
+        .stat-label { 
+            font-size: 8px; 
+            text-transform: uppercase; 
+            color: var(--ios-gray); 
+            font-weight: 700; 
+            letter-spacing: 0.2px; 
+        }
 
-        .sub-expl { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; font-size: 16px; line-height: 1.4; color: #333; margin: 0 5px; border-left: 4px solid transparent; background: var(--neutral-bg); }
-        .sub-expl.show { max-height: 400px; margin-top: 10px; margin-bottom: 12px; padding: 12px 15px; border-left-color: var(--neutral-border); }
-        .sub-expl.highlight-correct { background: var(--soft-green) !important; border-left-color: var(--border-green) !important; }
-        .sub-expl.highlight-wrong { background: var(--soft-red) !important; border-left-color: var(--border-red) !important; }
-        .btn.correct-btn { background: var(--border-green) !important; color: white !important; }
-        .btn.wrong-btn { background: var(--border-red) !important; color: white !important; }
+        /* Badges */
+        .badge { 
+            display: inline-block; 
+            padding: 4px 8px; 
+            border-radius: 8px; 
+            font-size: 13px; 
+            font-weight: 700; 
+            min-width: 32px; 
+            text-align: center; 
+        }
+        .badge-gray { 
+            background: #d1d1d6; 
+            color: #3a3a3c; 
+        }
+        .badge-green { 
+            background: var(--border-green); 
+            color: white; 
+        }
+        .badge-red { 
+            background: var(--border-red); 
+            color: white; 
+        }
         
-        select { width: 100%; padding: 18px; border-radius: 15px; border: 1px solid #ddd; font-size: 19px; background: #fff; margin-bottom: 20px; appearance: none; text-align: center; }
-        .hidden { display: none !important; }
-        .grade-display { font-size: 85px; font-weight: 800; color: var(--ios-blue); margin: 20px 0; text-align: center; }
-        .hub-item, .setup-option { display: flex; align-items: center; padding: 12px; background: var(--ios-bg); margin-bottom: 8px; border-radius: 15px; cursor: pointer; }
-        .hub-item input, .setup-option input { margin-right: 15px; transform: scale(1.5); }
+        /* Buttons */
+        .exit-badge { 
+            background: #e5e5ea; 
+            color: #3a3a3c; 
+            border: none; 
+            padding: 7px 12px; 
+            border-radius: 10px; 
+            font-size: 10px; 
+            font-weight: 800; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            justify-self: start; 
+            transition: all 0.1s; 
+            margin-top: 10px;
+        }
+        .exit-badge:active { 
+            background: #d1d1d6; 
+            transform: scale(0.96); 
+        }
+        .btn { 
+            display: block; 
+            width: 100%; 
+            padding: 18px 20px; 
+            border: none; 
+            border-radius: 20px; 
+            font-size: 19px; 
+            font-weight: 500; 
+            cursor: pointer; 
+            transition: all 0.2s; 
+            text-align: left; 
+            background: var(--ios-bg); 
+            color: var(--ios-blue); 
+        }
+        .btn-next { 
+            background: var(--ios-blue); 
+            color: white; 
+            text-align: center; 
+            font-weight: 600; 
+            width: 100%; 
+            padding: 18px; 
+            border-radius: 20px; 
+            border: none; 
+            font-size: 19px; 
+            margin-top: 10px; 
+            display: none; 
+        }
+        
+        /* Cards & Layout */
+        .card { 
+            background: var(--ios-card); 
+            border-radius: 25px; 
+            padding: 25px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+            margin-bottom: 15px; 
+            position: relative; 
+            overflow: hidden; 
+            min-height: 200px; 
+        }
+        .progress-container { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 4px; 
+            background: #e5e5ea; 
+        }
+        .progress-bar { 
+            height: 100%; 
+            background: var(--ios-blue); 
+            width: 0%; 
+            transition: width 0.4s ease; 
+        }
+
+        /* ===== QUIZ COMPONENTS ===== */
+        .quiz-topic-info { 
+            font-size: 13px; 
+            color: var(--ios-gray); 
+            margin-bottom: 15px; 
+            line-height: 1.4; 
+            margin-top: 5px; 
+        }
+        .question-text { 
+            font-size: 23px; 
+            font-weight: 700; 
+            margin-bottom: 25px; 
+            line-height: 1.25; 
+        }
+        .ans-group { 
+            margin-bottom: 12px; 
+        }
+        .sub-expl { 
+            max-height: 0; 
+            overflow: hidden; 
+            transition: max-height 0.4s ease, padding 0.3s ease; 
+            font-size: 16px; 
+            line-height: 1.4; 
+            color: #333; 
+            margin: 0 5px; 
+            border-left: 4px solid transparent; 
+            background: var(--neutral-bg); 
+        }
+        .sub-expl.show { 
+            max-height: 400px; 
+            margin-top: 10px; 
+            margin-bottom: 12px; 
+            padding: 12px 15px; 
+            border-left-color: var(--neutral-border); 
+        }
+        .sub-expl.highlight-correct { 
+            background: var(--soft-green) !important; 
+            border-left-color: var(--border-green) !important; 
+        }
+        .sub-expl.highlight-wrong { 
+            background: var(--soft-red) !important; 
+            border-left-color: var(--border-red) !important; 
+        }
+        .btn.correct-btn { 
+            background: var(--border-green) !important; 
+            color: white !important; 
+        }
+        .btn.wrong-btn { 
+            background: var(--border-red) !important; 
+            color: white !important; 
+        }
+        
+        /* ===== SPECIAL UI ELEMENTS ===== */
+        /* Exit Confirmation */
+        #exit-confirm-ui { 
+            text-align: center; 
+            padding: 10px 0; 
+        }
+        .exit-warning-title { 
+            color: var(--border-red); 
+            font-size: 24px; 
+            font-weight: 800; 
+            margin-bottom: 10px; 
+        }
+        .countdown-circle { 
+            font-size: 60px; 
+            font-weight: 800; 
+            color: var(--ios-gray); 
+            margin: 15px 0; 
+        }
+
+        /* Form Elements */
+        select { 
+            width: 100%; 
+            padding: 18px; 
+            border-radius: 15px; 
+            border: 1px solid #ddd; 
+            font-size: 19px; 
+            background: #fff; 
+            margin-bottom: 20px; 
+            appearance: none; 
+            text-align: center; 
+        }
+        
+        /* Count Buttons */
+        .count-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+            align-items: flex-start;
+        }
+        .count-btn {
+            min-width: 50px;
+            padding: 14px 20px;
+            border: 2px solid var(--neutral-border);
+            border-radius: 15px;
+            background: white;
+            color: var(--ios-text);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: relative;
+        }
+        .count-btn:hover {
+            border-color: var(--ios-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,123,255,0.15);
+        }
+        .count-btn.active {
+            background: var(--ios-blue);
+            color: white;
+            border-color: var(--ios-blue);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+        .count-btn.max {
+            border-color: var(--ios-blue);
+            background: linear-gradient(135deg, var(--ios-blue) 0%, #0056b3 100%);
+            color: white;
+            font-weight: 800;
+            position: relative;
+        }
+        
+        .count-btn.max:not(.active) {
+            background: white;
+            color: var(--ios-text);
+            border-color: var(--neutral-border);
+            font-weight: 600;
+        }
+        
+        .count-btn.max.active {
+            font-weight: 700;
+        }
+        .count-btn.max::after {
+            content: "MAX";
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--border-red);
+            color: white;
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 8px;
+            letter-spacing: 0.5px;
+            z-index: 10;
+            pointer-events: none;
+            line-height: 1;
+        }
+        
+        /* Results Screen */
+        .grade-display { 
+            font-size: 85px; 
+            font-weight: 800; 
+            color: var(--ios-blue); 
+            margin: 20px 0; 
+            text-align: center; 
+        }
+        
+        /* Hub & Setup Items */
+        .hub-item, .setup-option { 
+            display: flex; 
+            align-items: center; 
+            padding: 10px; 
+            background: var(--ios-bg); 
+            margin-bottom: 6px; 
+            border-radius: 12px; 
+            cursor: pointer; 
+        }
+        .hub-item input, .setup-option input { 
+            margin-right: 15px; 
+            transform: scale(1.5); 
+        }
+        
+        /* Setup Screen Styles */
+        .setup-summary {
+            background: linear-gradient(135deg, var(--neutral-bg) 0%, var(--ios-bg) 100%);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid var(--neutral-border);
+        }
+        .summary-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ios-gray);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        .summary-content {
+            font-size: 15px;
+            color: var(--ios-text);
+            line-height: 1.4;
+        }
+        .summary-item {
+            padding: 4px 0;
+            color: var(--ios-text);
+        }
+        
+        .setup-section {
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ios-text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .setup-option {
+            padding: 16px;
+            background: var(--ios-bg);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+        .setup-option:hover {
+            background: white;
+            border-color: var(--ios-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        .option-content {
+            flex: 1;
+        }
+        .option-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ios-text);
+            margin-bottom: 4px;
+        }
+        .option-desc {
+            font-size: 13px;
+            color: var(--ios-gray);
+            line-height: 1.3;
+        }
+        
+        .setup-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        .btn-primary {
+            background: var(--ios-blue) !important;
+            color: white !important;
+            text-align: center !important;
+            font-weight: 600 !important;
+            padding: 18px !important;
+            border-radius: 15px !important;
+            font-size: 18px !important;
+        }
+        .btn-secondary {
+            background: var(--ios-bg) !important;
+            color: var(--ios-gray) !important;
+            text-align: center !important;
+            font-weight: 500 !important;
+            padding: 16px !important;
+            border-radius: 12px !important;
+            font-size: 16px !important;
+            border: 1px solid var(--neutral-border) !important;
+        }
+        .btn-secondary:hover {
+            background: white !important;
+            border-color: var(--ios-gray) !important;
+        }
+        
+        /* Category Headers */
+        .category-container {
+            margin-bottom: 8px;
+        }
+        .category-container.collapsed {
+            margin-bottom: 6px;
+        }
+        .category-header {
+            background: linear-gradient(135deg, var(--ios-card) 0%, var(--neutral-bg) 100%);
+            border-radius: 15px;
+            padding: 12px 16px;
+            border: 1px solid var(--neutral-border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        .category-header:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            transform: translateY(-1px);
+        }
+        .category-header.collapsible {
+            position: relative;
+        }
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+        .category-icon {
+            font-size: 20px;
+            filter: grayscale(20%);
+        }
+        .category-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--ios-text);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            flex: 1;
+        }
+        .category-toggle {
+            font-size: 14px;
+            color: var(--ios-gray);
+            transition: transform 0.2s ease;
+        }
+        .category-desc {
+            font-size: 12px;
+            color: var(--ios-gray);
+            line-height: 1.3;
+            margin-left: 30px;
+            margin-top: 2px;
+        }
+        
+        /* Quizzes Container */
+        .quizzes-container {
+            margin-top: 8px;
+            padding-left: 16px;
+            border-left: 2px solid var(--neutral-border);
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Quiz Info */
+        .quiz-info {
+            flex: 1;
+        }
+        .quiz-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ios-text);
+            margin-bottom: 4px;
+        }
+        .quiz-version-inline {
+            font-size: 12px;
+            color: var(--ios-gray);
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        .quiz-desc {
+            font-size: 13px;
+            color: var(--ios-gray);
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+        .quiz-update-info {
+            font-size: 11px;
+            color: var(--ios-gray);
+            opacity: 0.6;
+            font-style: italic;
+            margin-top: 4px;
+        }
+        
+        /* ===== UTILITIES ===== */
+        .hidden { 
+            display: none !important; 
+        }
     </style>
 </head>
 <body>
@@ -67,7 +574,7 @@
     <!-- HUB -->
     <div id="sc-hub" class="screen">
         <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v1.10)</span>
+            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.0)</span>
         </header>
         <div class="card">
             <h2 style="font-size: 26px; text-align: center;">Vyberte témata</h2>
@@ -79,18 +586,39 @@
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
         <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v1.10)</span>
+            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.0)</span>
         </header>
         <div class="card">
-            <h2 style="font-size: 26px; text-align: center;">Nastavení</h2>
-            <p style="color: var(--ios-gray); margin-bottom: 15px; text-align: center;">Počet otázek:</p>
-            <select id="sel-count"></select>
-            <div class="setup-option" onclick="document.getElementById('chk-shuffle').click(); event.stopPropagation();">
-                <input type="checkbox" id="chk-shuffle" checked onclick="event.stopPropagation();">
-                <span style="font-size: 17px; font-weight: 500;">Náhodné pořadí otázek</span>
+            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
+            
+            <!-- Selected Topics Summary -->
+            <div class="setup-summary">
+                <div class="summary-title">Vybraná témata:</div>
+                <div id="selected-topics-summary" class="summary-content"></div>
             </div>
-            <button class="btn" style="background: var(--ios-blue); color:white; text-align:center; margin-top: 15px;" onclick="startQuiz()">Spustit test</button>
-            <button class="exit-badge" style="width: 100%; margin-top: 15px; padding: 18px;" onclick="location.reload()">Zpět k výběru témat</button>
+            
+            <!-- Quiz Options -->
+            <div class="setup-section">
+                <div class="section-title">📊 Počet otázek</div>
+                <div id="count-buttons" class="count-buttons"></div>
+            </div>
+            
+            <div class="setup-section">
+                <div class="section-title">🔀 Možnosti</div>
+                <div class="setup-option" onclick="document.getElementById('chk-shuffle').click(); event.stopPropagation();">
+                    <input type="checkbox" id="chk-shuffle" onclick="event.stopPropagation();">
+                    <div class="option-content">
+                        <div class="option-title">Náhodné pořadí otázek</div>
+                        <div class="option-desc">Otázky se zobrazí v náhodném pořadí</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="setup-actions">
+                <button class="btn btn-primary" onclick="startQuiz()">Spustit test</button>
+                <button class="btn btn-secondary" onclick="location.reload()">Zpět k výběru témat</button>
+            </div>
         </div>
     </div>
 
@@ -98,7 +626,7 @@
     <div id="sc-quiz" class="screen hidden">
         <div class="status-bar">
             <button id="btn-exit-trigger" class="exit-badge" onclick="requestExit()">Ukončit</button>
-            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v1.10)</span></div>
+            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.0)</span></div>
             <div class="stats-group">
                 <div class="stat-item"><span class="stat-label">zbývá</span><span id="quiz-remaining" class="badge badge-gray">0</span></div>
                 <div class="stat-item"><span class="stat-label">správně</span><span id="count-correct" class="badge badge-green">0</span></div>
@@ -144,166 +672,553 @@
 <script src="quizMaster_config.js"></script>
 
 <script>
-let db = [];
-let activeQ = [], cur = 0, score = 0, errs = [], loop = false, total = 0;
-let sessCorrect = 0, sessWrong = 0, selectedTopicName = "";
-let exitTimer = null;
+// ===== APP STATE & CONFIGURATION =====
+const AppState = {
+    db: [],
+    activeQ: [], 
+    cur: 0, 
+    score: 0, 
+    errs: [], 
+    loop: false, 
+    total: 0,
+    sessCorrect: 0, 
+    sessWrong: 0, 
+    selectedTopicName: "",
+    exitTimer: null
+};
 
-function initHub() {
-    const list = document.getElementById('hub-list');
-    if (typeof availableQuizzes !== 'undefined') {
-        availableQuizzes.forEach(q => {
-            const div = document.createElement('div');
-            div.className = 'hub-item';
-            div.innerHTML = `<input type="checkbox" value="${q.id}" data-file="${q.file}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
-            div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
-            list.appendChild(div);
-        });
-    } else {
-        list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
+// ===== UI COMPONENTS =====
+const UI = {
+    showScreen(id) { 
+        ['sc-hub', 'sc-setup', 'sc-quiz', 'sc-res'].forEach(s => { 
+            const el = document.getElementById(s); 
+            if (el) el.classList.add('hidden'); 
+        }); 
+        const t = document.getElementById(id); 
+        if (t) t.classList.remove('hidden'); 
+    },
+    
+    updateStats() {
+        const rem = document.getElementById('quiz-remaining');
+        if (rem) rem.innerText = AppState.total - AppState.cur;
+        document.getElementById('count-correct').innerText = AppState.sessCorrect;
+        document.getElementById('count-wrong').innerText = AppState.sessWrong;
+        const prog = (AppState.cur / AppState.total) * 100;
+        document.getElementById('p-bar').style.width = prog + "%";
+    },
+    
+    cancelExit() {
+        if (AppState.exitTimer) clearInterval(AppState.exitTimer);
+        document.getElementById('quiz-main-ui').classList.remove('hidden');
+        document.getElementById('exit-confirm-ui').classList.add('hidden');
+        const exitBtn = document.getElementById('btn-exit-trigger');
+        if (exitBtn) exitBtn.classList.remove('hidden');
     }
-}
+};
 
-async function loadAndGoToSetup() {
-    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-    if (checks.length === 0) return alert("Vyberte aspoň jedno téma!");
-    selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
-    db = [];
-    for (let ch of checks) {
-        const file = ch.getAttribute('data-file'), id = ch.value;
-        await new Promise((resolve) => {
-            const old = document.querySelector(`script[data-id="${id}"]`); if (old) old.remove();
-            const s = document.createElement('script'); s.src = file; s.setAttribute('data-id', id);
-            s.onload = () => { setTimeout(() => {
-                const raw = window['data_' + id];
-                if (raw) db = db.concat(raw.questions || (Array.isArray(raw) ? raw : []));
-                resolve();
-            }, 50); };
-            s.onerror = () => resolve();
+// ===== QUIZ ENGINE =====
+const QuizEngine = {
+    shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    },
+    
+    start() {
+        AppState.total = AppState.selectedCount || parseInt(document.getElementById('sel-count')?.value || 10);
+        AppState.activeQ = [...AppState.db];
+        if (document.getElementById('chk-shuffle').checked) this.shuffle(AppState.activeQ);
+        AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
+        AppState.cur = 0; 
+        AppState.score = 0; 
+        AppState.errs = []; 
+        AppState.loop = false; 
+        AppState.sessCorrect = 0; 
+        AppState.sessWrong = 0;
+        UI.updateStats(); 
+        UI.showScreen('sc-quiz'); 
+        this.render();
+    },
+    
+    render() {
+        UI.cancelExit();
+        const q = AppState.activeQ[AppState.cur];
+        document.getElementById('q-topic').innerHTML = `<b>Téma</b> → ${AppState.selectedTopicName}`;
+        document.getElementById('q-text').innerText = q.q;
+        document.getElementById('btn-continue').style.display = 'none';
+        const box = document.getElementById('ans-container'); 
+        box.innerHTML = '';
+        let keys = ['a', 'b', 'c']; 
+        this.shuffle(keys);
+        keys.forEach(k => {
+            const group = document.createElement('div'); 
+            group.className = 'ans-group';
+            const b = document.createElement('button'); 
+            b.className = 'btn'; 
+            b.innerText = q[k]; 
+            b.id = 'btn-' + k; 
+            b.onclick = () => this.check(k);
+            const ex = document.createElement('div'); 
+            ex.className = 'sub-expl'; 
+            ex.id = 'ex-' + k; 
+            ex.innerText = q.expl[k];
+            group.appendChild(b); 
+            group.appendChild(ex); 
+            box.appendChild(group);
+        });
+    },
+    
+    check(k) {
+        const q = AppState.activeQ[AppState.cur];
+        ['a', 'b', 'c'].forEach(key => { 
+            const btn = document.getElementById('btn-' + key); 
+            if (btn) btn.onclick = () => this.toggleExpl(key); 
+        });
+        const sBtn = document.getElementById('btn-' + k), sEx = document.getElementById('ex-' + k);
+        const cBtn = document.getElementById('btn-' + q.ans), cEx = document.getElementById('ex-' + q.ans);
+        if (k === q.ans) { 
+            sBtn.classList.add('correct-btn'); 
+            sEx.classList.add('show', 'highlight-correct'); 
+            if (!AppState.loop) { AppState.score++; AppState.sessCorrect++; } 
+        }
+        else { 
+            sBtn.classList.add('wrong-btn'); 
+            sEx.classList.add('show', 'highlight-wrong'); 
+            cBtn.classList.add('correct-btn'); 
+            cEx.classList.add('show', 'highlight-correct'); 
+            AppState.errs.push(q); 
+            if (!AppState.loop) AppState.sessWrong++; 
+        }
+        UI.updateStats(); 
+        document.getElementById('btn-continue').style.display = 'block';
+    },
+    
+    toggleExpl(k) { 
+        const ex = document.getElementById('ex-' + k); 
+        if (ex) ex.classList.toggle('show'); 
+    },
+    
+    next() {
+        AppState.cur++;
+        if(AppState.cur < AppState.activeQ.length) { 
+            UI.updateStats(); 
+            this.render(); 
+        }
+        else { 
+            document.getElementById('p-bar').style.width = "100%"; 
+            Results.show(); 
+        }
+    },
+    
+    startErrorLoop() { 
+        AppState.activeQ = [...AppState.errs]; 
+        AppState.errs = []; 
+        AppState.cur = 0; 
+        AppState.loop = true; 
+        UI.showScreen('sc-quiz'); 
+        this.render(); 
+    }
+};
+
+// ===== RESULTS HANDLER =====
+const Results = {
+    show() {
+        UI.showScreen('sc-res');
+        if(!AppState.loop) {
+            const p = (AppState.score / AppState.total) * 100;
+            let g = p >= 90 ? 'A' : p >= 80 ? 'B' : p >= 70 ? 'C' : p >= 60 ? 'D' : p >= 50 ? 'E' : 'F';
+            document.getElementById('res-grade').innerText = g;
+            document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${AppState.score} / ${AppState.total}</b> (${Math.round(p)}%)`;
+        } else {
+            document.getElementById('res-grade').innerText = AppState.errs.length === 0 ? "✓" : "!";
+            document.getElementById('res-stat').innerText = AppState.errs.length === 0 ? "Všechny chyby byly opraveny!" : `Stále zbývá opravit ${AppState.errs.length} chyb.`;
+        }
+        document.getElementById('res-retry').className = AppState.errs.length > 0 ? '' : 'hidden';
+        document.getElementById('res-retry-msg').innerText = AppState.loop ? `Zbývá opravit ${AppState.errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
+    }
+};
+
+// ===== DATA LOADING =====
+const DataLoader = {
+    cache: new Map(), // Cache pro načtené kvízy
+    
+    async loadQuizzes() {
+        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+        if (checks.length === 0) return alert("Vyberte aspoň jedno téma!");
+        AppState.selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
+        AppState.db = [];
+        
+        // Store selected quizzes for summary
+        AppState.selectedQuizzes = [];
+        
+        // Zobrazit loading indikátor
+        this.showLoading(true);
+        
+        try {
+            for (let ch of checks) {
+                const file = ch.getAttribute('data-file'), id = ch.value;
+                const quizData = await this.loadQuizData(id, file);
+                if (quizData) {
+                    AppState.db = AppState.db.concat(quizData.questions || (Array.isArray(quizData) ? quizData : []));
+                    
+                    // Add to selected quizzes summary
+                    AppState.selectedQuizzes.push({
+                        title: ch.getAttribute('data-title'),
+                        category: ch.getAttribute('data-category') || 'Ostatní'
+                    });
+                }
+            }
+            
+            if (AppState.db.length === 0) return alert("Chyba při načítání.");
+            this.setupCountSelector();
+            this.updateSelectedTopicsSummary();
+            UI.showScreen('sc-setup');
+        } finally {
+            this.showLoading(false);
+        }
+    },
+    
+    async loadQuizData(id, file) {
+        // Check cache first
+        if (this.cache.has(id)) {
+            return this.cache.get(id);
+        }
+        
+        return new Promise((resolve) => {
+            const old = document.querySelector(`script[data-id="${id}"]`); 
+            if (old) old.remove();
+            
+            const s = document.createElement('script'); 
+            s.src = file; 
+            s.setAttribute('data-id', id);
+            
+            const timeout = setTimeout(() => {
+                console.warn(`Timeout loading quiz: ${id}`);
+                resolve(null);
+            }, 5000); // 5s timeout
+            
+            s.onload = () => {
+                clearTimeout(timeout);
+                setTimeout(() => {
+                    const raw = window['data_' + id];
+                    if (raw) {
+                        this.cache.set(id, raw); // Cache the data
+                        resolve(raw);
+                    } else {
+                        resolve(null);
+                    }
+                }, 50);
+            };
+            
+            s.onerror = () => {
+                clearTimeout(timeout);
+                console.error(`Failed to load quiz: ${id}`);
+                resolve(null);
+            };
+            
             document.head.appendChild(s);
         });
-    }
-    if (db.length === 0) return alert("Chyba při načítání.");
-    const sel = document.getElementById('sel-count'); sel.innerHTML = '';
-    const maxQ = db.length;
-    if (maxQ < 5) { let o = document.createElement('option'); o.value = maxQ; o.text = maxQ; sel.add(o); }
-    else { for(let i=5; i<=maxQ; i+=5) { let o = document.createElement('option'); o.value=i; o.text=i; sel.add(o); }
-    if (maxQ % 5 !== 0) { let o = document.createElement('option'); o.value=maxQ; o.text=maxQ; sel.add(o); } }
-    showScreen('sc-setup');
-}
-
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-function startQuiz() {
-    total = parseInt(document.getElementById('sel-count').value);
-    activeQ = [...db];
-    if (document.getElementById('chk-shuffle').checked) shuffle(activeQ);
-    activeQ = activeQ.slice(0, total);
-    cur = 0; score = 0; errs = []; loop = false; sessCorrect = 0; sessWrong = 0;
-    updateStats(); showScreen('sc-quiz'); render();
-}
-
-function updateStats() {
-    const rem = document.getElementById('quiz-remaining');
-    if (rem) rem.innerText = total - cur;
-    document.getElementById('count-correct').innerText = sessCorrect;
-    document.getElementById('count-wrong').innerText = sessWrong;
-    const prog = (cur / total) * 100;
-    document.getElementById('p-bar').style.width = prog + "%";
-}
-
-function render() {
-    cancelExit();
-    const q = activeQ[cur];
-    document.getElementById('q-topic').innerHTML = `<b>Téma</b> → ${selectedTopicName}`;
-    document.getElementById('q-text').innerText = q.q;
-    document.getElementById('btn-continue').style.display = 'none';
-    const box = document.getElementById('ans-container'); box.innerHTML = '';
-    let keys = ['a', 'b', 'c']; shuffle(keys);
-    keys.forEach(k => {
-        const group = document.createElement('div'); group.className = 'ans-group';
-        const b = document.createElement('button'); b.className = 'btn'; b.innerText = q[k]; b.id = 'btn-' + k; b.onclick = () => check(k);
-        const ex = document.createElement('div'); ex.className = 'sub-expl'; ex.id = 'ex-' + k; ex.innerText = q.expl[k];
-        group.appendChild(b); group.appendChild(ex); box.appendChild(group);
-    });
-}
-
-function check(k) {
-    const q = activeQ[cur];
-    ['a', 'b', 'c'].forEach(key => { const btn = document.getElementById('btn-' + key); if (btn) btn.onclick = () => toggleExpl(key); });
-    const sBtn = document.getElementById('btn-' + k), sEx = document.getElementById('ex-' + k);
-    const cBtn = document.getElementById('btn-' + q.ans), cEx = document.getElementById('ex-' + q.ans);
-    if (k === q.ans) { sBtn.classList.add('correct-btn'); sEx.classList.add('show', 'highlight-correct'); if (!loop) { score++; sessCorrect++; } }
-    else { sBtn.classList.add('wrong-btn'); sEx.classList.add('show', 'highlight-wrong'); cBtn.classList.add('correct-btn'); cEx.classList.add('show', 'highlight-correct'); errs.push(q); if (!loop) sessWrong++; }
-    updateStats(); document.getElementById('btn-continue').style.display = 'block';
-}
-
-function toggleExpl(k) { const ex = document.getElementById('ex-' + k); if (ex) ex.classList.toggle('show'); }
-
-function next() {
-    cur++;
-    if(cur < activeQ.length) { updateStats(); render(); }
-    else { document.getElementById('p-bar').style.width = "100%"; finish(); }
-}
-
-function finish() {
-    showScreen('sc-res');
-    if(!loop) {
-        const p = (score / total) * 100;
-        let g = p >= 90 ? 'A' : p >= 80 ? 'B' : p >= 70 ? 'C' : p >= 60 ? 'D' : p >= 50 ? 'E' : 'F';
-        document.getElementById('res-grade').innerText = g;
-        document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${score} / ${total}</b> (${Math.round(p)}%)`;
-    } else {
-        document.getElementById('res-grade').innerText = errs.length === 0 ? "✓" : "!";
-        document.getElementById('res-stat').innerText = errs.length === 0 ? "Všechny chyby byly opraveny!" : `Stále zbývá opravit ${errs.length} chyb.`;
-    }
-    document.getElementById('res-retry').className = errs.length > 0 ? '' : 'hidden';
-    document.getElementById('res-retry-msg').innerText = loop ? `Zbývá opravit ${errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
-}
-
-function startErrorLoop() { activeQ = [...errs]; errs = []; cur = 0; loop = true; showScreen('sc-quiz'); render(); }
-
-function requestExit() {
-    document.getElementById('quiz-main-ui').classList.add('hidden');
-    document.getElementById('exit-confirm-ui').classList.remove('hidden');
-    document.getElementById('btn-exit-trigger').classList.add('hidden');
+    },
     
-    let seconds = 10;
-    document.getElementById('exit-countdown').innerText = seconds;
-    
-    exitTimer = setInterval(() => {
-        seconds--;
-        document.getElementById('exit-countdown').innerText = seconds;
-        if (seconds <= 0) {
-            clearInterval(exitTimer);
-            location.reload();
+    showLoading(show) {
+        const list = document.getElementById('hub-list');
+        if (show) {
+            list.style.opacity = '0.5';
+            list.style.pointerEvents = 'none';
+        } else {
+            list.style.opacity = '1';
+            list.style.pointerEvents = 'auto';
         }
-    }, 1000);
-}
+    },
+    
+    setupCountSelector() {
+        const container = document.getElementById('count-buttons');
+        container.innerHTML = '';
+        
+        const maxQ = AppState.db.length;
+        if (maxQ < 5) {
+            // If less than 5 questions, create one button for all
+            const btn = document.createElement('button');
+            btn.className = 'count-btn active max';
+            btn.innerText = maxQ;
+            btn.dataset.count = maxQ;
+            btn.onclick = () => this.selectCount(maxQ);
+            container.appendChild(btn);
+            return;
+        }
+        
+        // Smart algorithm for max 3 rows
+        const buttons = [];
+        buttons.push(5); // Always start with 5
+        
+        if (maxQ >= 10) {
+            buttons.push(10);
+        }
+        
+        // Calculate remaining buttons to fit in 3 rows
+        const maxButtons = 9; // 3 rows × 3 buttons max
+        let remainingSlots = maxButtons - buttons.length;
+        
+        if (remainingSlots > 0) {
+            // Calculate step based on remaining questions
+            const remainingQ = maxQ - 10;
+            if (remainingQ > 0) {
+                // Smart step calculation
+                let step;
+                if (remainingQ <= 20) {
+                    step = 5; // Use 5 for smaller ranges
+                } else if (remainingQ <= 50) {
+                    step = 10; // Use 10 for medium ranges
+                } else {
+                    step = 15; // Use 15 for large ranges
+                }
+                
+                // Generate buttons with calculated step
+                for (let i = 15; i <= maxQ && buttons.length < maxButtons; i += step) {
+                    if (i > 10) buttons.push(i);
+                }
+                
+                // Ensure max is included and it's the last button
+                if (buttons[buttons.length - 1] !== maxQ) {
+                    // If we have room, add max as a separate button
+                    if (buttons.length < maxButtons) {
+                        buttons.push(maxQ);
+                    } else {
+                        // Replace the last button with max
+                        buttons[buttons.length - 1] = maxQ;
+                    }
+                }
+            }
+        }
+        
+        // Create buttons
+        buttons.forEach((count, index) => {
+            const btn = document.createElement('button');
+            const isMax = count === maxQ;
+            
+            let className = 'count-btn';
+            if (isMax) className += ' max';
+            
+            // Select MAX by default
+            if (isMax) {
+                className += ' active';
+            }
+            
+            btn.className = className;
+            btn.innerText = count;
+            btn.dataset.count = count;
+            btn.onclick = () => {
+                console.log(`Clicked button with count: ${count}`);
+                this.selectCount(count);
+            };
+            
+            // Debug: log the classes
+            console.log(`Button ${count}: classes="${className}", isMax=${isMax}`);
+            
+            container.appendChild(btn);
+        });
+        
+        // Store default selection (MAX)
+        AppState.selectedCount = maxQ;
+    },
+    
+    selectCount(count) {
+        console.log(`selectCount called with: ${count}`);
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.count-btn').forEach(btn => {
+            btn.classList.remove('active');
+            console.log(`Removed active from button: ${btn.dataset.count}`);
+        });
+        
+        // Add active class to selected button
+        const selectedBtn = document.querySelector(`[data-count="${count}"]`);
+        if (selectedBtn) {
+            selectedBtn.classList.add('active');
+            console.log(`Added active to button: ${count}`);
+        }
+        
+        // Store selected count (for compatibility with existing code)
+        AppState.selectedCount = count;
+        console.log(`Stored selectedCount: ${count}`);
+    },
+    
+    updateSelectedTopicsSummary() {
+        const summary = document.getElementById('selected-topics-summary');
+        if (summary && AppState.selectedQuizzes) {
+            summary.innerHTML = AppState.selectedQuizzes.map(q => 
+                `<div class="summary-item">• ${q.title}</div>`
+            ).join('');
+        }
+    },
+    
+    // Clear cache method for debugging
+    clearCache() {
+        this.cache.clear();
+        console.log('Quiz cache cleared');
+    }
+};
 
-function cancelExit() {
-    if (exitTimer) clearInterval(exitTimer);
-    document.getElementById('quiz-main-ui').classList.remove('hidden');
-    document.getElementById('exit-confirm-ui').classList.add('hidden');
-    const exitBtn = document.getElementById('btn-exit-trigger');
-    if (exitBtn) exitBtn.classList.remove('hidden');
-}
+// ===== HUB MANAGEMENT =====
+const Hub = {
+    init() {
+        const list = document.getElementById('hub-list');
+        if (typeof availableQuizzes !== 'undefined') {
+            this.renderQuizList();
+        } else {
+            list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
+        }
+    },
+    
+    renderQuizList() {
+        const list = document.getElementById('hub-list');
+        
+        // Use the new nested structure
+        if (typeof quizCategories !== 'undefined') {
+            Object.keys(quizCategories).forEach(category => {
+                const categoryData = quizCategories[category];
+                
+                // Create collapsible category container
+                const categoryContainer = document.createElement('div');
+                categoryContainer.className = 'category-container';
+                
+                // Add collapsible header with icon and description
+                const catHeader = document.createElement('div');
+                catHeader.className = 'category-header collapsible';
+                catHeader.innerHTML = `
+                    <div class="category-title">
+                        <span class="category-icon">${categoryData.icon}</span>
+                        <span class="category-name">${category}</span>
+                        <span class="category-toggle">▼</span>
+                    </div>
+                    <div class="category-desc">${categoryData.description}</div>
+                `;
+                
+                // Add quizzes container (initially hidden)
+                const quizzesContainer = document.createElement('div');
+                quizzesContainer.className = 'quizzes-container';
+                
+                // Add quizzes in this category
+                Object.keys(categoryData.quizzes).forEach(quizKey => {
+                    const q = categoryData.quizzes[quizKey];
+                    const div = document.createElement('div');
+                    div.className = 'hub-item';
+                    
+                    // Format last updated date
+                    let lastUpdatedText = '';
+                    if (q.lastUpdated) {
+                        const date = new Date(q.lastUpdated);
+                        lastUpdatedText = date.toLocaleDateString('cs-CZ', { 
+                            day: '2-digit', 
+                            month: '2-digit', 
+                            year: 'numeric' 
+                        });
+                    }
+                    
+                    div.innerHTML = `
+                        <input type="checkbox" value="${q.id}" data-file="${q.file}" data-title="${q.title}" class="quiz-check"> 
+                        <div class="quiz-info">
+                            <div class="quiz-title">${q.title} <span class="quiz-version-inline">v${q.version}</span></div>
+                            <div class="quiz-desc">${q.desc}</div>
+                            ${lastUpdatedText ? `<div class="quiz-update-info">(last update: ${lastUpdatedText})</div>` : ''}
+                        </div>
+                    `;
+                    div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
+                    quizzesContainer.appendChild(div);
+                });
+                
+                // Add click handler for collapsing
+                catHeader.onclick = () => {
+                    const isExpanded = quizzesContainer.style.display !== 'none';
+                    quizzesContainer.style.display = isExpanded ? 'none' : 'block';
+                    catHeader.querySelector('.category-toggle').textContent = isExpanded ? '▼' : '▲';
+                    categoryContainer.classList.toggle('collapsed', isExpanded);
+                };
+                
+                // Initially collapse all categories
+                quizzesContainer.style.display = 'none';
+                categoryContainer.classList.add('collapsed');
+                
+                // Assemble category
+                categoryContainer.appendChild(catHeader);
+                categoryContainer.appendChild(quizzesContainer);
+                list.appendChild(categoryContainer);
+            });
+        } else if (typeof availableQuizzes !== 'undefined') {
+            // Fallback to flat structure
+            const categorized = this.categorizeQuizzes();
+            Object.keys(categorized).forEach(category => {
+                if (categorized[category].length > 0) {
+                    const catHeader = document.createElement('div');
+                    catHeader.style.cssText = 'font-weight: 600; color: var(--ios-gray); margin: 15px 0 8px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;';
+                    catHeader.innerText = category;
+                    list.appendChild(catHeader);
+                    
+                    categorized[category].forEach(q => {
+                        const div = document.createElement('div');
+                        div.className = 'hub-item';
+                        div.innerHTML = `<input type="checkbox" value="${q.id}" data-file="${q.file}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
+                        div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
+                        list.appendChild(div);
+                    });
+                }
+            });
+        } else {
+            list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
+        }
+    },
+    
+    categorizeQuizzes() {
+        const categories = {};
+        
+        if (typeof availableQuizzes !== 'undefined') {
+            availableQuizzes.forEach(q => {
+                const category = q.category || 'Ostatní';
+                if (!categories[category]) {
+                    categories[category] = [];
+                }
+                categories[category].push(q);
+            });
+        }
+        
+        return categories;
+    }
+};
 
-function showScreen(id) { 
-    ['sc-hub', 'sc-setup', 'sc-quiz', 'sc-res'].forEach(s => { 
-        const el = document.getElementById(s); 
-        if (el) el.classList.add('hidden'); 
-    }); 
-    const t = document.getElementById(id); 
-    if (t) t.classList.remove('hidden'); 
-}
+// ===== EXIT HANDLER =====
+const ExitHandler = {
+    request() {
+        document.getElementById('quiz-main-ui').classList.add('hidden');
+        document.getElementById('exit-confirm-ui').classList.remove('hidden');
+        document.getElementById('btn-exit-trigger').classList.add('hidden');
+        
+        let seconds = 10;
+        document.getElementById('exit-countdown').innerText = seconds;
+        
+        AppState.exitTimer = setInterval(() => {
+            seconds--;
+            document.getElementById('exit-countdown').innerText = seconds;
+            if (seconds <= 0) {
+                clearInterval(AppState.exitTimer);
+                location.reload();
+            }
+        }, 1000);
+    }
+};
 
-initHub();
+// ===== GLOBAL FUNCTIONS =====
+function loadAndGoToSetup() { DataLoader.loadQuizzes(); }
+function startQuiz() { QuizEngine.start(); }
+function check(k) { QuizEngine.check(k); }
+function toggleExpl(k) { QuizEngine.toggleExpl(k); }
+function next() { QuizEngine.next(); }
+function startErrorLoop() { QuizEngine.startErrorLoop(); }
+function requestExit() { ExitHandler.request(); }
+function cancelExit() { UI.cancelExit(); }
+
+// ===== INITIALIZATION =====
+Hub.init();
 </script>
 </body>
 </html>
