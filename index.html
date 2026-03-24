@@ -857,8 +857,8 @@ const DataLoader = {
         
         try {
             for (let ch of checks) {
-                const file = ch.getAttribute('data-file'), id = ch.value;
-                const quizData = await this.loadQuizData(id, file);
+                const id = ch.value;
+                const quizData = await this.loadQuizData(id);
                 if (quizData) {
                     AppState.db = AppState.db.concat(quizData.questions || (Array.isArray(quizData) ? quizData : []));
                     
@@ -885,12 +885,14 @@ const DataLoader = {
             return this.cache.get(id);
         }
         
-        return new Promise((resolve) => {
-            const old = document.querySelector(`script[data-id="${id}"]`); 
+        return new Promise(resolve => {
+            const old = document.querySelector(`script[data-id="${id}"]`);
             if (old) old.remove();
             
             const s = document.createElement('script'); 
-            s.src = file; 
+            // Generate file path dynamically if file is undefined
+            const filePath = file || this.generateFilePath(id);
+            s.src = filePath; 
             s.setAttribute('data-id', id);
             
             const timeout = setTimeout(() => {
@@ -1057,6 +1059,22 @@ const DataLoader = {
     clearCache() {
         this.cache.clear();
         console.log('Quiz cache cleared');
+    },
+    
+    // Generate file path from quiz id
+    generateFilePath(id) {
+        // Find the category for this quiz id
+        for (const category of Object.keys(quizCategories)) {
+            for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                const quiz = quizCategories[category].quizzes[quizKey];
+                if (quiz.id === id) {
+                    const categoryPrefix = category.toLowerCase();
+                    return `quizdata_${categoryPrefix}_${id}.js`;
+                }
+            }
+        }
+        // Fallback if not found
+        return `quizdata_${id}.js`;
     }
 };
 
@@ -1117,7 +1135,7 @@ const Hub = {
                     }
                     
                     div.innerHTML = `
-                        <input type="checkbox" value="${q.id}" data-file="${q.file}" data-title="${q.title}" class="quiz-check"> 
+                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> 
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title} <span class="quiz-version-inline">v${q.version}</span></div>
                             <div class="quiz-desc">${q.desc}</div>
@@ -1158,7 +1176,7 @@ const Hub = {
                     categorized[category].forEach(q => {
                         const div = document.createElement('div');
                         div.className = 'hub-item';
-                        div.innerHTML = `<input type="checkbox" value="${q.id}" data-file="${q.file}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
+                        div.innerHTML = `<input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
                         div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
                         list.appendChild(div);
                     });

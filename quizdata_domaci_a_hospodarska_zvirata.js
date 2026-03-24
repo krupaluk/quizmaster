@@ -1,4 +1,4 @@
-window. data_prvouka_DomaciAHospodarskaZvirata = {
+window.data_domaci_a_hospodarska_zvirata = {
     "quizTitle": "Prvouka: Domácí a hospodářská zvířata",
     "questions": [
                 {

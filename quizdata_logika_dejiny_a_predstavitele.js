@@ -1,4 +1,4 @@
-window.data_logika_DejinyAPredstavitele = {
+window.data_dejiny_a_predstavitele = {
     "quizTitle": "Logika: Dějiny a významní představitelé",
     "questions": [
                 {
