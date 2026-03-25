@@ -1,4 +1,4 @@
-# QUIZ-MASTER (v2.0)
+# QUIZ-MASTER (v2.1)
 
 Lehký, modulární a mobilně optimalizovaný kvízový systém postavený na čistém HTML, CSS a JavaScriptu (Vanilla JS).
 
@@ -74,6 +74,12 @@ window.data_obdobi_helenismu = {
     ]
 };
 ```
+
+## 🎨 Novinky ve verzi 2.1
+* **Reorganizace datové struktury** - nový adresář quizdata/ s kategoriemi
+* **Zjednodušení názvů souborů** - pouhé ID místo dlouhých prefixů
+* **Optimalizace kódu** - konsolidace duplicitní logiky
+* **Čistší produkční kód** - odstranění debug výpisů
 
 ## 🎨 Novinky ve verzi 2.0
 * **Rozbalovací kategorie** s ikonami a popisky
