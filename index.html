@@ -896,7 +896,6 @@ const DataLoader = {
             s.setAttribute('data-id', id);
             
             const timeout = setTimeout(() => {
-                console.warn(`Timeout loading quiz: ${id}`);
                 resolve(null);
             }, 5000); // 5s timeout
             
@@ -915,7 +914,6 @@ const DataLoader = {
             
             s.onerror = () => {
                 clearTimeout(timeout);
-                console.error(`Failed to load quiz: ${id}`);
                 resolve(null);
             };
             
@@ -1011,12 +1009,8 @@ const DataLoader = {
             btn.innerText = count;
             btn.dataset.count = count;
             btn.onclick = () => {
-                console.log(`Clicked button with count: ${count}`);
                 this.selectCount(count);
             };
-            
-            // Debug: log the classes
-            console.log(`Button ${count}: classes="${className}", isMax=${isMax}`);
             
             container.appendChild(btn);
         });
@@ -1026,24 +1020,19 @@ const DataLoader = {
     },
     
     selectCount(count) {
-        console.log(`selectCount called with: ${count}`);
-        
         // Remove active class from all buttons
         document.querySelectorAll('.count-btn').forEach(btn => {
             btn.classList.remove('active');
-            console.log(`Removed active from button: ${btn.dataset.count}`);
         });
         
         // Add active class to selected button
         const selectedBtn = document.querySelector(`[data-count="${count}"]`);
         if (selectedBtn) {
             selectedBtn.classList.add('active');
-            console.log(`Added active to button: ${count}`);
         }
         
         // Store selected count (for compatibility with existing code)
         AppState.selectedCount = count;
-        console.log(`Stored selectedCount: ${count}`);
     },
     
     updateSelectedTopicsSummary() {
@@ -1055,10 +1044,8 @@ const DataLoader = {
         }
     },
     
-    // Clear cache method for debugging
     clearCache() {
         this.cache.clear();
-        console.log('Quiz cache cleared');
     },
     
     // Generate file path from quiz id
@@ -1068,13 +1055,12 @@ const DataLoader = {
             for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
                 const quiz = quizCategories[category].quizzes[quizKey];
                 if (quiz.id === id) {
-                    const categoryPrefix = category.toLowerCase();
-                    return `quizdata_${categoryPrefix}_${id}.js`;
+                    return `quizdata/${category.toLowerCase()}/${id}.js`;
                 }
             }
         }
         // Fallback if not found
-        return `quizdata_${id}.js`;
+        return `quizdata/fallback/${id}.js`;
     }
 };
 

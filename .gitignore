@@ -1,6 +1,9 @@
 # Quizmaster server batch file
 quizmaster-server.bat
 
+# Quiz data directory structure
+quizdata/
+
 # Common ignore patterns
 *.log
 *.tmp
