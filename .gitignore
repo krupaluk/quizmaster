@@ -1,0 +1,11 @@
+# Quizmaster server batch file
+quizmaster-server.bat
+
+# Quiz data directory structure
+quizdata/
+
+# Common ignore patterns
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
