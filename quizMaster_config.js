@@ -68,14 +68,18 @@ const quizCategories = {
     }
 };
 
+// Helper function to generate file path from category and id
+function generateQuizFilePath(category, quizId) {
+    const categoryPrefix = category.toLowerCase();
+    return `quizdata/${categoryPrefix}/${quizId}.js`;
+}
+
 // Pro zpětnou kompatibilitu - automaticky generovat flat array
 const availableQuizzes = [];
 Object.keys(quizCategories).forEach(category => {
     Object.keys(quizCategories[category].quizzes).forEach(quizKey => {
         const quiz = quizCategories[category].quizzes[quizKey];
-        // Generovat file path z category a id
-        const categoryPrefix = category.toLowerCase();
-        const filePath = `quizdata_${categoryPrefix}_${quiz.id}.js`;
+        const filePath = generateQuizFilePath(category, quiz.id);
         
         availableQuizzes.push({
             ...quiz,
@@ -91,9 +95,7 @@ async function updateQuizFileDates() {
     for (const category of Object.keys(quizCategories)) {
         for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
             const quiz = quizCategories[category].quizzes[quizKey];
-            // Generovat file path z category a id
-            const categoryPrefix = category.toLowerCase();
-            const filePath = `quizdata_${categoryPrefix}_${quiz.id}.js`;
+            const filePath = generateQuizFilePath(category, quiz.id);
             
             try {
                 const response = await fetch(filePath, { method: 'HEAD' });
@@ -104,7 +106,6 @@ async function updateQuizFileDates() {
                     }
                 }
             } catch (error) {
-                console.warn(`Nepodařilo se zjistit datum pro ${filePath}:`, error);
                 // Fallback - použijeme aktuální datum při prvním načtení
                 if (!quiz.lastUpdated) {
                     quiz.lastUpdated = new Date().toISOString();
