@@ -562,7 +562,48 @@
             margin-top: 4px;
         }
         
-        /* ===== UTILITIES ===== */
+        /* Group Filters */
+        .group-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .group-filter {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 2px solid var(--neutral-border);
+            border-radius: 12px;
+            background: white;
+            color: var(--ios-text);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        .group-filter:hover {
+            border-color: var(--ios-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        .group-filter.active {
+            background: var(--ios-blue);
+            color: white;
+            border-color: var(--ios-blue);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+        .group-filter-count {
+            background: rgba(0,0,0,0.1);
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+        .group-filter.active .group-filter-count {
+            background: rgba(255,255,255,0.3);
+        }
         .hidden { 
             display: none !important; 
         }
@@ -601,6 +642,11 @@
             <div class="setup-section">
                 <div class="section-title">📊 Počet otázek</div>
                 <div id="count-buttons" class="count-buttons"></div>
+            </div>
+            
+            <div class="setup-section">
+                <div class="section-title">📂 Výběr skupin</div>
+                <div id="group-filters" class="group-filters"></div>
             </div>
             
             <div class="setup-section">
@@ -727,7 +773,21 @@ const QuizEngine = {
     
     start() {
         AppState.total = AppState.selectedCount || parseInt(document.getElementById('sel-count')?.value || 10);
-        AppState.activeQ = [...AppState.db];
+        
+        // Get filtered questions if groups are selected
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        let availableQuestions;
+        if (activeFilters.length > 0) {
+            availableQuestions = AppState.db.filter(question => 
+                question._group && activeFilters.includes(question._group)
+            );
+        } else {
+            availableQuestions = AppState.db;
+        }
+        
+        AppState.activeQ = [...availableQuestions];
         if (document.getElementById('chk-shuffle').checked) this.shuffle(AppState.activeQ);
         AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
         AppState.cur = 0; 
@@ -860,7 +920,10 @@ const DataLoader = {
                 const id = ch.value;
                 const quizData = await this.loadQuizData(id);
                 if (quizData) {
-                    AppState.db = AppState.db.concat(quizData.questions || (Array.isArray(quizData) ? quizData : []));
+                    // Use the processed questions from the new structure
+                    if (quizData.questions && Array.isArray(quizData.questions)) {
+                        AppState.db = AppState.db.concat(quizData.questions);
+                    }
                     
                     // Add to selected quizzes summary
                     AppState.selectedQuizzes.push({
@@ -872,6 +935,7 @@ const DataLoader = {
             
             if (AppState.db.length === 0) return alert("Chyba při načítání.");
             this.setupCountSelector();
+            this.setupGroupFilters();
             this.updateSelectedTopicsSummary();
             UI.showScreen('sc-setup');
         } finally {
@@ -904,8 +968,10 @@ const DataLoader = {
                 setTimeout(() => {
                     const raw = window['data_' + id];
                     if (raw) {
-                        this.cache.set(id, raw); // Cache the data
-                        resolve(raw);
+                        // Process the new structure with groups
+                        const processedData = this.processQuizData(raw);
+                        this.cache.set(id, processedData); // Cache the processed data
+                        resolve(processedData);
                     } else {
                         resolve(null);
                     }
@@ -919,6 +985,43 @@ const DataLoader = {
             
             document.head.appendChild(s);
         });
+    },
+    
+    // Process quiz data - handle both old and new structures
+    processQuizData(raw) {
+        // Check if it's the new structure with groups
+        if (raw.groups && typeof raw.groups === 'object') {
+            const allQuestions = [];
+            
+            // Extract questions from all groups
+            Object.keys(raw.groups).forEach(groupKey => {
+                const group = raw.groups[groupKey];
+                if (group.questions && Array.isArray(group.questions)) {
+                    // Add group information to each question
+                    group.questions.forEach(question => {
+                        allQuestions.push({
+                            ...question,
+                            _group: groupKey,
+                            _groupTitle: group.title || groupKey
+                        });
+                    });
+                }
+            });
+            
+            return {
+                quizTitle: raw.quizTitle,
+                questions: allQuestions,
+                groups: raw.groups,
+                _structure: 'grouped' // Mark as new structure
+            };
+        } else {
+            // Handle old structure (flat array of questions)
+            return {
+                quizTitle: raw.quizTitle || 'Quiz',
+                questions: raw.questions || (Array.isArray(raw) ? raw : []),
+                _structure: 'flat' // Mark as old structure
+            };
+        }
     },
     
     showLoading(show) {
@@ -1033,6 +1136,134 @@ const DataLoader = {
         
         // Store selected count (for compatibility with existing code)
         AppState.selectedCount = count;
+    },
+    
+    setupGroupFilters() {
+        const container = document.getElementById('group-filters');
+        container.innerHTML = '';
+        
+        // Check if we have grouped structure data
+        const hasGroups = AppState.db.length > 0 && AppState.db[0]._group;
+        
+        if (!hasGroups) {
+            // For old structure, hide the group filters section
+            container.parentElement.style.display = 'none';
+            return;
+        }
+        
+        // Collect all unique groups from loaded questions
+        const groupCounts = {};
+        const groupTitles = {};
+        
+        AppState.db.forEach(question => {
+            if (question._group) {
+                groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
+                groupTitles[question._group] = question._groupTitle || question._group;
+            }
+        });
+        
+        // Sort groups by count (descending) then alphabetically
+        const sortedGroups = Object.keys(groupCounts).sort((a, b) => {
+            if (groupCounts[b] !== groupCounts[a]) {
+                return groupCounts[b] - groupCounts[a];
+            }
+            return a.localeCompare(b);
+        });
+        
+        // Create group filter buttons
+        sortedGroups.forEach(groupKey => {
+            const groupFilter = document.createElement('div');
+            groupFilter.className = 'group-filter';
+            groupFilter.dataset.group = groupKey;
+            groupFilter.innerHTML = `
+                ${groupTitles[groupKey]}
+                <span class="group-filter-count">${groupCounts[groupKey]}</span>
+            `;
+            
+            groupFilter.onclick = () => {
+                this.toggleGroupFilter(groupKey, groupFilter);
+            };
+            
+            container.appendChild(groupFilter);
+        });
+        
+        // Add "All" button
+        const allFilter = document.createElement('div');
+        allFilter.className = 'group-filter active';
+        allFilter.dataset.group = 'all';
+        allFilter.innerHTML = 'Všechny skupiny';
+        allFilter.onclick = () => {
+            this.clearAllGroupFilters();
+            allFilter.classList.add('active');
+        };
+        container.insertBefore(allFilter, container.firstChild);
+    },
+    
+    toggleGroupFilter(group, element) {
+        element.classList.toggle('active');
+        
+        // Remove 'all' filter if any specific group is selected
+        const allFilter = document.querySelector('.group-filter[data-group="all"]');
+        if (allFilter && group !== 'all') {
+            allFilter.classList.remove('active');
+        }
+        
+        // If no filters are active, activate 'all'
+        const activeFilters = document.querySelectorAll('.group-filter.active:not([data-group="all"])');
+        if (activeFilters.length === 0 && allFilter) {
+            allFilter.classList.add('active');
+        }
+        
+        this.updateQuestionCount();
+    },
+    
+    clearAllGroupFilters() {
+        document.querySelectorAll('.group-filter').forEach(filter => {
+            filter.classList.remove('active');
+        });
+        this.updateQuestionCount();
+    },
+    
+    getFilteredQuestions() {
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        if (activeFilters.length === 0) {
+            return AppState.db; // Return all questions if no filters
+        }
+        
+        return AppState.db.filter(question => 
+            question._group && activeFilters.includes(question._group)
+        );
+    },
+    
+    updateQuestionCount() {
+        const filteredQuestions = this.getFilteredQuestions();
+        
+        // Update count selector with filtered questions
+        const tempDb = AppState.db;
+        AppState.db = filteredQuestions;
+        this.setupCountSelector();
+        AppState.db = tempDb; // Restore original
+        
+        // Update summary if available
+        const summary = document.getElementById('selected-topics-summary');
+        if (summary) {
+            const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+                .map(filter => filter.dataset.group);
+            
+            if (activeFilters.length > 0) {
+                const filterText = activeFilters.map(group => {
+                    const question = AppState.db.find(q => q._group === group);
+                    return question ? question._groupTitle : group;
+                }).join(', ');
+                summary.innerHTML = AppState.selectedQuizzes.map(q => 
+                    `<div class="summary-item">• ${q.title}</div>`
+                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-gray);">📂 Skupiny: ${filterText} (${filteredQuestions.length} otázek)</div>`;
+            } else {
+                this.updateSelectedTopicsSummary(); // Reset to original
+            }
+        }
     },
     
     updateSelectedTopicsSummary() {
