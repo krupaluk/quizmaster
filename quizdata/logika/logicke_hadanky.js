@@ -1,5 +1,4 @@
 window.data_logicke_hadanky = {
-    "quizTitle": "Logika: Logické hádanky",
     "questions": [
   {
     q: "Premisa 1: Všichni savci mají srdce. Premisa 2: Velryba je savec. Co z toho logicky vyplývá?",

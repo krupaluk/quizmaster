@@ -1,5 +1,4 @@
 window.data_formalni_logika = {
-    "quizTitle": "Logika: Formální Logika",
     "questions": [
 
   {

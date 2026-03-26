@@ -1,5 +1,4 @@
 window.data_domaci_a_hospodarska_zvirata = {
-    "quizTitle": "Prvouka: Domácí a hospodářská zvířata",
     "questions": [
                 {
             q: "Jak se správně nazývá samice králíka domácího?",

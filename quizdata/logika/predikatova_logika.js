@@ -1,5 +1,4 @@
 window.data_predikatova_logika = {
-    "quizTitle": "Logika: Predikátová Logika",
     "questions": [
   {
     q: "Co v logice vyjadřuje symbol '∀' (obrácené A)?",

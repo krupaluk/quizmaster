@@ -1,5 +1,4 @@
 window.data_obdobi_helenismu = {
-    "quizTitle": "Filosofie: Období Helénismu",
     "questions": [
         {
         q: "Co bylo hlavním politickým impulsem pro vznik helénistické filosofie?",

@@ -1,5 +1,4 @@
-﻿window.data_predsokratovci_po_aristotela = {
-    "quizTitle": "Filosofie: Předsokraté po Aristotela",
+﻿window.data_pocatky_po_vrcholne_recke_obdobi = {
     "groups": {
         "predsokrate": {
             "title": "Předsokraté",

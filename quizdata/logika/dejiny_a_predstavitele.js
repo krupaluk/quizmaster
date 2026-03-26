@@ -1,5 +1,4 @@
 window.data_dejiny_a_predstavitele = {
-    "quizTitle": "Logika: Dějiny a významní představitelé",
     "questions": [
                 {
             q: "Který Aristotelův spis z 'Organonu' se věnuje teorii pojmů a klasifikaci věcí?",

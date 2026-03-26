@@ -3,9 +3,9 @@ const quizCategories = {
         icon: "🧠",
         description: "Cesta ke kořenům západního myšlení",
         quizzes: {
-            predsokratovciPoAristotela: {
-                id: "predsokratovci_po_aristotela",
-                title: "Předsokratovci po Aristotela",
+            pocatkyPoVrcholneReckeObdobi: {
+                id: "pocatky_po_vrcholne_recke_obdobi",
+                title: "Od počátků k vrcholu řecké filosofie",
                 desc: "Od mýtů k logu, přes hledání pralátky (arché) až po vrcholné systémy Platóna a Aristotela.",
                 lastUpdated: null, // Will be auto-populated
                 version: "1.0"
