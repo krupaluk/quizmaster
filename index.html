@@ -113,13 +113,14 @@
         .exit-badge { 
             background: #e5e5ea; 
             color: #3a3a3c; 
-            border: none; 
-            padding: 7px 12px; 
+            border: 1px solid #d1d1d6; 
+            padding: 5px 15px; 
             border-radius: 10px; 
-            font-size: 10px; 
+            font-size: 13px; 
             font-weight: 800; 
             cursor: pointer; 
             text-transform: uppercase;
+            letter-spacing: 0.5px;
             justify-self: start; 
             transition: all 0.1s; 
             margin-top: 10px;
@@ -161,8 +162,7 @@
             background: var(--ios-card); 
             border-radius: 25px; 
             padding: 25px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            margin-bottom: 15px; 
+            padding-top: 18px;
             position: relative; 
             overflow: hidden; 
             min-height: 200px; 
@@ -181,6 +181,7 @@
             width: 0%; 
             transition: width 0.4s ease; 
         }
+        
 
         /* ===== QUIZ COMPONENTS ===== */
         .quiz-topic-info { 
@@ -188,7 +189,8 @@
             color: var(--ios-gray); 
             margin-bottom: 15px; 
             line-height: 1.4; 
-            margin-top: 5px; 
+            margin-top: 5px;
+            font-weight: normal;
         }
         .question-text { 
             font-size: 23px; 
@@ -607,6 +609,30 @@
         .hidden { 
             display: none !important; 
         }
+        
+        /* Warning Bubble */
+        .warning-bubble {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--border-red);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 59, 48, 0.3);
+            animation: bubblePop 4s ease-out forwards;
+        }
+        
+        @keyframes bubblePop {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+            40% { transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+        }
     </style>
 </head>
 <body>
@@ -614,11 +640,16 @@
 <div id="app">
     <!-- HUB -->
     <div id="sc-hub" class="screen">
+        <div class="status-bar">
+            <div class="stats-group">
+            </div>
+        </div>
         <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
             <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span>
         </header>
         <div class="card">
-            <h2 style="font-size: 26px; text-align: center;">Vyberte témata</h2>
+            <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
+                        <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
             <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="loadAndGoToSetup()">Pokračovat</button>
         </div>
@@ -626,17 +657,15 @@
 
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
-        <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span>
-        </header>
-        <div class="card">
-            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
-            
-            <!-- Selected Topics Summary -->
-            <div class="setup-summary">
-                <div class="summary-title">Vybraná témata:</div>
-                <div id="selected-topics-summary" class="summary-content"></div>
+        <div class="status-bar">
+            <button id="btn-back-trigger" class="exit-badge" onclick="location.reload()">Zpět</button>
+            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span></div>
+            <div class="stats-group">
             </div>
+        </div>
+        <div class="card">
+            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
+            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
             
             <!-- Quiz Options -->
             <div class="setup-section">
@@ -663,7 +692,6 @@
             <!-- Action Buttons -->
             <div class="setup-actions">
                 <button class="btn btn-primary" onclick="startQuiz()">Spustit test</button>
-                <button class="btn btn-secondary" onclick="location.reload()">Zpět k výběru témat</button>
             </div>
         </div>
     </div>
@@ -905,7 +933,7 @@ const DataLoader = {
     
     async loadQuizzes() {
         const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        if (checks.length === 0) return alert("Vyberte aspoň jedno téma!");
+        if (checks.length === 0) return;
         AppState.selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
         AppState.db = [];
         
@@ -933,10 +961,10 @@ const DataLoader = {
                 }
             }
             
-            if (AppState.db.length === 0) return alert("Chyba při načítání.");
+            if (AppState.db.length === 0) return;
             this.setupCountSelector();
             this.setupGroupFilters();
-            this.updateSelectedTopicsSummary();
+            Hub.updateSelectedTopicsSummary();
             UI.showScreen('sc-setup');
         } finally {
             this.showLoading(false);
@@ -1157,7 +1185,7 @@ const DataLoader = {
         const allFilter = document.createElement('div');
         allFilter.className = 'group-filter active';
         allFilter.dataset.group = 'all';
-        allFilter.innerHTML = 'Všechny skupiny';
+        allFilter.innerHTML = 'Σ';
         allFilter.onclick = () => {
             this.clearAllGroupFilters();
             allFilter.classList.add('active');
@@ -1318,15 +1346,6 @@ const DataLoader = {
         AppState.selectedCount = maxQ;
     },
     
-    updateSelectedTopicsSummary() {
-        const summary = document.getElementById('selected-topics-summary');
-        if (summary && AppState.selectedQuizzes) {
-            summary.innerHTML = AppState.selectedQuizzes.map(q => 
-                `<div class="summary-item">• ${q.title}</div>`
-            ).join('');
-        }
-    },
-    
     clearCache() {
         this.cache.clear();
     },
@@ -1356,6 +1375,74 @@ const Hub = {
         } else {
             list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
         }
+    },
+    
+    updateSelectedTopicsSummary() {
+        const summary = document.getElementById('hub-selected-topics-summary');
+        const setupSummary = document.getElementById('setup-selected-topics-summary');
+        if (!summary) return;
+        
+        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+        
+        
+        // Enforce maximum 5 topics selection
+        if (checks.length > 5) {
+            // Show warning bubble
+            this.showWarningBubble('Můžete vybrat nanejvýš 5 okruhů!');
+            
+            // Find most recently checked checkbox and uncheck it
+            const allChecks = Array.from(document.querySelectorAll('.quiz-check'));
+            for (let i = allChecks.length - 1; i >= 0; i--) {
+                if (allChecks[i].checked && !checks.slice(0, 5).includes(allChecks[i])) {
+                    allChecks[i].checked = false;
+                    break;
+                }
+            }
+            // Recalculate checks after enforcement
+            const newChecks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+            if (newChecks.length === 0) {
+                const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
+                if (summary) summary.innerHTML = displayText;
+                if (setupSummary) setupSummary.innerHTML = displayText;
+            } else {
+                const selectedTitles = newChecks.map(ch => ch.getAttribute('data-title'));
+                const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
+                if (summary) summary.innerHTML = displayText;
+                if (setupSummary) setupSummary.innerHTML = displayText;
+            }
+            return;
+        }
+        
+        if (checks.length === 0) {
+            const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
+            if (summary) summary.innerHTML = displayText;
+            if (setupSummary) setupSummary.innerHTML = displayText;
+        } else {
+            const selectedTitles = checks.map(ch => ch.getAttribute('data-title'));
+            const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
+            if (summary) summary.innerHTML = displayText;
+            if (setupSummary) setupSummary.innerHTML = displayText;
+        }
+    },
+    
+    
+    showWarningBubble(message) {
+        // Remove any existing bubbles
+        const existingBubbles = document.querySelectorAll('.warning-bubble');
+        existingBubbles.forEach(bubble => bubble.remove());
+        
+        // Create new bubble
+        const bubble = document.createElement('div');
+        bubble.className = 'warning-bubble';
+        bubble.textContent = message;
+        document.body.appendChild(bubble);
+        
+        // Remove bubble after animation completes
+        setTimeout(() => {
+            if (bubble.parentNode) {
+                bubble.remove();
+            }
+        }, 4000);
     },
     
     renderQuizList() {
@@ -1404,14 +1491,22 @@ const Hub = {
                     }
                     
                     div.innerHTML = `
-                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> 
+                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title} <span class="quiz-version-inline">v${q.version}</span></div>
                             <div class="quiz-desc">${q.desc}</div>
                             ${lastUpdatedText ? `<div class="quiz-update-info">(last update: ${lastUpdatedText})</div>` : ''}
                         </div>
                     `;
-                    div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
+                    div.onclick = (e) => { 
+                        if(e.target.tagName !== 'INPUT') { 
+                            const ch = div.querySelector('input'); 
+                            ch.checked = !ch.checked; 
+                            Hub.updateSelectedTopicsSummary(); 
+                        } else {
+                            Hub.updateSelectedTopicsSummary();
+                        }
+                    };
                     quizzesContainer.appendChild(div);
                 });
                 
@@ -1461,7 +1556,14 @@ const ExitHandler = {
 };
 
 // ===== GLOBAL FUNCTIONS =====
-function loadAndGoToSetup() { DataLoader.loadQuizzes(); }
+function loadAndGoToSetup() { 
+    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+    if (checks.length === 0) {
+        Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
+        return;
+    }
+    DataLoader.loadQuizzes(); 
+}
 function startQuiz() { QuizEngine.start(); }
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
