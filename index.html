@@ -920,7 +920,7 @@ const DataLoader = {
                 const id = ch.value;
                 const quizData = await this.loadQuizData(id);
                 if (quizData) {
-                    // Use the processed questions from the new structure
+                    // Use processed questions from the new structure
                     if (quizData.questions && Array.isArray(quizData.questions)) {
                         AppState.db = AppState.db.concat(quizData.questions);
                     }
@@ -989,7 +989,7 @@ const DataLoader = {
     
     // Process quiz data - handle both old and new structures
     processQuizData(raw) {
-        // Check if it's the new structure with groups
+        // Check if it's new structure with groups
         if (raw.groups && typeof raw.groups === 'object') {
             const allQuestions = [];
             
@@ -1008,19 +1008,21 @@ const DataLoader = {
                 }
             });
             
-            return {
+            const result = {
                 quizTitle: raw.quizTitle,
                 questions: allQuestions,
                 groups: raw.groups,
                 _structure: 'grouped' // Mark as new structure
             };
+            return result;
         } else {
             // Handle old structure (flat array of questions)
-            return {
+            const result = {
                 quizTitle: raw.quizTitle || 'Quiz',
                 questions: raw.questions || (Array.isArray(raw) ? raw : []),
                 _structure: 'flat' // Mark as old structure
             };
+            return result;
         }
     },
     
@@ -1122,22 +1124,6 @@ const DataLoader = {
         AppState.selectedCount = maxQ;
     },
     
-    selectCount(count) {
-        // Remove active class from all buttons
-        document.querySelectorAll('.count-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        
-        // Add active class to selected button
-        const selectedBtn = document.querySelector(`[data-count="${count}"]`);
-        if (selectedBtn) {
-            selectedBtn.classList.add('active');
-        }
-        
-        // Store selected count (for compatibility with existing code)
-        AppState.selectedCount = count;
-    },
-    
     setupGroupFilters() {
         const container = document.getElementById('group-filters');
         container.innerHTML = '';
@@ -1146,7 +1132,7 @@ const DataLoader = {
         const hasGroups = AppState.db.length > 0 && AppState.db[0]._group;
         
         if (!hasGroups) {
-            // For old structure, hide the group filters section
+            // For old structure, hide group filters section
             container.parentElement.style.display = 'none';
             return;
         }
@@ -1240,11 +1226,8 @@ const DataLoader = {
     updateQuestionCount() {
         const filteredQuestions = this.getFilteredQuestions();
         
-        // Update count selector with filtered questions
-        const tempDb = AppState.db;
-        AppState.db = filteredQuestions;
-        this.setupCountSelector();
-        AppState.db = tempDb; // Restore original
+        // Update count selector with filtered questions - use copy, don't modify AppState.db
+        this.setupCountSelectorWithQuestions(filteredQuestions);
         
         // Update summary if available
         const summary = document.getElementById('selected-topics-summary');
@@ -1259,11 +1242,100 @@ const DataLoader = {
                 }).join(', ');
                 summary.innerHTML = AppState.selectedQuizzes.map(q => 
                     `<div class="summary-item">• ${q.title}</div>`
-                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-gray);">📂 Skupiny: ${filterText} (${filteredQuestions.length} otázek)</div>`;
+                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">� Filtry: ${filterText}</div>`;
             } else {
-                this.updateSelectedTopicsSummary(); // Reset to original
+                summary.innerHTML = AppState.selectedQuizzes.map(q => 
+                    `<div class="summary-item">• ${q.title}</div>`
+                ).join('');
             }
         }
+    },
+    
+    setupCountSelectorWithQuestions(questions) {
+        const container = document.getElementById('count-buttons');
+        container.innerHTML = '';
+        
+        const maxQ = questions.length;
+        if (maxQ < 5) {
+            // If less than 5 questions, create one button for all
+            const btn = document.createElement('button');
+            btn.className = 'count-btn active max';
+            btn.innerText = maxQ;
+            btn.dataset.count = maxQ;
+            btn.onclick = () => this.selectCount(maxQ);
+            container.appendChild(btn);
+            return;
+        }
+        
+        // Smart algorithm for max 3 rows
+        const buttons = [];
+        buttons.push(5); // Always start with 5
+        
+        if (maxQ >= 10) {
+            buttons.push(10);
+        }
+        
+        // Calculate remaining buttons to fit in 3 rows
+        const maxButtons = 9; // 3 rows × 3 buttons max
+        let remainingSlots = maxButtons - buttons.length;
+        
+        if (remainingSlots > 0) {
+            // Calculate step based on remaining questions
+            const remainingQ = maxQ - 10;
+            if (remainingQ > 0) {
+                // Smart step calculation
+                let step;
+                if (remainingQ <= 20) {
+                    step = 5; // Use 5 for smaller ranges
+                } else if (remainingQ <= 50) {
+                    step = 10; // Use 10 for medium ranges
+                } else {
+                    step = 15; // Use 15 for large ranges
+                }
+                
+                // Generate buttons with calculated step
+                for (let i = 15; i <= maxQ && buttons.length < maxButtons; i += step) {
+                    if (i > 10) buttons.push(i);
+                }
+                
+                // Ensure max is included and it's the last button
+                if (buttons[buttons.length - 1] !== maxQ) {
+                    // If we have room, add max as a separate button
+                    if (buttons.length < maxButtons) {
+                        buttons.push(maxQ);
+                    } else {
+                        // Replace the last button with max
+                        buttons[buttons.length - 1] = maxQ;
+                    }
+                }
+            }
+        }
+        
+        // Create buttons
+        buttons.forEach((count, index) => {
+            const btn = document.createElement('button');
+            const isMax = count === maxQ;
+            
+            let className = 'count-btn';
+            if (isMax) className += ' max';
+            
+            // Select MAX by default
+            if (isMax) {
+                className += ' active';
+            }
+            
+            btn.className = className;
+            btn.innerText = count;
+            btn.dataset.count = count;
+            btn.onclick = () => {
+                this.selectCount(count);
+            };
+            
+            container.appendChild(btn);
+        });
+        
+        // Store default selection (MAX)
+        AppState.selectedCount = maxQ;
     },
     
     updateSelectedTopicsSummary() {
