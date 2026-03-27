@@ -113,13 +113,14 @@
         .exit-badge { 
             background: #e5e5ea; 
             color: #3a3a3c; 
-            border: none; 
-            padding: 7px 12px; 
+            border: 1px solid #d1d1d6; 
+            padding: 5px 15px; 
             border-radius: 10px; 
-            font-size: 10px; 
+            font-size: 13px; 
             font-weight: 800; 
             cursor: pointer; 
             text-transform: uppercase;
+            letter-spacing: 0.5px;
             justify-self: start; 
             transition: all 0.1s; 
             margin-top: 10px;
@@ -161,8 +162,7 @@
             background: var(--ios-card); 
             border-radius: 25px; 
             padding: 25px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-            margin-bottom: 15px; 
+            padding-top: 18px;
             position: relative; 
             overflow: hidden; 
             min-height: 200px; 
@@ -181,6 +181,7 @@
             width: 0%; 
             transition: width 0.4s ease; 
         }
+        
 
         /* ===== QUIZ COMPONENTS ===== */
         .quiz-topic-info { 
@@ -188,7 +189,8 @@
             color: var(--ios-gray); 
             margin-bottom: 15px; 
             line-height: 1.4; 
-            margin-top: 5px; 
+            margin-top: 5px;
+            font-weight: normal;
         }
         .question-text { 
             font-size: 23px; 
@@ -395,7 +397,58 @@
             margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+        }
+        
+        /* Inline Slider Styles */
+        .slider-value-inline {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ios-text);
+        }
+        .slider-value-inline span {
+            color: var(--ios-blue);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .question-slider-inline {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--neutral-border);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .question-slider-inline::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+            transition: all 0.2s ease;
+        }
+        .question-slider-inline::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+        }
+        .question-slider-inline::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .question-slider-inline::-moz-range-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
         }
         
         .setup-option {
@@ -562,9 +615,74 @@
             margin-top: 4px;
         }
         
-        /* ===== UTILITIES ===== */
+        /* Group Filters */
+        .group-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .group-filter {
+            display: inline-block;
+            padding: 8px 12px;
+            border: 2px solid var(--neutral-border);
+            border-radius: 12px;
+            background: white;
+            color: var(--ios-text);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        .group-filter:hover {
+            border-color: var(--ios-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        .group-filter.active {
+            background: var(--ios-blue);
+            color: white;
+            border-color: var(--ios-blue);
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+        .group-filter-count {
+            background: rgba(0,0,0,0.1);
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 6px;
+        }
+        .group-filter.active .group-filter-count {
+            background: rgba(255,255,255,0.3);
+        }
         .hidden { 
             display: none !important; 
+        }
+        
+        /* Warning Bubble */
+        .warning-bubble {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--border-red);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 59, 48, 0.3);
+            animation: bubblePop 4s ease-out forwards;
+        }
+        
+        @keyframes bubblePop {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+            40% { transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
     </style>
 </head>
@@ -573,11 +691,16 @@
 <div id="app">
     <!-- HUB -->
     <div id="sc-hub" class="screen">
+        <div class="status-bar">
+            <div class="stats-group">
+            </div>
+        </div>
         <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
             <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span>
         </header>
         <div class="card">
-            <h2 style="font-size: 26px; text-align: center;">Vyberte témata</h2>
+            <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
+                        <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
             <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="loadAndGoToSetup()">Pokračovat</button>
         </div>
@@ -585,22 +708,30 @@
 
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
-        <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span>
-        </header>
-        <div class="card">
-            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
-            
-            <!-- Selected Topics Summary -->
-            <div class="setup-summary">
-                <div class="summary-title">Vybraná témata:</div>
-                <div id="selected-topics-summary" class="summary-content"></div>
+        <div class="status-bar">
+            <button id="btn-back-trigger" class="exit-badge" onclick="location.reload()">Zpět</button>
+            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span></div>
+            <div class="stats-group">
             </div>
+        </div>
+        <div class="card">
+            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
+            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
             
             <!-- Quiz Options -->
             <div class="setup-section">
-                <div class="section-title">📊 Počet otázek</div>
-                <div id="count-buttons" class="count-buttons"></div>
+                <div class="section-title">📁 Výběr skupin</div>
+                <div id="group-filters" class="group-filters"></div>
+            </div>
+            
+            <div class="setup-section">
+                <div class="section-title">
+                    📈 Počet otázek
+                    <span class="slider-value-inline">
+                        <span id="slider-value">10</span> otázek
+                    </span>
+                </div>
+                <input type="range" id="question-count-slider" class="question-slider-inline" min="5" max="50" value="10" step="1">
             </div>
             
             <div class="setup-section">
@@ -617,7 +748,6 @@
             <!-- Action Buttons -->
             <div class="setup-actions">
                 <button class="btn btn-primary" onclick="startQuiz()">Spustit test</button>
-                <button class="btn btn-secondary" onclick="location.reload()">Zpět k výběru témat</button>
             </div>
         </div>
     </div>
@@ -726,8 +856,22 @@ const QuizEngine = {
     },
     
     start() {
-        AppState.total = AppState.selectedCount || parseInt(document.getElementById('sel-count')?.value || 10);
-        AppState.activeQ = [...AppState.db];
+        AppState.total = AppState.selectedCount || parseInt(document.getElementById('question-count-slider')?.value || 10);
+        
+        // Get filtered questions if groups are selected
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        let availableQuestions;
+        if (activeFilters.length > 0) {
+            availableQuestions = AppState.db.filter(question => 
+                question._group && activeFilters.includes(question._group)
+            );
+        } else {
+            availableQuestions = AppState.db;
+        }
+        
+        AppState.activeQ = [...availableQuestions];
         if (document.getElementById('chk-shuffle').checked) this.shuffle(AppState.activeQ);
         AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
         AppState.cur = 0; 
@@ -845,7 +989,7 @@ const DataLoader = {
     
     async loadQuizzes() {
         const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        if (checks.length === 0) return alert("Vyberte aspoň jedno téma!");
+        if (checks.length === 0) return;
         AppState.selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
         AppState.db = [];
         
@@ -860,7 +1004,10 @@ const DataLoader = {
                 const id = ch.value;
                 const quizData = await this.loadQuizData(id);
                 if (quizData) {
-                    AppState.db = AppState.db.concat(quizData.questions || (Array.isArray(quizData) ? quizData : []));
+                    // Use processed questions from the grouped structure
+                    if (quizData.questions && Array.isArray(quizData.questions)) {
+                        AppState.db = AppState.db.concat(quizData.questions);
+                    }
                     
                     // Add to selected quizzes summary
                     AppState.selectedQuizzes.push({
@@ -870,9 +1017,10 @@ const DataLoader = {
                 }
             }
             
-            if (AppState.db.length === 0) return alert("Chyba při načítání.");
+            if (AppState.db.length === 0) return;
             this.setupCountSelector();
-            this.updateSelectedTopicsSummary();
+            this.setupGroupFilters();
+            Hub.updateSelectedTopicsSummary();
             UI.showScreen('sc-setup');
         } finally {
             this.showLoading(false);
@@ -904,8 +1052,10 @@ const DataLoader = {
                 setTimeout(() => {
                     const raw = window['data_' + id];
                     if (raw) {
-                        this.cache.set(id, raw); // Cache the data
-                        resolve(raw);
+                        // Process the new structure with groups
+                        const processedData = this.processQuizData(raw);
+                        this.cache.set(id, processedData); // Cache the processed data
+                        resolve(processedData);
                     } else {
                         resolve(null);
                     }
@@ -921,6 +1071,33 @@ const DataLoader = {
         });
     },
     
+    // Process quiz data - handle the new grouped structure
+    processQuizData(raw) {
+        // Extract questions from all groups
+        const allQuestions = [];
+        
+        Object.keys(raw.groups).forEach(groupKey => {
+            const group = raw.groups[groupKey];
+            if (group.questions && Array.isArray(group.questions)) {
+                // Add group information to each question
+                group.questions.forEach(question => {
+                    allQuestions.push({
+                        ...question,
+                        _group: groupKey,
+                        _groupTitle: group.title || groupKey
+                    });
+                });
+            }
+        });
+        
+        const result = {
+            quizTitle: raw.quizTitle,
+            questions: allQuestions,
+            groups: raw.groups
+        };
+        return result;
+    },
+    
     showLoading(show) {
         const list = document.getElementById('hub-list');
         if (show) {
@@ -933,116 +1110,170 @@ const DataLoader = {
     },
     
     setupCountSelector() {
-        const container = document.getElementById('count-buttons');
-        container.innerHTML = '';
+        const slider = document.getElementById('question-count-slider');
+        const valueDisplay = document.getElementById('slider-value');
         
         const maxQ = AppState.db.length;
-        if (maxQ < 5) {
-            // If less than 5 questions, create one button for all
-            const btn = document.createElement('button');
-            btn.className = 'count-btn active max';
-            btn.innerText = maxQ;
-            btn.dataset.count = maxQ;
-            btn.onclick = () => this.selectCount(maxQ);
-            container.appendChild(btn);
-            return;
-        }
+        const minQ = Math.min(5, maxQ);
         
-        // Smart algorithm for max 3 rows
-        const buttons = [];
-        buttons.push(5); // Always start with 5
+        // Set slider properties
+        slider.min = minQ;
+        slider.max = maxQ;
+        slider.value = maxQ;
         
-        if (maxQ >= 10) {
-            buttons.push(10);
-        }
+        // Update display
+        valueDisplay.textContent = maxQ;
         
-        // Calculate remaining buttons to fit in 3 rows
-        const maxButtons = 9; // 3 rows × 3 buttons max
-        let remainingSlots = maxButtons - buttons.length;
+        // Store default selection
+        AppState.selectedCount = maxQ;
         
-        if (remainingSlots > 0) {
-            // Calculate step based on remaining questions
-            const remainingQ = maxQ - 10;
-            if (remainingQ > 0) {
-                // Smart step calculation
-                let step;
-                if (remainingQ <= 20) {
-                    step = 5; // Use 5 for smaller ranges
-                } else if (remainingQ <= 50) {
-                    step = 10; // Use 10 for medium ranges
-                } else {
-                    step = 15; // Use 15 for large ranges
-                }
-                
-                // Generate buttons with calculated step
-                for (let i = 15; i <= maxQ && buttons.length < maxButtons; i += step) {
-                    if (i > 10) buttons.push(i);
-                }
-                
-                // Ensure max is included and it's the last button
-                if (buttons[buttons.length - 1] !== maxQ) {
-                    // If we have room, add max as a separate button
-                    if (buttons.length < maxButtons) {
-                        buttons.push(maxQ);
-                    } else {
-                        // Replace the last button with max
-                        buttons[buttons.length - 1] = maxQ;
-                    }
-                }
+        // Add event listener
+        slider.oninput = () => {
+            valueDisplay.textContent = slider.value;
+            AppState.selectedCount = parseInt(slider.value);
+        };
+    },
+    
+    setupGroupFilters() {
+        const container = document.getElementById('group-filters');
+        container.innerHTML = '';
+        
+        
+        // Collect all unique groups from loaded questions
+        const groupCounts = {};
+        const groupTitles = {};
+        
+        AppState.db.forEach(question => {
+            if (question._group) {
+                groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
+                groupTitles[question._group] = question._groupTitle || question._group;
             }
-        }
+        });
         
-        // Create buttons
-        buttons.forEach((count, index) => {
-            const btn = document.createElement('button');
-            const isMax = count === maxQ;
-            
-            let className = 'count-btn';
-            if (isMax) className += ' max';
-            
-            // Select MAX by default
-            if (isMax) {
-                className += ' active';
+        // Sort groups by count (descending) then alphabetically
+        const sortedGroups = Object.keys(groupCounts).sort((a, b) => {
+            if (groupCounts[b] !== groupCounts[a]) {
+                return groupCounts[b] - groupCounts[a];
             }
+            return a.localeCompare(b);
+        });
+        
+        // Create group filter buttons
+        sortedGroups.forEach(groupKey => {
+            const groupFilter = document.createElement('div');
+            groupFilter.className = 'group-filter';
+            groupFilter.dataset.group = groupKey;
+            groupFilter.innerHTML = `
+                ${groupTitles[groupKey]}
+                <span class="group-filter-count">${groupCounts[groupKey]}</span>
+            `;
             
-            btn.className = className;
-            btn.innerText = count;
-            btn.dataset.count = count;
-            btn.onclick = () => {
-                this.selectCount(count);
+            groupFilter.onclick = () => {
+                this.toggleGroupFilter(groupKey, groupFilter);
             };
             
-            container.appendChild(btn);
+            container.appendChild(groupFilter);
         });
         
-        // Store default selection (MAX)
-        AppState.selectedCount = maxQ;
+        // Add "All" button
+        const allFilter = document.createElement('div');
+        allFilter.className = 'group-filter active';
+        allFilter.dataset.group = 'all';
+        allFilter.innerHTML = 'Σ';
+        allFilter.onclick = () => {
+            this.clearAllGroupFilters();
+            allFilter.classList.add('active');
+        };
+        container.insertBefore(allFilter, container.firstChild);
     },
     
-    selectCount(count) {
-        // Remove active class from all buttons
-        document.querySelectorAll('.count-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
+    toggleGroupFilter(group, element) {
+        element.classList.toggle('active');
         
-        // Add active class to selected button
-        const selectedBtn = document.querySelector(`[data-count="${count}"]`);
-        if (selectedBtn) {
-            selectedBtn.classList.add('active');
+        // Remove 'all' filter if any specific group is selected
+        const allFilter = document.querySelector('.group-filter[data-group="all"]');
+        if (allFilter && group !== 'all') {
+            allFilter.classList.remove('active');
         }
         
-        // Store selected count (for compatibility with existing code)
-        AppState.selectedCount = count;
+        // If no filters are active, activate 'all'
+        const activeFilters = document.querySelectorAll('.group-filter.active:not([data-group="all"])');
+        if (activeFilters.length === 0 && allFilter) {
+            allFilter.classList.add('active');
+        }
+        
+        this.updateQuestionCount();
     },
     
-    updateSelectedTopicsSummary() {
+    clearAllGroupFilters() {
+        document.querySelectorAll('.group-filter').forEach(filter => {
+            filter.classList.remove('active');
+        });
+        this.updateQuestionCount();
+    },
+    
+    getFilteredQuestions() {
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        if (activeFilters.length === 0) {
+            return AppState.db; // Return all questions if no filters
+        }
+        
+        return AppState.db.filter(question => 
+            question._group && activeFilters.includes(question._group)
+        );
+    },
+    
+    updateQuestionCount() {
+        const filteredQuestions = this.getFilteredQuestions();
+        
+        // Update slider with filtered questions
+        this.updateSliderWithQuestions(filteredQuestions);
+        
+        // Update summary if available
         const summary = document.getElementById('selected-topics-summary');
-        if (summary && AppState.selectedQuizzes) {
-            summary.innerHTML = AppState.selectedQuizzes.map(q => 
-                `<div class="summary-item">• ${q.title}</div>`
-            ).join('');
+        if (summary) {
+            const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+                .map(filter => filter.dataset.group);
+            
+            if (activeFilters.length > 0) {
+                const filterText = activeFilters.map(group => {
+                    const question = AppState.db.find(q => q._group === group);
+                    return question ? question._groupTitle : group;
+                }).join(', ');
+                summary.innerHTML = AppState.selectedQuizzes.map(q => 
+                    `<div class="summary-item">• ${q.title}</div>`
+                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">� Filtry: ${filterText}</div>`;
+            } else {
+                summary.innerHTML = AppState.selectedQuizzes.map(q => 
+                    `<div class="summary-item">• ${q.title}</div>`
+                ).join('');
+            }
         }
     },
+    
+    updateSliderWithQuestions(questions) {
+        const slider = document.getElementById('question-count-slider');
+        const valueDisplay = document.getElementById('slider-value');
+        
+        const maxQ = questions.length;
+        const minQ = Math.min(5, maxQ);
+        
+        // Set slider properties
+        slider.min = minQ;
+        slider.max = maxQ;
+        
+        // Adjust current value if it's outside the new range
+        if (parseInt(slider.value) > maxQ) {
+            slider.value = maxQ;
+        }
+        
+        // Update display
+        valueDisplay.textContent = slider.value;
+        AppState.selectedCount = parseInt(slider.value);
+    },
+    
     
     clearCache() {
         this.cache.clear();
@@ -1068,11 +1299,79 @@ const DataLoader = {
 const Hub = {
     init() {
         const list = document.getElementById('hub-list');
-        if (typeof availableQuizzes !== 'undefined') {
+        if (typeof quizCategories !== 'undefined') {
             this.renderQuizList();
         } else {
             list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
         }
+    },
+    
+    updateSelectedTopicsSummary() {
+        const summary = document.getElementById('hub-selected-topics-summary');
+        const setupSummary = document.getElementById('setup-selected-topics-summary');
+        if (!summary) return;
+        
+        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+        
+        
+        // Enforce maximum 5 topics selection
+        if (checks.length > 5) {
+            // Show warning bubble
+            this.showWarningBubble('Můžete vybrat nanejvýš 5 okruhů!');
+            
+            // Find most recently checked checkbox and uncheck it
+            const allChecks = Array.from(document.querySelectorAll('.quiz-check'));
+            for (let i = allChecks.length - 1; i >= 0; i--) {
+                if (allChecks[i].checked && !checks.slice(0, 5).includes(allChecks[i])) {
+                    allChecks[i].checked = false;
+                    break;
+                }
+            }
+            // Recalculate checks after enforcement
+            const newChecks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+            if (newChecks.length === 0) {
+                const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
+                if (summary) summary.innerHTML = displayText;
+                if (setupSummary) setupSummary.innerHTML = displayText;
+            } else {
+                const selectedTitles = newChecks.map(ch => ch.getAttribute('data-title'));
+                const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
+                if (summary) summary.innerHTML = displayText;
+                if (setupSummary) setupSummary.innerHTML = displayText;
+            }
+            return;
+        }
+        
+        if (checks.length === 0) {
+            const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
+            if (summary) summary.innerHTML = displayText;
+            if (setupSummary) setupSummary.innerHTML = displayText;
+        } else {
+            const selectedTitles = checks.map(ch => ch.getAttribute('data-title'));
+            const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
+            if (summary) summary.innerHTML = displayText;
+            if (setupSummary) setupSummary.innerHTML = displayText;
+        }
+    },
+    
+    
+    showWarningBubble(message) {
+        // Remove any existing bubbles
+        const existingBubbles = document.querySelectorAll('.warning-bubble');
+        existingBubbles.forEach(bubble => bubble.remove());
+        
+        // Create new bubble
+        const bubble = document.createElement('div');
+        bubble.className = 'warning-bubble';
+        bubble.textContent = message;
+        document.body.appendChild(bubble);
+        
+        // Remove bubble after animation completes
+        setTimeout(() => {
+            if (bubble.parentNode) {
+                bubble.remove();
+            }
+        }, 4000);
     },
     
     renderQuizList() {
@@ -1121,14 +1420,22 @@ const Hub = {
                     }
                     
                     div.innerHTML = `
-                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> 
+                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title} <span class="quiz-version-inline">v${q.version}</span></div>
                             <div class="quiz-desc">${q.desc}</div>
                             ${lastUpdatedText ? `<div class="quiz-update-info">(last update: ${lastUpdatedText})</div>` : ''}
                         </div>
                     `;
-                    div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
+                    div.onclick = (e) => { 
+                        if(e.target.tagName !== 'INPUT') { 
+                            const ch = div.querySelector('input'); 
+                            ch.checked = !ch.checked; 
+                            Hub.updateSelectedTopicsSummary(); 
+                        } else {
+                            Hub.updateSelectedTopicsSummary();
+                        }
+                    };
                     quizzesContainer.appendChild(div);
                 });
                 
@@ -1149,45 +1456,11 @@ const Hub = {
                 categoryContainer.appendChild(quizzesContainer);
                 list.appendChild(categoryContainer);
             });
-        } else if (typeof availableQuizzes !== 'undefined') {
-            // Fallback to flat structure
-            const categorized = this.categorizeQuizzes();
-            Object.keys(categorized).forEach(category => {
-                if (categorized[category].length > 0) {
-                    const catHeader = document.createElement('div');
-                    catHeader.style.cssText = 'font-weight: 600; color: var(--ios-gray); margin: 15px 0 8px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;';
-                    catHeader.innerText = category;
-                    list.appendChild(catHeader);
-                    
-                    categorized[category].forEach(q => {
-                        const div = document.createElement('div');
-                        div.className = 'hub-item';
-                        div.innerHTML = `<input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
-                        div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
-                        list.appendChild(div);
-                    });
-                }
-            });
         } else {
             list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
         }
     },
     
-    categorizeQuizzes() {
-        const categories = {};
-        
-        if (typeof availableQuizzes !== 'undefined') {
-            availableQuizzes.forEach(q => {
-                const category = q.category || 'Ostatní';
-                if (!categories[category]) {
-                    categories[category] = [];
-                }
-                categories[category].push(q);
-            });
-        }
-        
-        return categories;
-    }
 };
 
 // ===== EXIT HANDLER =====
@@ -1212,7 +1485,14 @@ const ExitHandler = {
 };
 
 // ===== GLOBAL FUNCTIONS =====
-function loadAndGoToSetup() { DataLoader.loadQuizzes(); }
+function loadAndGoToSetup() { 
+    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
+    if (checks.length === 0) {
+        Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
+        return;
+    }
+    DataLoader.loadQuizzes(); 
+}
 function startQuiz() { QuizEngine.start(); }
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }

@@ -1,7 +1,9 @@
 window.data_predikatova_logika = {
-    "quizTitle": "Logika: Predikátová Logika",
-    "questions": [
-  {
+    "groups": {
+        "zaklady_a_kvantifikatory": {
+            "title": "Základy a kvantifikátory",
+            "questions": [
+{
     q: "Co v logice vyjadřuje symbol '∀' (obrácené A)?",
     a: "Existenční kvantifikátor (existuje alespoň jedno)",
     b: "Všeobecný kvantifikátor (pro všechna, každý)",
@@ -181,8 +183,12 @@ window.data_predikatova_logika = {
       c: "V takto omezeném světě se rozdíly mezi existenčním a všeobecným kvantifikátorem stírají, oba mluví o tomtéž prvku."
     }
   },
-
-  {
+      ]
+        },
+        "relace_a_poradi": {
+            "title": "Relace a pořadí",
+            "questions": [
+{
     q: "Jaký je rozdíl mezi '∀x ∃y Miluje(x, y)' a '∃y ∀x Miluje(x, y)'?",
     a: "Žádný, pořadí kvantifikátorů u různých typů (∀, ∃) nehraje roli.",
     b: "První říká, že každý někoho miluje. Druhá, že existuje jedna osoba, kterou milují úplně všichni.",
@@ -362,7 +368,12 @@ window.data_predikatova_logika = {
       c: "To by byla implikace s negací."
     }
   },
-  {
+  ]
+        },
+        "zakony_a_identita": {
+            "title": "Zákony a identita",
+            "questions": [
+{
     q: "Co znamená zápis '∀x ∃y (P(x) → Miluje(x, y))'?",
     a: "Každý člověk (P) někoho miluje.",
     b: "Existuje někdo, koho milují všichni lidé.",
@@ -518,6 +529,7 @@ window.data_predikatova_logika = {
       c: "To by znamenalo, že úplně každá velká ryba požírá úplně všechno a všechno je to malé (logický nesmysl)."
     }
   },
+
   {
     q: "Věta 'Všichni (x) mají někoho (y), kdo je (y) nenávidí (N)' se zapíše:",
     a: "∀x ∃y N(y, x)",
@@ -541,7 +553,12 @@ window.data_predikatova_logika = {
       b: "To by byl pravý opak.",
       c: "Pokud z něčeho plyne spor, nemůže to platit ani pro jedno jediné x."
     }
-  },
+  },  
+  ]
+        },
+        "pokrocila_analyza": {
+            "title": "Pokročilá analýza",
+            "questions": [
 
   {
     q: "Jak zapíšeme větu: 'Každý má nejvýše jednoho otce' (O(x, y) = x je otcem y)?",
@@ -723,6 +740,7 @@ window.data_predikatova_logika = {
       c: "To je nedává smysl, ∃x není vlastnost, ale kvantifikátor."
     }
   }
-
-    ]
+  ]
+        }
+    }
 };
