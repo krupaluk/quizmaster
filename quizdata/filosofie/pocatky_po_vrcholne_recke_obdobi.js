@@ -1350,7 +1350,7 @@
                         b: "Například statečnost je středem mezi zbabělostí (nedostatek odvahy) a hazardérstvím (nadbytek odvahy). Ctnostný člověk ví, kdy a jak se zachovat správně.",
                         c: "Cílem je stálý charakter, nikoliv střídání dobrého a špatného chování."
                     },
-                    tag: "aristoteles_etika"
+                    tag: "aristoteles"
                 },
                 {
                     q: "Jakým způsobem se člověk podle Aristotela stává ctnostným a dobrým?",
@@ -1363,8 +1363,22 @@
                         b: "Rodíme se s vlohami, ale ctnosti musíme pěstovat výchovou a tréninkem.",
                         c: "Slavně tvrdil: 'Jedna vlaštovka jaro nedělá.' Stejně tak jeden dobrý skutek z nás nedělá dobrého člověka – musíme se v dobru cvičit tak dlouho, až se stane naší přirozeností."
                     },
-                    tag: "aristoteles_etika"
+                    tag: "aristoteles"
                 },
+                {
+                    q: "Aristotelés měl obrovský vliv na středověkou scholastiku. Jak byl v této době vnímán?",
+                    a: "Jako nebezpečný pohan, jehož knihy se musely pálit", 
+                    b: "Jako nejvyšší rozumová autorita, které se říkalo prostě 'Filosof'", 
+                    c: "Jako autor zábavných příběhů pro krále",
+                    ans: "b",
+                    expl: {
+                        a: "Zpočátku k němu byla církev opatrná, ale díky Tomáši Akvinskému se stal základem křesťanského učení.",
+                        b: "Ve středověku se věřilo, že co napsal Aristotelés, je nezpochybnitelná pravda o přírodě i logice. Tomáš Akvinský propojil jeho filosofii s vírou a vytvořil tak jednotný systém vědění.",
+                        c: "Aristotelovy spisy byly vysoce odborné a náročné, sloužily k univerzitní výuce, nikoliv k zábavě."
+                    },
+                    tag: "aristoteles"
+                }
+
             ]
         }
     }
