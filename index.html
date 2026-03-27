@@ -920,7 +920,7 @@ const DataLoader = {
                 const id = ch.value;
                 const quizData = await this.loadQuizData(id);
                 if (quizData) {
-                    // Use processed questions from the new structure
+                    // Use processed questions from the grouped structure
                     if (quizData.questions && Array.isArray(quizData.questions)) {
                         AppState.db = AppState.db.concat(quizData.questions);
                     }
@@ -987,43 +987,31 @@ const DataLoader = {
         });
     },
     
-    // Process quiz data - handle both old and new structures
+    // Process quiz data - handle the new grouped structure
     processQuizData(raw) {
-        // Check if it's new structure with groups
-        if (raw.groups && typeof raw.groups === 'object') {
-            const allQuestions = [];
-            
-            // Extract questions from all groups
-            Object.keys(raw.groups).forEach(groupKey => {
-                const group = raw.groups[groupKey];
-                if (group.questions && Array.isArray(group.questions)) {
-                    // Add group information to each question
-                    group.questions.forEach(question => {
-                        allQuestions.push({
-                            ...question,
-                            _group: groupKey,
-                            _groupTitle: group.title || groupKey
-                        });
+        // Extract questions from all groups
+        const allQuestions = [];
+        
+        Object.keys(raw.groups).forEach(groupKey => {
+            const group = raw.groups[groupKey];
+            if (group.questions && Array.isArray(group.questions)) {
+                // Add group information to each question
+                group.questions.forEach(question => {
+                    allQuestions.push({
+                        ...question,
+                        _group: groupKey,
+                        _groupTitle: group.title || groupKey
                     });
-                }
-            });
-            
-            const result = {
-                quizTitle: raw.quizTitle,
-                questions: allQuestions,
-                groups: raw.groups,
-                _structure: 'grouped' // Mark as new structure
-            };
-            return result;
-        } else {
-            // Handle old structure (flat array of questions)
-            const result = {
-                quizTitle: raw.quizTitle || 'Quiz',
-                questions: raw.questions || (Array.isArray(raw) ? raw : []),
-                _structure: 'flat' // Mark as old structure
-            };
-            return result;
-        }
+                });
+            }
+        });
+        
+        const result = {
+            quizTitle: raw.quizTitle,
+            questions: allQuestions,
+            groups: raw.groups
+        };
+        return result;
     },
     
     showLoading(show) {
@@ -1128,14 +1116,6 @@ const DataLoader = {
         const container = document.getElementById('group-filters');
         container.innerHTML = '';
         
-        // Check if we have grouped structure data
-        const hasGroups = AppState.db.length > 0 && AppState.db[0]._group;
-        
-        if (!hasGroups) {
-            // For old structure, hide group filters section
-            container.parentElement.style.display = 'none';
-            return;
-        }
         
         // Collect all unique groups from loaded questions
         const groupCounts = {};
@@ -1371,7 +1351,7 @@ const DataLoader = {
 const Hub = {
     init() {
         const list = document.getElementById('hub-list');
-        if (typeof availableQuizzes !== 'undefined') {
+        if (typeof quizCategories !== 'undefined') {
             this.renderQuizList();
         } else {
             list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
@@ -1452,45 +1432,11 @@ const Hub = {
                 categoryContainer.appendChild(quizzesContainer);
                 list.appendChild(categoryContainer);
             });
-        } else if (typeof availableQuizzes !== 'undefined') {
-            // Fallback to flat structure
-            const categorized = this.categorizeQuizzes();
-            Object.keys(categorized).forEach(category => {
-                if (categorized[category].length > 0) {
-                    const catHeader = document.createElement('div');
-                    catHeader.style.cssText = 'font-weight: 600; color: var(--ios-gray); margin: 15px 0 8px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;';
-                    catHeader.innerText = category;
-                    list.appendChild(catHeader);
-                    
-                    categorized[category].forEach(q => {
-                        const div = document.createElement('div');
-                        div.className = 'hub-item';
-                        div.innerHTML = `<input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check"> <span>${q.title}</span>`;
-                        div.onclick = (e) => { if(e.target.tagName !== 'INPUT') { const ch = div.querySelector('input'); ch.checked = !ch.checked; } };
-                        list.appendChild(div);
-                    });
-                }
-            });
         } else {
             list.innerHTML = "<p style='color:red'>Chyba: config.js nenalezen!</p>";
         }
     },
     
-    categorizeQuizzes() {
-        const categories = {};
-        
-        if (typeof availableQuizzes !== 'undefined') {
-            availableQuizzes.forEach(q => {
-                const category = q.category || 'Ostatní';
-                if (!categories[category]) {
-                    categories[category] = [];
-                }
-                categories[category].push(q);
-            });
-        }
-        
-        return categories;
-    }
 };
 
 // ===== EXIT HANDLER =====

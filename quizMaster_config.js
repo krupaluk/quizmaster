@@ -60,7 +60,7 @@ const quizCategories = {
             domaciAHospodarskaZvirata: {
                 id: "zvirata_na_statku",
                 title: "Zvířata na statku",
-                desc: "Základní přehled o zvířatech, která potkáte na dvorku i na statku. Rozlišení druhů, jejich užitku a způsobu života.",
+                desc: "Poznejte zvířátka ze statku, zjistěte, jak se jmenují jejich mláďata, co dobrého papají a jaké zajímavé zvuky vydávají!",
                 lastUpdated: null,
                 version: "1.0"
             }
@@ -73,22 +73,6 @@ function generateQuizFilePath(category, quizId) {
     const categoryPrefix = category.toLowerCase();
     return `quizdata/${categoryPrefix}/${quizId}.js`;
 }
-
-// Pro zpětnou kompatibilitu - automaticky generovat flat array
-const availableQuizzes = [];
-Object.keys(quizCategories).forEach(category => {
-    Object.keys(quizCategories[category].quizzes).forEach(quizKey => {
-        const quiz = quizCategories[category].quizzes[quizKey];
-        const filePath = generateQuizFilePath(category, quiz.id);
-        
-        availableQuizzes.push({
-            ...quiz,
-            file: filePath,
-            category: category,
-            quizKey: quizKey
-        });
-    });
-});
 
 // Funkce pro automatickou aktualizaci lastUpdated
 async function updateQuizFileDates() {
