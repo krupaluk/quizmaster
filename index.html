@@ -397,7 +397,58 @@
             margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            justify-content: space-between;
+        }
+        
+        /* Inline Slider Styles */
+        .slider-value-inline {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ios-text);
+        }
+        .slider-value-inline span {
+            color: var(--ios-blue);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .question-slider-inline {
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--neutral-border);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+        .question-slider-inline::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+            transition: all 0.2s ease;
+        }
+        .question-slider-inline::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
+        }
+        .question-slider-inline::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
+            transition: all 0.2s ease;
+            border: none;
+        }
+        .question-slider-inline::-moz-range-thumb:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
         }
         
         .setup-option {
@@ -669,13 +720,18 @@
             
             <!-- Quiz Options -->
             <div class="setup-section">
-                <div class="section-title">📊 Počet otázek</div>
-                <div id="count-buttons" class="count-buttons"></div>
+                <div class="section-title">📁 Výběr skupin</div>
+                <div id="group-filters" class="group-filters"></div>
             </div>
             
             <div class="setup-section">
-                <div class="section-title">📂 Výběr skupin</div>
-                <div id="group-filters" class="group-filters"></div>
+                <div class="section-title">
+                    📈 Počet otázek
+                    <span class="slider-value-inline">
+                        <span id="slider-value">10</span> otázek
+                    </span>
+                </div>
+                <input type="range" id="question-count-slider" class="question-slider-inline" min="5" max="50" value="10" step="1">
             </div>
             
             <div class="setup-section">
@@ -800,7 +856,7 @@ const QuizEngine = {
     },
     
     start() {
-        AppState.total = AppState.selectedCount || parseInt(document.getElementById('sel-count')?.value || 10);
+        AppState.total = AppState.selectedCount || parseInt(document.getElementById('question-count-slider')?.value || 10);
         
         // Get filtered questions if groups are selected
         const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
@@ -1054,90 +1110,28 @@ const DataLoader = {
     },
     
     setupCountSelector() {
-        const container = document.getElementById('count-buttons');
-        container.innerHTML = '';
+        const slider = document.getElementById('question-count-slider');
+        const valueDisplay = document.getElementById('slider-value');
         
         const maxQ = AppState.db.length;
-        if (maxQ < 5) {
-            // If less than 5 questions, create one button for all
-            const btn = document.createElement('button');
-            btn.className = 'count-btn active max';
-            btn.innerText = maxQ;
-            btn.dataset.count = maxQ;
-            btn.onclick = () => this.selectCount(maxQ);
-            container.appendChild(btn);
-            return;
-        }
+        const minQ = Math.min(5, maxQ);
         
-        // Smart algorithm for max 3 rows
-        const buttons = [];
-        buttons.push(5); // Always start with 5
+        // Set slider properties
+        slider.min = minQ;
+        slider.max = maxQ;
+        slider.value = maxQ;
         
-        if (maxQ >= 10) {
-            buttons.push(10);
-        }
+        // Update display
+        valueDisplay.textContent = maxQ;
         
-        // Calculate remaining buttons to fit in 3 rows
-        const maxButtons = 9; // 3 rows × 3 buttons max
-        let remainingSlots = maxButtons - buttons.length;
-        
-        if (remainingSlots > 0) {
-            // Calculate step based on remaining questions
-            const remainingQ = maxQ - 10;
-            if (remainingQ > 0) {
-                // Smart step calculation
-                let step;
-                if (remainingQ <= 20) {
-                    step = 5; // Use 5 for smaller ranges
-                } else if (remainingQ <= 50) {
-                    step = 10; // Use 10 for medium ranges
-                } else {
-                    step = 15; // Use 15 for large ranges
-                }
-                
-                // Generate buttons with calculated step
-                for (let i = 15; i <= maxQ && buttons.length < maxButtons; i += step) {
-                    if (i > 10) buttons.push(i);
-                }
-                
-                // Ensure max is included and it's the last button
-                if (buttons[buttons.length - 1] !== maxQ) {
-                    // If we have room, add max as a separate button
-                    if (buttons.length < maxButtons) {
-                        buttons.push(maxQ);
-                    } else {
-                        // Replace the last button with max
-                        buttons[buttons.length - 1] = maxQ;
-                    }
-                }
-            }
-        }
-        
-        // Create buttons
-        buttons.forEach((count, index) => {
-            const btn = document.createElement('button');
-            const isMax = count === maxQ;
-            
-            let className = 'count-btn';
-            if (isMax) className += ' max';
-            
-            // Select MAX by default
-            if (isMax) {
-                className += ' active';
-            }
-            
-            btn.className = className;
-            btn.innerText = count;
-            btn.dataset.count = count;
-            btn.onclick = () => {
-                this.selectCount(count);
-            };
-            
-            container.appendChild(btn);
-        });
-        
-        // Store default selection (MAX)
+        // Store default selection
         AppState.selectedCount = maxQ;
+        
+        // Add event listener
+        slider.oninput = () => {
+            valueDisplay.textContent = slider.value;
+            AppState.selectedCount = parseInt(slider.value);
+        };
     },
     
     setupGroupFilters() {
@@ -1234,8 +1228,8 @@ const DataLoader = {
     updateQuestionCount() {
         const filteredQuestions = this.getFilteredQuestions();
         
-        // Update count selector with filtered questions - use copy, don't modify AppState.db
-        this.setupCountSelectorWithQuestions(filteredQuestions);
+        // Update slider with filtered questions
+        this.updateSliderWithQuestions(filteredQuestions);
         
         // Update summary if available
         const summary = document.getElementById('selected-topics-summary');
@@ -1259,92 +1253,27 @@ const DataLoader = {
         }
     },
     
-    setupCountSelectorWithQuestions(questions) {
-        const container = document.getElementById('count-buttons');
-        container.innerHTML = '';
+    updateSliderWithQuestions(questions) {
+        const slider = document.getElementById('question-count-slider');
+        const valueDisplay = document.getElementById('slider-value');
         
         const maxQ = questions.length;
-        if (maxQ < 5) {
-            // If less than 5 questions, create one button for all
-            const btn = document.createElement('button');
-            btn.className = 'count-btn active max';
-            btn.innerText = maxQ;
-            btn.dataset.count = maxQ;
-            btn.onclick = () => this.selectCount(maxQ);
-            container.appendChild(btn);
-            return;
+        const minQ = Math.min(5, maxQ);
+        
+        // Set slider properties
+        slider.min = minQ;
+        slider.max = maxQ;
+        
+        // Adjust current value if it's outside the new range
+        if (parseInt(slider.value) > maxQ) {
+            slider.value = maxQ;
         }
         
-        // Smart algorithm for max 3 rows
-        const buttons = [];
-        buttons.push(5); // Always start with 5
-        
-        if (maxQ >= 10) {
-            buttons.push(10);
-        }
-        
-        // Calculate remaining buttons to fit in 3 rows
-        const maxButtons = 9; // 3 rows × 3 buttons max
-        let remainingSlots = maxButtons - buttons.length;
-        
-        if (remainingSlots > 0) {
-            // Calculate step based on remaining questions
-            const remainingQ = maxQ - 10;
-            if (remainingQ > 0) {
-                // Smart step calculation
-                let step;
-                if (remainingQ <= 20) {
-                    step = 5; // Use 5 for smaller ranges
-                } else if (remainingQ <= 50) {
-                    step = 10; // Use 10 for medium ranges
-                } else {
-                    step = 15; // Use 15 for large ranges
-                }
-                
-                // Generate buttons with calculated step
-                for (let i = 15; i <= maxQ && buttons.length < maxButtons; i += step) {
-                    if (i > 10) buttons.push(i);
-                }
-                
-                // Ensure max is included and it's the last button
-                if (buttons[buttons.length - 1] !== maxQ) {
-                    // If we have room, add max as a separate button
-                    if (buttons.length < maxButtons) {
-                        buttons.push(maxQ);
-                    } else {
-                        // Replace the last button with max
-                        buttons[buttons.length - 1] = maxQ;
-                    }
-                }
-            }
-        }
-        
-        // Create buttons
-        buttons.forEach((count, index) => {
-            const btn = document.createElement('button');
-            const isMax = count === maxQ;
-            
-            let className = 'count-btn';
-            if (isMax) className += ' max';
-            
-            // Select MAX by default
-            if (isMax) {
-                className += ' active';
-            }
-            
-            btn.className = className;
-            btn.innerText = count;
-            btn.dataset.count = count;
-            btn.onclick = () => {
-                this.selectCount(count);
-            };
-            
-            container.appendChild(btn);
-        });
-        
-        // Store default selection (MAX)
-        AppState.selectedCount = maxQ;
+        // Update display
+        valueDisplay.textContent = slider.value;
+        AppState.selectedCount = parseInt(slider.value);
     },
+    
     
     clearCache() {
         this.cache.clear();
