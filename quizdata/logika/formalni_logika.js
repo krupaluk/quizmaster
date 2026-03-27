@@ -1,7 +1,9 @@
 window.data_formalni_logika = {
-    "questions": [
-
-  {
+    "groups": {
+        "symboly_a_spojky": {
+            "title": "Symboly a spojky",
+            "questions": [
+          {
     q: "Co v logice vyjadřuje symbol '¬' (případně '~')?",
     a: "Konjunkci (a zároveň)",
     b: "Negaci (neplatí, že)",
@@ -241,7 +243,12 @@ window.data_formalni_logika = {
       c: "To by byla implikace s negací A → ¬B."
     }
   },
-  {
+      ]
+        },
+        "priority_a_tabulky": {
+            "title": "Priority a tabulky",
+            "questions": [
+{
     q: "Která logická spojka má standardně nejvyšší prioritu (vyhodnocuje se jako první)?",
     a: "Konjunkce (∧)",
     b: "Negace (¬)",
@@ -481,7 +488,12 @@ window.data_formalni_logika = {
       c: "Negací obecného kvantifikátoru (všichni) je existenční kvantifikátor (existuje alespoň jeden) spojený s negací vlastnosti. Stačí najít jeden 'černý puntík', aby tvrzení o 'všech bílých' přestalo platit."
     }
   },
-  {
+  ]
+        },
+        "zakony_a_negace": {
+            "title": "Zákony a negace",
+            "questions": [
+{
     q: "Jak lze pomocí disjunkce (∨) a negace (¬) přepsat implikaci 'A → B'?",
     a: "¬A ∨ B",
     b: "¬A ∧ B",
@@ -721,7 +733,12 @@ window.data_formalni_logika = {
       c: "Díky struktuře disjunkce v předpokladu to lze určit zcela přesně."
     }
   },
-  {
+  ]
+        },
+        "pravidla_usudku": {
+            "title": "Pravidla úsudku",
+            "questions": [
+               {
     q: "Jak zní negace formule 'A ∨ (B ∧ C)'?",
     a: "¬A ∧ (¬B ∨ ¬C)",
     b: "¬A ∨ (¬B ∧ ¬C)",
@@ -961,7 +978,12 @@ window.data_formalni_logika = {
       c: "Správně: ¬, ∧, ↔, ¬, ∨, ¬. Celkem 6 operátorů/spojek. (Pozn: V některých kontextech se negace nepovažuje za spojku v pravém slova smyslu, ale za operátor)."
     }
   },
-  {
+  ]
+        },
+        "pokrocila_algebra": {
+            "title": "Pokročilá algebra",
+            "questions": [
+                {
     q: "Jak vypadá negace formule 'A → (B ∨ C)'?",
     a: "A ∧ ¬B ∧ ¬C",
     b: "¬A ∨ (B ∨ C)",
@@ -1201,6 +1223,13 @@ window.data_formalni_logika = {
       c: "Kontingence vyžaduje aspoň jednu nulu, ale negace nesplnitelného výroku žádné nuly nemá."
     }
   },
+
+            ]
+        },
+        "teorie_a_dukaz": {
+            "title": "Teorie a důkaz",
+            "questions": [
+               
   {
     q: "Který z těchto výrazů je ekvivalentní s 'A → (B → C)'?",
     a: "B → (A → C)",
@@ -1430,7 +1459,7 @@ window.data_formalni_logika = {
     }
   },
   {
-    q: "Gratulujeme! Poslední otázka: Co je cílem 'Rezonování ad absurdum'?",
+    q: "Co je cílem 'Rezonování ad absurdum'?",
     a: "Dokázat A tím, že z ¬A vyvodíme spor",
     b: "Dokázat A tím, že ho budeme neustále opakovat",
     c: "Vyvrátit A tím, že najdeme jeden příklad, kdy platí",
@@ -1441,8 +1470,7 @@ window.data_formalni_logika = {
       c: "To je naopak potvrzení splnitelnosti, nikoliv vyvrácení."
     }
   }
-
-
-
-    ]
+            ]
+        }
+    }
 };

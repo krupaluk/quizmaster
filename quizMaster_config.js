@@ -40,14 +40,14 @@ const quizCategories = {
             predikatovaLogika: {
                 id: "predikatova_logika",
                 title: "Predikátová Logika",
-                desc: "Proniknete do tajů kvantifikátorů (∀, ∃), pochopíte rozdíly v jejich pořadí a naučíte se precizně negovat věty.",
+                desc: "Pronikněte do tajů kvantifikátorů (∀, ∃), pochopte kritické rozdíly v jejich pořadí a naučte se precizně negovat i ty nejsložitější věty.",
                 lastUpdated: null,
                 version: "1.0"
             },
             logickeHadanky: {
                 id: "logicke_hadanky",
                 title: "Logické hádanky",
-                desc: "Praktický trénink vyvozování závěrů z premis, odhalování logických klamů a řešení deduktivních detektivek.",
+                desc: "Ovládněte umění neprůstřelné argumentace, odhalte logické klamy a vyřešte složité situace pomocí čisté dedukce.",
                 lastUpdated: null,
                 version: "1.0"
             }
@@ -58,8 +58,8 @@ const quizCategories = {
         description: "Základy pro nejmenší badatele",
         quizzes: {
             domaciAHospodarskaZvirata: {
-                id: "domaci_a_hospodarska_zvirata",
-                title: "Domácí a hospodářská zvířata",
+                id: "zvirata_na_statku",
+                title: "Zvířata na statku",
                 desc: "Základní přehled o zvířatech, která potkáte na dvorku i na statku. Rozlišení druhů, jejich užitku a způsobu života.",
                 lastUpdated: null,
                 version: "1.0"

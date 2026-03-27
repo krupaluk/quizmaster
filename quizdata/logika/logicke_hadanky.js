@@ -1,5 +1,8 @@
 window.data_logicke_hadanky = {
-    "questions": [
+ "groups": {
+        "zaklady_argumentace": {
+            "title": "Základy argumentace",
+            "questions": [
   {
     q: "Premisa 1: Všichni savci mají srdce. Premisa 2: Velryba je savec. Co z toho logicky vyplývá?",
     a: "Všechna zvířata se srdcem jsou velryby.",
@@ -180,8 +183,12 @@ window.data_logicke_hadanky = {
       c: "To také nevíme, premisy to nevylučují."
     }
   },
-  
-  {
+      ]
+        },
+        "podminky_a_klamy": {
+            "title": "Podmínky a klamy",
+            "questions": [
+{
     q: "P1: Všichni lvi jsou masožravci. P2: Někteří lvi jsou v zoo. Závěr:",
     a: "Všichni masožravci jsou v zoo.",
     b: "Někteří masožravci jsou v zoo.",
@@ -361,8 +368,12 @@ window.data_logicke_hadanky = {
       c: "To je spekulace o tom, co budu dělat jiného, logika zná jen 'doma' a 'ne-doma'."
     }
   },
-
-  {
+  ]
+        },
+        "slozene_dedukce": {
+            "title": "Složené dedukce",
+            "questions": [
+{
     q: "P1: Pokud je detektiv zkušený (Z) a má důkazy (D), pak dopadne pachatele (P). P2: Pachatel nebyl dopaden (¬P). P3: Detektiv je zkušený (Z). Závěr:",
     a: "Detektiv nemá důkazy.",
     b: "Detektiv není zkušený.",
@@ -542,7 +553,12 @@ window.data_logicke_hadanky = {
       c: "To je jen jedna z možných variant, kterou ale ze zadaného nevyvodíme s jistotou."
     }
   },
-  {
+  ]
+        },
+        "pokrocile_usudky": {
+            "title": "Pokročilé úsudky",
+            "questions": [
+ {
     q: "P1: Jen ten (x), kdo se učí (U) a má talent (T), uspěje (P). P2: Petr (p) neuspěl (¬P). Závěr:",
     a: "Petr se neučil nebo nemá talent.",
     b: "Petr se učil, ale nemá talent.",
@@ -722,6 +738,7 @@ window.data_logicke_hadanky = {
       c: "O 'všech tygrech' premisy nic neříkají, mluví jen o tomto jednom konkrétním."
     }
   }
-
-    ]
+  ]
+        }
+    }
 };
