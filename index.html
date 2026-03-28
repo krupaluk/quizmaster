@@ -880,7 +880,7 @@
             
             <div class="shuffle-options-row">
                 <div class="setup-section">
-                    <div class="section-title">🔀 Servírování otázek</div>
+                    <div class="section-title"> Otázky servíruj v:</div>
                     <div class="shuffle-toggle-container">
                         <div class="shuffle-option">
                             <div class="option-title list-icon" id="shuffle-title">📋</div>
@@ -889,12 +889,12 @@
                             <input type="checkbox" id="chk-shuffle" onchange="updateShuffleText()">
                             <span class="toggle-slider"></span>
                         </label>
-                        <div class="option-desc-full" id="shuffle-desc">Dané pořadí</div>
+                        <div class="option-desc-full" id="shuffle-desc">daném pořadí</div>
                     </div>
                 </div>
                 
                 <div class="setup-section">
-                    <div class="section-title">📋 Specifikace výběru</div>
+                    <div class="section-title">Otázky vybírej:</div>
                     <div class="shuffle-toggle-container">
                         <div class="shuffle-option">
                             <div class="option-title all-icon" id="shuffle-mode-title">📦</div>
@@ -903,7 +903,7 @@
                             <input type="checkbox" id="chk-shuffle-mode" onchange="updateShuffleModeText()">
                             <span class="toggle-slider"></span>
                         </label>
-                        <div class="option-desc-full" id="shuffle-mode-desc">Ze všech otázek</div>
+                        <div class="option-desc-full" id="shuffle-mode-desc">ze všeho najednou</div>
                     </div>
                 </div>
             </div>
@@ -989,31 +989,31 @@ function updateShuffleText() {
     const descElement = document.getElementById('shuffle-desc');
     
     if (checkbox.checked) {
-        // Blue state - active shuffle
-        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
-        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
-        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
-        
-        // Update text to "🎲"
-        titleElement.textContent = '🎲';
-        titleElement.classList.add('dice-icon');
-        titleElement.classList.remove('list-icon');
-        descElement.textContent = 'Náhodné pořadí';
-        descElement.classList.remove('green-text');
-        descElement.classList.add('blue-text');
-    } else {
-        // Green state - sequential
+        // Green state - active shuffle (toggle right)
         container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
         container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
         toggleSlider.style.backgroundColor = '#34c759';
         
-        // Update text to "📋"
+        // Update to dice icon
+        titleElement.textContent = '🎲';
+        titleElement.classList.add('dice-icon');
+        titleElement.classList.remove('list-icon');
+        descElement.textContent = 'náhodném pořadí';
+        descElement.classList.remove('blue-text');
+        descElement.classList.add('green-text');
+    } else {
+        // Blue state - sequential (toggle left)
+        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
+        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
+        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update to list icon
         titleElement.textContent = '📋';
         titleElement.classList.add('list-icon');
         titleElement.classList.remove('dice-icon');
-        descElement.textContent = 'Dané pořadí';
-        descElement.classList.remove('blue-text');
-        descElement.classList.add('green-text');
+        descElement.textContent = 'daném pořadí';
+        descElement.classList.remove('green-text');
+        descElement.classList.add('blue-text');
     }
 }
 
@@ -1025,31 +1025,31 @@ function updateShuffleModeText() {
     const descElement = document.getElementById('shuffle-mode-desc');
     
     if (checkbox.checked) {
-        // Blue state - chapters mode
-        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
-        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
-        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
-        
-        // Update text to "📑"
-        titleElement.textContent = '📑';
-        titleElement.classList.add('chapters-icon');
-        titleElement.classList.remove('all-icon');
-        descElement.textContent = 'Vždy 1 otázka z kapitoly';
-        descElement.classList.remove('green-text');
-        descElement.classList.add('blue-text');
-    } else {
-        // Green state - all mode
+        // Green state - chapters mode (toggle right)
         container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
         container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
         toggleSlider.style.backgroundColor = '#34c759';
         
-        // Update text to "📦"
+        // Update to chapters icon
+        titleElement.textContent = '📑';
+        titleElement.classList.add('chapters-icon');
+        titleElement.classList.remove('all-icon');
+        descElement.textContent = 'po 1 otázce z kapitoly';
+        descElement.classList.remove('blue-text');
+        descElement.classList.add('green-text');
+    } else {
+        // Blue state - all mode (toggle left)
+        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
+        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
+        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update to package icon
         titleElement.textContent = '📦';
         titleElement.classList.add('all-icon');
         titleElement.classList.remove('chapters-icon');
-        descElement.textContent = 'Výběr ze všech otázek';
-        descElement.classList.remove('blue-text');
-        descElement.classList.add('green-text');
+        descElement.textContent = 'z celého výběru';
+        descElement.classList.remove('green-text');
+        descElement.classList.add('blue-text');
     }
 }
 
