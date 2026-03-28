@@ -1193,7 +1193,8 @@ const QuizEngine = {
     render() {
         UI.cancelExit();
         const q = AppState.activeQ[AppState.cur];
-        document.getElementById('q-topic').innerHTML = `<b>Okruh</b> → ${AppState.selectedTopicName}`;
+        const chapterName = q._groupTitle || q._group || 'Neznámá kapitola';
+        document.getElementById('q-topic').innerHTML = `${AppState.selectedTopicName} → <b>${chapterName}</b>`;
         document.getElementById('q-text').innerText = q.q;
         document.getElementById('btn-continue').style.display = 'none';
         const box = document.getElementById('ans-container'); 
