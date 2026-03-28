@@ -1097,7 +1097,7 @@ const QuizEngine = {
         }
     },
     
-    shuffleByChapters(questions, targetCount) {
+    shuffleByChapters(questions, targetCount, shuffleWithinChapters = true) {
         // Group questions by chapter (using _group property)
         const chapters = {};
         questions.forEach(q => {
@@ -1108,10 +1108,12 @@ const QuizEngine = {
             chapters[chapter].push(q);
         });
         
-        // Shuffle each chapter individually
-        Object.keys(chapters).forEach(chapter => {
-            this.shuffle(chapters[chapter]);
-        });
+        // Shuffle each chapter individually only if shuffleWithinChapters is true
+        if (shuffleWithinChapters) {
+            Object.keys(chapters).forEach(chapter => {
+                this.shuffle(chapters[chapter]);
+            });
+        }
         
         // Create round-robin serving order
         const result = [];
@@ -1119,7 +1121,10 @@ const QuizEngine = {
         let chapterIndex = 0;
         let questionIndex = 0;
         
-        while (result.length < targetCount && questionIndex < questions.length) {
+        // Find max chapter length to know how many rounds we need
+        const maxChapterLength = Math.max(...chapterNames.map(ch => chapters[ch].length));
+        
+        while (result.length < targetCount && questionIndex < maxChapterLength) {
             const currentChapter = chapterNames[chapterIndex];
             const chapterQuestions = chapters[currentChapter];
             
@@ -1157,21 +1162,20 @@ const QuizEngine = {
         
         AppState.activeQ = [...availableQuestions];
         
-        // Check if shuffle is enabled and determine mode
+        // Check shuffle modes
         const shuffleEnabled = document.getElementById('chk-shuffle').checked;
-        if (shuffleEnabled) {
-            const shuffleModeChapters = document.getElementById('chk-shuffle-mode').checked;
-            
-            if (shuffleModeChapters) {
-                // Chapter-based shuffling
-                AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total);
-            } else {
-                // Regular group-based shuffling
-                this.shuffle(AppState.activeQ);
-                AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
-            }
+        const roundRobinMode = document.getElementById('chk-shuffle-mode').checked; // Right/green = round-robin
+        
+        if (roundRobinMode) {
+            // Round-robin by chapters: 1 from each chapter in rotation
+            // Only shuffle within chapters if first toggle is on (random order)
+            AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total, shuffleEnabled);
+        } else if (shuffleEnabled) {
+            // Regular shuffle - all questions mixed together
+            this.shuffle(AppState.activeQ);
+            AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
         } else {
-            // No shuffling - take first N questions
+            // No shuffle - take first N questions in order
             AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
         }
         
@@ -1189,7 +1193,7 @@ const QuizEngine = {
     render() {
         UI.cancelExit();
         const q = AppState.activeQ[AppState.cur];
-        document.getElementById('q-topic').innerHTML = `<b>Téma</b> → ${AppState.selectedTopicName}`;
+        document.getElementById('q-topic').innerHTML = `<b>Okruh</b> → ${AppState.selectedTopicName}`;
         document.getElementById('q-text').innerText = q.q;
         document.getElementById('btn-continue').style.display = 'none';
         const box = document.getElementById('ans-container'); 
