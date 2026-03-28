@@ -394,14 +394,15 @@
         /* Shuffle Toggle Container */
         .shuffle-toggle-container {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: space-between;
-            padding: 20px 24px;
+            justify-content: flex-start;
+            padding: 14px 20px;
             background: var(--ios-bg);
             border-radius: 12px;
             border: 1px solid transparent;
             transition: all 0.2s ease;
-            gap: 30px;
+            gap: 15px;
         }
         .shuffle-toggle-container:hover {
             background: white;
@@ -411,19 +412,29 @@
         }
         .shuffle-option {
             flex: 1;
-            text-align: center;
-            max-width: 140px;
+            text-align: left;
         }
         .shuffle-option .option-title {
             font-size: 16px;
             font-weight: 500;
             color: var(--ios-text);
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .shuffle-option .option-desc {
-            font-size: 13px;
+            font-size: 14px;
             color: var(--ios-gray);
-            line-height: 1.3;
+            line-height: 1.4;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--neutral-border);
+        }
+        .option-desc-full {
+            font-size: 14px;
+            color: var(--ios-gray);
+            line-height: 1.4;
+            margin-top: 8px;
+            width: 100%;
+            text-align: center;
         }
         
         /* Shuffle Specification Subsection */
@@ -839,36 +850,28 @@
             <div class="setup-section">
                 <div class="section-title">🔀 Servírování otázek</div>
                 <div class="shuffle-toggle-container">
-                    <div class="shuffle-option left">
-                        <div class="option-title">Postupně</div>
-                        <div class="option-desc">V daném pořadí.</div>
-                    </div>
                     <label class="toggle-switch">
                         <input type="checkbox" id="chk-shuffle" onchange="updateShuffleText()">
                         <span class="toggle-slider"></span>
                     </label>
-                    <div class="shuffle-option right">
-                        <div class="option-title">Promíchat</div>
-                        <div class="option-desc">V náhodném pořadí.</div>
+                    <div class="shuffle-option">
+                        <div class="option-title" id="shuffle-title">Postupně</div>
                     </div>
+                    <div class="option-desc-full" id="shuffle-desc">V daném pořadí.</div>
                 </div>
             </div>
             
             <div class="setup-section">
                 <div class="section-title">📋 Specifikace míchání</div>
                 <div class="shuffle-toggle-container">
-                    <div class="shuffle-option left">
-                        <div class="option-title">Okruhy</div>
-                        <div class="option-desc">Náhodné míchání všech otázek</div>
-                    </div>
                     <label class="toggle-switch">
                         <input type="checkbox" id="chk-shuffle-mode" onchange="updateShuffleModeText()">
                         <span class="toggle-slider"></span>
                     </label>
-                    <div class="shuffle-option right">
-                        <div class="option-title">Kapitoly</div>
-                        <div class="option-desc">Postupné servírování z kapitol (jedna z každé)</div>
+                    <div class="shuffle-option">
+                        <div class="option-title" id="shuffle-mode-title">Okruhy</div>
                     </div>
+                    <div class="option-desc-full" id="shuffle-mode-desc">Náhodné míchání všech otázek</div>
                 </div>
             </div>
             
@@ -949,17 +952,27 @@ function updateShuffleText() {
     const checkbox = document.getElementById('chk-shuffle');
     const container = document.querySelector('.shuffle-toggle-container');
     const toggleSlider = checkbox.nextElementSibling;
+    const titleElement = document.getElementById('shuffle-title');
+    const descElement = document.getElementById('shuffle-desc');
     
     if (checkbox.checked) {
         // Blue state - active shuffle
         container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
         container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
         toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update text to "Promíchat"
+        titleElement.textContent = 'Promíchat';
+        descElement.textContent = 'V náhodném pořadí.';
     } else {
         // Green state - sequential
         container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
         container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
         toggleSlider.style.backgroundColor = '#34c759';
+        
+        // Update text to "Postupně"
+        titleElement.textContent = 'Postupně';
+        descElement.textContent = 'V daném pořadí.';
     }
 }
 
@@ -967,17 +980,27 @@ function updateShuffleModeText() {
     const checkbox = document.getElementById('chk-shuffle-mode');
     const container = checkbox.closest('.shuffle-toggle-container');
     const toggleSlider = checkbox.nextElementSibling;
+    const titleElement = document.getElementById('shuffle-mode-title');
+    const descElement = document.getElementById('shuffle-mode-desc');
     
     if (checkbox.checked) {
         // Blue state - chapters mode
         container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
         container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
         toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update text to "Kapitoly"
+        titleElement.textContent = 'Kapitoly';
+        descElement.textContent = 'Postupné servírování z kapitol (jedna z každé)';
     } else {
         // Green state - groups mode
         container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
         container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
         toggleSlider.style.backgroundColor = '#34c759';
+        
+        // Update text to "Okruhy"
+        titleElement.textContent = 'Okruhy';
+        descElement.textContent = 'Náhodné míchání všech otázek';
     }
 }
 
