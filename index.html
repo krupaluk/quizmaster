@@ -881,7 +881,7 @@
             <div class="shuffle-options-row">
                 <div class="setup-section">
                     <div class="section-title"> Otázky servíruj v:</div>
-                    <div class="shuffle-toggle-container">
+                    <div class="shuffle-toggle-container" onclick="if(event.target.tagName !== 'INPUT' && !event.target.classList.contains('toggle-slider')) document.getElementById('chk-shuffle').click()">
                         <div class="shuffle-option">
                             <div class="option-title list-icon" id="shuffle-title">📋</div>
                         </div>
@@ -895,7 +895,7 @@
                 
                 <div class="setup-section">
                     <div class="section-title">Otázky vybírej:</div>
-                    <div class="shuffle-toggle-container">
+                    <div class="shuffle-toggle-container" onclick="if(event.target.tagName !== 'INPUT' && !event.target.classList.contains('toggle-slider')) document.getElementById('chk-shuffle-mode').click()">
                         <div class="shuffle-option">
                             <div class="option-title all-icon" id="shuffle-mode-title">📦</div>
                         </div>
@@ -903,7 +903,7 @@
                             <input type="checkbox" id="chk-shuffle-mode" onchange="updateShuffleModeText()">
                             <span class="toggle-slider"></span>
                         </label>
-                        <div class="option-desc-full" id="shuffle-mode-desc">ze všeho najednou</div>
+                        <div class="option-desc-full" id="shuffle-mode-desc">z celého výběru</div>
                     </div>
                 </div>
             </div>
