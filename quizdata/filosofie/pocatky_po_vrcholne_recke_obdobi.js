@@ -37,13 +37,15 @@
                     tag: "thales"
                 },
                 {
-                    q: "Thalés údajně změřil vzdálenost lodí od pobřeží pomocí:",
-                    a: "Vědeckého kalkulátoru", b: "Geometrické podobnosti trojúhelníků", c: "Věšteckých koulí",
+                    q: "Thalés z Milétu ohromil egyptské kněze tím, že dokázal změřit:",
+                    a: "Hloubku řeky Nilu pomocí ozvěny", 
+                    b: "Výšku pyramid podle délky jejich stínu", 
+                    c: "Váhu sfingy pomocí pák a kladek",
                     ans: "b",
                     expl: {
-                        a: "Vědecké kalkulátory neexistovaly v 6. století př. n. l., Thalés používal geometrické metody.",
-                        b: "Thalés využil princip podobnosti trojúhelníků k praktickému měření vzdáleností na moři.",
-                        c: "Věštění bylo Thaleovi cizí, prosazoval racionální a geometrické metody."
+                        a: "Měření hloubky pomocí ozvěny (sonar) je moderní vynález, Thalés pracoval s geometrií.",
+                        b: "Thalés počkal na okamžik, kdy byl jeho vlastní stín stejně dlouhý jako on sám. V tu chvíli změřil stín pyramidy, který se rovnal její skutečné výšce.",
+                        c: "Váha sfingy nebyla předmětem jeho geometrických výpočtů, soustředil se na výšky a vzdálenosti."
                     },
                     tag: "thales"
                 },
@@ -364,16 +366,16 @@
                     },
                     tag: "xenofanes"
                 },
-                {
+                 {
                     q: "Jak se vyvíjel koncept arché (základního principu) od milétské přes pythagorejskou k eleatské škole?",
                     a: "Od hmotného → k abstraktnímu → k popření změny",
                     b: "Od jednoduchého → ke složitému → k náhodnému",
                     c: "Od materiálního → k duchovnímu → k empirickému",
                     ans: "a",
                     expl: {
-                        a: "Milétská škola (Thalés: voda, Anaximenés: vzduch) hledala konkrétní hmotné principy. Pythagorejci přesunuli pozornost k abstraktnímu principu - číslu a harmonii. Eleatská škola (Parmenidés) došla k radikálnímu závěru, že jediná skutečná arché je bytí samo, které je neměnné a jednotné.",
-                        b: "Vývoj nešlo ke složitosti, ale spíše k abstrakci a racionalizaci. Náhodnost nebyla pro předsokratovky charakteristická - hledali nutné a racionální principy.",
-                        c: "Přesun k duchovnímu byl spíše náboženskou záležitostí. Empirismus (spoléhání na smysly) byl naopak předsokratovky, zvláště eleaty, odmítán."
+                        a: "Miléťané hledali konkrétní látku (voda, vzduch). Pythagorejci přešli k abstrakci (číslo). Eleaté (Parmenidés) pak logicky vyvodili, že pravé 'bytí' musí být věčné a neměnné, čímž popřeli možnost jakékoliv změny či pohybu jako pouhý smyslový klam.",
+                        b: "Filosofie nesměřovala k náhodě, ale k hledání pevného řádu. Náhodný vznik světa odmítali téměř všichni raní myslitelé.",
+                        c: "Empirismus (důvěra ve smysly) byl u eleatů naopak ostře kritizován; věřili pouze rozumu, který jim říkal, že změna je logicky nemožná."
                     },
                     tag: "obecne"
                 },
