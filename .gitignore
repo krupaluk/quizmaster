@@ -1,6 +1,9 @@
 # Quizmaster server batch file
 quizmaster-server.bat
 
+# TODO file
+todo.txt
+
 # Common ignore patterns
 *.log
 *.tmp
