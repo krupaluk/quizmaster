@@ -60,13 +60,6 @@
             font-size: 11px; 
             font-weight: 800; 
         }
-        .app-version { 
-            font-size: 9px; 
-            font-weight: 400; 
-            opacity: 0.6; 
-            margin-left: 2px; 
-            text-transform: none; 
-        }
         .stats-group { 
             display: flex; 
             gap: 6px; 
@@ -346,6 +339,121 @@
             text-align: center; 
         }
         
+        /* Modern Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            width: 51px;
+            height: 31px;
+            margin-right: 15px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #34c759;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 23px;
+            width: 23px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .toggle-slider {
+            background-color: var(--ios-blue); /* Fallback color, will be overridden by JavaScript */
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        
+        /* Radio Button Toggle Switches */
+        input[type="radio"] + .toggle-slider {
+            position: relative;
+        }
+        input[type="radio"]:checked + .toggle-slider {
+            background-color: var(--ios-blue);
+        }
+        input[type="radio"]:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        
+        /* Shuffle Toggle Container */
+        .shuffle-toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px 24px;
+            background: var(--ios-bg);
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            gap: 20px;
+        }
+        .shuffle-toggle-container:hover {
+            background: white;
+            border-color: var(--ios-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        .shuffle-option {
+            flex: 1;
+            text-align: left;
+            max-width: 300px;
+        }
+        .shuffle-option .option-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ios-text);
+            margin-bottom: 6px;
+        }
+        .shuffle-option .option-desc {
+            font-size: 13px;
+            color: var(--ios-gray);
+            line-height: 1.3;
+        }
+        
+        /* Shuffle Specification Subsection */
+        .shuffle-specification {
+            margin-top: 8px;
+            padding-left: 20px;
+            animation: slideDown 0.3s ease;
+        }
+        .shuffle-specification.hidden {
+            display: none;
+        }
+        .shuffle-specification .setup-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .shuffle-specification .option-content {
+            flex: 1;
+            text-align: center;
+        }
+        .section-subtitle {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--ios-gray);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+        
         /* Hub & Setup Items */
         .hub-item, .setup-option { 
             display: flex; 
@@ -595,12 +703,6 @@
             color: var(--ios-text);
             margin-bottom: 4px;
         }
-        .quiz-version-inline {
-            font-size: 12px;
-            color: var(--ios-gray);
-            font-weight: 400;
-            opacity: 0.7;
-        }
         .quiz-desc {
             font-size: 13px;
             color: var(--ios-gray);
@@ -696,7 +798,7 @@
             </div>
         </div>
         <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span>
+            <span class="app-name">QUIZ-MASTER</span>
         </header>
         <div class="card">
             <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
@@ -710,13 +812,13 @@
     <div id="sc-setup" class="screen hidden">
         <div class="status-bar">
             <button id="btn-back-trigger" class="exit-badge" onclick="location.reload()">Zpět</button>
-            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span></div>
+            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span></div>
             <div class="stats-group">
             </div>
         </div>
         <div class="card">
             <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
-            <h2 style="font-size: 26px; text-align: center;">Nastavení testu</h2>
+            <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
             <!-- Quiz Options -->
             <div class="setup-section">
@@ -735,12 +837,29 @@
             </div>
             
             <div class="setup-section">
-                <div class="section-title">🔀 Možnosti</div>
-                <div class="setup-option" onclick="document.getElementById('chk-shuffle').click(); event.stopPropagation();">
-                    <input type="checkbox" id="chk-shuffle" onclick="event.stopPropagation();">
-                    <div class="option-content">
-                        <div class="option-title">Náhodné pořadí otázek</div>
-                        <div class="option-desc">Otázky se zobrazí v náhodném pořadí</div>
+                <div class="section-title">🔀 Servírování otázek</div>
+                <div class="shuffle-toggle-container">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="chk-shuffle" onchange="updateShuffleText()">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <div class="shuffle-option right">
+                        <div class="option-title" id="shuffle-title">Postupně</div>
+                        <div class="option-desc" id="shuffle-desc">V daném pořadí.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="setup-section">
+                <div class="section-title">📋 Specifikace míchání</div>
+                <div class="shuffle-toggle-container">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="chk-shuffle-mode" onchange="updateShuffleModeText()">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <div class="shuffle-option right">
+                        <div class="option-title" id="shuffle-mode-title">Okruhy</div>
+                        <div class="option-desc" id="shuffle-mode-desc">Náhodné míchání všech otázek</div>
                     </div>
                 </div>
             </div>
@@ -756,7 +875,7 @@
     <div id="sc-quiz" class="screen hidden">
         <div class="status-bar">
             <button id="btn-exit-trigger" class="exit-badge" onclick="requestExit()">Ukončit</button>
-            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span><span class="app-version">(v2.1)</span></div>
+            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span></div>
             <div class="stats-group">
                 <div class="stat-item"><span class="stat-label">zbývá</span><span id="quiz-remaining" class="badge badge-gray">0</span></div>
                 <div class="stat-item"><span class="stat-label">správně</span><span id="count-correct" class="badge badge-green">0</span></div>
@@ -817,6 +936,69 @@ const AppState = {
     exitTimer: null
 };
 
+// ===== HELPER FUNCTIONS =====
+function updateShuffleText() {
+    const checkbox = document.getElementById('chk-shuffle');
+    const container = document.querySelector('.shuffle-toggle-container');
+    const toggleSlider = checkbox.nextElementSibling;
+    const titleElement = document.getElementById('shuffle-title');
+    const descElement = document.getElementById('shuffle-desc');
+    
+    if (checkbox.checked) {
+        // Blue state - active shuffle
+        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
+        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
+        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update text to "Promíchat"
+        titleElement.textContent = 'Promíchat';
+        descElement.textContent = 'V náhodném pořadí.';
+    } else {
+        // Green state - sequential
+        container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
+        container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
+        toggleSlider.style.backgroundColor = '#34c759';
+        
+        // Update text to "Postupně"
+        titleElement.textContent = 'Postupně';
+        descElement.textContent = 'V daném pořadí.';
+    }
+}
+
+function updateShuffleModeText() {
+    const checkbox = document.getElementById('chk-shuffle-mode');
+    const container = checkbox.closest('.shuffle-toggle-container');
+    const toggleSlider = checkbox.nextElementSibling;
+    const titleElement = document.getElementById('shuffle-mode-title');
+    const descElement = document.getElementById('shuffle-mode-desc');
+    
+    if (checkbox.checked) {
+        // Blue state - chapters mode
+        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
+        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
+        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
+        
+        // Update text to "Kapitoly"
+        titleElement.textContent = 'Kapitoly';
+        descElement.textContent = 'Postupné servírování z kapitol (jedna z každé)';
+    } else {
+        // Green state - groups mode
+        container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
+        container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
+        toggleSlider.style.backgroundColor = '#34c759';
+        
+        // Update text to "Okruhy"
+        titleElement.textContent = 'Okruhy';
+        descElement.textContent = 'Náhodné míchání všech otázek';
+    }
+}
+
+// Initialize shuffle colors on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateShuffleText();
+    updateShuffleModeText();
+});
+
 // ===== UI COMPONENTS =====
 const UI = {
     showScreen(id) { 
@@ -855,6 +1037,48 @@ const QuizEngine = {
         }
     },
     
+    shuffleByChapters(questions, targetCount) {
+        // Group questions by chapter (using _group property)
+        const chapters = {};
+        questions.forEach(q => {
+            const chapter = q._group || 'unknown';
+            if (!chapters[chapter]) {
+                chapters[chapter] = [];
+            }
+            chapters[chapter].push(q);
+        });
+        
+        // Shuffle each chapter individually
+        Object.keys(chapters).forEach(chapter => {
+            this.shuffle(chapters[chapter]);
+        });
+        
+        // Create round-robin serving order
+        const result = [];
+        const chapterNames = Object.keys(chapters);
+        let chapterIndex = 0;
+        let questionIndex = 0;
+        
+        while (result.length < targetCount && questionIndex < questions.length) {
+            const currentChapter = chapterNames[chapterIndex];
+            const chapterQuestions = chapters[currentChapter];
+            
+            if (questionIndex < chapterQuestions.length) {
+                result.push(chapterQuestions[questionIndex]);
+            }
+            
+            // Move to next chapter
+            chapterIndex = (chapterIndex + 1) % chapterNames.length;
+            
+            // If we've completed a full round, increment question index
+            if (chapterIndex === 0) {
+                questionIndex++;
+            }
+        }
+        
+        return result.slice(0, targetCount);
+    },
+    
     start() {
         AppState.total = AppState.selectedCount || parseInt(document.getElementById('question-count-slider')?.value || 10);
         
@@ -872,8 +1096,25 @@ const QuizEngine = {
         }
         
         AppState.activeQ = [...availableQuestions];
-        if (document.getElementById('chk-shuffle').checked) this.shuffle(AppState.activeQ);
-        AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
+        
+        // Check if shuffle is enabled and determine mode
+        const shuffleEnabled = document.getElementById('chk-shuffle').checked;
+        if (shuffleEnabled) {
+            const shuffleModeChapters = document.getElementById('chk-shuffle-mode').checked;
+            
+            if (shuffleModeChapters) {
+                // Chapter-based shuffling
+                AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total);
+            } else {
+                // Regular group-based shuffling
+                this.shuffle(AppState.activeQ);
+                AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
+            }
+        } else {
+            // No shuffling - take first N questions
+            AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
+        }
+        
         AppState.cur = 0; 
         AppState.score = 0; 
         AppState.errs = []; 
@@ -1408,23 +1649,11 @@ const Hub = {
                     const div = document.createElement('div');
                     div.className = 'hub-item';
                     
-                    // Format last updated date
-                    let lastUpdatedText = '';
-                    if (q.lastUpdated) {
-                        const date = new Date(q.lastUpdated);
-                        lastUpdatedText = date.toLocaleDateString('cs-CZ', { 
-                            day: '2-digit', 
-                            month: '2-digit', 
-                            year: 'numeric' 
-                        });
-                    }
-                    
                     div.innerHTML = `
                         <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
-                            <div class="quiz-title">${q.title} <span class="quiz-version-inline">v${q.version}</span></div>
+                            <div class="quiz-title">${q.title}</div>
                             <div class="quiz-desc">${q.desc}</div>
-                            ${lastUpdatedText ? `<div class="quiz-update-info">(last update: ${lastUpdatedText})</div>` : ''}
                         </div>
                     `;
                     div.onclick = (e) => { 
