@@ -879,7 +879,7 @@
                 </div>
                 
                 <div class="setup-section">
-                    <div class="section-title">📋 Specifikace míchání</div>
+                    <div class="section-title">📋 Specifikace výběru</div>
                     <div class="shuffle-toggle-container">
                         <label class="toggle-switch">
                             <input type="checkbox" id="chk-shuffle-mode" onchange="updateShuffleModeText()">
@@ -1009,16 +1009,16 @@ function updateShuffleModeText() {
         
         // Update text to "Kapitoly"
         titleElement.textContent = 'Kapitoly';
-        descElement.textContent = 'Postupné servírování z kapitol (jedna z každé)';
+        descElement.textContent = 'Vždy 1 otázka z kapitoly.';
     } else {
         // Green state - groups mode
         container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
         container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
         toggleSlider.style.backgroundColor = '#34c759';
         
-        // Update text to "Okruhy"
-        titleElement.textContent = 'Okruhy';
-        descElement.textContent = 'Náhodné míchání všech otázek';
+        // Update text to "Vše"
+        titleElement.textContent = 'Vše';
+        descElement.textContent = 'Výběr ze všech otázek';
     }
 }
 
