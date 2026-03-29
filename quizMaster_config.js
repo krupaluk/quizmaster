@@ -26,8 +26,8 @@ const quizCategories = {
         quizzes: {
             dejinyAPredstavitele: {
                 id: "dejiny_a_predstavitele",
-                title: "Dějiny a významní představitelé",
-                desc: "Klíčové postavy, které formovaly naše myšlení. Od Aristotelových sylogismů přes Leibnizův sen o univerzálním jazyce až po Gödelovy věty.",
+                title: "Dějiny logiky",
+                desc: "Klíčová období a představitelé. Od Aristotelových sylogismů přes Leibnizův sen o univerzálním jazyce až po Gödelovy věty.",
             },
             formalniLogika: {
                 id: "formalni_logika",
