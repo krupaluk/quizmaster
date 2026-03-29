@@ -1112,7 +1112,7 @@
             
             <!-- Quiz Options -->
             <div class="setup-section">
-                <div class="section-title">📁 Výběr skupin</div>
+                <div class="section-title">📁 Výběr kapitol</div>
                 <div id="group-filters" class="group-filters"></div>
             </div>
             
@@ -1728,24 +1728,24 @@ const DataLoader = {
         container.innerHTML = '';
         
         
-        // Collect all unique groups from loaded questions
+        // Collect all unique groups from loaded questions in their original order
         const groupCounts = {};
         const groupTitles = {};
+        const groupOrder = []; // Preserve order from data file
         
         AppState.db.forEach(question => {
             if (question._group) {
                 groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
                 groupTitles[question._group] = question._groupTitle || question._group;
+                // Add to order only first time we see this group
+                if (!groupCounts[question._group] || groupCounts[question._group] === 1 && !groupOrder.includes(question._group)) {
+                    groupOrder.push(question._group);
+                }
             }
         });
         
-        // Sort groups by count (descending) then alphabetically
-        const sortedGroups = Object.keys(groupCounts).sort((a, b) => {
-            if (groupCounts[b] !== groupCounts[a]) {
-                return groupCounts[b] - groupCounts[a];
-            }
-            return a.localeCompare(b);
-        });
+        // Use original order from data file instead of sorting
+        const sortedGroups = groupOrder;
         
         // Create group filter buttons
         sortedGroups.forEach(groupKey => {
