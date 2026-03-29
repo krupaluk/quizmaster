@@ -109,12 +109,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 70px;
-            height: 44px;
-            background: #1c1c1ee7;
+            width: 76px;
+            height: 52px;
+            background: #1c1c1ec6;
             color: white;
             border-radius: 8px;
-            font-size: 29px;
+            font-size: 35px;
             font-weight: 700;
             cursor: pointer;
             border: none;
@@ -122,14 +122,72 @@
             padding: 2px 0 0 0;
             gap: 3px;
         }
-        .exit-btn-x {
-            margin-bottom: -2px;
-        }
-        .exit-btn-text {
-            font-size: 7px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
+        .exit-btn-blue {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: var(--ios-blue);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
             font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+        }
+        .exit-btn-blue:active {
+            transform: scale(0.92);
+            background: #0056b3;
+        }
+        .exit-btn-gray {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: #e5e5ea;
+            color: #3a3a3c;
+            border: 1px solid #d1d1d6;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+        }
+        .exit-btn-gray:active {
+            transform: scale(0.92);
+            background: #d1d1d6;
+        }
+        .exit-btn-info {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+            box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+        }
+        .exit-btn-info:active {
+            transform: scale(0.92);
+            background: linear-gradient(135deg, #ffb300 0%, #f57c00 100%);
         }
         .exit-btn-dark:active {
             transform: scale(0.92);
@@ -883,7 +941,6 @@
             <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
                         <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
-            <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="loadAndGoToSetup()">Pokračovat</button>
         </div>
     </div>
 
@@ -937,11 +994,6 @@
                         <div class="option-desc-full" id="shuffle-mode-desc">z celého výběru</div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Action Buttons -->
-            <div class="setup-actions">
-                <button class="btn btn-primary" onclick="startQuiz()">Spustit test</button>
             </div>
         </div>
     </div>
@@ -1103,19 +1155,34 @@ const UI = {
         rightSlot.innerHTML = '';
         
         switch(screenId) {
+            case 'sc-hub':
+                leftSlot.innerHTML = `
+                    <button id="btn-info" class="exit-btn-info" onclick="alert('QuizMaster v1.0\n\nAplikace pro procvičování otázek\nVytvořena 2025')">
+                        <span>ℹ</span>
+                    </button>
+                `;
+                rightSlot.innerHTML = `
+                    <button id="btn-continue-hub" class="exit-btn-blue" onclick="loadAndGoToSetup()">
+                        <span>↪</span>
+                    </button>
+                `;
+                break;
             case 'sc-setup':
                 leftSlot.innerHTML = `
-                    <button id="btn-back-trigger" class="exit-btn-dark" onclick="location.reload()">
-                        <span class="exit-btn-text">zpět</span>
-                        <span class="exit-btn-x">↩</span>
+                    <button id="btn-back-trigger" class="exit-btn-gray" onclick="location.reload()">
+                        <span>↩</span>
+                    </button>
+                `;
+                rightSlot.innerHTML = `
+                    <button id="btn-start-trigger" class="exit-btn-blue" onclick="startQuiz()">
+                        <span>🚀</span>
                     </button>
                 `;
                 break;
             case 'sc-quiz':
                 leftSlot.innerHTML = `
-                    <button id="btn-exit-trigger" class="exit-btn-dark" onclick="requestExit()">
-                        <span class="exit-btn-text">ukončit</span>
-                        <span class="exit-btn-x">↩</span>
+                    <button id="btn-exit-trigger" class="exit-btn-gray" onclick="requestExit()">
+                        <span>↩</span>
                     </button>
                 `;
                 rightSlot.innerHTML = `
@@ -1854,6 +1921,7 @@ function cancelExit() { UI.cancelExit(); }
 
 // ===== INITIALIZATION =====
 Hub.init();
+UI.showScreen('sc-hub');
 </script>
 </body>
 </html>
