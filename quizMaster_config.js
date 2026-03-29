@@ -1,13 +1,18 @@
 const quizCategories = {
     Filosofie: {
-        icon: "🧠",
+        icon: "🦉",
         description: "Cesta ke kořenům západního myšlení",
         quizzes: {
+            prijimackyFFOU: {
+                id: "prijimacky_ff_ou",
+                title: "Otázky z přijímaček FF OU",
+                desc: "Oficiální otázky z přijímaček FF OU z období 2018-2024 rozdělené podle témat.",
+            },
             pocatkyPoVrcholneReckeObdobi: {
                 id: "pocatky_po_vrcholne_recke_obdobi",
                 title: "Od počátků k vrcholu řecké filosofie",
                 desc: "Od mýtů k logu, přes hledání pralátky (arché) až po vrcholné systémy Platóna a Aristotela.",
-            },
+            },            
             helenismus: {
                 id: "obdobi_helenismu",
                 title: "Období Helénismu",
