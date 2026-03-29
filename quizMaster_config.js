@@ -29,6 +29,11 @@ const quizCategories = {
                 title: "Dějiny logiky",
                 desc: "Klíčová období a představitelé. Od Aristotelových sylogismů přes Leibnizův sen o univerzálním jazyce až po Gödelovy věty.",
             },
+            teorieLogiky: {
+                id: "teorie_logiky",
+                title: "Teorie Logiky",
+                desc: "Od pojmů a definic přes logické operace až po úsudky, argumentaci a odhalování klamů.",
+            },            
             formalniLogika: {
                 id: "formalni_logika",
                 title: "Formální Logika",
