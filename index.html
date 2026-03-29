@@ -114,16 +114,16 @@
             background: #1c1c1ee7;
             color: white;
             border-radius: 8px;
-            font-size: 30px;
+            font-size: 29px;
             font-weight: 700;
             cursor: pointer;
             border: none;
             line-height: 1;
             padding: 2px 0 0 0;
-            gap: 0px;
+            gap: 3px;
         }
         .exit-btn-x {
-            margin-bottom: -4px;
+            margin-bottom: -2px;
         }
         .exit-btn-text {
             font-size: 7px;
@@ -155,17 +155,6 @@
         .exit-badge:active { 
             background: #d1d1d6; 
             transform: scale(0.96); 
-        }
-        #btn-back-trigger {
-            padding: 2px 26px;
-            font-size: 22px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            margin-top: 2px;
-        }
-        #btn-back-trigger:active {
-            transform: scale(0.95);
-            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
         }
         .btn { 
             display: block; 
@@ -1115,13 +1104,18 @@ const UI = {
         
         switch(screenId) {
             case 'sc-setup':
-                leftSlot.innerHTML = '<button id="btn-back-trigger" class="exit-badge" onclick="location.reload()">◀</button>';
+                leftSlot.innerHTML = `
+                    <button id="btn-back-trigger" class="exit-btn-dark" onclick="location.reload()">
+                        <span class="exit-btn-text">zpět</span>
+                        <span class="exit-btn-x">↩</span>
+                    </button>
+                `;
                 break;
             case 'sc-quiz':
                 leftSlot.innerHTML = `
                     <button id="btn-exit-trigger" class="exit-btn-dark" onclick="requestExit()">
                         <span class="exit-btn-text">ukončit</span>
-                        <span class="exit-btn-x">×</span>
+                        <span class="exit-btn-x">↩</span>
                     </button>
                 `;
                 rightSlot.innerHTML = `
