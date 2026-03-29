@@ -1175,7 +1175,8 @@ const AppState = {
     sessCorrect: 0, 
     sessWrong: 0, 
     selectedTopicName: "",
-    exitTimer: null
+    exitTimer: null,
+    savedQuizSelections: [] // Store selected quiz IDs when going to setup
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1294,7 +1295,7 @@ const UI = {
                 break;
             case 'sc-setup':
                 leftSlot.innerHTML = `
-                    <button id="btn-back-trigger" class="exit-btn-gray" onclick="location.reload()">
+                    <button id="btn-back-trigger" class="exit-btn-gray" onclick="goBackToHub()">
                         <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
                     </button>
                 `;
@@ -2034,7 +2035,22 @@ function loadAndGoToSetup() {
         Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
         return;
     }
+    // Save current selections before navigating to setup
+    AppState.savedQuizSelections = checks.map(ch => ch.value);
     DataLoader.loadQuizzes(); 
+}
+function goBackToHub() {
+    // Return to hub screen
+    UI.showScreen('sc-hub');
+    // Restore the saved selections
+    if (AppState.savedQuizSelections.length > 0) {
+        // Uncheck all first
+        document.querySelectorAll('.quiz-check').forEach(ch => {
+            ch.checked = AppState.savedQuizSelections.includes(ch.value);
+        });
+        // Update summary
+        Hub.updateSelectedTopicsSummary();
+    }
 }
 function startQuiz() { QuizEngine.start(); }
 function check(k) { QuizEngine.check(k); }
