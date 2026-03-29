@@ -874,9 +874,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             transform: translateY(-1px);
         }
-        .category-header.collapsible {
-            position: relative;
-        }
         .category-title {
             display: flex;
             align-items: center;
@@ -995,6 +992,16 @@
         }
         .hidden { 
             display: none !important; 
+        }
+        
+        /* Continue Button Animation when ready */
+        .exit-btn-blue.btn-ready {
+            animation: pulseBlue 1.5s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+        }
+        @keyframes pulseBlue {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 122, 255, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 122, 255, 0.8); }
         }
         
         /* Warning Bubble */
@@ -1865,10 +1872,19 @@ const Hub = {
     updateSelectedTopicsSummary() {
         const summary = document.getElementById('hub-selected-topics-summary');
         const setupSummary = document.getElementById('setup-selected-topics-summary');
+        const continueBtn = document.getElementById('btn-continue-hub');
         if (!summary) return;
         
         const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
         
+        // Toggle continue button animation based on selection
+        if (continueBtn) {
+            if (checks.length > 0) {
+                continueBtn.classList.add('btn-ready');
+            } else {
+                continueBtn.classList.remove('btn-ready');
+            }
+        }
         
         // Enforce maximum 5 topics selection
         if (checks.length > 5) {
