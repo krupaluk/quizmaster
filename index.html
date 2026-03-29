@@ -121,9 +121,6 @@
             line-height: 1;
             padding: 2px 0 0 0;
             gap: 3px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-variant-emoji: text;
-            -webkit-font-variant-emoji: text;
         }
         .exit-btn-blue {
             display: inline-flex;
@@ -142,9 +139,6 @@
             line-height: 1;
             padding: 2px 0 0 0;
             gap: 3px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-variant-emoji: text;
-            -webkit-font-variant-emoji: text;
         }
         .exit-btn-blue:active {
             transform: scale(0.92);
@@ -167,9 +161,6 @@
             line-height: 1;
             padding: 2px 0 0 0;
             gap: 3px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-variant-emoji: text;
-            -webkit-font-variant-emoji: text;
         }
         .exit-btn-gray:active {
             transform: scale(0.92);
@@ -193,9 +184,6 @@
             padding: 2px 0 0 0;
             gap: 3px;
             box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-variant-emoji: text;
-            -webkit-font-variant-emoji: text;
         }
         .exit-btn-info:active {
             transform: scale(0.92);
@@ -1295,31 +1283,31 @@ const UI = {
             case 'sc-hub':
                 leftSlot.innerHTML = `
                     <button id="btn-info" class="exit-btn-info" onclick="openInfoModal()">
-                        <span>ℹ</span>
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
                     </button>
                 `;
                 rightSlot.innerHTML = `
                     <button id="btn-continue-hub" class="exit-btn-blue" onclick="loadAndGoToSetup()">
-                        <span>↪</span>
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
                     </button>
                 `;
                 break;
             case 'sc-setup':
                 leftSlot.innerHTML = `
                     <button id="btn-back-trigger" class="exit-btn-gray" onclick="location.reload()">
-                        <span>↩</span>
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
                     </button>
                 `;
                 rightSlot.innerHTML = `
                     <button id="btn-start-trigger" class="exit-btn-blue" onclick="startQuiz()">
-                        <span>🚀</span>
+                        <span style="font-size: 34px; filter: none; display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;">🚀</span>
                     </button>
                 `;
                 break;
             case 'sc-quiz':
                 leftSlot.innerHTML = `
                     <button id="btn-exit-trigger" class="exit-btn-gray" onclick="requestExit()">
-                        <span>↩</span>
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
                     </button>
                 `;
                 rightSlot.innerHTML = `
