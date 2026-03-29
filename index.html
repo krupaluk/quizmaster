@@ -1027,6 +1027,34 @@
             40% { transform: translate(-50%, -50%) scale(1); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
+        
+        /* Exit Confirmation Bubble */
+        .exit-confirm-bubble {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--border-red);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 59, 48, 0.4);
+            animation: exitBubblePop 5s ease-out forwards;
+            text-align: center;
+            max-width: 280px;
+            line-height: 1.4;
+        }
+        
+        @keyframes exitBubblePop {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            15% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+            30% { transform: translate(-50%, -50%) scale(1); }
+            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+        }
     </style>
 </head>
 <body>
@@ -1141,14 +1169,6 @@
                 <div id="ans-container"></div>
                 <button id="btn-continue" class="btn-next" onclick="next()">Pokračovat</button>
             </div>
-
-            <div id="exit-confirm-ui" class="hidden">
-                <div class="exit-warning-title">Ukončit test?</div>
-                <p style="color: var(--ios-gray); font-size: 15px;">Váš pokrok bude smazán.</p>
-                <div id="exit-countdown" class="countdown-circle">10</div>
-                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="cancelExit()">Zůstat u testu</button>
-                <button class="exit-badge" style="width: 100%; margin-top: 15px; padding: 12px; background: none; color: var(--border-red);" onclick="location.reload()">Ano, ukončit hned</button>
-            </div>
         </div>
     </div>
 
@@ -1162,7 +1182,7 @@
                 <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin-bottom: 15px;"></p>
                 <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
             </div>
-            <button class="exit-badge" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="location.reload()">Nový test</button>
+            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="showSetupFromResults()">Zpět do nastavení</button>
         </div>
     </div>
 </div>
@@ -1182,8 +1202,10 @@ const AppState = {
     sessCorrect: 0, 
     sessWrong: 0, 
     selectedTopicName: "",
-    exitTimer: null,
-    savedQuizSelections: [] // Store selected quiz IDs when going to setup
+    savedQuizSelections: [], // Store selected quiz IDs when going to setup
+    savedQuizSettings: null, // Store quiz settings (count, shuffle, filters)
+    confirmingExit: false, // Track if user is confirming exit from quiz
+    exitConfirmTimer: null // Timer for exit confirmation
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1314,7 +1336,7 @@ const UI = {
                 break;
             case 'sc-quiz':
                 leftSlot.innerHTML = `
-                    <button id="btn-exit-trigger" class="exit-btn-gray" onclick="requestExit()">
+                    <button id="btn-exit-trigger" class="exit-btn-gray" onclick="handleQuizExit()">
                         <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
                     </button>
                 `;
@@ -1334,14 +1356,6 @@ const UI = {
         document.getElementById('count-wrong').innerText = AppState.sessWrong;
         const prog = (AppState.cur / AppState.total) * 100;
         document.getElementById('p-bar').style.width = prog + "%";
-    },
-    
-    cancelExit() {
-        if (AppState.exitTimer) clearInterval(AppState.exitTimer);
-        document.getElementById('quiz-main-ui').classList.remove('hidden');
-        document.getElementById('exit-confirm-ui').classList.add('hidden');
-        const exitBtn = document.getElementById('btn-exit-trigger');
-        if (exitBtn) exitBtn.classList.remove('hidden');
     }
 };
 
@@ -1402,16 +1416,29 @@ const QuizEngine = {
     },
     
     start() {
-        AppState.total = AppState.selectedCount || parseInt(document.getElementById('question-count-slider')?.value || 10);
+        // Save current settings before starting
+        const questionCount = parseInt(document.getElementById('question-count-slider')?.value || 10);
+        const shuffleEnabled = document.getElementById('chk-shuffle').checked;
+        const roundRobinMode = document.getElementById('chk-shuffle-mode').checked;
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])')).map(f => f.dataset.group);
+        
+        AppState.savedQuizSettings = {
+            questionCount: questionCount,
+            shuffleEnabled: shuffleEnabled,
+            roundRobinMode: roundRobinMode,
+            activeFilters: activeFilters,
+            selectedCount: questionCount
+        };
+        
+        AppState.total = AppState.selectedCount || questionCount;
         
         // Get filtered questions if groups are selected
-        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
-            .map(filter => filter.dataset.group);
+        const quizActiveFilters = AppState.savedQuizSettings ? AppState.savedQuizSettings.activeFilters : [];
         
         let availableQuestions;
-        if (activeFilters.length > 0) {
+        if (quizActiveFilters.length > 0) {
             availableQuestions = AppState.db.filter(question => 
-                question._group && activeFilters.includes(question._group)
+                question._group && quizActiveFilters.includes(question._group)
             );
         } else {
             availableQuestions = AppState.db;
@@ -1419,15 +1446,15 @@ const QuizEngine = {
         
         AppState.activeQ = [...availableQuestions];
         
-        // Check shuffle modes
-        const shuffleEnabled = document.getElementById('chk-shuffle').checked;
-        const roundRobinMode = document.getElementById('chk-shuffle-mode').checked; // Right/green = round-robin
+        // Check shuffle modes - use saved settings
+        const quizShuffleEnabled = AppState.savedQuizSettings ? AppState.savedQuizSettings.shuffleEnabled : false;
+        const quizRoundRobinMode = AppState.savedQuizSettings ? AppState.savedQuizSettings.roundRobinMode : false;
         
-        if (roundRobinMode) {
+        if (quizRoundRobinMode) {
             // Round-robin by chapters: 1 from each chapter in rotation
             // Only shuffle within chapters if first toggle is on (random order)
-            AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total, shuffleEnabled);
-        } else if (shuffleEnabled) {
+            AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total, quizShuffleEnabled);
+        } else if (quizShuffleEnabled) {
             // Regular shuffle - all questions mixed together
             this.shuffle(AppState.activeQ);
             AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
@@ -1448,7 +1475,6 @@ const QuizEngine = {
     },
     
     render() {
-        UI.cancelExit();
         const q = AppState.activeQ[AppState.cur];
         const chapterName = q._groupTitle || q._group || 'Neznámá kapitola';
         document.getElementById('q-topic').innerHTML = `${AppState.selectedTopicName} → <b>${chapterName}</b>`;
@@ -2023,27 +2049,6 @@ const Hub = {
     
 };
 
-// ===== EXIT HANDLER =====
-const ExitHandler = {
-    request() {
-        document.getElementById('quiz-main-ui').classList.add('hidden');
-        document.getElementById('exit-confirm-ui').classList.remove('hidden');
-        document.getElementById('btn-exit-trigger').classList.add('hidden');
-        
-        let seconds = 10;
-        document.getElementById('exit-countdown').innerText = seconds;
-        
-        AppState.exitTimer = setInterval(() => {
-            seconds--;
-            document.getElementById('exit-countdown').innerText = seconds;
-            if (seconds <= 0) {
-                clearInterval(AppState.exitTimer);
-                location.reload();
-            }
-        }, 1000);
-    }
-};
-
 // ===== GLOBAL FUNCTIONS =====
 function loadAndGoToSetup() { 
     const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
@@ -2068,13 +2073,54 @@ function goBackToHub() {
         Hub.updateSelectedTopicsSummary();
     }
 }
+function goBackToSetup() {
+    UI.showScreen('sc-setup');
+}
+function showSetupFromResults() {
+    UI.showScreen('sc-setup');
+}
 function startQuiz() { QuizEngine.start(); }
+function handleQuizExit() {
+    if (AppState.confirmingExit) {
+        // Second click - go to setup and remove bubble
+        clearTimeout(AppState.exitConfirmTimer);
+        AppState.confirmingExit = false;
+        // Remove any existing bubbles immediately
+        const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
+        existingBubbles.forEach(bubble => bubble.remove());
+        UI.showScreen('sc-setup');
+    } else {
+        // First click - show confirmation bubble
+        AppState.confirmingExit = true;
+        showExitConfirmBubble();
+        // Reset after 5 seconds
+        AppState.exitConfirmTimer = setTimeout(() => {
+            AppState.confirmingExit = false;
+        }, 5000);
+    }
+}
+function showExitConfirmBubble() {
+    // Remove any existing bubbles
+    const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
+    existingBubbles.forEach(bubble => bubble.remove());
+    
+    // Create red confirmation bubble
+    const bubble = document.createElement('div');
+    bubble.className = 'exit-confirm-bubble';
+    bubble.innerHTML = 'Klikněte znovu na tlačítko zpět pro opuštění kvízu';
+    document.body.appendChild(bubble);
+    
+    // Remove bubble after 5 seconds
+    setTimeout(() => {
+        if (bubble.parentNode) {
+            bubble.remove();
+        }
+    }, 5000);
+}
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
 function next() { QuizEngine.next(); }
 function startErrorLoop() { QuizEngine.startErrorLoop(); }
-function requestExit() { ExitHandler.request(); }
-function cancelExit() { UI.cancelExit(); }
 function openInfoModal() { 
     document.getElementById('info-modal').classList.remove('hidden'); 
 }
