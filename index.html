@@ -875,8 +875,7 @@
     <!-- HUB -->
     <div id="sc-hub" class="screen">
         <div class="card">
-            <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
-                        <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
+            <h2 style="font-size: 26px; text-align: center; margin-bottom: 20px;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
         </div>
     </div>
@@ -1306,11 +1305,8 @@ const UI = {
                         <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
                     </button>
                 `;
-                rightSlot.innerHTML = `
-                    <button id="btn-continue-hub" class="exit-btn-blue" onclick="loadAndGoToSetup()">
-                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
-                    </button>
-                `;
+                // Right slot is empty on hub - user clicks on quiz to navigate
+                rightSlot.innerHTML = '';
                 break;
             case 'sc-setup':
                 leftSlot.innerHTML = `
@@ -1713,41 +1709,38 @@ const Results = {
 const DataLoader = {
     cache: new Map(), // Cache pro načtené kvízy
     
-    async loadQuizzes() {
-        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        if (checks.length === 0) return;
-        AppState.selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
+    // Load a single quiz and go to setup
+    async loadSingleQuiz(quizId) {
         AppState.db = [];
         
-        // Store selected quizzes for summary
-        AppState.selectedQuizzes = [];
-        
-        // Zobrazit loading indikátor
+        // Show loading indicator
         this.showLoading(true);
         
         try {
-            for (let ch of checks) {
-                const id = ch.value;
-                const quizData = await this.loadQuizData(id);
-                if (quizData) {
-                    // Use processed questions from the grouped structure
-                    if (quizData.questions && Array.isArray(quizData.questions)) {
-                        AppState.db = AppState.db.concat(quizData.questions);
-                    }
-                    
-                    // Add to selected quizzes summary
-                    AppState.selectedQuizzes.push({
-                        title: ch.getAttribute('data-title'),
-                        category: ch.getAttribute('data-category') || 'Ostatní'
-                    });
+            const quizData = await this.loadQuizData(quizId);
+            if (quizData) {
+                // Use processed questions from the grouped structure
+                if (quizData.questions && Array.isArray(quizData.questions)) {
+                    AppState.db = quizData.questions;
                 }
+                
+                // Store selected quiz for summary
+                AppState.selectedQuizzes = [{
+                    title: AppState.selectedTopicName,
+                    category: 'Vybraný kvíz'
+                }];
+                
+                if (AppState.db.length === 0) {
+                    Hub.showWarningBubble('Kvíz neobsahuje žádné otázky');
+                    return;
+                }
+                
+                this.setupCountSelector();
+                this.setupGroupFilters();
+                UI.showScreen('sc-setup');
+            } else {
+                Hub.showWarningBubble('Nepodařilo se načíst kvíz');
             }
-            
-            if (AppState.db.length === 0) return;
-            this.setupCountSelector();
-            this.setupGroupFilters();
-            Hub.updateSelectedTopicsSummary();
-            UI.showScreen('sc-setup');
         } finally {
             this.showLoading(false);
         }
@@ -2101,64 +2094,6 @@ const Hub = {
         }
     },
     
-    updateSelectedTopicsSummary() {
-        const summary = document.getElementById('hub-selected-topics-summary');
-        const setupSummary = document.getElementById('setup-selected-topics-summary');
-        const continueBtn = document.getElementById('btn-continue-hub');
-        if (!summary) return;
-        
-        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        
-        // Toggle continue button animation based on selection
-        if (continueBtn) {
-            if (checks.length > 0) {
-                continueBtn.classList.add('btn-ready');
-            } else {
-                continueBtn.classList.remove('btn-ready');
-            }
-        }
-        
-        // Enforce maximum 5 topics selection
-        if (checks.length > 5) {
-            // Show warning bubble
-            this.showWarningBubble('Můžete vybrat nanejvýš 5 okruhů!');
-            
-            // Find most recently checked checkbox and uncheck it
-            const allChecks = Array.from(document.querySelectorAll('.quiz-check'));
-            for (let i = allChecks.length - 1; i >= 0; i--) {
-                if (allChecks[i].checked && !checks.slice(0, 5).includes(allChecks[i])) {
-                    allChecks[i].checked = false;
-                    break;
-                }
-            }
-            // Recalculate checks after enforcement
-            const newChecks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-            if (newChecks.length === 0) {
-                const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
-                if (summary) summary.innerHTML = displayText;
-                if (setupSummary) setupSummary.innerHTML = displayText;
-            } else {
-                const selectedTitles = newChecks.map(ch => ch.getAttribute('data-title'));
-                const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
-                if (summary) summary.innerHTML = displayText;
-                if (setupSummary) setupSummary.innerHTML = displayText;
-            }
-            return;
-        }
-        
-        if (checks.length === 0) {
-            const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
-            if (summary) summary.innerHTML = displayText;
-            if (setupSummary) setupSummary.innerHTML = displayText;
-        } else {
-            const selectedTitles = checks.map(ch => ch.getAttribute('data-title'));
-            const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
-            if (summary) summary.innerHTML = displayText;
-            if (setupSummary) setupSummary.innerHTML = displayText;
-        }
-    },
-    
-    
     showWarningBubble(message) {
         // Remove any existing bubbles
         const existingBubbles = document.querySelectorAll('.warning-bubble');
@@ -2220,20 +2155,14 @@ const Hub = {
                         `<span style="background: var(--ios-blue); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">📝</span>` : '';
                     
                     div.innerHTML = `
-                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title}${completedBadge}${startedIndicator}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
                     `;
-                    div.onclick = (e) => { 
-                        if(e.target.tagName !== 'INPUT') { 
-                            const ch = div.querySelector('input'); 
-                            ch.checked = !ch.checked; 
-                            Hub.updateSelectedTopicsSummary(); 
-                        } else {
-                            Hub.updateSelectedTopicsSummary();
-                        }
+                    // Click on quiz item goes directly to setup
+                    div.onclick = () => {
+                        loadQuizAndGoToSetup(q.id, q.title);
                     };
                     quizzesContainer.appendChild(div);
                 });
@@ -2263,36 +2192,29 @@ const Hub = {
 };
 
 // ===== GLOBAL FUNCTIONS =====
-function loadAndGoToSetup() { 
-    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-    if (checks.length === 0) {
-        Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
-        return;
-    }
-    // Save current selections before navigating to setup
-    AppState.savedQuizSelections = checks.map(ch => ch.value);
+function loadQuizAndGoToSetup(quizId, quizTitle) {
+    // Set current quiz ID
+    AppState.currentQuizId = quizId;
+    AppState.selectedTopicName = quizTitle;
     
-    // Set current quiz ID from first selected quiz
-    const firstQuizTitle = checks[0].getAttribute('data-title');
-    AppState.currentQuizId = getQuizIdByTitle(firstQuizTitle);
-    
-    DataLoader.loadQuizzes().then(() => {
+    // Load the quiz data and go to setup
+    DataLoader.loadSingleQuiz(quizId).then(() => {
         // After loading, update the progress section
         setTimeout(updateQuizProgressSection, 100);
     });
 }
+
+function loadAndGoToSetup() { 
+    // This function is kept for compatibility but no longer used with checkbox logic
+    console.log('loadAndGoToSetup is deprecated, use loadQuizAndGoToSetup instead');
+}
 function goBackToHub() {
     // Return to hub screen
     UI.showScreen('sc-hub');
-    // Restore the saved selections
-    if (AppState.savedQuizSelections.length > 0) {
-        // Uncheck all first
-        document.querySelectorAll('.quiz-check').forEach(ch => {
-            ch.checked = AppState.savedQuizSelections.includes(ch.value);
-        });
-        // Update summary
-        Hub.updateSelectedTopicsSummary();
-    }
+    // Clear current quiz data
+    AppState.currentQuizId = null;
+    AppState.db = [];
+    AppState.selectedTopicName = "";
 }
 function goBackToSetup() {
     UI.showScreen('sc-setup');
