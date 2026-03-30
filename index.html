@@ -883,7 +883,7 @@
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
         <div class="card">
-            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
+            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybraný okruh</b> → načítání...</div>
             <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
             <!-- Quiz Options -->
@@ -899,7 +899,7 @@
                         <span id="slider-value">10</span> otázek
                     </span>
                 </div>
-                <input type="range" id="question-count-slider" class="question-slider-inline" min="5" max="50" value="10" step="1">
+                <input type="range" id="question-count-slider" class="question-slider-inline" min="1" max="50" value="10" step="1">
             </div>
             
             <div class="shuffle-options-row">
@@ -938,9 +938,20 @@
                 <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px; font-size: 14px;">
                     <!-- Progress info will be inserted here -->
                 </div>
-                <button class="btn" style="background: var(--border-red); color: white; font-size: 14px; padding: 12px;" onclick="resetQuizProgress()">
-                    🗑️ Vyčistit postup (počet dokončení zůstane)
-                </button>
+                <div id="completion-reset-container" style="margin-top: 8px; padding: 10px; background: #fafafa; border-radius: 10px; border: 1px solid #eee;">
+                    <div style="font-size: 11px; color: var(--ios-gray); margin-bottom: 8px; text-align: center; font-weight: 500;">⚙️ Pokročilé možnosti</div>
+                    <div id="completion-reset-buttons" style="display: flex; flex-direction: column; gap: 6px;">
+                        <button class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd;" onclick="resetQuizProgress()">
+                            🗑️ Vyčistit postup (počet dokončení zůstane)
+                        </button>
+                        <button id="btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetAllCompletions()">
+                            ✅ Vynulovat dokončení s opravou
+                        </button>
+                        <button id="btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetFlawlessCompletions()">
+                            🏆 Vynulovat bezchybná dokončení
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1038,12 +1049,13 @@ const UserDataManager = {
     
     getDefaultQuizData() {
         return {
-            started: false,           // Whether user has launched this quiz at least once
-            completed: false,         // Whether quiz is marked as 'hotovo'
-            completionCount: 0,       // How many times successfully completed
-            answeredQuestions: {},    // questionKey -> {correct: boolean, timestamp: number}
-            wrongAnswers: [],         // Array of question keys answered wrong
-            lastSession: null         // Last time quiz was accessed
+            started: false,                    // Whether user has launched this quiz at least once
+            completed: false,                  // Whether quiz is marked as 'hotovo'
+            completionCount: 0,                // How many times completed (with or without errors)
+            flawlessCompletionCount: 0,        // How many times completed without any errors
+            answeredQuestions: {},             // questionKey -> {correct: boolean, timestamp: number}
+            wrongAnswers: [],                  // Array of question keys answered wrong
+            lastSession: null                  // Last time quiz was accessed
         };
     },
     
@@ -1102,32 +1114,44 @@ const UserDataManager = {
     },
     
     // Mark quiz as successfully completed
-    markQuizCompleted(quizId, isFullCompletion = false) {
+    // completionType: 'flawless' = bezchybné, 'regular' = s opravenými chybami
+    markQuizCompleted(quizId, completionType = 'none') {
         const data = this.getData();
         if (!data.quizzes[quizId]) {
             data.quizzes[quizId] = this.getDefaultQuizData();
         }
         
-        // Only increment completion count for full completion
-        if (isFullCompletion) {
+        // Increment appropriate counter based on completion type
+        if (completionType === 'flawless') {
             data.quizzes[quizId].completed = true;
+            data.quizzes[quizId].flawlessCompletionCount++;
             data.quizzes[quizId].completionCount++;
             
             // Clear progress only after FULL completion (all questions answered)
             this.clearQuizProgress(quizId, false);
+        } else if (completionType === 'regular') {
+            data.quizzes[quizId].completed = true;
+            data.quizzes[quizId].completionCount++;
+            
+            // Clear progress after regular completion too
+            this.clearQuizProgress(quizId, false);
         }
         
         this.saveData(data);
-        return data.quizzes[quizId].completionCount;
+        return {
+            completionCount: data.quizzes[quizId].completionCount,
+            flawlessCompletionCount: data.quizzes[quizId].flawlessCompletionCount
+        };
     },
     
     // Clear quiz progress (answered questions, wrong answers)
-    // preserveCompletion = true: keeps completionCount and completed status
+    // preserveCompletion = true: keeps completion counts and completed status
     clearQuizProgress(quizId, preserveCompletion = true) {
         const data = this.getData();
         if (!data.quizzes[quizId]) return;
         
         const completionCount = data.quizzes[quizId].completionCount;
+        const flawlessCompletionCount = data.quizzes[quizId].flawlessCompletionCount;
         const completed = data.quizzes[quizId].completed;
         const started = data.quizzes[quizId].started;
         
@@ -1136,9 +1160,54 @@ const UserDataManager = {
         
         if (preserveCompletion) {
             data.quizzes[quizId].completionCount = completionCount;
+            data.quizzes[quizId].flawlessCompletionCount = flawlessCompletionCount;
             data.quizzes[quizId].completed = completed;
             data.quizzes[quizId].started = started;
         }
+        
+        this.saveData(data);
+    },
+    
+    // Reset flawless completion count only
+    resetFlawlessCompletionCount(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        data.quizzes[quizId].flawlessCompletionCount = 0;
+        // Update completed status based on remaining completions
+        if (data.quizzes[quizId].completionCount === 0) {
+            data.quizzes[quizId].completed = false;
+        }
+        
+        this.saveData(data);
+    },
+    
+    // Reset regular completion count only (completions with errors)
+    resetRegularCompletionCount(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        // Reduce completionCount by the number of regular completions
+        // (difference between total and flawless)
+        const regularCount = data.quizzes[quizId].completionCount - data.quizzes[quizId].flawlessCompletionCount;
+        data.quizzes[quizId].completionCount = data.quizzes[quizId].flawlessCompletionCount;
+        
+        // Update completed status based on remaining completions
+        if (data.quizzes[quizId].completionCount === 0) {
+            data.quizzes[quizId].completed = false;
+        }
+        
+        this.saveData(data);
+    },
+    
+    // Reset all completion counts (flawless and regular)
+    resetAllCompletionCounts(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        data.quizzes[quizId].flawlessCompletionCount = 0;
+        data.quizzes[quizId].completionCount = 0;
+        data.quizzes[quizId].completed = false;
         
         this.saveData(data);
     },
@@ -1154,6 +1223,7 @@ const UserDataManager = {
             started: quizData.started,
             completed: quizData.completed,
             completionCount: quizData.completionCount,
+            flawlessCompletionCount: quizData.flawlessCompletionCount,
             totalAnswered: answeredKeys.length,
             correctCount: correctCount,
             wrongCount: wrongCount,
@@ -1440,11 +1510,16 @@ const QuizEngine = {
             availableQuestions = AppState.db;
         }
         
-        // Filter out already answered questions for this quiz (unless in error loop)
+        // Filter out correctly answered questions for this quiz (unless in error loop)
+        // Wrong answers should NOT be filtered - user needs to answer them again
         if (quizId && !AppState.loop) {
             const quizData = UserDataManager.getQuizData(quizId);
-            const answeredKeys = Object.keys(quizData.answeredQuestions);
-            availableQuestions = availableQuestions.filter(q => !answeredKeys.includes(this.getQuestionKey(q)));
+            const answeredQuestions = quizData.answeredQuestions || {};
+            availableQuestions = availableQuestions.filter(q => {
+                const questionKey = this.getQuestionKey(q);
+                // Only filter out if answered CORRECTLY
+                return answeredQuestions[questionKey]?.correct !== true;
+            });
         }
         
         AppState.activeQ = [...availableQuestions];
@@ -1621,20 +1696,35 @@ const Results = {
             document.getElementById('res-grade').innerText = g;
             document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${AppState.score} / ${AppState.total}</b> (${Math.round(p)}%)`;
             
-            // Check if all questions in the quiz are answered (for full completion)
+            // Check if all questions in the quiz are answered CORRECTLY (for full completion)
             const remainingCount = quizId ? DataLoader.getTotalRemainingQuestions(quizId) : 0;
-            const isFullyCompleted = remainingCount === 0 && AppState.errs.length === 0;
+            const hadErrorsInSession = AppState.sessWrong > 0;
+            const allAnsweredCorrectlyInSession = AppState.sessCorrect > 0 && AppState.sessWrong === 0;
+            const isFullyCompleted = remainingCount === 0 && (allAnsweredCorrectlyInSession || (AppState.sessCorrect > 0 && AppState.sessWrong === 0));
             
-            // Only count as completed if no errors AND all questions answered
-            if (isFullyCompleted && quizId) {
-                const completionCount = UserDataManager.markQuizCompleted(quizId, true); // true = full completion
-                this.showCompletionBadge(completionCount, true);
-            } else if (AppState.errs.length === 0 && quizId) {
-                // Session completed successfully but quiz not fully done yet
+            // Count completion only if:
+            // 1. All questions are answered (remainingCount === 0)
+            // 2. AND all answers in this session were correct (no errors)
+            // OR
+            // 3. User had errors but ALL questions in quiz are now answered correctly (completed via error loop)
+            if (isFullyCompleted && quizId && AppState.sessWrong === 0) {
+                // Flawless completion - no errors at all in this session
+                const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
+                this.showCompletionBadge(stats, 'flawless');
+            } else if (remainingCount === 0 && quizId && AppState.sessCorrect > 0) {
+                // Regular completion - had errors but eventually answered all correctly
+                const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
+                this.showCompletionBadge(stats, 'regular');
+            } else if (quizId && AppState.sessCorrect > 0) {
+                // Session completed but quiz not fully done yet
                 this.showPartialCompletionMessage(remainingCount);
-            } else if (quizId) {
-                // Show message that quiz has errors and needs to be restarted
-                this.showErrorMessage();
+            } else if (quizId && AppState.sessWrong > 0 && AppState.sessCorrect === 0) {
+                // All answers were wrong - not a completion
+                const statEl = document.getElementById('res-stat');
+                const msg = document.createElement('div');
+                msg.style.cssText = 'font-size: 14px; color: var(--border-red); margin-top: 10px;';
+                msg.innerHTML = '⚠️ Všechny odpovědi byly špatné. Zkus to znovu!';
+                statEl.appendChild(msg);
             }
         } else {
             document.getElementById('res-grade').innerText = AppState.errs.length === 0 ? "✓" : "!";
@@ -1649,11 +1739,16 @@ const Results = {
         }
     },
     
-    showCompletionBadge(count, isFullCompletion = false) {
+    showCompletionBadge(stats, completionType) {
         const gradeEl = document.getElementById('res-grade');
         const badge = document.createElement('div');
         badge.style.cssText = 'font-size: 14px; color: var(--border-green); margin-top: 10px;';
-        badge.innerHTML = isFullCompletion ? `🏆 Kvíz plně dokončen! (${count}x)` : `📝 Částečné dokončení`;
+        
+        if (completionType === 'flawless') {
+            badge.innerHTML = `🏆 Bezchybně dokončeno! (${stats.flawlessCompletionCount}x)`;
+        } else {
+            badge.innerHTML = `✅ Dokončeno! (${stats.completionCount}x celkem, ${stats.flawlessCompletionCount}x bezchybně)`;
+        }
         gradeEl.appendChild(badge);
     },
     
@@ -1677,14 +1772,18 @@ const Results = {
         const stats = UserDataManager.getQuizStats(quizId);
         const container = document.getElementById('res-stats-summary') || this.createStatsContainer();
         
-        if (stats.completionCount > 0) {
+        if (stats.completionCount > 0 || stats.flawlessCompletionCount > 0) {
             container.innerHTML = `
                 <div style="margin-top: 20px; padding: 15px; background: var(--ios-bg); border-radius: 12px; text-align: center;">
                     <div style="font-size: 14px; font-weight: 600; color: var(--ios-gray); margin-bottom: 10px;">📊 Statistiky tohoto kvízu</div>
                     <div style="display: flex; justify-content: center; gap: 20px;">
                         <div>
-                            <div style="font-size: 28px; font-weight: 700; color: var(--border-green);">${stats.completionCount}</div>
-                            <div style="font-size: 11px; color: var(--ios-gray);">úspěšných dokončení</div>
+                            <div style="font-size: 28px; font-weight: 700; color: var(--border-green);">${stats.flawlessCompletionCount}</div>
+                            <div style="font-size: 11px; color: var(--ios-gray);">bezchybných</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 28px; font-weight: 700; color: var(--ios-blue);">${stats.completionCount}</div>
+                            <div style="font-size: 11px; color: var(--ios-gray);">celkem dokončení</div>
                         </div>
                     </div>
                 </div>
@@ -1729,6 +1828,12 @@ const DataLoader = {
                     title: AppState.selectedTopicName,
                     category: 'Vybraný kvíz'
                 }];
+                
+                // Update the setup screen summary
+                const summaryEl = document.getElementById('setup-selected-topics-summary');
+                if (summaryEl) {
+                    summaryEl.innerHTML = `<b>Vybraný okruh</b> → ${AppState.selectedTopicName}`;
+                }
                 
                 if (AppState.db.length === 0) {
                     Hub.showWarningBubble('Kvíz neobsahuje žádné otázky');
@@ -1828,7 +1933,7 @@ const DataLoader = {
         }
     },
     
-    // Count remaining (unanswered) questions per group using LocalStorage data
+    // Count remaining (unanswered or wrong) questions per group using LocalStorage data
     getRemainingQuestionsPerGroup(quizId) {
         const quizData = UserDataManager.getQuizData(quizId);
         const answeredQuestions = quizData.answeredQuestions || {};
@@ -1839,10 +1944,11 @@ const DataLoader = {
             const groupKey = question._group || 'unknown';
             const questionKey = QuizEngine.getQuestionKey(question);
             
-            // Check if question has been answered
-            const isAnswered = answeredQuestions[questionKey] !== undefined;
+            // Check if question has been answered CORRECTLY
+            // Wrong answers should NOT be filtered - user needs to answer them again
+            const isAnsweredCorrectly = answeredQuestions[questionKey]?.correct === true;
             
-            if (!isAnswered) {
+            if (!isAnsweredCorrectly) {
                 remainingPerGroup[groupKey] = (remainingPerGroup[groupKey] || 0) + 1;
             }
         });
@@ -1872,7 +1978,7 @@ const DataLoader = {
         // Use remaining questions count instead of total
         const quizId = AppState.currentQuizId;
         const maxQ = quizId ? this.getTotalRemainingQuestions(quizId) : AppState.db.length;
-        const minQ = Math.min(5, maxQ);
+        const minQ = Math.min(1, maxQ);
         
         // Set slider properties
         slider.min = minQ;
@@ -2043,7 +2149,7 @@ const DataLoader = {
         const valueDisplay = document.getElementById('slider-value');
         
         const maxQ = remainingCount;
-        const minQ = Math.min(5, maxQ);
+        const minQ = Math.min(1, maxQ);
         
         // Set slider properties
         slider.min = minQ;
@@ -2115,6 +2221,7 @@ const Hub = {
     
     renderQuizList() {
         const list = document.getElementById('hub-list');
+        list.innerHTML = ''; // Clear previous content
         
         // Use the new nested structure
         if (typeof quizCategories !== 'undefined') {
@@ -2149,14 +2256,22 @@ const Hub = {
                     
                     // Get quiz stats from LocalStorage
                     const quizStats = UserDataManager.getQuizStats(q.id);
-                    const completedBadge = quizStats.completionCount > 0 ? 
-                        `<span style="background: var(--border-green); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">✓ ${quizStats.completionCount}x</span>` : '';
+                    
+                    // Build badges
+                    let badges = '';
+                    if (quizStats.flawlessCompletionCount > 0) {
+                        badges += `<span style="background: var(--border-green); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">🏆 ${quizStats.flawlessCompletionCount}x</span>`;
+                    }
+                    if (quizStats.completionCount > quizStats.flawlessCompletionCount) {
+                        const regularCount = quizStats.completionCount - quizStats.flawlessCompletionCount;
+                        badges += `<span style="background: var(--ios-blue); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">✓ ${regularCount}x</span>`;
+                    }
                     const startedIndicator = quizStats.started && quizStats.completionCount === 0 ?
-                        `<span style="background: var(--ios-blue); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">📝</span>` : '';
+                        `<span style="background: var(--ios-gray); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">📝</span>` : '';
                     
                     div.innerHTML = `
                         <div class="quiz-info">
-                            <div class="quiz-title">${q.title}${completedBadge}${startedIndicator}</div>
+                            <div class="quiz-title">${q.title}${badges}${startedIndicator}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
                     `;
@@ -2215,9 +2330,14 @@ function goBackToHub() {
     AppState.currentQuizId = null;
     AppState.db = [];
     AppState.selectedTopicName = "";
+    // Refresh quiz list to show updated completion counts
+    Hub.renderQuizList();
 }
 function goBackToSetup() {
     UI.showScreen('sc-setup');
+    // Refresh group filters and count selector to show updated remaining questions
+    DataLoader.setupGroupFilters();
+    DataLoader.setupCountSelector();
     updateQuizProgressSection();
 }
 
@@ -2235,24 +2355,38 @@ function updateQuizProgressSection() {
     
     const stats = UserDataManager.getQuizStats(quizId);
     
-    if (stats.started || stats.completionCount > 0) {
-        progressSection.style.display = 'block';
-        
-        let statusText = '';
-        if (stats.completionCount > 0) {
-            statusText += `✅ <b>Dokončeno ${stats.completionCount}x</b><br>`;
-        }
-        if (stats.totalAnswered > 0) {
-            statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
-            statusText += `   • Správně: ${stats.correctCount}<br>`;
-            statusText += `   • Špatně: ${stats.wrongCount}`;
-        } else {
-            statusText += 'Žádné nezodpovězené otázky v aktuálním postupu';
-        }
-        
-        progressInfo.innerHTML = statusText;
+    // Always show progress section for selected quiz
+    progressSection.style.display = 'block';
+    
+    let statusText = '';
+    const regularCount = stats.completionCount - stats.flawlessCompletionCount;
+    
+    // Always show completion counts (even if 0)
+    statusText += `🏆 Bezchybně dokončeno: <b>${stats.flawlessCompletionCount}x</b><br>`;
+    statusText += `✅ Dokončeno s opravou: <b>${regularCount}x</b><br>`;
+    
+    if (stats.totalAnswered > 0) {
+        statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
+        statusText += `   • Správně: ${stats.correctCount}<br>`;
+        statusText += `   • Špatně: ${stats.wrongCount}`;
     } else {
-        progressSection.style.display = 'none';
+        statusText += '📝 Aktuální postup: žádné otázky';
+    }
+    
+    progressInfo.innerHTML = statusText;
+    
+    // Show/hide completion reset buttons based on completion counts
+    const btnResetFlawless = document.getElementById('btn-reset-flawless');
+    const btnResetAll = document.getElementById('btn-reset-all');
+    const completionResetContainer = document.getElementById('completion-reset-container');
+    
+    if (btnResetFlawless && btnResetAll) {
+        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
+        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
+        
+        // Hide container if no advanced buttons are visible
+        const anyVisible = regularCount > 0 || stats.flawlessCompletionCount > 0;
+        completionResetContainer.style.display = anyVisible ? 'block' : 'none';
     }
 }
 
@@ -2262,13 +2396,55 @@ function resetQuizProgress() {
     
     const stats = UserDataManager.getQuizStats(quizId);
     const confirmMsg = stats.completionCount > 0 
-        ? `Chcete vyčistit postup tohoto kvízu?\n\nPočet dokončení (${stats.completionCount}) zůstane zachován.\nAktuální postup (${stats.totalAnswered} otázek) bude smazán.`
+        ? `Chcete vyčistit postup tohoto kvízu?\n\nPočet dokončení zůstane zachován:\n• Bezchybně: ${stats.flawlessCompletionCount}x\n• Celkem: ${stats.completionCount}x\n\nAktuální postup (${stats.totalAnswered} otázek) bude smazán.`
         : `Chcete vyčistit postup tohoto kvízu?\n\nVšechny zodpovězené otázky budou resetovány.`;
     
     if (confirm(confirmMsg)) {
         UserDataManager.clearQuizProgress(quizId, true);
         updateQuizProgressSection();
+        DataLoader.setupGroupFilters();
+        DataLoader.setupCountSelector();
         Hub.showWarningBubble('Postup byl vyčištěn!');
+    }
+}
+
+function resetFlawlessCompletions() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    if (stats.flawlessCompletionCount === 0) {
+        Hub.showWarningBubble('Žádná bezchybná dokončení k vynulování!');
+        return;
+    }
+    
+    const confirmMsg = `Chcete vynulovat počet bezchybných dokončení?\n\n🏆 Bezchybně: ${stats.flawlessCompletionCount}x → 0\n✅ Celkem: ${stats.completionCount}x (zůstane)`;
+    
+    if (confirm(confirmMsg)) {
+        UserDataManager.resetFlawlessCompletionCount(quizId);
+        updateQuizProgressSection();
+        Hub.showWarningBubble('Bezchybná dokončení vynulována!');
+    }
+}
+
+function resetAllCompletions() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    const regularCount = stats.completionCount - stats.flawlessCompletionCount;
+    
+    if (regularCount === 0) {
+        Hub.showWarningBubble('Žádná dokončení s opravou k vynulování!');
+        return;
+    }
+    
+    const confirmMsg = `Chcete vynulovat dokončení S OPRAVOU?\n\n✅ Dokončení s opravou: ${regularCount}x → 0\n🏆 Bezchybná: ${stats.flawlessCompletionCount}x (zůstane)\n\nCelkem dokončení: ${stats.completionCount}x → ${stats.flawlessCompletionCount}x`;
+    
+    if (confirm(confirmMsg)) {
+        UserDataManager.resetRegularCompletionCount(quizId);
+        updateQuizProgressSection();
+        Hub.showWarningBubble('Dokončení s opravou vynulována!');
     }
 }
 

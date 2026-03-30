@@ -61,6 +61,22 @@ const quizCategories = {
                 desc: "Poznejte zvířátka ze statku, zjistěte, jak se jmenují jejich mláďata, co dobrého papají a jaké zajímavé zvuky vydávají!",
             }
         }
-    }
+    },
+    Debug: {
+        icon: "🔧",
+        description: "Debug mode pro testování aplikace",
+        quizzes: {
+            debug3q: {
+                id: "debug_3q",
+                title: "Debug 3 otázky",
+                desc: "Testovací kvíz se 3 jednoduchými otázkami pro ladění aplikace",
+            },
+            debug5q: {
+                id: "debug_5q",
+                title: "Debug 5 otázek",
+                desc: "Testovací kvíz se 5 jednoduchými otázkami pro ladění aplikace",
+            }
+        }
+    }    
 };
 
