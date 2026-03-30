@@ -45,8 +45,8 @@
             display: grid; 
             grid-template-columns: 1fr auto 1fr; 
             align-items: center; 
-            margin-bottom: 12px; 
-            gap: 5px; 
+            margin-bottom: 6px; 
+            gap: 2px; 
         }
         .header-mini { 
             text-align: center; 
@@ -54,7 +54,7 @@
             letter-spacing: 0.5px; 
             color: var(--ios-gray); 
             white-space: nowrap; 
-            margin-top: 12px; 
+            margin-top: 6px; 
         }
         .app-name { 
             font-size: 11px; 
@@ -64,6 +64,9 @@
             display: flex; 
             gap: 6px; 
             justify-self: end; 
+        }
+        #header-left-slot {
+            justify-self: start;
         }
         .stat-item { 
             display: flex; 
@@ -101,16 +104,202 @@
             background: var(--border-red); 
             color: white; 
         }
+        .exit-btn-dark {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: #1c1c1ec6;
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+        }
+        .exit-btn-blue {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: var(--ios-blue);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+        }
+        .exit-btn-blue:active {
+            transform: scale(0.92);
+            background: #0056b3;
+        }
+        .exit-btn-gray {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: #e5e5ea;
+            color: #3a3a3c;
+            border: 1px solid #d1d1d6;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+        }
+        .exit-btn-gray:active {
+            transform: scale(0.92);
+            background: #d1d1d6;
+        }
+        .exit-btn-info {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+            box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+        }
+        .exit-btn-info:active {
+            transform: scale(0.92);
+            background: linear-gradient(135deg, #ffb300 0%, #f57c00 100%);
+        }
+        
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(3px);
+        }
+        .modal-content {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            max-width: 90%;
+            width: 400px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: modalSlideIn 0.3s ease;
+        }
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .modal-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .modal-icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .modal-title {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--ios-text);
+        }
+        .modal-body {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+        .modal-body p {
+            margin: 12px 0;
+        }
+        .modal-body p strong {
+            color: var(--ios-blue);
+            font-weight: 600;
+        }
+        .modal-body ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+        .modal-body li {
+            margin: 4px 0;
+        }
+        .modal-close-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: var(--ios-blue);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .modal-close-btn:active {
+            transform: scale(0.96);
+            background: #0056b3;
+        }
+        
+        .exit-btn-dark:active {
+            transform: scale(0.92);
+            background: #000;
+        }
         
         /* Buttons */
         .exit-badge { 
             background: #e5e5ea; 
-            color: #3a3a3c; 
+            color: #4a4a4c; 
             border: 1px solid #d1d1d6; 
-            padding: 5px 15px; 
+            padding: 2px 15px; 
             border-radius: 10px; 
-            font-size: 13px; 
-            font-weight: 800; 
+            font-size: 16px; 
+            font-weight: 900; 
             cursor: pointer; 
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -402,7 +591,7 @@
             border-radius: 12px;
             border: 1px solid transparent;
             transition: all 0.2s ease;
-            gap: 15px;
+            gap: 8px;
         }
         .shuffle-toggle-container:hover {
             background: white;
@@ -444,7 +633,7 @@
             text-align: center;
             font-weight: 700;
             transition: color 0.3s ease;
-            padding: 0 4px;
+            padding: 0;
             white-space: nowrap;
         }
         .option-desc-full.green-text {
@@ -460,11 +649,12 @@
             margin-bottom: 24px;
         }
         .shuffle-options-row .setup-section {
-            flex: 1;
+            flex: 1 1 0;
             margin-bottom: 0;
+            min-width: 0;
         }
         .shuffle-options-row .setup-section .shuffle-toggle-container {
-            padding: 10px 8px;
+            padding: 10px 2px;
         }
         .shuffle-options-row .setup-section .section-title {
             font-size: 14px;
@@ -684,9 +874,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.06);
             transform: translateY(-1px);
         }
-        .category-header.collapsible {
-            position: relative;
-        }
         .category-title {
             display: flex;
             align-items: center;
@@ -807,6 +994,16 @@
             display: none !important; 
         }
         
+        /* Continue Button Animation when ready */
+        .exit-btn-blue.btn-ready {
+            animation: pulseBlue 1.5s ease-in-out infinite;
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+        }
+        @keyframes pulseBlue {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 122, 255, 0.5); }
+            50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 122, 255, 0.8); }
+        }
+        
         /* Warning Bubble */
         .warning-bubble {
             position: fixed;
@@ -830,43 +1027,92 @@
             40% { transform: translate(-50%, -50%) scale(1); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
+        
+        /* Exit Confirmation Bubble */
+        .exit-confirm-bubble {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--border-red);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(255, 59, 48, 0.4);
+            animation: exitBubblePop 5s ease-out forwards;
+            text-align: center;
+            max-width: 280px;
+            line-height: 1.4;
+        }
+        
+        @keyframes exitBubblePop {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            15% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
+            30% { transform: translate(-50%, -50%) scale(1); }
+            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+        }
     </style>
 </head>
 <body>
 
 <div id="app">
+    <!-- Shared Header -->
+    <div class="status-bar">
+        <div class="stats-group" id="header-left-slot"></div>
+        <div class="header-mini"><span class="app-name">QUIZ-MASTER</span></div>
+        <div class="stats-group" id="header-right-slot"></div>
+    </div>
+
+    <!-- Info Modal -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeInfoModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">📚</span>
+                <h2 class="modal-title">QuizMaster</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.2 | 29. 3. 2026</p>
+            </div>
+            <div class="modal-body">
+                <p><strong>O aplikaci</strong></p>
+                <p>Jednoduchá & interaktivní aplikace pro procvičování znalostí formou kvízů.</p>
+                
+                <p><strong>Benefity</strong></p>
+                <ul>
+                    <li>⚡ Rychlá zpětná vazba s okamžitým vysvětlením</li>
+                    <li>🎯 Fokus na slabá místa díky statistikám</li>
+                    <li>📚 Flexibilní učení kdykoliv a kdekoliv</li>
+                    <li>🔄 Procvičování chybných otázek dokud nejsou zvládnuty</li>
+                </ul>
+                
+                <p><strong>Autor</strong></p>
+                <p>Vytvořil <b>Lukáš Krupa</b> s podporou AI 🤖</p>
+            </div>
+            <button class="modal-close-btn" onclick="closeInfoModal()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- HUB -->
     <div id="sc-hub" class="screen">
-        <div class="status-bar">
-            <div class="stats-group">
-            </div>
-        </div>
-        <header style="text-align: center; margin-bottom: 15px; color: var(--ios-gray);">
-            <span class="app-name">QUIZ-MASTER</span>
-        </header>
         <div class="card">
             <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
                         <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
-            <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="loadAndGoToSetup()">Pokračovat</button>
         </div>
     </div>
 
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
-        <div class="status-bar">
-            <button id="btn-back-trigger" class="exit-badge" onclick="location.reload()">Zpět</button>
-            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span></div>
-            <div class="stats-group">
-            </div>
-        </div>
         <div class="card">
             <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
             <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
             <!-- Quiz Options -->
             <div class="setup-section">
-                <div class="section-title">📁 Výběr skupin</div>
+                <div class="section-title">📁 Výběr kapitol</div>
                 <div id="group-filters" class="group-filters"></div>
             </div>
             
@@ -909,26 +1155,11 @@
                     </div>
                 </div>
             </div>
-            
-            <!-- Action Buttons -->
-            <div class="setup-actions">
-                <button class="btn btn-primary" onclick="startQuiz()">Spustit test</button>
-            </div>
         </div>
     </div>
 
     <!-- QUIZ -->
     <div id="sc-quiz" class="screen hidden">
-        <div class="status-bar">
-            <button id="btn-exit-trigger" class="exit-badge" onclick="requestExit()">Ukončit</button>
-            <div class="header-mini"><span class="app-name">QUIZ-MASTER</span></div>
-            <div class="stats-group">
-                <div class="stat-item"><span class="stat-label">zbývá</span><span id="quiz-remaining" class="badge badge-gray">0</span></div>
-                <div class="stat-item"><span class="stat-label">správně</span><span id="count-correct" class="badge badge-green">0</span></div>
-                <div class="stat-item"><span class="stat-label">špatně</span><span id="count-wrong" class="badge badge-red">0</span></div>
-            </div>
-        </div>
-        
         <div class="card">
             <div class="progress-container"><div id="p-bar" class="progress-bar"></div></div>
             
@@ -937,14 +1168,6 @@
                 <div id="q-text" class="question-text"></div>
                 <div id="ans-container"></div>
                 <button id="btn-continue" class="btn-next" onclick="next()">Pokračovat</button>
-            </div>
-
-            <div id="exit-confirm-ui" class="hidden">
-                <div class="exit-warning-title">Ukončit test?</div>
-                <p style="color: var(--ios-gray); font-size: 15px;">Váš pokrok bude smazán.</p>
-                <div id="exit-countdown" class="countdown-circle">10</div>
-                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="cancelExit()">Zůstat u testu</button>
-                <button class="exit-badge" style="width: 100%; margin-top: 15px; padding: 12px; background: none; color: var(--border-red);" onclick="location.reload()">Ano, ukončit hned</button>
             </div>
         </div>
     </div>
@@ -959,7 +1182,7 @@
                 <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin-bottom: 15px;"></p>
                 <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
             </div>
-            <button class="exit-badge" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="location.reload()">Nový test</button>
+            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="showSetupFromResults()">Zpět do nastavení</button>
         </div>
     </div>
 </div>
@@ -979,7 +1202,10 @@ const AppState = {
     sessCorrect: 0, 
     sessWrong: 0, 
     selectedTopicName: "",
-    exitTimer: null
+    savedQuizSelections: [], // Store selected quiz IDs when going to setup
+    savedQuizSettings: null, // Store quiz settings (count, shuffle, filters)
+    confirmingExit: false, // Track if user is confirming exit from quiz
+    exitConfirmTimer: null // Timer for exit confirmation
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1070,6 +1296,57 @@ const UI = {
         }); 
         const t = document.getElementById(id); 
         if (t) t.classList.remove('hidden'); 
+        
+        // Update header content based on screen
+        this.updateHeader(id);
+    },
+    
+    updateHeader(screenId) {
+        const leftSlot = document.getElementById('header-left-slot');
+        const rightSlot = document.getElementById('header-right-slot');
+        
+        // Clear both slots
+        leftSlot.innerHTML = '';
+        rightSlot.innerHTML = '';
+        
+        switch(screenId) {
+            case 'sc-hub':
+                leftSlot.innerHTML = `
+                    <button id="btn-info" class="exit-btn-info" onclick="openInfoModal()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
+                    </button>
+                `;
+                rightSlot.innerHTML = `
+                    <button id="btn-continue-hub" class="exit-btn-blue" onclick="loadAndGoToSetup()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    </button>
+                `;
+                break;
+            case 'sc-setup':
+                leftSlot.innerHTML = `
+                    <button id="btn-back-trigger" class="exit-btn-gray" onclick="goBackToHub()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
+                    </button>
+                `;
+                rightSlot.innerHTML = `
+                    <button id="btn-start-trigger" class="exit-btn-blue" onclick="startQuiz()">
+                        <span style="font-size: 34px; filter: none; display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;">🚀</span>
+                    </button>
+                `;
+                break;
+            case 'sc-quiz':
+                leftSlot.innerHTML = `
+                    <button id="btn-exit-trigger" class="exit-btn-gray" onclick="handleQuizExit()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></span>
+                    </button>
+                `;
+                rightSlot.innerHTML = `
+                    <div class="stat-item"><span class="stat-label">zbývá</span><span id="quiz-remaining" class="badge badge-gray">0</span></div>
+                    <div class="stat-item"><span class="stat-label">správně</span><span id="count-correct" class="badge badge-green">0</span></div>
+                    <div class="stat-item"><span class="stat-label">špatně</span><span id="count-wrong" class="badge badge-red">0</span></div>
+                `;
+                break;
+        }
     },
     
     updateStats() {
@@ -1079,14 +1356,6 @@ const UI = {
         document.getElementById('count-wrong').innerText = AppState.sessWrong;
         const prog = (AppState.cur / AppState.total) * 100;
         document.getElementById('p-bar').style.width = prog + "%";
-    },
-    
-    cancelExit() {
-        if (AppState.exitTimer) clearInterval(AppState.exitTimer);
-        document.getElementById('quiz-main-ui').classList.remove('hidden');
-        document.getElementById('exit-confirm-ui').classList.add('hidden');
-        const exitBtn = document.getElementById('btn-exit-trigger');
-        if (exitBtn) exitBtn.classList.remove('hidden');
     }
 };
 
@@ -1147,16 +1416,29 @@ const QuizEngine = {
     },
     
     start() {
-        AppState.total = AppState.selectedCount || parseInt(document.getElementById('question-count-slider')?.value || 10);
+        // Save current settings before starting
+        const questionCount = parseInt(document.getElementById('question-count-slider')?.value || 10);
+        const shuffleEnabled = document.getElementById('chk-shuffle').checked;
+        const roundRobinMode = document.getElementById('chk-shuffle-mode').checked;
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])')).map(f => f.dataset.group);
+        
+        AppState.savedQuizSettings = {
+            questionCount: questionCount,
+            shuffleEnabled: shuffleEnabled,
+            roundRobinMode: roundRobinMode,
+            activeFilters: activeFilters,
+            selectedCount: questionCount
+        };
+        
+        AppState.total = AppState.selectedCount || questionCount;
         
         // Get filtered questions if groups are selected
-        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
-            .map(filter => filter.dataset.group);
+        const quizActiveFilters = AppState.savedQuizSettings ? AppState.savedQuizSettings.activeFilters : [];
         
         let availableQuestions;
-        if (activeFilters.length > 0) {
+        if (quizActiveFilters.length > 0) {
             availableQuestions = AppState.db.filter(question => 
-                question._group && activeFilters.includes(question._group)
+                question._group && quizActiveFilters.includes(question._group)
             );
         } else {
             availableQuestions = AppState.db;
@@ -1164,15 +1446,15 @@ const QuizEngine = {
         
         AppState.activeQ = [...availableQuestions];
         
-        // Check shuffle modes
-        const shuffleEnabled = document.getElementById('chk-shuffle').checked;
-        const roundRobinMode = document.getElementById('chk-shuffle-mode').checked; // Right/green = round-robin
+        // Check shuffle modes - use saved settings
+        const quizShuffleEnabled = AppState.savedQuizSettings ? AppState.savedQuizSettings.shuffleEnabled : false;
+        const quizRoundRobinMode = AppState.savedQuizSettings ? AppState.savedQuizSettings.roundRobinMode : false;
         
-        if (roundRobinMode) {
+        if (quizRoundRobinMode) {
             // Round-robin by chapters: 1 from each chapter in rotation
             // Only shuffle within chapters if first toggle is on (random order)
-            AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total, shuffleEnabled);
-        } else if (shuffleEnabled) {
+            AppState.activeQ = this.shuffleByChapters(AppState.activeQ, AppState.total, quizShuffleEnabled);
+        } else if (quizShuffleEnabled) {
             // Regular shuffle - all questions mixed together
             this.shuffle(AppState.activeQ);
             AppState.activeQ = AppState.activeQ.slice(0, AppState.total);
@@ -1187,13 +1469,12 @@ const QuizEngine = {
         AppState.loop = false; 
         AppState.sessCorrect = 0; 
         AppState.sessWrong = 0;
-        UI.updateStats(); 
         UI.showScreen('sc-quiz'); 
+        UI.updateStats(); 
         this.render();
     },
     
     render() {
-        UI.cancelExit();
         const q = AppState.activeQ[AppState.cur];
         const chapterName = q._groupTitle || q._group || 'Neznámá kapitola';
         document.getElementById('q-topic').innerHTML = `${AppState.selectedTopicName} → <b>${chapterName}</b>`;
@@ -1447,24 +1728,24 @@ const DataLoader = {
         container.innerHTML = '';
         
         
-        // Collect all unique groups from loaded questions
+        // Collect all unique groups from loaded questions in their original order
         const groupCounts = {};
         const groupTitles = {};
+        const groupOrder = []; // Preserve order from data file
         
         AppState.db.forEach(question => {
             if (question._group) {
                 groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
                 groupTitles[question._group] = question._groupTitle || question._group;
+                // Add to order only first time we see this group
+                if (!groupCounts[question._group] || groupCounts[question._group] === 1 && !groupOrder.includes(question._group)) {
+                    groupOrder.push(question._group);
+                }
             }
         });
         
-        // Sort groups by count (descending) then alphabetically
-        const sortedGroups = Object.keys(groupCounts).sort((a, b) => {
-            if (groupCounts[b] !== groupCounts[a]) {
-                return groupCounts[b] - groupCounts[a];
-            }
-            return a.localeCompare(b);
-        });
+        // Use original order from data file instead of sorting
+        const sortedGroups = groupOrder;
         
         // Create group filter buttons
         sortedGroups.forEach(groupKey => {
@@ -1617,10 +1898,19 @@ const Hub = {
     updateSelectedTopicsSummary() {
         const summary = document.getElementById('hub-selected-topics-summary');
         const setupSummary = document.getElementById('setup-selected-topics-summary');
+        const continueBtn = document.getElementById('btn-continue-hub');
         if (!summary) return;
         
         const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
         
+        // Toggle continue button animation based on selection
+        if (continueBtn) {
+            if (checks.length > 0) {
+                continueBtn.classList.add('btn-ready');
+            } else {
+                continueBtn.classList.remove('btn-ready');
+            }
+        }
         
         // Enforce maximum 5 topics selection
         if (checks.length > 5) {
@@ -1759,27 +2049,6 @@ const Hub = {
     
 };
 
-// ===== EXIT HANDLER =====
-const ExitHandler = {
-    request() {
-        document.getElementById('quiz-main-ui').classList.add('hidden');
-        document.getElementById('exit-confirm-ui').classList.remove('hidden');
-        document.getElementById('btn-exit-trigger').classList.add('hidden');
-        
-        let seconds = 10;
-        document.getElementById('exit-countdown').innerText = seconds;
-        
-        AppState.exitTimer = setInterval(() => {
-            seconds--;
-            document.getElementById('exit-countdown').innerText = seconds;
-            if (seconds <= 0) {
-                clearInterval(AppState.exitTimer);
-                location.reload();
-            }
-        }, 1000);
-    }
-};
-
 // ===== GLOBAL FUNCTIONS =====
 function loadAndGoToSetup() { 
     const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
@@ -1787,18 +2056,81 @@ function loadAndGoToSetup() {
         Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
         return;
     }
+    // Save current selections before navigating to setup
+    AppState.savedQuizSelections = checks.map(ch => ch.value);
     DataLoader.loadQuizzes(); 
 }
+function goBackToHub() {
+    // Return to hub screen
+    UI.showScreen('sc-hub');
+    // Restore the saved selections
+    if (AppState.savedQuizSelections.length > 0) {
+        // Uncheck all first
+        document.querySelectorAll('.quiz-check').forEach(ch => {
+            ch.checked = AppState.savedQuizSelections.includes(ch.value);
+        });
+        // Update summary
+        Hub.updateSelectedTopicsSummary();
+    }
+}
+function goBackToSetup() {
+    UI.showScreen('sc-setup');
+}
+function showSetupFromResults() {
+    UI.showScreen('sc-setup');
+}
 function startQuiz() { QuizEngine.start(); }
+function handleQuizExit() {
+    if (AppState.confirmingExit) {
+        // Second click - go to setup and remove bubble
+        clearTimeout(AppState.exitConfirmTimer);
+        AppState.confirmingExit = false;
+        // Remove any existing bubbles immediately
+        const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
+        existingBubbles.forEach(bubble => bubble.remove());
+        UI.showScreen('sc-setup');
+    } else {
+        // First click - show confirmation bubble
+        AppState.confirmingExit = true;
+        showExitConfirmBubble();
+        // Reset after 5 seconds
+        AppState.exitConfirmTimer = setTimeout(() => {
+            AppState.confirmingExit = false;
+        }, 5000);
+    }
+}
+function showExitConfirmBubble() {
+    // Remove any existing bubbles
+    const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
+    existingBubbles.forEach(bubble => bubble.remove());
+    
+    // Create red confirmation bubble
+    const bubble = document.createElement('div');
+    bubble.className = 'exit-confirm-bubble';
+    bubble.innerHTML = 'Klikněte znovu na tlačítko zpět pro opuštění kvízu';
+    document.body.appendChild(bubble);
+    
+    // Remove bubble after 5 seconds
+    setTimeout(() => {
+        if (bubble.parentNode) {
+            bubble.remove();
+        }
+    }, 5000);
+}
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
 function next() { QuizEngine.next(); }
 function startErrorLoop() { QuizEngine.startErrorLoop(); }
-function requestExit() { ExitHandler.request(); }
-function cancelExit() { UI.cancelExit(); }
+function openInfoModal() { 
+    document.getElementById('info-modal').classList.remove('hidden'); 
+}
+function closeInfoModal() { 
+    document.getElementById('info-modal').classList.add('hidden'); 
+}
 
 // ===== INITIALIZATION =====
 Hub.init();
+UI.showScreen('sc-hub');
 </script>
 </body>
 </html>
