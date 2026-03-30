@@ -787,6 +787,14 @@
             background: #d1d1d6;
             color: #888;
         }
+        .grade-display {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin: 15px 0;
+            color: var(--ios-text);
+            line-height: 1;
+        }
         .hidden { 
             display: none !important; 
         }
@@ -1095,18 +1103,20 @@ const UserDataManager = {
     },
     
     // Mark quiz as successfully completed
-    markQuizCompleted(quizId) {
+    markQuizCompleted(quizId, isFullCompletion = false) {
         const data = this.getData();
         if (!data.quizzes[quizId]) {
             data.quizzes[quizId] = this.getDefaultQuizData();
         }
         
-        // Only count if not in error loop mode and has no wrong answers in current session
-        data.quizzes[quizId].completed = true;
-        data.quizzes[quizId].completionCount++;
-        
-        // Clear progress after successful completion
-        this.clearQuizProgress(quizId, false);
+        // Only increment completion count for full completion
+        if (isFullCompletion) {
+            data.quizzes[quizId].completed = true;
+            data.quizzes[quizId].completionCount++;
+            
+            // Clear progress only after FULL completion (all questions answered)
+            this.clearQuizProgress(quizId, false);
+        }
         
         this.saveData(data);
         return data.quizzes[quizId].completionCount;
@@ -1615,10 +1625,17 @@ const Results = {
             document.getElementById('res-grade').innerText = g;
             document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${AppState.score} / ${AppState.total}</b> (${Math.round(p)}%)`;
             
-            // Only count as completed if no errors in this session
-            if (AppState.errs.length === 0 && quizId) {
-                const completionCount = UserDataManager.markQuizCompleted(quizId);
-                this.showCompletionBadge(completionCount);
+            // Check if all questions in the quiz are answered (for full completion)
+            const remainingCount = quizId ? DataLoader.getTotalRemainingQuestions(quizId) : 0;
+            const isFullyCompleted = remainingCount === 0 && AppState.errs.length === 0;
+            
+            // Only count as completed if no errors AND all questions answered
+            if (isFullyCompleted && quizId) {
+                const completionCount = UserDataManager.markQuizCompleted(quizId, true); // true = full completion
+                this.showCompletionBadge(completionCount, true);
+            } else if (AppState.errs.length === 0 && quizId) {
+                // Session completed successfully but quiz not fully done yet
+                this.showPartialCompletionMessage(remainingCount);
             } else if (quizId) {
                 // Show message that quiz has errors and needs to be restarted
                 this.showErrorMessage();
@@ -1636,12 +1653,20 @@ const Results = {
         }
     },
     
-    showCompletionBadge(count) {
+    showCompletionBadge(count, isFullCompletion = false) {
         const gradeEl = document.getElementById('res-grade');
         const badge = document.createElement('div');
         badge.style.cssText = 'font-size: 14px; color: var(--border-green); margin-top: 10px;';
-        badge.innerHTML = `🏆 Dokončeno ${count}x`;
+        badge.innerHTML = isFullCompletion ? `🏆 Kvíz plně dokončen! (${count}x)` : `📝 Částečné dokončení`;
         gradeEl.appendChild(badge);
+    },
+    
+    showPartialCompletionMessage(remainingCount) {
+        const statEl = document.getElementById('res-stat');
+        const msg = document.createElement('div');
+        msg.style.cssText = 'font-size: 14px; color: var(--ios-blue); margin-top: 10px; padding: 10px; background: var(--ios-bg); border-radius: 8px;';
+        msg.innerHTML = `✅ Tato část byla zodpovězena správně!<br>Zbývá ještě <b>${remainingCount}</b> otázek v kvízu.`;
+        statEl.appendChild(msg);
     },
     
     showErrorMessage() {
@@ -2331,6 +2356,10 @@ function startQuiz() {
 
 function handleQuizExit() {
     UI.showScreen('sc-setup');
+    // Re-render group filters to show updated remaining question counts
+    DataLoader.setupGroupFilters();
+    // Update slider with new remaining question counts
+    DataLoader.setupCountSelector();
     updateQuizProgressSection();
 }
 function check(k) { QuizEngine.check(k); }
