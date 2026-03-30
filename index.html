@@ -776,6 +776,17 @@
         .group-filter.active .group-filter-count {
             background: rgba(255,255,255,0.3);
         }
+        .group-filter.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background: #e5e5ea;
+            border-color: #d1d1d6;
+            pointer-events: none;
+        }
+        .group-filter.disabled .group-filter-count {
+            background: #d1d1d6;
+            color: #888;
+        }
         .hidden { 
             display: none !important; 
         }
@@ -913,6 +924,17 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Progress Management -->
+            <div id="quiz-progress-section" class="setup-section" style="display: none;">
+                <div class="section-title">📊 Postup v kvízu</div>
+                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px; font-size: 14px;">
+                    <!-- Progress info will be inserted here -->
+                </div>
+                <button class="btn" style="background: var(--border-red); color: white; font-size: 14px; padding: 12px;" onclick="resetQuizProgress()">
+                    🗑️ Vyčistit postup (počet dokončení zůstane)
+                </button>
+            </div>
         </div>
     </div>
 
@@ -963,6 +985,196 @@ const AppState = {
     savedQuizSelections: [],
     savedQuizSettings: null,
     selectedQuizzes: []
+};
+
+// ===== USER DATA MANAGER (LocalStorage) =====
+const UserDataManager = {
+    STORAGE_KEY: 'quizmaster_userdata_v1',
+    
+    // Initialize or get existing data
+    getData() {
+        try {
+            const data = localStorage.getItem(this.STORAGE_KEY);
+            if (data) {
+                return JSON.parse(data);
+            }
+        } catch (e) {
+            console.error('Error reading from LocalStorage:', e);
+        }
+        return this.getDefaultData();
+    },
+    
+    getDefaultData() {
+        return {
+            quizzes: {}, // quizId -> quiz data
+            version: 1
+        };
+    },
+    
+    saveData(data) {
+        try {
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+        } catch (e) {
+            console.error('Error saving to LocalStorage:', e);
+        }
+    },
+    
+    // Get quiz data or initialize if not exists
+    getQuizData(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+            this.saveData(data);
+        }
+        return data.quizzes[quizId];
+    },
+    
+    getDefaultQuizData() {
+        return {
+            started: false,           // Whether user has launched this quiz at least once
+            completed: false,         // Whether quiz is marked as 'hotovo'
+            completionCount: 0,       // How many times successfully completed
+            answeredQuestions: {},    // questionKey -> {correct: boolean, timestamp: number}
+            wrongAnswers: [],         // Array of question keys answered wrong
+            lastSession: null         // Last time quiz was accessed
+        };
+    },
+    
+    // Mark quiz as started (when user first launches it)
+    markQuizStarted(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        if (!data.quizzes[quizId].started) {
+            data.quizzes[quizId].started = true;
+        }
+        data.quizzes[quizId].lastSession = Date.now();
+        this.saveData(data);
+    },
+    
+    // Save question answer
+    saveQuestionAnswer(quizId, questionKey, isCorrect) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        
+        // Store answer
+        data.quizzes[quizId].answeredQuestions[questionKey] = {
+            correct: isCorrect,
+            timestamp: Date.now()
+        };
+        
+        // Track wrong answers
+        if (!isCorrect) {
+            if (!data.quizzes[quizId].wrongAnswers.includes(questionKey)) {
+                data.quizzes[quizId].wrongAnswers.push(questionKey);
+            }
+        } else {
+            // Remove from wrong answers if previously wrong
+            const idx = data.quizzes[quizId].wrongAnswers.indexOf(questionKey);
+            if (idx > -1) {
+                data.quizzes[quizId].wrongAnswers.splice(idx, 1);
+            }
+        }
+        
+        this.saveData(data);
+    },
+    
+    // Check if question has been answered
+    isQuestionAnswered(quizId, questionKey) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.answeredQuestions[questionKey] !== undefined;
+    },
+    
+    // Get answered questions for a quiz
+    getAnsweredQuestions(quizId) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.answeredQuestions;
+    },
+    
+    // Mark quiz as successfully completed
+    markQuizCompleted(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        
+        // Only count if not in error loop mode and has no wrong answers in current session
+        data.quizzes[quizId].completed = true;
+        data.quizzes[quizId].completionCount++;
+        
+        // Clear progress after successful completion
+        this.clearQuizProgress(quizId, false);
+        
+        this.saveData(data);
+        return data.quizzes[quizId].completionCount;
+    },
+    
+    // Clear quiz progress (answered questions, wrong answers)
+    // preserveCompletion = true: keeps completionCount and completed status
+    clearQuizProgress(quizId, preserveCompletion = true) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        const completionCount = data.quizzes[quizId].completionCount;
+        const completed = data.quizzes[quizId].completed;
+        const started = data.quizzes[quizId].started;
+        
+        // Reset to default but preserve completion info if requested
+        data.quizzes[quizId] = this.getDefaultQuizData();
+        
+        if (preserveCompletion) {
+            data.quizzes[quizId].completionCount = completionCount;
+            data.quizzes[quizId].completed = completed;
+            data.quizzes[quizId].started = started;
+        }
+        
+        this.saveData(data);
+    },
+    
+    // Get quiz statistics
+    getQuizStats(quizId) {
+        const quizData = this.getQuizData(quizId);
+        const answeredKeys = Object.keys(quizData.answeredQuestions);
+        const correctCount = answeredKeys.filter(k => quizData.answeredQuestions[k].correct).length;
+        const wrongCount = answeredKeys.filter(k => !quizData.answeredQuestions[k].correct).length;
+        
+        return {
+            started: quizData.started,
+            completed: quizData.completed,
+            completionCount: quizData.completionCount,
+            totalAnswered: answeredKeys.length,
+            correctCount: correctCount,
+            wrongCount: wrongCount,
+            remainingInSession: AppState.activeQ ? AppState.activeQ.length - AppState.cur : 0
+        };
+    },
+    
+    // Export all data as JSON
+    exportData() {
+        return JSON.stringify(this.getData(), null, 2);
+    },
+    
+    // Import data from JSON
+    importData(jsonString) {
+        try {
+            const data = JSON.parse(jsonString);
+            if (data && data.quizzes) {
+                this.saveData(data);
+                return true;
+            }
+        } catch (e) {
+            console.error('Error importing data:', e);
+        }
+        return false;
+    },
+    
+    // Clear all data
+    clearAllData() {
+        localStorage.removeItem(this.STORAGE_KEY);
+    }
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1039,6 +1251,21 @@ document.addEventListener('DOMContentLoaded', function() {
     updateShuffleText();
     updateShuffleModeText();
 });
+
+// Helper function to get quiz ID by title
+function getQuizIdByTitle(title) {
+    if (typeof quizCategories === 'undefined') return null;
+    
+    for (const category of Object.keys(quizCategories)) {
+        for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+            const quiz = quizCategories[category].quizzes[quizKey];
+            if (quiz.title === title) {
+                return quiz.id;
+            }
+        }
+    }
+    return null;
+}
 
 // ===== UI COMPONENTS =====
 const UI = {
@@ -1169,6 +1396,16 @@ const QuizEngine = {
     },
     
     start() {
+        // Get the selected quiz ID from AppState
+        const selectedQuiz = AppState.selectedQuizzes && AppState.selectedQuizzes[0];
+        const quizId = selectedQuiz ? getQuizIdByTitle(selectedQuiz.title) : null;
+        AppState.currentQuizId = quizId;
+        
+        // Mark quiz as started in LocalStorage
+        if (quizId) {
+            UserDataManager.markQuizStarted(quizId);
+        }
+        
         // Save current settings before starting
         const questionCount = parseInt(document.getElementById('question-count-slider')?.value || 10);
         const shuffleEnabled = document.getElementById('chk-shuffle').checked;
@@ -1197,7 +1434,23 @@ const QuizEngine = {
             availableQuestions = AppState.db;
         }
         
+        // Filter out already answered questions for this quiz (unless in error loop)
+        if (quizId && !AppState.loop) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            const answeredKeys = Object.keys(quizData.answeredQuestions);
+            availableQuestions = availableQuestions.filter(q => !answeredKeys.includes(this.getQuestionKey(q)));
+        }
+        
         AppState.activeQ = [...availableQuestions];
+        
+        // If no questions available (all answered), show message and reset option
+        if (AppState.activeQ.length === 0 && quizId) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            if (quizData.answeredQuestions && Object.keys(quizData.answeredQuestions).length > 0) {
+                this.showQuizCompletePrompt(quizId);
+                return;
+            }
+        }
         
         // Check shuffle modes - use saved settings
         const quizShuffleEnabled = AppState.savedQuizSettings ? AppState.savedQuizSettings.shuffleEnabled : false;
@@ -1225,6 +1478,37 @@ const QuizEngine = {
         UI.showScreen('sc-quiz'); 
         UI.updateStats(); 
         this.render();
+    },
+    
+    // Helper to generate unique key for a question
+    getQuestionKey(question) {
+        // Use question text as unique identifier (could be enhanced with ID if available)
+        return question.q ? question.q.substring(0, 50) : Math.random().toString();
+    },
+    
+    // Show prompt when all questions are answered
+    showQuizCompletePrompt(quizId) {
+        const quizData = UserDataManager.getQuizData(quizId);
+        const stats = UserDataManager.getQuizStats(quizId);
+        
+        const completedMsg = quizData.completed ? 
+            `✅ Kvíz dokončen ${stats.completionCount}x` : 
+            '📝 Všechny otázky zodpovězeny';
+        
+        const confirmReset = confirm(
+            `${completedMsg}\n\n` +
+            `Správně: ${stats.correctCount}, Špatně: ${stats.wrongCount}\n\n` +
+            `Chcete začít znovu? (Postup bude vyčištěn, ale počet dokončení zůstane.)`
+        );
+        
+        if (confirmReset) {
+            UserDataManager.clearQuizProgress(quizId, true);
+            // Restart quiz
+            this.start();
+        } else {
+            // Go back to setup
+            UI.showScreen('sc-setup');
+        }
     },
     
     render() {
@@ -1263,7 +1547,10 @@ const QuizEngine = {
         });
         const sBtn = document.getElementById('btn-' + k), sEx = document.getElementById('ex-' + k);
         const cBtn = document.getElementById('btn-' + q.ans), cEx = document.getElementById('ex-' + q.ans);
-        if (k === q.ans) { 
+        
+        const isCorrect = k === q.ans;
+        
+        if (isCorrect) { 
             sBtn.classList.add('correct-btn'); 
             sEx.classList.add('show', 'highlight-correct'); 
             if (!AppState.loop) { AppState.score++; AppState.sessCorrect++; } 
@@ -1276,6 +1563,13 @@ const QuizEngine = {
             AppState.errs.push(q); 
             if (!AppState.loop) AppState.sessWrong++; 
         }
+        
+        // Save answer to LocalStorage
+        if (AppState.currentQuizId) {
+            const questionKey = this.getQuestionKey(q);
+            UserDataManager.saveQuestionAnswer(AppState.currentQuizId, questionKey, isCorrect);
+        }
+        
         UI.updateStats(); 
         document.getElementById('btn-continue').style.display = 'block';
     },
@@ -1311,17 +1605,82 @@ const QuizEngine = {
 const Results = {
     show() {
         UI.showScreen('sc-res');
+        
+        // Save results to LocalStorage
+        const quizId = AppState.currentQuizId;
+        
         if(!AppState.loop) {
             const p = (AppState.score / AppState.total) * 100;
             let g = p >= 90 ? 'A' : p >= 80 ? 'B' : p >= 70 ? 'C' : p >= 60 ? 'D' : p >= 50 ? 'E' : 'F';
             document.getElementById('res-grade').innerText = g;
             document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${AppState.score} / ${AppState.total}</b> (${Math.round(p)}%)`;
+            
+            // Only count as completed if no errors in this session
+            if (AppState.errs.length === 0 && quizId) {
+                const completionCount = UserDataManager.markQuizCompleted(quizId);
+                this.showCompletionBadge(completionCount);
+            } else if (quizId) {
+                // Show message that quiz has errors and needs to be restarted
+                this.showErrorMessage();
+            }
         } else {
             document.getElementById('res-grade').innerText = AppState.errs.length === 0 ? "✓" : "!";
             document.getElementById('res-stat').innerText = AppState.errs.length === 0 ? "Všechny chyby byly opraveny!" : `Stále zbývá opravit ${AppState.errs.length} chyb.`;
         }
         document.getElementById('res-retry').className = AppState.errs.length > 0 ? '' : 'hidden';
         document.getElementById('res-retry-msg').innerText = AppState.loop ? `Zbývá opravit ${AppState.errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
+        
+        // Show quiz stats summary
+        if (quizId) {
+            this.showQuizStats(quizId);
+        }
+    },
+    
+    showCompletionBadge(count) {
+        const gradeEl = document.getElementById('res-grade');
+        const badge = document.createElement('div');
+        badge.style.cssText = 'font-size: 14px; color: var(--border-green); margin-top: 10px;';
+        badge.innerHTML = `🏆 Dokončeno ${count}x`;
+        gradeEl.appendChild(badge);
+    },
+    
+    showErrorMessage() {
+        const statEl = document.getElementById('res-stat');
+        const msg = document.createElement('div');
+        msg.style.cssText = 'font-size: 14px; color: var(--border-red); margin-top: 10px;';
+        msg.innerHTML = '⚠️ Kvíz obsahuje chyby - pro počítání dokončení musíte začít znovu';
+        statEl.appendChild(msg);
+    },
+    
+    showQuizStats(quizId) {
+        const stats = UserDataManager.getQuizStats(quizId);
+        const container = document.getElementById('res-stats-summary') || this.createStatsContainer();
+        
+        if (stats.completionCount > 0) {
+            container.innerHTML = `
+                <div style="margin-top: 20px; padding: 15px; background: var(--ios-bg); border-radius: 12px; text-align: center;">
+                    <div style="font-size: 14px; font-weight: 600; color: var(--ios-gray); margin-bottom: 10px;">📊 Statistiky tohoto kvízu</div>
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                        <div>
+                            <div style="font-size: 28px; font-weight: 700; color: var(--border-green);">${stats.completionCount}</div>
+                            <div style="font-size: 11px; color: var(--ios-gray);">úspěšných dokončení</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.classList.remove('hidden');
+        }
+    },
+    
+    createStatsContainer() {
+        const card = document.querySelector('#sc-res .card');
+        const container = document.createElement('div');
+        container.id = 'res-stats-summary';
+        container.className = 'hidden';
+        // Insert before the back button
+        const backBtn = card.querySelector('button:last-child');
+        card.insertBefore(container, backBtn);
+        return container;
     }
 };
 
@@ -1451,11 +1810,50 @@ const DataLoader = {
         }
     },
     
+    // Count remaining (unanswered) questions per group using LocalStorage data
+    getRemainingQuestionsPerGroup(quizId) {
+        const quizData = UserDataManager.getQuizData(quizId);
+        const answeredQuestions = quizData.answeredQuestions || {};
+        
+        const remainingPerGroup = {};
+        
+        AppState.db.forEach(question => {
+            const groupKey = question._group || 'unknown';
+            const questionKey = QuizEngine.getQuestionKey(question);
+            
+            // Check if question has been answered
+            const isAnswered = answeredQuestions[questionKey] !== undefined;
+            
+            if (!isAnswered) {
+                remainingPerGroup[groupKey] = (remainingPerGroup[groupKey] || 0) + 1;
+            }
+        });
+        
+        return remainingPerGroup;
+    },
+    
+    // Get total remaining questions (across all groups or filtered)
+    getTotalRemainingQuestions(quizId, groupKeys = null) {
+        const remainingPerGroup = this.getRemainingQuestionsPerGroup(quizId);
+        
+        if (!groupKeys || groupKeys.length === 0) {
+            // Return total across all groups
+            return Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
+        }
+        
+        // Return total for specific groups
+        return groupKeys.reduce((sum, groupKey) => {
+            return sum + (remainingPerGroup[groupKey] || 0);
+        }, 0);
+    },
+    
     setupCountSelector() {
         const slider = document.getElementById('question-count-slider');
         const valueDisplay = document.getElementById('slider-value');
         
-        const maxQ = AppState.db.length;
+        // Use remaining questions count instead of total
+        const quizId = AppState.currentQuizId;
+        const maxQ = quizId ? this.getTotalRemainingQuestions(quizId) : AppState.db.length;
         const minQ = Math.min(5, maxQ);
         
         // Set slider properties
@@ -1480,6 +1878,9 @@ const DataLoader = {
         const container = document.getElementById('group-filters');
         container.innerHTML = '';
         
+        // Get remaining questions per group from LocalStorage
+        const quizId = AppState.currentQuizId;
+        const remainingPerGroup = quizId ? this.getRemainingQuestionsPerGroup(quizId) : {};
         
         // Collect all unique groups from loaded questions in their original order
         const groupCounts = {};
@@ -1488,13 +1889,17 @@ const DataLoader = {
         
         AppState.db.forEach(question => {
             if (question._group) {
-                groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
                 groupTitles[question._group] = question._groupTitle || question._group;
                 // Add to order only first time we see this group
-                if (!groupCounts[question._group] || groupCounts[question._group] === 1 && !groupOrder.includes(question._group)) {
+                if (!groupOrder.includes(question._group)) {
                     groupOrder.push(question._group);
                 }
             }
+        });
+        
+        // Get remaining count for each group
+        groupOrder.forEach(groupKey => {
+            groupCounts[groupKey] = remainingPerGroup[groupKey] || 0;
         });
         
         // Use original order from data file instead of sorting
@@ -1502,26 +1907,32 @@ const DataLoader = {
         
         // Create group filter buttons
         sortedGroups.forEach(groupKey => {
+            const remainingCount = groupCounts[groupKey];
+            const isDisabled = remainingCount === 0;
+            
             const groupFilter = document.createElement('div');
-            groupFilter.className = 'group-filter';
+            groupFilter.className = `group-filter${isDisabled ? ' disabled' : ''}`;
             groupFilter.dataset.group = groupKey;
             groupFilter.innerHTML = `
                 ${groupTitles[groupKey]}
-                <span class="group-filter-count">${groupCounts[groupKey]}</span>
+                <span class="group-filter-count">${remainingCount}</span>
             `;
             
-            groupFilter.onclick = () => {
-                this.toggleGroupFilter(groupKey, groupFilter);
-            };
+            if (!isDisabled) {
+                groupFilter.onclick = () => {
+                    this.toggleGroupFilter(groupKey, groupFilter);
+                };
+            }
             
             container.appendChild(groupFilter);
         });
         
-        // Add "All" button
+        // Add "All" button - count total remaining
+        const totalRemaining = Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
         const allFilter = document.createElement('div');
         allFilter.className = 'group-filter active';
         allFilter.dataset.group = 'all';
-        allFilter.innerHTML = 'Σ';
+        allFilter.innerHTML = `Σ<span class="group-filter-count">${totalRemaining}</span>`;
         allFilter.onclick = () => {
             this.clearAllGroupFilters();
             allFilter.classList.add('active');
@@ -1568,17 +1979,31 @@ const DataLoader = {
     },
     
     updateQuestionCount() {
-        const filteredQuestions = this.getFilteredQuestions();
+        const quizId = AppState.currentQuizId;
+        const remainingPerGroup = quizId ? this.getRemainingQuestionsPerGroup(quizId) : {};
         
-        // Update slider with filtered questions
-        this.updateSliderWithQuestions(filteredQuestions);
+        // Get active filters
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        // Calculate remaining questions for selected filters
+        let remainingQuestions;
+        if (activeFilters.length === 0) {
+            // All groups selected - use total remaining
+            remainingQuestions = Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
+        } else {
+            // Specific groups selected
+            remainingQuestions = activeFilters.reduce((sum, groupKey) => {
+                return sum + (remainingPerGroup[groupKey] || 0);
+            }, 0);
+        }
+        
+        // Update slider with remaining questions
+        this.updateSliderWithRemainingQuestions(remainingQuestions);
         
         // Update summary if available
         const summary = document.getElementById('selected-topics-summary');
         if (summary) {
-            const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
-                .map(filter => filter.dataset.group);
-            
             if (activeFilters.length > 0) {
                 const filterText = activeFilters.map(group => {
                     const question = AppState.db.find(q => q._group === group);
@@ -1586,7 +2011,7 @@ const DataLoader = {
                 }).join(', ');
                 summary.innerHTML = AppState.selectedQuizzes.map(q => 
                     `<div class="summary-item">• ${q.title}</div>`
-                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">� Filtry: ${filterText}</div>`;
+                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">📁 Filtry: ${filterText}</div>`;
             } else {
                 summary.innerHTML = AppState.selectedQuizzes.map(q => 
                     `<div class="summary-item">• ${q.title}</div>`
@@ -1595,11 +2020,11 @@ const DataLoader = {
         }
     },
     
-    updateSliderWithQuestions(questions) {
+    updateSliderWithRemainingQuestions(remainingCount) {
         const slider = document.getElementById('question-count-slider');
         const valueDisplay = document.getElementById('slider-value');
         
-        const maxQ = questions.length;
+        const maxQ = remainingCount;
         const minQ = Math.min(5, maxQ);
         
         // Set slider properties
@@ -1609,6 +2034,9 @@ const DataLoader = {
         // Adjust current value if it's outside the new range
         if (parseInt(slider.value) > maxQ) {
             slider.value = maxQ;
+        }
+        if (parseInt(slider.value) < minQ && maxQ > 0) {
+            slider.value = minQ;
         }
         
         // Update display
@@ -1759,10 +2187,17 @@ const Hub = {
                     const div = document.createElement('div');
                     div.className = 'hub-item';
                     
+                    // Get quiz stats from LocalStorage
+                    const quizStats = UserDataManager.getQuizStats(q.id);
+                    const completedBadge = quizStats.completionCount > 0 ? 
+                        `<span style="background: var(--border-green); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">✓ ${quizStats.completionCount}x</span>` : '';
+                    const startedIndicator = quizStats.started && quizStats.completionCount === 0 ?
+                        `<span style="background: var(--ios-blue); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">📝</span>` : '';
+                    
                     div.innerHTML = `
                         <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
-                            <div class="quiz-title">${q.title}</div>
+                            <div class="quiz-title">${q.title}${completedBadge}${startedIndicator}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
                     `;
@@ -1811,7 +2246,15 @@ function loadAndGoToSetup() {
     }
     // Save current selections before navigating to setup
     AppState.savedQuizSelections = checks.map(ch => ch.value);
-    DataLoader.loadQuizzes(); 
+    
+    // Set current quiz ID from first selected quiz
+    const firstQuizTitle = checks[0].getAttribute('data-title');
+    AppState.currentQuizId = getQuizIdByTitle(firstQuizTitle);
+    
+    DataLoader.loadQuizzes().then(() => {
+        // After loading, update the progress section
+        setTimeout(updateQuizProgressSection, 100);
+    });
 }
 function goBackToHub() {
     // Return to hub screen
@@ -1828,10 +2271,67 @@ function goBackToHub() {
 }
 function goBackToSetup() {
     UI.showScreen('sc-setup');
+    updateQuizProgressSection();
 }
-function startQuiz() { QuizEngine.start(); }
+
+function updateQuizProgressSection() {
+    const progressSection = document.getElementById('quiz-progress-section');
+    const progressInfo = document.getElementById('quiz-progress-info');
+    
+    if (!progressSection || !progressInfo) return;
+    
+    const quizId = AppState.currentQuizId;
+    if (!quizId) {
+        progressSection.style.display = 'none';
+        return;
+    }
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    
+    if (stats.started || stats.completionCount > 0) {
+        progressSection.style.display = 'block';
+        
+        let statusText = '';
+        if (stats.completionCount > 0) {
+            statusText += `✅ <b>Dokončeno ${stats.completionCount}x</b><br>`;
+        }
+        if (stats.totalAnswered > 0) {
+            statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
+            statusText += `   • Správně: ${stats.correctCount}<br>`;
+            statusText += `   • Špatně: ${stats.wrongCount}`;
+        } else {
+            statusText += 'Žádné nezodpovězené otázky v aktuálním postupu';
+        }
+        
+        progressInfo.innerHTML = statusText;
+    } else {
+        progressSection.style.display = 'none';
+    }
+}
+
+function resetQuizProgress() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    const confirmMsg = stats.completionCount > 0 
+        ? `Chcete vyčistit postup tohoto kvízu?\n\nPočet dokončení (${stats.completionCount}) zůstane zachován.\nAktuální postup (${stats.totalAnswered} otázek) bude smazán.`
+        : `Chcete vyčistit postup tohoto kvízu?\n\nVšechny zodpovězené otázky budou resetovány.`;
+    
+    if (confirm(confirmMsg)) {
+        UserDataManager.clearQuizProgress(quizId, true);
+        updateQuizProgressSection();
+        Hub.showWarningBubble('Postup byl vyčištěn!');
+    }
+}
+
+function startQuiz() { 
+    QuizEngine.start(); 
+}
+
 function handleQuizExit() {
     UI.showScreen('sc-setup');
+    updateQuizProgressSection();
 }
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
