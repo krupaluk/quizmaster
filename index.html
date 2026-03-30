@@ -285,13 +285,6 @@
             transform: scale(0.96);
             background: #0056b3;
         }
-        
-        .exit-btn-dark:active {
-            transform: scale(0.92);
-            background: #000;
-        }
-        
-        /* Buttons */
         .exit-badge { 
             background: #e5e5ea; 
             color: #4a4a4c; 
@@ -339,7 +332,167 @@
             display: none; 
         }
         
-        /* Cards & Layout */
+        /* ===== SHUFFLE TOGGLE STYLES ===== */
+        .shuffle-options-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .shuffle-options-row .setup-section {
+            flex: 1 1 0;
+            margin-bottom: 0;
+            min-width: 0;
+        }
+        
+        .shuffle-toggle-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 14px 20px;
+            background: var(--ios-bg);
+            border-radius: 12px;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            gap: 8px;
+        }
+        .shuffle-toggle-container:hover {
+            background: white;
+            border-color: var(--ios-blue);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
+        }
+        
+        .shuffle-option {
+            flex: 1;
+            text-align: left;
+        }
+        .shuffle-option .option-title {
+            font-size: 36px;
+            text-align: center;
+        }
+        
+        .option-desc-full {
+            font-size: 16px;
+            color: #222;
+            line-height: 1.3;
+            margin-top: 4px;
+            width: 100%;
+            text-align: center;
+            font-weight: 700;
+            transition: color 0.3s ease;
+            padding: 0;
+            white-space: nowrap;
+        }
+        .option-desc-full.green-text {
+            color: #2aa33f;
+        }
+        .option-desc-full.blue-text {
+            color: #0066cc;
+        }
+        
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            width: 51px;
+            height: 31px;
+            margin-right: 15px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #34c759;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 23px;
+            width: 23px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .toggle-slider {
+            background-color: var(--ios-blue);
+        }
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+        
+        /* Setup Section */
+        .setup-section {
+            margin-bottom: 24px;
+        }
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ios-text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        /* Question Slider */
+        .question-slider-inline {
+            width: 100%;
+            -webkit-appearance: none;
+            appearance: none;
+            height: 44px;
+            background: transparent;
+            cursor: pointer;
+        }
+        .question-slider-inline::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            background: var(--ios-blue);
+            border-radius: 4px;
+        }
+        .question-slider-inline::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            margin-top: -10px;
+        }
+        .question-slider-inline::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            background: var(--ios-blue);
+            border-radius: 4px;
+        }
+        .question-slider-inline::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--ios-blue);
+            border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .slider-value-inline {
+            font-weight: 600;
+            color: var(--ios-blue);
+        }
+        
+        /* ===== CARDS & LAYOUT ===== */
         .card { 
             background: var(--ios-card); 
             border-radius: 25px; 
@@ -419,438 +572,56 @@
         }
         
         /* ===== SPECIAL UI ELEMENTS ===== */
-        /* Exit Confirmation */
-        #exit-confirm-ui { 
-            text-align: center; 
-            padding: 10px 0; 
-        }
-        .exit-warning-title { 
-            color: var(--border-red); 
-            font-size: 24px; 
-            font-weight: 800; 
-            margin-bottom: 10px; 
-        }
-        .countdown-circle { 
-            font-size: 60px; 
-            font-weight: 800; 
-            color: var(--ios-gray); 
-            margin: 15px 0; 
-        }
-
-        /* Form Elements */
-        select { 
-            width: 100%; 
-            padding: 18px; 
-            border-radius: 15px; 
-            border: 1px solid #ddd; 
-            font-size: 19px; 
-            background: #fff; 
-            margin-bottom: 20px; 
-            appearance: none; 
-            text-align: center; 
-        }
-        
-        /* Count Buttons */
-        .count-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 12px;
-            align-items: flex-start;
-        }
-        .count-btn {
-            min-width: 50px;
-            padding: 14px 20px;
-            border: 2px solid var(--neutral-border);
-            border-radius: 15px;
-            background: white;
-            color: var(--ios-text);
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            position: relative;
-        }
-        .count-btn:hover {
-            border-color: var(--ios-blue);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,123,255,0.15);
-        }
-        .count-btn.active {
-            background: var(--ios-blue);
-            color: white;
-            border-color: var(--ios-blue);
-            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
-        }
-        .count-btn.max {
-            border-color: var(--ios-blue);
-            background: linear-gradient(135deg, var(--ios-blue) 0%, #0056b3 100%);
-            color: white;
-            font-weight: 800;
-            position: relative;
-        }
-        
-        .count-btn.max:not(.active) {
-            background: white;
-            color: var(--ios-text);
-            border-color: var(--neutral-border);
-            font-weight: 600;
-        }
-        
-        .count-btn.max.active {
-            font-weight: 700;
-        }
-        .count-btn.max::after {
-            content: "MAX";
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--border-red);
-            color: white;
-            font-size: 9px;
-            font-weight: 700;
-            padding: 2px 6px;
-            border-radius: 8px;
-            letter-spacing: 0.5px;
-            z-index: 10;
-            pointer-events: none;
-            line-height: 1;
-        }
-        
-        /* Results Screen */
-        .grade-display { 
-            font-size: 85px; 
-            font-weight: 800; 
-            color: var(--ios-blue); 
-            margin: 20px 0; 
-            text-align: center; 
-        }
-        
-        /* Modern Toggle Switch */
-        .toggle-switch {
-            position: relative;
-            width: 51px;
-            height: 31px;
-            margin-right: 15px;
-        }
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #34c759;
-            transition: .4s;
-            border-radius: 34px;
-        }
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 23px;
-            width: 23px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        input:checked + .toggle-slider {
-            background-color: var(--ios-blue); /* Fallback color, will be overridden by JavaScript */
-        }
-        input:checked + .toggle-slider:before {
-            transform: translateX(20px);
-        }
-        
-        /* Radio Button Toggle Switches */
-        input[type="radio"] + .toggle-slider {
-            position: relative;
-        }
-        input[type="radio"]:checked + .toggle-slider {
-            background-color: var(--ios-blue);
-        }
-        input[type="radio"]:checked + .toggle-slider:before {
-            transform: translateX(20px);
-        }
-        
-        /* Shuffle Toggle Container */
-        .shuffle-toggle-container {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 14px 20px;
-            background: var(--ios-bg);
-            border-radius: 12px;
-            border: 1px solid transparent;
-            transition: all 0.2s ease;
-            gap: 8px;
-        }
-        .shuffle-toggle-container:hover {
-            background: white;
-            border-color: var(--ios-blue);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
-        }
-        .shuffle-option {
-            flex: 1;
-            text-align: left;
-        }
-        .shuffle-option .option-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--ios-text);
-            margin-bottom: 2px;
-        }
-        .shuffle-option .option-title.dice-icon,
-        .shuffle-option .option-title.list-icon,
-        .shuffle-option .option-title.chapters-icon,
-        .shuffle-option .option-title.all-icon {
-            font-size: 36px;
-            text-align: center;
-        }
-        .shuffle-option .option-desc {
-            font-size: 14px;
-            color: var(--ios-gray);
-            line-height: 1.4;
-            margin-top: 12px;
-            padding-top: 12px;
-            border-top: 1px solid var(--neutral-border);
-        }
-        .option-desc-full {
-            font-size: 16px;
-            color: #222;
-            line-height: 1.3;
-            margin-top: 4px;
-            width: 100%;
-            text-align: center;
-            font-weight: 700;
-            transition: color 0.3s ease;
-            padding: 0;
-            white-space: nowrap;
-        }
-        .option-desc-full.green-text {
-            color: #2aa33f;
-        }
-        .option-desc-full.blue-text {
-            color: #0066cc;
-        }
-        
-        .shuffle-options-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-        .shuffle-options-row .setup-section {
-            flex: 1 1 0;
-            margin-bottom: 0;
-            min-width: 0;
-        }
-        .shuffle-options-row .setup-section .shuffle-toggle-container {
-            padding: 10px 2px;
-        }
-        .shuffle-options-row .setup-section .section-title {
-            font-size: 14px;
-        }
-        
-        /* Shuffle Specification Subsection */
-        .shuffle-specification {
-            margin-top: 8px;
-            padding-left: 20px;
-            animation: slideDown 0.3s ease;
-        }
-        .shuffle-specification.hidden {
-            display: none;
-        }
-        .shuffle-specification .setup-option {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-        .shuffle-specification .option-content {
-            flex: 1;
-            text-align: center;
-        }
-        .section-subtitle {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--ios-gray);
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        
-        /* Hub & Setup Items */
-        .hub-item, .setup-option { 
-            display: flex; 
-            align-items: center; 
-            padding: 10px; 
-            background: var(--ios-bg); 
-            margin-bottom: 6px; 
-            border-radius: 12px; 
-            cursor: pointer; 
-        }
-        .hub-item input, .setup-option input { 
-            margin-right: 15px; 
-            transform: scale(1.5); 
-        }
-        
-        /* Setup Screen Styles */
-        .setup-summary {
-            background: linear-gradient(135deg, var(--neutral-bg) 0%, var(--ios-bg) 100%);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 20px;
-            border: 1px solid var(--neutral-border);
-        }
-        .summary-title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--ios-gray);
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-        }
-        .summary-content {
-            font-size: 15px;
-            color: var(--ios-text);
-            line-height: 1.4;
-        }
-        .summary-item {
-            padding: 4px 0;
-            color: var(--ios-text);
-        }
-        
-        .setup-section {
-            margin-bottom: 24px;
-        }
-        .section-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--ios-text);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        /* Inline Slider Styles */
-        .slider-value-inline {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--ios-text);
-        }
-        .slider-value-inline span {
-            color: var(--ios-blue);
-            font-weight: 700;
-            font-size: 16px;
-        }
-        .question-slider-inline {
-            width: 100%;
-            height: 6px;
-            border-radius: 3px;
-            background: var(--neutral-border);
-            outline: none;
-            -webkit-appearance: none;
-            appearance: none;
-            cursor: pointer;
-        }
-        .question-slider-inline::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--ios-blue);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
-            transition: all 0.2s ease;
-        }
-        .question-slider-inline::-webkit-slider-thumb:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
-        }
-        .question-slider-inline::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--ios-blue);
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,123,255,0.3);
-            transition: all 0.2s ease;
-            border: none;
-        }
-        .question-slider-inline::-moz-range-thumb:hover {
-            transform: scale(1.1);
-            box-shadow: 0 4px 12px rgba(0,123,255,0.4);
-        }
-        
-        .setup-option {
-            padding: 16px;
-            background: var(--ios-bg);
-            border-radius: 12px;
-            margin-bottom: 12px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-        }
-        .setup-option:hover {
-            background: white;
-            border-color: var(--ios-blue);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,123,255,0.1);
-        }
-        .option-content {
-            flex: 1;
-        }
-        .option-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--ios-text);
-            margin-bottom: 4px;
-        }
-        .option-desc {
-            font-size: 13px;
-            color: var(--ios-gray);
-            line-height: 1.3;
-        }
-        
-        .setup-actions {
-            display: flex;
+        /* Exit Buttons - Base */
+        .exit-btn {
+            display: inline-flex;
             flex-direction: column;
-            gap: 12px;
-            margin-top: 24px;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+            transition: transform 0.1s;
         }
-        .btn-primary {
-            background: var(--ios-blue) !important;
-            color: white !important;
-            text-align: center !important;
-            font-weight: 600 !important;
-            padding: 18px !important;
-            border-radius: 15px !important;
-            font-size: 18px !important;
+        .exit-btn:active {
+            transform: scale(0.92);
         }
-        .btn-secondary {
-            background: var(--ios-bg) !important;
-            color: var(--ios-gray) !important;
-            text-align: center !important;
-            font-weight: 500 !important;
-            padding: 16px !important;
-            border-radius: 12px !important;
-            font-size: 16px !important;
-            border: 1px solid var(--neutral-border) !important;
+        .exit-btn-blue {
+            background: var(--ios-blue);
+            color: white;
         }
-        .btn-secondary:hover {
-            background: white !important;
-            border-color: var(--ios-gray) !important;
+        .exit-btn-blue:active {
+            background: #0056b3;
+        }
+        .exit-btn-gray {
+            background: #e5e5ea;
+            color: #3a3a3c;
+            border: 1px solid #d1d1d6;
+        }
+        .exit-btn-gray:active {
+            background: #d1d1d6;
+        }
+        .exit-btn-dark {
+            background: #1c1c1ec6;
+            color: white;
+        }
+        .exit-btn-dark:active {
+            background: #000;
+        }
+        .exit-btn-info {
+            background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(255, 152, 0, 0.3);
+        }
+        .exit-btn-info:active {
+            background: linear-gradient(135deg, #ffb300 0%, #f57c00 100%);
         }
         
         /* Category Headers */
@@ -911,6 +682,21 @@
             padding-left: 16px;
             border-left: 2px solid var(--neutral-border);
             animation: slideDown 0.3s ease;
+        }
+        
+        /* Hub Items */
+        .hub-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: var(--ios-bg);
+            margin-bottom: 6px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        .hub-item input {
+            margin-right: 15px;
+            transform: scale(1.5);
         }
         
         @keyframes slideDown {
@@ -1025,34 +811,6 @@
             0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
             20% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
             40% { transform: translate(-50%, -50%) scale(1); }
-            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
-        }
-        
-        /* Exit Confirmation Bubble */
-        .exit-confirm-bubble {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--border-red);
-            color: white;
-            padding: 16px 24px;
-            border-radius: 12px;
-            font-size: 15px;
-            font-weight: 600;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(255, 59, 48, 0.4);
-            animation: exitBubblePop 5s ease-out forwards;
-            text-align: center;
-            max-width: 280px;
-            line-height: 1.4;
-        }
-        
-        @keyframes exitBubblePop {
-            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
-            15% { opacity: 1; transform: translate(-50%, -50%) scale(1.05); }
-            30% { transform: translate(-50%, -50%) scale(1); }
-            85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
     </style>
@@ -1182,7 +940,7 @@
                 <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin-bottom: 15px;"></p>
                 <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
             </div>
-            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="showSetupFromResults()">Zpět do nastavení</button>
+            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="goBackToSetup()">Zpět do nastavení</button>
         </div>
     </div>
 </div>
@@ -1202,83 +960,78 @@ const AppState = {
     sessCorrect: 0, 
     sessWrong: 0, 
     selectedTopicName: "",
-    savedQuizSelections: [], // Store selected quiz IDs when going to setup
-    savedQuizSettings: null, // Store quiz settings (count, shuffle, filters)
-    confirmingExit: false, // Track if user is confirming exit from quiz
-    exitConfirmTimer: null // Timer for exit confirmation
+    savedQuizSelections: [],
+    savedQuizSettings: null,
+    selectedQuizzes: []
 };
 
 // ===== HELPER FUNCTIONS =====
-function updateShuffleText() {
-    const checkbox = document.getElementById('chk-shuffle');
-    const container = document.querySelector('.shuffle-toggle-container');
+// Generic shuffle toggle updater
+function updateToggleState(checkboxId, titleId, descId, config) {
+    const checkbox = document.getElementById(checkboxId);
+    const container = checkbox.closest('.shuffle-toggle-container');
     const toggleSlider = checkbox.nextElementSibling;
-    const titleElement = document.getElementById('shuffle-title');
-    const descElement = document.getElementById('shuffle-desc');
+    const titleElement = document.getElementById(titleId);
+    const descElement = document.getElementById(descId);
     
-    if (checkbox.checked) {
-        // Green state - active shuffle (toggle right)
-        container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
-        container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
-        toggleSlider.style.backgroundColor = '#34c759';
-        
-        // Update to dice icon
-        titleElement.textContent = '🎲';
-        titleElement.classList.add('dice-icon');
-        titleElement.classList.remove('list-icon');
-        descElement.textContent = 'náhodném pořadí';
-        descElement.classList.remove('blue-text');
-        descElement.classList.add('green-text');
-    } else {
-        // Blue state - sequential (toggle left)
-        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
-        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
-        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
-        
-        // Update to list icon
-        titleElement.textContent = '📋';
-        titleElement.classList.add('list-icon');
-        titleElement.classList.remove('dice-icon');
-        descElement.textContent = 'daném pořadí';        
-        descElement.classList.remove('green-text');
-        descElement.classList.add('blue-text');
-    }
+    const isChecked = checkbox.checked;
+    const colors = isChecked ? config.checked : config.unchecked;
+    
+    container.style.backgroundColor = colors.bg;
+    container.style.borderColor = colors.border;
+    toggleSlider.style.backgroundColor = colors.slider;
+    
+    titleElement.textContent = colors.icon;
+    titleElement.className = 'option-title ' + colors.iconClass;
+    
+    descElement.textContent = colors.text;
+    descElement.className = 'option-desc-full ' + colors.textClass;
+}
+
+function updateShuffleText() {
+    updateToggleState('chk-shuffle', 'shuffle-title', 'shuffle-desc', {
+        checked: {
+            bg: 'rgba(52, 199, 89, 0.08)',
+            border: 'rgba(52, 199, 89, 0.2)',
+            slider: '#34c759',
+            icon: '🎲',
+            iconClass: 'dice-icon',
+            text: 'náhodném pořadí',
+            textClass: 'green-text'
+        },
+        unchecked: {
+            bg: 'rgba(0, 122, 255, 0.08)',
+            border: 'rgba(0, 122, 255, 0.2)',
+            slider: 'var(--ios-blue)',
+            icon: '📋',
+            iconClass: 'list-icon',
+            text: 'daném pořadí',
+            textClass: 'blue-text'
+        }
+    });
 }
 
 function updateShuffleModeText() {
-    const checkbox = document.getElementById('chk-shuffle-mode');
-    const container = checkbox.closest('.shuffle-toggle-container');
-    const toggleSlider = checkbox.nextElementSibling;
-    const titleElement = document.getElementById('shuffle-mode-title');
-    const descElement = document.getElementById('shuffle-mode-desc');
-    
-    if (checkbox.checked) {
-        // Green state - chapters mode (toggle right)
-        container.style.backgroundColor = 'rgba(52, 199, 89, 0.08)';
-        container.style.borderColor = 'rgba(52, 199, 89, 0.2)';
-        toggleSlider.style.backgroundColor = '#34c759';
-        
-        // Update to chapters icon
-        titleElement.textContent = '📑';
-        titleElement.classList.add('chapters-icon');
-        titleElement.classList.remove('all-icon');
-        descElement.textContent = 'po 1 otázce z kapitoly';
-        descElement.classList.remove('blue-text');
-        descElement.classList.add('green-text');
-    } else {
-        // Blue state - all mode (toggle left)
-        container.style.backgroundColor = 'rgba(0, 122, 255, 0.08)';
-        container.style.borderColor = 'rgba(0, 122, 255, 0.2)';
-        toggleSlider.style.backgroundColor = 'var(--ios-blue)';
-        
-        // Update to package icon
-        titleElement.textContent = '📦';
-        titleElement.classList.add('all-icon');
-        titleElement.classList.remove('chapters-icon');
-        descElement.textContent = 'z celého výběru';
-        descElement.classList.remove('green-text');
-        descElement.classList.add('blue-text');
-    }
+    updateToggleState('chk-shuffle-mode', 'shuffle-mode-title', 'shuffle-mode-desc', {
+        checked: {
+            bg: 'rgba(52, 199, 89, 0.08)',
+            border: 'rgba(52, 199, 89, 0.2)',
+            slider: '#34c759',
+            icon: '📑',
+            iconClass: 'chapters-icon',
+            text: 'po 1 otázce z kapitoly',
+            textClass: 'green-text'
+        },
+        unchecked: {
+            bg: 'rgba(0, 122, 255, 0.08)',
+            border: 'rgba(0, 122, 255, 0.2)',
+            slider: 'var(--ios-blue)',
+            icon: '📦',
+            iconClass: 'all-icon',
+            text: 'z celého výběru',
+            textClass: 'blue-text'
+        }
+    });
 }
 
 // Initialize shuffle colors on page load
@@ -2076,46 +1829,9 @@ function goBackToHub() {
 function goBackToSetup() {
     UI.showScreen('sc-setup');
 }
-function showSetupFromResults() {
-    UI.showScreen('sc-setup');
-}
 function startQuiz() { QuizEngine.start(); }
 function handleQuizExit() {
-    if (AppState.confirmingExit) {
-        // Second click - go to setup and remove bubble
-        clearTimeout(AppState.exitConfirmTimer);
-        AppState.confirmingExit = false;
-        // Remove any existing bubbles immediately
-        const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
-        existingBubbles.forEach(bubble => bubble.remove());
-        UI.showScreen('sc-setup');
-    } else {
-        // First click - show confirmation bubble
-        AppState.confirmingExit = true;
-        showExitConfirmBubble();
-        // Reset after 5 seconds
-        AppState.exitConfirmTimer = setTimeout(() => {
-            AppState.confirmingExit = false;
-        }, 5000);
-    }
-}
-function showExitConfirmBubble() {
-    // Remove any existing bubbles
-    const existingBubbles = document.querySelectorAll('.exit-confirm-bubble');
-    existingBubbles.forEach(bubble => bubble.remove());
-    
-    // Create red confirmation bubble
-    const bubble = document.createElement('div');
-    bubble.className = 'exit-confirm-bubble';
-    bubble.innerHTML = 'Klikněte znovu na tlačítko zpět pro opuštění kvízu';
-    document.body.appendChild(bubble);
-    
-    // Remove bubble after 5 seconds
-    setTimeout(() => {
-        if (bubble.parentNode) {
-            bubble.remove();
-        }
-    }, 5000);
+    UI.showScreen('sc-setup');
 }
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
