@@ -1054,7 +1054,8 @@ const UserDataManager = {
             completionCount: 0,                // How many times completed (with or without errors)
             flawlessCompletionCount: 0,        // How many times completed without any errors
             answeredQuestions: {},             // questionKey -> {correct: boolean, timestamp: number}
-            wrongAnswers: [],                  // Array of question keys answered wrong
+            wrongAnswers: [],                  // Array of question keys answered wrong (current attempt)
+            allTimeWrongAnswers: [],           // Array of question keys answered wrong EVER (for flawless tracking)
             lastSession: null                  // Last time quiz was accessed
         };
     },
@@ -1085,13 +1086,17 @@ const UserDataManager = {
             timestamp: Date.now()
         };
         
-        // Track wrong answers
+        // Track wrong answers for current attempt
         if (!isCorrect) {
             if (!data.quizzes[quizId].wrongAnswers.includes(questionKey)) {
                 data.quizzes[quizId].wrongAnswers.push(questionKey);
             }
+            // Track wrong answers PERMANENTLY for flawless completion tracking
+            if (!data.quizzes[quizId].allTimeWrongAnswers.includes(questionKey)) {
+                data.quizzes[quizId].allTimeWrongAnswers.push(questionKey);
+            }
         } else {
-            // Remove from wrong answers if previously wrong
+            // Remove from current wrong answers only (not from allTimeWrongAnswers)
             const idx = data.quizzes[quizId].wrongAnswers.indexOf(questionKey);
             if (idx > -1) {
                 data.quizzes[quizId].wrongAnswers.splice(idx, 1);
@@ -1128,13 +1133,15 @@ const UserDataManager = {
             data.quizzes[quizId].completionCount++;
             
             // Clear progress only after FULL completion (all questions answered)
-            this.clearQuizProgress(quizId, false);
+            // preserveCompletion = true to keep the counts we just incremented
+            this.clearQuizProgress(quizId, true);
         } else if (completionType === 'regular') {
             data.quizzes[quizId].completed = true;
             data.quizzes[quizId].completionCount++;
             
             // Clear progress after regular completion too
-            this.clearQuizProgress(quizId, false);
+            // preserveCompletion = true to keep the counts we just incremented
+            this.clearQuizProgress(quizId, true);
         }
         
         this.saveData(data);
@@ -1164,6 +1171,10 @@ const UserDataManager = {
             data.quizzes[quizId].completed = completed;
             data.quizzes[quizId].started = started;
         }
+        
+        // Clear wrong answers on manual reset - user gets fresh start
+        data.quizzes[quizId].wrongAnswers = [];
+        data.quizzes[quizId].allTimeWrongAnswers = [];
         
         this.saveData(data);
     },
@@ -1698,23 +1709,31 @@ const Results = {
             
             // Check if all questions in the quiz are answered CORRECTLY (for full completion)
             const remainingCount = quizId ? DataLoader.getTotalRemainingQuestions(quizId) : 0;
-            const hadErrorsInSession = AppState.sessWrong > 0;
-            const allAnsweredCorrectlyInSession = AppState.sessCorrect > 0 && AppState.sessWrong === 0;
-            const isFullyCompleted = remainingCount === 0 && (allAnsweredCorrectlyInSession || (AppState.sessCorrect > 0 && AppState.sessWrong === 0));
+            const quizData = quizId ? UserDataManager.getQuizData(quizId) : null;
             
-            // Count completion only if:
-            // 1. All questions are answered (remainingCount === 0)
-            // 2. AND all answers in this session were correct (no errors)
-            // OR
-            // 3. User had errors but ALL questions in quiz are now answered correctly (completed via error loop)
-            if (isFullyCompleted && quizId && AppState.sessWrong === 0) {
-                // Flawless completion - no errors at all in this session
-                const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
-                this.showCompletionBadge(stats, 'flawless');
-            } else if (remainingCount === 0 && quizId && AppState.sessCorrect > 0) {
-                // Regular completion - had errors but eventually answered all correctly
-                const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
-                this.showCompletionBadge(stats, 'regular');
+            // Check for errors in current session
+            const hadErrorsInThisSession = AppState.sessWrong > 0;
+            
+            // Check for any wrong answers in all-time history (allTimeWrongAnswers)
+            const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+            
+            // If user had errors in this session OR has any wrong answers in history, it's NOT flawless
+            const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
+            
+            const isFullyCompleted = remainingCount === 0 && AppState.sessCorrect > 0;
+            
+            // Count completion only if all questions are answered correctly
+            console.log('Debug Results:', { remainingCount, sessCorrect: AppState.sessCorrect, sessWrong: AppState.sessWrong, isFullyCompleted, everHadErrors, quizId });
+            if (isFullyCompleted && quizId) {
+                if (everHadErrors) {
+                    // Regular completion - user had errors at some point
+                    const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
+                    this.showCompletionBadge(stats, 'regular');
+                } else {
+                    // Flawless completion - no errors ever
+                    const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
+                    this.showCompletionBadge(stats, 'flawless');
+                }
             } else if (quizId && AppState.sessCorrect > 0) {
                 // Session completed but quiz not fully done yet
                 this.showPartialCompletionMessage(remainingCount);
@@ -1729,6 +1748,26 @@ const Results = {
         } else {
             document.getElementById('res-grade').innerText = AppState.errs.length === 0 ? "✓" : "!";
             document.getElementById('res-stat').innerText = AppState.errs.length === 0 ? "Všechny chyby byly opraveny!" : `Stále zbývá opravit ${AppState.errs.length} chyb.`;
+            
+            // If all errors are fixed AND all questions are answered, count as completion
+            if (AppState.errs.length === 0 && quizId) {
+                const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+                const quizData = UserDataManager.getQuizData(quizId);
+                const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                
+                console.log('Debug Error Loop Completion:', { remainingCount, hasAnyWrongAnswersEver, quizId });
+                
+                if (remainingCount === 0) {
+                    // All questions answered correctly after fixing errors
+                    if (hasAnyWrongAnswersEver) {
+                        const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
+                        this.showCompletionBadge(stats, 'regular');
+                    } else {
+                        const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
+                        this.showCompletionBadge(stats, 'flawless');
+                    }
+                }
+            }
         }
         document.getElementById('res-retry').className = AppState.errs.length > 0 ? '' : 'hidden';
         document.getElementById('res-retry-msg').innerText = AppState.loop ? `Zbývá opravit ${AppState.errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
@@ -1794,12 +1833,19 @@ const Results = {
     
     createStatsContainer() {
         const card = document.querySelector('#sc-res .card');
+        if (!card) return null;
+        
         const container = document.createElement('div');
         container.id = 'res-stats-summary';
         container.className = 'hidden';
-        // Insert before the back button
+        
+        // Try to insert before the back button, otherwise append to card
         const backBtn = card.querySelector('button:last-child');
-        card.insertBefore(container, backBtn);
+        if (backBtn && backBtn.parentNode === card) {
+            card.insertBefore(container, backBtn);
+        } else {
+            card.appendChild(container);
+        }
         return container;
     }
 };
@@ -2324,6 +2370,10 @@ function loadQuizAndGoToSetup(quizId, quizTitle) {
             if (correctAnswers > 0) {
                 UserDataManager.clearQuizProgress(quizId, true);
                 Hub.showWarningBubble('Stávající kvíz dokončen! Všechny otázky byly zodpovězeny. Můžete začít znovu.');
+                
+                // Refresh UI to show updated counts after clearing
+                DataLoader.setupGroupFilters();
+                DataLoader.setupCountSelector();
             }
         }
         
@@ -2347,6 +2397,22 @@ function goBackToHub() {
     Hub.renderQuizList();
 }
 function goBackToSetup() {
+    const quizId = AppState.currentQuizId;
+    
+    // Check if quiz was completed and auto-clear progress
+    if (quizId) {
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        console.log('Debug goBackToSetup:', { remainingCount, quizId });
+        if (remainingCount === 0) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            const correctAnswers = Object.values(quizData.answeredQuestions || {}).filter(a => a.correct).length;
+            if (correctAnswers > 0) {
+                UserDataManager.clearQuizProgress(quizId, true);
+                Hub.showWarningBubble('Kvíz dokončen! Postup automaticky vyčištěn.');
+            }
+        }
+    }
+    
     UI.showScreen('sc-setup');
     // Refresh group filters and count selector to show updated remaining questions
     DataLoader.setupGroupFilters();
