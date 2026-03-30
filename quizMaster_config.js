@@ -64,9 +64,3 @@ const quizCategories = {
     }
 };
 
-// Helper function to generate file path from category and id
-function generateQuizFilePath(category, quizId) {
-    const categoryPrefix = category.toLowerCase();
-    return `quizdata/${categoryPrefix}/${quizId}.js`;
-}
-
