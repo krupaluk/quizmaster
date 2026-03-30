@@ -2314,6 +2314,19 @@ function loadQuizAndGoToSetup(quizId, quizTitle) {
     
     // Load the quiz data and go to setup
     DataLoader.loadSingleQuiz(quizId).then(() => {
+        // Check if all questions were previously answered (remainingCount === 0)
+        // If so, auto-clear progress AFTER data is loaded
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        if (remainingCount === 0) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            // Only auto-clear if there's actually saved progress with correct answers
+            const correctAnswers = Object.values(quizData.answeredQuestions || {}).filter(a => a.correct).length;
+            if (correctAnswers > 0) {
+                UserDataManager.clearQuizProgress(quizId, true);
+                Hub.showWarningBubble('Stávající kvíz dokončen! Všechny otázky byly zodpovězeny. Můžete začít znovu.');
+            }
+        }
+        
         // After loading, update the progress section
         setTimeout(updateQuizProgressSection, 100);
     });
@@ -2453,6 +2466,19 @@ function startQuiz() {
 }
 
 function handleQuizExit() {
+    const quizId = AppState.currentQuizId;
+    
+    // Check if all questions are answered correctly (remainingCount === 0)
+    // If so, automatically clear the progress
+    if (quizId) {
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        if (remainingCount === 0) {
+            // All questions answered correctly - auto-clear progress
+            UserDataManager.clearQuizProgress(quizId, true);
+            Hub.showWarningBubble('Kvíz dokončen! Postup automaticky vyčištěn.');
+        }
+    }
+    
     UI.showScreen('sc-setup');
     // Re-render group filters to show updated remaining question counts
     DataLoader.setupGroupFilters();
