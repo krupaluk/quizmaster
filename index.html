@@ -1007,10 +1007,10 @@
                             🗑️ Vyčistit postup (počet dokončení zůstane)
                         </button>
                         <button id="btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetAllCompletions()">
-                            ✅ Vynulovat dokončení s opravou
+                            ✓ Vynulovat dokončení s opravou
                         </button>
                         <button id="btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetFlawlessCompletions()">
-                            🏆 Vynulovat bezchybná dokončení
+                            🏅 Vynulovat bezchybná dokončení
                         </button>
                     </div>
                 </div>
@@ -1667,7 +1667,7 @@ const QuizEngine = {
         const stats = UserDataManager.getQuizStats(quizId);
         
         const completedMsg = quizData.completed ? 
-            `✅ Kvíz dokončen ${stats.completionCount}x` : 
+            `✓ Kvíz dokončen ${stats.completionCount}x` : 
             '📝 Všechny otázky zodpovězeny';
         
         const confirmReset = confirm(
@@ -1749,14 +1749,10 @@ const QuizEngine = {
                 // If so, count completion immediately (don't wait for Results.show)
                 if (isCorrect && !AppState.loop) {
                     const remainingCount = DataLoader.getTotalRemainingQuestions(AppState.currentQuizId);
-                    const quizData = UserDataManager.getQuizData(AppState.currentQuizId);
-                    const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
-                    const hadErrorsInThisSession = AppState.sessWrong > 0;
-                    const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
                     
                     if (remainingCount === 0) {
                         // All questions answered - count completion now
-                        if (everHadErrors) {
+                        if (AppState.sessWrong > 0) {
                             UserDataManager.markQuizCompleted(AppState.currentQuizId, 'regular');
                         } else {
                             UserDataManager.markQuizCompleted(AppState.currentQuizId, 'flawless');
@@ -1828,9 +1824,7 @@ const Results = {
                 const stats = UserDataManager.getQuizStats(quizId);
                 
                 // Check for errors to determine which badge to show
-                const hadErrorsInThisSession = AppState.sessWrong > 0;
-                const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
-                const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
+                const everHadErrors = AppState.sessWrong > 0;
                 
                 if (everHadErrors) {
                     this.showCompletionBadge(stats, 'regular');
@@ -1855,20 +1849,12 @@ const Results = {
             // If all errors are fixed AND all questions are answered, count as completion
             if (AppState.errs.length === 0 && quizId) {
                 const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
-                const quizData = UserDataManager.getQuizData(quizId);
-                const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
-                
-                console.log('Debug Error Loop Completion:', { remainingCount, hasAnyWrongAnswersEver, quizId });
                 
                 if (remainingCount === 0) {
                     // All questions answered correctly after fixing errors
-                    if (hasAnyWrongAnswersEver) {
-                        const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
-                        this.showCompletionBadge(stats, 'regular');
-                    } else {
-                        const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
-                        this.showCompletionBadge(stats, 'flawless');
-                    }
+                    // In error loop, we can't be flawless since we had errors originally
+                    const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
+                    this.showCompletionBadge(stats, 'regular');
                 }
             }
         }
@@ -1887,9 +1873,9 @@ const Results = {
         badge.style.cssText = 'font-size: 14px; color: var(--border-green); margin-top: 10px;';
         
         if (completionType === 'flawless') {
-            badge.innerHTML = `🏆 Bezchybně dokončeno! (${stats.flawlessCompletionCount}x)`;
+            badge.innerHTML = `🏅 Bezchybně dokončeno! (${stats.flawlessCompletionCount}x)`;
         } else {
-            badge.innerHTML = `✅ Dokončeno! (${stats.completionCount}x celkem, ${stats.flawlessCompletionCount}x bezchybně)`;
+            badge.innerHTML = `✓ Dokončeno! (${stats.completionCount}x celkem, ${stats.flawlessCompletionCount}x bezchybně)`;
         }
         gradeEl.appendChild(badge);
     },
@@ -1898,7 +1884,7 @@ const Results = {
         const statEl = document.getElementById('res-stat');
         const msg = document.createElement('div');
         msg.style.cssText = 'font-size: 14px; color: var(--ios-blue); margin-top: 10px; padding: 10px; background: var(--ios-bg); border-radius: 8px;';
-        msg.innerHTML = `✅ Tato část byla zodpovězena správně!<br>Zbývá ještě <b>${remainingCount}</b> otázek v kvízu.`;
+        msg.innerHTML = `✓ Tato část byla zodpovězena správně!<br>Zbývá ještě <b>${remainingCount}</b> otázek v kvízu.`;
         statEl.appendChild(msg);
     },
     
@@ -2412,7 +2398,7 @@ const Hub = {
                     // Build badges HTML - only completion badges
                     let badgesHtml = '';
                     if (quizStats.flawlessCompletionCount > 0) {
-                        badgesHtml += `<span class="badge flawless">🏆 ${quizStats.flawlessCompletionCount}x</span>`;
+                        badgesHtml += `<span class="badge flawless">🏅 ${quizStats.flawlessCompletionCount}x</span>`;
                     }
                     if (quizStats.completionCount > 0) {
                         badgesHtml += `<span class="badge">✓ ${quizStats.completionCount}x</span>`;
@@ -2538,6 +2524,7 @@ function updateQuizProgressSection() {
     const progressSection = document.getElementById('quiz-progress-section');
     const progressInfo = document.getElementById('quiz-progress-info');
     const badgesContainer = document.getElementById('setup-completion-badges');
+    const resetButton = document.getElementById('btn-reset-progress');
     
     if (!progressSection || !progressInfo) return;
     
@@ -2553,11 +2540,16 @@ function updateQuizProgressSection() {
     // Always show progress section for selected quiz
     progressSection.style.display = 'block';
     
+    // Show reset button if there's any progress
+    if (resetButton) {
+        resetButton.style.display = stats.totalAnswered > 0 ? 'block' : 'none';
+    }
+    
     // Update completion badges in header
     if (badgesContainer) {
         let badgesHtml = '';
         if (stats.flawlessCompletionCount > 0) {
-            badgesHtml += `<span class="badge flawless">🏆 ${stats.flawlessCompletionCount}x</span>`;
+            badgesHtml += `<span class="badge flawless">🏅 ${stats.flawlessCompletionCount}x</span>`;
         }
         if (stats.completionCount > 0) {
             badgesHtml += `<span class="badge">✓ ${stats.completionCount}x</span>`;
@@ -2569,8 +2561,8 @@ function updateQuizProgressSection() {
     const regularCount = stats.completionCount - stats.flawlessCompletionCount;
     
     // Always show completion counts (even if 0)
-    statusText += `🏆 Bezchybně dokončeno: <b>${stats.flawlessCompletionCount}x</b><br>`;
-    statusText += `✅ Dokončeno s opravou: <b>${regularCount}x</b><br>`;
+    statusText += `🏅 Bezchybně dokončeno: <b>${stats.flawlessCompletionCount}x</b><br>`;
+    statusText += `✓ Dokončeno s opravou: <b>${regularCount}x</b><br>`;
     
     if (stats.totalAnswered > 0) {
         statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
@@ -2581,20 +2573,6 @@ function updateQuizProgressSection() {
     }
     
     progressInfo.innerHTML = statusText;
-    
-    // Show/hide completion reset buttons based on completion counts
-    const btnResetFlawless = document.getElementById('btn-reset-flawless');
-    const btnResetAll = document.getElementById('btn-reset-all');
-    const completionResetContainer = document.getElementById('completion-reset-container');
-    
-    if (btnResetFlawless && btnResetAll) {
-        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
-        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
-        
-        // Hide container if no advanced buttons are visible
-        const anyVisible = regularCount > 0 || stats.flawlessCompletionCount > 0;
-        completionResetContainer.style.display = anyVisible ? 'block' : 'none';
-    }
 }
 
 function resetQuizProgress() {
@@ -2625,7 +2603,7 @@ function resetFlawlessCompletions() {
         return;
     }
     
-    const confirmMsg = `Chcete vynulovat počet bezchybných dokončení?\n\n🏆 Bezchybně: ${stats.flawlessCompletionCount}x → 0\n✅ Celkem: ${stats.completionCount}x (zůstane)`;
+    const confirmMsg = `Chcete vynulovat počet bezchybných dokončení?\n\n🏅 Bezchybně: ${stats.flawlessCompletionCount}x → 0\n✓ Celkem: ${stats.completionCount}x (zůstane)`;
     
     if (confirm(confirmMsg)) {
         UserDataManager.resetFlawlessCompletionCount(quizId);
@@ -2646,7 +2624,7 @@ function resetAllCompletions() {
         return;
     }
     
-    const confirmMsg = `Chcete vynulovat dokončení S OPRAVOU?\n\n✅ Dokončení s opravou: ${regularCount}x → 0\n🏆 Bezchybná: ${stats.flawlessCompletionCount}x (zůstane)\n\nCelkem dokončení: ${stats.completionCount}x → ${stats.flawlessCompletionCount}x`;
+    const confirmMsg = `Chcete vynulovat dokončení S OPRAVOU?\n\n✓ Dokončení s opravou: ${regularCount}x → 0\n🏅 Bezchybná: ${stats.flawlessCompletionCount}x (zůstane)\n\nCelkem dokončení: ${stats.completionCount}x → ${stats.flawlessCompletionCount}x`;
     
     if (confirm(confirmMsg)) {
         UserDataManager.resetRegularCompletionCount(quizId);
