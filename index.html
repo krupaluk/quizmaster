@@ -693,10 +693,53 @@
             margin-bottom: 6px;
             border-radius: 12px;
             cursor: pointer;
+            position: relative;
+            overflow: visible;
         }
         .hub-item input {
             margin-right: 15px;
             transform: scale(1.5);
+        }
+        
+        /* Quiz Badges - positioned at top right */
+        .quiz-badges {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 4px;
+            max-width: 120px;
+            z-index: 10;
+        }
+        .quiz-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            opacity: 0.8;
+        }
+        .quiz-badges .badge.flawless {
+            background: var(--border-green);
+        }
+        
+        /* Progress bar at bottom of hub item */
+        .hub-item-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%);
+            border-radius: 0 0 0 12px;
+            transition: width 0.3s ease;
+        }
+        .quiz-badges .badge.started {
+            background: var(--ios-gray);
         }
         
         @keyframes slideDown {
@@ -1179,7 +1222,21 @@ const UserDataManager = {
         this.saveData(data);
     },
     
-    // Reset flawless completion count only
+    // Set total questions count for a quiz (stored for progress calculation)
+    setQuizTotalQuestions(quizId, totalCount) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        data.quizzes[quizId].totalQuestions = totalCount;
+        this.saveData(data);
+    },
+    
+    // Get total questions count for a quiz
+    getQuizTotalQuestions(quizId) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.totalQuestions || 0;
+    },
     resetFlawlessCompletionCount(quizId) {
         const data = this.getData();
         if (!data.quizzes[quizId]) return;
@@ -1886,6 +1943,9 @@ const DataLoader = {
                     return;
                 }
                 
+                // Store total questions count in UserData for progress calculation
+                UserDataManager.setQuizTotalQuestions(quizId, AppState.db.length);
+                
                 this.setupCountSelector();
                 this.setupGroupFilters();
                 UI.showScreen('sc-setup');
@@ -2303,23 +2363,32 @@ const Hub = {
                     // Get quiz stats from LocalStorage
                     const quizStats = UserDataManager.getQuizStats(q.id);
                     
-                    // Build badges
-                    let badges = '';
+                    // Build badges HTML - only completion badges
+                    let badgesHtml = '';
                     if (quizStats.flawlessCompletionCount > 0) {
-                        badges += `<span style="background: var(--border-green); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">🏆 ${quizStats.flawlessCompletionCount}x</span>`;
+                        badgesHtml += `<span class="badge flawless">🏆 ${quizStats.flawlessCompletionCount}x</span>`;
                     }
                     if (quizStats.completionCount > quizStats.flawlessCompletionCount) {
                         const regularCount = quizStats.completionCount - quizStats.flawlessCompletionCount;
-                        badges += `<span style="background: var(--ios-blue); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">✓ ${regularCount}x</span>`;
+                        badgesHtml += `<span class="badge">✓ ${regularCount}x</span>`;
                     }
-                    const startedIndicator = quizStats.started && quizStats.completionCount === 0 ?
-                        `<span style="background: var(--ios-gray); color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; margin-left: 8px;">📝</span>` : '';
+                    
+                    // Calculate progress for the progress bar
+                    let progressBarHtml = '';
+                    const totalQuestions = UserDataManager.getQuizTotalQuestions(q.id);
+                    // Show progress if quiz has progress (even if completed before and restarted)
+                    if (quizStats.started && quizStats.totalAnswered > 0 && totalQuestions > 0) {
+                        const progress = Math.round((quizStats.totalAnswered / totalQuestions) * 100);
+                        progressBarHtml = `<div class="hub-item-progress" style="width: ${progress}%;"></div>`;
+                    }
                     
                     div.innerHTML = `
                         <div class="quiz-info">
-                            <div class="quiz-title">${q.title}${badges}${startedIndicator}</div>
+                            <div class="quiz-title">${q.title}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
+                        ${badgesHtml ? `<div class="quiz-badges">${badgesHtml}</div>` : ''}
+                        ${progressBarHtml}
                     `;
                     // Click on quiz item goes directly to setup
                     div.onclick = () => {
