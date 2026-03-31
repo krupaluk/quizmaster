@@ -1241,7 +1241,14 @@ const UserDataManager = {
         const data = this.getData();
         if (!data.quizzes[quizId]) return;
         
+        // Reduce completionCount by the number of flawless completions being reset
+        data.quizzes[quizId].completionCount -= data.quizzes[quizId].flawlessCompletionCount;
+        if (data.quizzes[quizId].completionCount < 0) {
+            data.quizzes[quizId].completionCount = 0;
+        }
+        
         data.quizzes[quizId].flawlessCompletionCount = 0;
+        
         // Update completed status based on remaining completions
         if (data.quizzes[quizId].completionCount === 0) {
             data.quizzes[quizId].completed = false;
@@ -1713,18 +1720,37 @@ const QuizEngine = {
             if (!AppState.loop) AppState.sessWrong++; 
         }
         
-        // Show continue button immediately
-        document.getElementById('btn-continue').style.display = 'block';
-        
         // Save answer to LocalStorage (async, won't block UI)
         if (AppState.currentQuizId) {
             try {
                 const questionKey = this.getQuestionKey(q);
                 UserDataManager.saveQuestionAnswer(AppState.currentQuizId, questionKey, isCorrect);
+                
+                // Check if this was the last question and answer was correct
+                // If so, count completion immediately (don't wait for Results.show)
+                if (isCorrect && !AppState.loop) {
+                    const remainingCount = DataLoader.getTotalRemainingQuestions(AppState.currentQuizId);
+                    const quizData = UserDataManager.getQuizData(AppState.currentQuizId);
+                    const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                    const hadErrorsInThisSession = AppState.sessWrong > 0;
+                    const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
+                    
+                    if (remainingCount === 0) {
+                        // All questions answered - count completion now
+                        if (everHadErrors) {
+                            UserDataManager.markQuizCompleted(AppState.currentQuizId, 'regular');
+                        } else {
+                            UserDataManager.markQuizCompleted(AppState.currentQuizId, 'flawless');
+                        }
+                    }
+                }
             } catch (e) {
                 console.error('Error saving answer:', e);
             }
         }
+        
+        // Show continue button immediately
+        document.getElementById('btn-continue').style.display = 'block';
         
         UI.updateStats(); 
     },
@@ -1774,27 +1800,22 @@ const Results = {
             const remainingCount = quizId ? DataLoader.getTotalRemainingQuestions(quizId) : 0;
             const quizData = quizId ? UserDataManager.getQuizData(quizId) : null;
             
-            // Check for errors in current session
-            const hadErrorsInThisSession = AppState.sessWrong > 0;
-            
-            // Check for any wrong answers in all-time history (allTimeWrongAnswers)
-            const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
-            
-            // If user had errors in this session OR has any wrong answers in history, it's NOT flawless
-            const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
-            
+            // Completion was already counted in check() for normal flow
+            // Just show the completion badge with current stats
             const isFullyCompleted = remainingCount === 0 && AppState.sessCorrect > 0;
             
-            // Count completion only if all questions are answered correctly
-            console.log('Debug Results:', { remainingCount, sessCorrect: AppState.sessCorrect, sessWrong: AppState.sessWrong, isFullyCompleted, everHadErrors, quizId });
             if (isFullyCompleted && quizId) {
+                // Get current stats (completion already counted)
+                const stats = UserDataManager.getQuizStats(quizId);
+                
+                // Check for errors to determine which badge to show
+                const hadErrorsInThisSession = AppState.sessWrong > 0;
+                const hasAnyWrongAnswersEver = quizData && quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                const everHadErrors = hadErrorsInThisSession || hasAnyWrongAnswersEver;
+                
                 if (everHadErrors) {
-                    // Regular completion - user had errors at some point
-                    const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
                     this.showCompletionBadge(stats, 'regular');
                 } else {
-                    // Flawless completion - no errors ever
-                    const stats = UserDataManager.markQuizCompleted(quizId, 'flawless');
                     this.showCompletionBadge(stats, 'flawless');
                 }
             } else if (quizId && AppState.sessCorrect > 0) {
