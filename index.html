@@ -742,19 +742,68 @@
             background: var(--ios-gray);
         }
         
+        /* Hub Quiz Badges */
+        .quiz-badges {
+            align-items: center !important;
+        }
+        .quiz-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .quiz-badges .badge.flawless {
+            background: transparent !important;
+            color: #000;
+            border: none;
+            box-shadow: none;
+            font-size: 24px !important;
+            padding: 0;
+            line-height: 1;
+        }
+        .quiz-badges span.badge:not(.flawless) {
+            font-size: 12px !important;
+            padding: 4px 10px !important;
+            background: var(--ios-blue) !important;
+            border-radius: 12px !important;
+            align-self: center !important;
+        }
+        
         /* Setup Completion Badges */
+        #setup-completion-badges {
+            align-items: center !important;
+        }
         #setup-completion-badges .badge {
             background: var(--ios-blue);
             color: white;
             padding: 4px 10px;
             border-radius: 12px;
-            font-size: 12px;
+            font-size: 12px !important;
             font-weight: 600;
             box-shadow: 0 2px 4px rgba(0,0,0,0.15);
             white-space: nowrap;
+            line-height: 1;
         }
         #setup-completion-badges .badge.flawless {
-            background: var(--border-green);
+            background: transparent !important;
+            color: #000;
+            border: none;
+            box-shadow: none;
+            font-size: 28px !important;
+            padding: 0;
+            line-height: 1;
+        }
+        #setup-completion-badges span.badge:not(.flawless) {
+            font-size: 12px !important;
+            padding: 4px 10px !important;
+            background: var(--ios-blue) !important;
+            border-radius: 12px !important;
+            align-self: center !important;
         }
         
         @keyframes slideDown {
@@ -2398,7 +2447,8 @@ const Hub = {
                     // Build badges HTML - only completion badges
                     let badgesHtml = '';
                     if (quizStats.flawlessCompletionCount > 0) {
-                        badgesHtml += `<span class="badge flawless">🏅 ${quizStats.flawlessCompletionCount}x</span>`;
+                        const flawlessMedal = getMedalByCount(quizStats.flawlessCompletionCount);
+                        badgesHtml += `<span class="badge flawless">${flawlessMedal}</span>`;
                     }
                     if (quizStats.completionCount > 0) {
                         badgesHtml += `<span class="badge">✓ ${quizStats.completionCount}x</span>`;
@@ -2520,6 +2570,15 @@ function goBackToSetup() {
     updateQuizProgressSection();
 }
 
+function getMedalByCount(count) {
+    if (count >= 5) return '🏆'; // Trophy
+    if (count >= 4) return '🏅'; // Medal
+    if (count >= 3) return '🥇'; // Gold
+    if (count >= 2) return '🥈'; // Silver
+    if (count >= 1) return '🥉'; // Bronze
+    return '🥉';
+}
+
 function updateQuizProgressSection() {
     const progressSection = document.getElementById('quiz-progress-section');
     const progressInfo = document.getElementById('quiz-progress-info');
@@ -2549,7 +2608,8 @@ function updateQuizProgressSection() {
     if (badgesContainer) {
         let badgesHtml = '';
         if (stats.flawlessCompletionCount > 0) {
-            badgesHtml += `<span class="badge flawless">🏅 ${stats.flawlessCompletionCount}x</span>`;
+            const flawlessMedal = getMedalByCount(stats.flawlessCompletionCount);
+            badgesHtml += `<span class="badge flawless">${flawlessMedal}</span>`;
         }
         if (stats.completionCount > 0) {
             badgesHtml += `<span class="badge">✓ ${stats.completionCount}x</span>`;
@@ -2561,8 +2621,9 @@ function updateQuizProgressSection() {
     const regularCount = stats.completionCount - stats.flawlessCompletionCount;
     
     // Always show completion counts (even if 0)
-    statusText += `🏅 Bezchybně dokončeno: <b>${stats.flawlessCompletionCount}x</b><br>`;
-    statusText += `✓ Dokončeno s opravou: <b>${regularCount}x</b><br>`;
+    const flawlessMedal = getMedalByCount(stats.flawlessCompletionCount);
+    statusText += `${flawlessMedal} Bezchybně dokončeno<br>`;
+    statusText += `✓ Dokončeno celkem: <b>${stats.completionCount}x</b><br>`;
     
     if (stats.totalAnswered > 0) {
         statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
