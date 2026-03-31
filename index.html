@@ -1290,8 +1290,8 @@ const UserDataManager = {
         return {
             started: quizData.started,
             completed: quizData.completed,
-            completionCount: quizData.completionCount,
-            flawlessCompletionCount: quizData.flawlessCompletionCount,
+            completionCount: quizData.completionCount || 0,
+            flawlessCompletionCount: quizData.flawlessCompletionCount || 0,
             totalAnswered: answeredKeys.length,
             correctCount: correctCount,
             wrongCount: wrongCount,
@@ -1713,14 +1713,20 @@ const QuizEngine = {
             if (!AppState.loop) AppState.sessWrong++; 
         }
         
-        // Save answer to LocalStorage
+        // Show continue button immediately
+        document.getElementById('btn-continue').style.display = 'block';
+        
+        // Save answer to LocalStorage (async, won't block UI)
         if (AppState.currentQuizId) {
-            const questionKey = this.getQuestionKey(q);
-            UserDataManager.saveQuestionAnswer(AppState.currentQuizId, questionKey, isCorrect);
+            try {
+                const questionKey = this.getQuestionKey(q);
+                UserDataManager.saveQuestionAnswer(AppState.currentQuizId, questionKey, isCorrect);
+            } catch (e) {
+                console.error('Error saving answer:', e);
+            }
         }
         
         UI.updateStats(); 
-        document.getElementById('btn-continue').style.display = 'block';
     },
     
     toggleExpl(k) { 
