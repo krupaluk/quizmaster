@@ -2374,17 +2374,16 @@ const Hub = {
                     if (quizStats.flawlessCompletionCount > 0) {
                         badgesHtml += `<span class="badge flawless">🏆 ${quizStats.flawlessCompletionCount}x</span>`;
                     }
-                    if (quizStats.completionCount > quizStats.flawlessCompletionCount) {
-                        const regularCount = quizStats.completionCount - quizStats.flawlessCompletionCount;
-                        badgesHtml += `<span class="badge">✓ ${regularCount}x</span>`;
+                    if (quizStats.completionCount > 0) {
+                        badgesHtml += `<span class="badge">✓ ${quizStats.completionCount}x</span>`;
                     }
                     
                     // Calculate progress for the progress bar
                     let progressBarHtml = '';
                     const totalQuestions = UserDataManager.getQuizTotalQuestions(q.id);
-                    // Show progress if quiz has progress (even if completed before and restarted)
-                    if (quizStats.started && quizStats.totalAnswered > 0 && totalQuestions > 0) {
-                        const progress = Math.round((quizStats.totalAnswered / totalQuestions) * 100);
+                    // Show progress based on correctly answered questions only
+                    if (quizStats.started && quizStats.correctCount > 0 && totalQuestions > 0) {
+                        const progress = Math.round((quizStats.correctCount / totalQuestions) * 100);
                         progressBarHtml = `<div class="hub-item-progress" style="width: ${progress}%;"></div>`;
                     }
                     
