@@ -742,6 +742,21 @@
             background: var(--ios-gray);
         }
         
+        /* Setup Completion Badges */
+        #setup-completion-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+        }
+        #setup-completion-badges .badge.flawless {
+            background: var(--border-green);
+        }
+        
         @keyframes slideDown {
             from {
                 opacity: 0;
@@ -894,7 +909,7 @@
             <div class="modal-header">
                 <span class="modal-icon">📚</span>
                 <h2 class="modal-title">QuizMaster</h2>
-                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.2 | 29. 3. 2026</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.3 | 31. 3. 2026</p>
             </div>
             <div class="modal-body">
                 <p><strong>O aplikaci</strong></p>
@@ -904,6 +919,7 @@
                 <ul>
                     <li>⚡ Rychlá zpětná vazba s okamžitým vysvětlením</li>
                     <li>🎯 Fokus na slabá místa díky statistikám</li>
+                    <li>💾 Ukládání mezivýsledků do localStorage</li>
                     <li>📚 Flexibilní učení kdykoliv a kdekoliv</li>
                     <li>🔄 Procvičování chybných otázek dokud nejsou zvládnuty</li>
                 </ul>
@@ -926,7 +942,10 @@
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
         <div class="card">
-            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybraný okruh</b> → načítání...</div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                <div id="setup-selected-topics-summary" class="quiz-topic-info" style="margin: 0;"><b>Vybraný okruh</b> → načítání...</div>
+                <div id="setup-completion-badges" style="display: flex; gap: 6px; flex-shrink: 0;"></div>
+            </div>
             <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
             <!-- Quiz Options -->
@@ -2518,12 +2537,14 @@ function goBackToSetup() {
 function updateQuizProgressSection() {
     const progressSection = document.getElementById('quiz-progress-section');
     const progressInfo = document.getElementById('quiz-progress-info');
+    const badgesContainer = document.getElementById('setup-completion-badges');
     
     if (!progressSection || !progressInfo) return;
     
     const quizId = AppState.currentQuizId;
     if (!quizId) {
         progressSection.style.display = 'none';
+        if (badgesContainer) badgesContainer.innerHTML = '';
         return;
     }
     
@@ -2531,6 +2552,18 @@ function updateQuizProgressSection() {
     
     // Always show progress section for selected quiz
     progressSection.style.display = 'block';
+    
+    // Update completion badges in header
+    if (badgesContainer) {
+        let badgesHtml = '';
+        if (stats.flawlessCompletionCount > 0) {
+            badgesHtml += `<span class="badge flawless">🏆 ${stats.flawlessCompletionCount}x</span>`;
+        }
+        if (stats.completionCount > 0) {
+            badgesHtml += `<span class="badge">✓ ${stats.completionCount}x</span>`;
+        }
+        badgesContainer.innerHTML = badgesHtml;
+    }
     
     let statusText = '';
     const regularCount = stats.completionCount - stats.flawlessCompletionCount;
