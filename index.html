@@ -535,6 +535,7 @@
         }
         .ans-group { 
             margin-bottom: 12px; 
+            position: relative;
         }
         .sub-expl { 
             max-height: 0; 
@@ -548,10 +549,14 @@
             background: var(--neutral-bg); 
         }
         .sub-expl.show { 
-            max-height: 400px; 
-            margin-top: 10px; 
-            margin-bottom: 12px; 
-            padding: 12px 15px; 
+            max-height: 500px;
+            padding: 12px 15px;
+            padding-bottom: 28px;
+            margin-top: 8px;
+            margin-bottom: 5px;
+            border-radius: 0 12px 12px 0;
+        }
+        .sub-expl.show { 
             border-left-color: var(--neutral-border); 
         }
         .sub-expl.highlight-correct { 
@@ -939,6 +944,145 @@
             40% { transform: translate(-50%, -50%) scale(1); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
+        
+        /* ===== WIKI BUTTON & OVERLAY ===== */
+        .wiki-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: absolute;
+            bottom: -7px;
+            right: 0px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            color: #b8860b;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            z-index: 10;
+        }
+        .wiki-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            background: #fffdf5;
+        }
+        .wiki-btn:active {
+            transform: scale(0.95);
+        }
+        .wiki-btn .lightbulb {
+            font-size: 14px;
+        }
+        .wiki-btn .text {
+            font-size: 12px;
+        }
+        
+        /* Wiki Overlay Modal */
+        .wiki-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wiki-overlay-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+        }
+        .wiki-overlay-content {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            max-width: 90%;
+            width: 420px;
+            max-height: 85vh;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+            animation: wikiSlideIn 0.35s ease;
+        }
+        @keyframes wikiSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .wiki-overlay-header {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .wiki-overlay-header .icon {
+            font-size: 28px;
+        }
+        .wiki-overlay-header .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+        .wiki-overlay-body {
+            padding: 25px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            overflow-y: auto;
+            max-height: 50vh;
+        }
+        .wiki-overlay-body h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin: 20px 0 10px 0;
+        }
+        .wiki-overlay-body ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .wiki-overlay-body li {
+            margin: 6px 0;
+        }
+        .wiki-overlay-body strong {
+            color: #222;
+        }
+        .wiki-overlay-close {
+            display: block;
+            width: 100%;
+            padding: 16px 25px;
+            background: #f8f8f8;
+            border: none;
+            border-top: 1px solid #e5e5ea;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ios-blue);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .wiki-overlay-close:hover {
+            background: #f0f0f0;
+        }
+        .wiki-overlay-close:active {
+            background: #e5e5ea;
+        }
     </style>
 </head>
 <body>
@@ -1025,6 +1169,21 @@
                 <p>Vytvořil <b>Lukáš Krupa</b> s podporou AI 🤖</p>
             </div>
             <button class="modal-close-btn" onclick="closeInfoModal()">Zavřít</button>
+        </div>
+    </div>
+
+    <!-- Wiki Overlay -->
+    <div id="wiki-overlay" class="wiki-overlay hidden">
+        <div class="wiki-overlay-backdrop" onclick="closeWikiOverlay()"></div>
+        <div class="wiki-overlay-content">
+            <div class="wiki-overlay-header">
+                <span class="icon">💡</span>
+                <h3 class="title" id="wiki-title">víš, že...</h3>
+            </div>
+            <div class="wiki-overlay-body" id="wiki-body">
+                <!-- Wiki content will be inserted here -->
+            </div>
+            <button class="wiki-overlay-close" onclick="closeWikiOverlay()">Zavřít</button>
         </div>
     </div>
 
@@ -1144,6 +1303,7 @@
 </div>
 
 <script src="quizMaster_config.js"></script>
+<script src="quizdata/wiki.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -1872,7 +2032,32 @@ const QuizEngine = {
         // Show continue button immediately
         document.getElementById('btn-continue').style.display = 'block';
         
+        // Show wiki button if question has wiki attribute (regardless of correct/wrong answer)
+        if (q.wiki && Array.isArray(q.wiki) && q.wiki.length >= 2) {
+            this.showWikiButton(q.wiki);
+        }
+        
         UI.updateStats(); 
+    },
+    
+    showWikiButton(wikiPath) {
+        const q = AppState.activeQ[AppState.cur];
+        const correctKey = q.ans;
+        const correctBtn = document.getElementById('btn-' + correctKey);
+        const correctGroup = correctBtn ? correctBtn.closest('.ans-group') : null;
+        
+        if (!correctGroup) return;
+        
+        // Remove any existing wiki button
+        const existingBtn = correctGroup.querySelector('.wiki-btn');
+        if (existingBtn) existingBtn.remove();
+        
+        // Create wiki button
+        const wikiBtn = document.createElement('button');
+        wikiBtn.className = 'wiki-btn';
+        wikiBtn.innerHTML = '<span class="lightbulb">💡</span><span class="text">víš, že...</span>';
+        wikiBtn.onclick = () => openWikiOverlay(wikiPath);
+        correctGroup.appendChild(wikiBtn);
     },
     
     toggleExpl(k) { 
@@ -2113,7 +2298,7 @@ const DataLoader = {
             const s = document.createElement('script'); 
             // Generate file path dynamically if file is undefined
             const filePath = file || this.generateFilePath(id);
-            s.src = filePath; 
+            s.src = filePath + '?t=' + Date.now(); 
             s.setAttribute('data-id', id);
             
             const timeout = setTimeout(() => {
@@ -2154,6 +2339,7 @@ const DataLoader = {
             if (group.questions && Array.isArray(group.questions)) {
                 // Add group information to each question
                 group.questions.forEach(question => {
+                    console.log('Debug processQuizData - question:', question.q.substring(0, 30), 'wiki:', question.wiki);
                     allQuestions.push({
                         ...question,
                         _group: groupKey,
@@ -2566,6 +2752,9 @@ const Hub = {
 
 // ===== GLOBAL FUNCTIONS =====
 function loadQuizAndGoToSetup(quizId, quizTitle) {
+    // Clear cache to ensure fresh data (including new wiki attributes)
+    DataLoader.clearCache();
+    
     // Set current quiz ID
     AppState.currentQuizId = quizId;
     AppState.selectedTopicName = quizTitle;
@@ -2798,6 +2987,32 @@ function openInfoModal() {
 }
 function closeInfoModal() { 
     document.getElementById('info-modal').classList.add('hidden'); 
+}
+
+// ===== WIKI OVERLAY FUNCTIONS =====
+function openWikiOverlay(wikiPath) {
+    if (!wikiPath || wikiPath.length < 2) return;
+    
+    const [category, entry] = wikiPath;
+    const wikiData = window.wiki;
+    
+    if (!wikiData || !wikiData[category] || !wikiData[category][entry]) {
+        console.error('Wiki entry not found:', wikiPath);
+        return;
+    }
+    
+    const entryData = wikiData[category][entry];
+    
+    // Update overlay content
+    document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
+    document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+    
+    // Show overlay
+    document.getElementById('wiki-overlay').classList.remove('hidden');
+}
+
+function closeWikiOverlay() {
+    document.getElementById('wiki-overlay').classList.add('hidden');
 }
 
 function openAdvancedOptionsModal() {

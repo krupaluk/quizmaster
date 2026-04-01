@@ -14,7 +14,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Název 'Organon' znamená v řečtině 'nástroj'. Aristotelés považoval logiku za nezbytný nástroj pro veškerou vědeckou práci a poznání, nikoliv za samostatnou vědu, což tento soubor děl přesně vystihuje.",
                     c: "Chyba. Analytiky (První a Druhé) jsou sice klíčovými částmi Organonu, ale nejsou názvem celého souboru."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["filosofie", "organon"]
             },
             {
                 q: "Co tvoří základ Aristotelovy deduktivní logiky?",
@@ -27,7 +28,7 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Aristotelés sice indukci (postup od jednotlivého k obecnému) znal, ale jeho logika je primárně deduktivní a zaměřená na syllogismy.",
                     c: "Chyba. Pravdivostní tabulky jsou nástrojem moderní výrokové logiky, kterou rozvinul až stoicismus a později Gottlob Frege."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
             },
             {
                 q: "Který z principů logiky Aristotelés definoval jako zákon, že nic nemůže zároveň být i nebýt v témže smyslu?",
@@ -40,7 +41,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Zákon vyloučení třetího říká, že každé tvrzení je buď pravdivé, nebo nepravdivé, nic mezi tím neexistuje.",
                     c: "Správně. Zákon sporu (principium contradictionis) je pro Aristotela nejpevnější ze všech zásad. Říká, že nelze o tomtéž v tomtéž čase tvrdit, že to je i není, což zajišťuje bezrozpornost myšlení."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["filosofie", "organon"]
             },
             {
                 q: "Jak Aristotelés nazýval kategorii termínů, které tvoří subjekt nebo predikát v syllogismu?",
