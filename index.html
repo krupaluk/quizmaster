@@ -997,6 +997,33 @@
             </div>
             <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
+            <!-- Progress Management -->
+            <div id="quiz-progress-section" class="setup-section" style="display: none;">
+                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
+        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
+    </div>
+    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
+        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
+    </div>
+</div>
+                <div id="completion-reset-container" style="margin-top: 8px; padding: 10px; background: #fafafa; border-radius: 10px; border: 1px solid #eee;">
+                    <div style="font-size: 11px; color: var(--ios-gray); margin-bottom: 8px; text-align: center; font-weight: 500;">⚙️ Pokročilé možnosti</div>
+                    <div id="completion-reset-buttons" style="display: flex; flex-direction: column; gap: 6px;">
+                        <button class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd;" onclick="resetQuizProgress()">
+                            🗑️ Vyčistit postup (počet dokončení zůstane)
+                        </button>
+                        <button id="btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetAllCompletions()">
+                            ✓ Vynulovat dokončení s opravou
+                        </button>
+                        <button id="btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetFlawlessCompletions()">
+                            🏅 Vynulovat bezchybná dokončení
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Quiz Options -->
             <div class="setup-section">
                 <div class="section-title">📁 Výběr kapitol</div>
@@ -1045,10 +1072,15 @@
             
             <!-- Progress Management -->
             <div id="quiz-progress-section" class="setup-section" style="display: none;">
-                <div class="section-title">📊 Postup v kvízu</div>
-                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px; font-size: 14px;">
-                    <!-- Progress info will be inserted here -->
-                </div>
+                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
+        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
+    </div>
+    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
+        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
+    </div>
+</div>
                 <div id="completion-reset-container" style="margin-top: 8px; padding: 10px; background: #fafafa; border-radius: 10px; border: 1px solid #eee;">
                     <div style="font-size: 11px; color: var(--ios-gray); margin-bottom: 8px; text-align: center; font-weight: 500;">⚙️ Pokročilé možnosti</div>
                     <div id="completion-reset-buttons" style="display: flex; flex-direction: column; gap: 6px;">
@@ -1064,9 +1096,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
+            
     <!-- QUIZ -->
     <div id="sc-quiz" class="screen hidden">
         <div class="card">
@@ -2581,11 +2611,11 @@ function getMedalByCount(count) {
 
 function updateQuizProgressSection() {
     const progressSection = document.getElementById('quiz-progress-section');
-    const progressInfo = document.getElementById('quiz-progress-info');
+    const progressFill = document.getElementById('progress-fill');
+    const progressPercent = document.getElementById('progress-percent');
     const badgesContainer = document.getElementById('setup-completion-badges');
-    const resetButton = document.getElementById('btn-reset-progress');
     
-    if (!progressSection || !progressInfo) return;
+    if (!progressSection) return;
     
     const quizId = AppState.currentQuizId;
     if (!quizId) {
@@ -2595,13 +2625,26 @@ function updateQuizProgressSection() {
     }
     
     const stats = UserDataManager.getQuizStats(quizId);
+    const totalQuestions = UserDataManager.getQuizTotalQuestions(quizId);
     
     // Always show progress section for selected quiz
     progressSection.style.display = 'block';
     
-    // Show reset button if there's any progress
-    if (resetButton) {
-        resetButton.style.display = stats.totalAnswered > 0 ? 'block' : 'none';
+    // Calculate progress percentage (1-99 range)
+    let progress = 0;
+    if (totalQuestions > 0 && stats.started) {
+        progress = Math.round((stats.correctCount / totalQuestions) * 100);
+        // Clamp to 1-99 range
+        if (progress < 1 && stats.correctCount > 0) progress = 1;
+        if (progress > 99) progress = 99;
+    }
+    
+    // Update progress bar
+    if (progressFill) {
+        progressFill.style.width = progress + '%';
+    }
+    if (progressPercent) {
+        progressPercent.textContent = progress + '%';
     }
     
     // Show completion reset buttons based on stats
@@ -2629,24 +2672,6 @@ function updateQuizProgressSection() {
         }
         badgesContainer.innerHTML = badgesHtml;
     }
-    
-    let statusText = '';
-    const regularCount = stats.completionCount - stats.flawlessCompletionCount;
-    
-    // Always show completion counts (even if 0)
-    const flawlessMedal = getMedalByCount(stats.flawlessCompletionCount);
-    statusText += `${flawlessMedal} Bezchybně dokončeno<br>`;
-    statusText += `✓ Dokončeno celkem: <b>${stats.completionCount}x</b><br>`;
-    
-    if (stats.totalAnswered > 0) {
-        statusText += `📝 Aktuální postup: ${stats.totalAnswered} otázek zodpovězeno<br>`;
-        statusText += `   • Správně: ${stats.correctCount}<br>`;
-        statusText += `   • Špatně: ${stats.wrongCount}`;
-    } else {
-        statusText += '📝 Aktuální postup: žádné otázky';
-    }
-    
-    progressInfo.innerHTML = statusText;
 }
 
 function resetQuizProgress() {
