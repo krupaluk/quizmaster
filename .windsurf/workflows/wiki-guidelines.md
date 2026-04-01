@@ -50,6 +50,27 @@ When creating wiki entries for quiz questions, follow these guidelines based on 
 - Alternating rows: `background: #fafafa;`
 - Keep overall content compact for mobile viewing
 
+## File Structure Pattern
+
+Each wiki file must follow this pattern to avoid conflicts when multiple files are loaded:
+
+```javascript
+window.wiki = window.wiki || {};  // Initialize if not exists
+
+window.wiki.categoryName = {      // Add your category
+    "entry1": {
+        "title": "Entry Title",
+        "content": `...`
+    },
+    "entry2": { ... }
+};  // Note: single closing brace with semicolon
+```
+
+**Important:**
+- Always use `window.wiki = window.wiki || {};` first
+- Then assign your category: `window.wiki.yourCategory = {...}`
+- Never use `window.wiki = { "yourCategory": {...} }` as it overwrites other files
+
 ## Example Pattern
 
-See `quizdata/wiki.js` - "filosofie" > "organon" for the reference implementation.
+See `quizdata/wiki/wiki_logika.js` - "logika" > "organon" for the reference implementation.

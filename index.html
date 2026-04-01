@@ -1329,7 +1329,7 @@
 </div>
 
 <script src="quizMaster_config.js"></script>
-<script src="quizdata/wiki.js"></script>
+<script src="quizdata/wiki/wiki_logika.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -2365,7 +2365,6 @@ const DataLoader = {
             if (group.questions && Array.isArray(group.questions)) {
                 // Add group information to each question
                 group.questions.forEach(question => {
-                    console.log('Debug processQuizData - question:', question.q.substring(0, 30), 'wiki:', question.wiki);
                     allQuestions.push({
                         ...question,
                         _group: groupKey,
@@ -2811,7 +2810,6 @@ function loadQuizAndGoToSetup(quizId, quizTitle) {
 
 function loadAndGoToSetup() { 
     // This function is kept for compatibility but no longer used with checkbox logic
-    console.log('loadAndGoToSetup is deprecated, use loadQuizAndGoToSetup instead');
 }
 function goBackToHub() {
     // Return to hub screen
@@ -2829,7 +2827,6 @@ function goBackToSetup() {
     // Check if quiz was completed and auto-clear progress
     if (quizId) {
         const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
-        console.log('Debug goBackToSetup:', { remainingCount, quizId });
         if (remainingCount === 0) {
             const quizData = UserDataManager.getQuizData(quizId);
             const correctAnswers = Object.values(quizData.answeredQuestions || {}).filter(a => a.correct).length;

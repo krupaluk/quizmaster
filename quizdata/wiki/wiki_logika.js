@@ -1,5 +1,6 @@
-window.wiki = {
-    "logika": {
+window.wiki = window.wiki || {};
+
+window.wiki.logika = {
         "organon": {
             "title": "Organon - Aristotelův nástroj logiky",
             "content": `
@@ -221,5 +222,4 @@ window.wiki = {
 <p style="font-size: 13px; color: #555;"><strong>Příklady jazykových her:</strong> Rozkaz, otázka, modlitba, popis, žádost. Každá má svá pravidla.</p>
             `
         }
-    }
 };
