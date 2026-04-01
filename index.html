@@ -497,7 +497,7 @@
             background: var(--ios-card); 
             border-radius: 25px; 
             padding: 25px; 
-            padding-top: 18px;
+            padding-top: 12px;
             position: relative; 
             overflow: hidden; 
             min-height: 200px; 
@@ -951,6 +951,54 @@
         <div class="stats-group" id="header-right-slot"></div>
     </div>
 
+    <!-- Advanced Options Modal -->
+    <div id="advanced-options-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeAdvancedOptionsModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">⚙️</span>
+                <h2 class="modal-title">Pokročilé možnosti</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Správa postupu a statistik</p>
+            </div>
+            <div class="modal-body">
+                <div id="advanced-options-stats" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 15px; font-size: 14px;">
+                    <!-- Stats will be inserted here -->
+                </div>
+                
+                <!-- Manual completion count editor -->
+                <div style="padding: 12px; background: #fff9e6; border-radius: 12px; margin-bottom: 15px; border: 1px solid #ffe0b2;">
+                    <div style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">✏️ Upravit počet dokončení</div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <div style="flex: 1;">
+                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Celkem dokončeno</label>
+                            <input type="number" id="manual-total-completions" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                        </div>
+                        <div style="flex: 1;">
+                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Z toho bezchybně</label>
+                            <input type="number" id="manual-flawless-completions" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                        </div>
+                    </div>
+                    <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; padding: 10px; border-radius: 8px; border: none; text-align: center; width: 100%;" onclick="saveManualCompletionCounts()">
+                        💾 Uložit počty
+                    </button>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <button class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center;" onclick="resetQuizProgress(); closeAdvancedOptionsModal();">
+                        🗑️ Vyčistit postup
+                    </button>
+                    <button id="modal-btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center; display: none;" onclick="resetAllCompletions(); closeAdvancedOptionsModal();">
+                        ✓ Vynulovat dokončení s opravou
+                    </button>
+                    <button id="modal-btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center; display: none;" onclick="resetFlawlessCompletions(); closeAdvancedOptionsModal();">
+                        🏅 Vynulovat bezchybná dokončení
+                    </button>
+                </div>
+            </div>
+            <button class="modal-close-btn" onclick="closeAdvancedOptionsModal()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- Info Modal -->
     <div id="info-modal" class="modal hidden">
         <div class="modal-backdrop" onclick="closeInfoModal()"></div>
@@ -991,35 +1039,20 @@
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
         <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-                <div id="setup-selected-topics-summary" class="quiz-topic-info" style="margin: 0;"><b>Vybraný okruh</b> → načítání...</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h2 id="setup-screen-title" style="font-size: 26px; text-align: left; margin: 0; flex: 1;">Nastavení kvízu</h2>
                 <div id="setup-completion-badges" style="display: flex; gap: 6px; flex-shrink: 0;"></div>
             </div>
-            <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
             
-            <!-- Progress Management -->
-            <div id="quiz-progress-section" class="setup-section" style="display: none;">
-                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px;">
-    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
-        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
-        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
-    </div>
-    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
-        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
-    </div>
-</div>
-                <div id="completion-reset-container" style="margin-top: 8px; padding: 10px; background: #fafafa; border-radius: 10px; border: 1px solid #eee;">
-                    <div style="font-size: 11px; color: var(--ios-gray); margin-bottom: 8px; text-align: center; font-weight: 500;">⚙️ Pokročilé možnosti</div>
-                    <div id="completion-reset-buttons" style="display: flex; flex-direction: column; gap: 6px;">
-                        <button class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd;" onclick="resetQuizProgress()">
-                            🗑️ Vyčistit postup (počet dokončení zůstane)
-                        </button>
-                        <button id="btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetAllCompletions()">
-                            ✓ Vynulovat dokončení s opravou
-                        </button>
-                        <button id="btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetFlawlessCompletions()">
-                            🏅 Vynulovat bezchybná dokončení
-                        </button>
+            <!-- Progress bar under title -->
+            <div id="quiz-progress-section" class="setup-section" style="display: none; margin-top: 15px;">
+                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
+                        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
+                    </div>
+                    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
+                        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
                     </div>
                 </div>
             </div>
@@ -1070,33 +1103,17 @@
                 </div>
             </div>
             
-            <!-- Progress Management -->
-            <div id="quiz-progress-section" class="setup-section" style="display: none;">
-                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 10px;">
-    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
-        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
-        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
-    </div>
-    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
-        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
-    </div>
-</div>
-                <div id="completion-reset-container" style="margin-top: 8px; padding: 10px; background: #fafafa; border-radius: 10px; border: 1px solid #eee;">
-                    <div style="font-size: 11px; color: var(--ios-gray); margin-bottom: 8px; text-align: center; font-weight: 500;">⚙️ Pokročilé možnosti</div>
-                    <div id="completion-reset-buttons" style="display: flex; flex-direction: column; gap: 6px;">
-                        <button class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd;" onclick="resetQuizProgress()">
-                            🗑️ Vyčistit postup (počet dokončení zůstane)
-                        </button>
-                        <button id="btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetAllCompletions()">
-                            ✓ Vynulovat dokončení s opravou
-                        </button>
-                        <button id="btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 12px; padding: 10px; border-radius: 8px; border: 1px solid #ddd; display: none;" onclick="resetFlawlessCompletions()">
-                            🏅 Vynulovat bezchybná dokončení
-                        </button>
-                    </div>
-                </div>
+            <!-- Advanced Options button at bottom -->
+            <div class="setup-section" style="margin-top: 20px;">
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openAdvancedOptionsModal()">
+                    ⚙️ Pokročilé možnosti
+                </button>
             </div>
             
+            </div>
+            
+    </div>
+    
     <!-- QUIZ -->
     <div id="sc-quiz" class="screen hidden">
         <div class="card">
@@ -1703,6 +1720,15 @@ const QuizEngine = {
             if (quizData.answeredQuestions && Object.keys(quizData.answeredQuestions).length > 0) {
                 this.showQuizCompletePrompt(quizId);
                 return;
+            } else {
+                // No questions available and no answered questions - show error
+                Hub.showWarningBubble('Chyba: Žádné otázky k zobrazení. Zkuste obnovit stránku.');
+                console.error('No questions available:', { 
+                    dbLength: AppState.db.length, 
+                    activeFilters: quizActiveFilters,
+                    quizId: quizId 
+                });
+                return;
             }
         }
         
@@ -2047,6 +2073,12 @@ const DataLoader = {
                 const summaryEl = document.getElementById('setup-selected-topics-summary');
                 if (summaryEl) {
                     summaryEl.innerHTML = `<b>Vybraný okruh</b> → ${AppState.selectedTopicName}`;
+                }
+                
+                // Update the setup screen title
+                const titleEl = document.getElementById('setup-screen-title');
+                if (titleEl) {
+                    titleEl.textContent = AppState.selectedTopicName;
                 }
                 
                 if (AppState.db.length === 0) {
@@ -2433,7 +2465,7 @@ const Hub = {
             if (bubble.parentNode) {
                 bubble.remove();
             }
-        }, 4000);
+        }, 2000);
     },
     
     renderQuizList() {
@@ -2648,8 +2680,8 @@ function updateQuizProgressSection() {
     }
     
     // Show completion reset buttons based on stats
-    const btnResetAll = document.getElementById('btn-reset-all');
-    const btnResetFlawless = document.getElementById('btn-reset-flawless');
+    const btnResetAll = document.getElementById('modal-btn-reset-all');
+    const btnResetFlawless = document.getElementById('modal-btn-reset-flawless');
     
     if (btnResetAll) {
         const regularCount = stats.completionCount - stats.flawlessCompletionCount;
@@ -2766,6 +2798,105 @@ function openInfoModal() {
 }
 function closeInfoModal() { 
     document.getElementById('info-modal').classList.add('hidden'); 
+}
+
+function openAdvancedOptionsModal() {
+    const modal = document.getElementById('advanced-options-modal');
+    const stats = UserDataManager.getQuizStats(AppState.currentQuizId);
+    const totalQuestions = UserDataManager.getQuizTotalQuestions(AppState.currentQuizId);
+    
+    // Update stats display in modal
+    const statsContainer = document.getElementById('advanced-options-stats');
+    if (statsContainer) {
+        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
+        let statsHtml = '';
+        
+        if (stats.completionCount > 0) {
+            // Build completion message based on flawless vs regular completions
+            if (stats.flawlessCompletionCount === stats.completionCount) {
+                // All completions were flawless
+                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b> vždy bezchybně.</div>`;
+            } else if (stats.flawlessCompletionCount > 0) {
+                // Mix of flawless and regular
+                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b> z toho <b>${stats.flawlessCompletionCount}x</b> bezchybně.</div>`;
+            } else {
+                // All completions had errors
+                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b>.</div>`;
+            }
+        } else {
+            statsHtml += `<div style="color: var(--ios-gray);">Zatím žádná dokončení</div>`;
+        }
+        
+        if (stats.totalAnswered > 0) {
+            statsHtml += `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd;">`;
+            statsHtml += `<div>📝 Aktuální postup:</div>`;
+            statsHtml += `<div>• Správně: ${stats.correctCount} / ${totalQuestions}</div>`;
+            statsHtml += `<div>• Špatně: ${stats.wrongCount}</div>`;
+            statsHtml += `</div>`;
+        }
+        
+        statsContainer.innerHTML = statsHtml;
+    }
+    
+    // Show/hide reset buttons based on stats
+    const btnResetAll = document.getElementById('modal-btn-reset-all');
+    const btnResetFlawless = document.getElementById('modal-btn-reset-flawless');
+    
+    if (btnResetAll) {
+        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
+        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
+    }
+    
+    if (btnResetFlawless) {
+        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
+    }
+    
+    // Update manual edit inputs
+    const totalInput = document.getElementById('manual-total-completions');
+    const flawlessInput = document.getElementById('manual-flawless-completions');
+    if (totalInput) totalInput.value = stats.completionCount;
+    if (flawlessInput) flawlessInput.value = stats.flawlessCompletionCount;
+    
+    modal.classList.remove('hidden');
+}
+
+function saveManualCompletionCounts() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const totalInput = document.getElementById('manual-total-completions');
+    const flawlessInput = document.getElementById('manual-flawless-completions');
+    
+    let totalCount = parseInt(totalInput.value) || 0;
+    let flawlessCount = parseInt(flawlessInput.value) || 0;
+    
+    // Validation: flawless cannot be more than total
+    if (flawlessCount > totalCount) {
+        Hub.showWarningBubble('Bezchybných dokončení nemůže být více než celkových!');
+        return;
+    }
+    
+    // Save to UserDataManager
+    const data = UserDataManager.getData();
+    if (!data.quizzes[quizId]) {
+        data.quizzes[quizId] = UserDataManager.getDefaultQuizData();
+    }
+    
+    data.quizzes[quizId].completionCount = totalCount;
+    data.quizzes[quizId].flawlessCompletionCount = flawlessCount;
+    data.quizzes[quizId].completed = totalCount > 0;
+    
+    UserDataManager.saveData(data);
+    
+    // Refresh display
+    openAdvancedOptionsModal();
+    updateQuizProgressSection();
+    
+    Hub.showWarningBubble('Počty dokončení uloženy!');
+}
+
+function closeAdvancedOptionsModal() {
+    document.getElementById('advanced-options-modal').classList.add('hidden');
 }
 
 // ===== INITIALIZATION =====
