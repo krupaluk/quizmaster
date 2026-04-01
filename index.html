@@ -1135,21 +1135,17 @@
                     <!-- Stats will be inserted here -->
                 </div>
                 
-                <!-- Manual completion count editor -->
+                <!-- Manual points editor -->
                 <div style="padding: 12px; background: #fff9e6; border-radius: 12px; margin-bottom: 15px; border: 1px solid #ffe0b2;">
-                    <div style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">✏️ Upravit počet dokončení</div>
-                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <div style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">✏️ Upravit body</div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-end;">
                         <div style="flex: 1;">
-                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Celkem dokončeno</label>
-                            <input type="number" id="manual-total-completions" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
-                        </div>
-                        <div style="flex: 1;">
-                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Z toho bezchybně</label>
-                            <input type="number" id="manual-flawless-completions" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Počet bodů</label>
+                            <input type="number" id="manual-points" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
                         </div>
                     </div>
-                    <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; padding: 10px; border-radius: 8px; border: none; text-align: center; width: 100%;" onclick="saveManualCompletionCounts()">
-                        💾 Uložit počty
+                    <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; padding: 10px; border-radius: 8px; border: none; text-align: center; width: 100%;" onclick="saveManualPoints()">
+                        💾 Uložit body
                     </button>
                 </div>
                 
@@ -1157,11 +1153,8 @@
                     <button class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center;" onclick="resetQuizProgress(); closeAdvancedOptionsModal();">
                         🗑️ Vyčistit postup
                     </button>
-                    <button id="modal-btn-reset-all" class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center; display: none;" onclick="resetAllCompletions(); closeAdvancedOptionsModal();">
-                        ✓ Vynulovat dokončení s opravou
-                    </button>
-                    <button id="modal-btn-reset-flawless" class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center; display: none;" onclick="resetFlawlessCompletions(); closeAdvancedOptionsModal();">
-                        🏅 Vynulovat bezchybná dokončení
+                    <button class="btn" style="background: #fff; color: #ff3b30; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ff3b30; text-align: center;" onclick="resetAllPoints(); closeAdvancedOptionsModal();">
+                        🔄 Vynulovat všechny body
                     </button>
                 </div>
             </div>
@@ -1315,15 +1308,15 @@
 
     <!-- RESULTS -->
     <div id="sc-res" class="screen hidden">
-        <div class="card">
-            <h2 style="text-align: center;">Výsledek</h2>
+        <div class="card" style="padding: 30px 20px;">
+            <h2 style="text-align: center; font-size: 24px; font-weight: 700; color: var(--ios-dark); margin-bottom: 5px;">Výsledek</h2>
             <div id="res-grade" class="grade-display"></div>
-            <p id="res-stat" style="font-size: 19px; text-align: center;"></p>
+            <p id="res-stat" style="font-size: 17px; text-align: center; color: var(--ios-gray); margin: 10px 0;"></p>
             <div id="res-retry" class="hidden">
-                <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin-bottom: 15px;"></p>
-                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
+                <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin: 15px 0; padding: 12px; background: rgba(255,59,48,0.08); border-radius: 10px;"></p>
+                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center; width: 100%; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 600;" onclick="startErrorLoop()">Opravit chyby</button>
             </div>
-            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="goBackToSetup()">Zpět do nastavení</button>
+            <button class="btn" style="width: 100%; margin-top: 20px; padding: 16px; background: var(--ios-bg); color: var(--ios-blue); border-radius: 12px; font-size: 16px; font-weight: 600; border: 1px solid var(--ios-blue);" onclick="goBackToSetup()">Zpět do nastavení</button>
         </div>
     </div>
 </div>
@@ -1396,8 +1389,7 @@ const UserDataManager = {
         return {
             started: false,                    // Whether user has launched this quiz at least once
             completed: false,                  // Whether quiz is marked as 'hotovo'
-            completionCount: 0,                // How many times completed (with or without errors)
-            flawlessCompletionCount: 0,        // How many times completed without any errors
+            points: 0,                         // Total points (1 for completion with errors, 3 for flawless)
             answeredQuestions: {},             // questionKey -> {correct: boolean, timestamp: number}
             wrongAnswers: [],                  // Array of question keys answered wrong (current attempt)
             allTimeWrongAnswers: [],           // Array of question keys answered wrong EVER (for flawless tracking)
@@ -1464,55 +1456,51 @@ const UserDataManager = {
     },
     
     // Mark quiz as successfully completed
-    // completionType: 'flawless' = bezchybné, 'regular' = s opravenými chybami
+    // completionType: 'flawless' = bezchybné (3 body), 'regular' = s opravenými chybami (1 bod)
     markQuizCompleted(quizId, completionType = 'none') {
         const data = this.getData();
         if (!data.quizzes[quizId]) {
             data.quizzes[quizId] = this.getDefaultQuizData();
         }
         
-        // Increment appropriate counter based on completion type
+        // Add points based on completion type
         if (completionType === 'flawless') {
             data.quizzes[quizId].completed = true;
-            data.quizzes[quizId].flawlessCompletionCount++;
-            data.quizzes[quizId].completionCount++;
+            data.quizzes[quizId].points += 3;  // 3 body za bezchybné dokončení
             
             // Clear progress only after FULL completion (all questions answered)
-            // preserveCompletion = true to keep the counts we just incremented
+            // preservePoints = true to keep the points we just added
             this.clearQuizProgress(quizId, true);
         } else if (completionType === 'regular') {
             data.quizzes[quizId].completed = true;
-            data.quizzes[quizId].completionCount++;
+            data.quizzes[quizId].points += 1;  // 1 bod za dokončení s chybou
             
             // Clear progress after regular completion too
-            // preserveCompletion = true to keep the counts we just incremented
+            // preservePoints = true to keep the points we just added
             this.clearQuizProgress(quizId, true);
         }
         
         this.saveData(data);
         return {
-            completionCount: data.quizzes[quizId].completionCount,
-            flawlessCompletionCount: data.quizzes[quizId].flawlessCompletionCount
+            points: data.quizzes[quizId].points
         };
     },
     
     // Clear quiz progress (answered questions, wrong answers)
-    // preserveCompletion = true: keeps completion counts and completed status
-    clearQuizProgress(quizId, preserveCompletion = true) {
+    // preservePoints = true: keeps points and completed status
+    clearQuizProgress(quizId, preservePoints = true) {
         const data = this.getData();
         if (!data.quizzes[quizId]) return;
         
-        const completionCount = data.quizzes[quizId].completionCount;
-        const flawlessCompletionCount = data.quizzes[quizId].flawlessCompletionCount;
+        const points = data.quizzes[quizId].points;
         const completed = data.quizzes[quizId].completed;
         const started = data.quizzes[quizId].started;
         
-        // Reset to default but preserve completion info if requested
+        // Reset to default but preserve points if requested
         data.quizzes[quizId] = this.getDefaultQuizData();
         
-        if (preserveCompletion) {
-            data.quizzes[quizId].completionCount = completionCount;
-            data.quizzes[quizId].flawlessCompletionCount = flawlessCompletionCount;
+        if (preservePoints) {
+            data.quizzes[quizId].points = points;
             data.quizzes[quizId].completed = completed;
             data.quizzes[quizId].started = started;
         }
@@ -1539,51 +1527,12 @@ const UserDataManager = {
         const quizData = this.getQuizData(quizId);
         return quizData.totalQuestions || 0;
     },
-    resetFlawlessCompletionCount(quizId) {
+    // Reset all points to zero
+    resetPoints(quizId) {
         const data = this.getData();
         if (!data.quizzes[quizId]) return;
         
-        // Reduce completionCount by the number of flawless completions being reset
-        data.quizzes[quizId].completionCount -= data.quizzes[quizId].flawlessCompletionCount;
-        if (data.quizzes[quizId].completionCount < 0) {
-            data.quizzes[quizId].completionCount = 0;
-        }
-        
-        data.quizzes[quizId].flawlessCompletionCount = 0;
-        
-        // Update completed status based on remaining completions
-        if (data.quizzes[quizId].completionCount === 0) {
-            data.quizzes[quizId].completed = false;
-        }
-        
-        this.saveData(data);
-    },
-    
-    // Reset regular completion count only (completions with errors)
-    resetRegularCompletionCount(quizId) {
-        const data = this.getData();
-        if (!data.quizzes[quizId]) return;
-        
-        // Reduce completionCount by the number of regular completions
-        // (difference between total and flawless)
-        const regularCount = data.quizzes[quizId].completionCount - data.quizzes[quizId].flawlessCompletionCount;
-        data.quizzes[quizId].completionCount = data.quizzes[quizId].flawlessCompletionCount;
-        
-        // Update completed status based on remaining completions
-        if (data.quizzes[quizId].completionCount === 0) {
-            data.quizzes[quizId].completed = false;
-        }
-        
-        this.saveData(data);
-    },
-    
-    // Reset all completion counts (flawless and regular)
-    resetAllCompletionCounts(quizId) {
-        const data = this.getData();
-        if (!data.quizzes[quizId]) return;
-        
-        data.quizzes[quizId].flawlessCompletionCount = 0;
-        data.quizzes[quizId].completionCount = 0;
+        data.quizzes[quizId].points = 0;
         data.quizzes[quizId].completed = false;
         
         this.saveData(data);
@@ -1599,8 +1548,7 @@ const UserDataManager = {
         return {
             started: quizData.started,
             completed: quizData.completed,
-            completionCount: quizData.completionCount || 0,
-            flawlessCompletionCount: quizData.flawlessCompletionCount || 0,
+            points: quizData.points || 0,
             totalAnswered: answeredKeys.length,
             correctCount: correctCount,
             wrongCount: wrongCount,
@@ -2148,8 +2096,14 @@ const Results = {
             const isFullyCompleted = remainingCount === 0 && AppState.sessCorrect > 0;
             
             if (isFullyCompleted && quizId) {
-                // Get current stats (completion already counted)
-                const stats = UserDataManager.getQuizStats(quizId);
+                // Get current stats - if completion wasn't counted in check(), count it now
+                let stats = UserDataManager.getQuizStats(quizId);
+                
+                // If no points were added yet for this completion, add them now
+                if (stats.points === 0 || !quizData.completed) {
+                    const everHadErrors = AppState.sessWrong > 0;
+                    stats = UserDataManager.markQuizCompleted(quizId, everHadErrors ? 'regular' : 'flawless');
+                }
                 
                 // Check for errors to determine which badge to show
                 const everHadErrors = AppState.sessWrong > 0;
@@ -2197,22 +2151,36 @@ const Results = {
     
     showCompletionBadge(stats, completionType) {
         const gradeEl = document.getElementById('res-grade');
-        const badge = document.createElement('div');
-        badge.style.cssText = 'font-size: 14px; color: var(--border-green); margin-top: 10px;';
         
-        if (completionType === 'flawless') {
-            badge.innerHTML = `🏅 Bezchybně dokončeno! (${stats.flawlessCompletionCount}x)`;
-        } else {
-            badge.innerHTML = `✓ Dokončeno! (${stats.completionCount}x celkem, ${stats.flawlessCompletionCount}x bezchybně)`;
-        }
-        gradeEl.appendChild(badge);
+        const medal = getMedalByPoints(stats.points);
+        const medalColor = completionType === 'flawless' ? '#34c759' : '#007aff';
+        const icon = completionType === 'flawless' ? '✓' : '✓';
+        const title = completionType === 'flawless' ? 'Bezchybně dokončeno!' : 'Dokončeno s chybou';
+        const pointsText = completionType === 'flawless' ? '+3 body' : '+1 bod';
+        
+        gradeEl.innerHTML = `
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 20px 0;">
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: ${medalColor}; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    <span style="font-size: 40px; color: white;">${icon}</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 700; color: ${medalColor}; text-align: center;">${title}</div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 16px; color: var(--ios-gray);">
+                    <span style="font-weight: 600; color: var(--ios-blue);">${pointsText}</span>
+                    <span>|</span>
+                    <span>Celkem: <b style="color: var(--ios-blue); font-size: 20px;">${stats.points}</b> bodů ${medal}</span>
+                </div>
+            </div>
+        `;
     },
     
     showPartialCompletionMessage(remainingCount) {
         const statEl = document.getElementById('res-stat');
         const msg = document.createElement('div');
-        msg.style.cssText = 'font-size: 14px; color: var(--ios-blue); margin-top: 10px; padding: 10px; background: var(--ios-bg); border-radius: 8px;';
-        msg.innerHTML = `✓ Tato část byla zodpovězena správně!<br>Zbývá ještě <b>${remainingCount}</b> otázek v kvízu.`;
+        msg.style.cssText = 'margin: 15px 0; padding: 15px; background: var(--ios-bg); border-radius: 12px; text-align: center; border-left: 4px solid var(--ios-blue);';
+        msg.innerHTML = `
+            <div style="font-size: 14px; color: var(--ios-blue); font-weight: 600; margin-bottom: 5px;">✓ Tato část zodpovězena správně!</div>
+            <div style="font-size: 13px; color: var(--ios-gray);">Zbývá ještě <b style="color: var(--ios-blue);">${remainingCount}</b> otázek v kvízu</div>
+        `;
         statEl.appendChild(msg);
     },
     
@@ -2228,24 +2196,36 @@ const Results = {
         const stats = UserDataManager.getQuizStats(quizId);
         const container = document.getElementById('res-stats-summary') || this.createStatsContainer();
         
-        if (stats.completionCount > 0 || stats.flawlessCompletionCount > 0) {
-            container.innerHTML = `
-                <div style="margin-top: 20px; padding: 15px; background: var(--ios-bg); border-radius: 12px; text-align: center;">
-                    <div style="font-size: 14px; font-weight: 600; color: var(--ios-gray); margin-bottom: 10px;">📊 Statistiky tohoto kvízu</div>
-                    <div style="display: flex; justify-content: center; gap: 20px;">
-                        <div>
-                            <div style="font-size: 28px; font-weight: 700; color: var(--border-green);">${stats.flawlessCompletionCount}</div>
-                            <div style="font-size: 11px; color: var(--ios-gray);">bezchybných</div>
-                        </div>
-                        <div>
-                            <div style="font-size: 28px; font-weight: 700; color: var(--ios-blue);">${stats.completionCount}</div>
-                            <div style="font-size: 11px; color: var(--ios-gray);">celkem dokončení</div>
-                        </div>
+        const nextMedalPoints = stats.points < 3 ? 3 : stats.points < 6 ? 6 : stats.points < 9 ? 9 : stats.points < 12 ? 12 : stats.points < 15 ? 15 : null;
+        const pointsToNext = nextMedalPoints ? nextMedalPoints - stats.points : 0;
+        
+        let nextMedalHtml = '';
+        if (pointsToNext > 0) {
+            const nextMedal = getMedalByPoints(nextMedalPoints);
+            nextMedalHtml = `
+                <div style="margin-top: 20px; padding: 15px 20px; background: linear-gradient(135deg, #f5f5f7 0%, #fff 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                    <div style="font-size: 32px;">${nextMedal}</div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">Do další medaile</div>
+                        <div style="font-size: 18px; font-weight: 700; color: var(--ios-blue);">${pointsToNext} bodů</div>
                     </div>
                 </div>
             `;
-            container.classList.remove('hidden');
+        } else {
+            // All medals achieved - show congratulatory message
+            nextMedalHtml = `
+                <div style="margin-top: 20px; padding: 15px 20px; background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid rgba(52,199,89,0.2);">
+                    <div style="font-size: 32px;">🏆</div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 13px; color: #34c759; font-weight: 500;">Gratulujeme!</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #34c759;">Všechny medaile získány</div>
+                    </div>
+                </div>
+            `;
         }
+        
+        container.innerHTML = nextMedalHtml;
+        container.classList.remove('hidden');
     },
     
     createStatsContainer() {
@@ -2729,14 +2709,14 @@ const Hub = {
                     // Get quiz stats from LocalStorage
                     const quizStats = UserDataManager.getQuizStats(q.id);
                     
-                    // Build badges HTML - only completion badges
+                    // Build badges HTML - show medal based on points
                     let badgesHtml = '';
-                    if (quizStats.flawlessCompletionCount > 0) {
-                        const flawlessMedal = getMedalByCount(quizStats.flawlessCompletionCount);
-                        badgesHtml += `<span class="badge flawless">${flawlessMedal}</span>`;
-                    }
-                    if (quizStats.completionCount > 0) {
-                        badgesHtml += `<span class="badge">✓ ${quizStats.completionCount}x</span>`;
+                    if (quizStats.points > 0) {
+                        const medal = getMedalByPoints(quizStats.points);
+                        if (medal) {
+                            badgesHtml += `<span class="badge flawless">${medal}</span>`;
+                        }
+                        badgesHtml += `<span class="badge">${quizStats.points} b</span>`;
                     }
                     
                     // Calculate progress for the progress bar
@@ -2870,13 +2850,13 @@ function goBackToSetup() {
     updateQuizProgressSection();
 }
 
-function getMedalByCount(count) {
-    if (count >= 5) return '🏆'; // Trophy
-    if (count >= 4) return '🏅'; // Medal
-    if (count >= 3) return '🥇'; // Gold
-    if (count >= 2) return '🥈'; // Silver
-    if (count >= 1) return '🥉'; // Bronze
-    return '🥉';
+function getMedalByPoints(points) {
+    if (points >= 15) return '🏆'; // Trophy
+    if (points >= 12) return '🏅'; // Medal
+    if (points >= 9) return '🥇'; // Gold
+    if (points >= 6) return '🥈'; // Silver
+    if (points >= 3) return '🥉'; // Bronze
+    return '';
 }
 
 function updateQuizProgressSection() {
@@ -2917,28 +2897,15 @@ function updateQuizProgressSection() {
         progressPercent.textContent = progress + '%';
     }
     
-    // Show completion reset buttons based on stats
-    const btnResetAll = document.getElementById('modal-btn-reset-all');
-    const btnResetFlawless = document.getElementById('modal-btn-reset-flawless');
-    
-    if (btnResetAll) {
-        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
-        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
-    }
-    
-    if (btnResetFlawless) {
-        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
-    }
-    
-    // Update completion badges in header
+    // Update completion badges in header - show medal based on points
     if (badgesContainer) {
         let badgesHtml = '';
-        if (stats.flawlessCompletionCount > 0) {
-            const flawlessMedal = getMedalByCount(stats.flawlessCompletionCount);
-            badgesHtml += `<span class="badge flawless">${flawlessMedal}</span>`;
-        }
-        if (stats.completionCount > 0) {
-            badgesHtml += `<span class="badge">✓ ${stats.completionCount}x</span>`;
+        if (stats.points > 0) {
+            const medal = getMedalByPoints(stats.points);
+            if (medal) {
+                badgesHtml += `<span class="badge flawless">${medal}</span>`;
+            }
+            badgesHtml += `<span class="badge">${stats.points} b</span>`;
         }
         badgesContainer.innerHTML = badgesHtml;
     }
@@ -2949,8 +2916,8 @@ function resetQuizProgress() {
     if (!quizId) return;
     
     const stats = UserDataManager.getQuizStats(quizId);
-    const confirmMsg = stats.completionCount > 0 
-        ? `Chcete vyčistit postup tohoto kvízu?\n\nPočet dokončení zůstane zachován:\n• Bezchybně: ${stats.flawlessCompletionCount}x\n• Celkem: ${stats.completionCount}x\n\nAktuální postup (${stats.totalAnswered} otázek) bude smazán.`
+    const confirmMsg = stats.points > 0 
+        ? `Chcete vyčistit postup tohoto kvízu?\n\nAktuální body: ${stats.points}\n\nPočet bodů zůstane zachován, pouze postup v aktuálním kvízu bude smazán.`
         : `Chcete vyčistit postup tohoto kvízu?\n\nVšechny zodpovězené otázky budou resetovány.`;
     
     if (confirm(confirmMsg)) {
@@ -2962,43 +2929,22 @@ function resetQuizProgress() {
     }
 }
 
-function resetFlawlessCompletions() {
+function resetAllPoints() {
     const quizId = AppState.currentQuizId;
     if (!quizId) return;
     
     const stats = UserDataManager.getQuizStats(quizId);
-    if (stats.flawlessCompletionCount === 0) {
-        Hub.showWarningBubble('Žádná bezchybná dokončení k vynulování!');
+    if (stats.points === 0) {
+        Hub.showWarningBubble('Žádné body k vynulování!');
         return;
     }
     
-    const confirmMsg = `Chcete vynulovat počet bezchybných dokončení?\n\n🏅 Bezchybně: ${stats.flawlessCompletionCount}x → 0\n✓ Celkem: ${stats.completionCount}x (zůstane)`;
+    const confirmMsg = `Chcete VYNULOVAT VŠECHNY BODY tohoto kvízu?\n\nAktuální body: ${stats.points} → 0\n\nTato akce je nevratná!`;
     
     if (confirm(confirmMsg)) {
-        UserDataManager.resetFlawlessCompletionCount(quizId);
+        UserDataManager.resetPoints(quizId);
         updateQuizProgressSection();
-        Hub.showWarningBubble('Bezchybná dokončení vynulována!');
-    }
-}
-
-function resetAllCompletions() {
-    const quizId = AppState.currentQuizId;
-    if (!quizId) return;
-    
-    const stats = UserDataManager.getQuizStats(quizId);
-    const regularCount = stats.completionCount - stats.flawlessCompletionCount;
-    
-    if (regularCount === 0) {
-        Hub.showWarningBubble('Žádná dokončení s opravou k vynulování!');
-        return;
-    }
-    
-    const confirmMsg = `Chcete vynulovat dokončení S OPRAVOU?\n\n✓ Dokončení s opravou: ${regularCount}x → 0\n🏅 Bezchybná: ${stats.flawlessCompletionCount}x (zůstane)\n\nCelkem dokončení: ${stats.completionCount}x → ${stats.flawlessCompletionCount}x`;
-    
-    if (confirm(confirmMsg)) {
-        UserDataManager.resetRegularCompletionCount(quizId);
-        updateQuizProgressSection();
-        Hub.showWarningBubble('Dokončení s opravou vynulována!');
+        Hub.showWarningBubble('Body byly vynulovány!');
     }
 }
 
@@ -3072,23 +3018,15 @@ function openAdvancedOptionsModal() {
     // Update stats display in modal
     const statsContainer = document.getElementById('advanced-options-stats');
     if (statsContainer) {
-        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
         let statsHtml = '';
         
-        if (stats.completionCount > 0) {
-            // Build completion message based on flawless vs regular completions
-            if (stats.flawlessCompletionCount === stats.completionCount) {
-                // All completions were flawless
-                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b> vždy bezchybně.</div>`;
-            } else if (stats.flawlessCompletionCount > 0) {
-                // Mix of flawless and regular
-                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b> z toho <b>${stats.flawlessCompletionCount}x</b> bezchybně.</div>`;
-            } else {
-                // All completions had errors
-                statsHtml += `<div>✓ Dokončeno celkem <b>${stats.completionCount}x</b>.</div>`;
-            }
+        if (stats.points > 0) {
+            const medal = getMedalByPoints(stats.points);
+            statsHtml += `<div style="font-size: 18px; margin-bottom: 8px;">${medal} <b>${stats.points} bodů</b></div>`;
+            statsHtml += `<div style="font-size: 12px; color: var(--ios-gray);">1 bod = dokončení s chybou | 3 body = bezchybné dokončení</div>`;
         } else {
-            statsHtml += `<div style="color: var(--ios-gray);">Zatím žádná dokončení</div>`;
+            statsHtml += `<div style="color: var(--ios-gray);">Zatím žádné body</div>`;
+            statsHtml += `<div style="font-size: 12px; color: var(--ios-gray); margin-top: 4px;">1 bod = dokončení s chybou | 3 body = bezchybné dokončení</div>`;
         }
         
         if (stats.totalAnswered > 0) {
@@ -3102,41 +3040,23 @@ function openAdvancedOptionsModal() {
         statsContainer.innerHTML = statsHtml;
     }
     
-    // Show/hide reset buttons based on stats
-    const btnResetAll = document.getElementById('modal-btn-reset-all');
-    const btnResetFlawless = document.getElementById('modal-btn-reset-flawless');
-    
-    if (btnResetAll) {
-        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
-        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
-    }
-    
-    if (btnResetFlawless) {
-        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
-    }
-    
-    // Update manual edit inputs
-    const totalInput = document.getElementById('manual-total-completions');
-    const flawlessInput = document.getElementById('manual-flawless-completions');
-    if (totalInput) totalInput.value = stats.completionCount;
-    if (flawlessInput) flawlessInput.value = stats.flawlessCompletionCount;
+    // Update manual edit input
+    const pointsInput = document.getElementById('manual-points');
+    if (pointsInput) pointsInput.value = stats.points;
     
     modal.classList.remove('hidden');
 }
 
-function saveManualCompletionCounts() {
+function saveManualPoints() {
     const quizId = AppState.currentQuizId;
     if (!quizId) return;
     
-    const totalInput = document.getElementById('manual-total-completions');
-    const flawlessInput = document.getElementById('manual-flawless-completions');
+    const pointsInput = document.getElementById('manual-points');
+    let points = parseInt(pointsInput.value) || 0;
     
-    let totalCount = parseInt(totalInput.value) || 0;
-    let flawlessCount = parseInt(flawlessInput.value) || 0;
-    
-    // Validation: flawless cannot be more than total
-    if (flawlessCount > totalCount) {
-        Hub.showWarningBubble('Bezchybných dokončení nemůže být více než celkových!');
+    // Validation: points cannot be negative
+    if (points < 0) {
+        Hub.showWarningBubble('Počet bodů nemůže být záporný!');
         return;
     }
     
@@ -3146,9 +3066,8 @@ function saveManualCompletionCounts() {
         data.quizzes[quizId] = UserDataManager.getDefaultQuizData();
     }
     
-    data.quizzes[quizId].completionCount = totalCount;
-    data.quizzes[quizId].flawlessCompletionCount = flawlessCount;
-    data.quizzes[quizId].completed = totalCount > 0;
+    data.quizzes[quizId].points = points;
+    data.quizzes[quizId].completed = points > 0;
     
     UserDataManager.saveData(data);
     
@@ -3156,7 +3075,7 @@ function saveManualCompletionCounts() {
     openAdvancedOptionsModal();
     updateQuizProgressSection();
     
-    Hub.showWarningBubble('Počty dokončení uloženy!');
+    Hub.showWarningBubble('Body uloženy!');
 }
 
 function closeAdvancedOptionsModal() {
