@@ -15,7 +15,7 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. Analytiky (První a Druhé) jsou sice klíčovými částmi Organonu, ale nejsou názvem celého souboru."
                 },
                 tag: "aristoteles",
-                wiki: ["filosofie", "organon"]
+                wiki: ["logika", "organon"]
             },
             {
                 q: "Co tvoří základ Aristotelovy deduktivní logiky?",
@@ -42,7 +42,7 @@ window.data_dejiny_a_predstavitele = {
                     c: "Správně. Zákon sporu (principium contradictionis) je pro Aristotela nejpevnější ze všech zásad. Říká, že nelze o tomtéž v tomtéž čase tvrdit, že to je i není, což zajišťuje bezrozpornost myšlení."
                 },
                 tag: "aristoteles",
-                wiki: ["filosofie", "organon"]
+                wiki: ["logika", "zakony_logiky"]
             },
             {
                 q: "Jak Aristotelés nazýval kategorii termínů, které tvoří subjekt nebo predikát v syllogismu?",
@@ -53,8 +53,9 @@ window.data_dejiny_a_predstavitele = {
                 expl: {
                     a: "Správně. Ve svém díle 'Kategorie' Aristotelés klasifikuje typy pojmů (jako podstata, kvantita, kvalita, vztah), které vstupují do výroků. Tyto kategorie určují, jak můžeme o věcech vypovídat v rámci logického souzení.",
                     b: "Chyba. Akcedence (případek) je pouze jednou z kategorií, označuje vlastnosti, které nejsou pro podstatu věci nezbytné.",
-                    c: "Chyba. Substance je nejdůležitější kategorií, ale není souhrnným názvem pro všechny typy termínů."
+                    c: "Chyba. Substance je nejdůležitější kategorií, ale není souhrnným názvem pro všechna typy termínů."
                 },
+                wiki: ["logika", "univerzalie"],
                 tag: "aristoteles"
             },
             {
@@ -64,7 +65,7 @@ window.data_dejiny_a_predstavitele = {
                 c: "Nižší člen",
                 ans: "b",
                 expl: {
-                    a: "Chyba. Vyšší člen je predikátem závěru a musí se vyskytovat v první premise.",
+                    a: "Chyba. Vyšší člen je predikátem závěru a musí se vyskytovat v prvé premise.",
                     b: "Správně. Střední člen (terminus medius) je klíčem k dedukci; funguje jako most, který propojuje obě premisy. V samotném závěru se již neobjevuje, protože jeho role prostředníka byla splněna.",
                     c: "Chyba. Nižší člen je subjektem závěru a vyskytuje se v druhé premise."
                 },
@@ -81,7 +82,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Toto je pozice středověkého nominalismu. Aristotelés věřil, že obecné pojmy mají reálný základ v podobě formy věcí.",
                     c: "Správně. Aristotelův umírněný realismus tvrdí, že obecniny existují 'v' jednotlivinách (in rebus). Logika tedy pro něj pracovala s pojmy, které věrně odrážely strukturu reálného světa."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["logika", "univerzalie"]
             },
             {
                 q: "V čem spočívá hlavní rozdíl mezi Aristotelovou a moderní logikou?",
@@ -107,7 +109,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Dialektický syllogismus vychází z pravděpodobných názorů a slouží k diskuzi, nikoliv k vědeckému důkazu.",
                     c: "Chyba. Eristika je umění sporu, kde jde o vítězství, nikoliv o pravdu; Aristotelés ji kritizoval jako klamnou."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["logika", "tri_typy_syllogismu"]
             },
             {
                 q: "Která ze středověkých mnemotechnických pomůcek označuje první a nejdůležitější mód syllogismu?",
@@ -151,7 +154,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Peripatetici byli následovníci Aristotela, kteří jeho logiku pouze udržovali a komentovali.",
                     c: "Správně. Chrysippos byl druhým zakladatelem stoicismu. Říkalo se, že 'bez Chrysippa by nebylo Stoy', a právě on vytvořil komplexní systém stoické logiky, který konkuroval té Aristotelově."
                 },
-                tag: "chrysippos"
+                tag: "chrysippos",
+                wiki: ["logika", "chrysippos_logika"]
             },
             {
                 q: "V čem spočíval hlavní přínos Chrysippa pro logiku ve srovnání s Aristotelem?",
@@ -286,7 +290,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Galénos byl nejen dvorním lékařem římských císařů, ale i vynikajícím logikem. Věřil, že dobrý lékař musí být zároveň filosofem a logikem, aby dokázal správně diagnostikovat nemoci na základě symptomů.",
                     c: "Chyba. Plótínos byl zakladatelem novoplatonismu a jeho zájem směřoval spíše k mystice a metafyzice."
                 },
-                tag: "galenos"
+                tag: "galenos",
+                wiki: ["logika", "galenos_synteza"]
             },
             {
                 q: "Který objev v oblasti syllogismu je tradičně (i když možná neprávem) připisován Galénovi?",
@@ -473,7 +478,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Leibniz se snažil víru a rozum smířit, ale logicky je takto striktně neodděloval.",
                     c: "Chyba. Pro Leibnize byla pravda vždy objektivně zakořeněna v božském rozumu, subjektivita hrála roli jen v omezenosti lidského poznání."
                 },
-                tag: "leibniz"
+                tag: "leibniz",
+                wiki: ["logika", "leibniz_pravdy"]
             },
             {
                 q: "Jak Leibniz definoval identitu dvou objektů?",
@@ -730,7 +736,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Významem (Bedeutung) je pro Fregeho samotný předmět (např. planeta Venuše). Dva výrazy mohou mít stejný význam, ale různý smysl, což vysvětluje, proč je věta 'Jitřenka je Večernice' informativní.",
                     c: "Chyba. Frege striktně odmítal psychologismus; smysl i význam jsou pro něj objektivní entity."
                 },
-                tag: "frege"
+                tag: "frege",
+                wiki: ["logika", "frege_sinn_bedeutung"]
             },
             {
                 q: "Jak se jmenuje program, v němž se Frege pokusil odvodit veškerou matematiku z čisté logiky?",
@@ -839,7 +846,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Pokud taková množina obsahuje samu sebe, pak podle definice nesmí obsahovat samu sebe. Pokud se neobsahuje, pak do ní musí patřit. Tento rozpor ukázal, že naivní teorie množin je neudržitelná a vyžaduje přísnější logická pravidla.",
                     c: "Chyba. Toto je jeden z paradoxů Zénóna z Eleje o nemožnosti pohybu."
                 },
-                tag: "russell"
+                tag: "russell",
+                wiki: ["logika", "russell_paradox"]
             },
             {
                 q: "Jakým systémem se Russell pokusil vyřešit logické antinomie (paradoxy)?",
@@ -961,7 +969,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Traktát (1921) je stručné a záhadné dílo napsané v zákopech 1. světové války. Pokouší se v něm vytyčit hranice toho, co lze logicky a smysluplně říci.",
                     c: "Chyba. Modrá a Hnědá kniha jsou záznamy jeho přednášek pro studenty, nebyly určeny k publikaci."
                 },
-                tag: "wittgenstein"
+                tag: "wittgenstein",
+                wiki: ["logika", "wittgenstein_jazyk"]
             },
             {
                 q: "Co podle raného Wittgensteina tvoří 'hranice mého světa'?",
