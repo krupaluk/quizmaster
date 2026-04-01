@@ -2604,6 +2604,19 @@ function updateQuizProgressSection() {
         resetButton.style.display = stats.totalAnswered > 0 ? 'block' : 'none';
     }
     
+    // Show completion reset buttons based on stats
+    const btnResetAll = document.getElementById('btn-reset-all');
+    const btnResetFlawless = document.getElementById('btn-reset-flawless');
+    
+    if (btnResetAll) {
+        const regularCount = stats.completionCount - stats.flawlessCompletionCount;
+        btnResetAll.style.display = regularCount > 0 ? 'block' : 'none';
+    }
+    
+    if (btnResetFlawless) {
+        btnResetFlawless.style.display = stats.flawlessCompletionCount > 0 ? 'block' : 'none';
+    }
+    
     // Update completion badges in header
     if (badgesContainer) {
         let badgesHtml = '';
