@@ -2153,21 +2153,32 @@ const Results = {
         const gradeEl = document.getElementById('res-grade');
         
         const medal = getMedalByPoints(stats.points);
+        const hasMedal = medal !== '';
         const medalColor = completionType === 'flawless' ? '#34c759' : '#007aff';
         const icon = completionType === 'flawless' ? '✓' : '✓';
         const title = completionType === 'flawless' ? 'Bezchybně dokončeno!' : 'Dokončeno s chybou';
         const pointsText = completionType === 'flawless' ? '+3 body' : '+1 bod';
         
-        gradeEl.innerHTML = `
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 20px 0;">
+        // Show big medal if user has one, otherwise show checkmark in circle
+        let iconHtml;
+        if (hasMedal) {
+            iconHtml = `<div style="font-size: 80px; line-height: 1; margin: 10px 0;">${medal}</div>`;
+        } else {
+            iconHtml = `
                 <div style="width: 80px; height: 80px; border-radius: 50%; background: ${medalColor}; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
                     <span style="font-size: 40px; color: white;">${icon}</span>
                 </div>
+            `;
+        }
+        
+        gradeEl.innerHTML = `
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 20px 0;">
+                ${iconHtml}
                 <div style="font-size: 20px; font-weight: 700; color: ${medalColor}; text-align: center;">${title}</div>
                 <div style="display: flex; align-items: center; gap: 8px; font-size: 16px; color: var(--ios-gray);">
                     <span style="font-weight: 600; color: var(--ios-blue);">${pointsText}</span>
                     <span>|</span>
-                    <span>Celkem: <b style="color: var(--ios-blue); font-size: 20px;">${stats.points}</b> bodů ${medal}</span>
+                    <span>Celkem: <b style="color: var(--ios-blue); font-size: 20px;">${stats.points}</b> bodů</span>
                 </div>
             </div>
         `;
