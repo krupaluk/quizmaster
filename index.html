@@ -1330,6 +1330,7 @@
 
 <script src="quizMaster_config.js"></script>
 <script src="quizdata/wiki/wiki_logika.js"></script>
+<script src="quizdata/wiki/wiki_filosofie.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -2074,14 +2075,25 @@ const QuizEngine = {
         
         if (!correctGroup) return;
         
+        // Get wiki title for the button text
+        let buttonText = 'víš, že...';
+        if (wikiPath && wikiPath.length >= 2) {
+            const [category, entry] = wikiPath;
+            const wikiData = window.wiki;
+            if (wikiData && wikiData[category] && wikiData[category][entry]) {
+                const entryData = wikiData[category][entry];
+                buttonText = entryData.title || buttonText;
+            }
+        }
+        
         // Remove any existing wiki button
         const existingBtn = correctGroup.querySelector('.wiki-btn');
         if (existingBtn) existingBtn.remove();
         
-        // Create wiki button
+        // Create wiki button with topic title
         const wikiBtn = document.createElement('button');
         wikiBtn.className = 'wiki-btn';
-        wikiBtn.innerHTML = '<span class="lightbulb">💡</span><span class="text">víš, že...</span>';
+        wikiBtn.innerHTML = '<span class="lightbulb">💡</span><span class="text">' + buttonText + '</span>';
         wikiBtn.onclick = () => openWikiOverlay(wikiPath);
         correctGroup.appendChild(wikiBtn);
     },
@@ -2751,9 +2763,23 @@ const Hub = {
                     quizzesContainer.appendChild(div);
                 });
                 
-                // Add click handler for collapsing
+                // Add click handler for collapsing (accordion behavior)
                 catHeader.onclick = () => {
                     const isExpanded = quizzesContainer.style.display !== 'none';
+                    
+                    // Collapse all other categories first
+                    const allContainers = document.querySelectorAll('.category-container');
+                    allContainers.forEach(container => {
+                        if (container !== categoryContainer) {
+                            const otherQuizzes = container.querySelector('.quizzes-container');
+                            const otherToggle = container.querySelector('.category-toggle');
+                            if (otherQuizzes) otherQuizzes.style.display = 'none';
+                            if (otherToggle) otherToggle.textContent = '▼';
+                            container.classList.add('collapsed');
+                        }
+                    });
+                    
+                    // Toggle current category
                     quizzesContainer.style.display = isExpanded ? 'none' : 'block';
                     catHeader.querySelector('.category-toggle').textContent = isExpanded ? '▼' : '▲';
                     categoryContainer.classList.toggle('collapsed', isExpanded);
