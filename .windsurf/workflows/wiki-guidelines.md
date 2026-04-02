@@ -28,6 +28,9 @@ When creating wiki entries for quiz questions, follow these guidelines based on 
    
    **Use TABLE when**: There's a structured list to compare (e.g., list of books with their descriptions, comparison of concepts)
    - 2-column layout for simple Subject | Description
+   - **Column merging rule**: If a table would have more than 3 columns, consider merging related columns to save space
+   - Combine columns by merging values with line breaks (`<br>`) and use italics (`<em>`) for secondary information
+   - Example: Combine "Směr usuzování" + "Jistota" → "Z obecného ke konkrétnímu<br><em>Nutná (100%)</em>"
    - Consider orientation: fewer criteria go to columns, more criteria go to rows (rows stretch better than columns)
    - Keep cell content short (3-5 words ideally)
    - Use alternating row colors for readability

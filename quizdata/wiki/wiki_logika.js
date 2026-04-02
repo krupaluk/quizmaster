@@ -27,10 +27,10 @@ window.wiki.logika = {
 <p style="font-size: 14px; margin: 12px 0;"><strong>Struktura:</strong><br>Velká premisa: Všichni lidé jsou smrtelní.<br>Malá premisa: Sókratés je člověk.<br><strong>Závěr: Sókratés je smrtelný.</strong></p>
 
 <table class="wiki-table">
-<tr><th>Metoda</th><th>Směr usuzování</th><th>Jistota</th><th>Příklad</th></tr>
-<tr><td><strong>Syllogismus</strong></td><td>Z obecného ke konkrétnímu</td><td>Nutná (100%)</td><td>Všichni A jsou B; x je A; tedy x je B</td></tr>
-<tr><td><strong>Indukce</strong></td><td>Z konkrétního k obecnému</td><td>Pravděpodobná</td><td>100 labutí bylo bílých; tedy všechny labutě jsou bílé</td></tr>
-<tr><td><strong>Pravdivostní tabulky</strong></td><td>Analýza výroků (P, Q)</td><td>Mechanická</td><td>Pokud P a Q jsou pravdivé, pak P∧Q je pravdivé</td></tr>
+<tr><th>Metoda</th><th>Směr usuzování / Jistota</th><th>Příklad</th></tr>
+<tr><td><strong>Syllogismus</strong></td><td>Z obecného ke konkrétnímu<br><em>Nutná (100%)</em></td><td>Všichni A jsou B; x je A; tedy x je B</td></tr>
+<tr><td><strong>Indukce</strong></td><td>Z konkrétního k obecnému<br><em>Pravděpodobná</em></td><td>100 labutí bylo bílých; tedy všechny labutě jsou bílé</td></tr>
+<tr><td><strong>Pravdivostní tabulky</strong></td><td>Analýza výroků (P, Q)<br><em>Mechanická</em></td><td>Pokud P a Q jsou pravdivé, pak P∧Q je pravdivé</td></tr>
 </table>
 
 <p style="font-size: 13px; color: #555;"><strong>Rozdíl:</strong> Syllogismus pracuje s pojmy (A, B) a jejich vztahy. Indukce generalizuje z pozorování. Pravdivostní tabulky analyzují složené výroky pomocí mechanických pravidel.</p>
@@ -76,9 +76,9 @@ window.wiki.logika = {
             `
         },
         "univerzalie": {
-            "title": "Univerzálies - kde existují obecné pojmy?",
+            "title": "Univerzálie - kde existují obecné pojmy?",
             "content": `
-<p><strong>Univerzálies</strong> (obecné pojmy jako „člověk", „dobro", „bílost") jsou klíčovým problémem filosofie. Kde existují - v mysli, ve věcech, nebo někde jinde?</p>
+<p><strong>Univerzálie</strong> (obecné pojmy jako „člověk", „dobro", „bílost") jsou klíčovým problémem filosofie. Kde existují - v mysli, ve věcech, nebo někde jinde?</p>
 
 <table class="wiki-table">
 <tr><th class="w-20">Škola</th><th class="w-30">Kde existují obecné pojmy?</th><th>Příklad / Vysvětlení</th></tr>
@@ -220,6 +220,28 @@ window.wiki.logika = {
 </table>
 
 <p style="font-size: 13px; color: #555;"><strong>Příklady jazykových her:</strong> Rozkaz, otázka, modlitba, popis, žádost. Každá má svá pravidla.</p>
+            `
+        },
+        "vyvoj_logiky": {
+            "title": "Vývoj logiky - Chronologie",
+            "content": `
+<p><strong>Dějiny logiky</strong> od antiky po 20. století - klíčové milníky a jejich nositelé v časové posloupnosti.</p>
+
+<table class="wiki-table">
+<tr><th class="w-20">Období</th><th>Představitel</th><th>Klíčový příspěvek</th></tr>
+<tr><td><strong>4. stol. př. n. l.</strong></td><td>Aristotelés</td><td>Syllogismus, Organon - první systematická logika pojmů</td></tr>
+<tr><td><strong>3. stol. př. n. l.</strong></td><td>Chrysippos</td><td>Logika výroků, kondicionály - předchůdce moderní logiky</td></tr>
+<tr><td><strong>2. stol. n. l.</strong></td><td>Galénos</td><td>Syntéza aristotelské a stoické logiky v medicíně</td></tr>
+<tr><td><strong>17. stol.</strong></td><td>Leibniz</td><td>Sen o univerzálním jazyce, binární logika, Calculus ratiocinator</td></tr>
+<tr><td><strong>19. stol.</strong></td><td>Boole</td><td>Algebra logiky - logika jako matematická disciplína</td></tr>
+<tr><td><strong>1879</strong></td><td>Frege</td><td>Predikátová logika, kvantifikátory, Sinn/Bedeutung</td></tr>
+<tr><td><strong>1910-1913</strong></td><td>Russell</td><td>Principia Mathematica, teorie typů (řešení paradoxů)</td></tr>
+<tr><td><strong>1921</strong></td><td>Wittgenstein</td><td>Pravdivostní tabulky, obrazová teorie jazyka</td></tr>
+<tr><td><strong>1931</strong></td><td>Gödel</td><td>Věty o neúplnosti - limity formálních systémů</td></tr>
+<tr><td><strong>1934</strong></td><td>Popper</td><td>Falzifikace, kritický racionalismus</td></tr>
+</table>
+
+<p style="font-size: 13px; color: #555;"><strong>Směřování:</strong> Od logiky pojmů (Aristotelés) → logika výroků (Chrysippos) → matematizace (Leibniz, Boole, Frege) → analýza jazyka (Russell, Wittgenstein) → limity formálních systémů (Gödel) → metodologie vědy (Popper).</p>
             `
         }
 };

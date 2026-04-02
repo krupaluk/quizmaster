@@ -29,6 +29,7 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. Pravdivostní tabulky jsou nástrojem moderní výrokové logiky, kterou rozvinul až stoicismus a později Gottlob Frege."
                 },
                 tag: "aristoteles",
+                wiki: ["logika", "syllogismus"]
             },
             {
                 q: "Který z principů logiky Aristotelés definoval jako zákon, že nic nemůže zároveň být i nebýt v témže smyslu?",
@@ -55,7 +56,7 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Akcedence (případek) je pouze jednou z kategorií, označuje vlastnosti, které nejsou pro podstatu věci nezbytné.",
                     c: "Chyba. Substance je nejdůležitější kategorií, ale není souhrnným názvem pro všechna typy termínů."
                 },
-                wiki: ["logika", "univerzalie"],
+                wiki: ["logika", "artistoteles_kategorie_priklad"],
                 tag: "aristoteles"
             },
             {
@@ -96,7 +97,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Aristotelova logika je 'terministická' – zkoumá vztahy mezi pojmy (všechna A jsou B). Moderní logika (od Fregeho) začíná analýzou celých výroků a jejich pravdivostních funkcí.",
                     c: "Chyba. Aristotelés jako první začal používat proměnné (písmena A, B, C) pro označení členů syllogismu, čímž logiku formalizoval."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["logika", "aristotelova_vs_moderni_logika"]
             },
             {
                 q: "Který typ úsudku Aristotelés považoval za základ vědeckého dokazování v 'Druhou analytikách'?",
@@ -136,27 +138,13 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. V tomto díle Aristotelés zkoumá, jak se z pojmů tvoří soudy (výroky). Definoval zde, že pravda nebo lež vzniká až spojením pojmů do věty, nikoliv v pojmech samotných.",
                     c: "Chyba. Klasifikaci živočichů se věnuje v biologických spisech; v logice klasifikuje pouze kategorie myšlení."
                 },
-                tag: "aristoteles"
+                tag: "aristoteles",                
             }
             ]
         },
         "chrysippos": {
             "title": "Chrysippos ze Sol",
             "questions": [
-            {
-                q: "Chrysippos byl představitelem které školy, jež rozvinula logiku odlišnou od Aristotela?",
-                a: "Akademie",
-                b: "Peripatetická škola",
-                c: "Stoa",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Akademie byla založena Platónem a v době Chrysippa se věnovala spíše skepticismu.",
-                    b: "Chyba. Peripatetici byli následovníci Aristotela, kteří jeho logiku pouze udržovali a komentovali.",
-                    c: "Správně. Chrysippos byl druhým zakladatelem stoicismu. Říkalo se, že 'bez Chrysippa by nebylo Stoy', a právě on vytvořil komplexní systém stoické logiky, který konkuroval té Aristotelově."
-                },
-                tag: "chrysippos",
-                wiki: ["logika", "chrysippos_logika"]
-            },
             {
                 q: "V čem spočíval hlavní přínos Chrysippa pro logiku ve srovnání s Aristotelem?",
                 a: "Vytvořil logiku pojmů",
@@ -168,20 +156,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Chrysippos se nezaměřoval na vztahy mezi termíny (A a B), ale na vztahy mezi celými výroky pomocí spojek jako 'jestliže... pak', 'a' nebo 'nebo'. Stal se tak předchůdcem moderní výrokové logiky.",
                     c: "Chyba. Stoici byli přísní racionalisté a logiku považovali za klíč k pochopení řádu světa (Logu)."
                 },
-                tag: "chrysippos"
-            },
-            {
-                q: "Jak stoici jako Chrysippos nazývali významovou stránku výroku, která je nositelem pravdy?",
-                a: "Lekton",
-                b: "Pneuma",
-                c: "Phantasia",
-                ans: "a",
-                expl: {
-                    a: "Správně. 'Lekton' znamená 'to, co je vyjádřeno'. Pro stoiky to byl nehmotný význam, který stojí mezi fyzickým zvukem slova a skutečným předmětem. Je to předchůdce moderního pojmu 'propozice'.",
-                    b: "Chyba. Pneuma je ve stoicismu aktivní látka (dech), která prostupuje vesmírem, není to logický termín.",
-                    c: "Chyba. Phantasia je smyslový vjem nebo představa, která logickému zpracování teprve předchází."
-                },
-                tag: "chrysippos"
+                tag: "chrysippos",
+                wiki: ["logika", "chrysippos_logika"]
             },
             {
                 q: "Který z logických operátorů byl pro Chrysippovu logiku nejtypičtější?",
@@ -236,19 +212,6 @@ window.data_dejiny_a_predstavitele = {
                 tag: "chrysippos"
             },
             {
-                q: "Jaký byl vztah Chrysippa k Aristotelově syllogistice?",
-                a: "Vůbec ji neznal",
-                b: "Považoval ji za jedinou správnou",
-                c: "Vytvořil k ní alternativní systém, který Aristotela na čas zastínil",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Chrysippos byl velmi vzdělaný a na Aristotela přímo reagoval.",
-                    b: "Chyba. Naopak, stoická logika byla v antice vnímána jako modernější a komplexnější konkurence aristotelismu.",
-                    c: "Správně. Po několik století (v období helénismu a Říma) byla stoická logika dominantní. Aristotelova logika se vrátila na výsluní až ve středověku, zatímco stoické spisy se z velké části ztratily."
-                },
-                tag: "chrysippos"
-            },
-            {
                 q: "Která moderní věda nejvíce čerpá z logické struktury, kterou Chrysippos načrtl?",
                 a: "Biologie",
                 b: "Informatika (programování)",
@@ -258,19 +221,6 @@ window.data_dejiny_a_predstavitele = {
                     a: "Chyba. Biologie čerpá spíše z Aristotelovy klasifikace druhů.",
                     b: "Správně. Programování je postaveno na výrokové logice a logických hradlech (IF-THEN, AND, OR, NOT), což jsou přesně ty struktury, které Chrysippos jako první systematicky popsal.",
                     c: "Chyba. Psychologie využívá logiku, ale Chrysippův přínos je čistě formální a strukturální, což odpovídá algoritmům."
-                },
-                tag: "chrysippos"
-            },
-            {
-                q: "Jak stoici definovali 'pravdivý výrok'?",
-                a: "To, co se líbí bohům",
-                b: "To, co odpovídá skutečnému stavu věcí a je s ním v souladu",
-                c: "To, na čem se shodla většina lidí",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Stoici byli sice nábožensky založení, ale pravdu definovali racionálně a korespondenčně.",
-                    b: "Správně. Pro Chrysippa byla pravda objektivní. Výrok je pravdivý, pokud věci, o kterých mluví, jsou v realitě přesně tak, jak je výrok popisuje. Tato korespondenční teorie pravdy spojuje logiku s realitou.",
-                    c: "Chyba. Konsenzus (shoda) pro ně nebyl kritériem pravdy; pravda je nezávislá na lidském mínění."
                 },
                 tag: "chrysippos"
             }
@@ -294,19 +244,6 @@ window.data_dejiny_a_predstavitele = {
                 wiki: ["logika", "galenos_synteza"]
             },
             {
-                q: "Který objev v oblasti syllogismu je tradičně (i když možná neprávem) připisován Galénovi?",
-                a: "Objev čtvrté figury syllogismu",
-                b: "Vynález pravdivostních tabulek",
-                c: "Zavedení matematických symbolů",
-                ans: "a",
-                expl: {
-                    a: "Správně. Aristotelés popsal tři figury syllogismu. Galénovi je historicky připisována 'čtvrtá figura', která převrací vztahy mezi subjektem a predikátem. I když o jejím autorství historici spekulují, v logice se jí dodnes říká galenovská.",
-                    b: "Chyba. Pravdivostní tabulky jsou mnohem modernějším nástrojem, který plně rozvinuli až Wittgenstein a Peirce.",
-                    c: "Chyba. Galénos sice používal formální zápisy, ale plná matematizace logiky přišla až s Leibnizem a Boolem."
-                },
-                tag: "galenos"
-            },
-            {
                 q: "Jak Galénos vnímal vztah mezi logikou a medicínou?",
                 a: "Logika je pro lékaře zbytečná komplikace",
                 b: "Logika je nástrojem pro vědecký důkaz v medicíně",
@@ -316,97 +253,6 @@ window.data_dejiny_a_predstavitele = {
                     a: "Chyba. Galénos napsal spis 'O tom, že nejlepší lékař je také filosofem', kde tvrdí přesný opak.",
                     b: "Správně. Galénos aplikoval logické postupy na lékařskou praxi. Považoval diagnózu za formu logického úsudku, kde z pozorovatelných příznaků (premis) vyvozujeme skrytou příčinu nemoci (závěr).",
                     c: "Chyba. Galénos byl zastáncem přísné vědecké metody a empirie kombinované s racionálním vyvozováním."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Kterou logickou školu Galénos upřednostňoval při studiu vztahů mezi příčinami a následky?",
-                a: "Pouze Aristotela",
-                b: "Pouze stoiky",
-                c: "Kombinaci obou (eklekticismus)",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Aristotelova logika mu nestačila pro analýzu složitých hypotetických vztahů.",
-                    b: "Chyba. Stoická logika mu zase přišla příliš zaměřená na jazyk a málo na vědeckou realitu.",
-                    c: "Správně. Galénos byl logický eklektik. Dokázal propojit Aristotelovu logiku pojmů (vhodnou pro klasifikaci nemocí) se stoickou logikou výroků (vhodnou pro vyvozování následků z podmínek)."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Ve svém díle 'Institutio Logica' Galénos rozebírá úsudky, které se týkají vztahů (např. 'A je větší než B'). Jak se jim říká?",
-                a: "Syllogismy z relace",
-                b: "Kategorické soudy",
-                c: "Modální výroky",
-                ans: "a",
-                expl: {
-                    a: "Správně. Galénos si všiml, že klasický syllogismus špatně zpracovává vztahy jako 'větší než' nebo 'bratr někoho'. Tím předešel moderní logiku relací, která se těmito vztahy začala plně zabývat až v 19. století.",
-                    b: "Chyba. Kategorické soudy (Všechna A jsou B) jsou standardní aristotelské výroky, které vztahy neřeší.",
-                    c: "Chyba. Modální výroky se týkají nutnosti a možnosti (Musí být P, Může být P), nikoliv relací mezi objekty."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Co Galénos považoval za nejvyšší cíl logického uvažování?",
-                a: "Vítězství v debatě",
-                b: "Dosažení vědeckého důkazu (apodeixis)",
-                c: "Pobavení publika",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Galénos ostře kritizoval sofisty a eristiky, kterým šlo pouze o vítězství bez ohledu na pravdu.",
-                    b: "Správně. 'Apodeixis' neboli vědecký důkaz byl pro Galéna klíčem k jistotě. Logika měla sloužit k tomu, abychom z nezpochybnitelných axiomů dospěli k novým, pravdivým poznatkům o lidském těle a přírodě.",
-                    c: "Chyba. Galénos byl velmi seriózní autor, který logiku vnímal jako fundamentální disciplínu lidského rozumu."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Jak Galénos nazýval logickou chybu, kdy se v argumentu předpokládá to, co se má teprve dokázat?",
-                a: "Dilema",
-                b: "Petitio principii",
-                c: "Ad hominem",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Dilema je volba mezi dvěma (často špatnými) možnostmi, nikoliv nutně logický kruh.",
-                    b: "Správně. Galénos (v návaznosti na Aristotela) varoval před 'žádáním o počátek'. V medicíně to znamenalo např. vysvětlovat symptom nemocí, jejíž existence je definována právě jen tímto symptomem.",
-                    c: "Chyba. Argument ad hominem útočí na osobu oponenta, nikoliv na logickou strukturu důkazu."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Který z těchto spisů o logice patří Galénovi?",
-                a: "Úvod do dialektiky",
-                b: "Logické základy medicíny",
-                c: "Úvod do logiky (Institutio Logica)",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Spisy o dialektice psali spíše stoici nebo středověcí logici.",
-                    b: "Chyba. Ačkoliv o tomto tématu psal, toto není název jeho hlavního dochovaného logického díla.",
-                    c: "Správně. 'Institutio Logica' je jedním z mála dochovaných antických úvodů do logiky. Díky němu víme, jak se logika vyučovala a vnímala v pozdní antice pod vlivem řecké tradice v římském prostředí."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "Jaký vliv měl Galénos na středověkou vědu?",
-                a: "Byl zcela zapomenut",
-                b: "Stal se nezpochybnitelnou autoritou v medicíně i logice",
-                c: "Byl zakázán církví",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Galénos byl spolu s Aristotelem pilířem středověkého vzdělání.",
-                    b: "Správně. Galénův vliv byl tak obrovský, že jeho medicínské a logické teorie byly považovány za dogma po více než 1000 let. Studium logiky bylo pro tehdejší lékaře povinné právě kvůli Galénovu odkazu.",
-                    c: "Chyba. Církev Galéna naopak přijímala, protože jeho učení o účelnosti orgánů (teleologie) ladilo s křesťanskou představou o stvoření."
-                },
-                tag: "galenos"
-            },
-            {
-                q: "V čem Galénos kritizoval stoiky v oblasti logiky?",
-                a: "Že jsou příliš struční",
-                b: "Že se příliš utápějí v lingvistických detailech (slovíčkaření)",
-                c: "Že vůbec nepoužívají rozum",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Stoici byli naopak známí svou nesmírnou rozvláčností v logických spisech.",
-                    b: "Správně. Galénos, jako praktik, kritizoval stoiky za to, že jejich logika se stává samoúčelnou analýzou jazyka. Chtěl, aby se logika vrátila k věcnému zkoumání reality, jak to dělal Aristotelés.",
-                    c: "Chyba. Galénos si stoiků vážil právě pro jejich racionalitu, jen nesouhlasil s jejím zaměřením."
                 },
                 tag: "galenos"
             }
@@ -531,20 +377,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Leibniz nejen teoretizoval o binární soustavě, ale také popsal, jak by mohl stroj provádět logické operace pomocí kuliček padajících do drážek (analogii dnešních bitů). Je tedy považován za 'pradědečka' informatiky.",
                     c: "Chyba. Leibnizovy stroje byly mechanické (ozubená kola), nikoliv parní. Parní stroj pro výpočty navrhl až Babbage v 19. století."
                 },
-                tag: "leibniz"
-            },
-            {
-                q: "Leibniz se pokusil dokázat existenci Boha pomocí logiky. Jakou metodu použil?",
-                a: "Ontologický důkaz (analýza pojmu nejdokonalejší bytosti)",
-                b: "Slepou víru",
-                c: "Statistický průzkum",
-                ans: "a",
-                expl: {
-                    a: "Správně. Leibniz vylepšil Anselmův a Descartesův ontologický důkaz. Tvrdil, že pojem Boha jako 'nejdokonalejší bytosti' je logicky bezrozporný a jako takový musí zahrnovat i existenci, jinak by nebyl dokonalý.",
-                    b: "Chyba. Leibniz byl racionalista; věřil, že i náboženské pravdy musí být podloženy logickou argumentací.",
-                    c: "Chyba. Statistika v dnešním smyslu neexistovala a pro Leibnize by nebyla dostatečným důkazem pro nutnou existenci."
-                },
-                tag: "leibniz"
+                tag: "leibniz",
+                wiki: ["logika", "vyvoj_logiky"]
             }
             ]
         },
@@ -561,19 +395,6 @@ window.data_dejiny_a_predstavitele = {
                     a: "Chyba. Toto byl název jeho dřívějšího kratšího spisu z roku 1847, kde své myšlenky teprve načrtnul.",
                     b: "Správně. Plným názvem 'An Investigation of the Laws of Thought'. V této knize Boole definitivně ukázal, že logika není jen součástí filosofie, ale že ji lze vyjádřit pomocí algebraických rovnic a symbolů.",
                     c: "Chyba. 'Algebra logiky' je spíše označení celého odvětví, které Boole založil, nikoliv název jeho hlavní knihy."
-                },
-                tag: "boole"
-            },
-            {
-                q: "Které dvě číselné hodnoty tvoří základ Booleovy logické algebry?",
-                a: "1 a -1",
-                b: "0 a 1",
-                c: "Jakákoliv reálná čísla",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Záporná čísla v Booleově základní logice nehrají roli; on pracoval s existencí a neexistencí.",
-                    b: "Správně. Boole ztotožnil logickou pravdu s číslem 1 (vesmír/všechno) a nepravdu s číslem 0 (prázdná třída). Tento binární systém umožnil provádět logické operace jako sčítání a násobení.",
-                    c: "Chyba. Booleova algebra je specifická právě tím, že se omezuje na dvě hodnoty, což z ní dělá ideální nástroj pro logiku."
                 },
                 tag: "boole"
             },
@@ -617,19 +438,6 @@ window.data_dejiny_a_predstavitele = {
                 tag: "boole"
             },
             {
-                q: "Která moderní technologie by bez Booleovy práce nemohla existovat?",
-                a: "Spalovací motor",
-                b: "Digitální počítače a vyhledávače",
-                c: "Parní lokomotiva",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Spalovací motor je záležitostí termodynamiky a mechaniky.",
-                    b: "Správně. Každý vyhledávač (Google) používá 'booleovské operátory' (AND, OR, NOT). Celá architektura procesorů je postavena na logických hradlech, která realizují Booleovu algebru v křemíku.",
-                    c: "Chyba. Lokomotivy vznikly dříve a fungují na mechanických principech bez potřeby logických výpočtů."
-                },
-                tag: "boole"
-            },
-            {
                 q: "Jak Boole definoval negaci třídy 'x'?",
                 a: "1 - x",
                 b: "x + 1",
@@ -652,32 +460,6 @@ window.data_dejiny_a_predstavitele = {
                     a: "Chyba. Toto je obecná rovnice, která o logické specifičnosti nic neříká.",
                     b: "Správně. V logice platí, že průnik třídy se sebou samou je stále ta samá třída (např. 'černý' a zároveň 'černý' je prostě 'černý'). Tato rovnice odlišuje Booleovu algebru od běžné algebry čísel.",
                     c: "Chyba. Dělení se v Booleově základní logice nepoužívá, protože nemá jasnou logickou interpretaci."
-                },
-                tag: "boole"
-            },
-            {
-                q: "Jak se jmenovala Booleova manželka, která po jeho smrti propagovala jeho dílo a sama byla významnou matematičkou?",
-                a: "Ada Lovelace",
-                b: "Mary Everest Boole",
-                c: "Marie Curie",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Ada Lovelace spolupracovala s Babbagem a je považována za první programátorku, ale nebyla Booleovou ženou.",
-                    b: "Správně. Mary Everest Boole (neteř George Everesta, po němž se jmenuje hora) byla autorkou děl o pedagogice matematiky a výrazně přispěla k šíření manželova odkazu.",
-                    c: "Chyba. Marie Curie byla fyzička a chemička, s logikem Boolem neměla rodinnou vazbu."
-                },
-                tag: "boole"
-            },
-            {
-                q: "Co bylo pro Boolea hlavním cílem logiky?",
-                a: "Předpovídat budoucnost",
-                b: "Analyzovat zákony, jimiž se řídí lidská mysl",
-                c: "Vytvořit nový náboženský systém",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Boole se sice zajímal o teorii pravděpodobnosti, ale jeho primární cíl byl v pochopení struktury myšlení.",
-                    b: "Správně. Boole věřil, že logika odhaluje vnitřní mechanismy lidského rozumu. Jeho matematizace nebyla jen hrou s čísly, ale snahou o přesný popis psychologie správného uvažování.",
-                    c: "Chyba. Boole byl věřící člověk, ale logiku vnímal jako přísně vědecký nástroj, nikoliv jako náboženství."
                 },
                 tag: "boole"
             }
@@ -779,32 +561,6 @@ window.data_dejiny_a_predstavitele = {
                 tag: "frege"
             },
             {
-                q: "Co je podle Fregeho nositelem pravdivostní hodnoty?",
-                a: "Slovo",
-                b: "Myšlenka (Gedanke)",
-                c: "Vykřičník",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Samotné slovo (např. 'stůl') není ani pravdivé, ani nepravdivé.",
-                    b: "Správně. Myšlenka u Fregeho není subjektivní proces v mozku, ale objektivní obsah výpovědi (propozice). Pouze kompletní myšlenka může být buď pravdivá, nebo nepravdivá.",
-                    c: "Chyba. Vykřičník vyjadřuje postoj nebo rozkaz, které pravdivostní hodnotu obvykle nemají."
-                },
-                tag: "frege"
-            },
-            {
-                q: "Proč byl Fregeho 'Pojmopis' (Begriffsschrift) ve své době odmítnut?",
-                a: "Protože byl příliš jednoduchý",
-                b: "Kvůli extrémně složitému a nepraktickému dvourozměrnému zápisu",
-                c: "Protože byl napsán v latině",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Byl naopak považován za neuvěřitelně obtížný a revoluční.",
-                    b: "Správně. Fregeho notace připomínala složité potrubí nebo diagramy. Přestože byl systém geniální, nikdo ho nechtěl používat. Dnešní lineární zápis logiky (P → Q) zavedl až později Giuseppe Peano.",
-                    c: "Chyba. Frege psal německy, což byl v té době standardní jazyk vědy."
-                },
-                tag: "frege"
-            },
-            {
                 q: "Jak Frege definoval nulu?",
                 a: "Jako nicotu",
                 b: "Jako počet objektů, které nejsou identické samy se sebou",
@@ -889,32 +645,6 @@ window.data_dejiny_a_predstavitele = {
                 tag: "russell"
             },
             {
-                q: "Jaký byl Russellův postoj k intuici v matematice?",
-                a: "Intuice je základem všeho",
-                b: "Intuice je nespolehlivá a musí být nahrazena logickým důkazem",
-                c: "Intuici nelze logicky vyjádřit",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Tento názor zastávali intuicionisté (např. Brouwer), s nimiž Russell polemizoval.",
-                    b: "Správně. Russell věřil, že co nelze dokázat logicky, není v matematice jisté. Snažil se odstranit veškerou vágnost a 'vciťování' a nahradit je přísnou formální dedukcí.",
-                    c: "Chyba. Russell věřil, že vše racionální je logicky vyjádřitelné."
-                },
-                tag: "russell"
-            },
-            {
-                q: "Za co získal Bertrand Russell v roce 1950 Nobelovu cenu?",
-                a: "Za logiku",
-                b: "Za literaturu",
-                c: "Za mír",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Nobelova cena za logiku neexistuje.",
-                    b: "Správně. Získal ji za své rozmanité spisy, v nichž vystupoval jako mluvčí lidskosti a svobody myšlení. Jeho styl byl oceňován pro logickou jasnost a vtip.",
-                    c: "Chyba. Za mír byl nominován a byl velkým protiválečným aktivistou, ale cenu získal literární."
-                },
-                tag: "russell"
-            },
-            {
                 q: "Jak Russell definoval přirozená čísla?",
                 a: "Jako Boží vnuknutí",
                 b: "Jako třídy všech tříd o daném počtu prvků",
@@ -925,66 +655,14 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Například číslo '2' je pro Russella logickou třídou všech dvojic (všech množin o dvou prvcích). Číslo je tedy definováno čistě logickými pojmy (třída a ekvivalence).",
                     c: "Chyba. To je historický původ počítání, nikoliv Russellova logická definice."
                 },
-                tag: "russell"
-            },
-            {
-                q: "Vztah Russella a Wittgensteina byl:",
-                a: "Učitel a žák",
-                b: "Otec a syn",
-                c: "Neznali se",
-                ans: "a",
-                expl: {
-                    a: "Správně. Wittgenstein přišel za Russellem do Cambridge studovat. Russell brzy poznal jeho genialitu a prohlásil, že Wittgenstein je nejlepším příkladem tradičního génia, jakého kdy poznal. Později se však jejich názory rozešly.",
-                    b: "Chyba. Byli to přátelé a kolegové, nikoliv příbuzní.",
-                    c: "Chyba. Jejich setkání a vzájemné ovlivňování je klíčovým momentem dějin moderní filosofie."
-                },
-                tag: "russell"
-            },
-            {
-                q: "Jak Russell nazýval logické spojky jako 'a', 'nebo', 'jestliže'?",
-                a: "Logické konstanty",
-                b: "Proměnné",
-                c: "Predikáty",
-                ans: "a",
-                expl: {
-                    a: "Správně. Tyto termíny tvoří pevnou strukturu logiky. Zatímco věci v realitě se mění (jsou to proměnné), logické vztahy mezi nimi zůstávají podle Russella neměnné a univerzální.",
-                    b: "Chyba. Proměnné jsou symboly jako 'x' nebo 'y', které zastupují konkrétní objekty.",
-                    c: "Chyba. Predikáty vyjadřují vlastnosti nebo vztahy (např. 'je červený'), nikoliv logické spojování vět."
-                },
-                tag: "russell"
+                tag: "russell",
+                wiki: ["logika", "vyvoj_logiky"]
             }
             ]
         },
         "wittgenstein": {
             "title": "Ludwig Wittgenstein",
             "questions": [
-            {
-                q: "Jak se jmenuje jediné filozofické dílo, které Wittgenstein publikoval za svého života?",
-                a: "Filosofická zkoumání",
-                b: "Tractatus Logico-Philosophicus",
-                c: "Modrá kniha",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Tato kniha (reprezentující jeho pozdní období) vyšla až posmrtně.",
-                    b: "Správně. Traktát (1921) je stručné a záhadné dílo napsané v zákopech 1. světové války. Pokouší se v něm vytyčit hranice toho, co lze logicky a smysluplně říci.",
-                    c: "Chyba. Modrá a Hnědá kniha jsou záznamy jeho přednášek pro studenty, nebyly určeny k publikaci."
-                },
-                tag: "wittgenstein",
-                wiki: ["logika", "wittgenstein_jazyk"]
-            },
-            {
-                q: "Co podle raného Wittgensteina tvoří 'hranice mého světa'?",
-                a: "Můj zrak",
-                b: "Hranice mého jazyka",
-                c: "Hranice vesmíru",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Smysly jsou jen bránou k informacím, nikoliv logickou hranicí světa.",
-                    b: "Správně. 'Hranice mého jazyka znamenají hranice mého světa.' To, co nelze logicky vyjádřit v jazyce, o tom nelze ani myslet jako o součásti strukturovaného světa faktů.",
-                    c: "Chyba. Wittgenstein se nezabýval fyzikálním vesmírem, ale logickým prostorem možností."
-                },
-                tag: "wittgenstein"
-            },
             {
                 q: "Jakou metodu pro určování pravdivosti složených výroků Wittgenstein v Traktátu zpopularizoval?",
                 a: "Věštění z křišťálové koule",
@@ -996,20 +674,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Ačkoli se o nich uvažovalo dříve, Wittgenstein v Traktátu ukázal, jak lze pravdivost složeného výroku (např. P a Q) mechanicky odvodit ze všech kombinací pravdivosti jeho částí pomocí tabulky.",
                     c: "Chyba. Syllogismy považoval za zastaralé a nedostatečné pro moderní analýzu."
                 },
-                tag: "wittgenstein"
-            },
-            {
-                q: "Co tvrdí slavná závěrečná věta Traktátu: 'O čem nelze mluvit, o tom se musí...'?",
-                a: "...přemýšlet",
-                b: "...mlčet",
-                c: "...psát básně",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Podle Wittgensteina myšlení a smysluplná mluva splývají v logické formě.",
-                    b: "Správně. 'Wovon man nicht sprechen kann, darüber muss man schweigen.' Věci jako etika, estetika nebo smysl života podle něj nemají logickou formu 'faktů', proto o nich jazyk logiky neumí smysluplně vypovídat.",
-                    c: "Chyba. I když poezii uznával, logicky spadala do oblasti 'toho, co se ukazuje', nikoliv o čem se 'mluví'."
-                },
-                tag: "wittgenstein"
+                tag: "wittgenstein",
+                wiki: ["logika", "wittgenstein_jazyk"]
             },
             {
                 q: "Jak Wittgenstein ve svém raném období chápal vztah mezi větou a faktem?",
@@ -1034,58 +700,6 @@ window.data_dejiny_a_predstavitele = {
                     a: "Chyba. Tautologie není chyba, ale specifický mezní případ logiky.",
                     b: "Správně. Příkladem je 'Prší, nebo neprší'. Taková věta nám sice neříká nic o počasí, ale je logicky dokonale pravdivá (vždy platí). Celá logika je podle Wittgensteina tvořena systémem tautologií.",
                     c: "Chyba. Tautologie je pravda z definice, pravý opak lži."
-                },
-                tag: "wittgenstein"
-            },
-            {
-                q: "Jak se nazývá koncept, kterým pozdní Wittgenstein nahradil logickou analýzu jazyka?",
-                a: "Jazykové hry",
-                b: "Logické věznice",
-                c: "Gramatické zákony",
-                ans: "a",
-                expl: {
-                    a: "Správně. Ve své pozdější filosofii Wittgenstein uznal, že jazyk není jen 'obraz faktů', ale nástroj používaný v různých činnostech (hrách). Význam slova je dán jeho použitím v dané hře (např. rozkaz, modlitba, popis).",
-                    b: "Chyba. Wittgenstein chtěl naopak ukázat cestu z 'vězení jazyka' ven.",
-                    c: "Chyba. Jazykové hry mají svá pravidla, ale nejsou to strnulé zákony formální logiky."
-                },
-                tag: "wittgenstein"
-            },
-            {
-                q: "Co Wittgenstein v Traktátu považuje za jedinou logickou nutnost?",
-                a: "Boží vůli",
-                b: "Logickou nutnost (formu)",
-                c: "Zákony fyziky",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Bůh se v logickém prostoru Traktátu nevyskytuje jako vysvětlující princip.",
-                    b: "Správně. 'Mimo logiku je vše náhoda.' Jediné, co musí být, jsou pravidla logiky. To, že slunce zítra vyjde, není logická nutnost, ale jen empirická pravděpodobnost.",
-                    c: "Chyba. Fyzikální zákony jsou podle něj 'náhodné' – svět by mohl fungovat i podle jiných zákonů, ale ne podle jiné logiky."
-                },
-                tag: "wittgenstein"
-            },
-            {
-                q: "Jaký byl Wittgensteinův postoj k vlastnímu dílu (Traktátu) po jeho dokončení?",
-                a: "Věřil, že vyřešil všechny problémy filosofie a skončil s ní",
-                b: "Považoval ho za naprostý propadák",
-                c: "Okamžitě začal psát pokračování",
-                ans: "a",
-                expl: {
-                    a: "Správně. Po vydání Traktátu Wittgenstein skutečně opustil akademickou půdu, stal se učitelem na venkově a zahradníkem, protože věřil, že v logice už není co dál řešit. Později si ale uvědomil své chyby a k filosofii se vrátil.",
-                    b: "Chyba. Byl na něj velmi hrdý, i když si stěžoval, že mu nikdo (včetně Russella) nerozumí.",
-                    c: "Chyba. Trvalo mu mnoho let, než začal své dřívější názory revidovat."
-                },
-                tag: "wittgenstein"
-            },
-            {
-                q: "Který z těchto výroků charakterizuje Wittgensteinovo pojetí logiky?",
-                a: "Logika je teorie o světě",
-                b: "Logika předchází každé zkušenosti – je to její forma",
-                c: "Logika se učíme ze zkušenosti",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Teorie o světě podávají přírodní vědy, logika je nad nimi jako rámec.",
-                    b: "Správně. Logika není věda o faktech, ale o tom, co fakta umožňuje. Je to 'lešení' světa. Nemůžeme vidět svět 'nelogicky', protože logika určuje hranice toho, co je vůbec myslitelné.",
-                    c: "Chyba. To by byla psychologie; pro Wittgensteina je logika apriorní (předzkušenostní)."
                 },
                 tag: "wittgenstein"
             }
@@ -1197,51 +811,12 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. To je přesný opak toho, co Gödel dokázal."
                 },
                 tag: "godel"
-            },
-            {
-                q: "Kde Gödel strávil většinu své kariéry po útěku z nacisty okupované Evropy?",
-                a: "V Princetonu (USA)",
-                b: "V Londýně",
-                c: "V Moskvě",
-                ans: "a",
-                expl: {
-                    a: "Správně. Působil na Institutu pro pokročilá studia (IAS) v Princetonu. Zde žil ve svém tichém světě abstraktní logiky až do své smrti.",
-                    b: "Chyba. Londýn byl útočištěm pro Poppera, nikoliv pro Gödela.",
-                    c: "Chyba. Sovětský svaz nebyl pro logiky Gödelova typu bezpečným ani lákavým místem."
-                },
-                tag: "godel"
-            },
-            {
-                q: "Jak Gödel zemřel?",
-                a: "Na stáří v klidu",
-                b: "Hlady, protože se bál, že ho otráví",
-                c: "Při autonehodě",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Jeho konec byl bohužel tragický a poznamenaný duševní nemocí.",
-                    b: "Správně. Gödel trpěl paranoiou a odmítal jíst jakékoliv jídlo, které nepřipravila jeho žena Adele. Když byla Adele hospitalizována, Gödel přestal jíst úplně a zemřel na vyhladovění. Je to ironický konec pro muže s nejdokonalejším logickým mozkem historie.",
-                    c: "Chyba. Autonehody se sice bál (jako všeho), ale nebylo to příčinou jeho smrti."
-                },
-                tag: "godel"
             }
             ]
         },
         "popper": {
             "title": "Karl Popper",
             "questions": [
-            {
-                q: "Jak se jmenuje Popperovo hlavní dílo o logice vědeckého bádání?",
-                a: "Logika vědeckého zkoumání",
-                b: "Struktura vědeckých revolucí",
-                c: "O původu druhů",
-                ans: "a",
-                expl: {
-                    a: "Správně. 'Logik der Forschung' (1934) změnila pohled na to, co dělá vědu vědou. Popper v ní odmítl indukci a nahradil ji principem falzifikace.",
-                    b: "Chyba. Tuto knihu napsal Thomas Kuhn, který s Popperem v mnohém nesouhlasil.",
-                    c: "Chyba. To je dílo Charlese Darwina o evoluci."
-                },
-                tag: "popper"
-            },
             {
                 q: "Co je to 'falzifikace' v Popperově logice?",
                 a: "Padělání dokumentů",
@@ -1279,85 +854,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Pokud teorie dokáže vysvětlit úplně všechno a neexistuje nic, co by ji mohlo vyvrátit, pak podle Poppera není vědecká. Věda musí 'nastavit kůži' riziku, že se ukáže jako nepravdivá.",
                     c: "Chyba. I pseudovědy mohou používat čísla, ale jejich logická struktura neumožňuje vyvrácení."
                 },
-                tag: "popper"
-            },
-            {
-                q: "Jak Popper nazýval svou teorii, že se věda blíží k pravdě postupným odstraňováním chyb?",
-                a: "Evoluční epistemologie",
-                b: "Absolutní pravda",
-                c: "Dogmatismus",
-                ans: "a",
-                expl: {
-                    a: "Správně. Popper vnímal vědu jako proces podobný Darwinovu výběru. Přežívají jen ty nejlepší (dosud nevyvrácené) teorie. Naše poznání roste skrze 'pokusy a omyly'.",
-                    b: "Chyba. Popper nevěřil, že můžeme mít jistotu absolutní pravdy, můžeme se k ní jen nekonečně blížit.",
-                    c: "Chyba. Dogmatismus je přesný opak Popperova kritického racionalismu."
-                },
-                tag: "popper"
-            },
-            {
-                q: "Ve svém politickém díle 'Otevřená společnost a její nepřátelé' Popper kritizoval Platóna a Hegela za:",
-                a: "Špatnou gramatiku",
-                b: "Historismus a víru v nevyhnutelné zákony dějin",
-                c: "Přílišnou lásku k demokracii",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Popper kritizoval jejich myšlenky, nikoliv styl psaní.",
-                    b: "Správně. Popper aplikoval svou logiku i na společnost. Odmítl myšlenku, že historie má daný směr nebo cíl. Takové učení podle něj vede přímo k totalitním systémům, které obětují jedince 'vyšším zákonům'.",
-                    c: "Chyba. Naopak, kritizoval je za to, že jejich systémy jsou nepřátelské vůči svobodě a demokracii."
-                },
-                tag: "popper"
-            },
-            {
-                q: "Co je to 'kritický racionalismus'?",
-                a: "Věřit jen tomu, co cítím",
-                b: "Postoj, že všechna tvrzení musí být podrobena přísné kritice",
-                c: "Kritizování všeho bez důvodu",
-                ans: "b",
-                expl: {
-                    a: "Chyba. To je subjektivismus, který je s racionalismem v rozporu.",
-                    b: "Správně. Je to Popperovo krédo. Racionalita nespočívá v tom, že máme pravdu, ale v ochotě nechat své nápady zemřít místo nás – tedy podrobit je kritice a vylepšovat je na základě logiky a zkušenosti.",
-                    c: "Chyba. Kritika v popperovském smyslu musí být konstruktivní a založená na logických argumentech."
-                },
-                tag: "popper"
-            },
-            {
-                q: "Jak se Popper díval na 'vědeckou jistotu'?",
-                a: "Jako na cíl, kterého již bylo dosaženo",
-                b: "Jako na nebezpečnou iluzi",
-                c: "Jako na dar od boha",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Popper věřil, že věda je neustále v pohybu a žádná teorie není v bezpečí.",
-                    b: "Správně. Pro Poppera je veškeré vědecké vědění 'doxastic' (v podobě domněnek). Ten, kdo tvrdí, že má absolutní jistotu, přestává být vědcem a stává se dogmatikem.",
-                    c: "Chyba. Popper byl zastáncem sekulární logiky a kritického rozumu."
-                },
-                tag: "popper"
-            },
-            {
-                q: "Který slavný ekonom a přítel Poppera sdílel jeho názory na otevřenou společnost?",
-                a: "Friedrich Hayek",
-                b: "Karl Marx",
-                c: "John Maynard Keynes",
-                ans: "a",
-                expl: {
-                    a: "Správně. Hayek a Popper byli celoživotní spojenci v boji proti totalitarismu. Oba věřili, že centrální plánování (ať už v myšlení nebo v ekonomice) selhává kvůli omezenosti lidského rozumu.",
-                    b: "Chyba. Marxe Popper ve svých dílech ostře analyzoval a kritizoval za jeho historický determinismus.",
-                    c: "Chyba. Keynes měl jiné ekonomické názory, i když k Popperovi mohl mít osobní respekt."
-                },
-                tag: "popper"
-            },
-            {
-                q: "Co Popper považuje za základní jednotku pokroku vědy?",
-                a: "Problém",
-                b: "Učebnici",
-                c: "Laboratoř",
-                ans: "a",
-                expl: {
-                    a: "Správně. Věda nezačíná pozorováním, ale problémem. Máme očekávání, které narazí na realitu (problém), navrhneme řešení (teorii) a pak se ho snažíme vyvrátit. To je cyklus růstu vědění.",
-                    b: "Chyba. Učebnice jsou jen shrnutím minulých (dosud nevyvrácených) teorií.",
-                    c: "Chyba. Laboratoř je jen místem, kde se provádějí testy, ale hybnou silou je logický rozpor a problém."
-                },
-                tag: "popper"
+                tag: "popper",
+                wiki: ["logika", "vyvoj_logiky"]
             }
             ]
         }
