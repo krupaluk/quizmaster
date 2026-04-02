@@ -1162,6 +1162,24 @@
         </div>
     </div>
 
+    <!-- Related Topics Modal -->
+    <div id="related-topics-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeRelatedTopicsModal()"></div>
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+            <div class="modal-header">
+                <span class="modal-icon">💡</span>
+                <h2 class="modal-title">Témata [Wiki]</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Prozkoumej všechny informace k tomuto kvízu</p>
+            </div>
+            <div class="modal-body">
+                <div id="related-topics-list" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Topics will be inserted here -->
+                </div>
+            </div>
+            <button class="modal-close-btn" onclick="closeRelatedTopicsModal()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- Info Modal -->
     <div id="info-modal" class="modal hidden">
         <div class="modal-backdrop" onclick="closeInfoModal()"></div>
@@ -1201,10 +1219,18 @@
                 <span class="icon">💡</span>
                 <h3 class="title" id="wiki-title">víš, že...</h3>
             </div>
-            <div class="wiki-overlay-body" id="wiki-body">
+            <div class="wiki-overlay-nav" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 20px; background: #fff9e6; border-bottom: 1px solid #ffe0b2;">
+                <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; border: none; flex: 1;" onclick="navigateWikiTopic('prev')">
+                    ← Předchozí
+                </button>
+                <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; border: none; flex: 1;" onclick="navigateWikiTopic('next')">
+                    Další →
+                </button>
+            </div>
+            <div class="wiki-overlay-body" id="wiki-body" style="flex: 1; overflow-y: auto;">
                 <!-- Wiki content will be inserted here -->
             </div>
-            <button class="wiki-overlay-close" onclick="closeWikiOverlay()">Zavřít</button>
+            <button class="wiki-overlay-close" style="background: var(--ios-blue); color: white; font-weight: 600;" onclick="closeWikiOverlay()">Zavřít</button>
         </div>
     </div>
 
@@ -1283,8 +1309,15 @@
                 </div>
             </div>
             
-            <!-- Advanced Options button at bottom -->
+            <!-- Related Topics button at bottom -->
             <div class="setup-section" style="margin-top: 20px;">
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openRelatedTopicsModal()">
+                    💡 Témata [Wiki]
+                </button>
+            </div>
+            
+            <!-- Advanced Options button at bottom -->
+            <div class="setup-section" style="margin-top: 10px;">
                 <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openAdvancedOptionsModal()">
                     ⚙️ Pokročilé možnosti
                 </button>
@@ -2998,6 +3031,10 @@ function closeInfoModal() {
 }
 
 // ===== WIKI OVERLAY FUNCTIONS =====
+// Store current wiki topics list for navigation
+let currentWikiTopicsList = [];
+let currentWikiTopicIndex = -1;
+
 function openWikiOverlay(wikiPath) {
     if (!wikiPath || wikiPath.length < 2) return;
     
@@ -3015,8 +3052,46 @@ function openWikiOverlay(wikiPath) {
     document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
     document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
     
+    // Build topics list from current quiz if available
+    if (AppState.db && AppState.db.length > 0) {
+        const topics = new Map();
+        AppState.db.forEach(question => {
+            if (question.wiki && question.wiki.length >= 2) {
+                const cat = question.wiki[0];
+                const ent = question.wiki[1];
+                const key = `${cat}:${ent}`;
+                if (!topics.has(key)) {
+                    topics.set(key, { category: cat, entry: ent, title: wikiData[cat]?.[ent]?.title || ent });
+                }
+            }
+        });
+        currentWikiTopicsList = Array.from(topics.values());
+        // Find current topic index
+        currentWikiTopicIndex = currentWikiTopicsList.findIndex(t => t.category === category && t.entry === entry);
+    }
+    
     // Show overlay
     document.getElementById('wiki-overlay').classList.remove('hidden');
+}
+
+function navigateWikiTopic(direction) {
+    if (currentWikiTopicsList.length === 0) return;
+    
+    if (direction === 'next') {
+        currentWikiTopicIndex = (currentWikiTopicIndex + 1) % currentWikiTopicsList.length;
+    } else if (direction === 'prev') {
+        currentWikiTopicIndex = (currentWikiTopicIndex - 1 + currentWikiTopicsList.length) % currentWikiTopicsList.length;
+    }
+    
+    const topic = currentWikiTopicsList[currentWikiTopicIndex];
+    if (topic) {
+        const wikiData = window.wiki;
+        const entryData = wikiData[topic.category]?.[topic.entry];
+        if (entryData) {
+            document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
+            document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+        }
+    }
 }
 
 function closeWikiOverlay() {
@@ -3093,6 +3168,72 @@ function saveManualPoints() {
 
 function closeAdvancedOptionsModal() {
     document.getElementById('advanced-options-modal').classList.add('hidden');
+}
+
+function openRelatedTopicsModal() {
+    const modal = document.getElementById('related-topics-modal');
+    const listContainer = document.getElementById('related-topics-list');
+    
+    // Get all unique wiki topics from current quiz
+    const topics = new Map(); // Use Map to avoid duplicates
+    
+    if (AppState.db && AppState.db.length > 0) {
+        AppState.db.forEach(question => {
+            if (question.wiki && question.wiki.length >= 2) {
+                const category = question.wiki[0];
+                const entry = question.wiki[1];
+                const key = `${category}:${entry}`;
+                
+                // Get wiki data - try both direct access and window.wiki
+                let title = entry;
+                try {
+                    const wikiData = window.wiki || {};
+                    if (wikiData && wikiData[category] && wikiData[category][entry] && wikiData[category][entry].title) {
+                        title = wikiData[category][entry].title;
+                    }
+                } catch (e) {
+                    console.warn('Could not get wiki title for', category, entry);
+                }
+                
+                if (!topics.has(key)) {
+                    topics.set(key, {
+                        category: category,
+                        entry: entry,
+                        title: title,
+                        wikiPath: question.wiki
+                    });
+                }
+            }
+        });
+    }
+    
+    // Build the list HTML
+    let html = '';
+    if (topics.size > 0) {
+        topics.forEach(topic => {
+            html += `
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 14px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--ios-blue); text-align: left; width: 100%; display: flex; align-items: center; gap: 10px; min-height: 44px;" onclick="closeRelatedTopicsModal(); openWikiOverlay(['${topic.category}', '${topic.entry}']);">
+                    <span>💡</span>
+                    <span>${topic.title}</span>
+                </button>
+            `;
+        });
+    } else {
+        html = `
+            <div style="text-align: center; padding: 30px; color: var(--ios-gray);">
+                <div style="font-size: 40px; margin-bottom: 10px;">📚</div>
+                <div style="font-size: 16px; font-weight: 600;">Žádná související témata</div>
+                <div style="font-size: 13px; margin-top: 5px;">Pro tento kvíz zatím nejsou definována žádná rozšiřující témata.</div>
+            </div>
+        `;
+    }
+    
+    listContainer.innerHTML = html;
+    modal.classList.remove('hidden');
+}
+
+function closeRelatedTopicsModal() {
+    document.getElementById('related-topics-modal').classList.add('hidden');
 }
 
 // ===== INITIALIZATION =====
