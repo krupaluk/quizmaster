@@ -70,6 +70,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Kdo založil školu stoicismu v Athénách kolem roku 300 př. n. l.?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Seneca",
                 b: "Marcus Aurelius",
                 c: "Zénón z Kitia",
@@ -83,6 +84,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak díky Zénonovi z Kitie stoická filosofie dělila filosofii?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Na politiku, estetiku a metafyziku",
                 b: "Na logiku, fyziku a etiku",
                 c: "Na matematiku, hudbu a astronomii",
@@ -96,6 +98,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co je pro stoiky 'Logos' v rámci jejich fyziky?",
+                wiki: ["filosofie", "logos_stoicky"],
                 a: "Chaos, který náhodně tvoří svět",
                 b: "Božský rozum a řád prostupující veškerou hmotu",
                 c: "Lidská schopnost klamat ostatní",
@@ -109,6 +112,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak stoici chápou svobodu člověka v determinovaném světě?",
+                wiki: ["filosofie", "osud_helenismus"],
                 a: "Svoboda neexistuje, jsme jen loutky",
                 b: "Svoboda je pochopená nutnost a vnitřní souhlas s osudem",
                 c: "Svoboda znamená možnost měnit fyzikální zákony silou vůle",
@@ -122,6 +126,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jaký je význam stoického termínu 'apatheia'?",
+                wiki: ["filosofie", "apatheia_vs_ataraxia"],
                 a: "Nezájem o cokoli a lenost",
                 b: "Stav osvobození od afektů a vášní",
                 c: "Hluboká deprese ze zániku světa",
@@ -148,6 +153,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co stoici považují za jediné skutečné dobro?",
+                wiki: ["filosofie", "adiafora_stoicke"],
                 a: "Zdraví a dlouhý život",
                 b: "Ctnost (areté)",
                 c: "Bohatství využívané pro charitu",
@@ -161,6 +167,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak stoici nazývají věci jako zdraví, majetek či krása, které nejsou ani dobrem, ani zlem?",
+                wiki: ["filosofie", "adiafora_stoicke"],
                 a: "Adiafora",
                 b: "Katharsis",
                 c: "Anamnésis",
@@ -174,6 +181,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který směr byl největším soupeřem stoicismu v otázce požitku a strachu ze smrti?",
+                wiki: ["filosofie", "stoicismus_vs_epikureismus"],
                 a: "Epikureismus",
                 b: "Novoplatonismus",
                 c: "Peripatetismus",
@@ -187,6 +195,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který stoický filosof byl původem otrok a kladl důraz na to, co můžeme a nemůžeme ovlivnit?",
+                wiki: ["filosofie", "helenismus_a_rim"],
                 a: "Epiktétos",
                 b: "Seneca",
                 c: "Zénón",
@@ -200,6 +209,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak se nazývá dílo císaře Marca Aurelia, které si psal jako osobní deník pro posílení ducha?",
+                wiki: ["filosofie", "helenismus_a_rim"],
                 a: "Hovory k sobě (Ta eis heauton)",
                 b: "O blaženém životě",
                 c: "Stát",
@@ -213,6 +223,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co je pro stoiky 'Kosmopolis'?",
+                wiki: ["filosofie", "logos_stoicky"],
                 a: "Hlavní město v Malé Asii",
                 b: "Světostát, kde jsou si všichni lidé rovni díky společnému rozumu",
                 c: "Budova, kde se scházeli k debatám",
@@ -226,6 +237,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
+                wiki: ["filosofie", "stoicismus_vs_epikureismus"],
                 a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
                 b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
                 c: "Oba směry se v politice shodovaly a prosazovali demokracii",
@@ -239,6 +251,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který filosofický pojem stoiků označuje 'osud' či 'předurčení'?",
+                wiki: ["filosofie", "osud_helenismus"],
                 a: "Heimarmené",
                 b: "Tyche",
                 c: "Kairós",
@@ -361,6 +374,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Na čem je založena fyzika epikureismu?",
+                wiki: ["filosofie", "atomismus_epikurejsky"],
                 a: "Na myšlence čtyř živlů",
                 b: "Na atomismu Démokrita",
                 c: "Na teorii o nekonečném množství světových duší",
@@ -374,6 +388,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co je hlavním cílem epikurejské etiky?",
+                wiki: ["filosofie", "apatheia_vs_ataraxia"],
                 a: "Hromadění co největšího množství smyslových požitků",
                 b: "Dosažení stavu bezbolestnosti těla a klidu duše (ataraxie)",
                 c: "Dosažení politické moci a vlivu",
@@ -387,6 +402,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak se epikureismus stavěl k bohům?",
+                wiki: ["filosofie", "bohove_helénismus"],
                 a: "Bohové neexistují, svět je náhoda",
                 b: "Bohové existují, ale o lidské záležitosti se vůbec nestarají",
                 c: "Bohové nás neustále sledují a trestají za hříchy",
@@ -400,6 +416,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který římský básník zachoval Epikúrovo učení ve svém díle 'De rerum natura'?",
+                wiki: ["filosofie", "helenismus_a_rim"],
                 a: "Horatius",
                 b: "Lucretius",
                 c: "Vergilius",
@@ -413,6 +430,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jaký byl vztah epikurejců k přátelství?",
+                wiki: ["filosofie", "stoicismus_vs_epikureismus"],
                 a: "Považovali ho za nejvyšší formu společenského vztahu",
                 b: "Odmítali ho jako slabost, která ohrožuje nezávislost",
                 c: "Považovali ho za nutné zlo pro obchodní účely",
@@ -478,6 +496,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co v epikureismu znamená pojem 'prolepsis' v epikurejské teorii poznání?",
+                wiki: ["filosofie", "prolepsis_epikurejska"],
                 a: "Vrozená idea, kterou nám do mysli vložili bohové",
                 b: "Předběžný pojem či obecná představa vzniklá opakovanou zkušeností",
                 c: "Logický klam, kterému se musíme vyhnout",
@@ -613,6 +632,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak se nazývá stav duševního klidu, o který usilovali skeptici i epikurejci?",
+                wiki: ["filosofie", "apatheia_vs_ataraxia"],
                 a: "Ataraxia",
                 b: "Apatheia",
                 c: "Anamnésis",
@@ -626,6 +646,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Která slavná athénská instituce se v helénismu dočasně přiklonila ke skepticismu?",
+                wiki: ["filosofie", "mladsi_akademie"],
                 a: "Platónova Akademie",
                 b: "Aristotelův Lykeion",
                 c: "Zénónova Stoa",
@@ -639,6 +660,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Kdo byl hlavním představitelem 'Mladší Akademie' a mistrem v argumentaci pro i proti?",
+                wiki: ["filosofie", "mladsi_akademie"],
                 a: "Karneadés z Kyrény",
                 b: "Platón",
                 c: "Pyrrhón",
@@ -787,6 +809,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Co v kynickém pojetí znamená pojem 'autarkeia'?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Absolutní poslušnost zákonům státu",
                 b: "Soběstačnost a nezávislost na vnějších věcech",
                 c: "Vláda nejmoudřejšího jedince nad ostatními",
@@ -800,6 +823,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jak kynikové vnímali tradiční společenské hodnoty jako bohatství a sláva?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Jako užitečné nástroje k šíření filosofie",
                 b: "Jako 'kouř' (typhos) – klamné a zbytečné hodnoty",
                 c: "Jako nezbytný základ pro dosažení ctnosti",
@@ -813,6 +837,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který termín označuje kynický požadavek mluvit pravdu za každou cenu, i vůči mocným?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Parrhésia",
                 b: "Eudaimonia",
                 c: "Logos",
@@ -826,6 +851,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Který směr zavedl pojem 'svědomí' jako vnitřního soudce lidského jednání?",
+                wiki: ["filosofie", "helenismus_a_rim"],
                 a: "Stoicismus",
                 b: "Skepticismus",
                 c: "Kynismus",
@@ -839,6 +865,7 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Jaký byl hlavní rozdíl v pojetí 'ctnosti' mezi kyniky a stoiky?",
+                wiki: ["filosofie", "kynismus_vs_stoicismus"],
                 a: "Kynikové ctnost odmítali, stoici ji uctívali",
                 b: "Kynikové ji viděli v askezi a provokaci, stoici v rozumném plnění povinností",
                 c: "V pojetí ctnosti mezi nimi nebyl žádný rozdíl",
@@ -849,6 +876,20 @@ window.data_obdobi_helenismu = {
                     c: "Chyba. Rozdíl byl zásadní – kynik byl solitérní rebel, stoik byl disciplinovaný občan vesmíru."
                 },
                 tag: "ctnost_rozdil"
+            },
+            {
+                q: "Co je podle stoiků 'pneuma' a jaká je jeho role v kosmu?",
+                wiki: ["filosofie", "pneuma_stoicke"],
+                a: "Pneuma je hmotný prvek podobný vzduchu",
+                b: "Pneuma je duchovní síť protkávající celý vesmír a dávající mu soudržnost",
+                c: "Pneuma je pouze metafora pro dechové cvičení",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Ačkoli pneuma může být přirovnáváno k dechu nebo vzduchu, stoici ji nechápali jako pouze hmotný prvek. Byla to aktivní, duchovní síla.",
+                    b: "Správně. Pro stoiky je pneuma (dech, duch) aktivní princip, který proniká celým kosmos a dává mu soudržnost (sýmpnoia). Spojuje všechny části vesmíru do jednoho živého organismu řízeného Logem.",
+                    c: "Chyba. Pneuma není pouze metafora, ale reálná kosmická síla, která umožňuje život a pohyb ve vesmíru."
+                },
+                tag: "pneuma"
             },
             {
                 q: "Který helénistický směr měl největší vliv na pozdější křesťanskou askezi a mnišství?",
