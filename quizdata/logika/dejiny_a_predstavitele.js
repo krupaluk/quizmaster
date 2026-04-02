@@ -258,6 +258,99 @@ window.data_dejiny_a_predstavitele = {
             }
             ]
         },
+        "scholastici": {
+            "title": "Scholastici",
+            "questions": [
+            {
+                q: "Jaký byl hlavní cíl scholastické logiky ve středověku?",
+                a: "Sloučit křesťanskou víru s Aristotelovou logikou",
+                b: "Zavrhnout Aristotela a vytvořit novou logiku",
+                c: "Naučit se počítat bez arabských číslic",
+                ans: "a",
+                expl: {
+                    a: "Správně. Scholastici (12.-14. století) chtěli logicky uspořádat a dokázat pravdy křesťanského učení pomocí Aristotelových nástrojů. Tomáš Akvinský je typickým představitelem této syntézy.",
+                    b: "Chyba. Naopak, scholastici Aristotela obdivovali a považovali ho za největšího logika. Jeho díla byla v Evropě objevena přes arabské překlady.",
+                    c: "Chyba. Arabské číslice se používaly běžně; logika se zabývala spíše pojmy a důkazy než výpočty."
+                },
+                tag: "scholastici"
+            },
+            {
+                q: "Co byla 'disputatio' ve středověké univerzitě?",
+                a: "Formální debata podle logických pravidel",
+                b: "Fyzický souboj mezi studenty",
+                c: "Tajná schůzka alchymistů",
+                ans: "a",
+                expl: {
+                    a: "Správně. Disputatio byla akademická debata, kde se pomocí syllogismů a logických argumentů řešily filozofické a teologické otázky. Studenti museli umět obhajovat i oponovat stanoviskům podle přísných pravidel.",
+                    b: "Chyba. I když debaty mohly být živé, šlo o intelektuální souboj argumentů, nikoliv pěstí.",
+                    c: "Chyba. Alchymie byla mimo akademickou logiku, disputatio byla veřejná a oficiální část vzdělávání."
+                },
+                tag: "scholastici"
+            }
+            ]
+        },
+        "abelard": {
+            "title": "Petr Abelard",
+            "questions": [
+            {
+                q: "Jaký logický problém řešil Abelard ve svém díle 'Sic et Non'?",
+                a: "Shody dvou matematických důkazů",
+                b: "Zdánlivé spory v církevních autoritách",
+                c: "Rozdíly mezi řeckými a římskými bohy",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Abelard nebyl matematik, ale filozof a teolog. Jeho zájem směřoval k jazyku a autoritám.",
+                    b: "Správně. 'Sic et Non' (Ano a Ne) shromáždil 158 zdánlivě protichůdných výroků církevních otců. Abelard ukázal, že logická analýza může tyto spory vyřešit rozlišením významů slov a kontextů.",
+                    c: "Chyba. Pohanská mytologie nebyla předmětem středověké scholastiky; Abelard pracoval s křesťanskými texty."
+                },
+                tag: "abelard"
+            },
+            {
+                q: "Jak Abelard přispěl k teorii univerzálií?",
+                a: "Všechny obecné pojmy jsou jen jména bez obsahu",
+                b: "Obecné pojmy existují jen jako koncepty v rozumu",
+                c: "Obecné pojmy existují mimo jednotlivé věci",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Toto je názor extrémního nominalismu (později Roscelin), který Abelard kritizoval.",
+                    b: "Správně. Abelard zastával 'koncepcionalismus' - univerzálie existují jako mentální koncepty (sermo), nikoliv jako samostatné entity. Tento kompromis mezi realizmem a nominalismem ovlivnil celý středověk.",
+                    c: "Chyba. Toto je Platónův realismus, který Abelard odmítal jako nevhodný pro křesťanskou logiku."
+                },
+                tag: "abelard"
+            }
+            ]
+        },
+        "ockham": {
+            "title": "William Ockham",
+            "questions": [
+            {
+                q: "Co říká Ockhamova břitva v logice?",
+                a: "Plurality should not be posited without necessity",
+                b: "Všechny teorie jsou stejně dobré",
+                c: "Složité vysvětlení je vždy lepší",
+                ans: "a",
+                expl: {
+                    a: "Správně. Ockhamova břitva (neboli princip parcimónie) říká: 'Entia non sunt multiplicanda sine necessitate' (Bytosti by neměly být násobeny bez nutnosti). Při více možných vysvětleních je nejlepší to nejjednodušší.",
+                    b: "Chyba. Ockham chtěl naopak mezi teoriemi rozhodnout - vybrat tu nejjednodušší, nikoliv tvrdit, že jsou všechny stejné.",
+                    c: "Chyba. Přesný opak - Ockham kritizoval zbytečně složitá vysvětlení (např. příliš mnoho kategorií nebo entit)."
+                },
+                tag: "ockham"
+            },
+            {
+                q: "Jak Ockham změnil aristotelskou logiku?",
+                a: "Zavrhl syllogismus úplně",
+                b: "Omezil počet kategorií na pouhé substance a kvality",
+                c: "Vynalezl počítač",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Ockham syllogismus používal, ale zjednodušoval jeho základy. Byl to stále scholastik.",
+                    b: "Správně. Ockham redukoval Aristotelových 10 kategorií na 2: jen substance a kvality jsou skutečně nezávislé, ostatní jsou jen způsoby mluvy. Tím logiku značně zjednodušil a ovlivnil moderní empirismus.",
+                    c: "Chyba. To přišlo až o 600 let později s Leibnizem a Babbagem. Ockham pracoval s perem a pergamem."
+                },
+                tag: "ockham"
+            }
+            ]
+        },
         "leibniz": {
             "title": "Gottfried Wilhelm Leibniz",
             "questions": [

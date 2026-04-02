@@ -232,6 +232,9 @@ window.wiki.logika = {
 <tr><td><strong>4. stol. př. n. l.</strong></td><td>Aristotelés</td><td>Syllogismus, Organon - první systematická logika pojmů</td></tr>
 <tr><td><strong>3. stol. př. n. l.</strong></td><td>Chrysippos</td><td>Logika výroků, kondicionály - předchůdce moderní logiky</td></tr>
 <tr><td><strong>2. stol. n. l.</strong></td><td>Galénos</td><td>Syntéza aristotelské a stoické logiky v medicíně</td></tr>
+<tr><td><strong>12. stol.</strong></td><td>Abelard</td><td>'Sic et Non' - řešení sporů v církevních autoritách, koncepcionalismus</td></tr>
+<tr><td><strong>12.-14. stol.</strong></td><td>Scholastici</td><td>Disputatio, syntéza víry a Aristotelovy logiky na univerzitách</td></tr>
+<tr><td><strong>14. stol.</strong></td><td>Ockham</td><td>Ockhamova břitva, redukce kategorií na substance a kvality</td></tr>
 <tr><td><strong>17. stol.</strong></td><td>Leibniz</td><td>Sen o univerzálním jazyce, binární logika, Calculus ratiocinator</td></tr>
 <tr><td><strong>19. stol.</strong></td><td>Boole</td><td>Algebra logiky - logika jako matematická disciplína</td></tr>
 <tr><td><strong>1879</strong></td><td>Frege</td><td>Predikátová logika, kvantifikátory, Sinn/Bedeutung</td></tr>
@@ -241,7 +244,7 @@ window.wiki.logika = {
 <tr><td><strong>1934</strong></td><td>Popper</td><td>Falzifikace, kritický racionalismus</td></tr>
 </table>
 
-<p style="font-size: 13px; color: #555;"><strong>Směřování:</strong> Od logiky pojmů (Aristotelés) → logika výroků (Chrysippos) → matematizace (Leibniz, Boole, Frege) → analýza jazyka (Russell, Wittgenstein) → limity formálních systémů (Gödel) → metodologie vědy (Popper).</p>
+<p style="font-size: 13px; color: #555;"><strong>Směřování:</strong> Od logiky pojmů (Aristotelés) → logika výroků (Chrysippos) → scholastická syntéza (Abelard, Ockham) → matematizace (Leibniz, Boole, Frege) → analýza jazyka (Russell, Wittgenstein) → limity formálních systémů (Gödel) → metodologie vědy (Popper).</p>
             `
         }
 };
