@@ -1187,7 +1187,7 @@
             <div class="modal-header">
                 <span class="modal-icon">📚</span>
                 <h2 class="modal-title">QuizMaster</h2>
-                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.4 | 1. 4. 2026</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.5 | 3. 4. 2026</p>
             </div>
             <div class="modal-body">
                 <p><strong>O aplikaci</strong></p>
@@ -1310,7 +1310,7 @@
             </div>
             
             <!-- Related Topics button at bottom -->
-            <div class="setup-section" style="margin-top: 20px;">
+            <div id="wiki-topics-section" class="setup-section" style="margin-top: 20px; display: none;">
                 <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openRelatedTopicsModal()">
                     💡 Témata [Wiki]
                 </button>
@@ -1359,6 +1359,7 @@
 <script src="quizMaster_config.js"></script>
 <script src="quizdata/wiki/wiki_logika.js"></script>
 <script src="quizdata/wiki/wiki_filosofie.js"></script>
+<script src="quizdata/wiki/wiki_logika_teorie.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -1425,6 +1426,7 @@ const UserDataManager = {
             started: false,                    // Whether user has launched this quiz at least once
             completed: false,                  // Whether quiz is marked as 'hotovo'
             points: 0,                         // Total points (1 for completion with errors, 3 for flawless)
+            hasWikiTopics: false,              // Whether quiz has questions with wiki topics
             answeredQuestions: {},             // questionKey -> {correct: boolean, timestamp: number}
             wrongAnswers: [],                  // Array of question keys answered wrong (current attempt)
             allTimeWrongAnswers: [],           // Array of question keys answered wrong EVER (for flawless tracking)
@@ -1573,6 +1575,19 @@ const UserDataManager = {
         this.saveData(data);
     },
     
+    // Check if quiz has wiki topics and save it to user data
+    checkAndSaveWikiStatus(quizId, questions) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        const hasWiki = questions.some(question => question.wiki && question.wiki.length >= 2);
+        if (hasWiki !== data.quizzes[quizId].hasWikiTopics) {
+            data.quizzes[quizId].hasWikiTopics = hasWiki;
+            this.saveData(data);
+        }
+        return hasWiki;
+    },
+    
     // Get quiz statistics
     getQuizStats(quizId) {
         const quizData = this.getQuizData(quizId);
@@ -1584,6 +1599,7 @@ const UserDataManager = {
             started: quizData.started,
             completed: quizData.completed,
             points: quizData.points || 0,
+            hasWikiTopics: quizData.hasWikiTopics || false,
             totalAnswered: answeredKeys.length,
             correctCount: correctCount,
             wrongCount: wrongCount,
@@ -2338,8 +2354,12 @@ const DataLoader = {
                 // Store total questions count in UserData for progress calculation
                 UserDataManager.setQuizTotalQuestions(quizId, AppState.db.length);
                 
+                // Check and save wiki status for this quiz
+                UserDataManager.checkAndSaveWikiStatus(quizId, AppState.db);
+                
                 this.setupCountSelector();
                 this.setupGroupFilters();
+                this.updateWikiTopicsButton();
                 UI.showScreen('sc-setup');
             } else {
                 Hub.showWarningBubble('Nepodařilo se načíst kvíz');
@@ -2667,6 +2687,17 @@ const DataLoader = {
     },
     
     
+    // Check if current quiz has any wiki topics and update button visibility
+    updateWikiTopicsButton() {
+        const wikiSection = document.getElementById('wiki-topics-section');
+        if (!wikiSection) return;
+        
+        // Check if any question has wiki attribute
+        const hasWikiTopics = AppState.db.some(question => question.wiki && question.wiki.length >= 2);
+        
+        wikiSection.style.display = hasWikiTopics ? 'block' : 'none';
+    },
+    
     clearCache() {
         this.cache.clear();
     },
@@ -2765,6 +2796,12 @@ const Hub = {
                         badgesHtml += `<span class="badge">${quizStats.points} b</span>`;
                     }
                     
+                    // Check if quiz has wiki topics from user data
+                    let wikiIconHtml = '';
+                    if (quizStats.hasWikiTopics) {
+                        wikiIconHtml = `<div style="position: absolute; bottom: 8px; right: 12px; font-size: 14px; color: #f5a623; z-index: 1;">💡</div>`;
+                    }
+                    
                     // Calculate progress for the progress bar
                     let progressBarHtml = '';
                     const totalQuestions = UserDataManager.getQuizTotalQuestions(q.id);
@@ -2774,12 +2811,16 @@ const Hub = {
                         progressBarHtml = `<div class="hub-item-progress" style="width: ${progress}%;"></div>`;
                     }
                     
+                    div.style.position = 'relative';
                     div.innerHTML = `
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
-                        ${badgesHtml ? `<div class="quiz-badges">${badgesHtml}</div>` : ''}
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
+                            ${badgesHtml ? `<div class="quiz-badges">${badgesHtml}</div>` : ''}
+                        </div>
+                        ${wikiIconHtml}
                         ${progressBarHtml}
                     `;
                     // Click on quiz item goes directly to setup
@@ -3039,14 +3080,25 @@ function openWikiOverlay(wikiPath) {
     if (!wikiPath || wikiPath.length < 2) return;
     
     const [category, entry] = wikiPath;
-    const wikiData = window.wiki;
+    let wikiData = window.wiki;
+    let entryData = null;
     
-    if (!wikiData || !wikiData[category] || !wikiData[category][entry]) {
+    // Try window.wiki first
+    if (wikiData && wikiData[category] && wikiData[category][entry]) {
+        entryData = wikiData[category][entry];
+    } else {
+        // Try other wiki sources - first try direct category name, then with wiki_ prefix
+        const wikiSource = window[category] || window[`wiki_${category}`];
+        if (wikiSource && wikiSource[entry]) {
+            entryData = wikiSource[entry];
+            wikiData = wikiSource; // Use this for topic navigation
+        }
+    }
+    
+    if (!entryData) {
         console.error('Wiki entry not found:', wikiPath);
         return;
     }
-    
-    const entryData = wikiData[category][entry];
     
     // Update overlay content
     document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
@@ -3085,8 +3137,18 @@ function navigateWikiTopic(direction) {
     
     const topic = currentWikiTopicsList[currentWikiTopicIndex];
     if (topic) {
+        let entryData = null;
+        // Try window.wiki first
         const wikiData = window.wiki;
-        const entryData = wikiData[topic.category]?.[topic.entry];
+        if (wikiData && wikiData[topic.category] && wikiData[topic.category][topic.entry]) {
+            entryData = wikiData[topic.category][topic.entry];
+        } else {
+            // Try other wiki sources - direct name or with wiki_ prefix
+            const wikiSource = window[topic.category] || window[`wiki_${topic.category}`];
+            if (wikiSource && wikiSource[topic.entry]) {
+                entryData = wikiSource[topic.entry];
+            }
+        }
         if (entryData) {
             document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
             document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
@@ -3184,12 +3246,19 @@ function openRelatedTopicsModal() {
                 const entry = question.wiki[1];
                 const key = `${category}:${entry}`;
                 
-                // Get wiki data - try both direct access and window.wiki
+                // Get wiki data - try all available wiki sources
                 let title = entry;
                 try {
+                    // Try window.wiki first
                     const wikiData = window.wiki || {};
                     if (wikiData && wikiData[category] && wikiData[category][entry] && wikiData[category][entry].title) {
                         title = wikiData[category][entry].title;
+                    } else {
+                        // Try other wiki sources - direct name or with wiki_ prefix
+                        const wikiSource = window[category] || window[`wiki_${category}`];
+                        if (wikiSource && wikiSource[entry] && wikiSource[entry].title) {
+                            title = wikiSource[entry].title;
+                        }
                     }
                 } catch (e) {
                     console.warn('Could not get wiki title for', category, entry);

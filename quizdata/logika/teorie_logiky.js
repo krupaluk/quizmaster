@@ -5,6 +5,7 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Jaká je základní hierarchie forem logického myšlení podle jejich složitosti?",
+                wiki: ["logika_teorie", "stavba_mysleni"],
                 a: "Úsudek → Soud → Pojem",
                 b: "Soud → Pojem → Úsudek",
                 c: "Pojem → Soud → Úsudek",
@@ -130,6 +131,7 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Z jakých dvou základních částí se skládá každá formálně správná definice?",
+                wiki: ["logika_teorie", "definice_jako_most"],
                 a: "Z premisy (předpokladu) a konkluze (závěru), které tvoří logický důkaz.",
                 b: "Z definienda (výraz, který definujeme) a definiense (výraz, kterým definujeme).",
                 c: "Ze subjektu (podmětu) a predikátu (přísudku), které tvoří gramatickou větu.",
@@ -267,6 +269,7 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Co je v logice základní definicí 'soudu' (propozice)?",
+                wiki: ["logika_teorie", "logicky_ctverec"],
                 a: "Jakákoliv věta v přirozeném jazyce, která vyjadřuje emoce nebo přání mluvčího.",
                 b: "Myšlenka vyjádřená oznamovací větou, u které má smysl se ptát, zda je pravdivá, či nepravdivá.",
                 c: "Právní rozhodnutí vynesené soudcem v soudní síni na základě platných zákonů.",
@@ -440,6 +443,7 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Z jakých dvou hlavních částí se skládá každý logický 'úsudek'?",
+                wiki: ["logika_teorie", "dedukce_vs_indukce"],
                 a: "Z definienda (vysvětlované) a definiense (vysvětlující), které tvoří celek.",
                 b: "Z předpokladů (premis) a z nich vyvozeného závěru (konkluze).",
                 c: "Z otázky mluvčího a následné odpovědi posluchače v rámci diskuze.",
@@ -589,6 +593,7 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "V čem spočívá argumentační klam 'Slaměný panák' (straw man)?",
+                wiki: ["logika_teorie", "manipulace_v_diskuzi"],
                 a: "Mluvčí napadne osobní charakter soupeře, aby ho v očích veřejnosti zcela zdiskreditoval.",
                 b: "Mluvčí zkreslí soupeřův argument do slabší nebo extrémní podoby a pak útočí na tuto verzi.",
                 c: "Mluvčí v diskusi mlčí a nechává za sebe mluvit pouze připravené písemné podklady.",
