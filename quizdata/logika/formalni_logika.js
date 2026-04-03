@@ -5,6 +5,7 @@ window.data_formalni_logika = {
             "questions": [
             {
                 q: "Co v logice vyjadřuje symbol '¬' (případně '~')?",
+                wiki: ["formalni_logika", "symboly_prehled"],
                 a: "Konjunkci (a zároveň)",
                 b: "Negaci (neplatí, že)",
                 c: "Implikaci (jestliže, pak)",
@@ -250,6 +251,7 @@ window.data_formalni_logika = {
             "questions": [
             {
                 q: "Která logická spojka má standardně nejvyšší prioritu (vyhodnocuje se jako první)?",
+                wiki: ["formalni_logika", "pravdivostni_tabulky"],
                 a: "Konjunkce (∧)",
                 b: "Negace (¬)",
                 c: "Implikace (→)",
@@ -495,6 +497,7 @@ window.data_formalni_logika = {
             "questions": [
             {
                 q: "Jak lze pomocí disjunkce (∨) a negace (¬) přepsat implikaci 'A → B'?",
+                wiki: ["formalni_logika", "zakony_logiky"],
                 a: "¬A ∨ B",
                 b: "¬A ∧ B",
                 c: "A ∨ ¬B",
@@ -699,6 +702,7 @@ window.data_formalni_logika = {
             },
             {
                 q: "Jak se nazývá pravidlo: 'Z (A → B) a A odvoď B'?",
+                wiki: ["formalni_logika", "pravidla_usudku_prehled"],
                 a: "Modus Ponens",
                 b: "Modus Tollens",
                 c: "Hypotetický sylogismus",
@@ -740,6 +744,7 @@ window.data_formalni_logika = {
             "questions": [
             {
                 q: "Jak zní negace formule 'A ∨ (B ∧ C)'?",
+                wiki: ["formalni_logika", "de_morgan_zakony"],
                 a: "¬A ∧ (¬B ∨ ¬C)",
                 b: "¬A ∨ (¬B ∧ ¬C)",
                 c: "¬A ∧ ¬B ∧ ¬C",
@@ -985,6 +990,7 @@ window.data_formalni_logika = {
             "questions": [
             {
                 q: "Jak vypadá negace formule 'A → (B ∨ C)'?",
+                wiki: ["formalni_logika", "pokrocile_koncepty"],
                 a: "A ∧ ¬B ∧ ¬C",
                 b: "¬A ∨ (B ∨ C)",
                 c: "A ∧ (¬B ∨ ¬C)",

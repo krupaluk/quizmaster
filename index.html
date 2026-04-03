@@ -1360,6 +1360,7 @@
 <script src="quizdata/wiki/wiki_logika.js"></script>
 <script src="quizdata/wiki/wiki_filosofie.js"></script>
 <script src="quizdata/wiki/wiki_logika_teorie.js"></script>
+<script src="quizdata/wiki/wiki_formalni_logika.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -2078,9 +2079,21 @@ const QuizEngine = {
         let buttonText = 'víš, že...';
         if (wikiPath && wikiPath.length >= 2) {
             const [category, entry] = wikiPath;
+            let entryData = null;
+            
+            // Try window.wiki first
             const wikiData = window.wiki;
             if (wikiData && wikiData[category] && wikiData[category][entry]) {
-                const entryData = wikiData[category][entry];
+                entryData = wikiData[category][entry];
+            } else {
+                // Try other wiki sources - first try direct category name, then with wiki_ prefix
+                const wikiSource = window[category] || window[`wiki_${category}`];
+                if (wikiSource && wikiSource[entry]) {
+                    entryData = wikiSource[entry];
+                }
+            }
+            
+            if (entryData) {
                 buttonText = entryData.title || buttonText;
             }
         }
