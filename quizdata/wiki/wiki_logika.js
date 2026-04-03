@@ -139,6 +139,25 @@ window.wiki.logika = {
 <p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Stoická logika předjímá moderní výrokovou logiku o 2000 let. Dnes se používá v programování (IF-THEN), ale tehdy Aristotelova logika dominovala.</p>
             `
         },
+        "chrysippos_anapodeiktikoi": {
+            "title": "Anapodeiktikoi - Pět nedokazatelných schémat",
+            "content": `
+<p><strong>Anapodeiktikoi</strong> (řecky nedokazatelné") je pět základních logických schémat, která Chrysippos považoval za tak zřejmá, že nepotřebují důkaz. Jsou základem stoické výrokové logiky.</p>
+
+<table class="wiki-table">
+<tr><th class="w-15">Č.</th><th>Schéma</th><th>Příklad</th></tr>
+<tr><td><strong>1.</strong></td><td>Jestliže P, pak Q; P; tedy Q</td><td>„Jestliže prší, je mokro. Prší. Tedy je mokro."</td></tr>
+<tr><td><strong>2.</strong></td><td>Jestliže P, pak Q; ne-Q; tedy ne-P</td><td>„Jestliže prší, je mokro. Není mokro. Tedy neprší."</td></tr>
+<tr><td><strong>3.</strong></td><td>Ne-(P i Q); P; tedy ne-Q</td><td>„Nemůžeš být současně v Aténách a v Římě. Jsi v Aténách. Tedy nejsi v Římě."</td></tr>
+<tr><td><strong>4.</strong></td><td>Buď P, nebo Q; P; tedy ne-Q</td><td>„Buď je den, nebo noc. Je den. Tedy není noc."</td></tr>
+<tr><td><strong>5.</strong></td><td>Buď P, nebo Q; ne-P; tedy Q</td><td>„Buď je den, nebo noc. Není den. Tedy je noc."</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Proč nedokazatelné"?</strong> Chrysippos věřil, že tato schémata jsou samozřejmá jako pravidla přirozeného myšlení. Člověk je používá instinktivně, aniž by je musel učit - podobně jako dítě používá gramatiku, aniž by znalo gramatická pravidla.</p>
+
+<p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Tato schémata jsou předchůdci moderních pravidel výrokové logiky a programovacích konstrukcí (IF-THEN-ELSE).</p>
+            `
+        },
         "galenos_synteza": {
             "title": "Galénos - Syntéza logických škol",
             "content": `
