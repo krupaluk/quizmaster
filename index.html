@@ -2045,7 +2045,10 @@ const QuizEngine = {
                     
                     if (remainingCount === 0) {
                         // All questions answered - count completion now
-                        if (AppState.sessWrong > 0) {
+                        // Check allTimeWrongAnswers from LocalStorage for any errors ever made
+                        const quizData = UserDataManager.getQuizData(AppState.currentQuizId);
+                        const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                        if (everHadErrors) {
                             UserDataManager.markQuizCompleted(AppState.currentQuizId, 'regular');
                         } else {
                             UserDataManager.markQuizCompleted(AppState.currentQuizId, 'flawless');
@@ -2166,12 +2169,13 @@ const Results = {
                 
                 // If no points were added yet for this completion, add them now
                 if (stats.points === 0 || !quizData.completed) {
-                    const everHadErrors = AppState.sessWrong > 0;
+                    // Check allTimeWrongAnswers for any errors in this or previous sessions
+                    const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
                     stats = UserDataManager.markQuizCompleted(quizId, everHadErrors ? 'regular' : 'flawless');
                 }
                 
                 // Check for errors to determine which badge to show
-                const everHadErrors = AppState.sessWrong > 0;
+                const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
                 
                 if (everHadErrors) {
                     this.showCompletionBadge(stats, 'regular');
