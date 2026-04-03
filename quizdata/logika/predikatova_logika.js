@@ -5,6 +5,7 @@ window.data_predikatova_logika = {
             "questions": [
             {
                 q: "Co v logice vyjadřuje symbol '∀' (obrácené A)?",
+                wiki: ["predikatova_logika", "kvantifikatory_prehled"],
                 a: "Existenční kvantifikátor (existuje alespoň jedno)",
                 b: "Všeobecný kvantifikátor (pro všechna, každý)",
                 c: "Logickou spojku 'a zároveň'",
@@ -29,6 +30,7 @@ window.data_predikatova_logika = {
             },
             {
                 q: "Jak zapíšeme predikát 'x je člověk'?",
+                wiki: ["predikatova_logika", "predikaty"],
                 a: "x(C)",
                 b: "C(x)",
                 c: "C = x",
@@ -77,6 +79,7 @@ window.data_predikatova_logika = {
             },
             {
                 q: "Jaká je negace všeobecného kvantifikátoru ∀x P(x)?",
+                wiki: ["predikatova_logika", "negace_kvantifikatoru"],
                 a: "∀x ¬P(x)",
                 b: "∃x ¬P(x)",
                 c: "¬∃x P(x)",
@@ -137,13 +140,14 @@ window.data_predikatova_logika = {
             },
             {
                 q: "Zápis ∃x P(x) ∧ ∃x Q(x) znamená:",
+                wiki: ["predikatova_logika", "predikaty"],
                 a: "Existuje objekt, který má vlastnost P i Q zároveň",
                 b: "Existuje objekt s vlastností P a existuje (třeba jiný) objekt s vlastností Q",
                 c: "Všechna x mají vlastnost P nebo Q",
                 ans: "b",
                 expl: {
                     a: "To by se zapsalo jako ∃x (P(x) ∧ Q(x)).",
-                    b: "Kvantifikátory mají svůj 'dosah'. Zde první ∃x končí u první závorky. Říkáme tedy jen, že někdo má P a někdo (kdokoliv) má Q. Nemusí jít o tutéž osobu.",
+                    b: "Kvantifikátory mají svůj 'dosah'. Zde první ∃x končí u prvé závorky. Říkáme tedy jen, že někdo má P a někdo (kdokoliv) má Q. Nemusí jít o tutéž osobu.",
                     c: "To by vyžadovalo všeobecný kvantifikátor a disjunkci."
                 }
             },
@@ -160,13 +164,13 @@ window.data_predikatova_logika = {
                 }
             },
             {
-                q: "Jak zní negace věty 'Někdo v této místnosti lže'?",
+                q: "Jak zní negace věty: 'Někdo v této místnosti lže'?",
                 a: "Nikdo v této místnosti nelže",
                 b: "Všichni v této místnosti nelžou",
                 c: "Obě možnosti jsou v podstatě správně",
                 ans: "c",
                 expl: {
-                    a: "Původní věta je ∃x (M(x) ∧ L(x)). Negací je ∀x ¬(M(x) ∧ L(x)), což lze upravit na ∀x (M(x) → ¬L(x)). Česky: 'Pro každého v místnosti platí, že nelže'.",
+                    a: "Původní věta je ∃x (M(x) ∧ L(x)). Negace změní ∀ na ∃, ∃ na ∀ a zneguje vnitřek. Výsledek: Existuje x, které je studentem a pro všechna y platí, že ho nemá v oblibě.",
                     b: "To je jen jiný způsob, jak říct totéž co v možnosti A.",
                     c: "V přirozeném jazyce 'nikdo nelže' a 'všichni nelžou' vyjadřují stejný fakt, který je negací 'někdo lže'."
                 }
@@ -190,6 +194,7 @@ window.data_predikatova_logika = {
             "questions": [
             {
                 q: "Jaký je rozdíl mezi '∀x ∃y Miluje(x, y)' a '∃y ∀x Miluje(x, y)'?",
+                wiki: ["predikatova_logika", "relace_vlastnosti"],
                 a: "Žádný, pořadí kvantifikátorů u různých typů (∀, ∃) nehraje roli.",
                 b: "První říká, že každý někoho miluje. Druhá, že existuje jedna osoba, kterou milují úplně všichni.",
                 c: "První říká, že existuje jeden milovník. Druhá, že všichni jsou milováni.",
@@ -202,6 +207,7 @@ window.data_predikatova_logika = {
             },
             {
                 q: "Jak zní negace věty: 'Každý student (S) má nějaký oblíbený předmět (P)'?",
+                wiki: ["predikatova_logika", "negace_kvantifikatoru"],
                 a: "Žádný student nemá oblíbený předmět.",
                 b: "Existuje student, který nemá žádný oblíbený předmět.",
                 c: "Někteří studenti mají neoblíbené předměty.",
@@ -226,6 +232,7 @@ window.data_predikatova_logika = {
             },
             {
                 q: "Jak zapíšeme: 'Jenom ptáci (P) létají (L)'?",
+                wiki: ["predikatova_logika", "relace_vlastnosti"],
                 a: "∀x (P(x) → L(x))",
                 b: "∀x (L(x) → P(x))",
                 c: "∃x (P(x) ∧ L(x))",
@@ -383,7 +390,8 @@ window.data_predikatova_logika = {
                     a: "Tento zápis říká: 'Pro každé x platí, že pokud je to člověk, pak k němu existuje aspoň jedno y, které toto x miluje'. Každý má tedy v univerzu aspoň jeden objekt své lásky.",
                     b: "To by vyžadovalo prohození kvantifikátorů: ∃y ∀x (P(x) → Miluje(x, y)).",
                     c: "To by se zapsalo jako ∀x (P(x) → Miluje(x, x))."
-                }
+                },
+                wiki: ["predikatova_logika", "relace_vlastnosti"],
             },
             {
                 q: "Jak zní negace věty 'Existuje někdo (∃x), koho nikdo (∀y) nezná (¬Z(y, x))'?",
@@ -568,7 +576,8 @@ window.data_predikatova_logika = {
                     a: "Tento zápis definuje funkcionalitu (jednoznačnost). Říká: 'Pokud pro nějaké x platí, že y je jeho otcem a zároveň z je jeho otcem, pak y a z musí být tatáž osoba'. Tím vylučujeme existenci dvou různých otců.",
                     b: "Toto znamená 'Každý má alespoň jednoho otce', což neřeší horní limit (nejvýše jednoho).",
                     c: "Toto by znamenalo 'Každý je svým vlastním otcem'."
-                }
+                },
+                wiki: ["predikatova_logika", "relace_vlastnosti"],
             },
             {
                 q: "Co vyjadřuje formule: '∃x (C(x) ∧ ∀y (C(y) ∧ x ≠ y → Starší(x, y)))'?",
