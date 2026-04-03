@@ -46,7 +46,7 @@ window.data_dejiny_a_predstavitele = {
                 wiki: ["logika", "zakony_logiky"]
             },
             {
-                q: "Jak Aristotelés nazýval kategorii termínů, které tvoří subjekt nebo predikát v syllogismu?",
+                q: "Jak Aristotelés označoval základní způsoby, jakými můžeme o věcech vypovídat?",
                 a: "Kategorie",
                 b: "Akcedence",
                 c: "Substance",
@@ -56,8 +56,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Chyba. Akcedence (případek) je pouze jednou z kategorií, označuje vlastnosti, které nejsou pro podstatu věci nezbytné.",
                     c: "Chyba. Substance je nejdůležitější kategorií, ale není souhrnným názvem pro všechna typy termínů."
                 },
-                wiki: ["logika", "artistoteles_kategorie_priklad"],
-                tag: "aristoteles"
+                tag: "aristoteles",
+                wiki: ["logika", "artistoteles_kategorie_priklad"],                
             },
             {
                 q: "Který člen syllogismu se vyskytuje v obou premisách, ale chybí v závěru?",
@@ -73,15 +73,15 @@ window.data_dejiny_a_predstavitele = {
                 tag: "aristoteles"
             },
             {
-                q: "Jak Aristotelés v logice nahlížel na existenci obecných pojmů (univerzálií)?",
-                a: "Existují v mimosmyslovém světě idejí",
-                b: "Jsou to jen prázdná jména bez reálného základu",
-                c: "Existují pouze v jednotlivých věcech",
-                ans: "c",
+                q: "Jaký postoj zastával Aristotelés v otázce existence univerzálií (obecných pojmů jako např. 'člověk' nebo 'strom')?",
+                a: "Umírněný realismus – obecniny existují pouze v jednotlivých věcech.",
+                b: "Krajní realismus – obecniny existují jako samostatné entity v nadřazeném světě.",
+                c: "Nominalismus – obecniny jsou pouze jména a v realitě neexistují.",
+                ans: "a",
                 expl: {
-                    a: "Chyba. Toto je názor Platóna, Aristotelova učitele, se kterým Aristotelés v logice a metafyzice zásadně nesouhlasil.",
-                    b: "Chyba. Toto je pozice středověkého nominalismu. Aristotelés věřil, že obecné pojmy mají reálný základ v podobě formy věcí.",
-                    c: "Správně. Aristotelův umírněný realismus tvrdí, že obecniny existují 'v' jednotlivinách (in rebus). Logika tedy pro něj pracovala s pojmy, které věrně odrážely strukturu reálného světa."
+                    a: "Správně. Aristotelés věřil, že obecné vlastnosti (univerzálie) reálně existují, ale jsou neoddělitelné od konkrétních předmětů (existují v nich, nikoliv mimo ně).",
+                    b: "Chyba. Toto je stanovisko Platóna, který věřil v samostatnou existenci idejí. Aristotelés tento dualismus odmítal.",
+                    c: "Chyba. Nominalismus se objevil až později ve středověku. Aristotelés věřil, že obecné pojmy mají reálný základ v podstatě věcí."
                 },
                 tag: "aristoteles",
                 wiki: ["logika", "univerzalie"]
@@ -101,7 +101,7 @@ window.data_dejiny_a_predstavitele = {
                 wiki: ["logika", "aristotelova_vs_moderni_logika"]
             },
             {
-                q: "Který typ úsudku Aristotelés považoval za základ vědeckého dokazování v 'Druhou analytikách'?",
+                q: "Který typ úsudku Aristotelés považoval za základ vědeckého dokazování v 'Druhých analytikách'?",
                 a: "Apodiktický syllogismus",
                 b: "Dialektický syllogismus",
                 c: "Eristický úsudek",
@@ -130,12 +130,12 @@ window.data_dejiny_a_predstavitele = {
             {
                 q: "Na co se zaměřuje Aristotelův spis 'O vyjadřování'?",
                 a: "Na rétorické figury",
-                b: "Na strukturu věty a vztah mezi pravdou a nepravdou",
+                b: "Na strukturu výroků (soudů)",
                 c: "Na klasifikaci živočichů",
                 ans: "b",
                 expl: {
                     a: "Chyba. Tím se zabývá jeho spis Rétorika, nikoliv logický Organon.",
-                    b: "Správně. V tomto díle Aristotelés zkoumá, jak se z pojmů tvoří soudy (výroky). Definoval zde, že pravda nebo lež vzniká až spojením pojmů do věty, nikoliv v pojmech samotných.",
+                    b: "Správně. Zkoumá, jak se pojmy spojují do vět. Samostatně jsou například slova 'Sokratés' nebo 'běžet' pouhými pojmy (spadající pod kategorie). Avšak spojením vznikne věta 'Sokratés běží' a ta už je výrokem (má pravdivostní hodnotu).",
                     c: "Chyba. Klasifikaci živočichů se věnuje v biologických spisech; v logice klasifikuje pouze kategorie myšlení."
                 },
                 tag: "aristoteles",                
@@ -153,7 +153,7 @@ window.data_dejiny_a_predstavitele = {
                 ans: "b",
                 expl: {
                     a: "Chyba. Logika pojmů (syllogistika) byla doménou Aristotela.",
-                    b: "Správně. Chrysippos se nezaměřoval na vztahy mezi termíny (A a B), ale na vztahy mezi celými výroky pomocí spojek jako 'jestliže... pak', 'a' nebo 'nebo'. Stal se tak předchůdcem moderní výrokové logiky.",
+                    b: "Správně. Chrysippos obohatil logiku o výrokové spojky: negace, implikace, konjunkce a disjunkce. Stal se tak předchůdcem moderní výrokové logiky.",
                     c: "Chyba. Stoici byli přísní racionalisté a logiku považovali za klíč k pochopení řádu světa (Logu)."
                 },
                 tag: "chrysippos",
@@ -180,23 +180,11 @@ window.data_dejiny_a_predstavitele = {
                 ans: "b",
                 expl: {
                     a: "Chyba. Axiom je obecnější termín pro jakékoli základní tvrzení, stoici měli pro svá schémata specifický název.",
-                    b: "Správně. 'Anapodeiktikoi' jsou schémata úsudků (např. Modus Ponens), která jsou tak zřejmá, že nepotřebují důkaz. Chrysippos věřil, že veškerá složitá argumentace se dá rozložit na těchto pět základních forem.",
+                    b: "Správně. 'Anapodeiktikoi' jsou schémata úsudků (např. Modus Ponens), která jsou tak zřejmá, že nepotřebují důkaz.",
                     c: "Chyba. Termín postuláty zpopularizoval v matematice Eukleidés a později v logice jiní autoři."
                 },
-                tag: "chrysippos"
-            },
-            {
-                q: "Který slavný logický klam (paradox) Chrysippos intenzivně studoval a údajně o něm napsal mnoho knih?",
-                a: "Paradox lháře",
-                b: "Achilleus a želva",
-                c: "Paradox hromady (Sórítés)",
-                ans: "a",
-                expl: {
-                    a: "Správně. Paradox 'Jestliže lžu, mluvím pravdu?' byl pro stoickou logiku velkou výzvou. Chrysippos se snažil ukázat, že takové výroky jsou v podstatě nesmyslné, protože porušují základy významu (lekton).",
-                    b: "Chyba. Tento paradox pochází od Zénóna z Eleje a týká se pohybu a nekonečna, nikoliv výrokové logiky.",
-                    c: "Chyba. Sórítés (kdy se hromada stává hromadou) sice stoici znali, ale paradox lháře byl pro jejich teorii pravdy zásadnější."
-                },
-                tag: "chrysippos"
+                tag: "chrysippos",
+                wiki: ["logika", "chrysippos_anapodeiktikoi"]
             },
             {
                 q: "Co v Chrysippově logice znamená pravidlo 'Modus Ponens'?",
@@ -325,12 +313,12 @@ window.data_dejiny_a_predstavitele = {
             "questions": [
             {
                 q: "Co říká Ockhamova břitva v logice?",
-                a: "Plurality should not be posited without necessity",
+                a: "Nejjednodušší vysvětlení je zpravidla to správné",
                 b: "Všechny teorie jsou stejně dobré",
                 c: "Složité vysvětlení je vždy lepší",
                 ans: "a",
                 expl: {
-                    a: "Správně. Ockhamova břitva (neboli princip parcimónie) říká: 'Entia non sunt multiplicanda sine necessitate' (Bytosti by neměly být násobeny bez nutnosti). Při více možných vysvětleních je nejlepší to nejjednodušší.",
+                    a: "Správně. Occamova břitva je filozofický a vědecký princip úspornosti. Ve své podstatě říká, že pokud pro určitý jev existuje více vysvětlení, měli bychom upřednostnit to nejjednodušší.",
                     b: "Chyba. Ockham chtěl naopak mezi teoriemi rozhodnout - vybrat tu nejjednodušší, nikoliv tvrdit, že jsou všechny stejné.",
                     c: "Chyba. Přesný opak - Ockham kritizoval zbytečně složitá vysvětlení (např. příliš mnoho kategorií nebo entit)."
                 },
@@ -562,19 +550,6 @@ window.data_dejiny_a_predstavitele = {
             "title": "Gottlob Frege",
             "questions": [
             {
-                q: "Gottlob Frege je považován za zakladatele které filosofické tradice?",
-                a: "Existencialismu",
-                b: "Analytické filosofie",
-                c: "Fenomenologie",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Existencialismus (Sartre, Heidegger) se zaměřuje na prožívání jedince, nikoliv na logickou analýzu jazyka.",
-                    b: "Správně. Frege svým důrazem na logickou analýzu jazyka a významu položil základy tradice, která dodnes dominuje v anglosaském světě. Jeho práce ovlivnila Russella, Wittgensteina i Carnapa.",
-                    c: "Chyba. Fenomenologii založil Edmund Husserl, který s Fregem sice polemizoval, ale šel jinou cestou."
-                },
-                tag: "frege"
-            },
-            {
                 q: "Jak se jmenuje Fregeho revoluční spis z roku 1879, kde představil první kompletní systém predikátové logiky?",
                 a: "Principia Mathematica",
                 b: "Begriffsschrift (Pojmopis)",
@@ -601,7 +576,21 @@ window.data_dejiny_a_predstavitele = {
                 tag: "frege"
             },
             {
-                q: "Frege rozlišil u jmen a výrazů dva aspekty: 'Smysl' (Sinn) a 'Význam' (Bedeutung). Co je to 'Význam'?",
+                q: "Gottlob Frege rozlišoval u jmen dva aspekty: 'Smysl' (Sinn) a 'Význam' (Bedeutung). Co přesně je podle něj 'Smysl'?",
+                a: "Způsob danosti (způsob, jakým je předmět mluvčímu představen)",
+                b: "Konkrétní fyzický objekt ve světě",
+                c: "Slovo zapsané v určitém jazyce",
+                ans: "a",
+                expl: {
+                    a: "Správně. Smysl je způsob, jakým uchopujeme význam. Například výrazy 'Jitřenka' a 'Večernice' mají stejný význam (planetu Venuši), ale odlišný smysl, protože nám planetu představují v jiném čase a kontextu.",
+                    b: "Chyba. Fyzický objekt (např. planeta Venuše) je pro Fregeho 'Význam' (Bedeutung), nikoliv smysl.",
+                    c: "Chyba. Slovo je pouze znak (Zeichen). Smysl je myšlenkový obsah, který tento znak vyjadřuje a který je objektivně sdělitelný."
+                },
+                tag: "frege",
+                wiki: ["logika", "frege_sinn_bedeutung"]
+            },            
+            {
+                q: "Gottlob Frege rozlišoval u jmen dva aspekty: 'Smysl' (Sinn) a 'Význam' (Bedeutung). Co je to 'Význam'?",
                 a: "Způsob, jakým je věc daná",
                 b: "Objekt v realitě, na který výraz odkazuje",
                 c: "Subjektivní pocit mluvčího",
