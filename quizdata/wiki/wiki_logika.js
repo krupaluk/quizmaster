@@ -90,23 +90,6 @@ window.wiki.logika = {
 <p style="font-size: 13px; color: #555;"><strong>Dopad na logiku:</strong> Aristotelés mohl logiku založit na kategoriích a pojmech, protože věřil, že pojmy odrážejí reálnou strukturu světa. Platón by hledal logiku v říši idejí, nominalista jen v konvencích jazyka.</p>
             `
         },
-        "aristotelova_vs_moderni_logika": {
-            "title": "Aristotelova vs Moderní logika",
-            "content": `
-<p><strong>Rozdíl mezi logikami</strong> spočívá v základních jednotkách: Aristotelés pracoval s pojmy, moderní logika s výroky.</p>
-
-<table class="wiki-table">
-<tr><th>Aristotelova logika</th><th>Moderní logika</th></tr>
-<tr><td><strong>Terministická</strong> - pracuje s pojmy (A, B)</td><td><strong>Výroková</strong> - pracuje s celými výroky (P, Q)</td></tr>
-<tr><td>„Všichni A jsou B"</td><td>„Jestliže P, pak Q"</td></tr>
-<tr><td>Syllogismus: vztahy mezi pojmy</td><td>Pravdivostní funkce: analýza struktury výroků</td></tr>
-<tr><td>4 figury syllogismu</td><td>Spojky: AND, OR, IF-THEN, NOT</td></tr>
-<tr><td>Aristotelés, scholastici</td><td>Stoici, Frege, moderní matematická logika</td></tr>
-</table>
-
-<p style="font-size: 13px; color: #555;"><strong>Příklad rozdílu:</strong> Aristotelés řeší „Všichni lidé jsou smrtelní, Sókratés je člověk, tedy..." Moderní logika řeší „Jestliže prší, je mokro. Prší. Tedy je mokro."</p>
-            `
-        },
         "tri_typy_syllogismu": {
             "title": "Tři typy syllogismů",
             "content": `
@@ -190,6 +173,102 @@ window.wiki.logika = {
 <p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Toto rozlišení ovlivnilo analytickou filosofii a teorii modality (nutné vs možné).</p>
             `
         },
+        "leibniz_pocitace": {
+            "title": "Leibniz - Binární soustava a počítače",
+            "content": `
+<p><strong>Gottfried Wilhelm Leibniz</strong> (1646–1716) je považován za pradědečka moderních počítačů. Jako první pochopil, že <strong>binární soustava</strong> (systém nul a jedniček) není jen matematická zvědavost, ale základ budoucího výpočetního stroje.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Binární soustava vs Desítková:</strong></p>
+
+<table class="wiki-table">
+<tr><th>Desítková</th><th>Binární</th><th>Význam</th></tr>
+<tr><td>0</td><td>0</td><td>Žádná hodnota</td></tr>
+<tr><td>1</td><td>1</td><td>Jedna jednotka</td></tr>
+<tr><td>2</td><td>10</td><td>Jedna dvojka + nula jednotek</td></tr>
+<tr><td>3</td><td>11</td><td>Jedna dvojka + jedna jednotka</td></tr>
+<tr><td>4</td><td>100</td><td>Jedna čtyřka (2²)</td></tr>
+<tr><td>5</td><td>101</td><td>4 + 0 + 1 = 5</td></tr>
+<tr><td>10</td><td>1010</td><td>8 + 0 + 2 + 0 = 10</td></tr>
+<tr><td>16</td><td>10000</td><td>Jedna šestnáctka (2⁴)</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Proč je to klíčové pro počítače?</strong></p>
+
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li><strong>Jen dva stavy:</strong> Zapnuto/vypnuto, ano/ne, 1/0 - elektronika toto miluje (napětí/nenapětí)</li>
+<li><strong>Spolehlivost:</strong> Rozlišit 10 úrovní napětí je těžké; rozlišit 2 stavy je jednoduché</li>
+<li><strong>Logika = Algebra:</strong> Leibniz ukázal, že logické operace (A, NEBO, NE) se dají počítat jako aritmetika</li>
+</ul>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Leibnizův vynález - "Calculus ratiocinator":</strong></p>
+<p>Leibniz nejen teoretizoval, ale navrhl konkrétní stroj: <strong>kuličkový mechanismus</strong>, kde kuličky padající do drážek reprezentovaly binární číslice. Místo abakusu s 10 kuličkami na sloupci měl jen 2 pozice (ano/ne) - přímý předchůdce dnešních bitů.</p>
+
+<p style="font-size: 13px; color: #555;"><strong>Propojení:</strong> Každý moderní počítač (i ten v tvém mobilu) používá Leibnizovu binární soustavu. 64bitový procesor zpracovává 64 číslic 0/1 současně - přesně to, o čem Leibniz snil před 300 lety.</p>
+            `
+        },
+        "boole_algebra": {
+            "title": "Booleova algebra - Logika jako matematika",
+            "content": `
+<p><strong>George Boole</strong> (1815–1864) splnil Leibnizův sen: převedl logiku z jazyka do matematiky. Jeho <strong>algebra logiky</strong> (1854) umožňuje řešit logické problémy počítáním, stejně jako algebra řeší rovnice.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Návaznost na Leibnitze:</strong></p>
+<p>Leibniz přišel s ideou <em>Calculus ratiocinator</em> - „výpočet myšlení". Boole tuto myšlenku realizoval. Zatímco Leibniz snil o mechanickém stroji provádějícím logiku, Boole ukázal, že logiku lze provádět přímo algebraicky - pomocí symbolů a rovnic.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Z věty do rovnice:</strong></p>
+
+<table class="wiki-table">
+<tr><th class="w-35">Slova (věta)</th><th class="w-35">Symboly (Boole)</th><th>Význam</th></tr>
+<tr><td>„Všechny psi jsou černí"</td><td>x = y (nebo x ⊆ y)</td><td>Třída „psi" je součástí třídy „černých"</td></tr>
+<tr><td>„Někteří psi jsou velcí"</td><td>x · z ≠ 0</td><td>Průnik „psů" a „velkých" není prázdný</td></tr>
+<tr><td>„Žádný pes není kočka"</td><td>x · y = 0</td><td>Průnik „psů" a „koček" je prázdná množina</td></tr>
+<tr><td>„Je černý A je pes"</td><td>x · y</td><td>Logický součin (AND)</td></tr>
+<tr><td>„Je černý NEBO je pes"</td><td>x + y</td><td>Logický součet (OR)</td></tr>
+<tr><td>„Není černý"</td><td>1 - x</td><td>Logická negace (doplněk)</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Klíčový zákon Booleovy algebry:</strong></p>
+
+<table class="wiki-table">
+<tr><th>Zákon</th><th>Algebra</th><th>Logika</th></tr>
+<tr><td>Idempotence</td><td>x · x = x</td><td>„Pes a pes" = „Pes"</td></tr>
+<tr><td>Idempotence</td><td>x + x = x</td><td>„Pes nebo pes" = „Pes"</td></tr>
+<tr><td>Komutativita</td><td>x · y = y · x</td><td>„Černý a pes" = „Pes a černý"</td></tr>
+<tr><td>Absorpce</td><td>x · (x + y) = x</td><td>„Pes a (pes nebo kočka)" = „Pes"</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Proč je to revoluční?</strong></p>
+<p>Boole odstranil nejednoznačnost přirozeného jazyka. Místo „Všechny A jsou B" a „Některé B jsou C" se začalo počítat. Aristotelovské syllogismy se staly speciálním případem obecnějšího algebraického systému.</p>
+
+<p style="font-size: 13px; color: #555;"><strong>Využití:</strong> Booleova algebra je základem všech moderních počítačových obvodů (brány AND, OR, NOT), databázových dotazů (SQL) a programovacích podmínek.</p>
+            `
+        },
+        "boole_shannon_it": {
+            "title": "Bool → Shannon → IT",
+            "content": `
+<p><strong>George Boole</strong> (1815–1864) vytvořil abstraktní algebraický systém, ale nedožil se éry elektronických počítačů. Jeho dílo zůstávalo čistě teoretické až do roku 1938, kdy jej převzal mladý americký matematik.</p>
+
+<p><strong>Claude Shannon</strong> (1916–2001) ve své práci <em>„A Symbolic Analysis of Relay and Switching Circuits"</em> (1938) ukázal, že Booleovu algebru lze fyzicky realizovat pomocí elektrických obvodů. Tím spojil abstraktní logiku s praktickou elektronikou a položil základy digitální éry:</p>
+
+<table class="wiki-table">
+<tr><th>Booleova algebra</th><th>Elektrický obvod</th><th>Fyzická realizace</th></tr>
+<tr><td>1 (pravda)</td><td>Uzavřený obvod, proud teče</td><td>Relé zapnuto, napětí 5V</td></tr>
+<tr><td>0 (nepravda)</td><td>Otevřený obvod, proud neteče</td><td>Relé vypnuto, napětí 0V</td></tr>
+<tr><td>x · y (AND)</td><td>Sériové zapojení spínačů</td><td>Oba spínače musí být zapnuté</td></tr>
+<tr><td>x + y (OR)</td><td>Paralelní zapojení spínačů</td><td>Stačí jeden spínač zapnutý</td></tr>
+<tr><td>1 - x (NOT)</td><td>Invertor/opačný kontakt</td><td>Normálně zavřené relé</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Shannonův přínos pro IT:</strong></p>
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li><strong>Digitální obvody:</strong> Shannon poprvé navrhl kombinační logiku z elektromagnetických relé - základ všech počítačů</li>
+<li><strong>Teorie informace:</strong> Ve stejné době definoval bit jako jednotku informace a ukázal, jak měřit a přenášet data bez ztráty</li>
+<li><strong>Univerzální kalkulátor:</strong> Kombinace Booleho algebry + binární soustava + elektrické spínače = Turingova univerzálnost</li>
+<li><strong>Od relé k tranzistorům:</strong> Z Shannonových relí se vyvinuly tranzistorové obvody a dnes miliardy tranzistorů na čipu</li>
+</ul>
+
+<p style="font-size: 13px; color: #555;">Booleova algebra (1854) → Shannonovy reléové obvody (1938) → Tranzistory (1947) → Integrované obvody → Moderní procesory. Každý 64bitový procesor je ve skutečnosti obrovská Booleova algebra realizovaná 64 miliardami tranzistorů.</p>
+            `
+        },
         "frege_sinn_bedeutung": {
             "title": "Frege - Smysl (Sinn) vs Význam (Bedeutung)",
             "content": `
@@ -204,6 +283,47 @@ window.wiki.logika = {
 <p style="font-size: 14px; margin: 12px 0;"><strong>Proč to je důležité?</strong> Věta „Jitřenka je Večernice" je informativní, i když oba výrazy označují totéž. Mají stejný význam, ale různý smysl.</p>
 
 <p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Toto rozlišení je základem moderní filozofie jazyka a sémantiky. Vysvětluje, proč jsou některé identity objevné.</p>
+            `
+        },
+        "frege_kvantifikatory": {
+            "title": "Frege - Kvantifikátory a nová logika",
+            "content": `
+<p><strong>Gottlob Frege</strong> (1848–1925) překonal Booleho algebru zavedením <strong>kvantifikátorů</strong> (1879). Tím vytvořil <strong>predikátovou logiku</strong> - první skutečně úplný systém symbolické logiky.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Booleho slabina:</strong></p>
+<p>Booleova algebra zvládala vztahy mezi třídami („Všichni psi jsou černí"), ale nedokázala zachytit <strong>vnitřní strukturu výroků</strong>. Věta „Všichni lidé jsou smrtelní" obsahuje:</p>
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li>Podmět (lidé) a přísudek (jsou smrtelní)</li>
+<li>Vztah mezi vlastnostmi (být člověkem → být smrtelný)</li>
+<li>Proměnné, které mohou nabývat různých hodnot</li>
+</ul>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Fregeho řešení - kvantifikátory:</strong></p>
+
+<table class="wiki-table">
+<tr><th class="w-25">Kvantifikátor</th><th>Zápis</th><th>Význam</th><th>Příklad</th></tr>
+<tr><td><strong>Všeobecný</strong></td><td>∀x</td><td>„Pro všechna x platí..."</td><td>∀x (Člověk(x) → Smrtelný(x))</td></tr>
+<tr><td><strong>Existenční</strong></td><td>∃x</td><td>„Existuje x takové, že..."</td><td>∃x (Filozof(x) ∧ Génius(x))</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Příklad převodu:</strong></p>
+
+<table class="wiki-table">
+<tr><th>Přirozený jazyk</th><th>Boole (omezeně)</th><th>Frege (kompletně)</th></tr>
+<tr><td>„Všichni lidé jsou smrtelní"</td><td>L ⊆ S</td><td>∀x (L(x) → S(x))</td></tr>
+<tr><td>„Někteří filozofové jsou géniové"</td><td>F ∩ G ≠ ∅</td><td>∃x (F(x) ∧ G(x))</td></tr>
+<tr><td>„Sókratés je člověk"</td><td>s ∈ L</td><td>L(s)</td></tr>
+<tr><td>„Každý člověk má otce"</td><td>?? (nelze)</td><td>∀x ∃y (Člověk(x) → Otec(y,x))</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Proč je to průlom?</strong></p>
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li><strong>Funkce místo tříd:</strong> Frege chápe pojmy jako funkce (F(x) vrací pravdu/nepravdu)</li>
+<li><strong>Vnořené kvantifikátory:</strong> „Pro každého existuje někdo..." umožňují vyjádřit složité vztahy</li>
+<li><strong>Oddělení logiky a psychologie:</strong> Logika je objektivní, ne závislá na lidském myšlení</li>
+</ul>
+
+<p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Fregeho logika je základem moderní matematiky, informatiky (databázové dotazy) a umělé inteligence. Bez kvantifikátorů by neexistěla formační logika ani programovací jazyky.</p>
             `
         },
         "russell_paradox": {
@@ -224,21 +344,46 @@ window.wiki.logika = {
 <p style="font-size: 13px; color: #555;"><strong>Podobnost:</strong> Paradox lháře („Tato věta je lež") - Russellův paradox je jeho množinová verze.</p>
             `
         },
-        "wittgenstein_jazyk": {
-            "title": "Wittgenstein - Od obrazu k hře",
+        "wittgenstein_pravdivostni_tabulky": {
+            "title": "Wittgenstein - Pravdivostní tabulky",
             "content": `
-<p><strong>Wittgenstein</strong> změnil během života své pojetí jazyka. Jeho rané a pozdní dílo se liší zásadně.</p>
+<p><strong>Ludwig Wittgenstein</strong> (1889–1951) v <em>Traktátu logicko-filozofickém</em> (1921) zpopularizoval <strong>pravdivostní tabulky</strong> jako mechanickou metodu pro určování pravdivosti složených výroků.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Princip:</strong> Pravdivost složeného výroku závisí výhradně na pravdivosti jeho jednoduchých částí (P, Q) a použité logické spojce.</p>
 
 <table class="wiki-table">
-<tr><th class="w-20">Období</th><th>Raný Wittgenstein (Traktát)</th><th>Pozdní Wittgenstein (Filozofická zkoumání)</th></tr>
-<tr><td><strong>Jazyk</strong></td><td>Obraz faktu - má logickou formu</td><td>Nástroj používaný v různých hrách</td></tr>
-<tr><td><strong>Pravda</strong></td><td>Korespondence s realitou</td><td>Dána použitím v jazykové hře</td></tr>
-<tr><td><strong>Logika</strong></td><td>Zrcadlí strukturu světa</td><td>Je jednou z mnoha forem života</td></tr>
-<tr><td><strong>Cíl</strong></td><td>Vytyčit hranice toho, co lze říci</td><td>Popsat různé jazykové hry</td></tr>
-<tr><td><strong>Heslo</strong></td><td>„O čem nelze mluvit, o tom mlčet"</td><td>„Význam je použití ve hře"</td></tr>
+<tr><th class="w-15">P</th><th class="w-15">Q</th><th>P ∧ Q (A)</th><th>P ∨ Q (NEBO)</th><th>P → Q (Jestliže)</th><th>¬P (NE)</th></tr>
+<tr><td><strong>1</strong></td><td><strong>1</strong></td><td>1</td><td>1</td><td>1</td><td>0</td></tr>
+<tr><td><strong>1</strong></td><td><strong>0</strong></td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+<tr><td><strong>0</strong></td><td><strong>1</strong></td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td><strong>0</strong></td><td><strong>0</strong></td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
 </table>
 
-<p style="font-size: 13px; color: #555;"><strong>Příklady jazykových her:</strong> Rozkaz, otázka, modlitba, popis, žádost. Každá má svá pravidla.</p>
+<p style="font-size: 14px; margin: 12px 0;"><strong>Příklad aplikace:</strong></p>
+<p>Věta <em>„Prší a fouká vítr"</em> (P ∧ Q):</p>
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li>Je pravdivá jen když prší (1) A zároveň fouká (1) → výsledek 1</li>
+<li>Všechny ostatní kombinace (prší jen jedno, nebo nic) → výsledek 0</li>
+</ul>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Tautologie:</strong></p>
+<p>Wittgenstein ukázal, že některé výroky jsou pravdivé <strong>vždy</strong>, bez ohledu na obsah:</p>
+<table class="wiki-table">
+<tr><th>Věta</th><th>Tabulka</th><th>Typ</th></tr>
+<tr><td>„Prší, nebo neprší" (P ∨ ¬P)</td><td>1 1</td><td>Tautologie (vždy pravda)</td></tr>
+<tr><td>„Prší a neprší" (P ∧ ¬P)</td><td>0 0</td><td>Kontradikce (vždy lež)</td></tr>
+<tr><td>„Prší a fouká" (P ∧ Q)</td><td>1 0 0 0</td><td>Kontingentní (záleží na faktech)</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Proč je to průlom?</strong></p>
+<ul style="margin: 8px 0; padding-left: 20px;">
+<li><strong>Mechanizace logiky:</strong> Pravdivost se dá spočítat jako aritmetická operace</li>
+<li><strong>Oddělení formy a obsahu:</strong> Logika se zabývá pouze strukturou, ne fakty</li>
+<li><strong>Základ informatiky:</strong> Předchůdce boolovských obvodů v počítačích</li>
+<li><strong>Meze jazyka:</strong> Tautologie neříkají nic o světě, jen odhalují logickou strukturu</li>
+</ul>
+
+<p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Pravdivostní tabulky jsou základem moderní výrokové logiky, digitálních obvodů (AND, OR, NOT brány) a programovacích jazyků. Každý počítačový procesor je ve své podstatě obrovská pravdivostní tabulka realizovaná tranzistory.</p>
             `
         },
         "vyvoj_logiky": {

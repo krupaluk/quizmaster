@@ -98,7 +98,6 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. Aristotelés jako první začal používat proměnné (písmena A, B, C) pro označení členů syllogismu, čímž logiku formalizoval."
                 },
                 tag: "aristoteles",
-                wiki: ["logika", "aristotelova_vs_moderni_logika"]
             },
             {
                 q: "Který typ úsudku Aristotelés považoval za základ vědeckého dokazování v 'Druhých analytikách'?",
@@ -345,7 +344,7 @@ window.data_dejiny_a_predstavitele = {
             {
                 q: "Jaký ambiciózní projekt v logice Leibniz navrhl, aby ukončil všechny spory mezi lidmi?",
                 a: "Univerzální encyklopedii",
-                b: "Characteristica universalis (univerzální charakteristiku)",
+                b: "Univerzální charakteristiku",
                 c: "Globální parlament",
                 ans: "b",
                 expl: {
@@ -363,7 +362,7 @@ window.data_dejiny_a_predstavitele = {
                 ans: "b",
                 expl: {
                     a: "Chyba. Desítková soustava je běžná, Leibniz v ní neviděl žádnou zvláštní logickou hloubku.",
-                    b: "Správně. Leibniz fascinovaně zkoumal binární soustavu (0 a 1). Viděl v ní symboliku stvoření světa z ničeho a dnes je tato soustava základem veškeré digitální logiky a počítačů.",
+                    b: "Správně. Leibniz fascinovaně zkoumal binární soustavu (0 a 1). Ukázal, že všechna čísla lze vyjádřit pomocí těchto dvou číslic (např. 5 = 101). Dnes je tato soustava základem veškeré digitální logiky a počítačů. ",
                     c: "Chyba. Šestnáctková soustava se v informatice používá také, ale Leibnizovým objevem a vášní byla soustava dvojková."
                 },
                 tag: "leibniz"
@@ -435,19 +434,6 @@ window.data_dejiny_a_predstavitele = {
                 tag: "leibniz"
             },
             {
-                q: "Který z těchto termínů Leibniz používal pro základní, dále nerozložitelné jednotky reality a myšlení?",
-                a: "Atomy",
-                b: "Monády",
-                c: "Quanta",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Atomy jsou hmotné a rozložitelné v prostoru, Leibnizovy základy jsou duchovní povahy.",
-                    b: "Správně. Monády jsou 'body síly' nebo 'duchovní atomy'. V logice jim odpovídají jednoduché pojmy, ze kterých se skládají všechny ostatní složité myšlenky (tzv. abeceda lidských myšlenek).",
-                    c: "Chyba. Termín quanta souvisí s moderní fyzikou, v 17. století se v tomto smyslu nepoužíval."
-                },
-                tag: "leibniz"
-            },
-            {
                 q: "Jaký je vztah mezi Leibnizem a vynálezem počítačů?",
                 a: "Žádný, žil příliš brzy",
                 b: "Navrhl koncept výpočetního stroje pracujícího s binární logikou",
@@ -459,7 +445,7 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. Leibnizovy stroje byly mechanické (ozubená kola), nikoliv parní. Parní stroj pro výpočty navrhl až Babbage v 19. století."
                 },
                 tag: "leibniz",
-                wiki: ["logika", "vyvoj_logiky"]
+                wiki: ["logika", "leibniz_pocitace"]
             }
             ]
         },
@@ -469,7 +455,7 @@ window.data_dejiny_a_predstavitele = {
             {
                 q: "Jak se jmenuje zásadní dílo George Boolea z roku 1854, které definovalo logiku jako matematickou disciplínu?",
                 a: "Matematická analýza logiky",
-                b: "Zákony myšlení (The Laws of Thought)",
+                b: "Zákony myšlení",
                 c: "Algebra logiky",
                 ans: "b",
                 expl: {
@@ -490,20 +476,22 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Pokud máme třídu 'červených věcí' (x) a 'jablek' (y), pak jejich součin (xy) představuje průnik těchto tříd, tedy věci, které jsou zároveň červené 'A' zároveň jablka.",
                     c: "Chyba. Negace se v Booleově algebře vyjadřuje jako doplněk do celku, tedy (1 - x)."
                 },
-                tag: "boole"
+                tag: "boole",
+                wiki: ["logika", "boole_algebra"]
             },
             {
-                q: "Jak Boole pohlížel na Aristotelovy syllogismy?",
-                a: "Považoval je za zcela chybné",
-                b: "Považoval je za omezený případ obecnější algebry",
-                c: "Vůbec se jimi nezabýval",
+                q: "Jakým způsobem Booleova algebra ovlivnila vývoj moderních počítačů?",
+                a: "George Boole spolupracoval s průmyslem na výrobě prvních počítačů",
+                b: "Claude Shannon ukázal, že Booleovu algebru lze realizovat pomocí elektrických obvodů",
+                c: "Boole navrhl první mechanický kalkulátor",
                 ans: "b",
                 expl: {
-                    a: "Chyba. Boole si Aristotela vážil, jen mu jeho systém přišel příliš neohrabaný pro složitější úvahy.",
-                    b: "Správně. Boole dokázal, že všechny Aristotelovy figury lze zapsat jako jednoduché rovnice. Ukázal však, že jeho algebra zvládne vyřešit i mnohem složitější vztahy, na které syllogismy nestačí.",
-                    c: "Chyba. Booleova práce přímo vycházela ze snahy formalizovat a rozšířit tradiční aristotelskou logiku."
+                    a: "Chyba. Boole žil v 19. století a o elektronických počítačích neměl tušení. Zemřel 64 let před vznikem prvního elektronického počítače.",
+                    b: "Správně. V roce 1938 Claude Shannon ve své práci 'A Symbolic Analysis of Relay and Switching Circuits' dokázal, že Booleova algebra může být fyzicky realizována pomocí elektrických relé. To je základ všech digitálních počítačů.",
+                    c: "Chyba. Mechanické kalkulátory předcházely Booleho éře (Pascal, Leibniz). Boole se zabýval logikou, ne konstrukcí strojů."
                 },
-                tag: "boole"
+                tag: "boole",
+                wiki: ["logika", "boole_shannon_it"]
             },
             {
                 q: "V čem spočívala revolučnost Booleova přístupu k symbolům?",
@@ -573,7 +561,8 @@ window.data_dejiny_a_predstavitele = {
                     b: "Správně. Frege zavedl 'všeobecný kvantifikátor'. Tím umožnil logice opustit aristotelské subjekto-predikátové schéma a začít pracovat s funkcemi a proměnnými (Pro všechna x platí, že...).",
                     c: "Chyba. Teorie množin sice s Fregem souvisí, ale jeho hlavním přínosem pro logiku byl aparát kvantifikace."
                 },
-                tag: "frege"
+                tag: "frege",
+                wiki: ["logika", "frege_kvantifikatory"]
             },
             {
                 q: "Gottlob Frege rozlišoval u jmen dva aspekty: 'Smysl' (Sinn) a 'Význam' (Bedeutung). Co přesně je podle něj 'Smysl'?",
@@ -757,7 +746,7 @@ window.data_dejiny_a_predstavitele = {
                     c: "Chyba. Syllogismy považoval za zastaralé a nedostatečné pro moderní analýzu."
                 },
                 tag: "wittgenstein",
-                wiki: ["logika", "wittgenstein_jazyk"]
+                wiki: ["logika", "wittgenstein_pravdivostni_tabulky"]
             },
             {
                 q: "Jak Wittgenstein ve svém raném období chápal vztah mezi větou a faktem?",
