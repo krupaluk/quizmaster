@@ -33,7 +33,12 @@ const quizCategories = {
                 id: "teorie_logiky",
                 title: "Teorie Logiky",
                 desc: "Od pojmů a definic přes logické operace až po úsudky, argumentaci a odhalování klamů.",
-            },            
+            },
+            logickeHadanky: {
+                id: "logicke_hadanky",
+                title: "Logické hádanky",
+                desc: "První krok k řešení logických úloh formou přirozeného jazyka. Od sylogismů přes logické spojky, klamy, negace až po analytické hádanky a formalizaci logiky.",
+            },
             vyrokovaLogika: {
                 id: "vyrokova_logika",
                 title: "Výroková Logika",
@@ -44,11 +49,6 @@ const quizCategories = {
                 title: "Predikátová Logika",
                 desc: "Pronikněte do tajů kvantifikátorů (∀, ∃), pochopte kritické rozdíly v jejich pořadí a naučte se precizně negovat i ty nejsložitější věty.",
             },
-            logickeHadanky: {
-                id: "logicke_hadanky",
-                title: "Logické hádanky",
-                desc: "Ovládněte umění neprůstřelné argumentace, odhalte logické klamy a vyřešte složité situace pomocí čisté dedukce.",
-            }
         }
     },
     Prvouka: {
