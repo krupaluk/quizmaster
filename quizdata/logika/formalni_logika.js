@@ -479,15 +479,15 @@ window.data_formalni_logika = {
                 }
             },
             {
-                q: "Jak zní negace věty 'Všichni lidé jsou smrtelní' (v predikátové logice)?",
-                a: "Všichni lidé jsou nesmrtelní",
-                b: "Žádný člověk není smrtelný",
-                c: "Existuje alespoň jeden člověk, který není smrtelný",
-                ans: "c",
+                q: "Jak zní zákon, který říká, že ekvivalence (A ↔ B) má stejnou pravdivostní hodnotu jako (¬A ∧ ¬B) ∨ (A ∧ B)?",
+                a: "Zákon ekvivalence jako disjunkce konjunkcí",
+                b: "Zákon dvojí negace",
+                c: "Zákon vyloučeného třetího",
+                ans: "a",
                 expl: {
-                    a: "To je příliš silné tvrzení, k vyvrácení 'všech' nepotřebujete 'všechny ostatní'.",
-                    b: "To je stejná chyba jako u možnosti A.",
-                    c: "Negací obecného kvantifikátoru (všichni) je existenční kvantifikátor (existuje alespoň jeden) spojený s negací vlastnosti. Stačí najít jeden 'černý puntík', aby tvrzení o 'všech bílých' přestalo platit."
+                    a: "Správně. Tento zákon říká, že A ↔ B je pravdivá, když jsou oba výroky zároveň pravdivé (A ∧ B), nebo když jsou oba zároveň nepravdivé (¬A ∧ ¬B). To přesně odpovídá definici ekvivalence.",
+                    b: "Zákon dvojí negace říká ¬(¬A) ≡ A, což je něco jiného.",
+                    c: "Zákon vyloučeného třetího říká A ∨ ¬A ≡ 1 (tautologie)."
                 }
             }
             ]
@@ -605,15 +605,15 @@ window.data_formalni_logika = {
                 }
             },
             {
-                q: "Jaká je negace věty 'Existuje sudé prvočíslo'?",
-                a: "Všechna prvočísla jsou lichá",
-                b: "Existuje liché prvočíslo",
-                c: "Žádné prvočíslo není sudé",
-                ans: "c",
+                q: "Jak lze zjednodušit formuli '(A ∧ B) ∨ (A ∧ ¬B) ∨ (¬A ∧ B) ∨ (¬A ∧ ¬B)'?",
+                a: "Tautologie (vždy 1)",
+                b: "A ∧ B",
+                c: "A ⊻ B (exkluzivní nebo)",
+                ans: "a",
                 expl: {
-                    a: "To je fakticky totéž co C, ale v logice negujeme 'existuje' na 'pro všechna neplatí'. Tedy 'Pro všechna prvočísla platí, že nejsou sudá'.",
-                    b: "To není negace, to je jen jiné tvrzení, které může platit současně s původním.",
-                    c: "Toto je správný tvar negace existenčního výroku. 'Není pravda, že existuje...' se mění na 'Žádný takový neexistuje' (univerzální negace)."
+                    a: "Správně. Tato formule pokrývá ÚPLNĚ VŠECHNY možné kombinace hodnot A a B. Vždy platí alespoň jeden ze čtyř členů: (A∧B) když oba jsou 1, (A∧¬B) když A=1 a B=0, (¬A∧B) když A=0 a B=1, nebo (¬A∧¬B) když oba jsou 0. Je to tedy tautologie.",
+                    b: "To by platilo jen pro jeden specifický případ, ne pro všechny čtyři.",
+                    c: "Exkluzivní nebo platí jen když se hodnoty liší, což pokrývá jen dva z těchto čtyř případů."
                 }
             },
             {
@@ -641,15 +641,15 @@ window.data_formalni_logika = {
                 }
             },
             {
-                q: "Jak zní negace výroku 'Každý student má průkaz'?",
-                a: "Žádný student nemá průkaz",
-                b: "Alespoň jeden student nemá průkaz",
-                c: "Někteří studenti mají průkaz",
-                ans: "b",
+                q: "Jak zní negace složené konjunkce '¬((A ∨ B) ∧ (C ∨ D))' podle De Morganových zákonů?",
+                a: "(¬A ∧ ¬B) ∨ (¬C ∧ ¬D)",
+                b: "(¬A ∨ ¬B) ∧ (¬C ∨ ¬D)",
+                c: "(A ∧ B) ∨ (C ∧ D)",
+                ans: "a",
                 expl: {
-                    a: "To je častý omyl. Negací 'všech' není 'nikdo', ale 'ne všichni'.",
-                    b: "Logická negace musí popřít pravdivost původního výroku v nejmenší možné míře. Pokud tvrdím, že 'všichni mají', stačí ukázat na jednoho, který nemá, a mé tvrzení je vyvráceno.",
-                    c: "To by byla pouze částečná shoda, nikoliv popření."
+                    a: "Správně. Negace konjunkce je disjunkce negací. Nejprve aplikujeme De Morgana na vnější konjunkci: ¬(A ∨ B) ∨ ¬(C ∨ D). Pak aplikujeme De Morgana na vnitřní disjunkce: (¬A ∧ ¬B) ∨ (¬C ∧ ¬D).",
+                    b: "Zde je chyba - negace konjunkce dává disjunkci, ne konjunkci. Také negace disjunkce dává konjunkci, ne disjunkci.",
+                    c: "Toto úplně chybí negace jednotlivých proměnných a vnější negace."
                 }
             },
             {
@@ -900,15 +900,15 @@ window.data_formalni_logika = {
                 }
             },
             {
-                q: "Jak zní negace věty 'Někteří ptáci nelétají'?",
-                a: "Všichni ptáci létají",
-                b: "Někteří ptáci létají",
-                c: "Žádný pták nelétá",
+                q: "Co vyjadřuje formule '(A ∧ B) → (A ∨ B)'?",
+                a: "Tautologii (je vždy pravdivá)",
+                b: "Kontradikci (je vždy nepravdivá)",
+                c: "Kontingentní výrok (někdy pravda, někdy ne)",
                 ans: "a",
                 expl: {
-                    a: "Věta 'Někteří ptáci nelétají' znamená 'Existuje pták, který má vlastnost ne-létání'. Negací 'existuje' je 'pro všechny', a negací 'ne-létání' je 'létání'. Výsledek: 'Pro všechny ptáky platí, že létají'.",
-                    b: "To není negace, to může být pravda zároveň s původní větou (podaltrerní vztah).",
-                    c: "To by byla negace věty 'Někteří ptáci létají'."
+                    a: "Správně. Pokud platí A i B zároveň (předpoklad), pak určitě platí A nebo B (závěr). Tato implikace je pravdivá ve všech případech - je to tautologie. V tabulce jsou samé jedničky.",
+                    b: "Toto není kontradikce, výrok je vždy pravdivý, ne vždy nepravdivý.",
+                    c: "Není to kontingentní, pravdivost nezávisí na konkrétních hodnotách A a B."
                 }
             },
             {

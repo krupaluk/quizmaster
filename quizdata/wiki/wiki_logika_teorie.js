@@ -1,4 +1,36 @@
 window.wiki_logika_teorie = {
+    "predikat_vs_vyrokova": {
+        "title": "Predikátová vs Výroková logika",
+        "content": `
+<p><strong>Dva světy logiky:</strong> Od samého počátku se logika vyvíjela ve dvou paralelních směrech - predikátové a výrokové. Každá se zaměřuje na jiný aspekt lidského uvažování a po staletí zůstávaly oddělené, až do revolučního spojení v 19. století.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Predikátová logika - logika věcí a vlastností:</strong></p>
+<p>Predikátová logika studuje, z čeho se věci skládají a jaké vlastnosti mají. Zaměřuje se na <strong>vnitřní strukturu</strong> výroků: podměty, přísudky a vztahy mezi třídami. Řeší otázky typu „Všichni lidé jsou smrtelní" - co znamená být člověkem, co je smrtelnost, a jak tyto vlastnosti propojit.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Aristotelés - zakladatel predikátové logiky:</strong></p>
+<p>Už <strong>Aristotelés</strong> se svými syllogismy vlastně začal s predikátovou logikou. Jeho „Všichni A jsou B, všichni B jsou C, tedy všichni A jsou C" je predikátová analýza vztahů mezi třídami. Aristotelés zkoumal, jak se věci skládají z podstaty a případnosti - to je jádro predikátového myšlení.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Výroková logika - logika řetězců a následků:</strong></p>
+<p>Výroková logika se nezabývá tím, čím věci jsou, ale jak spolu <strong>výroky souvisejí</strong>. Studuje řetězce událostí, možné příčiny a následky. Zkoumá: „Pokud prší, pak je mokro" - nezáleží na tom, co je déšť nebo mokro, ale na vztahu mezi tvrzeními.</p>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Chrysippos - základy výrokové logiky:</strong></p>
+<p>Starověký stoik <strong>Chrysippos</strong> položil základy výrokové logiky svými kondicionály: „Jestliže první, pak druhé". Boole pak tuto logiku rozvedl matematicky - ukázal, že vztahy mezi výroky lze počítat jako algebraické operace (AND, OR, NOT).</p>
+
+<table class="wiki-table">
+<tr><th>Aspekt</th><th>Predikátová logika</th><th>Výroková logika</th></tr>
+<tr><td><strong>Co studuje</strong></td><td>Vnitřní strukturu výroků (podměty, přísudky)</td><td>Vztahy mezi výroky jako celky</td></tr>
+<tr><td><strong>Základ</strong></td><td>Aristotelés - syllogismy o třídách</td><td>Chrysippos - kondicionály o výrocích</td></tr>
+<tr><td><strong>Příklad</strong></td><td>„Všichni psi jsou černí" - analýza pojmů „pes" a „černý"</td><td>„Prší a fouká vítr" - analýza spojky „a"</td></tr>
+<tr><td><strong>Mathematizace</strong></td><td>Frege - kvantifikátory ∀, ∃</td><td>Boole - algebraické operace +, ·, 1-x</td></tr>
+<tr><td><strong>Fokus</strong></td><td>Co jsou věci za vlastnosti</td><td>Jak výroky navazují jeden na druhý</td></tr>
+</table>
+
+<p style="font-size: 14px; margin: 12px 0;"><strong>Frege - revoluční spojení obou světů:</strong></p>
+<p><strong>Gottlob Frege</strong> byl průlomový tím, že <strong>propojil predikátovou i výrokovou logiku</strong>. Navázal na Booleho výrokovou algebru, ale rozšířil ji o predikátovou analýzu vnitřní struktury výroků pomocí kvantifikátorů (∀, ∃). Díky Fregemu mohly oba světy existovat společně v jednom formálním systému - moderní predikátová logika obsahuje jak výrokové spojky (AND, OR, NOT), tak predikátovou analýzu (kvantifikátory, proměnné, predikáty).</p>
+
+<p style="font-size: 13px; color: #555;"><strong>Dopad:</strong> Dnešní logika, programování i umělá inteligence používají oba přístupy současně. Databázové dotazy (SQL) kombinují predikátovou selekci (vlastnosti záznamů) s výrokovými podmínkami (AND/OR). Bez Fregého spojení by moderní informatika neexistovala.</p>
+        `
+    },
     "uvod_do_logiky": {
         "title": "Co je logika?",
         "content": `

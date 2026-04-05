@@ -4,6 +4,19 @@ window.data_teorie_logiky = {
             "title": "Pojem a jazyk",
             "questions": [
             {
+                q: "Jaký je hlavní rozdíl v přístupu výrokové a predikátové logiky k analýze vět?",
+                wiki: ["logika_teorie", "predikat_vs_vyrokova"],
+                a: "Výroková logika zkoumá vnitřní vlastnosti objektů (predikáty), zatímco predikátová řeší pouze pravdivost celých souvětí.",
+                b: "Výroková logika pracuje s celými tvrzeními jako s nedělitelnými bloky, zatímco predikátová logika analyzuje vnitřní strukturu věty (vlastnosti a kvantifikátory).",
+                c: "Mezi těmito logikami není věcný rozdíl, liší se pouze v používaných symbolech pro zápis stejných myšlenek.",
+                ans: "b",
+                expl: {
+                    a: "Tato definice je prohozená; vnitřní vlastnosti (predikáty) jsou doménou logiky predikátové, nikoliv výrokové.",
+                    b: "Výroková logika (Boole) vidí větu jako 'krabici' (výrok), kterou spojuje s dalšími. Predikátová logika (Frege) tuhle krabici otevírá a zkoumá vztahy mezi individuem (např. Petr) a jeho vlastnostmi (např. učí se) pomocí kvantifikátorů 'všichni' nebo 'někteří'.",
+                    c: "Rozdíl je zásadní v hloubce analýzy. Výroková logika nedokáže vyjádřit vnitřní strukturu věty, kterou predikátová logika nezbytně potřebuje pro práci s pojmy."
+                }
+            },
+            {
                 q: "Jaká je základní hierarchie forem logického myšlení podle jejich složitosti?",
                 wiki: ["logika_teorie", "stavba_mysleni"],
                 a: "Úsudek → Soud → Pojem",
