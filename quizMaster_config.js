@@ -34,9 +34,9 @@ const quizCategories = {
                 title: "Teorie Logiky",
                 desc: "Od pojmů a definic přes logické operace až po úsudky, argumentaci a odhalování klamů.",
             },            
-            formalniLogika: {
-                id: "formalni_logika",
-                title: "Formální Logika",
+            vyrokovaLogika: {
+                id: "vyrokova_logika",
+                title: "Výroková Logika",
                 desc: "Naučíte se číst logické zápisy (¬, ∧, ∨, →), používat De Morganovy zákony a provádět ekvivalentní úpravy.",
             },
             predikatovaLogika: {

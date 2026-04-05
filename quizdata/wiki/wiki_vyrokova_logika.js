@@ -1,4 +1,4 @@
-window.wiki_formalni_logika = {
+window.wiki_vyrokova_logika = {
     "symboly_prehled": {
         "title": "Přehled logických symbolů",
         "content": `
