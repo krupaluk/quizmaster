@@ -1628,10 +1628,18 @@ const UserDataManager = {
         return false;
     },
     
-    // Clear all data
-    clearAllData() {
-        localStorage.removeItem(this.STORAGE_KEY);
-    }
+    // Save last expanded category
+    setLastExpandedCategory(categoryName) {
+        const data = this.getData();
+        data.lastExpandedCategory = categoryName;
+        this.saveData(data);
+    },
+    
+    // Get last expanded category
+    getLastExpandedCategory() {
+        const data = this.getData();
+        return data.lastExpandedCategory || null;
+    },
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1745,6 +1753,23 @@ const UI = {
         // Clear both slots
         leftSlot.innerHTML = '';
         rightSlot.innerHTML = '';
+        
+        // Check for last expanded category and expand it
+        const lastExpanded = UserDataManager.getLastExpandedCategory();
+        if (lastExpanded) {
+            setTimeout(() => {
+                const containers = document.querySelectorAll('.category-container');
+                containers.forEach(container => {
+                    if (container.dataset.categoryName === lastExpanded) {
+                        const quizzesContainer = container.querySelector('.quizzes-container');
+                        const toggle = container.querySelector('.category-toggle');
+                        if (quizzesContainer) quizzesContainer.style.display = 'block';
+                        if (toggle) toggle.textContent = '▲';
+                        container.classList.remove('collapsed');
+                    }
+                });
+            }, 50);
+        }
         
         switch(screenId) {
             case 'sc-hub':
@@ -2864,6 +2889,9 @@ const Hub = {
                         }
                     });
                     
+                    // Save expanded category to LocalStorage
+                    UserDataManager.setLastExpandedCategory(category);
+
                     // Toggle current category
                     quizzesContainer.style.display = isExpanded ? 'none' : 'block';
                     catHeader.querySelector('.category-toggle').textContent = isExpanded ? '▼' : '▲';
@@ -2873,6 +2901,9 @@ const Hub = {
                 // Initially collapse all categories
                 quizzesContainer.style.display = 'none';
                 categoryContainer.classList.add('collapsed');
+                
+                // Store references for later expansion
+                categoryContainer.dataset.categoryName = category;
                 
                 // Assemble category
                 categoryContainer.appendChild(catHeader);

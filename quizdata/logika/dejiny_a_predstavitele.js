@@ -339,7 +339,7 @@ window.data_dejiny_a_predstavitele = {
             ]
         },
         "leibniz": {
-            "title": "Gottfried Wilhelm Leibniz",
+            "title": "Gottfried W. Leibniz",
             "questions": [
             {
                 q: "Jaký ambiciózní projekt v logice Leibniz navrhl, aby ukončil všechny spory mezi lidmi?",
