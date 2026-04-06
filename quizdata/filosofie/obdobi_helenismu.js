@@ -343,7 +343,6 @@ window.data_obdobi_helenismu = {
             },
             {
                 q: "Seneca v díle 'O hněvu' popisuje vznik emoce jako proces, který máme pod kontrolou. Jak jdou za sebou 4 fáze vzniku hněvu?",
-                wiki: ["stoicismus", "seneca_psychologie"],
                 a: "Představa → Úsudek → Souhlas → Hněv",
                 b: "Hněv → Představa → Úsudek → Souhlas",
                 c: "Souhlas → Představa → Úsudek → Hněv",
@@ -417,18 +416,17 @@ window.data_obdobi_helenismu = {
                 tag: "epikuros"
             },
             {
-                q: "Který římský básník zachoval Epikúrovo učení ve svém díle 'De rerum natura'?",
-                wiki: ["filosofie", "helenismus_a_rim"],
-                a: "Horatius",
-                b: "Lucretius",
-                c: "Vergilius",
-                ans: "b",
+                q: "Co tvoří tzv. Epikurův 'Tetrafarmakos' (Čtyřlék), který má vést k duševnímu klidu?",
+                a: "Boha se netřeba bát, smrti se nebát, dobro je snadné získat, zlo je snadné snášet.",
+                b: "Všeho s mírou, poznej sebe sama, nic příliš, osud je neměnný.",
+                c: "Ctnost je vědění, nikdo nechybuje záměrně, svět je oheň, duše je nesmrtelná.",
+                ans: "a",
                 expl: {
-                    a: "Chyba. Horatius byl sice epikureismem ovlivněn (známé 'Carpe diem'), ale nenapsal o něm systematický spis.",
-                    b: "Správně. Titus Lucretius Carus ve své rozsáhlé básni 'O přírodě' podrobně vysvětlil atomismus a epikurejskou etiku. Díky tomuto dílu se epikureismus stal v Římě velmi populárním a ovlivnil myšlení i v době renesance.",
-                    c: "Chyba. Vergilius byl spíše příznivcem stoicismu a jeho díla mají jiný filosofický podtext."
+                    a: "Správně. Epikuros těmito čtyřmi body útočí na hlavní zdroje lidského neklidu. Bohové se o nás nestarají, smrt se nás netýká (dokud jsme tu my, není tu ona), základní potřeby jsou levné a bolest je buď krátká, nebo snesitelná.",
+                    b: "Toto jsou spíše nápisy z delfské věštírny a obecná antická moudra, nikoliv specifický epikurejský lék.",
+                    c: "Toto jsou myšlenky spojené se Sókratem a Hérakleitem, které jsou v přímém rozporu s epikurejským atomismem a etikou."
                 },
-                tag: "lucretius"
+                tag: "epikuros"
             },
             {
                 q: "Jaký byl vztah epikurejců k přátelství?",
@@ -438,7 +436,7 @@ window.data_obdobi_helenismu = {
                 c: "Považovali ho za nutné zlo pro obchodní účely",
                 ans: "a",
                 expl: {
-                    a: "Správně. Pro Epikúra bylo přátelství klíčem k bezpečí a štěstí. Zatímco rodinu a manželství vnímal často jako zdroj starostí, přátelství je dobrovolný svazek založený na vzájemné podpoře a společném hledání moudrosti.",
+                    a: "Správně. Pro Epikúra bylo přátelství klíčem k bezpečí a štěstí. Často zdůrazňoval, že ke štěstí stačí chléb, voda a přátelé. Rodinu a manželství naopak vnímal často jako zdroj starostí.",
                     b: "Chyba. Naopak, přátelství bylo v 'Zahradě' pěstováno jako posvátná hodnota.",
                     c: "Chyba. Epikurejci se o obchod a hromadění majetku příliš nezajímali, preferovali skromnost."
                 },
@@ -563,18 +561,19 @@ window.data_obdobi_helenismu = {
                 tag: "epikuros"
             },
             {
-                q: "Co je to 'clinamen' v Lucretiově podání epikureismu?",
-                a: "Náhodná odchylka atomu z jeho dráhy",
-                b: "Latinský název pro zahradu",
-                c: "Druh antického oděvu",
+                q: "Jak římský básník Lucretius ve svém díle 'O přírodě věcí' (De rerum natura) vysvětluje vznik světa a lidskou svobodu pomocí pojmu 'clinamen'?",
+                a: "Jako náhodnou odchylku atomů z jejich přímé dráhy, která umožňuje jejich srážky.",
+                b: "Jako božský zásah, který usměrňuje chaotický pohyb prvků.",
+                c: "Jako neustálý kruhový pohyb atomů, který nemá začátek ani konec.",
                 ans: "a",
                 expl: {
-                    a: "Správně. Clinamen (řecky parenklisis) je klíčový prvek epikurejské fyziky. Kdyby se atomy pohybovaly jen rovně dolů, nikdy by se nesrazily a nevznikl by svět. Tato náhodná odchylka navíc vysvětluje, jak je v materiálním světě možná svobodná vůle člověka.",
-                    b: "Chyba. Zahrada se latinsky řekne 'hortus'.",
-                    c: "Chyba. S módou tento termín nemá nic společného, je to ryze fyzikální koncept."
+                    a: "Správně. Lucretius rozvádí Epikúrovu myšlenku: kdyby atomy padaly prázdnem jen svisle dolů, nikdy by se nesetkaly. 'Clinamen' je drobná, nepředvídatelná odchylka, která způsobuje srážky atomů a vznik věcí. Zároveň tím logicky zdůvodňuje existenci svobodné vůle v jinak mechanickém vesmíru.",
+                    b: "Chyba. Epikureismus a Lucretius naopak tvrdili, že bohové do chodu světa a pohybu atomů nijak nezasahují.",
+                    c: "Chyba. Atomisté věřili v lineární pohyb v prázdnu, který je narušen právě onou náhodnou odchylkou, nikoliv v přirozený kruhový pohyb."
                 },
-                tag: "lucretius"
+                tag: "lucretius_clinamen"
             },
+
             {
                 q: "Který filosof napsal slavné 'Listy Luciliovi'?",
                 a: "Epiktétos",
@@ -600,6 +599,19 @@ window.data_obdobi_helenismu = {
                     c: "Chyba. V reinkarnaci věřili spíše pythagorejci a orfici, nikoliv epikurejci."
                 },
                 tag: "obecne"
+            },
+            {
+                q: "Kterému antickému 'archiváři' vděčíme za zachování většiny autentických textů Epikúra, včetně jeho dopisů a hlavních článků víry?",
+                a: "Diogenés ze Sinópé",
+                b: "Diogenés Laertios",
+                c: "Plútarchos",
+                ans: "b",
+                expl: {
+                    a: "Chyba. To byl slavný kynik, který žil v sudu a s Epikúrovým archivem nemá nic společného.",
+                    b: "Správně. Ve svém díle 'Životy, názory a výroky proslulých filosofů' věnoval Epikúrovi celou desátou knihu. Bez jeho mravenčí práce by se nám nedochovaly klíčové dopisy (např. Herodotovi či Menoikeovi), které tvoří jádro našeho poznání epikureismu.",
+                    c: "Chyba. Plútarchos sice o filosofech psal, ale spíše z morálního hlediska a k epikureismu byl velmi kritický."
+                },
+                tag: "diogenes_laertios"
             }
             ]
         },
@@ -627,7 +639,7 @@ window.data_obdobi_helenismu = {
                 ans: "b",
                 expl: {
                     a: "Chyba. Slovo 'epoché' má v moderních jazycích význam časového úseku, ale ve filosofii má technický význam.",
-                    b: "Správně. Skeptici tvrdili, že o každé věci existují protichůdné výpovědi (isostheneia), které jsou stejně přesvědčivé. Pokud se tedy nemůžeme rozhodnout, co je pravda, měli bychom provést 'epoché' – přestat soudit, čímž se zbavíme neklidu pramenícího z hledání absolutní jistoty.",
+                    b: "Správně. Skeptici tvrdili, že o každé věci existují protichůdné výpovědi (isostheneia), které jsou stejně přesvědčivé. Pokud se tedy nemůžeme rozhodnout, co je pravda, měli bychom provést 'epoché' (pozastavení úsudku), který vede k 'afázii' (stav kdy o věcech mlčíme) čímž se dostaneme do stavu ataraxie (duševního klidu), jelikož se zbavíme neklidu pramenícího z hledání absolutní jistoty.",
                     c: "Chyba. Skeptik nepřijímá žádný názor jako definitivně pravdivý, nýbrž zůstává v pozici hledajícího."
                 },
                 tag: "pyrrhon"
