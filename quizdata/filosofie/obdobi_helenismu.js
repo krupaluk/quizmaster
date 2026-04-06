@@ -1139,7 +1139,7 @@ window.data_obdobi_helenismu = {
             {
                 q: "Co je v novoplatonismu nejvyšším principem, z něhož vše vyvěrá?",
                 a: "Hmota",
-                b: "Jedno (To Hen)",
+                b: "Jedno",
                 c: "Světová duše",
                 ans: "b",
                 expl: {
@@ -1160,7 +1160,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Evoluce předpokládá vývoj od jednoduššího ke složitějšímu; emanace je naopak sestup od dokonalého k méně dokonalému.",
                     c: "Chyba. Revoluce je politický nebo mechanický pohyb, v novoplatonské ontologii tento pojem nehraje roli."
                 },
-                tag: "plotinos"
+                tag: "plotinos",
+                wiki: ["filosofie", "plotinova_pyramida_byti"]
             },
             {
                 q: "Jaký je cíl lidského života podle Plótína?",

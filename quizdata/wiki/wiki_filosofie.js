@@ -758,5 +758,22 @@ window.wiki.filosofie = {
 
 <p style="font-size: 14px; color: #555;"><strong>Dědictví:</strong> Římský stoicismus ovlivnil křesťanskou etiku (povinnost, sebekontrola), renesanční humanismus (Cicero jako vzor), a moderní terapii (cognitive behavioral therapy přímo vychází z Epiktéta).</p>
         `
+    },
+    "plotinova_pyramida_byti": {
+        "title": "Plotinova pyramida bytí",
+        "content": `
+<p>Podle Plotína je <strong>cílem života → Extáze</strong>, tedy stav, kdy se duše člověk sjednotí s Jedním. Cesta k extázi: <strong>katarze</strong> (očištění, odpoutání od životních potřeb) a <strong>kontemplace</strong> (obrat do vlastního nitra).</p>
+
+<h4>Čtyři úrovně hierarchie:</h4>
+<table class="wiki-table">
+<tr><th class="w-25">Úroveň</th><th class="w-75">Popis</th></tr>
+<tr><td><strong>1.</strong> <strong>Jedno</strong><br><em>(To Hen)</em></td><td>Absolutní počátek, zdroj všeho, prapodstata.<br><em>Neustále přetéká (emanuje) a tím vznikají další stupně bytí.</em></td></tr>
+<tr><td><strong>2.</strong> <strong>Duch</strong><br><em>(Nous)</em></td><td>Podoben Jednomu. První mnohost, obsahuje ideje<br><em>Emanuje z Jedna, věčná kontemplace</em></td></tr>
+<tr><td><strong>3.</strong> <strong>Duše</strong><br><em>(Psyche)</em></td><td>Plodem ducha, světová duše.<br><em>Vylévá se do jednotlivých duší, které se skrz tělo spojuje s hmotným světem.</em></td></tr>
+<tr><td><strong>4.</strong> <strong>Příroda</strong><br><em>(Fysis)</em></td><td>Hmotný svět. Nejnižší stupeň.<br><em>Zdánlivá skutečnost. Principem temnoty a zla.</em></td></tr>
+</table>
+
+<p style="font-size: 14px; color: #555;"><strong>Klíčový princip:</strong> Každá vyšší úroveň <em>emanuje</em> (vyzařuje) tu nižší aniž by sama tím byla oslabena. Jedno není "něco" mezi jinými věcmi, je naprosto transcendentní.</p>
+        `
     }
 };
