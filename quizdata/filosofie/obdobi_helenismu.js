@@ -208,7 +208,7 @@ window.data_obdobi_helenismu = {
                 tag: "epiktetos"
             },
             {
-                q: "Jak se nazývá dílo císaře Marca Aurelia, které si psal jako osobní deník pro posílení ducha?",
+                q: "Jak se nazývá dílo císaře Marca Aurelia, ve kterém se objevuje jeho citát: 'Překážka v činnosti se stává činností; co stojí v cestě činu, stává se cestou.'?",
                 wiki: ["filosofie", "helenismus_a_rim"],
                 a: "Hovory k sobě (Ta eis heauton)",
                 b: "O blaženém životě",
@@ -342,18 +342,20 @@ window.data_obdobi_helenismu = {
                 tag: "zenon"
             },
             {
-                q: "Který filosofický směr helénismu je dnes nejvíce populární v moderní psychologii (např. CBT)?",
-                a: "Stoicismus",
-                b: "Eklektismus",
-                c: "Kynismus",
+                q: "Seneca v díle 'O hněvu' popisuje vznik emoce jako proces, který máme pod kontrolou. Jak jdou za sebou 4 fáze vzniku hněvu?",
+                wiki: ["stoicismus", "seneca_psychologie"],
+                a: "Představa → Úsudek → Souhlas → Hněv",
+                b: "Hněv → Představa → Úsudek → Souhlas",
+                c: "Souhlas → Představa → Úsudek → Hněv",
                 ans: "a",
                 expl: {
-                    a: "Správně. Kognitivně-behaviorální terapie (CBT) přímo vychází ze stoické myšlenky, že nás netrápí věci samy, ale náš pohled na ně. Epiktétovy a Senecovy techniky práce s myšlenkami a emocemi jsou dodnes základem moderních metod zvládání stresu, depresí a úzkostí. Stoicismus tak zažívá ve 21. století velkou renesanci.",
-                    b: "Chyba. Eklektismus je sice v psychologii běžný (míchání metod), ale stoicismus poskytuje konkrétní filosofické jádro.",
-                    c: "Chyba. Kynismus je pro moderní klinickou praxi příliš asociální a radikální, i když jeho upřímnost může být inspirativní."
+                    a: "Správně. Podle Seneky hněv není instinkt, ale volba: nejprve přijde vnější podnět (Představa), následuje racionální zhodnocení (Úsudek - 'stala se mi křivda'), poté se mysl rozhodne s tímto hodnocením ztotožnit (Souhlas) a teprve pak propuká samotná emoce (Hněv).",
+                    b: "Tento sled je chybný; hněv je až výsledkem celého procesu, nikoliv jeho počátkem.",
+                    c: "Souhlas nemůže předcházet představě; člověk musí nejdříve něco vnímat, aby k tomu mohl zaujmout postoj."
                 },
-                tag: "epiktetos"
+                tag: "seneca"
             }
+
             ]
         },
         "epikureismus": {

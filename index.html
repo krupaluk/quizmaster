@@ -629,6 +629,31 @@
             background: linear-gradient(135deg, #ffb300 0%, #f57c00 100%);
         }
         
+        /* Settings button style */
+        .exit-btn-settings {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: linear-gradient(135deg, #8e8e93 0%, #636366 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+            box-shadow: 0 2px 8px rgba(99, 99, 102, 0.3);
+        }
+        .exit-btn-settings:active {
+            transform: scale(0.92);
+            background: linear-gradient(135deg, #636366 0%, #48484a 100%);
+        }
+        
         /* Category Headers */
         .category-container {
             margin-bottom: 8px;
@@ -1211,6 +1236,27 @@
         </div>
     </div>
 
+    <!-- Category Filter Settings Modal -->
+    <div id="category-settings-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCategorySettingsModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">⚙️</span>
+                <h2 class="modal-title">Nastavení zobrazení</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Vyberte okruhy k zobrazení</p>
+            </div>
+            <div class="modal-body">
+                <div id="category-filters-list" style="display: flex; flex-direction: column; gap: 12px;">
+                    <!-- Category checkboxes will be inserted here -->
+                </div>
+                <p style="margin-top: 15px; font-size: 12px; color: var(--ios-gray); text-align: center;">
+                    Změny se uloží automaticky
+                </p>
+            </div>
+            <button class="modal-close-btn" onclick="closeCategorySettingsModal()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- Wiki Overlay -->
     <div id="wiki-overlay" class="wiki-overlay hidden">
         <div class="wiki-overlay-backdrop" onclick="closeWikiOverlay()"></div>
@@ -1640,6 +1686,48 @@ const UserDataManager = {
         const data = this.getData();
         return data.lastExpandedCategory || null;
     },
+    
+    // Save category filter settings
+    setCategoryFilter(categoryName, isVisible) {
+        const data = this.getData();
+        if (!data.categoryFilters) {
+            data.categoryFilters = {};
+        }
+        data.categoryFilters[categoryName] = isVisible;
+        this.saveData(data);
+    },
+    
+    // Get all category filter settings
+    getCategoryFilters() {
+        const data = this.getData();
+        return data.categoryFilters || null;
+    },
+    
+    // Initialize default category filters (all true except Debug)
+    initDefaultCategoryFilters() {
+        const data = this.getData();
+        if (!data.categoryFilters) {
+            data.categoryFilters = {};
+            // Default: all categories visible except Debug
+            if (typeof quizCategories !== 'undefined') {
+                Object.keys(quizCategories).forEach(category => {
+                    data.categoryFilters[category] = category !== 'Debug';
+                });
+            }
+            this.saveData(data);
+        }
+        return data.categoryFilters;
+    },
+    
+    // Check if a category should be visible
+    isCategoryVisible(categoryName) {
+        const filters = this.getCategoryFilters();
+        if (!filters) {
+            // Default: all visible except Debug
+            return categoryName !== 'Debug';
+        }
+        return filters[categoryName] !== false; // Default to true if not set
+    },
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1778,8 +1866,12 @@ const UI = {
                         <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
                     </button>
                 `;
-                // Right slot is empty on hub - user clicks on quiz to navigate
-                rightSlot.innerHTML = '';
+                // Settings button on the right side of hub
+                rightSlot.innerHTML = `
+                    <button id="btn-settings" class="exit-btn-settings" onclick="openCategorySettingsModal()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
+                    </button>
+                `;
                 break;
             case 'sc-setup':
                 leftSlot.innerHTML = `
@@ -2797,8 +2889,16 @@ const Hub = {
         
         // Use the new nested structure
         if (typeof quizCategories !== 'undefined') {
+            // Initialize default filters if not set
+            UserDataManager.initDefaultCategoryFilters();
+            
             Object.keys(quizCategories).forEach(category => {
                 const categoryData = quizCategories[category];
+                
+                // Skip categories that are hidden by filter settings
+                if (!UserDataManager.isCategoryVisible(category)) {
+                    return;
+                }
                 
                 // Create collapsible category container
                 const categoryContainer = document.createElement('div');
@@ -3352,6 +3452,49 @@ function openRelatedTopicsModal() {
 
 function closeRelatedTopicsModal() {
     document.getElementById('related-topics-modal').classList.add('hidden');
+}
+
+// ===== CATEGORY SETTINGS MODAL FUNCTIONS =====
+function openCategorySettingsModal() {
+    const modal = document.getElementById('category-settings-modal');
+    const listContainer = document.getElementById('category-filters-list');
+    
+    // Initialize default filters if not set
+    UserDataManager.initDefaultCategoryFilters();
+    
+    // Build category checkboxes
+    let html = '';
+    if (typeof quizCategories !== 'undefined') {
+        Object.keys(quizCategories).forEach(category => {
+            const categoryData = quizCategories[category];
+            const isVisible = UserDataManager.isCategoryVisible(category);
+            const icon = categoryData.icon || '📁';
+            
+            html += `
+                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--ios-bg); border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='white'" onmouseout="this.style.background='var(--ios-bg)'">
+                    <input type="checkbox" 
+                           ${isVisible ? 'checked' : ''} 
+                           onchange="toggleCategoryFilter('${category}', this.checked)"
+                           style="width: 22px; height: 22px; cursor: pointer; accent-color: var(--ios-blue);">
+                    <span style="font-size: 20px;">${icon}</span>
+                    <span style="font-size: 15px; font-weight: 600; color: var(--ios-text);">${category}</span>
+                </label>
+            `;
+        });
+    }
+    
+    listContainer.innerHTML = html;
+    modal.classList.remove('hidden');
+}
+
+function closeCategorySettingsModal() {
+    document.getElementById('category-settings-modal').classList.add('hidden');
+    // Refresh hub list to apply filters
+    Hub.renderQuizList();
+}
+
+function toggleCategoryFilter(categoryName, isVisible) {
+    UserDataManager.setCategoryFilter(categoryName, isVisible);
 }
 
 // ===== INITIALIZATION =====
