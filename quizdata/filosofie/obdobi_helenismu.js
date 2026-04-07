@@ -443,19 +443,6 @@ window.data_obdobi_helenismu = {
                 tag: "epikuros"
             },
             {
-                q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
-                a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
-                b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
-                c: "Oba směry se v politice shodovali a prosazovali demokracii",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Je to přesně naopak; stoici byli ti, kteří vnímali službu celku jako projev rozumu.",
-                    b: "Správně. Pro stoiky je člověk 'zoon politikon' v kosmickém smyslu a má povinnost prospívat lidstvu. Epikurejci naopak věřili, že politika přináší jen stres, závist a strach, což je v přímém rozporu s jejich ideálem klidu (ataraxie), proto doporučovali žít skrytě.",
-                    c: "Chyba. Tyto školy měly v otázce angažovanosti zcela protichůdné názory, což byl častý bod jejich vzájemných polemik."
-                },
-                tag: "obecne"
-            },
-            {
                 q: "Jak epikurejci vysvětlovali vznik náboženství?",
                 a: "Jako dar od bohů lidstvu",
                 b: "Jako výsledek strachu z přírodních úkazů a snů",
@@ -998,19 +985,6 @@ window.data_obdobi_helenismu = {
                     a: "Chyba. Naopak, většina helénistických směrů (včetně stoiků a epikurejců) nabádala ke skromnosti a vnitřní nezávislosti na majetku.",
                     b: "Správně. V době občanských válek a nástupu císařství byla politická kariéra v Římě nebezpečná. Filosofie stoicismu a skepticismu nabízela 'vnitřní azyl' – možnost zůstat čestným a klidným mužem, i když je stát v troskách nebo v rukou tyrana.",
                     c: "Chyba. Magie a rituály byly spíše doménou lidové religiozity a později hermetismu, nikoliv klasické helénistické filosofie."
-                },
-                tag: "obecne"
-            },
-            {
-                q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
-                a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
-                b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
-                c: "Oba směry se v politice shodovali a prosazovali demokracii",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Je to přesně naopak; stoici byli ti, kteří vnímali službu celku jako projev rozumu.",
-                    b: "Správně. Pro stoiky je člověk 'zoon politikon' v kosmickém smyslu a má povinnost prospívat lidstvu. Epikurejci naopak věřili, že politika přináší jen stres, závist a strach, což je v přímém rozporu s jejich ideálem klidu (ataraxie), proto doporučovali žít skrytě.",
-                    c: "Chyba. Tyto školy měly v otázce angažovanosti zcela protichůdné názory, což byl častý bod jejich vzájemných polemik."
                 },
                 tag: "obecne"
             },
