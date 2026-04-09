@@ -1,7 +1,7 @@
 window.data_stredovek_a_renesance = {
     "groups": {
         "patristika": {
-            "title": "Středověk a renesance ",
+            "title": "Patristika",
             "questions": [
 
     {
@@ -15,7 +15,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Podle Augustina je víra východiskem. Teprve když člověk věří, může mu Bůh osvítit rozum, aby pochopil smysl světa.",
             c: "Chyba. Toto je spíše postoj pozdější scholastiky. Augustin věří, že víra předchází poznání."
         },
-        tag: "augustinus"
+        tag: "augustinus",
+        wiki: ["filosofie", "patristika"]
     },
     {
         q: "Jakým způsobem řeší svatý Augustin problém existence zla ve světě (tzv. teodicea)?",
@@ -28,7 +29,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Augustin tvrdí, že vše, co existuje, je dobré, protože to stvořil Bůh. Zlo vzniká tam, kde se stvořené bytosti odvracejí od vyššího dobra k nižšímu.",
             c: "Chyba. Bůh je podle Augustina nejvyšší dobro a nemůže být zdrojem (podstatou) zla."
         },
-        tag: "teodicea"
+        tag: "teodicea",
+        wiki: ["filosofie", "augustinus"]
     },
     {
         q: "V čem spočívá Augustinovo lineární pojetí dějin, popsané v díle 'O Boží obci'?",
@@ -153,7 +155,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Šlo o to, zda pojem 'člověk' existuje jako skutečná podstata nezávisle na konkrétních lidech, nebo zda je to jen slovo.",
             c: "Chyba. To byl spor v rámci přírodní filozofie a astronomie, nikoliv o podstatu pojmů."
         },
-        tag: "univerzalie"
+        tag: "univerzalie",
+        wiki: ["filosofie", "rana_scholastika"]
     },
     {
         q: "Jak definoval Anselm z Canterbury Boha ve svém ontologickém důkazu?",
@@ -301,8 +304,8 @@ window.data_stredovek_a_renesance = {
 
             ]
         },
-        "vrcholny_tomismus": {
-            "title": "Vrcholný Tomismus",
+        "vrcholná_scholastika": {
+            "title": "Vrcholná scholastika",
             "questions": [
     {
         q: "Jak definoval Tomáš Akvinský vztah mezi filozofií a teologií?",
@@ -315,7 +318,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Rozum (filozofie) připravuje cestu pro víru a pomáhá obhajovat dogmata, ale teologie ji přesahuje.",
             c: "Chyba. Tomáš věřil v jejich harmonii, protože obě pravdy pocházejí od stejného Boha."
         },
-        tag: "akvinsky"
+        tag: "akvinsky",
+        wiki: ["filosofie", "vrcholna_scholastika"]
     },
     {
         q: "Co je podstatou Tomášova 'umírněného realismu' ve sporu o univerzálie?",
@@ -328,7 +332,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Jde o formuli: ante rem (v Bohu), in re (ve věci) a post rem (v rozumu). Tím smířil realismus s nominalismem.",
             c: "Chyba. Obecniny nejsou věci, ale podstaty (formy) věcí."
         },
-        tag: "univerzalie"
+        tag: "univerzalie",
+        wiki: ["filosofie", "tomas_akvinsky"]
     },
     {
         q: "Který z pěti cest (důkazů) k Bohu začíná pozorováním, že vše ve světě je v pohybu?",
@@ -554,7 +559,8 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Člověk je vnímán jako tvůrce svého osudu a nejdokonalejší bytost (např. u Pico della Mirandoly).",
             c: "Chyba. Příroda je sice důležitá, ale člověk v ní v renesanci hraje primární roli."
         },
-        tag: "humanismus"
+        tag: "humanismus",
+        wiki: ["filosofie", "pozdni_scholastika"]
     },
     {
         q: "Jaký je základní princip renesančního 'panteismu', který zastával např. Giordano Bruno?",

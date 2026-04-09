@@ -25,7 +25,7 @@ const quizCategories = {
                 id: "stredovek_a_renesance",
                 title: "Středověk a renesance",
                 desc: "Od hledání harmonie mezi vírou a rozumem v křesťanské dogmatice až po znovuzrození člověka a zrod moderní vědy.",
-                wiki: false
+                wiki: true
             }            
         }
     },
