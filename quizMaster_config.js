@@ -20,7 +20,13 @@ const quizCategories = {
                 title: "Období Helénismu",
                 desc: "Filosofická cesta za vnitřní svobodou v rozbouřeném světě skrze praktickou etiku stoiků, epikurejců a skeptiků.",
                 wiki: true
-            }
+            },
+            stredovek_a_renesance: {
+                id: "stredovek_a_renesance",
+                title: "Středověk a renesance",
+                desc: "Od hledání harmonie mezi vírou a rozumem v křesťanské dogmatice až po znovuzrození člověka a zrod moderní vědy.",
+                wiki: false
+            }            
         }
     },
     Logika: {
