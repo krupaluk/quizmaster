@@ -70,6 +70,25 @@ window.wiki.filosofie = {
 <p style="font-size: 14px; color: #555;"><strong>Dědictví:</strong> Pozdní scholastika ukončila středověký projekt jednotného systému a uvolnila cestu k renesančnímu humanismu a vědecké revoluci.</p>
         `
     },
+    "renesance": {
+        "title": "Renesance",
+        "content": `
+<p><strong>Renesance</strong> (14.–16. stol.) znamená „znovuzrození“ antické kultury a přechod od teocentrismu k antropocentrismu – člověk se stává měřítkem všech věcí.</p>
+
+<h4>Hlavní přínosy a směry:</h4>
+<table class="wiki-table">
+<tr><th class="w-25">Aspekt</th><th class="w-75">Popis</th></tr>
+<tr><td><strong>Humanismus</strong></td><td>Návrat k antickým pramenům (<em>Ad fontes</em>)<br><em>Studia humana – vzdělání, rétorika, poezie, historie</em></td></tr>
+<tr><td><strong>Antropocentrismus</strong></td><td>Člověk jako tvůrce svého osudu – Pico della Mirandola<br><em>„Důstojnost člověka“ – svobodná vůle, neomezený potenciál</em></td></tr>
+<tr><td><strong>Příroda</strong></td><td>Panteismus (Giordano Bruno): Bůh je ve všem<br><em>Nekonečný vesmír, mnoho světů, heliocentrimus</em></td></tr>
+<tr><td><strong>Politika</strong></td><td>Machiavelli – oddělení politiky od morálky<br><em><em>Virtù</em> (zdatnost) vs <em>Fortuna</em> (osud)</em></td></tr>
+<tr><td><strong>Věda</strong></td><td>Empirismus a matematizace přírody (Galilei)<br><em>„Kniha přírody je psána matematickým jazykem"</em></td></tr>
+<tr><td><strong>Metoda</strong></td><td>Francis Bacon: indukce, experiment, „idoly"<br><em>„Vědění je moc“ – ovládnutí přírody pro blaho</em></td></tr>
+</table>
+
+<p style="font-size: 14px; color: #555;"><strong>Zlom:</strong> Renesance ukončila „temnoty“ středověku, osvobodila rozum od teologie a připravila vědeckou revoluci novověku. Klíčoví autoři: Petrarca, Erasmus, Machiavelli, Bruno, Bacon, Galilei.</p>
+        `
+    },
     "augustinus": {
         "title": "Augustinus",
         "content": `
