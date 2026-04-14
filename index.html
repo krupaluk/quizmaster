@@ -2118,7 +2118,7 @@ const QuizEngine = {
             const ex = document.createElement('div'); 
             ex.className = 'sub-expl'; 
             ex.id = 'ex-' + k; 
-            ex.innerText = q.expl[k];
+            ex.innerHTML = q.expl[k];
             group.appendChild(b); 
             group.appendChild(ex); 
             box.appendChild(group);
