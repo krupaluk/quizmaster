@@ -45,7 +45,7 @@ window.data_stredovek_a_renesance = {
         tag: "gnosticismus"
     },
     {
-        q: "Co je podstatou Origenova učení o tzv. apokatastasis?",
+        q: "Co je podstatou Origenova (185 - 253) učení o tzv. apokatastasis?",
         a: "Názor, že po posledním soudu bude veškeré stvoření, včetně hříšníků a ďábla, nakonec spaseno a navráceno k Bohu.",
         b: "Přísné rozdělení světa na věčné nebe pro vyvolené a věčné utrpení v pekle pro zavržené.",
         c: "Teorie o postupném převtělování duší do zvířecích těl za účelem očištění od hříchů.",
@@ -71,7 +71,7 @@ window.data_stredovek_a_renesance = {
         tag: "origenes"
     },    
     {
-        q: "Jaký byl postoj svatého Ambrože k vztahu mezi církví a světskou mocí (císařem)?",
+        q: "Jaký byl postoj svatého Ambrože (340 - 397) k vztahu mezi církví a světskou mocí (císařem)?",
         a: "Tvrdil, že císař je nejvyšší hlavou církve a má právo rozhodovat o náboženských dogmatech.",
         b: "Prosazoval nezávislost církve a tvrdil, že v otázkách víry a mravů stojí církev nad císařem.",
         c: "Hlásal, že křesťané by se měli zcela stáhnout z veřejného života a politiku ignorovat.",
@@ -97,7 +97,7 @@ window.data_stredovek_a_renesance = {
         tag: "ambroz"
     },
     {
-        q: "Jaký zásadní rozdíl v přístupu k rozumu představují postavy Tertulliana a svatého Augustina?",
+        q: "Jaký zásadní rozdíl v přístupu k rozumu představují postavy Tertulliana (160 - 220) a svatého Augustina (354 - 430)?",
         a: "Tertullian rozum vnímal jako jediný zdroj pravdy, zatímco Augustin jej zcela nahradil mystickým vytržením.",
         b: "Tertullian viděl mezi vírou a rozumem propast ('Věřím, protože je to absurdní'), zatímco Augustin usiloval o jejich harmonii.",
         c: "Oba shodně zastávali názor, že filozofické vzdělání je pro pravého křesťana škodlivou překážkou.",
@@ -189,7 +189,7 @@ window.data_stredovek_a_renesance = {
         tag: "etika"
     },
     {
-        q: "Čím se svatý Jeroným nejvýznamněji zapsal do dějin křesťanské vzdělanosti a kultury?",
+        q: "Čím se svatý Jeroným (347 - 420) nejvýznamněji zapsal do dějin křesťanské vzdělanosti a kultury?",
         a: "Vytvořil první ucelený systém církevního práva, který platil až do konce středověku.",
         b: "Pořídil monumentální překlad Bible do latiny, známý jako Vulgata, který se stal oficiálním textem západní církve.",
         c: "Založil první křesťanskou univerzitu v Římě, kde se vyučovala antická filozofie.",
@@ -202,7 +202,7 @@ window.data_stredovek_a_renesance = {
         tag: "jeronym"
     },    
     {
-        q: "Proč je postava Boëthia označována jako 'poslední Říman' a most mezi antikou a středověkem?",
+        q: "Proč je postava Boëthia (480 - 524) označována jako 'poslední Říman' a most mezi antikou a středověkem?",
         a: "Byl to poslední římský císař, který předal moc církvi a odešel do kláštera.",
         b: "Přeložil do latiny klíčová díla Aristotelovy logiky a ve vězení napsal vlivné dílo 'Útěcha z filozofie'.",
         c: "Jako jediný ve své době odmítal křesťanství a pokusil se o násilnou obnovu pohanských rituálů.",
@@ -345,7 +345,7 @@ window.data_stredovek_a_renesance = {
         c: "Petr Abélard; problémem bylo, že panteismus vedl k uctívání více bohů najednou.",
         ans: "a",
         expl: {
-            a: "Správně. Eriugena ve svém díle 'O rozdělení přírody' tvrdil, že Bůh je počátkem i koncem všeho a vše v přírodě je jeho součástí. To zavánělo panteismem. Církev trvala na tom, že Bůh je nad světem (transcendentní), nikoliv v něm rozplynutý, proto bylo jeho dílo později odsouzeno.",
+            a: "Správně. Jan Scotus Eriugena (800-877) ve svém díle 'O rozdělení přírody' tvrdil, že Bůh je počátkem i koncem všeho a vše v přírodě je jeho součástí. To zavánělo panteismem. Církev trvala na tom, že Bůh je nad světem (transcendentní), nikoliv v něm rozplynutý, proto bylo jeho dílo později odsouzeno.",
             b: "Chyba. Anselm byl naopak představitelem přísného teismu a zastáncem realismu.",
             c: "Chyba. Abélard se věnoval spíše logice a etice, panteismus nebyl jeho hlavním tématem."
         },
@@ -365,7 +365,7 @@ window.data_stredovek_a_renesance = {
         tag: "realismus"
     },
     {
-        q: "Který radikální názor přinesl nominalismus v podání Jana Roscellina?",
+        q: "Který radikální názor přinesl nominalismus v podání Jana Roscellina (1050 - 1125)?",
         a: "Obecniny jsou reálné duchovní síly, které můžeme spatřit skrze modlitbu.",
         b: "Obecniny jsou pouhé 'vání hlasu' (flatus vocis) a skutečnost se skládá výhradně z jednotlivin.",
         c: "Obecniny existují pouze v latině, v jiných jazycích ztrácejí význam.",
@@ -378,7 +378,7 @@ window.data_stredovek_a_renesance = {
         tag: "nominalismus"
     },
     {
-        q: "Jakým způsobem se Petr Abélard pokusil smířit realismus s nominalismem?",
+        q: "Jakým způsobem se Petr Abélard (1079 - 1142) pokusil smířit realismus s nominalismem?",
         a: "Prohlásil, že obě strany mají pravdu podle toho, jaký je právě den v týdnu.",
         b: "Vytvořil konceptualismus – obecniny existují v lidské mysli jako pojmy (koncepty) vyjadřující podobnost věcí.",
         c: "Tvrdil, že spor je neřešitelný, a proto by se o něm mělo přestat mluvit.",
@@ -417,7 +417,7 @@ window.data_stredovek_a_renesance = {
         tag: "anselm"
     },
     {
-        q: "Co vyjadřuje Anselmovo heslo 'fides quaerens intellectum' (víra hledající rozumění)?",
+        q: "Co vyjadřuje heslo Anselma z Canterbury (1033 - 1109) 'fides quaerens intellectum' (víra hledající rozumění)?",
         a: "Snahu pomocí logiky a rozumu pochopit obsah toho, v co už člověk věří.",
         b: "Názor, že rozum musí víru zcela nahradit, jakmile dosáhneme vzdělání.",
         c: "Přesvědčení, že víra je pro hloupé a rozumění pro chytré.",
@@ -469,7 +469,7 @@ window.data_stredovek_a_renesance = {
         tag: "scholastika"
     },
     {
-        q: "Jak se Erasmus Rotterdamský v rámci svých humanistických postojů díval na pozdní plody scholastiky?",
+        q: "Jak se Erasmus Rotterdamský (1466 - 1536) v rámci svých humanistických postojů díval na pozdní plody scholastiky?",
         a: "Obdivoval složitost jejich logických sporů a považoval je za vrchol lidského myšlení.",
         b: "Kritizoval scholastiku za to, že se ztratila v prázdných slovních hříčkách a zapomněla na skutečný etický obsah křesťanství.",
         c: "Navrhoval, aby se scholastická metoda vyučovala jako povinný základ pro všechny budoucí vědce.",
@@ -501,7 +501,7 @@ window.data_stredovek_a_renesance = {
             "questions": 
 [
     {
-        q: "Jaký byl největší přínos Alberta Velikého pro rozvoj středověké scholastiky?",
+        q: "Jaký byl největší přínos Alberta Velikého (1200 - 1280) pro rozvoj středověké scholastiky?",
         a: "Zcela zakázal studium přírody a soustředil se výhradně na výklad Bible.",
         b: "Jako první systematicky uvedl Aristotelovu filozofii do křesťanského myšlení a zdůraznil význam pozorování přírody.",
         c: "Sestavil první mapu světa, která dokazovala, že Země je nekonečná plošina.",
@@ -540,7 +540,7 @@ window.data_stredovek_a_renesance = {
         tag: "autority"
     },
     {
-        q: "Jak Tomáš Akvinský definoval vztah mezi pravdou víry a pravdou rozumu?",
+        q: "Jak Tomáš Akvinský (1225 - 1274) definoval vztah mezi pravdou víry a pravdou rozumu?",
         a: "Tvrdil, že rozum a víra jsou v trvalém rozporu a člověk si musí vybrat jen jedno z nich.",
         b: "Věřil, že jsou v naprostém souladu, protože obě pravdy pocházejí od stejného zdroje – od Boha.",
         c: "Prohlásil, že rozum je nadřazen víře, protože dokáže logicky vysvětlit i zázraky.",
@@ -632,6 +632,19 @@ window.data_stredovek_a_renesance = {
         tag: "etika"
     },
     {
+        q: "Jakým způsobem vysvětloval Svatý Bonaventura (1217 - 1274) možnost lidského poznání ve své teorii osvícení?",
+        a: "Tvrdil, že lidský rozum je zcela soběstačný a k poznání pravdy stačí pouze logické myšlení a zkušenost.",
+        b: "Věřil, že lidský rozum je příliš slabý a k nahlédnutí věčných pravd potřebuje přímou pomoc od Boha (teorie iluminace).",
+        c: "Prohlásil, že poznání je možné pouze skrze vědecké experimenty a matematické výpočty.",
+        ans: "b",
+        expl: {
+            a: "Chyba. Bonaventura (na rozdíl od radikálních aristoteliků) nevěřil, že by lidský intelekt mohl dosáhnout nejvyšší pravdy bez božského zásahu.",
+            b: "Správně. Bonaventura navázal na svatého Augustina. Podle něj je Bůh 'Sluncem duše'. Aby náš rozum mohl poznat věčné a nezměnné pravdy, musí být ozářen Božím světlem (<strong>iluminací</strong>). Poznání tedy pro něj není jen chladná logika, ale duchovní proces, který vyžaduje pokoru a vnitřní čistotu.",
+            c: "Chyba. Tento přístup k poznání je typický až pro pozdní renesanci a novověk, nikoliv pro františkánskou mystiku vrcholné scholastiky."
+        },
+        tag: "bonaventura"
+    },
+    {
         q: "V čem se lišil přístup Svatého Bonaventury od Tomáše Akvinského?",
         a: "Bonaventura byl zastáncem Aristotela, zatímco Tomáš byl věrný Platónovi.",
         b: "Bonaventura zůstal věrný tradici svatého Augustina a kladl důraz na cit, pokoru a Boží osvícení.",
@@ -644,19 +657,7 @@ window.data_stredovek_a_renesance = {
         },
         tag: "bonaventura"
     },
-    {
-        q: "Jakým způsobem vysvětloval Svatý Bonaventura možnost lidského poznání ve své teorii osvícení?",
-        a: "Tvrdil, že lidský rozum je zcela soběstačný a k poznání pravdy stačí pouze logické myšlení a zkušenost.",
-        b: "Věřil, že lidský rozum je příliš slabý a k nahlédnutí věčných pravd potřebuje přímou pomoc od Boha (teorie iluminace).",
-        c: "Prohlásil, že poznání je možné pouze skrze vědecké experimenty a matematické výpočty.",
-        ans: "b",
-        expl: {
-            a: "Chyba. Bonaventura (na rozdíl od radikálních aristoteliků) nevěřil, že by lidský intelekt mohl dosáhnout nejvyšší pravdy bez božského zásahu.",
-            b: "Správně. Bonaventura navázal na svatého Augustina. Podle něj je Bůh 'Sluncem duše'. Aby náš rozum mohl poznat věčné a nezměnné pravdy, musí být ozářen Božím světlem (<strong>iluminací</strong>). Poznání tedy pro něj není jen chladná logika, ale duchovní proces, který vyžaduje pokoru a vnitřní čistotu.",
-            c: "Chyba. Tento přístup k poznání je typický až pro pozdní renesanci a novověk, nikoliv pro františkánskou mystiku vrcholné scholastiky."
-        },
-        tag: "bonaventura"
-    },
+
     {
         q: "Které monumentální dílo Tomáše Akvinského se stalo základem pro systematickou výuku katolické teologie?",
         a: "Suma proti pohanům (Summa contra gentiles).",
@@ -729,7 +730,7 @@ window.data_stredovek_a_renesance = {
         wiki: ["filosofie", "pozdni_scholastika"]
     },
     {
-        q: "Jaký nový pojem zavedl Jan Duns Scotus k označení jedinečnosti každé konkrétní věci?",
+        q: "Jaký nový pojem zavedl Jan Duns Scotus (1266 - 1308) k označení jedinečnosti každé konkrétní věci?",
         a: "Quidditas (cožtost) – obecná podstata věci, kterou mají všechny věci stejného druhu společnou.",
         b: "Haecceitas (tohotost) – princip individuality, díky kterému je každá věc právě tím, čím je.",
         c: "Universalia (obecnina) – nadpozemský vzor, podle kterého jsou věci vyráběny.",
@@ -742,7 +743,7 @@ window.data_stredovek_a_renesance = {
         tag: "scotus"
     },
     {
-        q: "William Occam dovedl nominalismus do extrému. Jak chápal existenci obecných pojmů (univerzálií)?",
+        q: "William Occam (1287 - 1347) dovedl nominalismus do extrému. Jak chápal existenci obecných pojmů (univerzálií)?",
         a: "Jako reálné duchovní síly, které z nebe řídí vývoj lidstva.",
         b: "Jako pouhé nástroje rozumu (jména), protože ve skutečnosti existují pouze jednotliviny.",
         c: "Jako posvátné symboly, které nesmí být nikdy zpochybňovány.",
@@ -807,7 +808,7 @@ window.data_stredovek_a_renesance = {
         tag: "occam"
     },
     {
-        q: "V čem spočívala nebezpečnost učení Mistra Eckharta pro tehdejší církevní hierarchii?",
+        q: "V čem spočívala nebezpečnost učení Mistra Eckharta (1260 - 1328) pro tehdejší církevní hierarchii?",
         a: "Jeho důraz na přímé vnitřní spojení člověka s Bohem naznačoval, že církev jako prostředník není nezbytná.",
         b: "Tvrdil, že Bůh je ve skutečnosti zlá bytost, která se lidem mstí.",
         c: "Kázal, že lidé by se měli modlit k přírodním silám místo ke Kristu.",
@@ -853,7 +854,7 @@ window.data_stredovek_a_renesance = {
         tag: "humanismus"
     },
     {
-        q: "Které tři zásadní přínosy definují filozofické působení Marsilia Ficina v období renesance?",
+        q: "Které tři zásadní přínosy definují filozofické působení Marsilia Ficina (1433 - 1499) v období renesance?",
         a: "Vynález knihtisku pro šíření Bible, založení prvního vědeckého institutu a prosazování ateismu jako základu státu.",
         b: "Úplný překlad Platónova díla do latiny, definice platonické lásky jako cesty k Bohu a zdůraznění výjimečné důstojnosti člověka.",
         c: "Sepsání pravidel pro renesanční malířství, obhajoba geocentrismu a kritika antické vzdělanosti jako pohanské.",
@@ -879,7 +880,7 @@ window.data_stredovek_a_renesance = {
         tag: "ficino"
     },
     {
-        q: "Giovanni Pico della Mirandola v díle 'O důstojnosti člověka' tvrdí, že člověk má 'chameleonskou povahu'. Co tím myslí?",
+        q: "Giovanni Pico della Mirandola (1463 - 1494) v díle 'O důstojnosti člověka' tvrdí, že člověk má 'chameleonskou povahu'. Co tím myslí?",
         a: "Že lidé dokážou měnit barvu pleti podle toho, v jakém prostředí se nacházejí.",
         b: "Že člověk nemá pevnou přirozenost a díky své svobodě se může sám rozhodnout, zda klesne na úroveň zvířete, nebo se povznese k andělům.",
         c: "Že lidská povaha je nestálá a nikomu nelze věřit, protože každý jen hraje divadlo.",
@@ -905,7 +906,7 @@ window.data_stredovek_a_renesance = {
         tag: "mirandola"
     },
     {
-        q: "V čem spočívala radikální změna politického myšlení u Niccola Machiavelliho?",
+        q: "V čem spočívala radikální změna politického myšlení u italského politika, filosofa a vojenského teoretika Niccola Machiavelliho (1469 - 1527)?",
         a: "Tvrdil, že politika musí být založena výhradně na křesťanské pokoře a lásce k bližnímu.",
         b: "Oddělil politiku od morálky a teologie; zkoumal ji jako praktickou technologii moci ('politický realismus').",
         c: "Navrhoval, aby státy řídili filozofové, kteří budou žít v naprosté chudobě.",
@@ -931,7 +932,7 @@ window.data_stredovek_a_renesance = {
         tag: "machiavelli"
     },
     {
-        q: "Jaký postoj zastával Erasmus Rotterdamský vůči tehdejší institucionální církvi?",
+        q: "Jaký postoj zastával Erasmus Rotterdamský (1466 - 1536) vůči tehdejší institucionální církvi?",
         a: "Byl jejím fanatickým obhájcem a požadoval upalování všech kritiků.",
         b: "Byl jejím vnitřním kritikem; v díle 'Chvála bláznivosti' parodoval zkaženost kněží a prázdnotu scholastiky.",
         c: "Církev zcela ignoroval, protože se zajímal pouze o sbírání antických mincí.",
@@ -944,7 +945,7 @@ window.data_stredovek_a_renesance = {
         tag: "erasmus"
     },
     {
-        q: "Renesanční myslitel Pietro Pomponazzi tvrdil, že lidská duše je smrtelná. Jaký pro to měl důvod?",
+        q: "Renesanční myslitel Pietro Pomponazzi (1462 - 1525) tvrdil, že lidská duše je smrtelná. Jaký pro to měl důvod?",
         a: "Tvrdil, že duše neexistuje a člověk je jen shluk náhodných atomů.",
         b: "Argumentoval aristotelsky: duše je formou těla a bez těla nemůže vykonávat svou činnost (myšlení).",
         c: "Prohlásil, že nesmrtelnost si zaslouží pouze císař a jeho rodina.",
@@ -970,7 +971,7 @@ window.data_stredovek_a_renesance = {
         tag: "kosmologie"
     },
     {
-        q: "Co znamená termín 'docta ignorantia' (poučená nevědomost) u Mikuláše Kusánského?",
+        q: "Co znamená termín 'docta ignorantia' (poučená nevědomost) u Mikuláše Kusánského (1401 - 1464)?",
         a: "Názor, že vzdělání je škodlivé a lidé by se měli vrátit k prostotě a nevědomosti.",
         b: "Uvědomění si, že náš konečný rozum nikdy nemůže plně obsáhnout nekonečného Boha, přestože se o to neustále pokoušíme.",
         c: "Metoda, jak záměrně zapomínat staré znalosti, abychom udělali místo pro nové objevy.",
@@ -1009,7 +1010,7 @@ window.data_stredovek_a_renesance = {
         tag: "kusansky"
     },
     {
-        q: "V čem spočíval 'koperníkovský obrat' a jaký měl dopad na renesanční myšlení?",
+        q: "V čem spočíval 'koperníkovský obrat' Mikuláše Koperníka (1473 - 1543) a jaký měl dopad na renesanční myšlení?",
         a: "V nahrazení geocentrismu heliocentrismem, což vedlo k de-centralizaci Země i člověka ve vesmíru.",
         b: "V matematickém důkazu, že vesmír je konečný a nehybný, čímž byla potvrzena neomylnost církevních dogmat.",
         c: "V zjištění, že Země je plochá deska, což způsobilo úpadek vědy a návrat k mytickým výkladům světa.",
@@ -1022,7 +1023,7 @@ window.data_stredovek_a_renesance = {
         tag: "kopernik"
     },
     {
-        q: "Giordano Bruno byl zastáncem panteismu. Jak chápal vztah mezi Bohem a přírodou?",
+        q: "Giordano Bruno (1548 - 1600) byl zastáncem panteismu. Jak chápal vztah mezi Bohem a přírodou?",
         a: "Bůh je rozhněvaný soudce, který přírodu neustále trestá pohromami.",
         b: "Bůh a příroda jsou jedno; Bůh je vnitřním oživujícím principem každé části vesmíru (deus in rebus).",
         c: "Příroda je jen iluze a Bůh existuje v naprosté prázdnotě mimo náš svět.",
@@ -1048,7 +1049,7 @@ window.data_stredovek_a_renesance = {
         tag: "bruno"
     },
     {
-        q: "Galileo Galilei prohlásil, že 'kniha přírody je napsána jazykem matematiky'. Jakou novou vědeckou metodu tím definoval?",
+        q: "Galileo Galilei (1564 - 1642) prohlásil, že 'kniha přírody je napsána jazykem matematiky'. Jakou novou vědeckou metodu tím definoval?",
         a: "Metodu čisté spekulace, která upřednostňuje logické úvahy antických autorit před jakýmkoliv praktickým ověřováním.",
         b: "Moderní vědeckou metodu založenou na spojení matematické teorie, přesného měření a experimentálního ověřování hypotéz.",
         c: "Metodu estetického pozorování, kdy se příroda zkoumá jako umělecké dílo, které nelze popsat čísly.",
@@ -1074,7 +1075,7 @@ window.data_stredovek_a_renesance = {
         tag: "galilei"
     },
     {
-        q: "Johannes Kepler upravil Koperníkův model vesmíru. V čem spočívala jeho zásadní oprava?",
+        q: "Johannes Kepler (1571 - 1630) upravil Koperníkův model vesmíru. V čem spočívala jeho zásadní oprava?",
         a: "Tvrdil, že planety se nepohybují po dokonalých kruzích, ale po elipsách.",
         b: "Prohlásil, že Slunce je středem celého vesmíru, nikoliv jen naší soustavy.",
         c: "Dokázal, že planety jsou ve skutečnosti hvězdy, které jen svítí odraženým světlem.",
@@ -1087,7 +1088,7 @@ window.data_stredovek_a_renesance = {
         tag: "kepler"
     },
     {
-        q: "Francis Bacon ve svém díle 'Nový Organon' prosazoval metodu indukce. V čem spočívá?",
+        q: "Francis Bacon (1561 - 1626) ve svém díle 'Nový Organon' prosazoval metodu indukce. V čem spočívá?",
         a: "V odvozování pravdy z obecných pouček, které nám sdělily autority.",
         b: "V postupu od konkrétních pozorování a experimentů k vyvození obecných zákonů přírody.",
         c: "V hádání budoucích událostí z kávové sedliny a pohybu mraků.",
