@@ -669,7 +669,20 @@ window.data_stredovek_a_renesance = {
             c: "Chyba. Takové dílo Tomáš nenapsal; jeho zkoumání přírody bylo součástí teologického celku."
         },
         tag: "akvinsky"
-    }
+    },
+    {
+        q: "Proč se Tomáš Akvinský v závěru života rozhodl nedokončit své největší dílo (Teologickou sumu)?",
+        a: "Protože mu došel pergamen a církev mu odmítla koupit nový.",
+        b: "Prožil mystický zážitek, po kterém mu veškeré jeho logické systémy připadaly jako 'sláma'.",
+        c: "Ztratil víru a stal se radikálním nominalistou.",
+        ans: "b",
+        expl: {
+            a: "Chyba. Tomáš byl velmi váženým profesorem s plnou podporou svého řádu.",
+            b: "Správně. Tato událost symbolizuje hranice středověké logiky. I největší rozumový gigant nakonec uznal, že přímý prožitek božské reality je víc než tisíce stran logických důkazů. Je to krásný moment, kdy se scholastika pokorně sklání před mystikou.",
+            c: "Chyba. Tomáš zůstal hluboce věřícím katolíkem, pouze změnil pohled na hodnotu pouhého intelektuálního zkoumání."
+        },
+        tag: "akvinsky"
+    }    
 ]
         },
         "pozdni_scholastika": {
@@ -685,6 +698,19 @@ window.data_stredovek_a_renesance = {
             a: "Chyba. Latina zůstala hlavním jazykem a Aristoteles byl stále studován, jen se změnila interpretace jeho děl.",
             b: "Správně. Pozdní scholastika (představovaná např. Dunsem Scotem a Williamem Occamem) byla skeptická k velkým systémům Tomáše Akvinského. <br>1. <strong>Konec harmonie:</strong> Tvrdila, že pravdy víry (jako nesmrtelnost duše nebo existence Boha) jsou rozumem nedokazatelné a patří pouze víře. <br>2. <strong>Osamostatnění vědy:</strong> Tím, že 'osvobodila' rozum od teologie, mu umožnila věnovat se čistě zkoumání přírody. <br>3. <strong>Důraz na jednotlivinu:</strong> Místo hledání obecných podstat se začala soustředit na konkrétní, smysly vnímatelné věci.",
             c: "Chyba. To byl cíl vrcholné scholastiky; pozdní scholastika naopak tuto jednotu rozbila."
+        },
+        tag: "pozdni_scholastika"
+    },
+    {
+        q: "Jakým způsobem proměnily pojmy voluntarismus a nominalismus tvář pozdní scholastiky?",
+        a: "Vedly k názoru, že svět je ovládán náhodou a že lidské poznání nemá žádný smysl ani praktické využití.",
+        b: "Zdůraznily Boží všemoc nad logikou (voluntarismus) a reálnou existenci pouze konkrétních věcí (nominalismus), čímž oddělily víru od vědy.",
+        c: "Upevnily přesvědčení, že obecné pojmy jsou důležitější než jednotliviny a že Bůh je povinen jednat podle lidských pravidel.",
+        ans: "b",
+        expl: {
+            a: "Chyba. Pozdní scholastika sice zpochybnila staré jistoty, ale zároveň tím otevřela cestu k moderní vědě založené na faktech.",
+            b: "Správně. Došlo k zásadnímu posunu: <br>1. <strong>Voluntarismus</strong> (Jan Duns Scotus): Bůh není vázán rozumem, ale svou svobodnou vůlí. Něco je dobré jen proto, že to Bůh chce, nikoliv proto, že je to logické. <br>2. <strong>Nominalismus</strong> (William Occam): Obecniny neexistují, reálné jsou jen jednotliviny. <br>Tato kombinace znamenala, že svět už nelze pochopit 'od stolu' čistou logikou, ale musíme ho začít <strong>pozorovat a zkoumat jako soubor faktů</strong>, což je základ budoucí vědy.",
+            c: "Chyba. Toto je postoj realismu a racionalismu vrcholné scholastiky, který právě pozdní myslitelé kritizovali."
         },
         tag: "pozdni_scholastika"
     },
@@ -733,10 +759,10 @@ window.data_stredovek_a_renesance = {
         a: "Pravidlo, že církev má právo odříznout kacíře od společnosti.",
         b: "Princip úspornosti: nemá se předpokládat existence více věcí, než je nezbytně nutné k vysvětlení jevu.",
         c: "Nástroj, kterým mniši v klášterech opravovali chyby v opisech Bible.",
-        ans: "b",
+        ans: "a",
         expl: {
-            a: "Chyba. Occam byl sám často v konfliktu s papežem; tento princip slouží logice, nikoliv perzekuci.",
-            b: "Správně. Je to metodické 'ořezání' zbytečností. Pokud lze jev vysvětlit jednoduše, není důvod vymýšlet složité teorie s mnoha neviditelnými příčinami. Tento princip je dodnes základem vědeckého uvažování – hledáme nejjednodušší funkční vysvětlení.",
+            a: "Správně. Je to metodické 'ořezání' zbytečností. Pokud lze jev vysvětlit jednoduše, není důvod vymýšlet složité teorie s mnoha neviditelnými příčinami. Tento princip je dodnes základem vědeckého uvažování – hledáme nejjednodušší funkční vysvětlení.",
+            b: "Chyba. Occam byl sám často v konfliktu s papežem; tento princip slouží logice, nikoliv perzekuci.",            
             c: "Chyba. Jde o myšlenkový a metodologický princip, nikoliv o fyzický předmět."
         },
         tag: "occam"
@@ -746,24 +772,37 @@ window.data_stredovek_a_renesance = {
         a: "Prohlásil, že víra a rozum jsou totéž a vědec musí být zároveň knězem.",
         b: "Tvrdil, že náboženské pravdy nelze rozumem dokázat, a proto mají být víra a filozofie od sebe zcela odděleny.",
         c: "Nařídil, že filozofie se musí věnovat pouze studiu Bible a ignorovat přírodu.",
-        ans: "b",
+        ans: "c",
         expl: {
-            a: "Chyba. Occam naopak zdůrazňoval jejich propastný rozdíl a různé sféry vlivu.",
-            b: "Správně. Occam (v duchu fideismu) tvrdil, že Bůh je tak svobodný, že ho lidská logika nemůže spoutat. Rozum se má věnovat zkoumání přírody (věda) a víra má zůstat záležitostí zjevení. Tím se filozofie osvobodila z role 'služky teologie' a začala se osamostatňovat.",
-            c: "Chyba. Occam chtěl pravý opak – aby se rozum mohl svobodně věnovat přírodě, aniž by musel neustále řešit teologická dogmata."
+            a: "Chyba. Occam naopak zdůrazňoval jejich propastný rozdíl a různé sféry vlivu.",            
+            b: "Chyba. Occam chtěl pravý opak – aby se rozum mohl svobodně věnovat přírodě, aniž by musel neustále řešit teologická dogmata.",
+            c: "Správně. Occam byl radikálním voluntaristou a (v duchu fideismu) tvrdil, že Bůh je tak svobodný, že ho lidská logika nemůže spoutat. Rozum se má věnovat zkoumání přírody (věda) a víra má zůstat záležitostí zjevení. Tím se filozofie osvobodila z role 'služky teologie' a začala se osamostatňovat."
         },
         tag: "occam"
     },
     {
-        q: "Proč byla politická činnost Williama Occama pro tehdejší církev nebezpečná?",
-        a: "Chtěl, aby se papež stal neomezeným vládcem celého světa.",
-        b: "Obhajoval odluku církevní moci od světské a tvrdil, že církev by neměla vlastnit majetek.",
-        c: "Podporoval barbarské kmeny v útoku na Řím.",
+        q: "Pokud William Occam tvrdí, že Bůh je absolutně svobodný a lidská logika ho nemůže postihnout, o jaký filozofický vztah se jedná?",
+        a: "Je to projev fideismu, který je přímým důsledkem Božího voluntarismu.",
+        b: "Je to důkaz realismu, který tvrdí, že obecné pojmy v Boží mysli jsou logicky neuchopitelné.",
+        c: "Je to výsledek tomismu, který se snaží rozumově dokázat, že Bůh je nadřazen logice.",
+        ans: "a",
+        expl: {
+            a: "Správně. <strong>Voluntarismus</strong> říká, že Bůh je absolutní vůle a není vázán logikou. Z toho logicky vyplývá <strong>fideismus</strong>: pokud Bůh nefunguje podle pravidel naší logiky, nemůžeme ho rozumem dokázat ani pochopit. Zbývá nám tedy pouze víra (fides) jako jediný způsob kontaktu s Bohem.",
+            b: "Chyba. Realismus naopak věřil, že svět a Boží mysl mají logickou strukturu (univerzálie), kterou můžeme poznat.",
+            c: "Chyba. Tomismus (vrcholná scholastika) věřil v harmonii rozumu a víry – tedy v to, že Bůh a jeho řád jsou logicky uchopitelné."
+        },
+        tag: "pozdni_scholastika"
+    },
+    {
+        q: "Jakým způsobem přispělo učení Williama Occama k procesu sekularizace (odluky státu od církve)?",
+        a: "Hájil názor, že stát je pouze služebním nástrojem církve a musí se řídit výhradně církevním právem.",
+        b: "Oddělil sféru víry od sféry rozumu a prosazoval, aby světská moc byla nezávislá na moci papeže.",
+        c: "Tvrdil, že panovník je v podstatě bůh na zemi a církev by měla být jako instituce zcela zrušena.",
         ans: "b",
         expl: {
-            a: "Chyba. Occam proti absolutistickým nárokům papeže naopak tvrdě bojoval.",
-            b: "Správně. Occam jako františkán prosazoval ideál chudoby a kritizoval papežovo bohatství a politickou moc. Tvrdil, že panovník má dostávat moc od lidu (či Boha přímo), nikoliv od papeže. Tím položil základy moderního pojetí státu nezávislého na církvi.",
-            c: "Chyba. Occam byl intelektuál bojující perem a logikou v rámci evropské politiky 14. století."
+            a: "Chyba. Toto byl tradiční středověký postoj, který Occam svou kritikou papežského absolutismu přímo napadl.",
+            b: "Správně. Occam jako zastánce <strong>odluky moci</strong> tvrdil, že císař nedostává svou moc od papeže, ale přímo od Boha či lidu. Tím, že z náboženství udělal sféru víry nezávislou na rozumu, uvolnil cestu politice jako samostatné disciplíně. <strong>Reakce církve</strong> byla velmi tvrdá: papež Jan XXII. označil Occamovo učení za kacířské, Occam byl uvězněn v Avignonu, odkud musel uprchnout pod ochranu císaře Ludvíka Bavora, kterému pak pomáhal filozoficky hájit nezávislost na Římě.",
+            c: "Chyba. Occam nebyl ateista ani anarchista; chtěl pouze, aby se církev věnovala duchovní spáse a nezískávala politický vliv skrze majetek a světskou moc."
         },
         tag: "occam"
     },
@@ -774,24 +813,11 @@ window.data_stredovek_a_renesance = {
         c: "Kázal, že lidé by se měli modlit k přírodním silám místo ke Kristu.",
         ans: "a",
         expl: {
-            a: "Správně. Eckhartova mystika 'vnitřní jiskry' znamenala, že Bůh je v každém z nás. Pokud se člověk dokáže vnitřně ztišit, potká Boha přímo v sobě. To oslabovalo moc církve, která se prezentovala jako jediný povinný most ke spáse.",
+            a: "Správně. Eckhartova mystika 'vnitřní jiskry' znamenala, že Bůh je v každém z nás. Pokud se člověk dokáže vnitřně ztišit, potká Boha přímo v sobě. <br>Ekhart tvrdil, že člověk se musí první vzdát všeho - ega, majetku a dokonce i svých přestav o Bohu a teprve do čisté, prázdné duše může Bůh vstoupit. → To oslabovalo moc církve, která se prezentovala jako jediný povinný most ke spáse.",
             b: "Chyba. Eckhart učil o Bohu jako o nejvyšším dobru a zdroji veškeré lásky.",
             c: "Chyba. Eckhart byl křesťanský teolog, jeho učení bylo hluboce duchovní, nikoliv pohanské."
         },
         tag: "eckhart"
-    },
-    {
-        q: "Proč se Tomáš Akvinský v závěru života rozhodl nedokončit své největší dílo (Teologickou sumu)?",
-        a: "Protože mu došel pergamen a církev mu odmítla koupit nový.",
-        b: "Prožil mystický zážitek, po kterém mu veškeré jeho logické systémy připadaly jako 'sláma'.",
-        c: "Ztratil víru a stal se radikálním nominalistou.",
-        ans: "b",
-        expl: {
-            a: "Chyba. Tomáš byl velmi váženým profesorem s plnou podporou svého řádu.",
-            b: "Správně. Tato událost symbolizuje hranice středověké logiky. I největší rozumový gigant nakonec uznal, že přímý prožitek božské reality je víc než tisíce stran logických důkazů. Je to krásný moment, kdy se scholastika pokorně sklání před mystikou.",
-            c: "Chyba. Tomáš zůstal hluboce věřícím katolíkem, pouze změnil pohled na hodnotu pouhého intelektuálního zkoumání."
-        },
-        tag: "akvinsky"
     }
 ]
         },
@@ -827,17 +853,17 @@ window.data_stredovek_a_renesance = {
         tag: "humanismus"
     },
     {
-        q: "Giovanni Pico della Mirandola v díle 'O důstojnosti člověka' tvrdí, že člověk má 'chameleonskou povahu'. Co tím myslí?",
-        a: "Že lidé dokážou měnit barvu pleti podle toho, v jakém prostředí se nacházejí.",
-        b: "Že člověk nemá pevnou přirozenost a díky své svobodě se může sám rozhodnout, zda klesne na úroveň zvířete, nebo se povznese k andělům.",
-        c: "Že lidská povaha je nestálá a nikomu nelze věřit, protože každý jen hraje divadlo.",
-        ans: "b",
+        q: "Které tři zásadní přínosy definují filozofické působení Marsilia Ficina v období renesance?",
+        a: "Vynález knihtisku pro šíření Bible, založení prvního vědeckého institutu a prosazování ateismu jako základu státu.",
+        b: "Úplný překlad Platónova díla do latiny, definice platonické lásky jako cesty k Bohu a zdůraznění výjimečné důstojnosti člověka.",
+        c: "Sepsání pravidel pro renesanční malířství, obhajoba geocentrismu a kritika antické vzdělanosti jako pohanské.",
+        ans: "c",
         expl: {
-            a: "Chyba. Jde o metaforu lidské svobody a morálky, nikoliv o biologický popis.",
-            b: "Správně. Toto je manifest renesance. Mirandola říká, že zatímco zvíře má instinkty dané, člověk je 'nedokončený' projekt. Bůh mu dal svobodu, aby si sám zvolil svou tvář. Tato odpovědnost za vlastní život je základem moderního pojetí lidské důstojnosti.",
-            c: "Chyba. Mirandola neřeší lhavost, ale neomezený potenciál lidského růstu a sebeurčení."
+            a: "Chyba. Knihtisk vynalezl Gutenberg a Ficino byl hluboce věřící křesťan, nikoliv ateista.",
+            b: "Chyba. Ficino antiku miloval a snažil se ji s křesťanstvím spojit, nikoliv ji kritizovat. Pravidla malířství nebyla jeho hlavním oborem.",
+            c: "Správně. Marsilio Ficino byl gigantem své doby: <br>1. <strong>Překladatel:</strong> Jako první zpřístupnil kompletního <strong>Platóna</strong> v latině. <br>2. <strong>Platonická láska:</strong> Přišel s pojmem <strong>amor platonicus</strong>. Podle něj je láska k druhému člověku 'schodištěm' (žebříkem), po kterém duše stoupá od obdivu k pozemské kráse až k lásce k samotnému Bohu. <br>3. <strong>Důstojnost:</strong> Prohlásil člověka za nejdokonalejší Boží výtvor, který si zaslouží úctu a uznání své výjimečné hodnoty v kosmu."
         },
-        tag: "mirandola"
+        tag: "ficino"
     },
     {
         q: "Marsilio Ficino založil ve Florencii Platónskou akademii. O co se tato skupina učenců snažila?",
@@ -851,6 +877,32 @@ window.data_stredovek_a_renesance = {
             c: "Chyba. Akademie se věnovala překladům, filozofii a studiu krásy a lásky."
         },
         tag: "ficino"
+    },
+    {
+        q: "Giovanni Pico della Mirandola v díle 'O důstojnosti člověka' tvrdí, že člověk má 'chameleonskou povahu'. Co tím myslí?",
+        a: "Že lidé dokážou měnit barvu pleti podle toho, v jakém prostředí se nacházejí.",
+        b: "Že člověk nemá pevnou přirozenost a díky své svobodě se může sám rozhodnout, zda klesne na úroveň zvířete, nebo se povznese k andělům.",
+        c: "Že lidská povaha je nestálá a nikomu nelze věřit, protože každý jen hraje divadlo.",
+        ans: "b",
+        expl: {
+            a: "Chyba. Jde o metaforu lidské svobody a morálky, nikoliv o biologický popis.",
+            b: "Správně. Toto je manifest renesance. Mirandola říká, že zatímco zvíře má instinkty dané, člověk je 'nedokončený' projekt. Bůh mu dal svobodu, aby si sám zvolil svou tvář. Tato odpovědnost za vlastní život je základem moderního pojetí lidské důstojnosti.",
+            c: "Chyba. Mirandola neřeší lhavost, ale neomezený potenciál lidského růstu a sebeurčení."
+        },
+        tag: "mirandola"
+    },
+    {
+        q: "Co v myšlení Pica della Mirandoly vyjadřoval pojem synkretismus?",
+        a: "Šlo o snahu dokázat, že každé náboženství a filozofie v sobě nesou kousek univerzální pravdy.",
+        b: "Byl to pokus o vytvoření zcela nového náboženství bez boha.",
+        c: "Označoval přesvědčení, že pouze křesťanství je pravdivé a všechny ostatní směry jsou čisté lži.",
+        ans: "a",
+        expl: {
+            a: "Správně. Mirandola byl přesvědčen, že pravda je roztříštěna v mnoha tradicích – v křesťanství, antice, ale i v židovské kabale nebo arabské filozofii. Pokusil se je všechny spojit do jednoho systému (<strong>synkretismus</strong>). <strong>Reakce církve</strong> však byla nemilosrdná: papež Innocenc VIII. zakázal veřejnou debatu o jeho 900 tezích a řadu z nich prohlásil za kacířské. Mirandola musel uprchnout do Francie, aby se vyhnul vězení.",
+            b: "Chyba. Mirandola byl věřící a hledal v náboženstvích společného jmenovatele, nikoliv jejich zrušení.",
+            c: "Chyba. Právě Mirandolova otevřenost k 'pohanským' a židovským zdrojům byla tím, co církevní hierarchii nejvíce popouzelo."
+        },
+        tag: "mirandola"
     },
     {
         q: "V čem spočívala radikální změna politického myšlení u Niccola Machiavelliho?",
@@ -918,19 +970,6 @@ window.data_stredovek_a_renesance = {
         tag: "kosmologie"
     },
     {
-        q: "Thomas More a Tommaso Campanella jsou známí svými 'utopiemi'. Co bylo cílem těchto děl?",
-        a: "Napsat vtipné pohádky pro pobavení šlechty u dvora.",
-        b: "Představit vizi ideální, spravedlivé společnosti jako kritiku tehdejších špatných poměrů.",
-        c: "Vytvořit podrobné mapy nově objevených kontinentů v Americe.",
-        ans: "b",
-        expl: {
-            a: "Chyba. Utopie byly vážné sociální a filozofické traktáty.",
-            b: "Správně. 'Utopie' znamená místo, které neexistuje. More (v knize Utopia) i Campanella (v knize Sluneční stát) snili o společnosti bez soukromého vlastnictví, kde jsou si lidé rovni a vládne v nich rozum a ctnost. Byla to reakce na bídu a nespravedlnost tehdejší Evropy.",
-            c: "Chyba. Ačkoliv byla díla psána formou cestopisů, šlo o politickou filozofii, nikoliv o geografii."
-        },
-        tag: "utopie"
-    },
-    {
         q: "Co znamená termín 'docta ignorantia' (poučená nevědomost) u Mikuláše Kusánského?",
         a: "Názor, že vzdělání je škodlivé a lidé by se měli vrátit k prostotě a nevědomosti.",
         b: "Uvědomění si, že náš konečný rozum nikdy nemůže plně obsáhnout nekonečného Boha, přestože se o to neustále pokoušíme.",
@@ -948,26 +987,39 @@ window.data_stredovek_a_renesance = {
         a: "Sestrojil první dalekohled a dokázal, že se Země točí kolem Slunce.",
         b: "Prohlásil, že v nekonečném vesmíru nemůže existovat žádný absolutní střed ani obvod, takže ani Země nemůže být středem všeho.",
         c: "Vymyslel matematický vzorec, který dokazoval, že Slunce je větší než Země.",
-        ans: "b",
+        ans: "a",
         expl: {
-            a: "Chyba. Kusánský byl teoretik; dalekohled přišel až o století později.",
-            b: "Správně. Toto je geniální filozofická úvaha. Pokud je Bůh nekonečný a svět je jeho odrazem, musí být svět také bez hranic. A v něčem, co nemá hranice, nemůžeš ukázat na jeden pevný bod a říct: 'Tady je střed'. Tím logicky padla představa o Zemi jako nehybném pupku světa.",
+            a: "Správně. Toto je geniální filozofická úvaha. Pokud je Bůh nekonečný a svět je jeho odrazem, musí být svět také bez hranic. A v něčem, co nemá hranice, nemůžeš ukázat na jeden pevný bod a říct: 'Tady je střed'. Tím logicky padla představa o Zemi jako nehybném pupku světa.",
+            b: "Chyba. Kusánský byl teoretik; dalekohled přišel až o století později.",            
             c: "Chyba. Kusánský se věnoval spíše metafyzickým důsledkům nekonečna než měření velikosti hvězd."
         },
         tag: "kusansky"
     },
     {
-        q: "V čem spočívala podstata 'koperníkovského obratu' v renesanční vědě?",
-        a: "V objevu, že Země je ve skutečnosti plochá a Slunce se pod ní každou noc potápí.",
-        b: "V přechodu od geocentrismu (Země středem) k heliocentrismu (Slunce středem soustavy).",
-        c: "V rozhodnutí vědců, že budou napříště psát své knihy v národních jazycích místo latiny.",
+        q: "V čem spočívá podstata Kusánského teorie 'splývání protikladů' (coincidentia oppositorum)?",
+        a: "V tvrzení, že protiklady jako maximum a minimum existují pouze v naší mysli, zatímco v realitě je svět naprosto jednotvárný.",
+        b: "V názoru, že v nekonečnu se protiklady setkávají – například kružnice s nekonečným poloměrem se stává přímkou.",
+        c: "V matematickém důkazu, že čím menší je kružnice, tím více se její vlastnosti blíží vlastnostem čtverce.",
         ans: "b",
         expl: {
-            a: "Chyba. Koperník věděl, že Země je koule; řešil však její postavení v prostoru.",
-            b: "Správně. Mikuláš Koperník v díle 'O obězích sfér nebeských' vyměnil místa – nehybná Země se stala obíhající planetou a Slunce se stalo středem. Tento obrat nezměnil jen astronomii, ale otřásl celým středověkým viděním světa, kde byl člověk středem všeho stvoření.",
-            c: "Chyba. Ačkoliv se národní jazyky začaly prosazovat, koperníkovský obrat je čistě astronomický a světonázorový termín."
+            a: "Chyba. Kusánský věřil v realitu světa, ale tvrdil, že náš rozum nedokáže logicky pojmout nekonečno, kde se věci mění ve svůj opak.",
+            b: "Správně. Kusánský použil geniální matematickou metaforu: Pokud budeme neustále zvětšovat poloměr <strong>kružnice</strong>, její zakřivení se bude zmenšovat, až se v nekonečnu stane <strong>přímkou</strong>. Podobně je tomu u Boha, který je zároveň absolutním <strong>Maximem</strong> (vše zahrnuje) i <strong>Minimem</strong> (je přítomen v nejmenším). V Bohu se tedy všechny protiklady, které náš rozum vidí jako oddělené, spojují v jedno.",
+            c: "Chyba. Kusánský pracoval s protikladem křivky (kružnice) a přímky v kontextu nekonečna, nikoliv s geometrií čtverce."
         },
-        tag: "astronomie"
+        tag: "kusansky"
+    },
+    {
+        q: "V čem spočíval 'koperníkovský obrat' a jaký měl dopad na renesanční myšlení?",
+        a: "V nahrazení geocentrismu heliocentrismem, což vedlo k de-centralizaci Země i člověka ve vesmíru.",
+        b: "V matematickém důkazu, že vesmír je konečný a nehybný, čímž byla potvrzena neomylnost církevních dogmat.",
+        c: "V zjištění, že Země je plochá deska, což způsobilo úpadek vědy a návrat k mytickým výkladům světa.",
+        ans: "a",
+        expl: {
+            a: "Správně. <strong>Heliocentrismus</strong> (Slunce jako střed) nebyl jen technickou změnou v astronomii. Tím, že Koperník v díle <strong>O obězích sfér nebeských</strong> sebral Zemi její výsadní postavení, nepřímo zasáhl i filozofii. Pokud Země není nehybným středem, pak ani člověk není v centru všeho dění z hlediska fyziky. Tento obrat donutil myslitele hledat novou oporu pro lidskou důstojnost v rozumu a tvořivosti namísto pouhého místa v kosmu.",
+            b: "Chyba. Koperníkovo učení naopak autoritu církve podkopalo, protože doslovný výklad Bible předpokládal nehybnou Zemi (např. v knize Jozue).",
+            c: "Chyba. Koperník věděl, že Země je koule. Jeho přínos spočíval v prosazení matematické logiky a pozorování nad zažitou tradicí, čímž položil základy moderní vědy."
+        },
+        tag: "kopernik"
     },
     {
         q: "Giordano Bruno byl zastáncem panteismu. Jak chápal vztah mezi Bohem a přírodou?",
@@ -977,34 +1029,47 @@ window.data_stredovek_a_renesance = {
         ans: "b",
         expl: {
             a: "Chyba. Bruno pohlížel na svět s obdivem a fascinací, nikoliv skrze strach z trestu.",
-            b: "Správně. Pro Bruna je Bůh přítomen v každém atomu, v každém stéblu trávy i v každé hvězdě. Vesmír je pro něj nekonečný a živý organismus. Tento názor byl pro tehdejší církev nepřípustný, protože stíral rozdíl mezi Stvořitelem a věcí, což vedlo k Brunovu tragickému konci.",
+            b: "Správně. Pro Bruna je Bůh přítomen v každém atomu, v každém stéblu trávy i v každé hvězdě.<br><strong>Vesmír je živý Bůh</strong> → Vesmír je pro něj nekonečný a živý organismus. Tento názor byl pro tehdejší církev nepřípustný, protože stíral rozdíl mezi Stvořitelem a věcí, což vedlo k Brunovu tragickému konci.",
             c: "Chyba. Bruno naopak realitu a božskost hmoty horlivě obhajoval."
         },
         tag: "bruno"
     },
     {
-        q: "Co bylo hlavním důvodem konfliktu Galilea Galileiho s církevní autoritou?",
-        a: "Tvrdil, že Bibli by měli pálit, protože obsahuje jen lži.",
-        b: "Pomocí dalekohledu přinesl empirické důkazy pro heliocentrismus, čímž zpochybnil dosavadní výklad Bible a Aristotela.",
-        c: "Chtěl se stát papežem, aby mohl zrušit všechny náboženské rituály.",
+        q: "Jaký byl vztah Giordana Bruna k dominikánskému řádu a k církevní autoritě?",
+        a: "Bruno byl sice dominikánským mnichem, ale kvůli svým názorům z řádu uprchl, vzdal se mnišského ritu a stal se štvancem inkvizice.",
+        b: "Po celou dobu svého života zůstal vzorným dominikánským mnichem a své vědecké objevy publikoval s oficiálním povolením papeže.",
+        c: "Z řádu byl vyloučen pro špatnou morálku a finanční podvody, nikoliv kvůli svým filozofickým nebo přírodovědným názorům.",
+        ans: "a",
+        expl: {
+            a: "Správně. Bruno do řádu vstoupil v Neapoli, ale jeho nekonvenční myšlení a studium zakázaných knih brzy vyvolaly podezření z kacířství. <br>1. <strong>Útěk:</strong> Aby se vyhnul procesu, z kláštera uprchl a odložil řeholní šat (vzdal se mnišství). <br>2. <strong>Život v exilu:</strong> Patnáct let cestoval po Evropě jako svobodný myslitel. <br>3. <strong>Konec:</strong> Nakonec byl v Benátkách dopaden inkvizicí, vydán do Říma a po sedmi letech věznění upálen. Jeho konflikt byl primárně o panteismu a nekonečnosti vesmíru, nikoliv o osobním životě.",
+            b: "Chyba. Bruno byl v přímém a ostrém konfliktu s církevní hierarchií a většina jeho děl byla na indexu zakázaných knih.",
+            c: "Chyba. Ačkoliv byl Bruno komplikovaná osobnost, jeho pronásledování bylo čistě ideologické – církev nemohla tolerovat jeho popírání křesťanských dogmat skrze panteistickou filozofii."
+        },
+        tag: "bruno"
+    },
+    {
+        q: "Galileo Galilei prohlásil, že 'kniha přírody je napsána jazykem matematiky'. Jakou novou vědeckou metodu tím definoval?",
+        a: "Metodu čisté spekulace, která upřednostňuje logické úvahy antických autorit před jakýmkoliv praktickým ověřováním.",
+        b: "Moderní vědeckou metodu založenou na spojení matematické teorie, přesného měření a experimentálního ověřování hypotéz.",
+        c: "Metodu estetického pozorování, kdy se příroda zkoumá jako umělecké dílo, které nelze popsat čísly.",
         ans: "b",
         expl: {
-            a: "Chyba. Galilei byl věřící a snažil se ukázat, že věda a víra si neodporují, pokud se správně vykládají.",
-            b: "Správně. Galilei viděl měsíce Jupiteru a fáze Venuše, což dokazovalo, že ne vše se točí kolem Země. Církev se bála, že pád geocentrismu podkope její autoritu. Známý je jeho (údajný) výrok 'A přece se točí!', kterým potvrdil pravdu i po nuceném odvolání svých tvrzení.",
-            c: "Chyba. Galilei byl vědec, nikoliv církevní kariérista."
+            a: "Chyba. Právě proti této metodě (slepé víře v autority typu Aristotela) Galilei bojoval. Tvrdil, že autoritou musí být příroda sama.",
+            b: "Správně. Galilei položil základy moderní vědy tím, že zavedl cyklus: <strong>1. Teorie</strong> (matematický předpoklad), <strong>2. Experiment</strong> (praktický pokus) a <strong>3. Měření</strong> (kvantifikace výsledků). Místo středověkého hledání 'skrytých podstat' a účelu věcí se zaměřil na měřitelné faktory jako čas, dráha a rychlost. Tím se věda stala exaktní disciplínou.",
+            c: "Chyba. Galilei věřil, že příroda je sice úchvatná, ale její řád je přísně geometrický a matematický, nikoliv pouze metaforický či umělecký."
         },
         tag: "galilei"
     },
     {
-        q: "Galileo Galilei prohlásil, že 'kniha přírody je napsána jazykem matematiky'. Co tím zavedl do vědy?",
-        a: "Pravidlo, že každý vědec musí být zároveň profesionálním básníkem.",
-        b: "Metodu matematizace přírody – fyzikální jevy je třeba měřit a vyjadřovat pomocí vzorců a čísel.",
-        c: "Názor, že příroda je příliš složitá na to, aby se dala jakkoliv zkoumat.",
-        ans: "b",
+        q: "Co bylo hlavním důvodem konfliktu Galilea Galileiho s církví a jaké to mělo pro něj následky?",
+        a: "Publikace díla 'Dialog o dvou největších systémech světa', kde obhajoval heliocentrismus, což vedlo k jeho odsouzení a doživotnímu domácímu vězení.",
+        b: "Veřejné pálení Bible v Římě jako protest proti církevnímu dogmatismu, za což byl vyhoštěn z Itálie do exilu v Nizozemí.",
+        c: "Sepsání tajných spisů o neexistenci Boha, které vedlo k okamžitému zákazu všech jeho knih a jeho následnému upálení.",
+        ans: "a",
         expl: {
-            a: "Chyba. 'Jazyk matematiky' je metafora pro přesnost a řád, nikoliv pro literární tvorbu.",
-            b: "Správně. Toto je zrod moderní fyziky. Galilei přestal řešit středověké otázky typu 'proč věci padají' (hledání účelu) a začal měřit 'jak padají' (rychlost, dráha, čas). Příroda se pro něj stala systémem měřitelných faktů, nikoliv souborem náboženských symbolů.",
-            c: "Chyba. Galilei byl naopak optimistou ohledně lidské schopnosti pochopit řád vesmíru."
+            a: "Správně. Ve svém díle <strong>Dialog o dvou největších systémech světa</strong> Galileo otevřeně srovnal ptolemaiovský a koperníkovský model ve prospěch Slunce jako středu. Reakce církve byla nekompromisní: proces v roce 1633 skončil jeho <strong>odsouzením</strong>, nuceným odvoláním názorů a <strong>zákazem jeho knihy</strong>. Zbytek života musel strávit v přísném <strong>domácím vězení</strong>. Legendární výrok 'A přece se točí!' symbolizuje jeho vnitřní přesvědčení o pravdě i přes tento trest.",
+            b: "Chyba. Galilei nikdy proti Bibli nevystupoval, naopak tvrdil, že si věda a Písmo neodporují, pouze mluví jiným jazykem.",
+            c: "Chyba. Galilei nebyl ateista a nebyl upálen (na rozdíl od Giordana Bruna). Zemřel přirozenou smrtí v domácím vězení jako věřící křesťan."
         },
         tag: "galilei"
     },
@@ -1031,6 +1096,19 @@ window.data_stredovek_a_renesance = {
             a: "Chyba. Toto je dedukce, kterou Bacon kritizoval jako neplodnou metodu scholastiky.",
             b: "Správně. Bacon chtěl vědu 'postavit na nohy'. Nejdřív musíme sbírat fakta, provádět pokusy a teprve z mnoha konkrétních případů opatrně vyvodit obecný závěr. Je to základní metoda empirismu – zkušenost je na prvním místě.",
             c: "Chyba. Bacon byl zakladatelem moderní metodologie vědy a odmítal pověry."
+        },
+        tag: "bacon"
+    },
+    {
+        q: "Francis Bacon definoval čtyři základní 'idoly' (překážky poznání). Která z možností je správně vyjmenovává?",
+        a: "Idoly moci, idoly peněz, idoly slávy a idoly strachu.",
+        b: "Idoly rodu, idoly jeskyně, idoly tržiště a idoly divadla.",
+        c: "Idoly církve, idoly státu, idoly rodiny a idoly školy.",
+        ans: "b",
+        expl: {
+            a: "Chyba. Baconovy idoly nejsou morální poklesky nebo společenské touhy, ale hluboké psychologické a logické klamy rozumu.",
+            b: "Správně. Bacon chtěl mysl připravit na vědeckou práci odstraněním těchto klamů: <br>1. <strong>Idoly rodu</strong> (idola tribus): Omyl společný celému lidskému druhu; naše smysly a rozum jsou nedokonalé a zkreslují realitu (např. vidíme řád i tam, kde není). <br>2. <strong>Idoly jeskyně</strong> (idola specus): Osobní předsudky každého z nás, dané výchovou, vzděláním a povahou. <br>3. <strong>Idoly tržiště</strong> (idola fori): Klamy vznikající ze špatného užívání jazyka a nejasných slov při kontaktu s lidmi. <br>4. <strong>Idoly divadla</strong> (idola theatri): Nekritické přebírání starých filozofických systémů a dogmat, která nám hrají falešné divadlo o světě.",
+            c: "Chyba. Bacon sice kritizoval instituce, ale jeho idoly se týkají především způsobu, jakým lidský rozum chybně zpracovává informace."
         },
         tag: "bacon"
     },
@@ -1062,9 +1140,9 @@ window.data_stredovek_a_renesance = {
     },
     {
         q: "Bacon přirovnává pravého vědce ke včele. Jaký přístup k poznání tím symbolizuje?",
-        a: "Vědec má jen pasivně sbírat data jako mravenec, který si vše hromadí v mraveništi.",
+        a: "Vědec má jen pasivně sbírat data.",
         b: "Vědec má materiál ze smyslů sbírat, ale zároveň jej v rozumu zpracovávat a přetvářet v nové poznání.",
-        c: "Vědec má jako pavouk soukat sítě teorií čistě ze své vlastní hlavy bez ohledu na realitu.",
+        c: "Vědec má přicházet s teoriemi čistě ze své vlastní hlavy bez ohledu na realitu.",
         ans: "b",
         expl: {
             a: "Chyba. To jsou 'empirici-mravenci', kteří podle Bacona jen hromadí fakta bez ladu a skladu.",
@@ -1080,13 +1158,12 @@ window.data_stredovek_a_renesance = {
         c: "Ve středověku lidé neměli jména, ta se začala používat až s příchodem renesance.",
         ans: "a",
         expl: {
-            a: "Správně. Toto je klíčový posun tvých zápisků. Ve středověku byla důležitá pokora a anonymita (např. stavitelé katedrál často nebyli známi). V renesanci se rodí kult osobnosti – umělci a filozofové se podepisují, budují si jméno a věří, že skrze své dílo mohou dosáhnout pozemské nesmrtelnosti.",
+            a: "Správně.  Ve středověku byla důležitá pokora a anonymita (např. stavitelé katedrál často nebyli známi). V renesanci se rodí kult osobnosti – umělci a filozofové se podepisují, budují si jméno a věří, že skrze své dílo mohou dosáhnout pozemské nesmrtelnosti.",
             b: "Chyba. Renesanční lidé byli stále věřící, ale jejich víra byla aktivnější a orientovaná na pozemský svět.",
             c: "Chyba. Jména existovala vždy, ale v renesanci se stala symbolem prestiže a individuálního úspěchu."
         },
         tag: "shrnuti"
     }
-
 ]
         },
     }
