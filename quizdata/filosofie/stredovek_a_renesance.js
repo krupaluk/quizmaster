@@ -1094,7 +1094,7 @@ window.data_stredovek_a_renesance = {
         ans: "b",
         expl: {
             a: "Chyba. Toto je dedukce, kterou Bacon kritizoval jako neplodnou metodu scholastiky.",
-            b: "Správně. Bacon chtěl vědu 'postavit na nohy'. Nejdřív musíme sbírat fakta, provádět pokusy a teprve z mnoha konkrétních případů opatrně vyvodit obecný závěr. Je to základní metoda empirismu – zkušenost je na prvním místě.",
+            b: "Správně. Bacon chtěl vědu 'postavit na nohy'. Tvrdil, že Aristotelův sylogismus je dobrý v debatě, ale nic nového nepřináší. Nejdřív musíme sbírat fakta, provádět pokusy a teprve z mnoha konkrétních případů opatrně vyvodit obecný závěr. Je to základní metoda empirismu – zkušenost je na prvním místě.",
             c: "Chyba. Bacon byl zakladatelem moderní metodologie vědy a odmítal pověry."
         },
         tag: "bacon"
