@@ -302,11 +302,11 @@ window.data_stredovek_a_renesance = {
     {
         q: "Jak se standardně člení období scholastiky a co je pro jednotlivé fáze typické?",
         a: "Dělí se na ranou (hledání metod), vrcholnou (budování systémů) a pozdní (kritika a oddělování víry od rozumu).",
-        b: "Dělí se na italskou, francouzskou a anglickou školu podle toho, kde zrovna vládla největší svoboda slova.",
+        b: "Dělí se na italskou, francouzskou a anglickou školu podle toho, kde vládla největší svoboda slova.",
         c: "Dělí se na období před křížovými výpravami a po nich, kdy došlo k úplnému zákazu antické filozofie.",
         ans: "a",
         expl: {
-            a: "Správně. Scholastika se vyvíjela ve třech hlavních vlnách: 1. **Raná (9.–12. stol.)** byla ve znamení sporu o univerzálie a formování logických metod (Anselm, Abélard). 2. **Vrcholná (13. stol.)** představuje syntézu křesťanství s Aristotelem a vznik velkých Sum (Tomáš Akvinský). 3. **Pozdní (14.–15. stol.)** přinesla rozpad této jednoty, kritiku rozumu a postupné osamostatňování vědy (Occam).",
+            a: "Správně. Scholastika se vyvíjela ve třech hlavních vlnách: <br>1. <strong>Raná (9.–12. stol.)</strong>: ve znamení sporu o univerzálie a formování logických metod (Anselm, Abélard). <br>2. <strong>Vrcholná (13. stol.)</strong>: představuje syntézu křesťanství s Aristotelem a vznik velkých Sum (Tomáš Akvinský). <br>3. <strong>Pozdní (14.–15. stol.)</strong>: přinesla rozpad této jednoty, kritiku rozumu a postupné osamostatňování vědy (Occam).",
             b: "Chyba. Ačkoliv byla univerzitní centra jako Paříž nebo Oxford důležitá, scholastika se dělí primárně podle myšlenkového vývoje, nikoliv podle národních škol.",
             c: "Chyba. Křížové výpravy sice pomohly znovuobjevit Aristotela, ale v žádném období scholastiky nedošlo k trvalému zákazu antické filozofie – naopak byla jejím základem."
         },
