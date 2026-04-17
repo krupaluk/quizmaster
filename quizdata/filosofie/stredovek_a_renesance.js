@@ -757,8 +757,8 @@ window.data_stredovek_a_renesance = {
     },
     {
         q: "Co v logice a vědě vyjadřuje princip známý jako 'Occamova břitva'?",
-        a: "Pravidlo, že církev má právo odříznout kacíře od společnosti.",
-        b: "Princip úspornosti: nemá se předpokládat existence více věcí, než je nezbytně nutné k vysvětlení jevu.",
+        a: "Princip úspornosti: nemá se předpokládat existence více věcí, než je nezbytně nutné k vysvětlení jevu.",
+        b: "Pravidlo, že církev má právo odříznout kacíře od společnosti.",        
         c: "Nástroj, kterým mniši v klášterech opravovali chyby v opisech Bible.",
         ans: "a",
         expl: {
@@ -771,8 +771,8 @@ window.data_stredovek_a_renesance = {
     {
         q: "Jakým způsobem William Occam definitivně rozbil scholastickou harmonii víry a rozumu?",
         a: "Prohlásil, že víra a rozum jsou totéž a vědec musí být zároveň knězem.",
-        b: "Tvrdil, že náboženské pravdy nelze rozumem dokázat, a proto mají být víra a filozofie od sebe zcela odděleny.",
-        c: "Nařídil, že filozofie se musí věnovat pouze studiu Bible a ignorovat přírodu.",
+        b: "Nařídil, že filozofie se musí věnovat pouze studiu Bible a ignorovat přírodu.",
+        c: "Tvrdil, že náboženské pravdy nelze rozumem dokázat, a proto mají být víra a filozofie od sebe zcela odděleny.",        
         ans: "c",
         expl: {
             a: "Chyba. Occam naopak zdůrazňoval jejich propastný rozdíl a různé sféry vlivu.",            
@@ -856,8 +856,8 @@ window.data_stredovek_a_renesance = {
     {
         q: "Které tři zásadní přínosy definují filozofické působení Marsilia Ficina (1433 - 1499) v období renesance?",
         a: "Vynález knihtisku pro šíření Bible, založení prvního vědeckého institutu a prosazování ateismu jako základu státu.",
-        b: "Úplný překlad Platónova díla do latiny, definice platonické lásky jako cesty k Bohu a zdůraznění výjimečné důstojnosti člověka.",
-        c: "Sepsání pravidel pro renesanční malířství, obhajoba geocentrismu a kritika antické vzdělanosti jako pohanské.",
+        b: "Sepsání pravidel pro renesanční malířství, obhajoba geocentrismu a kritika antické vzdělanosti jako pohanské.",
+        c: "Úplný překlad Platónova díla do latiny, definice platonické lásky jako cesty k Bohu a zdůraznění výjimečné důstojnosti člověka.",        
         ans: "c",
         expl: {
             a: "Chyba. Knihtisk vynalezl Gutenberg a Ficino byl hluboce věřící křesťan, nikoliv ateista.",
@@ -985,8 +985,8 @@ window.data_stredovek_a_renesance = {
     },
     {
         q: "Jakým způsobem Mikuláš Kusánský teoreticky připravil cestu pro pád geocentrismu?",
-        a: "Sestrojil první dalekohled a dokázal, že se Země točí kolem Slunce.",
-        b: "Prohlásil, že v nekonečném vesmíru nemůže existovat žádný absolutní střed ani obvod, takže ani Země nemůže být středem všeho.",
+        a: "Prohlásil, že v nekonečném vesmíru nemůže existovat žádný absolutní střed ani obvod, takže ani Země nemůže být středem všeho.",
+        b: "Sestrojil první dalekohled a dokázal, že se Země točí kolem Slunce.",
         c: "Vymyslel matematický vzorec, který dokazoval, že Slunce je větší než Země.",
         ans: "a",
         expl: {
