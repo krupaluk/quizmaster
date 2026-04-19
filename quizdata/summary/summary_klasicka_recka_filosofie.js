@@ -59,8 +59,8 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">jeden z mudrců</span>
           <span class="tag">řecký právník a soudce</span>
-          <span class="tag tag-highlight">moudrost jako největší síla</span>
-          <span class="tag">„Všechno své si nosím s sebou"</span>
+          <span class="tag tag-highlight">„Všechno své si nosím s sebou"</span>
+          <span class="tag">moudrost jako nejvyšší ctnost, skutečná síla</span>
         </div>
       </div>
       <div class="philosopher-card">
@@ -81,9 +81,9 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">jeden z mudrců</span>
-          <span class="tag">tyranida zvolená občany</span>
+          <span class="tag">zákonodárce (Lesbos) zvolený občany</span>
           <span class="tag tag-highlight">„Je těžké být dobrým člověkem"</span>
-          <span class="tag">zákonodárce</span>
+          <span class="tag">úctu ke všem (i nepřátelům)</span>
         </div>
       </div>
       <div class="philosopher-card">
@@ -93,7 +93,7 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">jeden z mudrců</span>
-          <span class="tag">spartský efor</span>
+          <span class="tag">spartský efor (vysoký úředník)</span>
           <span class="tag tag-highlight">„Poznej sám sebe"</span>
           <span class="tag">sebeovládání</span>
         </div>
@@ -120,7 +120,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">jeden z mudrců</span>
           <span class="tag">athénský zákonodárce</span>
           <span class="tag tag-highlight">„Nikoho nenazývej šťastným před jeho smrtí"</span>
-          <span class="tag">seisachtheia (zrušení dluhů)</span>
+          <span class="tag">seisachtheia (zrušení dluhového otroctví)</span>
           <span class="tag">čtyři třídy podle majetku</span>
         </div>
       </div>
@@ -138,7 +138,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">jeden z mudrců</span>
           <span class="tag">milétská škola</span>
           <span class="tag">zakladatel evropské vědy</span>
-          <span class="tag tag-highlight">voda jako arché</span>
+          <span class="tag tag-highlight">arché: voda</span>
           <span class="tag">předpověď zatmění Slunce</span>
           <span class="tag">měření výšky pyramid</span>
           <span class="tag">olivové lisy</span>
@@ -151,11 +151,9 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">milétská škola</span>
-          <span class="tag">první evolucionista</span>
-          <span class="tag tag-highlight">apeiron (bezmezno)</span>
-          <span class="tag">gnomon</span>
-          <span class="tag">Země ve středu bez podpory</span>
-          <span class="tag">původ života z moře</span>
+          <span class="tag tag-highlight">arché: apeiron (bezmezno)</span>
+          <span class="tag">Země jako válec v prostoru</span>
+          <span class="tag">původ života z moře (evolucionista)</span>
         </div>
       </div>
       <div class="philosopher-card">
@@ -166,7 +164,7 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">milétská škola</span>
           <span class="tag">řecký filosof</span>
-          <span class="tag tag-highlight">vzduch (pneuma) jako arché</span>
+          <span class="tag tag-highlight">arché: vzduch (pneuma)</span>
           <span class="tag">zhušťování a zřeďování</span>
           <span class="tag">dech jako princip</span>
         </div>
@@ -183,9 +181,9 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">zakladatel pythagorejské školy</span>
-          <span class="tag">řecký filosof</span>
-          <span class="tag tag-highlight">čísla jako podstata všeho</span>
-          <span class="tag">„kosmos" jako řádný svět</span>
+          <span class="tag">řecký filosof, vegetarián</span>
+          <span class="tag tag-highlight">podstata všeho: čísla</span>
+          <span class="tag">„kosmos": uspořádaný & harmonický svět</span>
           <span class="tag">harmonie strun (monochord)</span>
           <span class="tag">zavedení slova „filosofos"</span>
         </div>
@@ -201,11 +199,11 @@ window.sum.klasicka_recka_filosofie = {
           <span class="philosopher-years">570–475 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
-          <span class="tag">řecký filosof a básník</span>
+          <span class="tag">řecký filosof, satirik, kritik/span>
           <span class="tag">předchůdce eleatů</span>
           <span class="tag tag-highlight">kritika antropomorfního náboženství</span>
           <span class="tag">„Kdyby koně měli bohy, byli by podobni koním"</span>
-          <span class="tag">limity lidského poznání</span>
+          <span class="tag">kritika bohů za neřestné chování</span>
         </div>
       </div>
       <div class="philosopher-card">

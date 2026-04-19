@@ -14,9 +14,8 @@ window.data_debug_3q = {
                         b: "Správně! Modrá a žlutá dávají zelenou. Toto je základní barevná teorie.",
                         c: "Chyba. Oranžová vzniká smícháním červené a žluté."
                     },
-                    tag: "debug"
-                },
-                {
+            },
+                    {
                     q: "Kolik je 8 + 5?",
                     a: "12",
                     b: "13",
@@ -27,9 +26,8 @@ window.data_debug_3q = {
                         b: "Správně! 8 + 5 = 13.",
                         c: "Chyba. 8 + 5 = 13, nikoliv 14."
                     },
-                    tag: "debug"
-                },
-                {
+            },
+                    {
                     q: "Který den přichází po úterý?",
                     a: "Pondělí",
                     b: "Čtvrtek",
@@ -40,7 +38,6 @@ window.data_debug_3q = {
                         b: "Chyba. Čtvrtek přichází po středě.",
                         c: "Správně! Po úterý následuje středa."
                     },
-                    tag: "debug"
                 }
             ]
         }

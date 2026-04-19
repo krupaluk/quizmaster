@@ -5,7 +5,6 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Jaký je hlavní rozdíl v přístupu výrokové a predikátové logiky k analýze vět?",
-                wiki: ["logika_teorie", "predikat_vs_vyrokova"],
                 a: "Výroková logika zkoumá vnitřní vlastnosti objektů (predikáty), zatímco predikátová řeší pouze pravdivost celých souvětí.",
                 b: "Výroková logika pracuje s celými tvrzeními jako s nedělitelnými bloky, zatímco predikátová logika analyzuje vnitřní strukturu věty (vlastnosti a kvantifikátory).",
                 c: "Mezi těmito logikami není věcný rozdíl, liší se pouze v používaných symbolech pro zápis stejných myšlenek.",
@@ -16,9 +15,9 @@ window.data_teorie_logiky = {
                     c: "Rozdíl je zásadní v hloubce analýzy. Výroková logika nedokáže vyjádřit vnitřní strukturu věty, kterou predikátová logika nezbytně potřebuje pro práci s pojmy."
                 }
             },
+            },
             {
                 q: "Jaká je základní hierarchie forem logického myšlení podle jejich složitosti?",
-                wiki: ["logika_teorie", "stavba_mysleni"],
                 a: "Úsudek → Soud → Pojem",
                 b: "Soud → Pojem → Úsudek",
                 c: "Pojem → Soud → Úsudek",
@@ -28,6 +27,7 @@ window.data_teorie_logiky = {
                     b: "Soud nelze vytvořit bez pojmů, které do něj vstupují jako jeho základní stavební kameny.",
                     c: "Logika postupuje od nejjednoduššího ke složitějšímu. Pojem je základní prvek zachycující význam věci, spojením pojmů vzniká soud (tvrzení) a z logické vazby mezi soudy pak vyvozujeme úsudek. Tato hierarchie odráží, jak v mysli budujeme logické argumenty."
                 }
+            },
             },
             {
                 q: "Jaký je hlavní rozdíl mezi 'slovem' a 'pojmem'?",
@@ -41,6 +41,7 @@ window.data_teorie_logiky = {
                     c: "Ani slovo, ani pojem samy o sobě nemají pravdivostní hodnotu; tu získávají až v rámci soudu (věty)."
                 }
             },
+            },
             {
                 q: "Co v logice označujeme termínem 'denotace'?",
                 a: "Vnitřní citové zabarvení, které v nás slovo vyvolává.",
@@ -52,6 +53,7 @@ window.data_teorie_logiky = {
                     b: "Denotace je proces, kdy jazykový výraz odkazuje na třídu předmětů nebo na konkrétního jedince. Samotné objekty, na které slovo ukazuje, se pak nazývají denotáty. Například slovem 'planeta' denotujeme (označujeme) tělesa jako Mars, Jupiter nebo Země.",
                     c: "Pravopisná pravidla logiku nezajímají, ta se soustředí na sémantickou vazbu mezi výrazem a objektem."
                 }
+            },
             },
             {
                 q: "Který z následujících příkladů představuje 'obecný pojem'?",
@@ -65,6 +67,7 @@ window.data_teorie_logiky = {
                     c: "Obecný pojem označuje celou množinu (třídu) objektů, které sdílejí společné podstatné vlastnosti. Pod pojem 'strom' spadají miliony konkrétních rostlin, které splňují definici. Obecné pojmy jsou základem pro tvorbu obecných zákonů a vědeckých tvrzení."
                 }
             },
+            },
             {
                 q: "Co charakterizuje 'jedinečný pojem'?",
                 a: "Má právě jeden denotát, tedy označuje jeden konkrétní, unikátní předmět.",
@@ -76,6 +79,7 @@ window.data_teorie_logiky = {
                     b: "Počet použití slova v textu nemá na jeho logickou povahu žádný vliv.",
                     c: "Původ pojmu je historická zajímavost, nikoliv logická charakteristika jeho rozsahu."
                 }
+            },
             },
             {
                 q: "Pojem 'vodník' nebo 'největší přirozené číslo' označujeme jako:",
@@ -89,6 +93,7 @@ window.data_teorie_logiky = {
                     c: "Prázdný pojem má srozumitelný smysl (víme, co si pod ním představit), ale v reálném světě mu neodpovídá žádný objekt. Množina jeho denotátů je tedy prázdná. V logice s nimi musíme zacházet opatrně, abychom o neexistujících věcech netvrdili vlastnosti, které implikují jejich existenci."
                 }
             },
+            },
             {
                 q: "Jaký je vztah mezi 'obsahem' (vlastnosti) a 'rozsahem' (počet objektů) pojmu?",
                 a: "Čím více vlastností do obsahu pojmu přidáme, tím více objektů pod něj bude spadat.",
@@ -100,6 +105,7 @@ window.data_teorie_logiky = {
                     b: "Tento vztah nepřímé úměry je klíčový. Například pojem 'pes' má široký rozsah. Pokud přidáme vlastnost 'lovecký', rozsah se zúží. Přidáme-li 'zlatý retrívr', rozsah se zmenší ještě více. Čím přesněji věc definujeme (bohatší obsah), tím méně existuje věcí, které definici beze zbytku naplňují.",
                     c: "Vztah mezi obsahem a rozsahem je jedním ze základních a stabilních zákonů formální logiky."
                 }
+            },
             },
             {
                 q: "Co v logice znamená, že pojem je 'vágni'?",
@@ -113,6 +119,7 @@ window.data_teorie_logiky = {
                     c: "Vágnost se týká logické srozumitelnosti a ostrosti hranic pojmu, nikoliv skupenství hmoty."
                 }
             },
+            },
             {
                 q: "Jaký je rozdíl mezi 'vlastním jménem' a 'určitým popisem' (deskripcí)?",
                 a: "Vlastní jméno je vymyšlené, zatímco určitý popis musí být vždy historicky pravdivý.",
@@ -124,6 +131,7 @@ window.data_teorie_logiky = {
                     b: "Vlastní jméno je jednoduchý 'štítek' pro jedince. Určitý popis (např. 'vítěz bitvy u Slavkova') identifikuje jedince skrze jeho unikátní atributy. V logice je tento rozdíl důležitý pro analýzu vět o existenci, protože popis může selhat (být prázdný), zatímco jméno nikoliv.",
                     c: "Oba jsou to jedinečné pojmy (označují jednoho jedince), ale jejich logická cesta k objektu je odlišná."
                 }
+            },
             },
             {
                 q: "Co v logice vyjadřuje 'intenze' pojmu?",
@@ -144,7 +152,6 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Z jakých dvou základních částí se skládá každá formálně správná definice?",
-                wiki: ["logika_teorie", "definice_jako_most"],
                 a: "Z premisy (předpokladu) a konkluze (závěru), které tvoří logický důkaz.",
                 b: "Z definienda (výraz, který definujeme) a definiense (výraz, kterým definujeme).",
                 c: "Ze subjektu (podmětu) a predikátu (přísudku), které tvoří gramatickou větu.",
@@ -154,6 +161,7 @@ window.data_teorie_logiky = {
                     b: "Definiendum je slovo nebo symbol, jehož význam chceme vysvětlit. Definiens je pak text nebo popis, který tento význam jednoznačně určuje. Mezi oběma částmi obvykle stojí spojka 'je' nebo symbol rovnosti, čímž vyjadřujeme, že oba výrazy mají v daném kontextu totožný význam a lze je logicky zaměnit.",
                     c: "Subjekt a predikát tvoří vnitřní strukturu soudu (věty), což je jiná logická úroveň než technika definování pojmů."
                 }
+            },
             },
             {
                 q: "Co v teorii definice znamená pravidlo 'souměrnosti'?",
@@ -167,6 +175,7 @@ window.data_teorie_logiky = {
                     c: "Typografie nebo grafická úprava textu (např. zarovnání na střed) nemají na logickou správnost a platnost definice vůbec žádný vliv."
                 }
             },
+            },
             {
                 q: "Jaký je hlavní cíl 'analytické' (lexikální) definice?",
                 a: "Vymyslet úplně nové slovo pro věc, která už svůj název v jazyce dávno má.",
@@ -178,6 +187,7 @@ window.data_teorie_logiky = {
                     b: "Analytická definice (zjišťující) je typická pro výkladové slovníky. Nesnaží se význam aktivně tvořit, ale pouze ho věrně zaznamenat na základě dosavadní jazykové praxe v dané kultuře. Je buď pravdivá, nebo nepravdivá podle toho, zda skutečně odpovídá realitě, jak lidé danému slovu v dané době rozumí.",
                     c: "Svévolná změna významu bez upozornění je manipulační technikou, která je v přímém rozporu s principem analytické definice."
                 }
+            },
             },
             {
                 q: "Kdy v logické praxi využijeme 'syntetickou' (stipulativní) definici?",
@@ -191,6 +201,7 @@ window.data_teorie_logiky = {
                     c: "Umělecký jazyk pracuje s metaforou a záměrnou neurčitostí, zatímco syntetická definice směřuje k absolutní přesnosti a eliminaci jakýchkoliv výkladových variant."
                 }
             },
+            },
             {
                 q: "V čem spočívá proces 'explikace' pojmu?",
                 a: "In nahrazení odborného termínu jeho cizojazyčným ekvivalentem pro mezinárodní prestiž.",
@@ -202,6 +213,7 @@ window.data_teorie_logiky = {
                     b: "Běžný jazyk je často plný nepřesností (např. slova jako 'teplo' nebo 'spravedlnost' používáme v mnoha významech). Explikace vezme toto 'předvědecké' slovo a dá mu striktní hranice a pravidla pro potřeby konkrétní teorie. Je to nezbytný krok při budování každé vědy, která vyžaduje absolutní jednoznačnost.",
                     c: "Cílem explikace je naopak maximální vyjasnění a zpřístupnění významu pro přesné logické operace, nikoliv jeho záměrné skrývání."
                 }
+            },
             },
             {
                 q: "V čem spočívá logická chyba zvaná 'definice kruhem' (circulus vitiosus)?",
@@ -215,6 +227,7 @@ window.data_teorie_logiky = {
                     c: "Termín 'kruh' je v tomto kontextu pouze logickou metaforou pro uzavřený myšlenkový postup, nikoliv odkazem na reálné geometrické tvary."
                 }
             },
+            },
             {
                 q: "Definice 'Člověk je savec, který se pohybuje po dvou končetinách' je logicky chybná, protože:",
                 a: "Je příliš úzká – vylučuje lidi, kteří o končetiny nešťastnou náhodou přišli.",
@@ -226,6 +239,7 @@ window.data_teorie_logiky = {
                     b: "Slovo 'savec' není se slovem 'člověk' v logickém kruhu; jde o nadřazený rod (genus), což je v klasické definici zcela v pořádku a žádoucí.",
                     c: "Tato definice porušuje pravidlo souměrnosti, protože definiens (dvounohý savec) pokrývá i jiné objekty než jen lidi, například klokany. Správná definice musí obsahovat tzv. specifickou diferenci, tedy vlastnost, kterou má pouze a jenom definovaný objekt a nikdo jiný. Bez tohoto zpřesnění definice 'přetéká' i na jiné druhy."
                 }
+            },
             },
             {
                 q: "Co v logice zakazuje pravidlo o definování 'obscurum per obscurius'?",
@@ -239,6 +253,7 @@ window.data_teorie_logiky = {
                     c: "Toto je doslovný, ale zcela chybný výklad latinského rčení, které se metaforicky týká srozumitelnosti textu, nikoliv fyzických podmínek při psaní."
                 }
             },
+            },
             {
                 q: "Která z těchto chyb v definici se nazývá 'příliš úzká definice'?",
                 a: "Definiens (vysvětlení) pokrývá méně objektů, než kolik jich reálně spadá pod definiendum (pojem).",
@@ -251,6 +266,7 @@ window.data_teorie_logiky = {
                     c: "Velikost písma je technický parametr zobrazení, nikoliv logická vada definice."
                 }
             },
+            },
             {
                 q: "Co v teorii definice znamená, že definice má být 'vystihující'?",
                 a: "Že musí uvádět podstatné vlastnosti předmětu, nikoliv vlastnosti náhodné či druhotné.",
@@ -262,6 +278,7 @@ window.data_teorie_logiky = {
                     b: "Humor může pomoci pedagogicky, ale logicky je v definici irelevantní a často spíše matoucí.",
                     c: "Rychlost zápisu často vede k povrchním definicím, které podstatu věci zcela míjejí. Definice vyžaduje hloubkovou analýzu."
                 }
+            },
             },
             {
                 q: "Může být jedna definice zároveň příliš široká i příliš úzká?",
@@ -282,7 +299,6 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Co je v logice základní definicí 'soudu' (propozice)?",
-                wiki: ["logika_teorie", "logicky_ctverec"],
                 a: "Jakákoliv věta v přirozeném jazyce, která vyjadřuje emoce nebo přání mluvčího.",
                 b: "Myšlenka vyjádřená oznamovací větou, u které má smysl se ptát, zda je pravdivá, či nepravdivá.",
                 c: "Právní rozhodnutí vynesené soudcem v soudní síni na základě platných zákonů.",
@@ -292,6 +308,7 @@ window.data_teorie_logiky = {
                     b: "Soud je vyšší forma myšlení než pojem. Vzniká spojením pojmů a něco o realitě vypovídá – buď jí odpovídá (je pravdivý), nebo ne (je nepravdivý). Pro logiku je klíčové, že soud musí mít tzv. pravdivostní hodnotu (označovanou obvykle 1 pro pravdu a 0 pro nepravdu).",
                     c: "Slovo 'soud' má v běžné řeči více významů; v logice však neoznačuje instituci, ale konkrétní formu myšlení a tvrzení."
                 }
+            },
             },
             {
                 q: "Co v klasické logice tvoří vnitřní strukturu jednoduchého soudu (S-P)?",
@@ -305,6 +322,7 @@ window.data_teorie_logiky = {
                     c: "Dvojitá negace je sice zákon, ale netvoří základní vnitřní strukturu jednoduchého kladného soudu."
                 }
             },
+            },
             {
                 q: "Jaký je hlavní rozdíl mezi jednoduchým a složeným soudem?",
                 a: "Složený soud vzniká spojením jednoduchých soudů pomocí logických spojek (funktorů).",
@@ -316,6 +334,7 @@ window.data_teorie_logiky = {
                     b: "Délka věty nebo počet slov nejsou pro rozlišení jednoduchého a složeného soudu podstatné; rozhodující je přítomnost logické spojky.",
                     c: "Pravdivost jakéhokoliv soudu závisí na jeho obsahu nebo struktuře, nikoliv na tom, zda je jednoduchý, nebo složený."
                 }
+            },
             },
             {
                 q: "Který z těchto soudů je v logickém čtverci označen jako 'částečný záporný' (typ O)?",
@@ -329,6 +348,7 @@ window.data_teorie_logiky = {
                     c: "Toto je soud obecný záporný (typ E), který vlastnost vylučuje u úplně všech členů."
                 }
             },
+            },
             {
                 q: "Co v logice vyjadřuje unární operace 'negace'?",
                 a: "Obrácení pravdivostní hodnoty původního soudu (z pravdy na nepravdu a naopak).",
@@ -340,6 +360,7 @@ window.data_teorie_logiky = {
                     b: "To by byla operace identity; negace má za úkol původní tvrzení logicky popřít.",
                     c: "Logika výroky ze systému nemaže; negace pouze mění jejich pravdivostní ohodnocení v rámci výpočtu."
                 }
+            },
             },
             {
                 q: "Složený soud spojený konjunkcí (logické 'a') je pravdivý pouze v případě, že:",
@@ -353,6 +374,7 @@ window.data_teorie_logiky = {
                     c: "V tomto případě (pravda a nepravda) by výsledná hodnota konjunkce byla nepravda (0)."
                 }
             },
+            },
             {
                 q: "Výrok v 'disjunkci' (logické 'nebo') je pravdivý v případě, že:",
                 a: "Musí být bezpodmínečně pravdivé oba dílčí soudy najednou.",
@@ -364,6 +386,7 @@ window.data_teorie_logiky = {
                     b: "Logická disjunkce (∨) odpovídá spojce 'nebo' v nevylučovacím smyslu. To znamená, že výrok 'Prší nebo sněží' je pravdivý, pokud prší, pokud sněží, a i tehdy, pokud se děje obojí naráz. Jediný případ, kdy je disjunkce nepravdivá, nastává tehdy, když neplatí ani jedna její část (0 ∨ 0 = 0).",
                     c: "Tento případ by disjunkci učinil pravdivou, ale není to její jediná ani základní podmínka."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje logická spojka 'vylučovací disjunkce' (ostré nebo)?",
@@ -377,6 +400,7 @@ window.data_teorie_logiky = {
                     c: "Logika rozlišuje oba typy 'nebo', protože v přirozeném jazyce mají tyto spojky odlišné dopady na pravdivostní tabulku."
                 }
             },
+            },
             {
                 q: "Kdy je složený soud v 'implikaci' (jestliže A, pak B) považován za nepravdivý?",
                 a: "Pouze tehdy, když je první část (A) pravdivá a druhá část (B) je nepravdivá.",
@@ -388,6 +412,7 @@ window.data_teorie_logiky = {
                     b: "To není pravda; pokud je první část nepravdivá (podmínka nenastala), implikace je pravdivá bez ohledu na výsledek.",
                     c: "Naopak – v logice platí, že z nepravdy může vyplynout cokoliv, takže pokud jsou obě části nepravdivé, implikace je pravdivá."
                 }
+            },
             },
             {
                 q: "Kdy je pravdivý složený soud v 'ekvivalenci' (právě tehdy, když)?",
@@ -401,6 +426,7 @@ window.data_teorie_logiky = {
                     c: "Toto pravidlo definuje disjunkci (nebo), nikoliv ekvivalenci, která vyžaduje shodu obou stran."
                 }
             },
+            },
             {
                 q: "Co v klasické logice vyjadřuje 'Zákon sporu'?",
                 a: "Žádný výrok nemůže být zároveň pravdivý i nepravdivý ve stejném čase a stejném vztahu.",
@@ -412,6 +438,7 @@ window.data_teorie_logiky = {
                     b: "To je omyl; naopak se snažíme o to, aby premisy byly bezrozporné a vzájemně se doplňovaly.",
                     c: "Logický zákon sporu se týká pravdivostních hodnot výroků, nikoliv mezilidských vztahů v diskuzi."
                 }
+            },
             },
             {
                 q: "Jaký je hlavní význam 'Zákona vyloučeného třetího'?",
@@ -425,6 +452,7 @@ window.data_teorie_logiky = {
                     c: "Název 'vyloučený třetí' se netýká osob, ale pravdivostních hodnot (třetí pravdivostní hodnota je vyloučena)."
                 }
             },
+            },
             {
                 q: "Proč je v logice důležitý rozdíl mezi 'kontradikcí' a 'kontrárností'?",
                 a: "Kontrární výroky nemohou být oba pravdivé, ale mohou být oba zároveň nepravdivé.",
@@ -436,6 +464,7 @@ window.data_teorie_logiky = {
                     b: "To je omyl; kontradikce znamená, že jeden z dvojice musí být pravda a druhý lež.",
                     c: "Logika je o přesnosti; způsob, jakým se výroky vylučují, má zásadní vliv na platnost argumentů."
                 }
+            },
             },
             {
                 q: "Co v logice označujeme termínem 'tautologie'?",
@@ -456,7 +485,6 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "Z jakých dvou hlavních částí se skládá každý logický 'úsudek'?",
-                wiki: ["logika_teorie", "dedukce_vs_indukce"],
                 a: "Z definienda (vysvětlované) a definiense (vysvětlující), které tvoří celek.",
                 b: "Z předpokladů (premis) a z nich vyvozeného závěru (konkluze).",
                 c: "Z otázky mluvčího a následné odpovědi posluchače v rámci diskuze.",
@@ -466,6 +494,7 @@ window.data_teorie_logiky = {
                     b: "Úsudek je myšlenkový proces, kde z pravdivosti určitých tvrzení (premis) odvozujeme pravdivost tvrzení nového (závěru). Pokud přijmeme premisy za pravdivé, logický úsudek nám dává návod, jak dojít k platnému výsledku. Mezi těmito dvěma částmi musí existovat vztah vyplývání, jinak se jedná pouze o náhodný shluk vět.",
                     c: "Dialog mezi dvěma lidmi je formou komunikace, ale logický úsudek je vnitřní struktura důkazu, která může existovat i bez přítomnosti druhé osoby."
                 }
+            },
             },
             {
                 q: "Jaký je v logice rozdíl mezi 'formální správností' (validitou) a 'pravdivostí' úsudku?",
@@ -479,6 +508,7 @@ window.data_teorie_logiky = {
                     c: "To je omyl; i logicky bezchybný úsudek může vést k nepravdivému závěru, pokud vyjdeme z nepravdivých předpokladů."
                 }
             },
+            },
             {
                 q: "Co je hlavní charakteristikou 'deduktivního' argumentu?",
                 a: "Závěr je v něm vždy pouze pravděpodobný a může se s novými objevy změnit.",
@@ -490,6 +520,7 @@ window.data_teorie_logiky = {
                     b: "U dedukce je pravdivost závěru 'vynucena' strukturou argumentu. Závěr totiž nepřináší žádnou novou informaci, která by už nebyla skryta v předpokladech (premisách). Pokud přijmeme, že všichni lidé jsou smrtelní a Sókratés je člověk, závěr o jeho smrtelnosti je logicky nezvratný a stoprocentně jistý.",
                     c: "To je princip induktivního postupu, dedukce naopak postupuje od obecných pravidel k jednotlivým případům."
                 }
+            },
             },
             {
                 q: "Jak se liší 'induktivní' úsudek od deduktivního?",
@@ -503,6 +534,7 @@ window.data_teorie_logiky = {
                     c: "Rozdíl je zásadní – týká se míry jistoty závěru a směru, kterým myšlení postupuje (od obecného k jednotlivému vs. od jednotlivého k obecnému)."
                 }
             },
+            },
             {
                 q: "Kdy můžeme mluvit o tzv. 'úplné indukci'?",
                 a: "Když se nám podaří prověřit úplně všechny členy dané množiny objektů.",
@@ -514,6 +546,7 @@ window.data_teorie_logiky = {
                     b: "Subjektivní pocit přesvědčivosti nemá s logickým rozdělením indukce na úplnou a neúplnou nic společného.",
                     c: "Doba pozorování není rozhodující; podstatné je, zda byl prověřen vyčerpávající počet všech existujících prvků dané třídy."
                 }
+            },
             },
             {
                 q: "Schéma 'Jestliže A, pak B. Platí A. Tedy platí B.' se nazývá:",
@@ -527,6 +560,7 @@ window.data_teorie_logiky = {
                     c: "Analogie nepracuje s pevnou strukturou implikace, ale s podobností mezi dvěma různými jevy."
                 }
             },
+            },
             {
                 q: "Jak vypadá logicky správné schéma 'Modus Tollens'?",
                 a: "Jestliže A, pak B. Platí B. Tedy platí A.",
@@ -538,6 +572,7 @@ window.data_teorie_logiky = {
                     b: "Modus Tollens je velmi silný nástroj vyvracení teorií. Říká nám, že pokud z teorie (A) vyplývá určitý jev (B) a tento jev nenastal, musí být chybná i samotná výchozí teorie. Je to bezpečný způsob, jak logicky dospět k negaci původního předpokladu.",
                     c: "Toto je logická chyba (popření podmínky); následek B mohl nastat z úplně jiných příčin než z A."
                 }
+            },
             },
             {
                 q: "Co v klasické logice tvoří strukturu 'sylogismu'?",
@@ -551,6 +586,7 @@ window.data_teorie_logiky = {
                     c: "Samostatný soud bez vazby na jiné tvrzení nemůže tvořit úsudek, protože v něm chybí proces vyvozování."
                 }
             },
+            },
             {
                 q: "Jakou roli hraje v sylogismu tzv. 'střední člen' (M)?",
                 a: "Je to pojem, který se vyskytuje v obou premisách a umožňuje jejich logické propojení, ale v závěru mizí.",
@@ -562,6 +598,7 @@ window.data_teorie_logiky = {
                     b: "Logická struktura není o pořadí vět na papíře, ale o vztazích mezi pojmy uvnitř těchto vět.",
                     c: "Subjektivní role mluvčího je v rámci formální logiky zcela irelevantní."
                 }
+            },
             },
             {
                 q: "Na čem je založen 'argument z analogie'?",
@@ -575,6 +612,7 @@ window.data_teorie_logiky = {
                     c: "Analogie je kvalitativní srovnání vlastností, nikoliv kvantitativní statistický výpočet."
                 }
             },
+            },
             {
                 q: "Co je to 'entyméma' v rámci argumentace?",
                 a: "Úsudek, ve kterém je jedna z premis (nebo i závěr) zamlčena, protože je považována za samozřejmou.",
@@ -586,6 +624,7 @@ window.data_teorie_logiky = {
                     b: "Složitost slov se nazývá žargon, entyméma je stručnost v logické struktuře.",
                     c: "Grafické znázornění se nazývá Vennovy diagramy, nikoliv entyméma."
                 }
+            },
             },
             {
                 q: "Kdy dochází k logické chybě 'přílišného zjednodušení' (redukcionismus)?",
@@ -606,7 +645,6 @@ window.data_teorie_logiky = {
             "questions": [
             {
                 q: "V čem spočívá argumentační klam 'Slaměný panák' (straw man)?",
-                wiki: ["logika_teorie", "manipulace_v_diskuzi"],
                 a: "Mluvčí napadne osobní charakter soupeře, aby ho v očích veřejnosti zcela zdiskreditoval.",
                 b: "Mluvčí zkreslí soupeřův argument do slabší nebo extrémní podoby a pak útočí na tuto verzi.",
                 c: "Mluvčí v diskusi mlčí a nechává za sebe mluvit pouze připravené písemné podklady.",
@@ -616,6 +654,7 @@ window.data_teorie_logiky = {
                     b: "Při tomto klamu mluvčí 'vytvoří panáka' – tedy karikaturu soupeřova názoru, kterou je snadné rozmetat. Pokud například někdo navrhne mírnější tresty, zastánce klamu odpoví: 'Takže vy chcete pustit všechny vrahy na svobodu?'. Bojuje tak proti něčemu, co soupeř nikdy neřekl, čímž vytváří iluzi vítězství v diskusi.",
                     c: "Mlčení v diskusi není logickým klamem, ale spíše komunikační strategií nebo pasivitou."
                 }
+            },
             },
             {
                 q: "Proč je klam 'Ad hominem' (útok na osobu) logicky neplatný?",
@@ -629,6 +668,7 @@ window.data_teorie_logiky = {
                     c: "Logické zákony platí univerzálně v každém kontextu, tedy i v politice, i když se tam často porušují."
                 }
             },
+            },
             {
                 q: "Jak poznáme argumentační klam 'Falešné dilema'?",
                 a: "Mluvčí tvrdí, že jeho argument je pravdivý jen proto, že ho zatím nikdo nedokázal vyvrátit.",
@@ -640,6 +680,7 @@ window.data_teorie_logiky = {
                     b: "Tento klam nutí posluchače k výběru mezi dvěma extrémy (např. 'Buď jsi s námi, nebo jsi nepřítel'). Úmyslně se přitom ignoruje 'šedá zóna' nebo třetí varianta, která by mohla být nejlepším řešením. Cílem je vmanipulovat soupeře do pozice, kde jsou obě nabízené volby pro něj nevýhodné nebo radikální.",
                     c: "Protichůdné pojmy mohou vést ke sporu (kontradikci), ale samy o sobě netvoří klam falešného dilematu."
                 }
+            },
             },
             {
                 q: "Co je podstatou 'Argumentu z nevědomosti' (ad ignorantiam)?",
@@ -653,6 +694,7 @@ window.data_teorie_logiky = {
                     c: "Použití starých dat je faktická chyba, nikoliv formální logický klam založený na absenci důkazu."
                 }
             },
+            },
             {
                 q: "Co zkoumáme v kritickém myšlení pomocí otázky 'Cui bono?' (v čí prospěch)?",
                 a: "Hledáme, kdo je autorem daného citátu, abychom ho mohli správně uvést v bibliografii.",
@@ -664,6 +706,7 @@ window.data_teorie_logiky = {
                     b: "Tato otázka je základním nástrojem odolnosti vůči manipulaci. Pokud zjistíme, že mluvčí nebo zdroj má z přijetí určitého názoru zisk (finanční, politický, mocenský), musíme k informaci přistupovat se zvýšenou opatrností. Pomáhá nám to rozlišit objektivní pravdu od účelového tvrzení.",
                     c: "Latina je v logice jen historickým nástrojem; na samotnou pravdivost nebo prospěšnost vliv nemá."
                 }
+            },
             },
             {
                 q: "Co v psychologii logického myšlení znamená 'Potvrzovací zkreslení' (confirmation bias)?",
@@ -677,6 +720,7 @@ window.data_teorie_logiky = {
                     c: "Tato schopnost se nazývá charisma nebo sugestivní rétorika, nikoliv potvrzovací zkreslení."
                 }
             },
+            },
             {
                 q: "Jak se v diskusi projevuje klam 'Přání otcem myšlenky' (wishful thinking)?",
                 a: "Mluvčí nutí své děti (potomky), aby v diskusi zastávali stejné názory jako on sám.",
@@ -688,6 +732,7 @@ window.data_teorie_logiky = {
                     b: "Tento klam zaměňuje pocity a touhy za fakta. Člověk nekriticky přijme závěr, který mu vyhovuje (např. 'Tento lék určitě funguje, protože se opravdu chci uzdravit'), i když pro něj neexistují objektivní důkazy. V logické argumentaci musí být přání mluvčího zcela odděleno od analýzy pravdivosti.",
                     c: "Vyhrožování je klam 'Ad baculum' (apel na sílu), který nahrazuje logiku násilím a strachem."
                 }
+            },
             },
             {
                 q: "Co vyžaduje 'etika argumentace' vůči soupeřovým argumentům?",
@@ -701,6 +746,7 @@ window.data_teorie_logiky = {
                     c: "Slovíčkaření a chytání za gramatiku je logicky irelevantní a v etické diskusi nepřípustné."
                 }
             },
+            },
             {
                 q: "Klam 'Argumentum ad populum' (společenský apel) spočívá v tom, že:",
                 a: "Tvrdíme, že něco je pravdivé jen proto, že tomu věří velké množství lidí.",
@@ -712,6 +758,7 @@ window.data_teorie_logiky = {
                     b: "To je projev sociální předsudečnosti, nikoliv podstata klamu 'ad populum'.",
                     c: "Statistiky jsou formou důkazu; pokud nejsou zfalšované, nejedná se o klam 'ad populum'."
                 }
+            },
             },
             {
                 q: "Co charakterizuje logický klam 'Klouzavá plocha' (slippery slope)?",
@@ -725,6 +772,7 @@ window.data_teorie_logiky = {
                     c: "Používání nejednoznačných pojmů se nazývá ekvivokace, nikoliv klouzavá plocha."
                 }
             },
+            },
             {
                 q: "Klam 'Apel na tradici' (argumentum ad antiquitatem) tvrdí, že:",
                 a: "Něco je správné nebo pravdivé jen proto, že se to tak dělalo vždycky.",
@@ -737,6 +785,7 @@ window.data_teorie_logiky = {
                     c: "To je pesimistický světonázor, nikoliv specifický argumentační klam založený na tradici."
                 }
             },
+            },
             {
                 q: "V čem spočívá chyba 'Falešné příčiny' (post hoc ergo propter hoc)?",
                 a: "V domněnce, že pokud jev B nastal po jevu A, musí být jev A jeho příčinou.",
@@ -748,6 +797,7 @@ window.data_teorie_logiky = {
                     b: "To je nihilismus nebo skepse, nikoliv konkrétní logická chyba v určení příčiny.",
                     c: "Lež je morální selhání, zatímco falešná příčina je chyba v logickém uvažování o vztazích mezi jevy."
                 }
+            },
             },
             {
                 q: "Co je hlavním nástrojem 'kritického myšlení' při posuzování informací?",

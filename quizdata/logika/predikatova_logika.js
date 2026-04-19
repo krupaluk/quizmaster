@@ -5,7 +5,6 @@ window.data_predikatova_logika = {
             "questions": [
             {
                 q: "Co v logice vyjadřuje symbol '∀' (obrácené A)?",
-                wiki: ["predikatova_logika", "kvantifikatory_prehled"],
                 a: "Existenční kvantifikátor (existuje alespoň jedno)",
                 b: "Všeobecný kvantifikátor (pro všechna, každý)",
                 c: "Logickou spojku 'a zároveň'",
@@ -15,6 +14,7 @@ window.data_predikatova_logika = {
                     b: "Symbol ∀ pochází z anglického 'All'. Používá se, když chceme vyjádřit, že určitá vlastnost platí pro úplně každý prvek z dané množiny (např. 'všichni lidé jsou smrtelní').",
                     c: "Konjunkce se značí symbolem ∧."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje symbol '∃' (obrácené E)?",
@@ -28,9 +28,9 @@ window.data_predikatova_logika = {
                     c: "Prázdná množina se značí symbolem ∅."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme predikát 'x je člověk'?",
-                wiki: ["predikatova_logika", "predikaty"],
                 a: "x(C)",
                 b: "C(x)",
                 c: "C = x",
@@ -40,6 +40,7 @@ window.data_predikatova_logika = {
                     b: "V predikátové logice píšeme velké písmeno pro vlastnost (predikát) a do závorky malým písmenem objekt (proměnnou), o kterém mluvíme. C(x) čteme 'x má vlastnost C'.",
                     c: "Toto je zápis rovnosti, nikoliv vlastnosti."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme větu: 'Všechno je dobré' (pokud D znamená 'být dobrý')?",
@@ -53,6 +54,7 @@ window.data_predikatova_logika = {
                     c: "Kvantifikátor se píše před predikát, nikoliv do jeho závorky."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme větu: 'Někdo je chytrý' (pokud C(x) znamená 'x je člověk' a Ch(x) 'x je chytrý')?",
                 a: "∀x (C(x) ∧ Ch(x))",
@@ -64,6 +66,7 @@ window.data_predikatova_logika = {
                     b: "Existenční kvantifikátor se téměř vždy pojí s konjunkcí (∧). Říkáme: 'Existuje objekt x, který je člověkem A ZÁROVEŇ je chytrý'. To přesně odpovídá českému 'někdo'.",
                     c: "Pozor, toto je častá chyba. Tento zápis by byl pravdivý, i kdyby existoval třeba kámen (který není člověkem), protože implikace z nepravdy je pravdivá."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme větu: 'Všichni lidé jsou smrtelní' (L = člověk, S = smrtelný)?",
@@ -77,9 +80,9 @@ window.data_predikatova_logika = {
                     c: "Toto by znamenalo, že existuje alespoň jedna věc, pro kterou platí, že pokud je to člověk, je smrtelný (příliš slabé tvrzení)."
                 }
             },
+            },
             {
                 q: "Jaká je negace všeobecného kvantifikátoru ∀x P(x)?",
-                wiki: ["predikatova_logika", "negace_kvantifikatoru"],
                 a: "∀x ¬P(x)",
                 b: "∃x ¬P(x)",
                 c: "¬∃x P(x)",
@@ -89,6 +92,7 @@ window.data_predikatova_logika = {
                     b: "Aby nebylo pravda, že 'všichni mají P', stačí najít aspoň jednoho, který P nemá. Proto se ∀ při negaci mění na ∃ a negace se posouvá k predikátu.",
                     c: "Toto je ve skutečnosti ekvivalent k ∀x ¬P(x), nikoliv k negaci původního ∀x P(x)."
                 }
+            },
             },
             {
                 q: "Jaká je negace existenčního kvantifikátoru ∃x P(x)?",
@@ -102,6 +106,7 @@ window.data_predikatova_logika = {
                     c: "To je opačné tvrzení, nikoliv negace."
                 }
             },
+            },
             {
                 q: "Co znamená zápis ¬∃x P(x)?",
                 a: "Existuje někdo, kdo nemá vlastnost P",
@@ -113,6 +118,7 @@ window.data_predikatova_logika = {
                     b: "Doslova to říká 'Není pravda, že existuje x, které má P'. To je logicky totožné s tvrzením, že všechna x vlastnost P nemají (∀x ¬P(x)).",
                     c: "To je přímý opak."
                 }
+            },
             },
             {
                 q: "Věta 'Žádný člověk nelétá' se v logice zapíše jako:",
@@ -126,6 +132,7 @@ window.data_predikatova_logika = {
                     c: "Toto znamená 'Existuje člověk, který nelétá'."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Někteří lidé nejsou lháři' (C = člověk, L = lhář)?",
                 a: "∃x (C(x) ∧ ¬L(x))",
@@ -138,9 +145,9 @@ window.data_predikatova_logika = {
                     c: "Toto by znamenalo 'Všichni lidé nejsou lháři' (tedy nikdo není lhář)."
                 }
             },
+            },
             {
                 q: "Zápis ∃x P(x) ∧ ∃x Q(x) znamená:",
-                wiki: ["predikatova_logika", "predikaty"],
                 a: "Existuje objekt, který má vlastnost P i Q zároveň",
                 b: "Existuje objekt s vlastností P a existuje (třeba jiný) objekt s vlastností Q",
                 c: "Všechna x mají vlastnost P nebo Q",
@@ -150,6 +157,7 @@ window.data_predikatova_logika = {
                     b: "Kvantifikátory mají svůj 'dosah'. Zde první ∃x končí u prvé závorky. Říkáme tedy jen, že někdo má P a někdo (kdokoliv) má Q. Nemusí jít o tutéž osobu.",
                     c: "To by vyžadovalo všeobecný kvantifikátor a disjunkci."
                 }
+            },
             },
             {
                 q: "Co znamená zápis ∀x ∀y R(x, y)?",
@@ -163,6 +171,7 @@ window.data_predikatova_logika = {
                     c: "To by se zapsalo pomocí ∃x ∃y."
                 }
             },
+            },
             {
                 q: "Jak zní negace věty: 'Někdo v této místnosti lže'?",
                 a: "Nikdo v této místnosti nelže",
@@ -174,6 +183,7 @@ window.data_predikatova_logika = {
                     b: "To je jen jiný způsob, jak říct totéž co v možnosti A.",
                     c: "V přirozeném jazyce 'nikdo nelže' a 'všichni nelžou' vyjadřují stejný fakt, který je negací 'někdo lže'."
                 }
+            },
             },
             {
                 q: "Pokud v univerzu existuje pouze jeden objekt 'a', pak ∃x P(x) je ekvivalentní čemu?",
@@ -194,7 +204,6 @@ window.data_predikatova_logika = {
             "questions": [
             {
                 q: "Jaký je rozdíl mezi '∀x ∃y Miluje(x, y)' a '∃y ∀x Miluje(x, y)'?",
-                wiki: ["predikatova_logika", "relace_vlastnosti"],
                 a: "Žádný, pořadí kvantifikátorů u různých typů (∀, ∃) nehraje roli.",
                 b: "První říká, že každý někoho miluje. Druhá, že existuje jedna osoba, kterou milují úplně všichni.",
                 c: "První říká, že existuje jeden milovník. Druhá, že všichni jsou milováni.",
@@ -205,9 +214,9 @@ window.data_predikatova_logika = {
                     c: "Významy jsou prohozené a nepřesné."
                 }
             },
+            },
             {
                 q: "Jak zní negace věty: 'Každý student (S) má nějaký oblíbený předmět (P)'?",
-                wiki: ["predikatova_logika", "negace_kvantifikatoru"],
                 a: "Žádný student nemá oblíbený předmět.",
                 b: "Existuje student, který nemá žádný oblíbený předmět.",
                 c: "Někteří studenti mají neoblíbené předměty.",
@@ -217,6 +226,7 @@ window.data_predikatova_logika = {
                     b: "Původní věta je ∀x ∃y (S(x) → O(x, y)). Negace změní ∀ na ∃, ∃ na ∀ a zneguje vnitřek. Výsledek: Existuje x, které je studentem a pro všechna y platí, že ho nemá v oblibě.",
                     c: "To je neurčité tvrzení, které logicky nevyvrací původní strukturu."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje formule: '∃x (P(x) ∧ ∀y (Q(y) → R(x, y)))'?",
@@ -230,9 +240,9 @@ window.data_predikatova_logika = {
                     c: "Pletete si existenční kvantifikátor s celkovou implikací."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Jenom ptáci (P) létají (L)'?",
-                wiki: ["predikatova_logika", "relace_vlastnosti"],
                 a: "∀x (P(x) → L(x))",
                 b: "∀x (L(x) → P(x))",
                 c: "∃x (P(x) ∧ L(x))",
@@ -242,6 +252,7 @@ window.data_predikatova_logika = {
                     b: "Slovo 'jenom' obrací směr implikace. Říkáme: 'Pokud něco létá, pak je to nutně pták'. Tím jsme vyloučili cokoliv jiného z létání.",
                     c: "To znamená pouze to, že existuje aspoň jeden pták, který létá."
                 }
+            },
             },
             {
                 q: "Co znamená zápis: '¬∀x (P(x) → Q(x))'?",
@@ -255,6 +266,7 @@ window.data_predikatova_logika = {
                     c: "To je úplně jiná a mnohem silnější negace."
                 }
             },
+            },
             {
                 q: "Věta 'Nikdo není dokonalý' (D = dokonalý) se zapíše jako:",
                 a: "¬∃x D(x)",
@@ -266,6 +278,7 @@ window.data_predikatova_logika = {
                     b: "Toto čteme jako 'Pro každého platí, že není dokonalý'.",
                     c: "V predikátové logice jsou tyto dva zápisy ekvivalentní (podle zákonů duality kvantifikátorů)."
                 }
+            },
             },
             {
                 q: "Formule '∀x (P(x) ∨ ¬P(x))' je příkladem:",
@@ -279,6 +292,7 @@ window.data_predikatova_logika = {
                     c: "Tautologie je 'vždy platná', což je silnější termín."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Všichni lidé (L) mají někoho (N), koho obdivují (O)'?",
                 a: "∀x ∃y (L(x) ∧ N(y) ∧ O(x, y))",
@@ -290,6 +304,7 @@ window.data_predikatova_logika = {
                     b: "Správně: 'Pro každé x platí, že POKUD je to člověk, PAK (existuje y, které je osobou a x ho obdivuje)'. Implikace správně omezuje platnost na lidi.",
                     c: "Toto by znamenalo, že existuje jedna konkrétní osoba, kterou obdivují úplně všichni lidé."
                 }
+            },
             },
             {
                 q: "Co znamená symbol '∃!' (vykřičník za existenčním kvantifikátorem)?",
@@ -303,6 +318,7 @@ window.data_predikatova_logika = {
                     c: "To je vtipný, ale nesprávný výklad symbolu."
                 }
             },
+            },
             {
                 q: "Negace věty 'Někteří politici (P) nelžou (¬L)' je:",
                 a: "Všichni politici lžou.",
@@ -314,6 +330,7 @@ window.data_predikatova_logika = {
                     b: "To není negace, tyto dva stavy mohou nastat současně.",
                     c: "To by znamenalo 'Všichni politici nelžou', což je přesný opak původního tvrzení, nikoliv jeho logická negace."
                 }
+            },
             },
             {
                 q: "Co říká formule '∀x ∀y (x = y → (P(x) ↔ P(y)))'?",
@@ -327,6 +344,7 @@ window.data_predikatova_logika = {
                     c: "Formule neomezuje počet objektů s vlastností P."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Něco není v pořádku' (V = být v pořádku)?",
                 a: "∃x ¬V(x)",
@@ -338,6 +356,7 @@ window.data_predikatova_logika = {
                     b: "Toto znamená 'Nic není v pořádku' (žádná věc není v pořádku).",
                     c: "Toto znamená také 'Všechno je v nepořádku'."
                 }
+            },
             },
             {
                 q: "Výraz '∀x P(x) → P(a)' (kde 'a' je konkrétní jméno) se nazývá:",
@@ -351,6 +370,7 @@ window.data_predikatova_logika = {
                     c: "Modus Ponens je pravidlo výrokové logiky, i když se zde v pozadí používá."
                 }
             },
+            },
             {
                 q: "Jaká je negace věty 'Existuje město (M), které má metro (T) i mrakodrapy (R)'?",
                 a: "Žádné město nemá metro ani mrakodrapy.",
@@ -362,6 +382,7 @@ window.data_predikatova_logika = {
                     b: "Původně: ∃x (M(x) ∧ T(x) ∧ R(x)). Negace: ∀x (M(x) → (¬T(x) ∨ ¬R(x))). V každém městě tedy chybí metro nebo mrakodrapy (nebo obojí).",
                     c: "To je jen částečný popis, ne negace celého tvrzení."
                 }
+            },
             },
             {
                 q: "Co znamená zápis '∀x (P(x) ↔ Q(x))'?",
@@ -391,9 +412,8 @@ window.data_predikatova_logika = {
                     b: "To by vyžadovalo prohození kvantifikátorů: ∃y ∀x (P(x) → Miluje(x, y)).",
                     c: "To by se zapsalo jako ∀x (P(x) → Miluje(x, x))."
                 },
-                wiki: ["predikatova_logika", "relace_vlastnosti"],
             },
-            {
+                {
                 q: "Jak zní negace věty 'Existuje někdo (∃x), koho nikdo (∀y) nezná (¬Z(y, x))'?",
                 a: "Všichni lidé někoho znají.",
                 b: "Každého člověka někdo zná.",
@@ -404,6 +424,7 @@ window.data_predikatova_logika = {
                     b: "Původně: ∃x ∀y ¬Z(y, x). Negací je ∀x ∃y Z(y, x). Tedy: 'U každého člověka (x) existuje aspoň jeden člověk (y), který ho zná'.",
                     c: "To je extrémní případ, který s logickou negací původní věty nesouvisí."
                 }
+            },
             },
             {
                 q: "Výraz '∀x (P(x) → Q(x)) ∧ P(a)' nám umožňuje odvodit 'Q(a)'. Jak se toto pravidlo nazývá?",
@@ -417,6 +438,7 @@ window.data_predikatova_logika = {
                     c: "Kontrapozice by z ¬Q(a) odvozovala ¬P(a)."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Všichni (x) mají rádi (R) jen ty (y), kteří mají rádi je'?",
                 a: "∀x ∀y (R(x, y) → R(y, x))",
@@ -428,6 +450,7 @@ window.data_predikatova_logika = {
                     b: "To znamená 'Každý má někoho, s kým se má rád navzájem', což je jiný význam.",
                     c: "To by znamenalo symetrii: 'x má rádo y právě tehdy, když y má rádo x' (zákaz jednostranné nenávisti i lásky zároveň)."
                 }
+            },
             },
             {
                 q: "Co tvrdí zápis: '∃x (P(x) ∧ ∀y (P(y) → x = y))'?",
@@ -441,6 +464,7 @@ window.data_predikatova_logika = {
                     c: "To by byl zápis ∀x P(x)."
                 }
             },
+            },
             {
                 q: "Jak zní negace věty 'Všechna města (M) mají školu (S) nebo nemocnici (N)'?",
                 a: "Existuje město, které nemá školu a zároveň nemá nemocnici.",
@@ -452,6 +476,7 @@ window.data_predikatova_logika = {
                     b: "Tady chybí změna ∨ na ∧ uvnitř negované závorky.",
                     c: "To je univerzální popření, k vyvrácení původního tvrzení stačí najít jedno takové 'chudé' město."
                 }
+            },
             },
             {
                 q: "Co znamená v predikátové logice 'Prázdné univerzum'?",
@@ -465,6 +490,7 @@ window.data_predikatova_logika = {
                     c: "Tabulky se v predikátové logice (kvůli nekonečným doménám) nepoužívají stejně jako ve výrokové."
                 }
             },
+            },
             {
                 q: "Zápis '∀x ∃y (x < y)' v univerzu přirozených čísel znamená:",
                 a: "Ke každému číslu existuje číslo větší.",
@@ -476,6 +502,7 @@ window.data_predikatova_logika = {
                     b: "To by byl zápis ∃y ∀x (x ≤ y).",
                     c: "To by vyžadovalo relaci rovnosti (x = y)."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje '∃x ∀y (x < y)' v univerzu přirozených čísel?",
@@ -489,6 +516,7 @@ window.data_predikatova_logika = {
                     c: "To by byla negace tohoto tvrzení."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Jen ten, kdo (x) je učitel (U), může učit (C)'?",
                 a: "∀x (C(x) → U(x))",
@@ -500,6 +528,7 @@ window.data_predikatova_logika = {
                     b: "To by znamenalo, že každý učitel musí učit (není tam prostor pro učitele v důchodu).",
                     c: "To znamená pouze to, že aspoň jeden učitel skutečně učí."
                 }
+            },
             },
             {
                 q: "Výraz '∃x (P(x) ∧ Q(a))' je ekvivalentní s:",
@@ -513,6 +542,7 @@ window.data_predikatova_logika = {
                     c: "To by platilo jen v případě, že x je nuceno být rovno 'a'."
                 }
             },
+            },
             {
                 q: "Co říká formule '¬∀x ¬P(x)'?",
                 a: "Existuje alespoň jedno x s vlastností P.",
@@ -524,6 +554,7 @@ window.data_predikatova_logika = {
                     b: "To by byl zápis ∀x ¬P(x).",
                     c: "To by byl zápis ∀x P(x)."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme: 'Některé (∃x) velké (V) ryby (R) požírají (P) jen malé (M) ryby'?",
@@ -537,6 +568,7 @@ window.data_predikatova_logika = {
                     c: "To by znamenalo, že úplně každá velká ryba požírá úplně všechno a všechno je to malé (logický nesmysl)."
                 }
             },
+            },
             {
                 q: "Věta 'Všichni (x) mají někoho (y), kdo je (y) nenávidí (N)' se zapíše:",
                 a: "∀x ∃y N(y, x)",
@@ -548,6 +580,7 @@ window.data_predikatova_logika = {
                     b: "To by znamenalo, že existuje jeden univerzální 'nenáviděč', který nenávidí úplně všechny lidi.",
                     c: "To by znamenalo 'Všichni někoho nenávidí' (v roli subjektu)."
                 }
+            },
             },
             {
                 q: "Co znamená zápis '∀x (P(x) → ⊥)' (kde ⊥ je spor)?",
@@ -577,9 +610,8 @@ window.data_predikatova_logika = {
                     b: "Toto znamená 'Každý má alespoň jednoho otce', což neřeší horní limit (nejvýše jednoho).",
                     c: "Toto by znamenalo 'Každý je svým vlastním otcem'."
                 },
-                wiki: ["predikatova_logika", "relace_vlastnosti"],
             },
-            {
+                {
                 q: "Co vyjadřuje formule: '∃x (C(x) ∧ ∀y (C(y) ∧ x ≠ y → Starší(x, y)))'?",
                 a: "Všichni lidé (C) jsou stejně staří.",
                 b: "Existuje nejstarší člověk (ten, který je starší než všichni ostatní lidé).",
@@ -590,6 +622,7 @@ window.data_predikatova_logika = {
                     b: "Správně. Najdeme x (člověka), pro kterého platí, že jakýkoliv jiný člověk y (který není on sám) je vůči němu mladší (nebo on je starší než y). To je přesná definice maxima v množině.",
                     c: "To je sice pravda, ale formule říká mnohem víc o jeho věku vůči ostatním."
                 }
+            },
             },
             {
                 q: "Jak zní negace věty: 'Všechna (∀x) jablka (J) jsou buď červená (C), nebo kyselá (K)'?",
@@ -603,6 +636,7 @@ window.data_predikatova_logika = {
                     c: "To je opět příliš silné univerzální popření."
                 }
             },
+            },
             {
                 q: "Zápis '∀x (P(x) → ∃y (Q(y) ∧ R(x, y)))' znamená:",
                 a: "Všechna P jsou v relaci R s nějakým Q.",
@@ -614,6 +648,7 @@ window.data_predikatova_logika = {
                     b: "To by byly kvantifikátory i predikáty v opačném pořadí.",
                     c: "To by vyžadovalo ∃y na začátku celé formule (před ∀x)."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje formule '∃x ∃y (P(x) ∧ P(y) ∧ x ≠ y)'?",
@@ -627,6 +662,7 @@ window.data_predikatova_logika = {
                     c: "To by byl úplně jiný zápis pomocí všeobecného kvantifikátoru."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Nikdo (x) nemůže milovat (M) každého (y)'?",
                 a: "¬∃x ∀y M(x, y)",
@@ -638,6 +674,7 @@ window.data_predikatova_logika = {
                     b: "Doslova: 'Každý člověk má aspoň jednu osobu, kterou nemiluje'.",
                     c: "V logice jsou tyto dva zápisy ekvivalentní. Vyjadřují stejné omezení světa, jen jinými slovy (jeden popírá existenci super-milovníka, druhý garantuje u každého aspoň jednu ne-lásku)."
                 }
+            },
             },
             {
                 q: "Co znamená v predikátové logice termín 'Vázaná proměnná'?",
@@ -651,6 +688,7 @@ window.data_predikatova_logika = {
                     c: "Závorky určují dosah, ale podstatou je přítomnost kvantifikátoru."
                 }
             },
+            },
             {
                 q: "Zápis '∀x P(x) ∨ ∀x Q(x)' je logicky SILNĚJŠÍ než '∀x (P(x) ∨ Q(x))'. Proč?",
                 a: "Protože první vyžaduje, aby buď všichni měli P, nebo všichni měli Q. Druhý dovoluje směs.",
@@ -662,6 +700,7 @@ window.data_predikatova_logika = {
                     b: "Ekvivalentní jsou u konjunkce (∀x P(x) ∧ ∀x Q(x) ≡ ∀x (P(x) ∧ Q(x))), ale u disjunkce nikoliv.",
                     c: "Počet symbolů o logické síle nerozhoduje."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme: 'Všichni (x) učitelé (U) kromě (x ≠) pana Nováka (n) jsou přísní (P)'?",
@@ -675,6 +714,7 @@ window.data_predikatova_logika = {
                     c: "Logika často nabízí více cest, jak vyjádřit stejnou podmínku."
                 }
             },
+            },
             {
                 q: "Co tvrdí formule '∀x ∃y (P(x, y) ∧ ¬P(y, x))'?",
                 a: "Relace P je asymetrická pro každý prvek.",
@@ -686,6 +726,7 @@ window.data_predikatova_logika = {
                     b: "Správně. Ke každému x najdeme aspoň jedno y takové, že x má vztah k y, ale y ho nevrací x. Např. 'Každý má někoho, koho miluje, ale ten ho nemiluje'.",
                     c: "To je příliš obecné, formule mluví o existenci alespoň jednoho takového y pro každé x."
                 }
+            },
             },
             {
                 q: "Jak zní negace: 'Existuje (∃x) někdo, kdo (∀y) všem pomáhá (P(x, y))'?",
@@ -699,6 +740,7 @@ window.data_predikatova_logika = {
                     c: "To je subjektivní interpretace, nikoliv logická negace."
                 }
             },
+            },
             {
                 q: "Výraz '∃x (P(x) → Q(x))' je v klasické logice pravdivý, pokud:",
                 a: "Existuje objekt, který nemá vlastnost P, nebo má vlastnost Q.",
@@ -710,6 +752,7 @@ window.data_predikatova_logika = {
                     b: "To by byla pravda, ale je to zbytečně silná podmínka.",
                     c: "To by byla pravda pro konjunkci, implikaci stačí i neexistence P."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje '∀x ∀y ∀z ((R(x, y) ∧ R(y, z)) → R(x, z))'?",
@@ -723,6 +766,7 @@ window.data_predikatova_logika = {
                     c: "Reflexivita je ∀x R(x, x)."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Všichni lidé (L) kromě jednoho (∃!y) jsou v místnosti (M)'?",
                 a: "∃!y (L(y) ∧ ¬M(y) ∧ ∀x ((L(x) ∧ x ≠ y) → M(x)))",
@@ -734,6 +778,7 @@ window.data_predikatova_logika = {
                     b: "Toto znamená pouze 'Existuje aspoň jeden člověk, který není v místnosti'.",
                     c: "Zde chybí vazba, že ten, co tam není, je jen jeden a že ostatní tam jsou."
                 }
+            },
             },
             {
                 q: "Poslední z predikátové: Co znamená zápis '∀x P(x) ⊨ ∃x P(x)'?",

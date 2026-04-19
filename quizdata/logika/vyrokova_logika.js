@@ -5,7 +5,6 @@ window.data_vyrokova_logika = {
             "questions": [
             {
                 q: "Co v logice vyjadřuje symbol '¬' (případně '~')?",
-                wiki: ["vyrokova_logika", "symboly_prehled"],
                 a: "Konjunkci (a zároveň)",
                 b: "Negaci (neplatí, že)",
                 c: "Implikaci (jestliže, pak)",
@@ -15,6 +14,7 @@ window.data_vyrokova_logika = {
                     b: "Symbol ¬ je unární operátor, který obrací pravdivostní hodnotu výroku. Pokud je výrok A pravdivý, pak ¬A je nepravdivý, a naopak. V češtině mu odpovídá předpona ne- nebo fráze 'není pravda, že'.",
                     c: "Implikace se značí šipkou →."
                 }
+            },
             },
             {
                 q: "Který symbol se používá pro 'konjunkci' (logické 'a')?",
@@ -28,6 +28,7 @@ window.data_vyrokova_logika = {
                     c: "Symbol → značí implikaci."
                 }
             },
+            },
             {
                 q: "Výrok 'A ∨ B' (disjunkce) je NEPRAVDIVÝ pouze v případě, že:",
                 a: "A i B jsou nepravdivé",
@@ -39,6 +40,7 @@ window.data_vyrokova_logika = {
                     b: "V tomto případě je výrok pravdivý, protože platí alespoň A.",
                     c: "V tomto případě je výrok pravdivý, disjunkce v logice standardně není vylučující (může platit obojí)."
                 }
+            },
             },
             {
                 q: "Jak se nazývá zápis 'A → B'?",
@@ -52,6 +54,7 @@ window.data_vyrokova_logika = {
                     c: "Disjunkce se značí symbolem ∨."
                 }
             },
+            },
             {
                 q: "Kdy je výrok 'A ∧ B' pravdivý?",
                 a: "Když je pravdivý alespoň jeden z nich",
@@ -63,6 +66,7 @@ window.data_vyrokova_logika = {
                     b: "Konjunkce (A ∧ B) je přísná. Aby byl celý složený výrok pravdivý, musí realita odpovídat oběma částem najednou. Pokud je byť jen jedna část nepravdivá, celá konjunkce padá.",
                     c: "V tomto případě je konjunkce nepravdivá."
                 }
+            },
             },
             {
                 q: "Co znamená symbol '↔'?",
@@ -76,6 +80,7 @@ window.data_vyrokova_logika = {
                     c: "Alternativa (vylučující nebo) se značí specifickým symbolem, např. ⊕ nebo ⊻."
                 }
             },
+            },
             {
                 q: "Pokud je výrok A pravdivý, jaká je hodnota výroku ¬(¬A)?",
                 a: "Nepravda",
@@ -87,6 +92,7 @@ window.data_vyrokova_logika = {
                     b: "Zde platí zákon dvojí negace. První negace udělá z pravdivého A nepravdu, druhá negace z této nepravdy udělá opět pravdu. ¬(¬A) je tedy logicky ekvivalentní původnímu A.",
                     c: "Hodnotu lze přesně určit díky pravidlům negace."
                 }
+            },
             },
             {
                 q: "Jak se v logice čte zápis 'p ∧ q'?",
@@ -100,6 +106,7 @@ window.data_vyrokova_logika = {
                     c: "To by byl zápis p → q."
                 }
             },
+            },
             {
                 q: "Která z následujících možností je zápisem: 'Není pravda, že prší nebo sněží'?",
                 a: "¬(A ∨ B)",
@@ -111,6 +118,7 @@ window.data_vyrokova_logika = {
                     b: "Tento zápis znamená 'Neprší nebo nesněží', což má jiný význam.",
                     c: "Tento zápis znamená 'Neprší a nesněží' (což je sice logicky ekvivalentní výsledku, ale není to přímý překlad struktury věty)."
                 }
+            },
             },
             {
                 q: "V implikaci 'A → B' se A nazývá:",
@@ -124,6 +132,7 @@ window.data_vyrokova_logika = {
                     c: "Atribut je termín z jiných oblastí logiky či filozofie, neoznačuje část implikace."
                 }
             },
+            },
             {
                 q: "Výrok 'A → B' je nepravdivý v JEDINÉM případě. Který to je?",
                 a: "Když A je pravda a B je nepravda",
@@ -135,6 +144,7 @@ window.data_vyrokova_logika = {
                     b: "Pokud předpoklad nenastane, implikace je tzv. 'prazdně pravdivá'. Nic neporušila.",
                     c: "Pokud neplatí předpoklad, implikace nemůže být nepravdivá, bez ohledu na výsledek."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme: 'Půjdu ven pouze tehdy, když bude svítit slunce' (vztah podmínky)?",
@@ -148,6 +158,7 @@ window.data_vyrokova_logika = {
                     c: "To by znamenalo 'Jdu ven nebo svítí slunce'."
                 }
             },
+            },
             {
                 q: "Symbol '≡' nebo '⇔' se v logických formulích používá pro:",
                 a: "Definici negace",
@@ -159,6 +170,7 @@ window.data_vyrokova_logika = {
                     b: "Tyto symboly označují, že dvě formule mají identické pravdivostní tabulky. Tedy že v každé situaci jsou obě buď pravdivé, nebo obě nepravdivé. Je to 'rovnítko' mezi logickými výrazy.",
                     c: "Pro pravděpodobnost se používají úplně jiné matematické zápisy (např. P(A))."
                 }
+            },
             },
             {
                 q: "Co znamená zápis 'A ∨ ¬A'?",
@@ -172,6 +184,7 @@ window.data_vyrokova_logika = {
                     c: "Viz bod A, kontradikce je pravý opak."
                 }
             },
+            },
             {
                 q: "Pokud o výroku A řekneme, že je to 'tautologie', znamená to, že:",
                 a: "Je vždy nepravdivý",
@@ -183,6 +196,7 @@ window.data_vyrokova_logika = {
                     b: "Tautologie je formule, která díky své struktuře vyjde jako 'pravda' ve všech řádcích pravdivostní tabulky. Příkladem je právě 'A ∨ ¬A'.",
                     c: "Takový výrok se nazývá splnitelný nebo kontingentní."
                 }
+            },
             },
             {
                 q: "Která spojka odpovídá větě: 'Pojedeme vlakem, nebo autem'?",
@@ -196,6 +210,7 @@ window.data_vyrokova_logika = {
                     c: "To by znamenalo 'pokud pojedeme vlakem, pak pojedeme autem'."
                 }
             },
+            },
             {
                 q: "Jaký je výsledek výroku 'Pravda → Nepravda'?",
                 a: "Pravda",
@@ -207,6 +222,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je klíčový moment logiky. Pokud z pravdivého předpokladu vyvodíme nepravdivý závěr, je celý proces (implikace) chybný. Je to jediný případ, kdy je implikace nepravdivá.",
                     c: "Nula není logická hodnota v klasické výrokové logice (používáme Pravda/Nepravda nebo 1/0)."
                 }
+            },
             },
             {
                 q: "Jaká je negace výroku 'Prší'?",
@@ -220,6 +236,7 @@ window.data_vyrokova_logika = {
                     c: "To je subjektivní opak, nikoliv logická negace."
                 }
             },
+            },
             {
                 q: "Co získáme, když spojíme dva výroky spojkou 'a' (∧)?",
                 a: "Disjunkt",
@@ -231,6 +248,7 @@ window.data_vyrokova_logika = {
                     b: "Konjunkt je označení pro jednotlivé členy (A, B), ale celý výsledek se nazývá konjunkce.",
                     c: "Konjunkce je název pro celou operaci i pro výsledný složený výrok 'A ∧ B'."
                 }
+            },
             },
             {
                 q: "Pokud 'A' znamená 'Jím' a 'B' znamená 'Spím', co znamená 'A ↔ B'?",
@@ -251,7 +269,6 @@ window.data_vyrokova_logika = {
             "questions": [
             {
                 q: "Která logická spojka má standardně nejvyšší prioritu (vyhodnocuje se jako první)?",
-                wiki: ["vyrokova_logika", "pravdivostni_tabulky"],
                 a: "Konjunkce (∧)",
                 b: "Negace (¬)",
                 c: "Implikace (→)",
@@ -261,6 +278,7 @@ window.data_vyrokova_logika = {
                     b: "Negace se v logice chová podobně jako znaménko minus v matematice. Váže se těsně na výrok, který následuje hned za ní, pokud závorky neurčí jinak.",
                     c: "Implikace má naopak jednu z nejnižších priorit, vyhodnocuje se až po negaci, konjunkci i disjunkci."
                 }
+            },
             },
             {
                 q: "Jaká je pravdivostní hodnota formule '¬A ∧ B', pokud A je pravda a B je pravda?",
@@ -274,6 +292,7 @@ window.data_vyrokova_logika = {
                     c: "Hodnoty jsou jasně dané, výsledek je jednoznačný."
                 }
             },
+            },
             {
                 q: "Které z těchto pořadí priorit (od nejsilnější po nejslabší) je správné?",
                 a: "¬, ∧, ∨, →, ↔",
@@ -285,6 +304,7 @@ window.data_vyrokova_logika = {
                     b: "Zde je pořadí přesně opačně, což by vedlo k chaosu v zápisu.",
                     c: "Negace musí být vždy na začátku řetězce priorit, aby bylo jasné, co popírá."
                 }
+            },
             },
             {
                 q: "Co znamená v pravdivostní tabulce zápis '1' (nebo 'T')?",
@@ -298,6 +318,7 @@ window.data_vyrokova_logika = {
                     c: "Nepravda se značí '0' nebo 'F' (False)."
                 }
             },
+            },
             {
                 q: "Kolik řádků bude mít pravdivostní tabulka pro formuli se 3 proměnnými (A, B, C)?",
                 a: "6",
@@ -309,6 +330,7 @@ window.data_vyrokova_logika = {
                     b: "Počet řádků tabulky se počítá jako 2 na n-tou, kde n je počet proměnných. Tedy 2³ = 2 × 2 × 2 = 8. To pokryje všechny možné kombinace pravdy a nepravdy pro tři výroky.",
                     c: "Počet řádků musí být vždy mocnina dvojky."
                 }
+            },
             },
             {
                 q: "Zápis '(A ∧ B) ∨ C' je pravdivý, pokud:",
@@ -322,6 +344,7 @@ window.data_vyrokova_logika = {
                     c: "To je příliš přísná podmínka, stačí, aby platila jen jedna část rozdělená symbolem ∨."
                 }
             },
+            },
             {
                 q: "Která z těchto formulí je ekvivalentní s '¬(¬A)'?",
                 a: "¬A",
@@ -333,6 +356,7 @@ window.data_vyrokova_logika = {
                     b: "Jde o zákon dvojí negace. V klasické logice platí, že popřením záporu získáme původní kladné tvrzení. Např. 'Není pravda, že neprší' znamená 'Prší'.",
                     c: "Toto je spor (kontradikce), který je vždy nepravdivý."
                 }
+            },
             },
             {
                 q: "V tabulce pro implikaci 'A → B' najdeme nulu (nepravdu) pouze v řádku:",
@@ -346,6 +370,7 @@ window.data_vyrokova_logika = {
                     c: "I ze lži může plynout jiná lež a logicky je to v pořádku (výsledek je 1)."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Není pravda, že pokud studuji, tak propadnu'?",
                 a: "¬(A → B)",
@@ -357,6 +382,7 @@ window.data_vyrokova_logika = {
                     b: "Toto znamená 'Pokud nestuduji, tak propadnu'.",
                     c: "Toto znamená 'Pokud studuji, tak nepropadnu'."
                 }
+            },
             },
             {
                 q: "Který symbol reprezentuje 'vylučující nebo' (buď A, nebo B, ale ne obojí)?",
@@ -370,6 +396,7 @@ window.data_vyrokova_logika = {
                     c: "Symbol ↑ se používá pro Shefferův operátor (NAND)."
                 }
             },
+            },
             {
                 q: "Výraz 'A ↔ B' lze rozepsat jako konjunkci dvou implikací. Kterých?",
                 a: "(A → B) ∧ (B → A)",
@@ -381,6 +408,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je sice také pravdivý vztah, ale není to standardní definice ekvivalence rozpisem.",
                     c: "Toto je rozpis pro vylučující nebo (XOR), nikoliv pro ekvivalent."
                 }
+            },
             },
             {
                 q: "Co se stane, když negujeme disjunkci ¬(A ∨ B) podle De Morganových zákonů?",
@@ -394,6 +422,7 @@ window.data_vyrokova_logika = {
                     c: "Zde chybí negace u jednotlivých členů."
                 }
             },
+            },
             {
                 q: "Co se stane, když negujeme konjunkci ¬(A ∧ B) podle De Morganových zákonů?",
                 a: "¬A ∧ ¬B",
@@ -405,6 +434,7 @@ window.data_vyrokova_logika = {
                     b: "Negace konjunkce ('a') se mění na disjunkci ('nebo') negovaných členů. 'Není pravda, že platí obojí' znamená, že 'buď neplatí první, nebo neplatí druhý' (případně neplatí ani jeden).",
                     c: "Zde opět chybí negace členů."
                 }
+            },
             },
             {
                 q: "Jaká je hodnota formule 'A ∨ (B ∧ ¬B)'?",
@@ -418,6 +448,7 @@ window.data_vyrokova_logika = {
                     c: "Pokud je A pravdivé, výsledek je 1, takže to není vždy nepravda."
                 }
             },
+            },
             {
                 q: "Který z těchto zápisů je kontradikce (vždy nepravda)?",
                 a: "A → A",
@@ -429,6 +460,7 @@ window.data_vyrokova_logika = {
                     b: "Ekvivalence vyžaduje stejné hodnoty na obou stranách. Výrok A a jeho negace ¬A mají ale vždy opačné hodnoty. Proto tato ekvivalence nemůže být nikdy splněna a je to kontradikce.",
                     c: "Toto je zákon vyloučeného třetího, tedy tautologie."
                 }
+            },
             },
             {
                 q: "Mějme větu: 'Pokud svítí slunce, jdeme k vodě'. Co o ní víme, pokud k vodě nejdeme?",
@@ -442,6 +474,7 @@ window.data_vyrokova_logika = {
                     c: "Lze to říct s jistotou díky logické struktuře věty."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme větu: 'Není pravda, že nepracuji'?",
                 a: "¬(¬A)",
@@ -453,6 +486,7 @@ window.data_vyrokova_logika = {
                     b: "To by znamenalo pouze 'Nepracuji'.",
                     c: "To je nesmyslný spor 'Pracuji a zároveň nepracuji'."
                 }
+            },
             },
             {
                 q: "Co znamená v logice závorka?",
@@ -466,6 +500,7 @@ window.data_vyrokova_logika = {
                     c: "Logika nezná násobení v matematickém smyslu, i když konjunkce se mu podobá."
                 }
             },
+            },
             {
                 q: "Výrok '(A ∧ B) → A' je:",
                 a: "Tautologie (vždy pravda)",
@@ -477,6 +512,7 @@ window.data_vyrokova_logika = {
                     b: "Kontradikce by to byla, kdyby závěr popíral předpoklad.",
                     c: "Není to kontingentní, platí to bez výjimky."
                 }
+            },
             },
             {
                 q: "Jak zní zákon, který říká, že ekvivalence (A ↔ B) má stejnou pravdivostní hodnotu jako (¬A ∧ ¬B) ∨ (A ∧ B)?",
@@ -497,7 +533,6 @@ window.data_vyrokova_logika = {
             "questions": [
             {
                 q: "Jak lze pomocí disjunkce (∨) a negace (¬) přepsat implikaci 'A → B'?",
-                wiki: ["vyrokova_logika", "zakony_logiky"],
                 a: "¬A ∨ B",
                 b: "¬A ∧ B",
                 c: "A ∨ ¬B",
@@ -507,6 +542,7 @@ window.data_vyrokova_logika = {
                     b: "Tento zápis by znamenal 'Neplatí A a zároveň platí B', což je příliš silné tvrzení.",
                     c: "Tento zápis by byl negací implikace (resp. její obměnou s chybou)."
                 }
+            },
             },
             {
                 q: "Co je negací implikace 'A → B'?",
@@ -520,6 +556,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je právě ekvivalentní zápis původní implikace, nikoliv její popření."
                 }
             },
+            },
             {
                 q: "Výraz '¬(A ∧ ¬B)' je podle De Morganových zákonů ekvivalentní čemu?",
                 a: "¬A ∨ B",
@@ -531,6 +568,7 @@ window.data_vyrokova_logika = {
                     b: "Při negaci závorky se spojka ∧ musí vždy otočit na ∨.",
                     c: "Zde chybí negace u prvního členu A."
                 }
+            },
             },
             {
                 q: "Co tvrdí 'Zákon kontrapozice' u implikace 'A → B'?",
@@ -544,6 +582,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je inverze, která také logicky nevyplývá z původní implikace."
                 }
             },
+            },
             {
                 q: "Jak zjednodušíte výraz 'A ∧ (A ∨ B)'?",
                 a: "A",
@@ -555,6 +594,7 @@ window.data_vyrokova_logika = {
                     b: "Hodnota B nemá na celkový výsledek vliv, pokud známe A.",
                     c: "To je zbytečně složité, A samo o sobě stačí k určení pravdivosti."
                 }
+            },
             },
             {
                 q: "Který z těchto výrazů je ekvivalentní s '¬A → ¬B'?",
@@ -568,6 +608,7 @@ window.data_vyrokova_logika = {
                     c: "To je jen původní výraz, hledali jsme jeho ekvivalent v jiném tvaru."
                 }
             },
+            },
             {
                 q: "Jak vypadá negace věty 'Prší a mrzne'?",
                 a: "Neprší nebo nemrzne",
@@ -579,6 +620,7 @@ window.data_vyrokova_logika = {
                     b: "To je příliš silné – k popření 'obojího' stačí, aby neplatilo jen jedno z nich.",
                     c: "Zde zcela chybí negace jednotlivých faktů."
                 }
+            },
             },
             {
                 q: "Co znamená v logice výraz 'A ⊻ B' (exkluzivní disjunkce)?",
@@ -592,6 +634,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je jen jedna část podmínky, nepokrývá všechny stavy vylučujícího nebo."
                 }
             },
+            },
             {
                 q: "Výraz '(A → B) ∧ (A → ¬B)' znamená, že:",
                 a: "A musí být nepravdivé",
@@ -603,6 +646,7 @@ window.data_vyrokova_logika = {
                     b: "Kdyby bylo B pravdivé, druhá implikace by při pravdivém A selhala.",
                     c: "To by vedlo ke sporu v druhé části formule."
                 }
+            },
             },
             {
                 q: "Jak lze zjednodušit formuli '(A ∧ B) ∨ (A ∧ ¬B) ∨ (¬A ∧ B) ∨ (¬A ∧ ¬B)'?",
@@ -616,6 +660,7 @@ window.data_vyrokova_logika = {
                     c: "Exkluzivní nebo platí jen když se hodnoty liší, což pokrývá jen dva z těchto čtyř případů."
                 }
             },
+            },
             {
                 q: "Formule 'A ∨ (B ∨ C)' je totéž jako '(A ∨ B) ∨ C'. Jak se tato vlastnost nazývá?",
                 a: "Asociativita",
@@ -627,6 +672,7 @@ window.data_vyrokova_logika = {
                     b: "Distributivita se týká kombinace různých spojek, např. A ∧ (B ∨ C).",
                     c: "Komutativita říká, že nezáleží na pořadí (A ∨ B je totéž co B ∨ A)."
                 }
+            },
             },
             {
                 q: "Který z těchto výrazů je tautologie?",
@@ -640,6 +686,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je známé jako Peirceův zákon, ale bez dalších úprav to není tak zřejmé jako varianta A."
                 }
             },
+            },
             {
                 q: "Jak zní negace složené konjunkce '¬((A ∨ B) ∧ (C ∨ D))' podle De Morganových zákonů?",
                 a: "(¬A ∧ ¬B) ∨ (¬C ∧ ¬D)",
@@ -651,6 +698,7 @@ window.data_vyrokova_logika = {
                     b: "Zde je chyba - negace konjunkce dává disjunkci, ne konjunkci. Také negace disjunkce dává konjunkci, ne disjunkci.",
                     c: "Toto úplně chybí negace jednotlivých proměnných a vnější negace."
                 }
+            },
             },
             {
                 q: "Pravdivostní tabulka pro 'A ↔ B' má jedničky v řádcích:",
@@ -664,6 +712,7 @@ window.data_vyrokova_logika = {
                     c: "To by platilo pro konjunkci, ekvivalenci stačí i shoda ve lži."
                 }
             },
+            },
             {
                 q: "Výraz 'A ∧ ¬A' je klasickým příkladem:",
                 a: "Tautologie",
@@ -675,6 +724,7 @@ window.data_vyrokova_logika = {
                     b: "Kontradikce (spor) je výraz, který nemůže být nikdy pravdivý. Nic nemůže mít vlastnost A a zároveň vlastnost ne-A v ten samý okamžik a ve stejném smyslu.",
                     c: "Splnitelná formule musí mít alespoň jednu možnost, kdy je pravdivá."
                 }
+            },
             },
             {
                 q: "Co získáme roznásobením (distribucí) výrazu 'A ∧ (B ∨ C)'?",
@@ -688,6 +738,7 @@ window.data_vyrokova_logika = {
                     c: "Zde chybí závorky, které jsou pro jednoznačnost nezbytné."
                 }
             },
+            },
             {
                 q: "Kdy je formule 'A → (B ∧ C)' nepravdivá?",
                 a: "Když A je 1 a zároveň (B je 0 nebo C je 0)",
@@ -700,9 +751,9 @@ window.data_vyrokova_logika = {
                     c: "Když je předpoklad 0, implikace je vždy automaticky pravdivá."
                 }
             },
+            },
             {
                 q: "Jak se nazývá pravidlo: 'Z (A → B) a A odvoď B'?",
-                wiki: ["vyrokova_logika", "pravidla_usudku_prehled"],
                 a: "Modus Ponens",
                 b: "Modus Tollens",
                 c: "Hypotetický sylogismus",
@@ -712,6 +763,7 @@ window.data_vyrokova_logika = {
                     b: "Modus Tollens odvozuje neplatnost předpokladu z neplatnosti následku.",
                     c: "Hypotetický sylogismus řetězí dvě implikace (z A plyne B, z B plyne C, tedy z A plyne C)."
                 }
+            },
             },
             {
                 q: "Který z těchto výrazů vyjadřuje, že A i B mají ROZDÍLNOU hodnotu?",
@@ -724,6 +776,7 @@ window.data_vyrokova_logika = {
                     b: "Negace ekvivalence je pravdivá právě tehdy, když ekvivalence samotná neplatí – tedy když se hodnoty A a B liší. Je to jeden ze způsobů, jak zapsat vylučující nebo (XOR).",
                     c: "To připouští i situaci, kdy jsou obě stejné (obě pravdivé)."
                 }
+            },
             },
             {
                 q: "Pokud platí '(A ∨ B) → C' a víme, že C je nepravdivé, co můžeme říct o A?",
@@ -744,7 +797,6 @@ window.data_vyrokova_logika = {
             "questions": [
             {
                 q: "Jak zní negace formule 'A ∨ (B ∧ C)'?",
-                wiki: ["vyrokova_logika", "de_morgan_zakony"],
                 a: "¬A ∧ (¬B ∨ ¬C)",
                 b: "¬A ∨ (¬B ∧ ¬C)",
                 c: "¬A ∧ ¬B ∧ ¬C",
@@ -754,6 +806,7 @@ window.data_vyrokova_logika = {
                     b: "Zde se zapomnělo změnit hlavní spojku ∨ na ∧.",
                     c: "Zde se nesprávně změnila spojka uvnitř závorky na ∧, přestože De Morgan velí otočit ji na ∨."
                 }
+            },
             },
             {
                 q: "Který z těchto výrazů je ekvivalentní s '(A → B) ∧ (A → C)'?",
@@ -767,6 +820,7 @@ window.data_vyrokova_logika = {
                     c: "Tento zápis má úplně jinou pravdivostní tabulku (vyžaduje oba předpoklady pro jeden závěr)."
                 }
             },
+            },
             {
                 q: "Formule '¬A → (B ∧ ¬B)' znamená, že:",
                 a: "A musí být pravdivé",
@@ -778,6 +832,7 @@ window.data_vyrokova_logika = {
                     b: "B na výsledek nemá vliv, protože celá závorka se sporem je vždy nepravdivá.",
                     c: "Kdyby bylo A nepravdivé, pak ¬A by bylo pravda a z 1 by plynulo 0, což by formuli zneplatnilo."
                 }
+            },
             },
             {
                 q: "Co je výsledkem 'A ∨ ¬(A ∧ B)'?",
@@ -791,6 +846,7 @@ window.data_vyrokova_logika = {
                     c: "B je zde irelevantní, protože 'A nebo ne-A' už samo o sobě zaručuje pravdivost celku."
                 }
             },
+            },
             {
                 q: "Jak zapíšeme: 'Půjdu na procházku (P), jen když nebude pršet (¬R) a budu mít čas (T)'?",
                 a: "P → (¬R ∧ T)",
@@ -802,6 +858,7 @@ window.data_vyrokova_logika = {
                     b: "Toto by znamenalo 'Pokud neprší a mám čas, určitě půjdu' (postačující podmínka), což věta netvrdí.",
                     c: "Ekvivalence je v přirozeném jazyce vzácná, věta nepraví, že pokaždé, když neprší a mám čas, musím jít ven."
                 }
+            },
             },
             {
                 q: "Který výraz je ekvivalentní s 'A ↔ B'?",
@@ -815,6 +872,7 @@ window.data_vyrokova_logika = {
                     c: "To je sice pravda (také ekvivalent), ale varianta A je základním strukturálním rozkladem."
                 }
             },
+            },
             {
                 q: "Zákon 'Syllogismus hypotheticus' říká: Pokud (A → B) a (B → C), pak:",
                 a: "A → C",
@@ -826,6 +884,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je chyba, směr implikace nelze bez dalšího otočit.",
                     c: "To je příliš silné, nevíme, zda A nebo C skutečně nastalo, známe jen vztah mezi nimi."
                 }
+            },
             },
             {
                 q: "Co získáme negací ekvivalence '¬(A ↔ B)'?",
@@ -839,6 +898,7 @@ window.data_vyrokova_logika = {
                     c: "V logice existuje pro jeden vztah často mnoho různých, ale ekvivalentních zápisů."
                 }
             },
+            },
             {
                 q: "Jak zjednodušíte výraz '(A ∧ B) ∨ (A ∧ ¬B)'?",
                 a: "A",
@@ -850,6 +910,7 @@ window.data_vyrokova_logika = {
                     b: "B se v tomto výrazu vyruší, protože v jedné části je a v druhé je jeho negace.",
                     c: "To by platilo, kdyby tam nebyla ta druhá část s ¬B."
                 }
+            },
             },
             {
                 q: "Co znamená zápis 'A ⊨ B' (logické vyplývání)?",
@@ -863,6 +924,7 @@ window.data_vyrokova_logika = {
                     c: "To by byl vztah negace, nikoliv vyplývání."
                 }
             },
+            },
             {
                 q: "Jaká je hodnota formule '(A ∨ B) ∧ ¬A'?",
                 a: "Stejná jako (¬A ∧ B)",
@@ -874,6 +936,7 @@ window.data_vyrokova_logika = {
                     b: "Může být pravdivá, pokud A je 0 a B je 1.",
                     c: "To určitě ne, protože výraz obsahuje ¬A."
                 }
+            },
             },
             {
                 q: "Která z následujících formulí je 'kontingentní' (někdy 1, někdy 0)?",
@@ -887,6 +950,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je kontradikce, je nepravdivá vždy."
                 }
             },
+            },
             {
                 q: "Co nám říká 'Zákon duality' pro konjunkci a disjunkci?",
                 a: "Že se chovají zrcadlově vzhledem k negaci",
@@ -898,6 +962,7 @@ window.data_vyrokova_logika = {
                     b: "To rozhodně nejsou, 'a' a 'nebo' mají v logice velmi odlišné důsledky.",
                     c: "Nemají, konjunkce má standardně přednost před disjunkcí."
                 }
+            },
             },
             {
                 q: "Co vyjadřuje formule '(A ∧ B) → (A ∨ B)'?",
@@ -911,6 +976,7 @@ window.data_vyrokova_logika = {
                     c: "Není to kontingentní, pravdivost nezávisí na konkrétních hodnotách A a B."
                 }
             },
+            },
             {
                 q: "Výraz 'A → (B → C)' je ekvivalentní s:",
                 a: "(A ∧ B) → C",
@@ -922,6 +988,7 @@ window.data_vyrokova_logika = {
                     b: "To by znamenalo, že k závěru C stačí jen jeden z nich, což je silnější než zadání.",
                     c: "To by znamenalo, že A samo o sobě zaručuje B i C, což zadání netvrdí."
                 }
+            },
             },
             {
                 q: "Co je to 'Prázdná pravdivost' (Vacuous truth)?",
@@ -935,6 +1002,7 @@ window.data_vyrokova_logika = {
                     c: "Prázdná pravda je typ pravdy, kontradikce je typ lži."
                 }
             },
+            },
             {
                 q: "Který z těchto zápisů je negací ekvivalence ¬(A ↔ B) pomocí implikací?",
                 a: "¬(A → B) ∨ ¬(B → A)",
@@ -946,6 +1014,7 @@ window.data_vyrokova_logika = {
                     b: "To by znamenalo, že neplatí ani jeden směr, což je příliš silné (to by nastalo jen v konkrétních případech).",
                     c: "Toto je tautologie (v klasické logice platí vždy alespoň jeden směr implikace mezi dvěma výroky)."
                 }
+            },
             },
             {
                 q: "Jak zní 'Zákon absorpce' pro disjunkci?",
@@ -959,6 +1028,7 @@ window.data_vyrokova_logika = {
                     c: "Logika má mnoho vrstev zjednodušování, tyto dvě patří k těm velmi užitečným."
                 }
             },
+            },
             {
                 q: "Mějme formuli 'A ∨ B'. Pokud k ní přidáme '¬B', co získáme?",
                 a: "A",
@@ -970,6 +1040,7 @@ window.data_vyrokova_logika = {
                     b: "To by nedávalo smysl, vyloučení B nepotvrzuje neplatnost A.",
                     c: "Spor by nastal, kdybychom měli B a ¬B zároveň. Zde máme 'A nebo B' a k tomu 'ne-B'."
                 }
+            },
             },
             {
                 q: "Kolik spojek obsahuje formule '¬(A ∧ B) ↔ (¬A ∨ ¬B)'?",
@@ -990,7 +1061,6 @@ window.data_vyrokova_logika = {
             "questions": [
             {
                 q: "Jak vypadá negace formule 'A → (B ∨ C)'?",
-                wiki: ["vyrokova_logika", "pokrocile_koncepty"],
                 a: "A ∧ ¬B ∧ ¬C",
                 b: "¬A ∨ (B ∨ C)",
                 c: "A ∧ (¬B ∨ ¬C)",
@@ -1000,6 +1070,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je pouze ekvivalentní přepis původní formule, nikoliv její negace.",
                     c: "Zde se u De Morgana zapomnělo otočit spojku ∨ na ∧."
                 }
+            },
             },
             {
                 q: "Co získáme zjednodušením výrazu '(A ∧ B) → B'?",
@@ -1013,6 +1084,7 @@ window.data_vyrokova_logika = {
                     c: "Není to jen B, je to vztah, který je vždy pravdivý (1)."
                 }
             },
+            },
             {
                 q: "Výraz '¬A → A' je ekvivalentní s čím?",
                 a: "A",
@@ -1024,6 +1096,7 @@ window.data_vyrokova_logika = {
                     b: "Kdyby platilo ¬A, pak by z 1 plynulo 0, což by formuli zneplatnilo.",
                     c: "Není to spor, je to legitimní (byť neintuitivní) způsob, jak potvrdit A."
                 }
+            },
             },
             {
                 q: "Jak zní negace věty: 'Pokud budu pít (P), nebudu řídit (¬R)'?",
@@ -1037,6 +1110,7 @@ window.data_vyrokova_logika = {
                     c: "To je pouze jiná implikace, nikoliv popření té původní."
                 }
             },
+            },
             {
                 q: "Co je to 'Kontrapozice' pro výraz '¬B → ¬A'?",
                 a: "A → B",
@@ -1048,6 +1122,7 @@ window.data_vyrokova_logika = {
                     b: "Zde chybí negování členů při prohození.",
                     c: "Zde chybí prohození stran."
                 }
+            },
             },
             {
                 q: "Výraz '(A → B) ∧ (B → C) ∧ A' nám dovoluje odvodit:",
@@ -1061,6 +1136,7 @@ window.data_vyrokova_logika = {
                     c: "Závěr B je sice pravdivý, ale ¬C je v přímém rozporu s logickým vyplýváním."
                 }
             },
+            },
             {
                 q: "Který z těchto výrazů je ekvivalentní s 'A ∧ (B ↔ C)'?",
                 a: "(A ∧ B ∧ C) ∨ (A ∧ ¬B ∧ ¬C)",
@@ -1072,6 +1148,7 @@ window.data_vyrokova_logika = {
                     b: "Tento rozpis odpovídá spíše disjunkci (A ∧ (B ∨ C)).",
                     c: "To je jen jedna z možností (když platí vše), zapomíná na případ, kdy neplatí B ani C."
                 }
+            },
             },
             {
                 q: "Co znamená, když je množina formulí 'nesplnitelná'?",
@@ -1085,6 +1162,7 @@ window.data_vyrokova_logika = {
                     c: "Tabulku lze vytvořit vždy, jen v posledním sloupci budou samé nuly."
                 }
             },
+            },
             {
                 q: "Formule '(A ∨ B) ↔ (B ∨ A)' vyjadřuje jakou vlastnost?",
                 a: "Komutativitu",
@@ -1096,6 +1174,7 @@ window.data_vyrokova_logika = {
                     b: "Asociativita řeší uzávorkování tří a více členů stejného typu.",
                     c: "Distributivita řeší vztah dvou různých spojek (např. ∧ a ∨)."
                 }
+            },
             },
             {
                 q: "Jak zní negace věty 'Prší nebo sněží a mrzne' (¬(P ∨ (S ∧ M)))?",
@@ -1109,6 +1188,7 @@ window.data_vyrokova_logika = {
                     c: "Zde se v první části chybně ponechala spojka ∨."
                 }
             },
+            },
             {
                 q: "Výraz 'A → (B ∧ ¬B)' je ekvivalentní s:",
                 a: "¬A",
@@ -1120,6 +1200,7 @@ window.data_vyrokova_logika = {
                     b: "Kdyby platilo A, celá formule by byla nepravdivá.",
                     c: "B je pouze součástí vnitřního sporu, jeho samotná hodnota výsledek neurčuje."
                 }
+            },
             },
             {
                 q: "Co je 'Reversní (obrácená) implikace' k A → B?",
@@ -1133,6 +1214,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je kontrapozice (která je naopak s původní ekvivalentní)."
                 }
             },
+            },
             {
                 q: "Jak zjednodušíte 'A ∨ (A ∧ B) ∨ (A ∧ C)'?",
                 a: "A",
@@ -1144,6 +1226,7 @@ window.data_vyrokova_logika = {
                     b: "To by byla pravda, kdyby tam nebyla ta konjunkce uvnitř závorek.",
                     c: "To je distributivní rozklad, který je ale v tomto případě složitější než prosté A."
                 }
+            },
             },
             {
                 q: "Zápis 'A ↔ (A ∨ B)' je pravdivý právě tehdy, když:",
@@ -1157,6 +1240,7 @@ window.data_vyrokova_logika = {
                     c: "To je příliš úzká podmínka."
                 }
             },
+            },
             {
                 q: "Která spojka je 'duální' ke spojce ∧ (konjunkce)?",
                 a: "∨ (disjunkce)",
@@ -1168,6 +1252,7 @@ window.data_vyrokova_logika = {
                     b: "Implikace nemá v základní dualitě přímý jednoduchý protějšek tohoto typu.",
                     c: "Negace je operátor, který dualitu zprostředkovává, ale není duální spojkou k ∧."
                 }
+            },
             },
             {
                 q: "Výrok 'A ↔ ¬A' je:",
@@ -1181,6 +1266,7 @@ window.data_vyrokova_logika = {
                     c: "Kontingence by vyžadovala aspoň jednu jedničku, což zde nenastane."
                 }
             },
+            },
             {
                 q: "Co znamená v logice symbol '⊥' (falsum)?",
                 a: "Logickou konstantu pro 'Nepravdu'",
@@ -1192,6 +1278,7 @@ window.data_vyrokova_logika = {
                     b: "V geometrii ano, ale v logice znamená nepravdu.",
                     c: "Pro pravdu (verum) se používá symbol ⊤."
                 }
+            },
             },
             {
                 q: "Jak zapíšeme: 'A a B jsou obě nepravdivé'?",
@@ -1205,6 +1292,7 @@ window.data_vyrokova_logika = {
                     c: "To znamená 'Alespoň jedna z nich neplatí'."
                 }
             },
+            },
             {
                 q: "Pravidlo 'A ⊢ A ∨ B' se nazývá:",
                 a: "Introdukce disjunkce",
@@ -1216,6 +1304,7 @@ window.data_vyrokova_logika = {
                     b: "Eliminace by znamenala, že se spojky zbavujeme.",
                     c: "To by vyžadovalo mít k dispozici jak A, tak B."
                 }
+            },
             },
             {
                 q: "Pokud o výroku víme, že je 'nesplnitelný', co platí o jeho negaci?",
@@ -1246,6 +1335,7 @@ window.data_vyrokova_logika = {
                     c: "I když se to zdá blízko, tento rozpis (pomocí De Morgana z (A ∧ B) → C) je správně, ale varianta A je čistě strukturální ekvivalent v rámci implikací."
                 }
             },
+            },
             {
                 q: "Co můžeme odvodit z premis 'A ∨ B' a 'A → C' a 'B → C'?",
                 a: "C",
@@ -1257,6 +1347,7 @@ window.data_vyrokova_logika = {
                     b: "To nevíme, disjunkce připouští, že platí jen jeden z nich.",
                     c: "To by byl přímý rozpor s vyvozeným závěrem."
                 }
+            },
             },
             {
                 q: "Jak zní negace formule '(A ∧ B) ↔ C'?",
@@ -1270,6 +1361,7 @@ window.data_vyrokova_logika = {
                     c: "To je jen jedna z podmínek, nikoliv úplné popření vztahu ekvivalence."
                 }
             },
+            },
             {
                 q: "Výraz '(A → B) → A' je pravdivý právě tehdy, když:",
                 a: "Platí A",
@@ -1281,6 +1373,7 @@ window.data_vyrokova_logika = {
                     b: "Hodnota B je zde zcela irelevantní, zkuste si dosadit 1 a 0 do tabulky.",
                     c: "Kdyby neplatilo A, výraz by byl 0, protože (0 → B) je 1 a z 1 nemůže plynout 0."
                 }
+            },
             },
             {
                 q: "Která z těchto formulí je tautologie?",
@@ -1294,6 +1387,7 @@ window.data_vyrokova_logika = {
                     c: "To by platilo jen v případě, že A i B mají vždy stejnou hodnotu, což obecně neplatí."
                 }
             },
+            },
             {
                 q: "Co lze říct o formuli '¬(A → B) ∧ (B → A)'?",
                 a: "Je to kontradikce",
@@ -1305,6 +1399,7 @@ window.data_vyrokova_logika = {
                     b: "Tautologie to není, stačí dosadit A=0 a vyjde 0.",
                     c: "Správně. Formule je pravdivá v jediném případě: když A=1 a B=0. Protože existuje aspoň jeden takový řádek, je splnitelná. Protože existují i řádky s 0, není to tautologie (neplatná)."
                 }
+            },
             },
             {
                 q: "Jak zjednodušíte výraz '¬(A ↔ B) ↔ (A ↔ ¬B)'?",
@@ -1318,6 +1413,7 @@ window.data_vyrokova_logika = {
                     c: "Výsledek nezávisí na konkrétních hodnotách A a B, ale na jejich vzájemném vztahu."
                 }
             },
+            },
             {
                 q: "Pravidlo 'Ex Falso Quodlibet' (z nepravdy plyne cokoliv) se zapisuje jako:",
                 a: "¬A → (A → B)",
@@ -1329,6 +1425,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je přímější zápis: ze sporu (A a zároveň ne-A) lze odvodit úplně jakýkoliv závěr B. V klasické logice spor 'exploduje' a zneplatňuje systém.",
                     c: "Logika uznává oba zápisy jako vyjádření téhož principu 'exploze'."
                 }
+            },
             },
             {
                 q: "Pokud 'A ⊨ B' a 'B ⊨ C', platí vždy 'A ⊨ C'?",
@@ -1342,6 +1439,7 @@ window.data_vyrokova_logika = {
                     c: "To je zbytečné omezení, tranzitivita platí pro jakékoliv formule."
                 }
             },
+            },
             {
                 q: "Jak zní negace věty 'Pouze pokud mrzne (M), tak sněží (S)'?",
                 a: "Sněží a nemrzne",
@@ -1353,6 +1451,7 @@ window.data_vyrokova_logika = {
                     b: "To je disjunkce, která s popřením nutné podmínky nesouvisí.",
                     c: "To by původní tvrzení naopak potvrzovalo (v souladu s kontrapozicí)."
                 }
+            },
             },
             {
                 q: "Výraz '(A ∧ B) ∨ (¬A ∧ B) ∨ (A ∧ ¬B) ∨ (¬A ∧ ¬B)' je:",
@@ -1366,6 +1465,7 @@ window.data_vyrokova_logika = {
                     c: "A ∨ B pokrývá jen tři z těchto čtyř případů (chybí mu ¬A ∧ ¬B)."
                 }
             },
+            },
             {
                 q: "Co znamená zápis 'Γ ⊢ A' v teorii důkazů?",
                 a: "Z množiny předpokladů Γ lze odvodit výrok A",
@@ -1377,6 +1477,7 @@ window.data_vyrokova_logika = {
                     b: "Rozpor by se značil spíše symbolem sporu (⊥) na straně závěru.",
                     c: "Γ může být libovolně velká množina axiomů nebo dříve dokázaných tvrzení."
                 }
+            },
             },
             {
                 q: "Jak lze zjednodušit 'A ↔ (A ∧ B)'?",
@@ -1390,6 +1491,7 @@ window.data_vyrokova_logika = {
                     c: "Disjunkce má úplně jinou tabulku."
                 }
             },
+            },
             {
                 q: "Který operátor je definován jako '¬A ∨ ¬B'?",
                 a: "NAND (Shefferův operátor)",
@@ -1401,6 +1503,7 @@ window.data_vyrokova_logika = {
                     b: "NOR je negací disjunkce, tedy ¬(A ∨ B), což je ¬A ∧ ¬B.",
                     c: "XOR je (A ∨ B) ∧ ¬(A ∧ B)."
                 }
+            },
             },
             {
                 q: "Výraz 'A → (B ∨ ¬B)' je:",
@@ -1414,6 +1517,7 @@ window.data_vyrokova_logika = {
                     c: "B se v závěru vyruší díky zákonu vyloučeného třetího."
                 }
             },
+            },
             {
                 q: "Který z těchto výrazů NEPATŘÍ mezi De Morganovy zákony?",
                 a: "¬(A → B) ≡ A ∧ ¬B",
@@ -1425,6 +1529,7 @@ window.data_vyrokova_logika = {
                     b: "Toto je klasický De Morganův zákon pro konjunkci.",
                     c: "Toto je klasický De Morganův zákon pro disjunkci."
                 }
+            },
             },
             {
                 q: "Mějme formuli '(A → B) ∧ (¬A → B)'. Co z ní vyplývá?",
@@ -1438,6 +1543,7 @@ window.data_vyrokova_logika = {
                     c: "To by byl spor s výsledkem."
                 }
             },
+            },
             {
                 q: "Co získáme negací 'A ↔ (B ∨ C)'?",
                 a: "(A ∧ ¬B ∧ ¬C) ∨ (¬A ∧ (B ∨ C))",
@@ -1450,6 +1556,7 @@ window.data_vyrokova_logika = {
                     c: "Toto je ve skutečnosti ekvivalentní k původní negaci, ale varianta A je explicitním rozpisem 'kdy to neplatí'."
                 }
             },
+            },
             {
                 q: "V klasické logice platí, že 'A ∧ B ⊨ A'. Jak se tato vlastnost závěru 'A' nazývá?",
                 a: "Monotoničnost",
@@ -1461,6 +1568,7 @@ window.data_vyrokova_logika = {
                     b: "Reflexivita znamená A ⊨ A.",
                     c: "Slabá konjunkce není standardní termín pro tuto vlastnost."
                 }
+            },
             },
             {
                 q: "Co je cílem 'Rezonování ad absurdum'?",
