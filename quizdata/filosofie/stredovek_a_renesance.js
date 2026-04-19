@@ -15,7 +15,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tento zásadní přerod lze rozdělit do pěti logických kroků: <br>1. <strong>Ježíšovo kázání</strong>, které kladlo důraz na morální čistotu, lásku k bližnímu, odpuštění, ... <br>2. <strong>Misijní činnost</strong> (především apoštola Pavla). Šíření skrz obchodní cesty do velkých (oslovování nižších vrstev a žen díky nabídce rovnosti). <br>3. <strong>Krize impéria</strong>, kdy během válek a ekonomických problémů tradiční římská náboženství selhávala v poskytování útěchy. Křesťanství nabízí pevnou morálku a posmrtný život. <br>4. <strong>Milánský edikt (313)</strong>, kterým císař Konstantin ukončil pronásledování a udělal z křesťanství legální náboženství. <br>5. <strong>Ustanovení státním náboženstvím (380)</strong> císařem Theodosiem I., čímž křesťanství definitivně zvítězilo nad pohanstvím.",
             c: "Chyba. Ačkoliv křesťanství později sloužilo ke sjednocení říše, jeho prosazení bylo výsledkem dlouhodobého duchovního a společenského vývoje, nikoliv náhlým vojenským nařízením."
         },
-        tag: "pocatky"
     },
     {
         q: "Z jakého důvodu začali raní křesťanští myslitelé (apologeti) ve 2. století využívat antickou filozofii k obhajobě své víry?",
@@ -28,8 +27,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Apologeti (např. Justin Mučedník) stáli před výzvou: jak vysvětlit víru vzdělaným lidem v Římě, pro které bylo křesťanství jen 'pověrou'. Začali proto tvrdit, že antičtí filozofové hledali stejnou pravdu (Logos), která se plně zjevila v Kristu. Filozofie tak byla interpretována jako 'příprava na evangelium'.",
             c: "Chyba. Stát v této době křesťanství spíše potíral; využití filozofie bylo dobrovolným krokem křesťanských intelektuálů k obraně víry."
         },
-        tag: "apologetika",
-        wiki: ["filosofie", "patristika"]
     },
     {
         q: "V čem spočíval hlavní věroučný spor mezi ranou církví a gnosticismem?",
@@ -42,7 +39,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Gnosticismus byl pro křesťanství nebezpečným konkurentem. Gnostici věřili, že spása je určena jen elitě 'osvícených', kteří znají tajné poznání (gnózi). Církev proti tomu postavila princip univerzální spásy: cesta k Bohu není určena intelektuální výjimečností, ale prostou vírou dostupnou každému člověku.",
             c: "Chyba. Šlo o hluboký metafyzický konflikt o podstatu stvoření, dobra a zla."
         },
-        tag: "gnosticismus"
     },
     {
         q: "Co je podstatou Origenova (185 - 253) učení o tzv. apokatastasis?",
@@ -55,7 +51,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Toto je tradiční církevní postoj, proti kterému Origenes svou optimistickou vizí všeobecné spásy vystupoval.",
             c: "Chyba. Origenes sice věřil v preexistenci duší (že duše existovaly před tělem), ale převtělování do zvířat odmítal jako pohanský nesmysl."
         },
-        tag: "origenes"
     },
     {
         q: "Jak Origenes chápal vztah mezi Bohem Otcem a Synem (Kristem)?",
@@ -68,7 +63,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Origenes učil tzv. subordinacianismus. Podle něj je Otec absolutní počátek, zatímco Syn (Logos) je mu podřízen a slouží jako prostředník při stvoření a komunikaci se světem. Ačkoliv Syna považoval za božského, tato hierarchie se později stala terčem kritiky při formulování dogmatu o Svaté Trojici.",
             c: "Chyba. Origenes jednoznačně uznával božství Krista jako věčného Logu, nikoliv jen jako obdařeného člověka."
         },
-        tag: "origenes"
     },    
     {
         q: "Jaký byl postoj svatého Ambrože (340 - 397) k vztahu mezi církví a světskou mocí (císařem)?",
@@ -81,7 +75,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Ambrož proslul výrokem, že 'císař je v církvi, nikoliv nad církví'. Dokázal to v praxi, když donutil císaře Theodosia k veřejnému pokání za masakr v Soluni. Tím položil základy západního pojetí vztahu církve a státu, kde církev slouží jako morální autorita, které se musí podřídit i panovník.",
             c: "Chyba. Ambrož byl velmi aktivní politik a biskup v Miláně, který křesťanství prosazoval jako pilíř říše."
         },
-        tag: "ambroz"
     },
     {
         q: "Jakým konkrétním způsobem ovlivnil svatý Ambrož život a myšlení svatého Augustina?",
@@ -94,7 +87,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Jejich vztah byl naopak vztahem úcty a hlubokého duchovního ovlivnění.",
             c: "Chyba. Ačkoliv byl Ambrož vzdělaný, Augustin se s řečtinou potýkal celý život a jejich vztah byl primárně o teologickém a řečnickém vlivu."
         },
-        tag: "ambroz"
     },
     {
         q: "Jaký zásadní rozdíl v přístupu k rozumu představují postavy Tertulliana (160 - 220) a svatého Augustina (354 - 430)?",
@@ -107,7 +99,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tertullian kladl otázku: 'Co mají společného Atény a Jeruzalém?' a tvrdil, že víra má být nezávislá na logice. Svatý Augustin naopak vytvořil syntézu: rozum nám pomáhá k pravdě směřovat a víra nám umožňuje ji skutečně vlastnit. Podle Augustina je třeba 'věřit, abychom rozuměli'.",
             c: "Chyba. Augustin filozofii (zejména novoplatonismus) integroval do základů křesťanského myšlení."
         },
-        tag: "srovnani"
     },
     {
         q: "Jakým způsobem ovlivnil Milánský edikt (313 n. l.) další vývoj křesťanského myšlení?",
@@ -120,7 +111,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Dokud bylo křesťanství pronásledováno, existovala v něm velká názorová roztříštěnost. Jakmile se stalo legálním (a později státním) náboženstvím, bylo nutné jasně definovat 'oficiální pravdu' na církevních koncilech. Filozofie se stala nástrojem k budování logického a jednotného systému víry.",
             c: "Chyba. Edikt řešil náboženskou svobodu, nikoliv povinné školní osnovy pro duchovní."
         },
-        tag: "dejiny"
     },
  {
         q: "Jaký vliv měl osobní životní obrat (konverze) svatého Augustina na jeho filozofické pojetí člověka?",
@@ -133,8 +123,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Augustinova vlastní zkušenost bouřlivého mládí a hledání smyslu života ho dovedla k závěru, že lidské síly jsou omezené. Člověk sice má svobodnou vůli, ale ta je bez Boží milosti (osvícení) neschopná dosáhnout nejvyššího Dobra. Tento pesimističtější pohled na lidskou přirozenost ovlivnil křesťanství na staletí.",
             c: "Chyba. Augustin se stal biskupem a jedním z nejplodnějších filozofů v dějinách; rozum pro něj zůstal klíčovým nástrojem víry."
         },
-        tag: "augustinus",
-        wiki: ["filosofie", "augustinus"]
     },
     {
         q: "Svatý Augustin se musel vypořádat s otázkou: 'Pokud je Bůh dobrý, odkud se bere zlo?'. Jak zní jeho řešení (teodicea)?",
@@ -147,7 +135,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Augustin argumentoval, že vše, co existuje, je dobré, protože je to stvořeno Bohem. Zlo přirovnával k tinnitu (pískání v uších) nebo tmě – tma sama o sobě není 'věc', je to jen absence světla. Zlo vzniká tehdy, když člověk svou svobodnou vůlí upřednostní nižší statky (hmotu, sobectví) před nejvyšším Dobrem.",
             c: "Chyba. Bůh jakožto absolutní Dobro nemůže být zdrojem něčeho, co by mělo podstatu zla."
         },
-        tag: "teodicea"
     },
     {
         q: "V čem spočívá Augustinovo 'lineární pojetí času' ve srovnání s antickým vnímáním dějin?",
@@ -160,7 +147,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Antika vnímala čas jako kruh, kde se vše vrací. Augustin v díle 'O Boží obci' prosadil lineární model: dějiny začaly stvořením světa, mají svůj střed v Kristu a směřují k definitivnímu konci (poslednímu soudu). Tento pohled na dějiny jako na 'příběh se smyslem' tvoří základ západního historického myšlení.",
             c: "Chyba. Čas je pro Augustina rozměrem lidské duše, která si pamatuje minulost a očekává budoucnost v nevratném sledu."
         },
-        tag: "dejiny"
     },
     {
         q: "Jakým způsobem Augustin v gnoseologii (teorii poznání) předznamenal mnohem pozdější pojetí Reného Descarta?",
@@ -173,7 +159,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Aby Augustin vyvrátil radikální skepsi, argumentoval: 'I když pochybuji o všem, nemohu pochybovat o tom, že pochybuji'. Tím položil základy pro vnitřní sebeuvědomění jako výchozí bod poznání. Jeho věta 'Si fallor, sum' (Mýlím-li se, jsem) je přímým předchůdcem slavného Descartesova 'Myslím, tedy jsem'.",
             c: "Chyba. Augustinova metoda je introspektivní – cesta k pravdě vede skrze návrat do vlastního nitra (In interiore homine habitat veritas)."
         },
-        tag: "gnoseologie"
     },
     {
         q: "V díle 'O Boží obci' Augustin popisuje zápas dvou 'obcí' (států). Co tyto obce symbolizují?",
@@ -186,7 +171,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tento dualismus vysvětluje Augustinovo vidění dějin. Pozemská obec (civitas terrena) je založena na sobectví a pýše, zatímco Boží obec (civitas Dei) na pokoře a službě Bohu. Obě obce jsou v tomto světě promíseny a k jejich definitivnímu oddělení dojde až na konci dějin.",
             c: "Chyba. Augustinovo vidění světa bylo etické a náboženské, nikoliv ekonomické."
         },
-        tag: "etika"
     },
     {
         q: "Čím se svatý Jeroným (347 - 420) nejvýznamněji zapsal do dějin křesťanské vzdělanosti a kultury?",
@@ -199,7 +183,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Jeroným byl jedním z nejvzdělanějších mužů své doby. Na pokyn papeže přeložil Bibli z původních jazyků (hebrejštiny a řečtiny) do lidové latiny (vulgata editio). Tento překlad sjednotil latinský západ a na více než tisíc let se stal základním pramenem pro veškerou evropskou liturgii, teologii i literaturu.",
             c: "Chyba. Univerzity vznikly až mnohem později ve vrcholném středověku; Jeroným působil jako učenec a asketa v Betlémě."
         },
-        tag: "jeronym"
     },    
     {
         q: "Proč je postava Boëthia (480 - 524) označována jako 'poslední Říman' a most mezi antikou a středověkem?",
@@ -212,7 +195,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Boëthius si uvědomoval, že antická vzdělanost zaniká, a proto se snažil uchovat řecké myšlení pro budoucí generace. Jeho 'Útěcha z filozofie' ukazuje, že filozofie může člověku pomoci vyrovnat se s nespravedlností a osudem (kolo Štěstěny) i v těch nejtěžších chvílích. Pro středověk se stal hlavním učitelem logiky.",
             c: "Chyba. Boëthius byl křesťan, ale ve svém myšlení dokázal mistrně propojit křesťanskou víru s hlubokou antickou etikou a logikou."
         },
-        tag: "boethius"
     },
     {
         q: "Proč je Boëthiovo 'Kolo Štěstěny' tak důležitým symbolem pro středověké chápání osudu?",
@@ -225,7 +207,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Boëthius v 'Útěše z filozofie' učí, že pravé štěstí nelze najít v pomíjivých věcech (bohatství, moc), které se točí jako kolo. Člověk má hledat klid ve svém nitru a v Bohu, který stojí v nehybném středu tohoto kola a vidí celý koloběh světa jako harmonický celek.",
             c: "Chyba. Ačkoliv byl Boëthius vzdělaný i v astronomii, tento symbol se týká morálky a osudu."
         },
-        tag: "boethius"
     },
     {
         q: "Který antický filozof měl na myšlení svatého Augustina a celou patristiku největší vliv?",
@@ -238,7 +219,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Patristika našla v Platónovi ideálního spojence. Platónův svět idejí byl křesťany interpretován jako Boží mysl a jeho učení o nesmrtelnosti duše a nadřazenosti duchovního světa nad hmotným se stalo základním pilířem křesťanské filozofie na mnoho staletí.",
             c: "Chyba. Epikureismus byl pro patristiku nepřijatelný kvůli svému materialismu a popírání posmrtného života."
         },
-        tag: "vlivy"
     },
     {
         q: "Jak patristika transformovala antický pojem 'Logos' do křesťanského kontextu?",
@@ -251,7 +231,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto je jeden z nejlepších příkladů konverze antiky. Co bylo pro řecké filozofy abstraktním rozumem řídícím vesmír, to křesťané prohlásili za živou osobu. Tímto spojením se křesťanství stalo pro tehdejší učence logickým vyústěním celého antického hledání pravdy.",
             c: "Chyba. Logos měl v patristice vždy metafyzický a božský význam, nikoliv jen právní."
         },
-        tag: "koncepty"
     },
     {
         q: "Jaký byl hlavní rozdíl v cíli filozofického zkoumání v antice oproti období patristiky?",
@@ -264,7 +243,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. V antice byla filozofie svobodným hledáním pravdy. V patristice se z ní stala 'služebnice' (ancilla). Jejím úkolem nebylo objevovat nové pravdy, ale racionálně vysvětlit a obhájit to, co už bylo dáno v Bibli. Cílem nebylo jen vědět, ale skrze vědění dospět ke spáse.",
             c: "Chyba. Patristika výrazně rozšířila záběr filozofie o otázky stvoření, povahy Boha a smyslu dějin."
         },
-        tag: "srovnani"
     },
     {
         q: "Který termín nejlépe vystihuje období patristiky jako celek?",
@@ -277,7 +255,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Název patristika pochází z latinského 'pater' (otec). Bylo to formativní období, kdy myslitelé jako Augustin nebo Boëthius vytvořili systém, ze kterého čerpal celý zbytek středověku i raný novověk. Bez patristiky by neexistovala pozdější scholastika ani moderní západní kultura.",
             c: "Chyba. I když šlo o dobu bouřlivou (rozpad Říma), filozofické debaty (např. o Svaté Trojici nebo povaze zla) byly nesmírně intenzivní a intelektuálně náročné."
         },
-        tag: "shrnuti"
     }  
 ]
         },
@@ -296,8 +273,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Zatímco patristika základy víry teprve pokládala, scholastika (z řeckého 'scholé' – škola) je chtěla uspořádat do logického systému. Filozofie zde sloužila jako nástroj k tomu, aby víra byla srozumitelná lidskému rozumu. Hlavním literárním žánrem se stala 'suma' – monumentální učebnice všeho vědění.",
             c: "Chyba. Scholastici byli hluboce věřící učenci, kteří chtěli víru logikou podepřít, nikoliv vyvrátit."
         },
-        tag: "scholastika",
-        wiki: ["filosofie", "rana_scholastika"]
     },
     {
         q: "Jak se standardně člení období scholastiky a co je pro jednotlivé fáze typické?",
@@ -310,7 +285,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Ačkoliv byla univerzitní centra jako Paříž nebo Oxford důležitá, scholastika se dělí primárně podle myšlenkového vývoje, nikoliv podle národních škol.",
             c: "Chyba. Křížové výpravy sice pomohly znovuobjevit Aristotela, ale v žádném období scholastiky nedošlo k trvalému zákazu antické filozofie – naopak byla jejím základem."
         },
-        tag: "scholastika"
     },
     {
         q: "V čem spočívala podstata 'sporu o univerzálie', který dominoval rané scholastice?",
@@ -323,7 +297,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Představ si pojem 'lidstvo'. Realisté tvrdili, že lidstvo existuje jako reálná duchovní podstata nad jednotlivými lidmi. Nominalisté naopak říkali, že reálně existují jen konkrétní lidé a 'lidstvo' je jen prázdný název, který jsme si vytvořili pro usnadnění komunikace.",
             c: "Chyba. Otázka nekonečnosti vesmíru se stala ústřední až mnohem později v renesanci u Giordana Bruna."
         },
-        tag: "univerzalie"
     },
     {
         q: "Proč byl spor o univerzálie pro středověkou společnost a církev tak zásadní otázkou?",
@@ -336,7 +309,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pokud by obecniny neexistovaly reálně (nominalismus), pak by například 'lidstvo' byl jen název a pojem 'dědičný hřích' (společný všem) by ztratil logický základ. Stejně tak církev: pokud by existovali jen jednotliví věřící a ne reálná duchovní podstata 'Církev', oslabilo by to její autoritu jako celku. Realismus tedy podpíral církevní řád, zatímco nominalismus jej mohl rozkládat.",
             c: "Chyba. I když měla církev velkou politickou moc, spor o univerzálie byl problémem logiky a metafyziky s dopadem na teologii, nikoliv přímým ekonomickým sporem."
         },
-        tag: "univerzalie"
     },
     {
         q: "Který raný scholastik zastával panteistický názor, že Bůh a příroda jsou jedno, a proč to byl pro církev problém?",
@@ -349,7 +321,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Anselm byl naopak představitelem přísného teismu a zastáncem realismu.",
             c: "Chyba. Abélard se věnoval spíše logice a etice, panteismus nebyl jeho hlavním tématem."
         },
-        tag: "eriugena"
     },
     {
         q: "Jakou pozici ve sporu o univerzálie zastávali 'krajní realisté' (např. Anselm či Eriugena)?",
@@ -362,7 +333,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Krajní realismus navazuje na Platóna. Věří, že ideje (obecniny) jsou prvotní a reálnější než hmotné věci. Konkrétní věci jsou jen nedokonalými odrazy těchto věčných obecných vzorů, které sídlí v rozumu Božím.",
             c: "Chyba. Realisté naopak věřili, že bez obecnin by svět neměl žádný řád ani smysl."
         },
-        tag: "realismus"
     },
     {
         q: "Který radikální názor přinesl nominalismus v podání Jana Roscellina (1050 - 1125)?",
@@ -375,7 +345,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Roscellinus šel do extrému: neexistuje žádná 'koňskost', existují jen konkrétní koně. Obecné pojmy jsou pro něj jen prázdné zvuky, které vydáváme hrdlem. Tento názor byl nebezpečný pro teologii, protože zpochybňoval i jednotu Svaté Trojice (pokud jsou obecniny jen jména, zbývají tři samostatní bohové).",
             c: "Chyba. Nominalismus je filozofický postoj k podstatě bytí, nikoliv k lingvistice konkrétních jazyků."
         },
-        tag: "nominalismus"
     },
     {
         q: "Jakým způsobem se Petr Abélard (1079 - 1142) pokusil smířit realismus s nominalismem?",
@@ -388,7 +357,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Abélard zvolil zlatou střední cestu. Obecnina podle něj není ani samostatná věc (proti realismu), ani jen prázdný zvuk (proti nominalismu). Je to 'koncept' v naší mysli, který vzniká tak, že náš rozum vyabstrahuje společné znaky z konkrétních věcí. Tím zachoval význam pojmů, ale neudělal z nich 'strašidla'.",
             c: "Chyba. Abélard naopak spor o univerzálie prohloubil a dal mu modernější logický rámec."
         },
-        tag: "abelard"
     },
     {
         q: "V čem spočívala revolučnost Abélardovy metody 'Sic et non' (Ano a ne)?",
@@ -401,7 +369,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Abélard ve svém díle ukázal, že i největší autority se v mnoha otázkách pletou nebo si odporují. Tvrdil, že 'pochybováním přicházíme ke zkoumání a zkoumáním k pravdě'. Tím vnesl do teologie prvek kritického myšlení, který byl do té doby neslýchaný.",
             c: "Chyba. Metoda byla přísně logická a akademická, určená pro univerzitní prostředí."
         },
-        tag: "metoda"
     },
     {
         q: "Jak definoval Anselm z Canterbury Boha ve svém slavném ontologickém důkazu?",
@@ -414,7 +381,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Anselm se pokusil dokázat Boha čistě z rozumu. Pokud definujeme Boha jako nejdokonalejší bytost, musí tato bytost mít i atribut existence. Kdyby totiž existovala jen v naší mysli a ne v realitě, nebyla by nejdokonalejší (protože existující věc je dokonalejší než pouhá myšlenka).",
             c: "Chyba. Tento důkaz (z pohybu) proslavil až později Tomáš Akvinský."
         },
-        tag: "anselm"
     },
     {
         q: "Co vyjadřuje heslo Anselma z Canterbury (1033 - 1109) 'fides quaerens intellectum' (víra hledající rozumění)?",
@@ -427,7 +393,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Anselm by nikdy neodložil víru; rozum pro něj byl jen jejím pomocníkem.",
             c: "Chyba. Anselm věřil, že každý křesťan by se měl snažit o rozumové pochopení své víry podle svých schopností."
         },
-        tag: "anselm"
     },
     {
         q: "Proč byl Jan Roscellinus církví obviňován z tzv. triteismu (trojbožství)?",
@@ -440,7 +405,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto je praktický dopad nominalismu. Pokud obecnina 'Bůh' neexistuje reálně a je to jen jméno, pak zbývají jen tři konkrétní osoby Svaté Trojice. A pokud jsou to tři reálné osoby bez společné podstaty, jsou to tři bohové. Roscellinus musel své učení pod tlakem církve odvolat.",
             c: "Chyba. Roscellinův spor byl čistě logický a teologický, nikoliv pohanský."
         },
-        tag: "nominalismus"
     },
     {
         q: "Která antická autorita dominovala myšlení v rané scholastice a jak se to projevovalo ve sporu o univerzálie?",
@@ -453,7 +417,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Raná scholastika navazovala na patristiku a svatého Augustina, což znamenalo silný vliv Platóna. Představa, že obecné pojmy (ideje) jsou reálnější než hmotné věci, byla pro křesťanské myslitele přirozená, protože tyto ideje ztotožňovali s Božími myšlenkami. Proto byl v této době realismus 'oficiálním' a nejpřijímanějším postojem.",
             c: "Chyba. Stoicismus (Seneca) byl sice respektován, ale pro logické spory o podstatu světa nebyl v této době určující."
         },
-        tag: "autority"
     },
     {
         q: "Jaký význam měl pro ranou scholastiku termín 'ancilla theologiae' (služka teologie)?",
@@ -466,7 +429,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Scholastika věřila v hierarchii věd. Teologie, založená na Božím zjevení, byla nejvyšší. Filozofie (rozum) měla za úkol sloužit k vysvětlování a obraně náboženských pravd. Pokud rozum došel k jinému závěru než víra, byla to podle scholastiků chyba rozumu, nikoliv víry.",
             c: "Chyba. Jde o zásadní metodologické heslo celého středověku, nikoliv o název knihy."
         },
-        tag: "scholastika"
     },
     {
         q: "Jak se Erasmus Rotterdamský (1466 - 1536) v rámci svých humanistických postojů díval na pozdní plody scholastiky?",
@@ -479,7 +441,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Erasmus jako humanista cítil ke strnulé scholastice odpor. Považoval za absurdní, že teologové řeší nekonečné spory o univerzálie, zatímco zanedbávají čistotu víry a vzdělání. Chtěl návrat k pramenům (Bibli a antice) a k prosté křesťanské morálce, čímž připravil půdu pro reformu myšlení.",
             c: "Chyba. Erasmus chtěl scholastiku v jejím strnulém pojetí spíše nahradit studiem jazyků a klasické literatury."
         },
-        tag: "erasmus"
     },
     {
         q: "Která vědní disciplína tvořila v rané scholastice páteř filozofického vzdělání (v rámci tzv. trivitua)?",
@@ -492,7 +453,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bez logiky by scholastika nemohla existovat. Studenti se museli nejprve naučit pravidla myšlení a vedení sporu (disputace), aby mohli následně analyzovat složité náboženské otázky. Dialektika byla klíčem k odhalování rozporů v textech autorit.",
             c: "Chyba. Přírodní vědy byly součástí 'quadrivia' a stály až za základním studiem logiky a gramatiky."
         },
-        tag: "metoda"
     }
 ]
         },
@@ -511,7 +471,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Albert byl nazýván <strong>Doctor Universalis</strong> díky svému neuvěřitelnému přehledu. Byl to on, kdo pochopil, že Aristotelova logika a vědecký přístup nejsou pro křesťanství hrozbou, ale cenným nástrojem. Tím připravil půdu pro svého žáka Tomáše Akvinského a pro budoucí vědecké zkoumání světa.",
             c: "Chyba. Albert sice psal o geografii, ale držel se tehdejšího (správného) přesvědčení o kulatosti Země."
         },
-        tag: "albert_veliky"
     },
     {
         q: "Jak Albert Veliký definoval vztah mezi vírou a vědeckým zkoumáním reality?",
@@ -524,7 +483,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Albert proslul výrokem, že v přírodovědě se nemá zkoumat, co Bůh mohl udělat zázrakem, ale <strong>co se v přírodě děje přirozeně</strong>. Razil heslo, že v těchto věcech je nejvyšší autoritou <strong>zkušenost</strong> (experimentum). Tím položil základy pro samostatnost přírodních věd.",
             c: "Chyba. Albert věřil v hlubokou harmonii obou oblastí – věda zkoumá stvoření a teologie Stvořitele."
         },
-        tag: "albert_veliky"
     },
     {
         q: "Která antická autorita se ve vrcholné scholastice stala pro Tomáše Akvinského hlavním pilířem a jak ji nazýval?",
@@ -537,7 +495,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Představ si to jako velký intelektuální převrat. Tomáš Akvinský 'objevil' Aristotela pro křesťanský západ. Líbilo se mu, že Aristoteles stojí nohama na zemi a uznává důležitost smyslů a pozorování přírody. Tomáš vzal tento vědecký přístup a propojil ho s Biblí, čímž vytvořil tzv. tomismus.",
             c: "Chyba. Epikureismus byl pro středověk příliš materialistický a Tomáš jej odmítal."
         },
-        tag: "autority"
     },
     {
         q: "Jak Tomáš Akvinský (1225 - 1274) definoval vztah mezi pravdou víry a pravdou rozumu?",
@@ -550,8 +507,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto je základní kámen Akvinského myšlení. Rozum a víra si nemohou odporovat. Rozum může dokázat existenci Boha (tzv. předsíně víry), ale na tajemství jako Svatá Trojice už nestačí – tam nastupuje víra. Víra tedy rozum neničí, ale zdokonaluje ho.",
             c: "Chyba. Pro Tomáše byla teologie založená na víře vždy nejvyšší vědou a rozum její 'služebnicí'."
         },
-        tag: "akvinsky",
-        wiki: ["filosofie", "vrcholna_scholastika"]
     },
     {
         q: "Ve sporu o univerzálie Tomáš zastával tzv. umírněný realismus. Co to znamená?",
@@ -564,7 +519,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tomáš geniálně smířil předchozí spory. Podle něj obecnina (např. 'lidství') existuje jako Boží záměr, jako podstata v každém konkrétním člověku a nakonec jako abstraktní pojem v naší hlavě. Tím uznal realitu duchovní i smyslovou.",
             c: "Chyba. To by byl krajní platonismus, který Tomáš kritizoval za to, že dostatečně neoceňuje reálný svět věcí."
         },
-        tag: "univerzalie"
     },
     {
         q: "Kterých pět cest (důkazů) používá Tomáš Akvinský k racionálnímu zdůvodnění existence Boha?",
@@ -577,7 +531,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Tomáš chtěl existenci Boha dokázat čistým rozumem nezávisle na víře a Bibli, aby byl schopen argumentovat i vůči nevěřícím.",
             c: "Chyba. Některé z těchto pojmů (nekonečnost vesmíru) jsou typické až pro renesanci; Tomáš stavěl na aristotelské logice a pozorování řádu v přírodě."
         },
-        tag: "akvinsky"
     },
     {
         q: "Který z pěti důkazů existence Boha (tzv. pět cest) vychází z pozorování, že věci ve světě vznikají a zanikají?",
@@ -590,23 +543,10 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tomáš říká: vidíme, že věci mohou být i nebýt (jsou nahodilé). Kdyby bylo vše jen nahodilé, mohlo by se stát, že by v jeden moment nebylo nic. Proto musí existovat něco, co má svou existenci samo v sobě a co dává bytí všemu ostatnímu – Bůh.",
             c: "Chyba. Ten vychází z pozorování inteligentního řádu v přírodě."
         },
-        tag: "akvinsky"
     },
     {
         q: "V čem spočívá pátá cesta Tomáše Akvinského (důkaz z účelnosti neboli teleologie)?",
         a: "Pozoruje, že i věci bez rozumu směřují k určitému cíli a řádu, což vyžaduje inteligentního tvůrce.",
-        b: "Tvrdí, že lidé si Boha vymysleli, aby dali svému životu umělý cíl.",
-        c: "Dokazuje, že svět je chaos, který Bůh pouze zpovzdálí pozoruje.",
-        ans: "a",
-        expl: {
-            a: "Správně. Představ si šíp letící k terči. Šíp sám neví, kam letí, musí ho někdo vystřelit a mířit. Tomáš říká, že příroda funguje podobně – vše má svůj smysl a řád, z čehož vyvozuje existenci nejvyšší Inteligence, která svět vede.",
-            b: "Chyba. Tomáš věřil v objektivní existenci Boha jako tvůrce řádu.",
-            c: "Chyba. Pro Tomáše je svět dokonale uspořádaný systém řízený Boží prozřetelností."
-        },
-        tag: "akvinsky"
-    },
-    {
-        q: "Tomáš Akvinský přejal učení o hylemorfismu (látka a forma). Jak jej aplikoval na člověka?",
         a: "Člověk je čistý duch a tělo je jen nesmyslná schránka, která duši vězní.",
         b: "Člověk je jednotou látky (tělo) a formy (duše); duše je oživujícím principem těla.",
         c: "Tělo a duše jsou dvě naprosto oddělené substance, které spolu nijak nekomunikují.",
@@ -616,7 +556,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pro Tomáše není duše v těle jako 'vězeň v cele', ale jako 'forma v látce'. Duše dává tělu život a lidskou podstatu. To je klíčové pro křesťanskou víru ve vzkříšení celého člověka, nejen jeho 'stínu'.",
             c: "Chyba. Toto je dualismus, který se objeví až mnohem později v novověku."
         },
-        tag: "psychologie"
     },
     {
         q: "Co označuje Tomáš Akvinský ve své etice jako 'přirozený zákon'?",
@@ -629,7 +568,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bůh vložil do světa řád. Člověk jako rozumná bytost má v sobě tento řád 'otištěný' – skrze svědomí a rozum víme, že máme činit dobro a vyhýbat se zlu. Lidské zákony by s tím měly být vždy v souladu.",
             c: "Chyba. To je 'lidský zákon' (lex humana), který stojí v hierarchii až pod zákonem přirozeným."
         },
-        tag: "etika"
     },
     {
         q: "Jakým způsobem vysvětloval Svatý Bonaventura (1217 - 1274) možnost lidského poznání ve své teorii osvícení?",
@@ -642,7 +580,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bonaventura navázal na svatého Augustina. Podle něj je Bůh 'Sluncem duše'. Aby náš rozum mohl poznat věčné a nezměnné pravdy, musí být ozářen Božím světlem (<strong>iluminací</strong>). Poznání tedy pro něj není jen chladná logika, ale duchovní proces, který vyžaduje pokoru a vnitřní čistotu.",
             c: "Chyba. Tento přístup k poznání je typický až pro pozdní renesanci a novověk, nikoliv pro františkánskou mystiku vrcholné scholastiky."
         },
-        tag: "bonaventura"
     },
     {
         q: "V čem se lišil přístup Svatého Bonaventury od Tomáše Akvinského?",
@@ -655,7 +592,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bonaventura byl současník, přítel avšak v mnoha ohledek protipól Tomáš Akvinského. Zůstal věrný Platónovi a Augustínovi. Aristoteles se podle něj příliš soustředil na pozemský život.",
             c: "Chyba. Byli to sice současníci a přátelé, ale jejich filozofická východiska byla odlišná."
         },
-        tag: "bonaventura"
     },
 
     {
@@ -669,7 +605,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Teologická suma je vrcholné dílo, ve kterém Tomáš rozebral tisíce otázek od podstaty Boha až po etiku. Je to největší systém středověkého myšlení, který byl v 19. století prohlášen za oficiální filozofii církve.",
             c: "Chyba. Takové dílo Tomáš nenapsal; jeho zkoumání přírody bylo součástí teologického celku."
         },
-        tag: "akvinsky"
     },
     {
         q: "Proč se Tomáš Akvinský v závěru života rozhodl nedokončit své největší dílo (Teologickou sumu)?",
@@ -682,7 +617,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Tato událost symbolizuje hranice středověké logiky. I největší rozumový gigant nakonec uznal, že přímý prožitek božské reality je víc než tisíce stran logických důkazů. Je to krásný moment, kdy se scholastika pokorně sklání před mystikou.",
             c: "Chyba. Tomáš zůstal hluboce věřícím katolíkem, pouze změnil pohled na hodnotu pouhého intelektuálního zkoumání."
         },
-        tag: "akvinsky"
     }    
 ]
         },
@@ -700,7 +634,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pozdní scholastika (představovaná např. Dunsem Scotem a Williamem Occamem) byla skeptická k velkým systémům Tomáše Akvinského. <br>1. <strong>Konec harmonie:</strong> Tvrdila, že pravdy víry (jako nesmrtelnost duše nebo existence Boha) jsou rozumem nedokazatelné a patří pouze víře. <br>2. <strong>Osamostatnění vědy:</strong> Tím, že 'osvobodila' rozum od teologie, mu umožnila věnovat se čistě zkoumání přírody. <br>3. <strong>Důraz na jednotlivinu:</strong> Místo hledání obecných podstat se začala soustředit na konkrétní, smysly vnímatelné věci.",
             c: "Chyba. To byl cíl vrcholné scholastiky; pozdní scholastika naopak tuto jednotu rozbila."
         },
-        tag: "pozdni_scholastika"
     },
     {
         q: "Jakým způsobem proměnily pojmy voluntarismus a nominalismus tvář pozdní scholastiky?",
@@ -713,7 +646,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Došlo k zásadnímu posunu: <br>1. <strong>Voluntarismus</strong> (Jan Duns Scotus): Bůh není vázán rozumem, ale svou svobodnou vůlí. Něco je dobré jen proto, že to Bůh chce, nikoliv proto, že je to logické. <br>2. <strong>Nominalismus</strong> (William Occam): Obecniny neexistují, reálné jsou jen jednotliviny. <br>Tato kombinace znamenala, že svět už nelze pochopit 'od stolu' čistou logikou, ale musíme ho začít <strong>pozorovat a zkoumat jako soubor faktů</strong>, což je základ budoucí vědy.",
             c: "Chyba. Toto je postoj realismu a racionalismu vrcholné scholastiky, který právě pozdní myslitelé kritizovali."
         },
-        tag: "pozdni_scholastika"
     },
     {
         q: "Kdo byl hlavním kritikem Tomáše Akvinského v pozdní scholastice a v čem se lišil jeho pohled na Boží vůli?",
@@ -726,8 +658,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Occam byl sice také voluntarista, ale proslavil se především radikálním nominalismem a bojem proti církevní moci.",
             c: "Chyba. Eckhart se věnoval sjednocení duše s Bohem, nikoliv analýze Boží vůle v rámci scholastických sporů."
         },
-        tag: "scotus",
-        wiki: ["filosofie", "pozdni_scholastika"]
     },
     {
         q: "Jaký nový pojem zavedl Jan Duns Scotus (1266 - 1308) k označení jedinečnosti každé konkrétní věci?",
@@ -740,7 +670,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pro středověk bylo dlouho důležité jen to, co je obecné. Scotus ale zdůraznil, že Bůh stvořil svět jako soubor unikátních jednotlivin. Tato 'haecceitas' dělá z konkrétního člověka neopakovatelný originál, čímž Scotus nevědomky připravil cestu pro renesanční individualismus.",
             c: "Chyba. Universalia byl obecný termín pro rodové pojmy, o jejichž podstatu se vedl spor již od rané scholastiky."
         },
-        tag: "scotus"
     },
     {
         q: "William Occam (1287 - 1347) dovedl nominalismus do extrému. Jak chápal existenci obecných pojmů (univerzálií)?",
@@ -753,7 +682,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Occam tvrdil, že ve skutečnosti neexistuje žádné 'lidstvo', jen konkrétní Petr a Pavel. Naše mysl si pro tyto podobné jedince vytvořila nálepku, aby o nich mohla mluvit. Tím 'očistil' svět od zbytečných pojmů, které lidé považovali za reálné věci.",
             c: "Chyba. Occam byl logik a nominalista, pojmy pro něj byly funkční značky, nikoliv nedotknutelné symboly."
         },
-        tag: "occam"
     },
     {
         q: "Co v logice a vědě vyjadřuje princip známý jako 'Occamova břitva'?",
@@ -766,7 +694,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Occam byl sám často v konfliktu s papežem; tento princip slouží logice, nikoliv perzekuci.",            
             c: "Chyba. Jde o myšlenkový a metodologický princip, nikoliv o fyzický předmět."
         },
-        tag: "occam"
     },
     {
         q: "Jakým způsobem William Occam definitivně rozbil scholastickou harmonii víry a rozumu?",
@@ -779,7 +706,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Occam chtěl pravý opak – aby se rozum mohl svobodně věnovat přírodě, aniž by musel neustále řešit teologická dogmata.",
             c: "Správně. Occam byl radikálním voluntaristou a (v duchu fideismu) tvrdil, že Bůh je tak svobodný, že ho lidská logika nemůže spoutat. Rozum se má věnovat zkoumání přírody (věda) a víra má zůstat záležitostí zjevení. Tím se filozofie osvobodila z role 'služky teologie' a začala se osamostatňovat."
         },
-        tag: "occam"
     },
     {
         q: "Pokud William Occam tvrdí, že Bůh je absolutně svobodný a lidská logika ho nemůže postihnout, o jaký filozofický vztah se jedná?",
@@ -792,7 +718,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Realismus naopak věřil, že svět a Boží mysl mají logickou strukturu (univerzálie), kterou můžeme poznat.",
             c: "Chyba. Tomismus (vrcholná scholastika) věřil v harmonii rozumu a víry – tedy v to, že Bůh a jeho řád jsou logicky uchopitelné."
         },
-        tag: "pozdni_scholastika"
     },
     {
         q: "Jakým způsobem přispělo učení Williama Occama k procesu sekularizace (odluky státu od církve)?",
@@ -805,7 +730,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Occam jako zastánce <strong>odluky moci</strong> tvrdil, že císař nedostává svou moc od papeže, ale přímo od Boha či lidu. Tím, že z náboženství udělal sféru víry nezávislou na rozumu, uvolnil cestu politice jako samostatné disciplíně. <strong>Reakce církve</strong> byla velmi tvrdá: papež Jan XXII. označil Occamovo učení za kacířské, Occam byl uvězněn v Avignonu, odkud musel uprchnout pod ochranu císaře Ludvíka Bavora, kterému pak pomáhal filozoficky hájit nezávislost na Římě.",
             c: "Chyba. Occam nebyl ateista ani anarchista; chtěl pouze, aby se církev věnovala duchovní spáse a nezískávala politický vliv skrze majetek a světskou moc."
         },
-        tag: "occam"
     },
     {
         q: "V čem spočívala nebezpečnost učení Mistra Eckharta (1260 - 1328) pro tehdejší církevní hierarchii?",
@@ -818,7 +742,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Eckhart učil o Bohu jako o nejvyšším dobru a zdroji veškeré lásky.",
             c: "Chyba. Eckhart byl křesťanský teolog, jeho učení bylo hluboce duchovní, nikoliv pohanské."
         },
-        tag: "eckhart"
     }
 ]
         },
@@ -837,8 +760,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Zatímco středověk byl teocentrický (Bůh jako střed všeho), renesance dává do středu člověka. Neznamená to, že by lidé přestali věřit v Boha, ale začali věřit, že člověk je 'homo faber' – tvůrce svého osudu, který má rozvíjet svůj talent a radovat se z krásy světa.",
             c: "Chyba. Renesance byla obdobím rozkvětu měst, vědy a umění, nikoliv návratem k primitivismu."
         },
-        tag: "humanismus",
-        wiki: ["filosofie", "renesance"]
     },
     {
         q: "Jaký význam měl pro renesanční humanisty termín 'Ad fontes'?",
@@ -851,7 +772,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Humanisté chtěli poznat antiku (Řecko a Řím) v její čisté podobě. Místo čtení zkomolených středověkých výtahů se učili řecky a hebrejsky, aby mohli číst Platóna nebo Bibli v originále. Tento návrat k pramenům vedl k obrovskému rozmachu kritického myšlení.",
             c: "Chyba. Jde o metodologické heslo renesanční vzdělanosti, nikoliv o náboženské hnutí."
         },
-        tag: "humanismus"
     },
     {
         q: "Které tři zásadní přínosy definují filozofické působení Marsilia Ficina (1433 - 1499) v období renesance?",
@@ -862,9 +782,8 @@ window.data_stredovek_a_renesance = {
         expl: {
             a: "Chyba. Knihtisk vynalezl Gutenberg a Ficino byl hluboce věřící křesťan, nikoliv ateista.",
             b: "Chyba. Ficino antiku miloval a snažil se ji s křesťanstvím spojit, nikoliv ji kritizovat. Pravidla malířství nebyla jeho hlavním oborem.",
-            c: "Správně. Marsilio Ficino byl gigantem své doby: <br>1. <strong>Překladatel:</strong> Jako první zpřístupnil kompletního <strong>Platóna</strong> v latině. <br>2. <strong>Platonická láska:</strong> Přišel s pojmem <strong>amor platonicus</strong>. Podle něj je láska k druhému člověku 'schodištěm' (žebříkem), po kterém duše stoupá od obdivu k pozemské kráse až k lásce k samotnému Bohu. <br>3. <strong>Důstojnost:</strong> Prohlásil člověka za nejdokonalejší Boží výtvor, který si zaslouží úctu a uznání své výjimečné hodnoty v kosmu."
+            c: "Správně. Marsilio Ficino byl gigantem své doby: <br>1. <strong>Překladatel:</strong> Jako prvé zpřístupnil kompletního <strong>Platóna</strong> v latině. <br>2. <strong>Platonická láska:</strong> Přišel s pojmem <strong>amor platonicus</strong>. Podle něj je láska k druhému člověku 'schodištěm' (žebříkem), po kterém duše stoupá od obdivu k pozemské kráse až k lásce k samotnému Bohu. <br>3. <strong>Důstojnost:</strong> Prohlásil člověka za nejdokonalejší Boží výtvor, který si zaslouží úctu a uznání své výjimečné hodnoty v kosmu."
         },
-        tag: "ficino"
     },
     {
         q: "Marsilio Ficino založil ve Florencii Platónskou akademii. O co se tato skupina učenců snažila?",
@@ -877,7 +796,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Ficino věřil, že pravda je jen jedna a projevovala se v dějinách různě. Snažil se dokázat, že Platónovo učení je v souladu s Biblí. Tento 'synkretismus' (spojování směrů) je pro renesanci typický – hledá se jednota veškeré moudrosti lidstva.",
             c: "Chyba. Akademie se věnovala překladům, filozofii a studiu krásy a lásky."
         },
-        tag: "ficino"
     },
     {
         q: "Giovanni Pico della Mirandola (1463 - 1494) v díle 'O důstojnosti člověka' tvrdí, že člověk má 'chameleonskou povahu'. Co tím myslí?",
@@ -890,7 +808,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto je manifest renesance. Mirandola říká, že zatímco zvíře má instinkty dané, člověk je 'nedokončený' projekt. Bůh mu dal svobodu, aby si sám zvolil svou tvář. Tato odpovědnost za vlastní život je základem moderního pojetí lidské důstojnosti.",
             c: "Chyba. Mirandola neřeší lhavost, ale neomezený potenciál lidského růstu a sebeurčení."
         },
-        tag: "mirandola"
     },
     {
         q: "Co v myšlení Pica della Mirandoly vyjadřoval pojem synkretismus?",
@@ -903,7 +820,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Mirandola byl věřící a hledal v náboženstvích společného jmenovatele, nikoliv jejich zrušení.",
             c: "Chyba. Právě Mirandolova otevřenost k 'pohanským' a židovským zdrojům byla tím, co církevní hierarchii nejvíce popouzelo."
         },
-        tag: "mirandola"
     },
     {
         q: "V čem spočívala radikální změna politického myšlení u italského politika, filosofa a vojenského teoretika Niccola Machiavelliho (1469 - 1527)?",
@@ -916,7 +832,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Machiavelli se v díle 'Vladař' neptá, co je 'dobré' před Bohem, ale co 'funguje' pro udržení státu. Vladař musí být liškou i lvem – musí umět klamat i použít sílu. Politika je pro něj technika, kde účel (stabilita státu) světí prostředky.",
             c: "Chyba. Toto byl ideál Platóna, Machiavelli byl mnohem drsnější praktik."
         },
-        tag: "machiavelli"
     },
     {
         q: "Co označuje Machiavelli termínem 'virtù' v souvislosti s ideálním vládcem?",
@@ -929,7 +844,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Virtù není morální dobrota. Je to mužná síla, rozhodnost a schopnost využít příležitost. Úspěšný vladař je ten, kdo má dostatek 'virtù', aby zkrotil vrtkavou Štěstěnu (fortuna) a zajistil státu bezpečí a slávu.",
             c: "Chyba. Jde o politickou a velitelskou kvalitu, nikoliv o umělecké nadání."
         },
-        tag: "machiavelli"
     },
     {
         q: "Jaký postoj zastával Erasmus Rotterdamský (1466 - 1536) vůči tehdejší institucionální církvi?",
@@ -942,7 +856,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Erasmus byl 'knížetem humanistů'. Chtěl církev reformovat zevnitř skrze vzdělání a návrat k čistému křesťanství. Jeho kritika byla tak trefná, že se říkalo: 'Erasmus snesl vejce a Luther ho vyseděl'. Přesto zůstal katolíkem a odmítal radikalismus reformace.",
             c: "Chyba. Erasmus byl hluboce věřící a věnoval se například novému překladu Nového zákona."
         },
-        tag: "erasmus"
     },
     {
         q: "Renesanční myslitel Pietro Pomponazzi (1462 - 1525) tvrdil, že lidská duše je smrtelná. Jaký pro to měl důvod?",
@@ -955,7 +868,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto byl velmi odvážný názor. Pomponazzi říkal, že jako filozof (pomocí rozumu) vidí, že duše potřebuje tělo a smysly. Pokud tělo zanikne, duše nemá z čeho čerpat data a zaniká také. Jako věřící sice nesmrtelnost uznával (protože to říká církev), ale rozumem ji dokázat odmítal.",
             c: "Chyba. Šlo o obecnou filozofickou otázku podstaty lidského vědomí."
         },
-        tag: "pomponazzi"
     },
     {
         q: "Co v renesančním myšlení vyjadřuje koncept 'mikrokosmu' a 'makrokosmu'?",
@@ -968,7 +880,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Renesance věřila v harmonii. Pokud je vesmír uspořádaný a božský, musí být i člověk v malém měřítku jeho kopií. Proto se studiem člověka (humanismus) zároveň dozvídáme o řádu celého bytí. Tato jednota je základem tehdejší magie i rodící se vědy.",
             c: "Chyba. Renesance naopak začala objevovat nekonečnost vesmíru."
         },
-        tag: "kosmologie"
     },
     {
         q: "Co znamená termín 'docta ignorantia' (poučená nevědomost) u Mikuláše Kusánského (1401 - 1464)?",
@@ -981,7 +892,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Kusánský tvrdil, že čím více toho víme o světě, tím lépe chápeme propast mezi námi a Bohem. Naše poznání je vždy jen přibližné. Bůh je pro něj 'absolutní maximum' a v něm se 'potkávají protiklady' (coincidentia oppositorum), což náš rozum logikou nepobere.",
             c: "Chyba. Jde o filozofickou pokoru před nekonečnem, nikoliv o techniku zapomínání."
         },
-        tag: "kusansky"
     },
     {
         q: "Jakým způsobem Mikuláš Kusánský teoreticky připravil cestu pro pád geocentrismu?",
@@ -994,7 +904,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Kusánský byl teoretik; dalekohled přišel až o století později.",            
             c: "Chyba. Kusánský se věnoval spíše metafyzickým důsledkům nekonečna než měření velikosti hvězd."
         },
-        tag: "kusansky"
     },
     {
         q: "V čem spočívá podstata Kusánského teorie 'splývání protikladů' (coincidentia oppositorum)?",
@@ -1007,7 +916,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Kusánský použil geniální matematickou metaforu: Pokud budeme neustále zvětšovat poloměr <strong>kružnice</strong>, její zakřivení se bude zmenšovat, až se v nekonečnu stane <strong>přímkou</strong>. Podobně je tomu u Boha, který je zároveň absolutním <strong>Maximem</strong> (vše zahrnuje) i <strong>Minimem</strong> (je přítomen v nejmenším). V Bohu se tedy všechny protiklady, které náš rozum vidí jako oddělené, spojují v jedno.",
             c: "Chyba. Kusánský pracoval s protikladem křivky (kružnice) a přímky v kontextu nekonečna, nikoliv s geometrií čtverce."
         },
-        tag: "kusansky"
     },
     {
         q: "V čem spočíval 'koperníkovský obrat' Mikuláše Koperníka (1473 - 1543) a jaký měl dopad na renesanční myšlení?",
@@ -1020,7 +928,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Koperníkovo učení naopak autoritu církve podkopalo, protože doslovný výklad Bible předpokládal nehybnou Zemi (např. v knize Jozue).",
             c: "Chyba. Koperník věděl, že Země je koule. Jeho přínos spočíval v prosazení matematické logiky a pozorování nad zažitou tradicí, čímž položil základy moderní vědy."
         },
-        tag: "kopernik"
     },
     {
         q: "Giordano Bruno (1548 - 1600) byl zastáncem panteismu. Jak chápal vztah mezi Bohem a přírodou?",
@@ -1033,7 +940,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pro Bruna je Bůh přítomen v každém atomu, v každém stéblu trávy i v každé hvězdě.<br><strong>Vesmír je živý Bůh</strong> → Vesmír je pro něj nekonečný a živý organismus. Tento názor byl pro tehdejší církev nepřípustný, protože stíral rozdíl mezi Stvořitelem a věcí, což vedlo k Brunovu tragickému konci.",
             c: "Chyba. Bruno naopak realitu a božskost hmoty horlivě obhajoval."
         },
-        tag: "bruno"
     },
     {
         q: "Jaký byl vztah Giordana Bruna k dominikánskému řádu a k církevní autoritě?",
@@ -1046,7 +952,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Bruno byl v přímém a ostrém konfliktu s církevní hierarchií a většina jeho děl byla na indexu zakázaných knih.",
             c: "Chyba. Ačkoliv byl Bruno komplikovaná osobnost, jeho pronásledování bylo čistě ideologické – církev nemohla tolerovat jeho popírání křesťanských dogmat skrze panteistickou filozofii."
         },
-        tag: "bruno"
     },
     {
         q: "Galileo Galilei (1564 - 1642) prohlásil, že 'kniha přírody je napsána jazykem matematiky'. Jakou novou vědeckou metodu tím definoval?",
@@ -1059,7 +964,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Galilei položil základy moderní vědy tím, že zavedl cyklus: <strong>1. Teorie</strong> (matematický předpoklad), <strong>2. Experiment</strong> (praktický pokus) a <strong>3. Měření</strong> (kvantifikace výsledků). Místo středověkého hledání 'skrytých podstat' a účelu věcí se zaměřil na měřitelné faktory jako čas, dráha a rychlost. Tím se věda stala exaktní disciplínou.",
             c: "Chyba. Galilei věřil, že příroda je sice úchvatná, ale její řád je přísně geometrický a matematický, nikoliv pouze metaforický či umělecký."
         },
-        tag: "galilei"
     },
     {
         q: "Co bylo hlavním důvodem konfliktu Galilea Galileiho s církví a jaké to mělo pro něj následky?",
@@ -1072,7 +976,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Galilei nikdy proti Bibli nevystupoval, naopak tvrdil, že si věda a Písmo neodporují, pouze mluví jiným jazykem.",
             c: "Chyba. Galilei nebyl ateista a nebyl upálen (na rozdíl od Giordana Bruna). Zemřel přirozenou smrtí v domácím vězení jako věřící křesťan."
         },
-        tag: "galilei"
     },
     {
         q: "Johannes Kepler (1571 - 1630) upravil Koperníkův model vesmíru. V čem spočívala jeho zásadní oprava?",
@@ -1085,7 +988,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Kepler se soustředil na mechanismus pohybu planet, nikoliv na hranice celého vesmíru.",
             c: "Chyba. Rozdíl mezi planetami a hvězdami byl znám již dříve, Kepler řešil geometrii jejich drah."
         },
-        tag: "kepler"
     },
     {
         q: "Francis Bacon (1561 - 1626) ve svém díle 'Nový Organon' prosazoval metodu indukce. V čem spočívá?",
@@ -1098,7 +1000,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bacon chtěl vědu 'postavit na nohy'. Tvrdil, že Aristotelův sylogismus je dobrý v debatě, ale nic nového nepřináší. Nejdřív musíme sbírat fakta, provádět pokusy a teprve z mnoha konkrétních případů opatrně vyvodit obecný závěr. Je to základní metoda empirismu – zkušenost je na prvním místě.",
             c: "Chyba. Bacon byl zakladatelem moderní metodologie vědy a odmítal pověry."
         },
-        tag: "bacon"
     },
     {
         q: "Francis Bacon definoval čtyři základní 'idoly' (překážky poznání). Která z možností je správně vyjmenovává?",
@@ -1111,7 +1012,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Bacon chtěl mysl připravit na vědeckou práci odstraněním těchto klamů: <br>1. <strong>Idoly rodu</strong> (idola tribus): Omyl společný celému lidskému druhu; naše smysly a rozum jsou nedokonalé a zkreslují realitu (např. vidíme řád i tam, kde není). <br>2. <strong>Idoly jeskyně</strong> (idola specus): Osobní předsudky každého z nás, dané výchovou, vzděláním a povahou. <br>3. <strong>Idoly tržiště</strong> (idola fori): Klamy vznikající ze špatného užívání jazyka a nejasných slov při kontaktu s lidmi. <br>4. <strong>Idoly divadla</strong> (idola theatri): Nekritické přebírání starých filozofických systémů a dogmat, která nám hrají falešné divadlo o světě.",
             c: "Chyba. Bacon sice kritizoval instituce, ale jeho idoly se týkají především způsobu, jakým lidský rozum chybně zpracovává informace."
         },
-        tag: "bacon"
     },
     {
         q: "Baconův 'idol tržiště' (idola fori) varuje před chybami v poznání, které vznikají:",
@@ -1124,7 +1024,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Toto popisuje 'idol rodu' (idola tribus).",
             c: "Chyba. Toto popisuje 'idol divadla' (idola theatri)."
         },
-        tag: "bacon"
     },
     {
         q: "Co chtěl Francis Bacon vyjádřit svým slavným heslem 'Vědění je moc'?",
@@ -1137,7 +1036,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Pro Bacona je věda nástroj. Pokud pochopíme zákony přírody, můžeme je využít k léčení nemocí, stavbě strojů a ulehčení lidské dřiny. Věda má být užitečná a sloužit pokroku společnosti.",
             c: "Chyba. Ačkoliv vědění přináší prosperitu, Baconův cíl byl hlubší a směřoval k celkovému povznesení lidského údělu."
         },
-        tag: "bacon"
     },
     {
         q: "Bacon přirovnává pravého vědce ke včele. Jaký přístup k poznání tím symbolizuje?",
@@ -1150,7 +1048,6 @@ window.data_stredovek_a_renesance = {
             b: "Správně. Toto je dokonalá rovnováha. Včela sbírá nektar z květů (data ze světa), ale pak ho vlastní silou přetvoří v med (vědecký zákon). Je to spojení zkušenosti a rozumu.",
             c: "Chyba. To jsou 'dogmatici-pavouci', kteří tvoří sice krásné, ale prázdné systémy bez kontaktu se skutečností."
         },
-        tag: "bacon"
     },
     {
         q: "Když srovnáme středověkého a renesančního člověka, co nejlépe vystihuje přechod k individualismu?",
@@ -1163,7 +1060,6 @@ window.data_stredovek_a_renesance = {
             b: "Chyba. Renesanční lidé byli stále věřící, ale jejich víra byla aktivnější a orientovaná na pozemský svět.",
             c: "Chyba. Jména existovala vždy, ale v renesanci se stala symbolem prestiže a individuálního úspěchu."
         },
-        tag: "shrnuti"
     }
 ]
         },

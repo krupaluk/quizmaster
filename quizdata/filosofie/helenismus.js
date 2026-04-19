@@ -1,4 +1,4 @@
-window.data_obdobi_helenismu = {
+window.data_helenismus = {
     "groups": {
         "stoicismus": {
             "title": "Stoicismus",

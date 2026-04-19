@@ -1,4 +1,4 @@
-window.data_pocatky_po_vrcholne_recke_obdobi = {
+window.data_klasicka_recka_filosofie = {
     "groups": {
         "predsokrate": {
             "title": "Předsokraté",

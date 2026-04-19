@@ -1355,10 +1355,10 @@
                 </div>
             </div>
             
-            <!-- Related Topics button at bottom -->
+            <!-- Summary button at bottom -->
             <div id="wiki-topics-section" class="setup-section" style="margin-top: 20px; display: none;">
-                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openRelatedTopicsModal()">
-                    💡 Témata [Wiki]
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openQuizSummary()">
+                    💡 Souhrn
                 </button>
             </div>
             
@@ -1403,12 +1403,8 @@
 </div>
 
 <script src="quizMaster_config.js"></script>
-<script src="quizdata/wiki/wiki_logika.js"></script>
-<script src="quizdata/wiki/wiki_filosofie.js"></script>
-<script src="quizdata/wiki/wiki_stredovek_a_renesance.js"></script>
-<script src="quizdata/wiki/wiki_logika_teorie.js"></script>
-<script src="quizdata/wiki/wiki_vyrokova_logika.js"></script>
-<script src="quizdata/wiki/wiki_predikatova_logika.js"></script>
+<script src="quizdata/summary/summary_stredovek_a_renesance.js"></script>
+<script src="quizdata/summary/summary_helenismus.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -2493,9 +2489,12 @@ const DataLoader = {
                 // Check and save wiki status for this quiz
                 UserDataManager.checkAndSaveWikiStatus(quizId, AppState.db);
                 
+                // Load summary file if quiz has summary attribute
+                await this.loadSummaryFile(quizId);
+                
                 this.setupCountSelector();
                 this.setupGroupFilters();
-                this.updateWikiTopicsButton();
+                this.updateSummaryButton();
                 UI.showScreen('sc-setup');
             } else {
                 Hub.showWarningBubble('Nepodařilo se načíst kvíz');
@@ -2823,19 +2822,91 @@ const DataLoader = {
     },
     
     
-    // Check if current quiz has any wiki topics and update button visibility
-    updateWikiTopicsButton() {
-        const wikiSection = document.getElementById('wiki-topics-section');
-        if (!wikiSection) return;
+    // Check if current quiz has summary and update button visibility
+    updateSummaryButton() {
+        const summarySection = document.getElementById('wiki-topics-section');
+        if (!summarySection) return;
         
-        // Check if any question has wiki attribute
-        const hasWikiTopics = AppState.db.some(question => question.wiki && question.wiki.length >= 2);
+        // Check if current quiz has summary attribute in config
+        let hasSummary = false;
+        if (typeof quizCategories !== 'undefined' && AppState.currentQuizId) {
+            for (const category of Object.keys(quizCategories)) {
+                for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                    const quiz = quizCategories[category].quizzes[quizKey];
+                    if (quiz.id === AppState.currentQuizId) {
+                        hasSummary = quiz.summary === true;
+                        break;
+                    }
+                }
+                if (hasSummary) break;
+            }
+        }
         
-        wikiSection.style.display = hasWikiTopics ? 'block' : 'none';
+        summarySection.style.display = hasSummary ? 'block' : 'none';
     },
     
     clearCache() {
         this.cache.clear();
+    },
+    
+    // Load summary file if quiz has summary attribute
+    async loadSummaryFile(quizId) {
+        // Find quiz config
+        let quizConfig = null;
+        let categoryName = null;
+        
+        if (typeof quizCategories !== 'undefined') {
+            for (const category of Object.keys(quizCategories)) {
+                for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                    const quiz = quizCategories[category].quizzes[quizKey];
+                    if (quiz.id === quizId && quiz.summary === true) {
+                        quizConfig = quiz;
+                        categoryName = category;
+                        break;
+                    }
+                }
+                if (quizConfig) break;
+            }
+        }
+        
+        // Only load if quiz has summary attribute
+        if (!quizConfig || !quizConfig.summary) {
+            return;
+        }
+        
+        // Check if summary is already loaded
+        if (window.sum && window.sum[quizId]) {
+            return; // Already loaded
+        }
+        
+        // Load summary file
+        return new Promise((resolve) => {
+            const s = document.createElement('script');
+            // Determine file path based on category
+            let filePath;
+            if (categoryName === 'Filosofie') {
+                filePath = `quizdata/summary/summary_${quizId}.js`;
+            } else {
+                // For other categories, use category-specific path
+                const categoryFolder = categoryName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                filePath = `quizdata/${categoryFolder}/summary_${quizId}.js`;
+            }
+            
+            s.src = filePath + '?t=' + Date.now();
+            s.async = true;
+            
+            s.onload = () => {
+                console.log('Summary loaded:', quizId);
+                resolve(true);
+            };
+            
+            s.onerror = () => {
+                console.warn('Failed to load summary for quiz:', quizId);
+                resolve(false);
+            };
+            
+            document.head.appendChild(s);
+        });
     },
     
     // Generate file path from quiz id
@@ -2940,10 +3011,10 @@ const Hub = {
                         badgesHtml += `<span class="badge">${quizStats.points} b</span>`;
                     }
                     
-                    // Check if quiz has wiki topics from config (not from user data)
-                    let wikiIconHtml = '';
-                    if (q.wiki) {
-                        wikiIconHtml = `<div style="position: absolute; bottom: 8px; right: 12px; font-size: 14px; color: #f5a623; z-index: 1;">💡</div>`;
+                    // Check if quiz has summary from config (not from user data)
+                    let summaryIconHtml = '';
+                    if (q.summary) {
+                        summaryIconHtml = `<div style="position: absolute; bottom: 8px; right: 12px; font-size: 14px; color: #f5a623; z-index: 1;">💡</div>`;
                     }
                     
                     // Calculate progress for the progress bar
@@ -2964,7 +3035,7 @@ const Hub = {
                         <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
                             ${badgesHtml ? `<div class="quiz-badges">${badgesHtml}</div>` : ''}
                         </div>
-                        ${wikiIconHtml}
+                        ${summaryIconHtml}
                         ${progressBarHtml}
                     `;
                     // Click on quiz item goes directly to setup
@@ -3308,6 +3379,11 @@ function navigateWikiTopic(direction) {
 
 function closeWikiOverlay() {
     document.getElementById('wiki-overlay').classList.add('hidden');
+    // Restore navigation buttons display for next use
+    const navDiv = document.querySelector('.wiki-overlay-nav');
+    if (navDiv) {
+        navDiv.style.display = 'flex';
+    }
 }
 
 function openAdvancedOptionsModal() {
@@ -3382,73 +3458,62 @@ function closeAdvancedOptionsModal() {
     document.getElementById('advanced-options-modal').classList.add('hidden');
 }
 
-function openRelatedTopicsModal() {
-    const modal = document.getElementById('related-topics-modal');
-    const listContainer = document.getElementById('related-topics-list');
+function openQuizSummary() {
+    if (!AppState.currentQuizId) return;
     
-    // Get all unique wiki topics from current quiz
-    const topics = new Map(); // Use Map to avoid duplicates
+    // Find quiz config to get the summary data
+    let quizConfig = null;
+    let categoryName = null;
     
-    if (AppState.db && AppState.db.length > 0) {
-        AppState.db.forEach(question => {
-            if (question.wiki && question.wiki.length >= 2) {
-                const category = question.wiki[0];
-                const entry = question.wiki[1];
-                const key = `${category}:${entry}`;
-                
-                // Get wiki data - try all available wiki sources
-                let title = entry;
-                try {
-                    // Try window.wiki first
-                    const wikiData = window.wiki || {};
-                    if (wikiData && wikiData[category] && wikiData[category][entry] && wikiData[category][entry].title) {
-                        title = wikiData[category][entry].title;
-                    } else {
-                        // Try other wiki sources - direct name or with wiki_ prefix
-                        const wikiSource = window[category] || window[`wiki_${category}`];
-                        if (wikiSource && wikiSource[entry] && wikiSource[entry].title) {
-                            title = wikiSource[entry].title;
-                        }
-                    }
-                } catch (e) {
-                    console.warn('Could not get wiki title for', category, entry);
-                }
-                
-                if (!topics.has(key)) {
-                    topics.set(key, {
-                        category: category,
-                        entry: entry,
-                        title: title,
-                        wikiPath: question.wiki
-                    });
+    if (typeof quizCategories !== 'undefined') {
+        for (const category of Object.keys(quizCategories)) {
+            for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                const quiz = quizCategories[category].quizzes[quizKey];
+                if (quiz.id === AppState.currentQuizId) {
+                    quizConfig = quiz;
+                    categoryName = category;
+                    break;
                 }
             }
-        });
+            if (quizConfig) break;
+        }
     }
     
-    // Build the list HTML
-    let html = '';
-    if (topics.size > 0) {
-        topics.forEach(topic => {
-            html += `
-                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 14px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--ios-blue); text-align: left; width: 100%; display: flex; align-items: center; gap: 10px; min-height: 44px;" onclick="closeRelatedTopicsModal(); openWikiOverlay(['${topic.category}', '${topic.entry}']);">
-                    <span>💡</span>
-                    <span>${topic.title}</span>
-                </button>
-            `;
-        });
-    } else {
-        html = `
-            <div style="text-align: center; padding: 30px; color: var(--ios-gray);">
-                <div style="font-size: 40px; margin-bottom: 10px;">📚</div>
-                <div style="font-size: 16px; font-weight: 600;">Žádná související témata</div>
-                <div style="font-size: 13px; margin-top: 5px;">Pro tento kvíz zatím nejsou definována žádná rozšiřující témata.</div>
-            </div>
-        `;
+    if (!quizConfig || !quizConfig.summary) {
+        console.warn('No summary available for this quiz');
+        return;
     }
     
-    listContainer.innerHTML = html;
-    modal.classList.remove('hidden');
+    // Try to find summary data
+    // Summary is stored directly under window.sum[quizId]
+    const summaryData = window.sum?.[quizConfig.id];
+    let entryData = null;
+    
+    if (summaryData) {
+        // Get the first entry from the summary object
+        const entries = Object.keys(summaryData);
+        if (entries.length > 0) {
+            entryData = summaryData[entries[0]];
+        }
+    }
+    
+    if (!entryData) {
+        console.error('Summary data not found for quiz:', AppState.currentQuizId);
+        return;
+    }
+    
+    // Update overlay content
+    document.getElementById('wiki-title').textContent = entryData.title || 'Souhrn';
+    document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+    
+    // Hide navigation buttons since there's only one summary
+    const navDiv = document.querySelector('.wiki-overlay-nav');
+    if (navDiv) {
+        navDiv.style.display = 'none';
+    }
+    
+    // Show overlay
+    document.getElementById('wiki-overlay').classList.remove('hidden');
 }
 
 function closeRelatedTopicsModal() {
