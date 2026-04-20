@@ -199,7 +199,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="philosopher-years">570–475 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
-          <span class="tag">řecký filosof, satirik, kritik/span>
+          <span class="tag">řecký filosof, satirik, kritik</span>
           <span class="tag">předchůdce eleatů</span>
           <span class="tag tag-highlight">kritika antropomorfního náboženství</span>
           <span class="tag">„Kdyby koně měli bohy, byli by podobni koním"</span>
@@ -212,12 +212,15 @@ window.sum.klasicka_recka_filosofie = {
           <span class="philosopher-years">515–450 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
-          <span class="tag">zakladatel eleatské školy</span>
+          <span class="tag">zakladatel elejské školy</span>
           <span class="tag">řecký filosof</span>
           <span class="tag tag-highlight">„Bytí jest, nebytí není"</span>
-          <span class="tag">cesta pravdy (Alétheia)</span>
-          <span class="tag">cesta mínění (Doxa)</span>
+          <span class="tag">Xenofanův žák</span>
+          <span class="tag">jsoucno nelze poznat smysly</span>
+          <span class="tag">jsoucno je věčné, dokonalé a dokončené</span>
+          <span class="tag">oddělení rozumu a smyslového poznání</span>
           <span class="tag">„myslet a být je totéž"</span>
+          
         </div>
       </div>
       <div class="philosopher-card">
@@ -230,6 +233,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">žák Parmenida</span>
           <span class="tag tag-highlight">aporie (paradoxy) – popření pohybu</span>
           <span class="tag">Achilles a želva</span>
+          <span class="tag">letící šíp</span>
         </div>
       </div>
     </div>
@@ -244,12 +248,13 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">řecký filosof</span>
-          <span class="tag">„Temný" (Skoteinos)</span>
-          <span class="tag tag-highlight">oheň jako arché a symbol změny</span>
-          <span class="tag">„panta rhei" – vše plyne</span>
-          <span class="tag">„Nemůžeš dvakrát vstoupit do téže řeky"</span>
-          <span class="tag">Logos jako řád</span>
+          <span class="tag">„panta rhei" – vše plyne</span>          
+          <span class="tag">„Nevstoupíš dvakrát vstoupit do téže řeky"</span>
+          <span class="tag tag-highlight">arché: oheň (symbol změny)</span>          
+          <span class="tag">nezbytnost protikladů</span>
           <span class="tag">„Válka je otec všech věcí"</span>
+          <span class="tag">sebezkoumání</span>
+          <span class="tag">Logos je uvnitř duše, ne venku</span>          
         </div>
       </div>
     </div>
@@ -259,29 +264,31 @@ window.sum.klasicka_recka_filosofie = {
       <div class="sub-title">Pluralisté</div>
       <div class="philosopher-card">
         <div class="philosopher-header">
-          <span class="philosopher-name">Empedoklés z Akragantu</span>
+          <span class="philosopher-name">Empedoklés</span>
           <span class="philosopher-years">494–434 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
           <span class="tag">řecký filosof</span>
+          <span class="tag">lékař, politik</span>
           <span class="tag">čtyři živly (kořeny)</span>
-          <span class="tag tag-highlight">Láska (Filotés) a Svár (Neikos)</span>
+          <span class="tag tag-highlight">láska (spojuje) a svár (rozděluje)</span>
           <span class="tag">sféros – dokonalá jednota</span>
-          <span class="tag">legenda o smrti v Etně</span>
+          <span class="tag">smrt v Etně (legenda)</span>
         </div>
       </div>
       <div class="philosopher-card">
         <div class="philosopher-header">
-          <span class="philosopher-name">Anaxagorás z Klazomén</span>
+          <span class="philosopher-name">Anaxagorás</span>
           <span class="philosopher-years">500–428 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
-          <span class="tag">řecký filosof</span>
-          <span class="tag">žil v Athénách</span>
-          <span class="tag tag-highlight">Nús (Rozum) jako organizační princip</span>
-          <span class="tag">homeomerie (semena)</span>
+          <span class="tag">řecký Athénký filosof</span>
+          <span class="tag">Teorie semen</span>
+          <span class="tag">na počátku chaos → semena promísena</span>
+          <span class="tag tag-highlight">nutný Nús (Rozum) → uspořádání semen</span>
           <span class="tag">„všechno v každém"</span>
-          <span class="tag">Slunce jako rozžhavený balvan</span>
+          <span class="tag">Slunce je rozžhavený kámen</span>
+          <span class="tag">vyhnán za kacířství</span>
         </div>
       </div>
     </div>
@@ -291,7 +298,7 @@ window.sum.klasicka_recka_filosofie = {
       <div class="sub-title">Atomisté</div>
       <div class="philosopher-card">
         <div class="philosopher-header">
-          <span class="philosopher-name">Démokritos z Abdér</span>
+          <span class="philosopher-name">Démokritos</span>
           <span class="philosopher-years">460–370 př. n. l.</span>
         </div>
         <div class="philosopher-tags">
@@ -300,7 +307,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag tag-highlight">atomos – nedělitelné</span>
           <span class="tag">prázdno (nejsoucno)</span>
           <span class="tag">náhodné víření atomů</span>
-          <span class="tag">euthymia – klidná mysl</span>
+          <span class="tag">není třeba zásahů Boha</span>
         </div>
       </div>
     </div>
@@ -314,7 +321,7 @@ window.sum.klasicka_recka_filosofie = {
     </div>
     <div class="philosopher-card">
       <div class="philosopher-header">
-        <span class="philosopher-name">Prótagorás z Abdér</span>
+        <span class="philosopher-name">Prótagorás</span>
         <span class="philosopher-years">485–411 př. n. l.</span>
       </div>
       <div class="philosopher-tags">
