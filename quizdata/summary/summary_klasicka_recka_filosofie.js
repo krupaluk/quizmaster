@@ -330,7 +330,7 @@ window.sum.klasicka_recka_filosofie = {
     <div class="sub-branch">
     <span class="tag tag-group">odklon od přírody</span>
     <span class="tag tag-group">příklon k člověku/společnosti</span>
-    <span class="tag tag-group">profesionální učitelé (nechali si platit)</span>    
+    <span class="tag tag-group">soukromí (placení) učitelé</span>    
     <div class="philosopher-card">
       <div class="philosopher-header">
         <span class="philosopher-name">Prótagorás</span>
@@ -386,14 +386,14 @@ window.sum.klasicka_recka_filosofie = {
         <span class="philosopher-years">470–399 př. n. l.</span>
       </div>
       <div class="philosopher-tags">
-        <span class="tag">řecký filosof</span>
-        <span class="tag">Athény</span>
-        <span class="tag tag-highlight">„Vím, že nic nevím"</span>
+        <span class="tag">řecký athénský filosof</span>
+        <span class="tag">mistr v kladení otázek</span>
+        <span class="tag tag-highlight">'Moudrost je poznání jak málo toho víme.'</span>
         <span class="tag">maieutika (porodnice pravdy)</span>
-        <span class="tag">elenktika (vyvracení)</span>
+        <span class="tag">kritické myšlení</span>
+        <span class="tag">otázky pokládány tak aby nutili přemýšlet</span>
+        <span class="tag">snaha aby si člověk sám odpověděl</span>
         <span class="tag">daimonion (vnitřní hlas)</span>
-        <span class="tag">vědění = ctnost</span>
-        <span class="tag">obrátka k člověku</span>
       </div>
     </div>
     <div class="philosopher-card">
@@ -402,15 +402,15 @@ window.sum.klasicka_recka_filosofie = {
         <span class="philosopher-years">427–347 př. n. l.</span>
       </div>
       <div class="philosopher-tags">
-        <span class="tag">řecký filosof</span>
+        <span class="tag">řecký filosof, Sokratův žák</span>
         <span class="tag">zakladatel Akademie v Athénách</span>
+        <span class="tag tag-highlight">dualismus: svět idejí (skutečný) vs svět smyslový (stínový)</span>        
         <span class="tag tag-highlight">podobenství o jeskyni</span>
-        <span class="tag">teorie idejí (form)</span>
         <span class="tag">anamnésis (rozpomínání)</span>
-        <span class="tag">Demiurgos</span>
+        <span class="tag">Demiurgos, Chóra</span>
         <span class="tag">Ústava – ideální stát</span>
+        <span class="tag">problém demokracie: vláda nevzdělanců ovládaných emocemi</span>        
         <span class="tag">filozofové-králové</span>
-        <span class="tag">Chóra (beztvará nádoba)</span>
       </div>
     </div>
     <div class="philosopher-card">
