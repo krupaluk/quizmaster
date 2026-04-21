@@ -19,7 +19,7 @@ window.sum.klasicka_recka_filosofie = {
 .philosopher-years { font-size: 12px; color: #888; }
 .philosopher-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .tag { font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #e9ecef; color: #495057; }
-.tag-group { background: #f3e9ff; color: #5c4800; padding-top: 1px }
+.tag-group { background: #f3e9ff; color: #5c4800; margin-top: 0px }
 .tag-highlight { background: #ffd43b; color: #5c4800; }
 
 /* Barvy období */
@@ -255,7 +255,7 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">řecký filosof</span>
           <span class="tag">„panta rhei" – vše plyne</span>          
-          <span class="tag">„Nevstoupíš dvakrát vstoupit do téže řeky"</span>
+          <span class="tag">„Nevstoupíš dvakrát do téže řeky"</span>
           <span class="tag tag-highlight">arché: oheň (symbol změny)</span>          
           <span class="tag">nezbytnost protikladů</span>
           <span class="tag">„Válka je otec všech věcí"</span>
@@ -268,6 +268,7 @@ window.sum.klasicka_recka_filosofie = {
     <!-- 5. Pluralisté -->
     <div class="sub-branch">
       <div class="sub-title">Pluralisté</div>
+      <span class="tag tag-group">svět je tvořen více látkami</span>
       <div class="philosopher-card">
         <div class="philosopher-header">
           <span class="philosopher-name">Empedoklés</span>
@@ -276,8 +277,8 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">řecký filosof</span>
           <span class="tag">lékař, politik</span>
-          <span class="tag">čtyři živly (kořeny)</span>
-          <span class="tag tag-highlight">láska (spojuje) a svár (rozděluje)</span>
+          <span class="tag tag-highlight"">arché: 4 živly (voda, země, oheň, vzduch)</span>
+          <span class="tag>láska spojuje a svár rozděluje (živly)</span>
           <span class="tag">sféros – dokonalá jednota</span>
           <span class="tag">smrt v Etně (legenda)</span>
         </div>
