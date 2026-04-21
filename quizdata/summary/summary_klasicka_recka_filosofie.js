@@ -421,11 +421,14 @@ window.sum.klasicka_recka_filosofie = {
       <div class="philosopher-tags">
         <span class="tag">řecký filosof</span>
         <span class="tag">zakladatel Lykeionu (Peripatos)</span>
-        <span class="tag tag-highlight">hylémorfismus (hylé + morfé)</span>
-        <span class="tag">sylogismus</span>
+        <span class="tag tag-highlight">Organon: logika & sylogismus</span>
+        <span class="tag">hylémorfismus (oproti idejím)</span>
+        <span class="tag">Teorie poznání: 4 příčiny</span>
         <span class="tag">První hybatel</span>
-        <span class="tag">ctnost jako střed mezi krajnostmi</span>
-        <span class="tag">kritika teorie idejí</span>
+        <span class="tag">ctnost jako rovnováha</span>
+        <span class="tag">pocit štěstí: aktivita</span>
+        <span class="tag">3 druhy přátelství</span>
+        <span class="tag">přátelství je důležitější než spravedlnost</span>
       </div>
     </div>
   </div>
