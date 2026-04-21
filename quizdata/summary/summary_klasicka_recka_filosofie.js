@@ -337,12 +337,13 @@ window.sum.klasicka_recka_filosofie = {
         <span class="philosopher-years">485–411 př. n. l.</span>
       </div>
       <div class="philosopher-tags">
-        <span class="tag">řecký sofista</span>
+        <span class="tag">nejvlivnější řecký sofista</span>
         <span class="tag">první profesionální učitel</span>
-        <span class="tag tag-highlight">„Měrou všech věcí je člověk"</span>
+        <span class="tag">položil základy rétoriky</span>
+        <span class="tag tag-highlight">'Měrou všech věcí je člověk'</span>
         <span class="tag">relativismus</span>
         <span class="tag">eristika (umění sporu)</span>
-        <span class="tag">agnosticismus (o bohách)</span>
+        <span class="tag">agnosticismus (o bozích nemůžeme nic vědět)</span>
       </div>
     </div>
     <div class="philosopher-card">
