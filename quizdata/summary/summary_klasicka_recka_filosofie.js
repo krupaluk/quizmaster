@@ -430,5 +430,6 @@ window.sum.klasicka_recka_filosofie = {
     </div>
   </div>
 </div>
+`
     }
 };
