@@ -19,7 +19,7 @@ window.sum.klasicka_recka_filosofie = {
 .philosopher-years { font-size: 12px; color: #888; }
 .philosopher-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .tag { font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #e9ecef; color: #495057; }
-.tag-group { background: #f3e9ff; color: #5c4800; margin-top: -2px }
+.tag-group { background: #333333; color: #ffffff; margin-top: -2px }
 .tag-highlight { background: #ffd43b; color: #5c4800; }
 
 /* Barvy období */
