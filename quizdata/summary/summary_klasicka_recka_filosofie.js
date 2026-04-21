@@ -312,8 +312,9 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">řecký filosof</span>
           <span class="tag">zakladatel atomismu</span>
           <span class="tag tag-highlight">atomos – nedělitelné</span>
-          <span class="tag">prázdno (nejsoucno)</span>
+          <span class="tag">nejsoucno existuje (stejně skutečné jako hmota)</span>
           <span class="tag">náhodné víření atomů</span>
+          <span class="tag">důsledný materialismus/mechanicismus</span>
           <span class="tag">není třeba zásahů Boha</span>
         </div>
       </div>
@@ -326,6 +327,9 @@ window.sum.klasicka_recka_filosofie = {
       <span class="period-title">🗣️ SOFISTÉ</span>
       <span class="period-years">5. století př. n. l.</span>
     </div>
+    <span class="tag tag-group">odklon od přírody</span>
+    <span class="tag tag-group">příklon k člověku/společnosti</span>
+    <span class="tag tag-group">profesionální učitelé (nechali si platit)</span>
     <div class="philosopher-card">
       <div class="philosopher-header">
         <span class="philosopher-name">Prótagorás</span>
