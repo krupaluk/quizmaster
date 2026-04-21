@@ -353,10 +353,10 @@ window.sum.klasicka_recka_filosofie = {
       </div>
       <div class="philosopher-tags">
         <span class="tag">řecký sofista</span>
-        <span class="tag">řečník</span>
-        <span class="tag tag-highlight">„Nic neexistuje" (nihilismus)</span>
-        <span class="tag">síla slova (logos)</span>
-        <span class="tag">O přírodě neboli o nejsoucím</span>
+        <span class="tag">mistr rétoriky</span>
+        <span class="tag tag-highlight">dílo: O přírodě neboli o nejsoucím</span>
+        <span class="tag">'Jakékoliv poznání je nemožné' (nihilismus)</span>
+        <span class="tag">síla rétoriky bez ohledu na pravdivost</span>
       </div>
     </div>
     <div class="philosopher-card">
