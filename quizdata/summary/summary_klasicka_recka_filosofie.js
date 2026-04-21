@@ -19,7 +19,7 @@ window.sum.klasicka_recka_filosofie = {
 .philosopher-years { font-size: 12px; color: #888; }
 .philosopher-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .tag { font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #e9ecef; color: #495057; }
-.tag-group { background: #f3e9ff; color: #5c4800; }
+.tag-group { background: #f3e9ff; color: #5c4800; padding-top: 1px }
 .tag-highlight { background: #ffd43b; color: #5c4800; }
 
 /* Barvy období */
@@ -198,6 +198,7 @@ window.sum.klasicka_recka_filosofie = {
     <!-- 4. Eleaté -->
     <div class="sub-branch">
       <div class="sub-title">Eleatská škola</div>
+      <span class="tag tag-group">první ontologové (jsoucno)</span>
       <div class="philosopher-card">
         <div class="philosopher-header">
           <span class="philosopher-name">Xenofanés z Kolofónu</span>
