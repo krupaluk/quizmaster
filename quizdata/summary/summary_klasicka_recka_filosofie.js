@@ -19,6 +19,7 @@ window.sum.klasicka_recka_filosofie = {
 .philosopher-years { font-size: 12px; color: #888; }
 .philosopher-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .tag { font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #e9ecef; color: #495057; }
+.tag-group { background: #f3e9ff; color: #5c4800; }
 .tag-highlight { background: #ffd43b; color: #5c4800; }
 
 /* Barvy období */
@@ -129,6 +130,7 @@ window.sum.klasicka_recka_filosofie = {
     <!-- 2. Milétská škola -->
     <div class="sub-branch">
       <div class="sub-title">Milétská škola</div>
+      <span class="tag tag-group">hledání pralátky</span>
       <div class="philosopher-card">
         <div class="philosopher-header">
           <span class="philosopher-name">Thalés z Milétu</span>
@@ -152,8 +154,9 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">milétská škola</span>
           <span class="tag tag-highlight">arché: apeiron (bezmezno)</span>
+          <span class="tag">v apeironu vše vzniká i zaniká</span>
           <span class="tag">Země jako válec v prostoru</span>
-          <span class="tag tag-highlight">člověk se dříve podobal rybě (evolucionista)</span>
+          <span class="tag">člověk se dříve podobal rybě (evolucionista)</span>
         </div>
       </div>
       <div class="philosopher-card">
@@ -182,11 +185,12 @@ window.sum.klasicka_recka_filosofie = {
         </div>
         <div class="philosopher-tags">
           <span class="tag">zakladatel pythagorejské školy</span>
-          <span class="tag">řecký filosof, vegetarián</span>
+          <span class="tag">řecký filosof</span>
+          <span class="tag">vegetarián (víra v převtělování duší)</span>
           <span class="tag tag-highlight">podstata všeho: čísla</span>
           <span class="tag">„kosmos": uspořádaný & harmonický svět</span>
           <span class="tag">harmonie strun (monochord)</span>
-          <span class="tag">zavedení slova „filosofos"</span>
+          <span class="tag">zavedení slova 'filosof'</span>
         </div>
       </div>
     </div>
@@ -203,7 +207,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">řecký filosof, satirik, kritik</span>
           <span class="tag">předchůdce eleatů</span>
           <span class="tag tag-highlight">kritika antropomorfního náboženství</span>
-          <span class="tag">„Kdyby koně měli bohy, byli by podobni koním"</span>
+          <span class="tag">'Kdyby koně měli bohy, byli by podobni koním'</span>
           <span class="tag">kritika bohů za neřestné chování</span>
         </div>
       </div>
