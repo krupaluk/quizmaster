@@ -120,7 +120,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">jeden z mudrců</span>
           <span class="tag">athénský zákonodárce</span>
           <span class="tag tag-highlight">„Nikoho nenazývej šťastným před jeho smrtí"</span>
-          <span class="tag">seisachtheia (zrušení dluhového otroctví)</span>
+          <span class="tag">zrušení dluhového otroctví (seisachtheia)</span>
           <span class="tag">čtyři třídy podle majetku</span>
         </div>
       </div>
@@ -137,7 +137,7 @@ window.sum.klasicka_recka_filosofie = {
         <div class="philosopher-tags">
           <span class="tag">jeden z mudrců</span>
           <span class="tag">milétská škola</span>
-          <span class="tag">zakladatel evropské vědy</span>
+          <span class="tag">hledání racionálních vysvětlení namísto mýtů</span>
           <span class="tag tag-highlight">arché: voda</span>
           <span class="tag">předpověď zatmění Slunce</span>
           <span class="tag">měření výšky pyramid</span>
@@ -153,7 +153,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag">milétská škola</span>
           <span class="tag tag-highlight">arché: apeiron (bezmezno)</span>
           <span class="tag">Země jako válec v prostoru</span>
-          <span class="tag">původ života z moře (evolucionista)</span>
+          <span class="tag tag-highlight">člověk se dříve podobal rybě (evolucionista)</span>
         </div>
       </div>
       <div class="philosopher-card">
@@ -167,6 +167,7 @@ window.sum.klasicka_recka_filosofie = {
           <span class="tag tag-highlight">arché: vzduch (pneuma)</span>
           <span class="tag">zhušťování a zřeďování</span>
           <span class="tag">dech jako princip</span>
+          <span class="tag">Země jako plochá deska plující ve vzduchu</span>
         </div>
       </div>
     </div>
