@@ -1,0 +1,134 @@
+/* ============================================
+   SUMMARY SHARED STYLES
+   Common styles for all summary files
+   ============================================ */
+
+/* Container & Layout */
+.timeline-tree {
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 20px 0;
+}
+
+.summary-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Period/Section Styling */
+.period-section {
+    margin: 20px 0;
+    border-left: 4px solid;
+    padding-left: 20px;
+}
+
+.period-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.period-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: white;
+}
+
+.period-years {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Entity/Person Card */
+.entity-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-left: 3px solid;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.entity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.entity-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.entity-years {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Tags */
+.entity-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.tag {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background: #e9ecef;
+    color: #495057;
+}
+
+.tag-group {
+    background: #dbeafe;
+    color: #1e40af;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    border: 1px solid #60a5fa;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 3px 8px;
+    display: inline-block;
+}
+
+.tag-highlight {
+    background: #ffd43b;
+    color: #5c4800;
+}
+
+/* Sub-section/Branch */
+.sub-section {
+    margin-left: 30px;
+    border-left: 2px dashed #adb5bd;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.sub-section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sub-section-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+}
