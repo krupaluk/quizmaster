@@ -19,7 +19,7 @@ window.sum.klasicka_recka_filosofie = {
 .philosopher-years { font-size: 12px; color: #888; }
 .philosopher-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 8px; }
 .tag { font-size: 11px; padding: 3px 8px; border-radius: 12px; background: #e9ecef; color: #495057; }
-.tag-group { background: #333333; color: #ffffff; margin-top: -2px }
+.tag-group { background: #dbeafe; color: #1e40af; margin-top: -10px; margin-bottom: 8px; border: 1px solid #60a5fa; border-radius: 4px; font-size: 12px; padding: 3px 8px; display: inline-block; }
 .tag-highlight { background: #ffd43b; color: #5c4800; }
 
 /* Barvy období */
@@ -328,10 +328,13 @@ window.sum.klasicka_recka_filosofie = {
       <span class="period-years">5. století př. n. l.</span>
     </div>
     <div class="sub-branch">
-    <span class="tag tag-group">odklon od přírody</span>
-    <span class="tag tag-group">příklon k člověku/společnosti</span>
-    <span class="tag tag-group">soukromí (placení) učitelé</span>    
-    <div class="philosopher-card">
+      <div class="sub-branch-tags">
+        <span class="tag tag-group">antropologický obrat</span>
+        <span class="tag tag-group">gnozeologický obrat</span>
+        <span class="tag tag-group">etický relativismus</span>
+        <span class="tag tag-group">placení učitelé</span>
+      </div>
+      <div class="philosopher-card">
       <div class="philosopher-header">
         <span class="philosopher-name">Prótagorás</span>
         <span class="philosopher-years">485–411 př. n. l.</span>
@@ -380,6 +383,13 @@ window.sum.klasicka_recka_filosofie = {
       <span class="period-title">⭐ VRCHOLNÉ OBDOBÍ</span>
       <span class="period-years">5.–4. století př. n. l.</span>
     </div>
+    <div class="sub-branch">
+      <div class="sub-branch-tags">
+        <span class="tag tag-group">antropologický obrat</span>
+        <span class="tag tag-group">hledání pravdy</span>
+        <span class="tag tag-group">moudrost</span>
+        <span class="tag tag-group">etika</span>
+      </div>    
     <div class="philosopher-card">
       <div class="philosopher-header">
         <span class="philosopher-name">Sókratés</span>
