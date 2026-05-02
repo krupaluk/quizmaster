@@ -26,7 +26,13 @@ const quizCategories = {
                 title: "Středověk a renesance",
                 desc: "Od hledání harmonie mezi vírou a rozumem v křesťanské dogmatice až po znovuzrození člověka a zrod moderní vědy.",
                 summary: true
-            }            
+            },
+            klasicka_novoveka_filosofie: {
+                id: "klasicka_novoveka_filosofie",
+                title: "Klasická novověká filosofie",
+                desc: "Od racionalismu a empiricismu přes Kanta a osvícenství až po německou idealistickou filosofii.",
+                summary: false
+            }
         }
     },
     Logika: {
