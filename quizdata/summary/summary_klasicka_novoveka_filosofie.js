@@ -44,7 +44,7 @@ window.sum.klasicka_novoveka_filosofie = {
 </style>
 
 <div class="timeline-tree">
-  <div class="summary-header">🧠 NOVOVĚKÁ FILOZOFIE: GNOZEOLGIE → IDEALISMUS</div>
+  <div class="summary-header">🧠 NOVOVĚKÁ FILOZOFIE: GNOZEOLOGIE → IDEALISMUS</div>
 
   <!-- RACIONALISMUS -->
   <div class="period-section racionalismus">

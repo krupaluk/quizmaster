@@ -106,7 +106,7 @@ window.data_klasicka_recka_filosofie = {
                 c: "Na dně oceánu",
                 ans: "a",
                 expl: {
-                    a: "Anaximandros představil revoluční myšlenku, že Země je válcová tělesa vznášející se ve středu vesmíru bez podpory.",
+                    a: "Anaximandros představil revoluční myšlenku, že Země je válcové těleso vznášející se ve středu vesmíru bez podpory.",
                     b: "Země není na obloze, ale představuje centrální prvek kosmického řádu podle Anaximandrovy teorie.",
                     c: "Ačkoliv Thalés považoval vodu za základní prvek, Anaximandros viděl Zemi jako nehybný střed světa."
                 }
@@ -220,7 +220,7 @@ window.data_klasicka_recka_filosofie = {
                 }
             },
             {
-                q: "Jak Pittakos z Mytileny získal své postavení?",
+                q: "Jak Pittakos z Mytilény získal své postavení?",
                 a: "Dědictvím po otci",
                 b: "Zvolením občany za tyranida",
                 c: "Vítězstvím v námořní bitvě",
