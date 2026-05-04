@@ -132,7 +132,7 @@ window.data_stredovek_a_renesance = {
         ans: "b",
         expl: {
             a: "Chyba. Toto je učení manicheismu (dualismus), které Augustin v mládí vyznával, ale později ho jako filozoficky neudržitelné zavrhl.",
-            b: "Správně. Augustin argumentoval, že vše, co existuje, je dobré, protože je to stvořeno Bohem. Zlo přirovnával k tinnitu (pískání v uších) nebo tmě – tma sama o sobě není 'věc', je to jen absence světla. Zlo vzniká tehdy, když člověk svou svobodnou vůlí upřednostní nižší statky (hmotu, sobectví) před nejvyšším Dobrem.",
+            b: "Správně. Augustin argumentoval, že vše, co existuje, je dobré, protože je to stvořeno Bohem. Zlo přirovnával ke tmě – tma sama o sobě není 'věc', je to jen absence světla. <strong>Zlo je tedy absence dobra</strong> a vzniká tehdy, když člověk svou svobodnou vůlí upřednostní nižší statky (hmotu, sobectví) před nejvyšším Dobrem.",
             c: "Chyba. Bůh jakožto absolutní Dobro nemůže být zdrojem něčeho, co by mělo podstatu zla."
         },
     },
