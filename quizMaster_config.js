@@ -93,10 +93,10 @@ const quizCategories = {
                 desc: "Základy občanské společnosti, právního a politického systému České republiky.",
                 summary: false
             },
-            zakladni_geografie: {
-                id: "zakladni_geografie",
-                title: "Základní geografické informace",
-                desc: "Poloha ČR, sousední státy, relief, vodstvo, podnebí, kraje a významná města.",
+            zakladni_geografie_soc_kultura: {
+                id: "zakladni_geografie_soc_kultura",
+                title: "Geografický a sociálně-kulturní základ",
+                desc: "Poloha ČR, přírodní poměry, kraje, města, obyvatelstvo, ekonomika a mezinárodní souvislosti.",
                 summary: false
             },
             zakladni_historie_kultura: {
