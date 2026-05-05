@@ -1258,11 +1258,11 @@ window.data_obcansky_zaklad = {
                     "a": "Maximálně ve výši 1 měsíčního nájmu.",
                     "b": "Maximálně ve výši 3 měsíčních nájmů.",
                     "c": "Maximálně ve výši 6 měsíčních nájmů.",
-                    "ans": "c",
+                    "ans": "b",
                     "expl": {
                         "a": "Chyba. Kauce může být vyšší než 1 měsíc nájmu.",
-                        "b": "Chyba. Kauce může být vyšší než 3 měsíce nájmu.",
-                        "c": "Správně. Kauce může být maximálně <b>6 měsíčních nájmů</b>."
+                        "b": "Správně. Kauce může být maximálně <b>3 měsíčních nájmů</b>.",
+                        "c": "Chyba. Kauce nemůže být vyšší než 3 měsíce nájmu."
                     }
                 },
                 {
