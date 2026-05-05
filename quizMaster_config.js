@@ -83,6 +83,30 @@ const quizCategories = {
             }
         }
     },
+    vseobecny_prehled: {
+        icon: "📚",
+        description: "Základní znalosti o České republice",
+        quizzes: {
+            obcansky_zaklad: {
+                id: "obcansky_zaklad",
+                title: "Občanský základ",
+                desc: "Základy občanské společnosti, právního a politického systému České republiky.",
+                summary: false
+            },
+            zakladni_geografie: {
+                id: "zakladni_geografie",
+                title: "Základní geografické informace",
+                desc: "Poloha ČR, sousední státy, relief, vodstvo, podnebí, kraje a významná města.",
+                summary: false
+            },
+            zakladni_historie_kultura: {
+                id: "zakladni_historie_kultura",
+                title: "Základní historické a kulturní informace",
+                desc: "Historie českých zemí, evropská integrace, kulturní památky a tradiční česká kultura.",
+                summary: false
+            }
+        }
+    },
     Debug: {
         icon: "🔧",
         description: "Debug mode pro testování aplikace",

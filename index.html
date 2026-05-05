@@ -2888,7 +2888,11 @@ const DataLoader = {
                 filePath = `quizdata/summary/summary_${quizId}.js`;
             } else {
                 // For other categories, use category-specific path
-                const categoryFolder = categoryName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                let categoryFolder = categoryName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                // Special case: VseobecnyPrehled -> vseobecny_prehled
+                if (categoryFolder === 'vseobecnyprehled') {
+                    categoryFolder = 'vseobecny_prehled';
+                }
                 filePath = `quizdata/${categoryFolder}/summary_${quizId}.js`;
             }
             
@@ -2916,7 +2920,12 @@ const DataLoader = {
             for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
                 const quiz = quizCategories[category].quizzes[quizKey];
                 if (quiz.id === id) {
-                    return `quizdata/${category.toLowerCase()}/${id}.js`;
+                    let categoryFolder = category.toLowerCase();
+                    // Special case: VseobecnyPrehled -> vseobecny_prehled
+                    if (categoryFolder === 'vseobecnyprehled') {
+                        categoryFolder = 'vseobecny_prehled';
+                    }
+                    return `quizdata/${categoryFolder}/${id}.js`;
                 }
             }
         }
