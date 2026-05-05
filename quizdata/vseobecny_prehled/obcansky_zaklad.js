@@ -1942,12 +1942,12 @@ window.data_obcansky_zaklad = {
                     "q": "Paní Nováková má nové zaměstnání. Bude pracovat jako prodavačka. Získala pracovní smlouvu na dobu neurčitou s maximální zkušební dobou. Jaká bude podle zákona délka zkušební doby paní Novákové?",
                     "a": "4 měsíce.",
                     "b": "6 měsíců.",
-                    "c": "3 měsíce.",
+                    "c": "4 měsíce.",
                     "ans": "c",
                     "expl": {
                         "a": "Chyba. Max. zkušební doba je 3 měsíce.",
                         "b": "Chyba. 6 měsíců je pro vedoucí zaměstnance.",
-                        "c": "Správně. Maximální zkušební doba je <b>3 měsíce</b>."
+                        "c": "Správně. Maximální zkušební doba je <b>4 měsíce</b>."
                     }
                 },
                 {
