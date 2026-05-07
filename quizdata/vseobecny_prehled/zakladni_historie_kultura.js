@@ -317,11 +317,11 @@ window.data_zakladni_historie_kultura = {
                     "q": "Tomáš Garrigue Masaryk byl první prezident Československa a zakladatel moderního československého státu. Na kterém z těchto obrázků je Tomáš Garrigue Masaryk?<br><br><img src='img/vseobecny_prehled/tomas_masaryk.jpg' style='max-width:100%;height:auto;border:1px solid #ccc;border-radius:8px;'>",
                     "a": "Obrázek A.",
                     "b": "Obrázek B.",
-                    "c": "Obrázek C.",
+                    "c": "Obrázek D.",
                     "ans": "c",
                     "expl": {
-                        "a": "Chyba. Toto není Tomáš Garrigue Masaryk.",
-                        "b": "Chyba. Toto není Tomáš Garrigue Masaryk.",
+                        "a": "Chyba. Toto je Petr Pavel.",
+                        "b": "Chyba. Toto je Václav Havel.",
                         "c": "Správně. <b>Tomáš Garrigue Masaryk</b> byl první prezident Československa."
                     }
                 },
@@ -760,7 +760,7 @@ window.data_zakladni_historie_kultura = {
                     "q": "Dům U Černé Matky Boží je významnou stavbou kubistické architektury v Praze. Stavbu navrhl Josef Gočár. V budově je stálá výstava Český kubismus a kavárna. Na kterém obrázku je Dům U Černé Matky Boží?<br><br><img src='img/vseobecny_prehled/dum_u_cerne_matky_bozi.jpg' style='max-width:100%;height:auto;border:1px solid #ccc;border-radius:8px;'>",
                     "a": "Obrázek A.",
                     "b": "Obrázek B.",
-                    "c": "Obrázek C.",
+                    "c": "Obrázek D.",
                     "ans": "c",
                     "expl": {
                         "a": "Chyba. Toto není Dům U Černé Matky Boží.",
