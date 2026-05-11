@@ -14,7 +14,7 @@ window.data_logicke_hadanky = {
             a: "Klasický sylogismus (Barbara): Pokud vlastnost náleží celému druhu (lidé), náleží i každému jednotlivci z tohoto druhu (Sókratés).",
             b: "Tento závěr by znamenal, že množina lidí je identická s jedním člověkem, což je nesmysl.",
             c: "To je v přímém rozporu s logickým vyplýváním z premis."
-        },
+        }
             },
         {
         q: "P1: Žádný kámen není živý. P2: Žula je kámen. Závěr:",
@@ -26,7 +26,7 @@ window.data_logicke_hadanky = {
             a: "Pravidlo P1 říká, že nic z množiny kamenů není živé, tedy ani žula.",
             b: "Sylogismus (Celarent): Pokud se negativní vlastnost týká celé skupiny, týká se i každého poddruhu nebo předmětu v ní.",
             c: "P2 jasně říká, že žula je kámen, nemůžeme to v závěru popřít."
-        },
+        }
             },
         {
         q: "P1: Všechny ryby mají žábry. P2: Kapr je ryba. Závěr:",
@@ -39,7 +39,6 @@ window.data_logicke_hadanky = {
             b: "To je logická chyba - mít žábry je podmínka pro rybu, ale neznamená to, že nic jiného žábry nemá nebo že všechno jsou kapři.",
             c: "To může být pravda v realitě, ale tento závěr nijak nevyplývá z daných dvou premis."
         }
-    },
             },
     {
         q: "P1: Všechny kovy jsou vodivé. P2: Železo je kov. Závěr:",
@@ -52,7 +51,6 @@ window.data_logicke_hadanky = {
             b: "Chybná obrácená implikace. Vodivá je i slaná voda, a přesto není kovem.",
             c: "P2 výslovně tvrdí, že železo je kov."
         }
-    },
             },
     {
         q: "P1: Žádný savec nemá peří. P2: Pes je savec. Závěr:",
@@ -65,7 +63,6 @@ window.data_logicke_hadanky = {
             b: "Negativní dedukce: vlastnost (mít peří) je vyloučena pro celou skupinu, do které pes patří.",
             c: "To by vyžadovalo výjimku z P1, která tam není."
         }
-    },
             },
     {
         q: "P1: Všichni studenti mají ISIC kartu. P2: Někteří lidé v autobuse jsou studenti. Závěr:",
@@ -78,7 +75,6 @@ window.data_logicke_hadanky = {
             b: "Sylogismus (Darii): Pokud někteří lidé patří do skupiny (studenti) a celá ta skupina má vlastnost (ISIC), pak i tito konkrétní lidé ji mají.",
             c: "To je v rozporu s informací, že jsou tam studenti, kteří kartu mít musí."
         }
-    },
             },
     {
         q: "P1: Žádný mrak není z kamene. P2: Některé bílé věci jsou mraky. Závěr:",
@@ -91,7 +87,6 @@ window.data_logicke_hadanky = {
             b: "To by popíralo P1 pro ty bílé věci, které jsou mraky.",
             c: "Ostatní bílé věci (třeba sochy) z kamene být mohou, to premisy nezakazují."
         }
-    },
             },
     {
         q: "P1: Všichni dravci jedí maso. P2: Sokol je dravec. Závěr:",
@@ -104,7 +99,6 @@ window.data_logicke_hadanky = {
             b: "Rozpor s P1.",
             c: "Kategorie sokol spadá pod dravce (subjekty), nikoliv pod maso (objekt stravy)."
         }
-    },
             },
     {
         q: "P1: Každý čtverec je pravoúhlý. P2: Některé obrazce jsou čtverce. Závěr:",
@@ -117,7 +111,6 @@ window.data_logicke_hadanky = {
             b: "Protože jsou v množině obrazců čtverce, musí tam být i něco pravoúhlého.",
             c: "Přímo popírá existenci čtverců zmíněnou v P2."
         }
-    },
             },
     {
         q: "P1: Všechny květiny potřebují vodu. P2: Všechny růže jsou květiny. Závěr:",
@@ -130,7 +123,6 @@ window.data_logicke_hadanky = {
             b: "To by popřelo P1, protože růže jsou květiny.",
             c: "Vodu potřebují i psi, a růže to nejsou. Obrácení nefunguje."
         }
-    },
             },
     {
         q: "P1: Všichni psi jsou šelmy. P2: Všechny kočky jsou šelmy. Plyne z toho, že někteří psi jsou kočky?",
@@ -143,7 +135,6 @@ window.data_logicke_hadanky = {
             b: "Správně. Můžeme mít dvě oddělené skupiny uvnitř jedné velké (šelmy), aniž by se překrývaly.",
             c: "Biologický i logický nesmysl."
         }
-    },
             },
     {
         q: "P1: Žádný pták není savec. P2: Všichni netopýři jsou savci. Závěr:",
@@ -156,7 +147,6 @@ window.data_logicke_hadanky = {
             b: "Sylogismus (Cesare): Pokud se dvě skupiny (ptáci a savci) vůbec nepřekrývají, nemůže žádný prvek z jedné (netopýr) patřit do druhé.",
             c: "Přímý logický rozpor s oběma premisami."
         }
-    },
             },
     {
         q: "P1: Někteří umělci jsou bohémi. P2: Všichni bohémi žijí nespoutaně. Závěr:",
@@ -169,7 +159,6 @@ window.data_logicke_hadanky = {
             b: "Část umělců (ti, co jsou bohémi) nutně přebírá vlastnost nespoutanosti.",
             c: "Přímo popírá existenci bohémských umělců."
         }
-    },
             },
     {
         q: "P1: Všechny drahokamy jsou vzácné. P2: Některé modré věci jsou drahokamy. Závěr:",
@@ -182,7 +171,6 @@ window.data_logicke_hadanky = {
             b: "Ty modré věci, které jsou zároveň drahokamy, jsou nutně vzácné.",
             c: "P2 říká opak."
         }
-    },
             },
     {
         q: "P1: Všichni géniové jsou roztržití. P2: Petr je roztržitý. Plyne z toho, že Petr je génius?",
@@ -213,7 +201,7 @@ window.data_logicke_hadanky = {
             a: "To je disjunkce (nebo). Konjunkce (∧) vyžaduje, aby platilo oboje naráz.",
             b: "Konjunkce (∧) spojuje dva pravdivé výroky do jednoho společného celku.",
             c: "To by byla dvojitá negace původních faktů."
-        },
+        }
             },
         {
         q: "P1: Dám si kávu (K), nebo čaj (Č). P2: Nedám si kávu (¬K). Závěr:",
@@ -226,7 +214,6 @@ window.data_logicke_hadanky = {
             b: "To by popřelo první předpoklad, že si něco z toho dám.",
             c: "P2 výslovně říká, že kávu si nedám."
         }
-    },
             },
     {
         q: "P1: Jestliže svítí slunce (S), jdeme ven (V). P2: Svítí slunce (S). Závěr:",
@@ -238,7 +225,7 @@ window.data_logicke_hadanky = {
             a: "Pravidlo v P1 říká, že slunce je dostatečným důvodem pro odchod ven.",
             b: "Modus Ponens: Základní pravidlo. Pokud platí podmínka (S), musí nastat i následek (V).",
             c: "Informace o dešti v premisách vůbec není."
-        },
+        }
             },
         {
         q: "P1: Jestliže udeří blesk (B), zazní hrom (H). P2: Nezazněl hrom (¬H). Závěr:",
@@ -251,7 +238,6 @@ window.data_logicke_hadanky = {
             b: "Modus Tollens: Pokud nenastal nutný následek (H), nemohla nastat ani příčina (B).",
             c: "Spekulace mimo logický rámec premis."
         }
-    },
             },
     {
         q: "P1: Abych mohl řídit (Ř), musím mít řidičák (P). P2: Nemám řidičák (¬P). Závěr:",
@@ -264,7 +250,6 @@ window.data_logicke_hadanky = {
             b: "Pokud chybí nutná podmínka (P), nemůže nastat výsledek (Ř).",
             c: "O vlastnictví auta premisy nic neříkají."
         }
-    },
             },
     {
         q: "P1: Buď vyhraješ (V), nebo prohraješ (P). P2: Vyhrál jsi (V). Závěr:",
@@ -277,7 +262,6 @@ window.data_logicke_hadanky = {
             b: "V logice 'buď, nebo' platí právě jedna možnost. Pokud nastala jedna, druhá je vyloučena.",
             c: "Remíza v možnostech P1 vůbec nebyla."
         }
-    },
             },
     {
         q: "P1: Jestliže zapneš plyn (P), sporák hoří (H). P2: Sporák hoří (H). Plyne z toho, že jsi zapnul plyn?",
@@ -290,7 +274,6 @@ window.data_logicke_hadanky = {
             b: "Správně. Logika neříká, že plyn je *jediný* způsob, jak sporák zapálit. Závěr je nejistý.",
             c: "To také nevíme, víme jen, že sporák hoří."
         }
-    },
             },
     {
         q: "P1: Jestliže sníš hodně cukru (C), zkazí se ti zuby (Z). P2: Nesnědl jsi hodně cukru (¬C). Závěr:",
@@ -303,7 +286,6 @@ window.data_logicke_hadanky = {
             b: "To je sice možné, ale premisy o 'něčem jiném' nemluví.",
             c: "Pokud nenastala tato konkrétní příčina (C), pravidlo P1 nám o výsledku (Z) už nic neříká."
         }
-    },
             },
     {
         q: "P1: Jsem v Praze (P) a zároveň jsem v Brně (B). Je tento složený výrok pravdivý?",
@@ -316,7 +298,6 @@ window.data_logicke_hadanky = {
             b: "Zákon sporu: Nemůžeš být zároveň v P i v B, pokud se tyto možnosti vylučují. Konjunkce je nepravdivá, pokud je jedna část nepravdivá.",
             c: "Konjunkce vyžaduje pravdivost obou částí."
         }
-    },
             },
     {
         q: "P1: Pokud mám klíče (K), odemknu (O). P2: Odemkl jsem (O). Plyne z toho, že jsem měl klíče?",
@@ -329,7 +310,6 @@ window.data_logicke_hadanky = {
             b: "Opět chyba potvrzení následku. Z přítomnosti následku (O) nemůžeme zpětně potvrdit konkrétní příčinu (K).",
             c: "O ztrátě nemáme v zadání informaci."
         }
-    },
             },
     {
         q: "P1: Jestliže studuješ (S), uděláš zkoušku (Z). P2: Jestliže uděláš zkoušku (Z), dostaneš diplom (D). Závěr:",
@@ -342,7 +322,6 @@ window.data_logicke_hadanky = {
             b: "To premisy nepovolují.",
             c: "Naopak, zkouška je v řetězci nutným mezikrokem."
         }
-    },
             },
     {
         q: "P1: Půjdeme do kina (K), nebo do divadla (D). P2: Půjdeme do kina (K). Plyne z toho, že nejdeme do divadla?",
@@ -355,7 +334,6 @@ window.data_logicke_hadanky = {
             b: "Standardní logická disjunkce (∨) je pravdivá, i když platí obě části. Kino nevylučuje divadlo.",
             c: "O stavu divadla nic nevíme."
         }
-    },
             },
     {
         q: "P1: Není pravda, že (pracuji (P) a zároveň spím (S)). P2: Pracuji (P). Závěr:",
@@ -368,7 +346,6 @@ window.data_logicke_hadanky = {
             b: "Pokud je vyloučeno, aby platilo oboje naráz (P ∧ S) a víme, že první platí, druhá musí být nepravdivá.",
             c: "P1 takovou kombinaci výslovně popírá."
         }
-    },
             },
     {
         q: "P1: Pokud nikoho nezabiješ (¬Z), jsi dobrý člověk (D). P2: Petr někoho zabil (Z). Plyne z toho, že je zlý člověk (¬D)?",
@@ -381,7 +358,6 @@ window.data_logicke_hadanky = {
             b: "Pravidlo P1 definuje jen cestu k 'dobrotě'. Neříká, že vražda je jedinou cestou ke 'zlosti'.",
             c: "To by byl nesmysl, P1 mu cestu k dobrotě přes nezabití uzavřela."
         }
-    },
             },
     {
         q: "P1: Jen tehdy, když svítí zelená (Z), smíš jet (J). P2: Nesvítí zelená (¬Z). Závěr:",
@@ -413,7 +389,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Z existence následku (pití vody) nelze zpětně vyvodit konkrétní příčinu (být sportovcem). Vodu pijí i nesportovci.",
             c: "To je sice pravda, ale pro logickou platnost argumentu je to irelevantní informace."
         }
-    },
             },
     {
         q: "Argument: 'Když prší (P), silnice je mokrá (M). Teď neprší (¬P). Tedy silnice není mokrá (¬M).' Je tento úsudek platný?",
@@ -426,7 +401,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Pokud nenastala jedna konkrétní příčina (déšť), neznamená to, že nenastal následek (mokro) z jiné příčiny (např. kropicí vůz).",
             c: "To je věcně nepravdivý předpoklad, který v logice neobstojí."
         }
-    },
             },
     {
         q: "Argument: 'Buď jsi s námi (N), nebo jsi proti nám (P). Nejsi s námi (¬N). Tedy jsi proti nám (P).' Jak se říká tomuto klamu?",
@@ -439,7 +413,6 @@ window.data_logicke_hadanky = {
             b: "Slaměný panák je překroucení soupeřova argumentu, ne omezení počtu voleb.",
             c: "Ad Hominem útočí na charakter člověka, zde se řeší jen jeho postoj."
         }
-    },
             },
     {
         q: "P1: Všechny kočky jsou smrtelné. P2: Můj pes je smrtelný. Závěr: Můj pes je kočka. Kde je chyba?",
@@ -452,7 +425,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Obě skupiny patří do nadmnožiny 'smrtelných', ale to neznamená, že se ty dvě skupiny (psi a kočky) jakkoliv překrývají.",
             c: "To je věcná poznámka, nikoliv logický rozbor struktury."
         }
-    },
             },
     {
         q: "Argument: 'Lékař mi řekl, že kouření škodí zdraví. Ale on sám kouří, takže to nemůže být pravda.' O jaký klam jde?",
@@ -465,7 +437,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Pravdivost tvrzení (kouření škodí) nezávisí na tom, jestli se mluvčí podle toho chová. Útočíme na mluvčího, ne na fakt.",
             c: "Klouzavá plocha tvrdí, že jeden krok povede k řetězci katastrof."
         }
-    },
             },
     {
         q: "P1: Žádný učitel není hloupý. P2: Někteří hloupí lidé mají štěstí. Plyne z toho, že někteří učitelé mají štěstí?",
@@ -478,7 +449,6 @@ window.data_logicke_hadanky = {
             b: "Správně: Množina učitelů a množina šťastných lidí se nemusí vůbec dotýkat. Střední člen (hloupí) učitele od štěstí spíše odděluje.",
             c: "To je subjektivní názor, nikoliv logický vývod."
         }
-    },
             },
     {
         q: "Argument: 'Když povolíme studentům používat kalkulačky při sčítání, za chvíli nebudou umět ani číst a nakonec se celá civilizace zhroutí.' Jak se tento klam nazývá?",
@@ -491,7 +461,6 @@ window.data_logicke_hadanky = {
             b: "Kruhový argument dokazuje tvrzení jím samým.",
             c: "Falešná stopa odvádí pozornost k jinému tématu."
         }
-    },
             },
     {
         q: "Argument: 'Všichni moji kamarádi říkali, že ten film je skvělý, takže to musí být pravda.' Jde o logicky platný důkaz?",
@@ -504,7 +473,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Popularita nebo počet lidí, kteří něčemu věří, není důkazem pravdivosti dané věci.",
             c: "Důvěra v kamarády je emoce, nikoliv logický argument."
         }
-    },
             },
     {
         q: "Věta: 'Tato věta je nepravdivá.' Co o ní z hlediska logiky můžeme říct?",
@@ -517,7 +485,6 @@ window.data_logicke_hadanky = {
             b: "Paradox lháře: Pokud je pravdivá, je nepravdivá. Pokud je nepravdivá, je vlastně pravdivá. Logický systém zde selhává.",
             c: "Lež je prostá nepravda, ale zde se pravda a lež nekonečně zacyklují."
         }
-    },
             },
     {
         q: "P1: Kdo pije alkohol (A), ten si ničí játra (J). P2: Petr nepije alkohol (¬A). Závěr: Petr má zdravá játra (¬J). Je závěr nutný?",
@@ -530,7 +497,6 @@ window.data_logicke_hadanky = {
             b: "Zase chyba popření antecedentu. Absence jedné příčiny (alkohol) nezaručuje absenci výsledku (nemocná játra).",
             c: "Vědecky i logicky nepravdivé."
         }
-    },
             },
     {
         q: "Argument: 'V Bibli se píše, že je slovem Božím. A Bůh nelže, takže Bible musí být pravdivá.' V čem je problém?",
@@ -543,7 +509,6 @@ window.data_logicke_hadanky = {
             b: "Chyba: Předpokládáte pravdivost závěru (Bible je slovo Boží) už v samotných premisách, abyste ho dokázali.",
             c: "Délka argumentu neurčuje jeho kvalitu."
         }
-    },
             },
     {
         q: "Argument: 'Buď budeme investovat do školství, nebo naše země zchudne. Investujeme do školství, takže nezchudneme.' Je to jisté?",
@@ -556,7 +521,6 @@ window.data_logicke_hadanky = {
             b: "P1 říká, že školství je jedna z podmínek, ale neříká, že je to podmínka jediná a samospásná.",
             c: "Subjektivní názor."
         }
-    },
             },
     {
         q: "Argument: 'Všichni vědci jsou inteligentní. Můj soused není vědec, takže není inteligentní.' O jakou chybu jde?",
@@ -569,7 +533,6 @@ window.data_logicke_hadanky = {
             b: "Argument neútočí na souseda jako osobu, jen chybně vyvozuje jeho vlastnosti.",
             c: "Závěr je logicky neplatný."
         }
-    },
             },
     {
         q: "Argument: 'Statistiky ukazují, že lidé, kteří jedí víc zmrzliny, se častěji utopí. Zmrzlina tedy způsobuje utonutí.' V čem je chyba?",
@@ -582,7 +545,6 @@ window.data_logicke_hadanky = {
             b: "To nevysvětluje logickou chybu v argumentu.",
             c: "Věcně nesouvisející."
         }
-    },
             },
     {
         q: "P1: Jen géniové (G) rozumí kvantové fyzice (K). P2: Petr rozumí kvantové fyzice (K). Závěr: Petr je génius (G). Je tento úsudek platný?",
@@ -614,7 +576,6 @@ window.data_logicke_hadanky = {
             b: "De Morganův zákon: ¬(P ∧ M) ⇔ ¬P ∨ ¬M. Stačí, když přestane pršet NEBO přestane mrznout, a původní věta už není pravda.",
             c: "To by byla pouze změna spojky bez negace faktů."
         }
-    },
             },
     {
         q: "Jaká je správná negace věty: 'Půjdu do kina (K) nebo do divadla (D)'?",
@@ -627,7 +588,6 @@ window.data_logicke_hadanky = {
             b: "To by znamenalo, že nepůjdu do jednoho z nich, což nevylučuje, že půjdu do druhého.",
             c: "To je v rozporu s negací."
         }
-    },
             },
     {
         q: "Jak zní negace věty: 'Všichni (∀) studenti prospěli'?",
@@ -640,7 +600,6 @@ window.data_logicke_hadanky = {
             b: "Negace kvantifikátoru: ¬∀x P(x) ⇔ ∃x ¬P(x). Opakem 'všech' je 'existuje aspoň jeden, který ne...'.",
             c: "To je totéž co možnost 'a', jen jinak řečeno."
         }
-    },
             },
     {
         q: "Co je opakem tvrzení: 'Někteří (∃) lidé lžou'?",
@@ -653,7 +612,6 @@ window.data_logicke_hadanky = {
             b: "To může platit zároveň s původní větou, takže to není její negace.",
             c: "Negace kvantifikátoru: ¬∃x L(x) ⇔ ∀x ¬L(x). Pokud není pravda, že existuje aspoň jeden lhář, pak musí všichni mluvit pravdu."
         }
-    },
             },
     {
         q: "Negujte: 'Mám talent (T) a zároveň tvrdě pracuji (P)'.",
@@ -666,7 +624,6 @@ window.data_logicke_hadanky = {
             b: "Chyba - negace konjunkce není konjunkce negací.",
             c: "To je jen jedna z možností, jak může být původní věta nepravdivá."
         }
-    },
             },
     {
         q: "Jak zní negace: 'Není pravda, že (A nebo B)'?",
@@ -679,7 +636,6 @@ window.data_logicke_hadanky = {
             b: "Dvojitá negace se vyruší (¬¬), ale zde negujeme 'nebo' na 'a' a přidáváme negace k prvkům.",
             c: "Špatná spojka podle De Morgana."
         }
-    },
             },
     {
         q: "Negujte větu: 'Žádný (∀¬) politik nekrade'.",
@@ -692,7 +648,6 @@ window.data_logicke_hadanky = {
             b: "Negace 'nikdo ne...' je 'aspoň někdo ano...'.",
             c: "To by potvrzovalo původní větu."
         }
-    },
             },
     {
         q: "Jak znegujete složenou podmínku: 'Jestliže piju (A), tak neřídím (¬B)'?",
@@ -705,7 +660,6 @@ window.data_logicke_hadanky = {
             b: "To je logický ekvivalent původní věty, ne její negace.",
             c: "To je úplně jiná podmínka."
         }
-    },
             },
     {
         q: "Co je negací věty: 'Učím se (U) nebo mám talent (T)'?",
@@ -718,7 +672,6 @@ window.data_logicke_hadanky = {
             b: "Chyba ve spojce.",
             c: "To je potvrzení, ne negace."
         }
-    },
             },
     {
         q: "Znegujte: 'Všichni (∀) lvi jsou masožravci (M)'.",
@@ -731,7 +684,6 @@ window.data_logicke_hadanky = {
             b: "Přesný logický postup: 'Všichni' se mění na 'existuje' a vlastnost se popře.",
             c: "Příliš silné tvrzení."
         }
-    },
             },
     {
         q: "Jak zní negace věty: 'Některé (∃) růže jsou modré (M)'?",
@@ -744,7 +696,6 @@ window.data_logicke_hadanky = {
             b: "To o modré barvě nic neříká.",
             c: "Odpovídá formálně možnosti 'a', v přirozeném jazyce jsou zaměnitelné."
         }
-    },
             },
     {
         q: "Negujte: 'Pracuji (P) a zároveň nepiju kávu (¬K)'.",
@@ -757,7 +708,6 @@ window.data_logicke_hadanky = {
             b: "Chyba ve spojce.",
             c: "Chybí negace u práce."
         }
-    },
             },
     {
         q: "Co popírá větu: 'Budu buď v Praze, nebo v Brně' (ostrá disjunkce)?",
@@ -770,7 +720,6 @@ window.data_logicke_hadanky = {
             b: "To je jen polovina negace.",
             c: "To je jen malá část možností."
         }
-    },
             },
     {
         q: "Jak zní negace slibu: 'Když vyhraju (V), koupím ti auto (A)'?",
@@ -783,7 +732,6 @@ window.data_logicke_hadanky = {
             b: "Slib (implikaci) negujeme tak, že nastane podmínka, ale nenastane slíbený výsledek.",
             c: "To je častý omyl, ale logicky to není negace původního slibu."
         }
-    },
             },
     {
         q: "Negujte: 'Některé (∃) dny jsou veselé (V) a zároveň slunné (S)'.",
@@ -815,7 +763,6 @@ window.data_logicke_hadanky = {
             b: "Disjunktivní sylogismus: Máme-li dvě možnosti a jedna je vyloučena, druhá musí platit.",
             c: "To je v rozporu se zadáním, že tam vrah nechal stopy."
         }
-    },
             },
     {
         q: "Pokud je pachatel zahradník (Z), má na botách bláto (B). Zahradník má boty úplně čisté (¬B). Co můžeme říct o pachateli?",
@@ -828,7 +775,6 @@ window.data_logicke_hadanky = {
             b: "To je spekulace mimo logický rámec zadání.",
             c: "Logika pracuje s daným stavem (čisté boty), který vylučuje identitu zahradníka podle P1."
         }
-    },
             },
     {
         q: "Na ostrově jsou dva typy lidí: rytíři (vždy mluví pravdu) a lháři (vždy lžou). Člověk A řekne: 'Já jsem lhář.' Co je člověk A zač?",
@@ -841,7 +787,6 @@ window.data_logicke_hadanky = {
             b: "Kdyby byl lhář, musel by lhát, takže jeho věta 'Já jsem lhář' by musela být lež, což by znamenalo, že je rytíř – opět spor.",
             c: "Jde o variaci na paradox lháře. Žádný obyvatel tohoto ostrova nemůže tuto větu vyslovit."
         }
-    },
             },
     {
         q: "V trezoru je buď zlato (Z), nebo diamanty (D), nebo obojí. Pokud v něm není zlato (¬Z), tak v něm musí být diamanty (D). Víme, že v něm zlato je (Z). Co víme o diamantech?",
@@ -854,7 +799,6 @@ window.data_logicke_hadanky = {
             b: "To nevíme, podmínka pro diamanty (nepřítomnost zlata) nebyla naplněna.",
             c: "Chyba popření antecedentu: Pokud podmínka pro diamanty (¬Z) nenastala, nevíme o diamantech nic."
         }
-    },
             },
     {
         q: "Tři podezřelí: Adam, Bedřich a Cyril. Víme: 1. Aspoň jeden z nich je vrah. 2. Pokud je vrah Adam, je vrah i Bedřich. 3. Adam je vrah. Kdo je vrah?",
@@ -867,7 +811,6 @@ window.data_logicke_hadanky = {
             b: "Modus Ponens: Pokud je Adam vrah a on jím je, pak je vrah i Bedřich. O Cyrilovi nevíme nic, ale Adam a Bedřich jsou jistí.",
             c: "O Cyrilovi nemáme žádnou informaci, která by ho usvědčovala."
         }
-    },
             },
     {
         q: "Pokud bude svítit slunce (S), půjdeme na pláž (P). Pokud nepůjdeme na pláž (¬P), půjdeme do kina (K). Nesvítí slunce (¬S). Co uděláme?",
@@ -880,7 +823,6 @@ window.data_logicke_hadanky = {
             b: "To také nevíme, slunce byla jen jedna z možných příčin.",
             c: "Klasický chyták: Nepotvrdili jsme podmínku pro kino, protože nevíme, jestli na tu pláž skutečně nejdeme."
         }
-    },
             },
     {
         q: "V krabici jsou míčky. Všechny červené míčky (Č) jsou malé (M). Některé malé míčky (M) jsou gumové (G). Plyne z toho, že některé červené míčky jsou gumové?",
@@ -893,7 +835,6 @@ window.data_logicke_hadanky = {
             b: "Správně. Logicky není zaručen žádný průnik mezi červenými a gumovými míčky.",
             c: "To je úplně jiná a nepodložená informace."
         }
-    },
             },
     {
         q: "U dveří stojí strážce. Pustí tě dál, jen pokud (J) máš heslo (H) a zároveň máš pozvánku (P). Ty máš heslo (H), ale nemáš pozvánku (¬P). Pustí tě?",
@@ -906,7 +847,6 @@ window.data_logicke_hadanky = {
             b: "Pokud chybí jedna část konjunktivní podmínky, podmínka jako celek neplatí.",
             c: "Logika nepočítá s úsměvy, pokud nejsou v premisách."
         }
-    },
             },
     {
         q: "Máme tři krabice: A, B, C. V jedné je cena. Na krabici A je: 'Cena není zde.' Na krabici B je: 'Cena je v C.' Právě jeden nápis je pravdivý. Kde je cena?",
@@ -919,7 +859,6 @@ window.data_logicke_hadanky = {
             b: "Moment, oprava úvahy: Pokud je cena v B: Nápis A (není v A) = Pravda. Nápis B (je v C) = Lež. Máme právě jeden pravdivý nápis. Tedy cena je v B.",
             c: "Kdyby byla v C: Nápis A = Pravda, Nápis B = Pravda. To jsou dva pravdivé nápisy, což zadání zakazuje."
         }
-    },
             },
     {
         q: "Každý, kdo vyhraje závod (V), dostane medaili (M). Petr nevyhrál závod (¬V). Znamená to, že Petr nedostal medaili (¬M)?",
@@ -932,7 +871,6 @@ window.data_logicke_hadanky = {
             b: "Logicky nevíme o Petrově medaili nic. Vyhrát je dostatečná, ale ne nutná podmínka.",
             c: "O pohárech nepadlo ani slovo."
         }
-    },
             },
     {
         q: "V místnosti jsou buď jen muži, nebo jen ženy. Vejdeš a uvidíš jednu osobu v klobouku. Víš, že žádný muž v této místnosti nenosí klobouk. Co víš o lidech v místnosti?",
@@ -945,7 +883,6 @@ window.data_logicke_hadanky = {
             b: "To by byl přímý rozpor s kloboukem a P2.",
             c: "To nevíme, víme jen, že ty, kteří tam jsou, jsou ženy."
         }
-    },
             },
     {
         q: "Všechny drahé restaurace (D) mají dobré jídlo (J). Tato restaurace má špatné jídlo (¬J). Co z toho plyne?",
@@ -958,7 +895,6 @@ window.data_logicke_hadanky = {
             b: "To popírá absolutní platnost P1.",
             c: "Kategorie 'střední' v zadání neexistuje."
         }
-    },
             },
     {
         q: "Pokud je dnes úterý (U), musím do práce (P). Dnes není úterý (¬U). Znamená to, že do práce nemusím (¬P)?",
@@ -971,7 +907,6 @@ window.data_logicke_hadanky = {
             b: "Logika neumožňuje říct nic o práci v jiné dny než v úterý.",
             c: "To je spekulace, může být pondělí."
         }
-    },
             },
     {
         q: "Někdo v této místnosti ukradl koláč. Víme, že: 1. Pokud to byl Jan, tak to nebyl Petr. 2. Pokud to nebyl Petr, tak to byl Pavel. Jan to nebyl. Kdo to byl?",
@@ -984,7 +919,6 @@ window.data_logicke_hadanky = {
             b: "To by platilo, jen kdybychom věděli, že to nebyl Petr. Ale to nevíme.",
             c: "P1 říká 'Pokud Jan, pak ne Petr'. Protože to Jan nebyl, podmínka neplatí a o Petrovi (a tím pádem i o Pavlovi z P2) nevíme nic."
         }
-    },
             },
     {
         q: "Každý student (S) je buď pilný (P), nebo chytrý (C). Petr je student (S). Víme, že Petr není pilný (¬P). Co o něm víme?",
@@ -1016,7 +950,6 @@ window.data_logicke_hadanky = {
             b: "Symbol ∧ (stříška) označuje konjunkci, tedy spojku 'a zároveň'.",
             c: "Symbol → označuje podmínku 'jestliže, pak'."
         }
-    },
             },
     {
         q: "Který zápis odpovídá větě: 'Jestliže se učím (U), pak uspěji (P)'?",
@@ -1029,7 +962,6 @@ window.data_logicke_hadanky = {
             b: "Tento zápis říká: 'Jestliže uspěji, pak se učím' (obrácená podmínka).",
             c: "Šipka směřuje od předpokladu (učení) k následku (úspěch)."
         }
-    },
             },
     {
         q: "Jak zní formální zápis věty: 'Všichni (x) lidé (L) jsou smrtelní (S)'?",
@@ -1042,7 +974,6 @@ window.data_logicke_hadanky = {
             b: "Správný zápis pro 'Všechny': Pro každé x platí, že pokud je to člověk, pak je smrtelný.",
             c: "To by znamenalo, že úplně všechno ve vesmíru je zároveň člověk i smrtelné."
         }
-    },
             },
     {
         q: "Zapište: 'Není pravda, že (mám čas (Č) i peníze (P))'.",
@@ -1055,7 +986,6 @@ window.data_logicke_hadanky = {
             b: "Závorka s negací před ní popírá platnost celého spojení 'čas i peníze'.",
             c: "To je sice logicky ekvivalentní výsledek (podle De Morgana), ale neodpovídá to doslovnému zadání 'Není pravda, že...'."
         }
-    },
             },
     {
         q: "Který symbol vyjadřuje větu: 'Půjdu ven tehdy a jen tehdy, když nebude pršet'?",
@@ -1068,7 +998,6 @@ window.data_logicke_hadanky = {
             b: "Obousměrná šipka (ekvivalence) vyjadřuje vztah 'tehdy a jen tehdy'.",
             c: "To znamená, že jdu ven a neprší, ale neříká to nic o pravidle."
         }
-    },
             },
     {
         q: "Jak zapíšete: 'Existuje (x) aspoň jeden lhář (L)'?",
@@ -1081,7 +1010,6 @@ window.data_logicke_hadanky = {
             b: "Symbol ∃ (obrácené E) vyjadřuje existenci alespoň jednoho prvku s danou vlastností.",
             c: "Tento zápis je syntakticky nesmyslný."
         }
-    },
             },
     {
         q: "Formalizujte: 'Někteří (x) psi (P) nekoušou (¬K)'.",
@@ -1094,7 +1022,6 @@ window.data_logicke_hadanky = {
             b: "V predikátové logice se u existenčního kvantifikátoru implikace (→) téměř nikdy nepoužívá, protože by věta byla pravdivá i pro věci, které nejsou psi.",
             c: "To by znamenalo, že všechno na světě je pes, který nekouše."
         }
-    },
             },
     {
         q: "Zápis ¬P ∨ Q odpovídá větě:",
@@ -1107,7 +1034,6 @@ window.data_logicke_hadanky = {
             b: "Přesný překlad symbolů: negace P, disjunkce, Q.",
             c: "To je logicky ekvivalentní význam, ale ne doslovný překlad zápisu."
         }
-    },
             },
     {
         q: "Jak zapíšete podmínku: 'Jen ten, kdo má lístek (L), může vstoupit (V)'?",
@@ -1120,7 +1046,6 @@ window.data_logicke_hadanky = {
             b: "Slovo 'JEN' obrací směr implikace. Pokud jsi vstoupil (V), je to důkaz, že jsi musel mít lístek (L).",
             c: "To neříká nic o pravidle vstupu."
         }
-    },
             },
     {
         q: "Věta: 'Žádný (x) havran (H) není bílý (B)'.",
@@ -1133,7 +1058,6 @@ window.data_logicke_hadanky = {
             b: "Správně: Pro každé x platí, že pokud je to havran, pak není bílý.",
             c: "To znamená: 'Existuje aspoň jeden havran, který není bílý'."
         }
-    },
             },
     {
         q: "Co znamená zápis: ¬(P → Q)?",
@@ -1146,7 +1070,6 @@ window.data_logicke_hadanky = {
             b: "To by byl zápis ¬P → ¬Q.",
             c: "To by byl výsledek negace (P ∧ ¬Q), nikoliv její zadání."
         }
-    },
             },
     {
         q: "Zapište: 'Buď vyhraje Petr (P), nebo vyhraje Pavel (Q), ale ne oba.'",
@@ -1159,7 +1082,6 @@ window.data_logicke_hadanky = {
             b: "Ostrá disjunkce (XOR): Platí buď jedno, nebo druhé, a zároveň neplatí oboje naráz.",
             c: "To by znamenalo, že vyhrají oba."
         }
-    },
             },
     {
         q: "Jak zní zápis: 'Každý (x) student (S) má nějakého (y) učitele (U)'?",
@@ -1172,7 +1094,6 @@ window.data_logicke_hadanky = {
             b: "To by znamenalo, že existuje jeden super-učitel, který učí úplně všechny studenty.",
             c: "To by znamenalo, že úplně všichni jsou studenti a úplně všichni všechny učí."
         }
-    },
             },
     {
         q: "Zápis: P ∧ (Q ∨ R) odpovídá větě:",
@@ -1185,7 +1106,6 @@ window.data_logicke_hadanky = {
             b: "Záměna symbolů ∧ a ∨.",
             c: "Záměna konjunkce za implikaci."
         }
-    },
             },
     {
         q: "Jak formalizujete: 'Něco (x) je shnilého (S) ve státě dánském (D)'?",

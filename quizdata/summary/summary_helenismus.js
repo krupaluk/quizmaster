@@ -4,13 +4,12 @@ window.sum.helenismus = {
     "chronologie_helanismu": {
         "title": "Souhrn: Helénismus",
         "content": `
-<p>Vývoj <strong>helénistické filosofie</strong> od <strong>4. století př. n. l.</strong> do <strong>5. století n. l.</strong> s hlavními představiteli a jejich přínosy.</p>
 
 <style>
 .timeline-tree { font-family: system-ui, -apple-system, sans-serif; margin: 20px 0; }
 .summary-header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px 20px; border-radius: 10px; text-align: center; font-weight: bold; font-size: 18px; margin-bottom: 30px; }
 .period-section { margin: 20px 0; border-left: 4px solid; padding-left: 20px; }
-.period-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+.period-header { display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px; }
 .period-title { font-size: 16px; font-weight: bold; padding: 8px 16px; border-radius: 20px; color: white; }
 .period-years { font-size: 13px; color: #666; font-style: italic; }
 .entity-card { background: #f8f9fa; border-radius: 8px; padding: 12px 15px; margin: 8px 0; border-left: 3px solid; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -44,12 +43,21 @@ window.sum.helenismus = {
 
 <div class="timeline-tree">
   <div class="summary-header">🌳 HELÉNISTICKÁ FILOZOFIE: ETICKÉ ŠKOLY → NOVOPLATONISMUS</div>
-
+<p>Přechod od hledání <strong>ideálního státu a člověka</strong> k jednotlivci který buduje svůj <strong>vnitřní klid a nezávislost</strong> jako obranu proti vnějšímu světu.
+      <br>
+      <span class="period-years">
+        (400 př. n. l. - 500 n. l.)
+      </span>
+      <br><br></p>
   <!-- STOICISMUS -->
   <div class="period-section stoicismus">
     <div class="period-header">
       <span class="period-title">🏛️ STOICISMUS</span>
-      <span class="period-years">300 př. n. l. – 180 n. l.</span>
+      <span class="period-years">
+        <strong>Disciplína, rozum, přijetí osudu.</strong>
+        <br>
+        (300 př. n. l. – 180 n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
@@ -123,7 +131,11 @@ window.sum.helenismus = {
   <div class="period-section epikureismus">
     <div class="period-header">
       <span class="period-title">🌸 EPIKUREISMUS</span>
-      <span class="period-years">341–40 př. n. l.</span>
+      <span class="period-years">
+        <strong>Radost z života v umírněné formě.</strong>
+        <br>
+        (341–40 př. n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
@@ -169,7 +181,11 @@ window.sum.helenismus = {
   <div class="period-section skepticismus">
     <div class="period-header">
       <span class="period-title">❓ SKEPTICISMUS</span>
-      <span class="period-years">365 př. n. l. – 210 n. l.</span>
+      <span class="period-years">
+        <strong>Isostheneia (rovnost argumentů) → Epoché (pozastavení úsudku) → Aphasia (mlčení) → Ataraxie (klid duše).</strong>
+        <br>
+        (365 př. n. l. – 210 n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
@@ -213,7 +229,11 @@ window.sum.helenismus = {
   <div class="period-section kynismus">
     <div class="period-header">
       <span class="period-title">🐕 KYNISMUS</span>
-      <span class="period-years">413–327 př. n. l.</span>
+      <span class="period-years">
+        <strong>Autarkeia (soběstačnost), Anaideia (bezostydnost), Parrhésia (svoboda řeči).</strong>
+        <br>
+        (413–327 př. n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
@@ -235,7 +255,11 @@ window.sum.helenismus = {
   <div class="period-section eklekticismus">
     <div class="period-header">
       <span class="period-title">⚖️ EKLEKTICISMUS</span>
-      <span class="period-years">106–43 př. n. l.</span>
+      <span class="period-years">
+        <strong>Výběr toho nejlepšího z ostatních směrů (Římský mix).</strong>
+        <br>
+        (106–43 př. n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
@@ -269,7 +293,11 @@ window.sum.helenismus = {
   <div class="period-section novoplatonismus">
     <div class="period-header">
       <span class="period-title">✨ NOVOPLATONISMUS</span>
-      <span class="period-years">204–529 n. l.</span>
+      <span class="period-years">
+        <strong>Mystický (synkretický) závěr antiky → připravil půdu pro křesťanství.</strong>
+        <br>
+        (204–529 n. l.)
+      </span>
     </div>
     <div class="entity-card">
       <div class="entity-header">
