@@ -36,7 +36,7 @@ const quizCategories = {
             filosofie_19a20st: {
                 id: "filosofie_19a20st",
                 title: "Filozofie 19-20 století",
-                desc: "Marxismus, materialismus, iracionalismus, pragmatismus, existencialismus, filosofická antropologie, fenomenologie, analytická filozofie a další.",
+                desc: "Od 2 poloviny 19 století do začátku 20 století (marxismus, iracionalismus, pragmatismus, existencialismus, fil. antropologie, fenomenologie, a další).",
                 summary: false
             },
             povalecna_a_ceska_filozofie: {
