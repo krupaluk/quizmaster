@@ -36,7 +36,7 @@ const quizCategories = {
             filosofie_19a20st: {
                 id: "filosofie_19a20st",
                 title: "Filozofie 19-20 století",
-                desc: "Německý idealismus, materialismus, existencialismus, fenomenologie, analytická filozofie a vývoj logiky v moderní době.",
+                desc: "Marxismus, materialismus, iracionalismus, pragmatismus, existencialismus, filosofická antropologie, fenomenologie, analytická filozofie a další.",
                 summary: false
             },
             povalecna_a_ceska_filozofie: {
