@@ -232,7 +232,7 @@ window.data_klasicka_recka_filosofie = {
                 }
             },
             {
-                q: "Chilon ze Sparty proslul výrokem 'Poznej sám sebe'?",
+                q: "Který ze sedmi mudrců proslul výrokem 'Poznej sám sebe'?",
                 a: "Chilon ze Sparty",
                 b: "Solón z Athén",
                 c: "Thalés z Milétu",
@@ -872,7 +872,7 @@ window.data_klasicka_recka_filosofie = {
                 },
             },
                 {
-                q: "Antifón ze自Athén proslul rozlišením mezi přírodou (fysis) a lidským zákonem (nomos). Co o nich tvrdil?",
+                q: "Antifón z Athén proslul rozlišením mezi přírodou (fysis) a lidským zákonem (nomos). Co o nich tvrdil?",
                 a: "Lidské zákony jsou posvátné a příroda se jim musí podřídit",
                 b: "Zákony jsou jen umělou dohodou, zatímco příroda je pravdivá a platí pro všechny stejně",
                 c: "Příroda a zákony jsou vždy v dokonalém souladu",

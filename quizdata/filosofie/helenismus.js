@@ -256,18 +256,6 @@ window.data_helenismus = {
                 },
             },
                 {
-                q: "Jaký byl skeptický postoj k rituálům a náboženskému kultu?",
-                a: "Považovali je za nebezpečné pověry a zakazovali je",
-                b: "Považovali je za pravdivé cesty k bohům",
-                c: "Dodržovali je, aby nepůsobili rozruch, bez ohledu na pravdivost",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Boj proti náboženství by vyžadoval přesvědčení o jeho nepravdivosti, což skeptik odmítá.",
-                    b: "Chyba. Skeptik neuznává nic jako definitivně pravdivé, tedy ani náboženské dogma.",
-                    c: "Správně. Skeptici se řídili fenomény (jevy) a zvyky. Pokud společnost vykonává rituály, skeptik se k nim připojí, protože je to praktické pro společenský smír a protože nemůže dokázat, že bohové neexistují nebo že rituály nefungují."
-                },
-            },
-                {
                 q: "Jak stoici vnímali sebevraždu?",
                 a: "Jako největší hřích",
                 b: "Jako 'rozumný odchod' (eulogos exagogé) v situaci, kdy nelze žít důstojně",
@@ -601,7 +589,7 @@ window.data_helenismus = {
                 },
             },
                 {
-                q: "Jak skeptici pohlíželi na náboženství a tradice?",
+                q: "Jak skeptici pohlíželi na náboženství, rituály a tradice?",
                 a: "Bojovali proti nim jako proti lžím",
                 b: "Dodržovali je z praktických důvodů, i když v ně nevěřili",
                 c: "Zakládali vlastní náboženské sekty",
@@ -622,18 +610,6 @@ window.data_helenismus = {
                     a: "Správně. Skepticismus naučil lidstvo, že každé tvrzení musí být podrobeno kritice a že naše smysly mohou klamat. Tento kritický postoj je základem moderního empirismu a vědeckého pochybování, bez kterého by nedošlo k vědecké revoluci v raném novověku.",
                     b: "Chyba. Stoici sice věřili v propojenost světa, ale jejich víra v astrologii a věštění vědu spíše brzdila.",
                     c: "Chyba. Kynikové se o vědu nezajímali vůbec, považovali ji za zbytečnou komplikaci prostého života."
-                },
-            },
-                {
-                q: "Jaký byl skeptický postoj k rituálům a náboženskému kultu?",
-                a: "Považovali je za nebezpečné pověry a zakazovali je",
-                b: "Považovali je za pravdivé cesty k bohům",
-                c: "Dodržovali je, aby nepůsobili rozruch, bez ohledu na pravdivost",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Boj proti náboženství by vyžadoval přesvědčení o jeho nepravdivosti, což skeptik odmítá.",
-                    b: "Chyba. Skeptik neuznává nic jako definitivně pravdivé, tedy ani náboženské dogma.",
-                    c: "Správně. Skeptici se řídili fenomény (jevy) a zvyky. Pokud společnost vykonává rituály, skeptik se k nim připojí, protože je to praktické pro společenský smír a protože nemůže dokázat, že bohové neexistují nebo že rituály nefungují."
                 },
             },
                 {
@@ -770,18 +746,6 @@ window.data_helenismus = {
                     a: "Správně. Zejména v římském stoicismu (Seneca) se objevuje silný důraz na vnitřní reflexi. Svědomí (conscientia) je chápáno jako vědomí shody našeho jednání s univerzálním rozumem (Logem) a slouží jako morální kompas nezávislý na vnějším hodnocení.",
                     b: "Chyba. Skeptici se vyhýbali morálním soudům, proto u nich koncept svědomí jako soudce nedával smysl.",
                     c: "Chyba. Kynikové jednali instinktivně a přirozeně, vnitřní analýza svědomí nebyla středobodem jejich učení."
-                },
-            },
-                {
-                q: "Jaký byl hlavní rozdíl v pojetí 'ctnosti' mezi kyniky a stoiky?",
-                a: "Kynikové ctnost odmítali, stoici ji uctívali",
-                b: "Kynikové ji viděli v askezi a provokaci, stoici v rozumném plnění povinností",
-                c: "V pojetí ctnosti mezi nimi nebyl žádný rozdíl",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Pro oba směry byla ctnost jediným dobrem, lišili se jen v jejím obsahu.",
-                    b: "Správně. Kynikové (Diogenés) věřili, že ctnost vyžaduje radikální rozchod se společností a návrat k 'psímu' (přirozenému) životu. Stoici (Zénón, Seneca) naopak učili, že ctnostný člověk má žít ve společnosti, zastávat úřady a plnit své povinnosti vůči rodině i státu, pokud mu to dovoluje jeho vnitřní integrita.",
-                    c: "Chyba. Rozdíl byl zásadní – kynik byl solitérní rebel, stoik byl disciplinovaný občan vesmíru."
                 },
             },
                 {
@@ -1152,17 +1116,6 @@ window.data_helenismus = {
                     c: "Chyba. Platón žil dávno před těmito spekulacemi o hierarchiích bytostí."
                 },
             },
-                {
-                q: "Jaký byl hlavní rozdíl mezi epikurejským a křesťanským pojetím posmrtného života?",
-                a: "Oba věřili v peklo a nebe",
-                b: "Křesťané věřili v nesmrtelnost, epikurejci v definitivní rozpad atomů",
-                c: "Epikurejci věřili v reinkarnaci, křesťané v nicotu",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Epikureismus existenci pekla i nebe popíral jako mýty sloužící k zastrašování lidí.",
-                    b: "Správně. Epikúros učil, že duše je složena z atomů, které se po smrti rozletí, a vědomí zaniká. Křesťanství naopak postavilo svou celou věrouku na naději na osobní vzkříšení a věčný život, což byl jeden z hlavních důvodů, proč nakonec nad materialistickým epikureismem zvítězilo.",
-                    c: "Chyba. V reinkarnaci věřili spíše pythagorejci a orfici, nikoliv epikurejci."
-                }}
             ]
         }
     }
