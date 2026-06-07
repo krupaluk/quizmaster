@@ -44,6 +44,7 @@ window.sum.helenismus = {
 <div class="timeline-tree">
   <div class="summary-header">🌳 HELÉNISTICKÁ FILOZOFIE: ETICKÉ ŠKOLY → NOVOPLATONISMUS</div>
 <p>Přechod od hledání <strong>ideálního státu a člověka</strong> k jednotlivci který buduje svůj <strong>vnitřní klid a nezávislost</strong> jako obranu proti vnějšímu světu.
+Cíl života → <strong>Ataraxie</strong> (stav vnitřního klidu, bez starostí jako lék na strach).
       <br>
       <span class="period-years">
         (400 př. n. l. - 500 n. l.)
