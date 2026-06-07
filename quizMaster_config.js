@@ -32,6 +32,18 @@ const quizCategories = {
                 title: "Klasická novověká filosofie",
                 desc: "Od racionalismu a empiricismu přes Kanta a osvícenství až po německou idealistickou filosofii.",
                 summary: true
+            },
+            filosofie_19a20st: {
+                id: "filosofie_19a20st",
+                title: "Filozofie 19-20 století",
+                desc: "Německý idealismus, materialismus, existencialismus, fenomenologie, analytická filozofie a vývoj logiky v moderní době.",
+                summary: false
+            },
+            povalecna_a_ceska_filozofie: {
+                id: "povalecna_a_ceska_filozofie",
+                title: "Poválečná a česká filozofická tradice",
+                desc: "Poválečná filozofie a česká filozofická tradice od 19. století až po současnost.",
+                summary: false
             }
         }
     },
