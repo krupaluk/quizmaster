@@ -41,7 +41,7 @@ const quizCategories = {
             },
             povalecna_a_ceska_filozofie: {
                 id: "povalecna_a_ceska_filozofie",
-                title: "Poválečná a česká filozofická tradice",
+                title: "Poválečná a česká filozofie",
                 desc: "Poválečná filozofie a česká filozofická tradice od 19. století až po současnost.",
                 summary: false
             }

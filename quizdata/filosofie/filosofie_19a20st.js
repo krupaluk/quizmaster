@@ -523,6 +523,84 @@ window.data_filosofie_19a20st = {
 
             ]
         },
+        "filozoficka_antropologie": {
+            "title": "Filozofická antropologie",
+            "questions": [
+{
+  "q": "Jaký je hlavní cíl filozofické antropologie jako směru 20. století?",
+  "a": "Syntetizovat poznatky moderních věd a odpovědět na otázku, co je člověk a jaké je jeho místo ve vesmíru.",
+  "b": "Odmítnout biologii i psychologii a popsat člověka pouze jako produkt ekonomických vztahů.",
+  "c": "Vytvořit univerzální matematický model lidského chování nezávislý na kultuře.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. Filozofická antropologie 20. století vznikla jako <b>pokus syntetizovat poznatky moderních věd</b> (biologie, psychologie, sociologie). Jejím hlavním cílem je odpovědět na základní otázku: <b>Co je člověk a jaké je jeho místo ve vesmíru?</b>",
+    "b": "Chyba. Tento směr se naopak o poznatky biologie a psychologie opírá, aby z nich vyvodil filozofické závěry.",
+    "c": "Chyba. Matematickým modelováním se filozofická antropologie nezabývá, zaměřuje se na kvalitativní podstatu lidství."
+  }
+},
+{
+  "q": "Jak se Max Scheler pokoušel vymezit podstatu člověka?",
+  "a": "Především srovnáváním člověka se zvířetem.",
+  "b": "Studováním historických textů antických autorů.",
+  "c": "Analýzou mechanických pohybů lidského těla v průmyslové výrobě.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. Významný německý filozof a sociolog Max Scheler se <b>pokusil vymezit podstatu člověka především srovnáváním člověka se zvířetem</b>. Zkoumal, v čem se lidské psychické a biologické funkce shodují s faunou a v čem se od ní radikálně liší.",
+    "b": "Chyba. Scheler vycházel z moderních biologických a psychologických poznatků své doby, nikoli z pouhého historického studia textů.",
+    "c": "Chyba. Toto mechanické pojetí odmítal, soustředil se na odstupňování psychických sil."
+  }
+},
+{
+  "q": "Které čtyři psychické stupně (síly) rozlišuje Max Scheler u živých organismů?",
+  "a": "I. Nevědomé puzení, II. Instinkt, III. Asociativní paměť, IV. Praktická inteligence.",
+  "b": "I. Smyslové vnímání, II. Racionální úsudek, III. Absolutní duch, IV. Náboženská extáze.",
+  "c": "I. Nepodmíněný reflex, II. Emoce, III. Jazykové vyjadřování, IV. Společenské vědomí.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. Schelerovým východiskem bylo odstupňování psychických sil do čtyř úrovní:<br><b>I. Nevědomé puzení</b> (nejnižší stupeň, vlastní i rostlinám),<br><b>II. Instinkt</b> (prožitky a reprodukce),<br><b>III. Asociativní paměť</b> (učení se ze zkušeností),<br><b>IV. Praktická inteligence</b> (účelné jednání v nových situacích bez předchozí zkušenosti).",
+    "b": "Chyba. Tyto pojmy neodpovídají Schelerovu biologicko-psychologickému schématu evoluce psychických sil.",
+    "c": "Chyba. Jde o pojmy z behaviorální psychologie a sociologie, které Scheler pro své odstupňování nepoužívá."
+  }
+},
+{
+  "q": "Co podle Maxe Schelera zásadně odlišuje člověka od zvířat?",
+  "a": "Nový, mimobiologický stupeň, kterým je Duch (Geist).",
+  "b": "Schopnost vyrábět složité nástroje a koordinovat lov v tlupě.",
+  "c": "Větší kapacita asociativní paměti a dokonalejší instinkty.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. Člověk má sice všechny čtyři nižší psychické stupně společné se zvířaty, ale to, co ho zásadně odlišuje a staví mimo biologickou škálu, je <b>nový další psychický stupeň – Duch (Geist)</b>. Duch není redukovatelný na biologické procesy.",
+    "b": "Chyba. Účelné jednání a nástroje spadají pod praktickou inteligenci, kterou podle Schelera mají v určité míře i vyšší živočichové.",
+    "c": "Chyba. V oblasti instinktů jsou zvířata často dokonalejší než člověk; podstata lidství leží v Duchu."
+  }
+},
+{
+  "q": "Jaké specifické schopnosti dává člověku 'Duch' (Geist) v pojetí Maxe Schelera?",
+  "a": "Svobodu vůči vlastním pudům a schopnost nazírat svět.",
+  "b": "Schopnost létat a telepaticky komunikovat s jinými bytostmi.",
+  "c": "Dokonalou imunitu vůči všem nemocem a schopnost regenerace tkání.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. <b>Duch dává člověku svobodu vůči vlastním pudům a schopnost nazírat svět</b>. Zvíře je plně upoutáno na své prostředí a pudy, zatímco člověk se od nich dokáže distancovat, objektivizovat je a jednat svobodně.",
+    "b": "Chyba. Schelerova filozofie se drží reálných lidských vlastností a neobsahuje žádné paranormální jevy.",
+    "c": "Chyba. Duch je principem svobody a vědomí, nikoli biologické nesmrtelnosti či fyzického zdraví."
+  }
+},
+{
+  "q": "Jak se jmenuje stěžejní dílo Maxe Schelera věnované filozofické antropologii?",
+  "a": "Místo člověka v kosmu.",
+  "b": "Slova a věci.",
+  "c": "Bytí a čas.",
+  "ans": "a",
+  "expl": {
+    "a": "Správně. Hlavním a klíčovým dílem, ve kterém Max Scheler shrnul své antropologické názory, je spis <b>Místo člověka v kosmu</b>.",
+    "b": "Chyba. Knihu Slova a věci napsal představitel strukturalismu Michel Foucault.",
+    "c": "Chyba. Bytí a čas je hlavním spisem Martina Heideggera."
+  }
+},
+
+            ]
+        },
         "existencialismus": {
             "title": "Existencialismus",
             "questions": [
