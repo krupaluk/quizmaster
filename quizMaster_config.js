@@ -47,6 +47,18 @@ const quizCategories = {
             }
         }
     },
+    Religionistika: {
+        icon: "✝️",
+        description: "Základy pro nejmenší badatele",
+        quizzes: {
+            religionistika_zakladni_prehled: {
+                id: "religionistika_zakladni_prehled",
+                title: "Religionistika - Základní přehled",
+                desc: "Základní informace o náboženství, historii a kultuře.",
+                summary: false
+            }
+        }
+    },    
     Logika: {
         icon: "🧩",
         description: "Ovládněte abecedu myšlení",
