@@ -10,7 +10,7 @@ window.data_povalecna_a_ceska_filozofie = {
   "c": "Je to matematická metoda určená k očistění lidského myšlení od jakýchkoli interpretací.",
   "ans": "a",
   "expl": {
-    "a": "Správně. Filozofická hermeneutika je definována jako <b>nauka o objasňování, chápání, porozumění, vysvětlování a výkladu</b>. Vychází z klíčového předpokladu, že naše porozumění světu a člověku <b>úzce souvisí s jazykem</b>. Cílem je pochopit skrytý význam za slovy, uměleckými díly či historickými událostmi.",
+    "a": "Správně. Filozofická hermeneutika je definována jako <b>nauka o objasňování, chápání, porozumění, vysvětlování a výkladu</b>. Vychází z klíčového předpokladu, že naše porozumění světa a člověka <b>úzce souvisí s jazykem</b>. Cílem je pochopit skrytý význam za slovy, uměleckými díly či historickými událostmi.",
     "b": "Chyba. Hermeneutika je humanitní a filozofická disciplína zaměřená na význam textů a prožitků, nikoli na biologii.",
     "c": "Chyba. Hermeneutika naopak tvrdí, že lidské myšlení je čistou interpretací a matematická očista od významů není možná."
   }
@@ -22,7 +22,7 @@ window.data_povalecna_a_ceska_filozofie = {
   "c": "Jedná se o logický klam, který hermeneutika kritizuje a snaží se jej z procesu interpretace zcela odstranit.",
   "ans": "a",
   "expl": {
-    "a": "Správně. <b>Hermeneutický kruh</b> popisuje proces, v němž <b>porozumění probíhá ve voustálém kruhu</b>. Platí zde pravidlo, že abychom pochopili celek, musíme znát jeho části. Zároveň však správně chápat části můžeme pouze v kontextu celého díla či dějinného kontextu.",
+    "a": "Správně. <b>Hermeneutický kruh</b> popisuje proces, v němž <b>porozumění probíhá v neustálém kruhu</b>. Platí zde pravidlo, že abychom pochopili celek, musíme znát jeho části. Zároveň však správně chápat části můžeme pouze v kontextu celého díla či dějinného kontextu.",
     "b": "Chyba. Nejde o mechanické opakování textu, ale o hluboký dialektický vztah mezi detailem a celkovým smyslem.",
     "c": "Chyba. Hermeneutický kruh není logická chyba (circulus vitiosus), ale přirozená a nevyhnutelná struktura lidského chápání."
   }
@@ -100,7 +100,7 @@ window.data_povalecna_a_ceska_filozofie = {
   "c": "Každý vědní obor funguje jako izolovaná izolovaná buňka a jednotlivé poznatky se nesmí vzájemně ovlivňovat.",
   "ans": "a",
   "expl": {
-    "a": "Správně. Quine zastával <b>filozofický holismus</b> (z řeckého <i>holos</i> = celý, úplný). Tvrdil, že <b>naše vědění o světě netvoří skládačku nezávislých faktů, ale jednotnou pavučinu víry (web of belief)</b>. Když narazíme na novou zkušenost, která nám nesedí, neupravujeme jednu izolovanou větu, ale přiroovnáváme ji a <b>přizpůsobujeme celý náš myšlenkový systém</b>.",
+    "a": "Správně. Quine zastával <b>filozofický holismus</b> (z řeckého <i>holos</i> = celý, úplný). Tvrdil, že <b>naše vědění o světě netvoří skládačku nezávislých faktů, ale jednotnou pavučinu víry (web of belief)</b>. Když narazíme na novou zkušenost, která nám nesedí, neupravujeme jednu izolovanou větu, ale přerovnáváme ji a <b>přizpůsobujeme celý náš myšlenkový systém</b>.",
     "b": "Chyba. Pavučina u Quinea není negativní past, ale funkční model provázanosti našich gnoseologických přesvědčení.",
     "c": "Chyba. Holismus je pravým opakem izolovanosti – požaduje propojenost celku a jednotu vědění."
   }
@@ -442,9 +442,9 @@ window.data_povalecna_a_ceska_filozofie = {
   "c": "Proti racionalismu a skepticizmu.",
   "ans": "b",
   "expl": {
-    "a": "Chyba. Tyto směry nebyly hlavním terčem kritiky uvedené v poznámkách.",
+    "a": "Chyba. Tyto směry nebyly hlavním terčem kritiky.",
     "b": "Správně. Křesťanská filosofie kritizovala především <b>nacismus</b> a <b>komunismus</b>, protože podle ní potlačovaly svobodu člověka a podřizovaly jednotlivce státu či kolektivu. Zdůrazňovala hodnotu lidské osoby a její důstojnost.",
-    "c": "Chyba. Přestože s některými těmito směry vedla filosofickou polemiku, v poznámkách jsou zdůrazněny nacismus a komunismus."
+    "c": "Chyba. Přestože s některými těmito směry vedla filosofickou polemiku, Jde především o nacismus a komunismus."
   }
 },
 {
@@ -495,7 +495,7 @@ window.data_povalecna_a_ceska_filozofie = {
   "c": "Jde o označení novotomismu.",
   "ans": "a",
   "expl": {
-    "a": "Správně. <b>Křesťanský personalismus</b> je jedním z významných proudů křesťanské filosofie 20. století. Zaměřuje se na <b>osobu</b>, její důstojnost, svobodu a jedinečnou hodnotu. V poznámkách je naznačen rozdílem mezi <b>osobou</b> a pouhým <b>jedincem</b>.",
+    "a": "Správně. <b>Křesťanský personalismus</b> je jedním z významných proudů křesťanské filosofie 20. století. Zaměřuje se na <b>osobu</b>, její důstojnost, svobodu a jedinečnou hodnotu.",
     "b": "Chyba. Personalismus je naopak významným křesťanským filosofickým směrem.",
     "c": "Chyba. Novotomismus a personalismus jsou dva odlišné směry křesťanské filosofie 20. století."
   }

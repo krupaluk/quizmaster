@@ -407,7 +407,7 @@ window.data_filosofie_19a20st = {
             "title": "Pragmatismus ",
             "questions": [
 {
-  "q": "Co je podle zápisků hlavním kritériem pravdy v pragmatismu?",
+  "q": "Co je hlavním kritériem pravdy v pragmatismu?",
   "a": "Praktický užitek, úspěch a funkčnost v reálném životě.",
   "b": "Absolutní shoda tvrzení s logickými axiómy matematiky.",
   "c": "Dosažení vnitřního klidu skrze asketické popření všech tužeb.",
@@ -569,7 +569,7 @@ window.data_filosofie_19a20st = {
   "c": "Větší kapacita asociativní paměti a dokonalejší instinkty.",
   "ans": "a",
   "expl": {
-    "a": "Správně. Člověk má sice všechny čtyři nižší psychické stupně společné se zvířaty, ale to, co ho zásadně odlišuje a staví mimo biologickou škálu, je <b>nový další psychický stupeň – Duch (Geist)</b>. Duch není redukovatelný na biologické procesy.",
+    "a": "Správně. Člověk má sice všechny čtyři nižší psychické stupně společné se zvířaty, ale to, co ho zásadně odlišuje a staví mimo biologickou škálu, není nějaký další psychický stupeň, ale <b> Duch (Geist)</b> (dávám člověku svobodu vůči vlastním pudům).",
     "b": "Chyba. Účelné jednání a nástroje spadají pod praktickou inteligenci, kterou podle Schelera mají v určité míře i vyšší živočichové.",
     "c": "Chyba. V oblasti instinktů jsou zvířata často dokonalejší než člověk; podstata lidství leží v Duchu."
   }
@@ -684,7 +684,7 @@ window.data_filosofie_19a20st = {
   "ans": "b",
   "expl": {
     "a": "Chyba. Toto dělení neodpovídá Kierkegaardově existenciální analýze lidské cesty.",
-    "b": "Správně. Kierkegaard popsal 3 přístupy k životu:<br><b>I. Estetický:</b> Život pro okamžik, pro slast, únik před nudou, což ale vede k vůli k prázdnotě a zoufalství.<br><b>II. Etický:</b> Přijetí odpovědnosti, pravidel a povinností, doprovázené ztrátou absolutní svobody.<br><b>III. Náboženský:</b> Nejvyšší stadium, které vyžaduje skok víry do absurdity, kdy člověk opouští racionální myšlení a odevzdává se Bohu.",
+    "b": "Správně. Kierkegaard popsal 3 přístupy k životu:<br><b>I. Estetický:</b> Život pro okamžik, pro slast, únik před nudou (což však vede k prázdnotě a zoufalství).<br><b>II. Etický:</b> Přijetí odpovědnosti, pravidel a povinností, doprovázené ztrátou absolutní svobody.<br><b>III. Náboženský:</b> Nejvyšší stadium, které vyžaduje skok víry do absurdity, kdy člověk opouští racionální myšlení a odevzdává se Bohu.",
     "c": "Chyba. Toto je slavný zákon tří stádií Augusta Comtea z pozitivismu."
   }
 },
@@ -791,11 +791,24 @@ window.data_filosofie_19a20st = {
   "c": "Falešné ideologické klamy, které musíme z dějin zcela odstranit.",
   "ans": "a",
   "expl": {
-    "a": "Správně. Podle Jasperse k nám Bytí promlouvá v <b>šifrách (Chiffren)</b>, díky kterým můžeme vnímat hlubší smysl reality. Autentická existence nav navíc nemůže být v izolaci, děje se skrze otevřený a hluboký dialog s druhým člověkem (komunikace).",
+    "a": "Správně. Podle Jasperse k nám Bytí promlouvá v <b>šifrách (Chiffren)</b>, díky kterým můžeme vnímat hlubší smysl reality.",
     "b": "Chyba. Jaspers hovoří o šifrách v metafyzickém a existenciálním smyslu, nikoli o technické kryptografii.",
     "c": "Chyba. Šifry nejsou negativní klamy, ale prostředek k nahlédnutí hlubšího smyslu Bytí."
   }
-}
+},
+{
+  "q": "Jaká je podle Karla Jasperse role hlubokého dialogu v existenciální komunikaci?",
+  "a": "Je to nástroj k tomu, aby člověk mohl manipulovat druhým za účelem sebeprosazení.",
+  "b": "Představuje proces, skrze který se člověk stává sám sebou až v hlubokém dialogu s druhým.",
+  "c": "Slouží pouze ke společenské zábavě a k zapomnění na vlastní osamělost.",
+  "ans": "b",
+  "expl": {
+    "a": "Chyba. Jaspers ostře rozlišuje mezi účelovou manipulací a pravou existenciální komunikací, která partnera respektuje.",
+    "b": "Správně. Podle Karla Jasperse je člověk jako pouhá existence neúplný. <b>Sám sebou se stává teprve v hlubokém dialogu s druhým člověkem</b>, kde dochází k bezvýhradnému otevření, sdílení a vzájemnému zrcadlení bez masek a rolí.<br>Tento vztah nazývá <i>existenciální komunikací</i>.",
+    "c": "Chyba. Běžná společenská konverzace je podle Jasperse povrchní; pravý dialog jde do hloubky bytí a nevyhýbá se ani vnitřním krizím."
+  }
+},
+
 
             ]
         },
