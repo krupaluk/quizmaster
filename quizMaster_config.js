@@ -49,7 +49,7 @@ const quizCategories = {
     },
     Religionistika: {
         icon: "✝️",
-        description: "Základy pro nejmenší badatele",
+        description: "Vztah člověka k transcendentní skutečnosti",
         quizzes: {
             religionistika_zakladni_prehled: {
                 id: "religionistika_zakladni_prehled",

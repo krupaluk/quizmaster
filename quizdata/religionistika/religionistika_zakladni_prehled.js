@@ -4,7 +4,7 @@ window.data_religionistika_zakladni_prehled = {
             "title": "Úvod do religionistiky",
             "questions": [
 {
-  "q": "Kdo je podle textu považován za zakladatele religionistiky jako samostatné vědy?",
+  "q": "Kdo je považován za zakladatele religionistiky jako samostatné vědy?",
   "a": "Friedrich Max Müller.",
   "b": "Auguste Comte.",
   "c": "Karl Marx.",
@@ -28,15 +28,15 @@ window.data_religionistika_zakladni_prehled = {
   }
 },
 {
-  "q": "Jaká země je v textu zmíněna jako příklad, kde jsou ateisté diskriminováni?",
+  "q": "V jaké zemi na světě je ateismus přímo zakázán?",
   "a": "Indonésie.",
   "b": "Indie.",
-  "c": "Egypt.",
+  "c": "Vietnam.",
   "ans": "a",
   "expl": {
-    "a": "Správně. V bočním sloupci je uvedeno, že existují státy, kde jsou ateisté diskriminováni. Například v <b>Indonésii</b> je ateismus zakázán a za jeho projevy hrozí až pět let odnětí svobody.",
-    "b": "Chyba. V Indii sice existují náboženské konflikty, ale text ji v souvislosti se zákazem ateismu nezmiňuje.",
-    "c": "Chyba. Egypt v textu vůbec nefiguruje."
+    "a": "Správně. V <b>Indonésii</b> je ateismus zakázán a za jeho projevy hrozí až pět let odnětí svobody.",
+    "b": "Chyba. V Indii sice existují náboženské konflikty a existují zákony zakazující úrážky náboženského cítění, ale Indie je podle ústavy sekulární zemí a ateismus tedy není protiprávní.",
+    "c": "Chyba. Přestože Vietnam je asijskou zemí s hlubokými kořeny v uctívání předků, statisticky má jednu z nejvyšších mír ateismu na světě."
   }
 },
 {
@@ -64,7 +64,7 @@ window.data_religionistika_zakladni_prehled = {
   }
 },
 {
-  "q": "Co tvoří podstatu panteismu podle uvedeného přehledu?",
+  "q": "Co tvoří podstatu panteismu?",
   "a": "Zastává názor, že bůh je ztotožněn s přírodou.",
   "b": "Uznává existenci více bohů, kteří personifikují přírodní síly.",
   "c": "Tvrdí, že žádný bůh ani transcendentní realita neexistuje.",
@@ -76,26 +76,27 @@ window.data_religionistika_zakladni_prehled = {
   }
 },
 {
-  "q": "Jaký přístup ke studiu religionistiky zkoumá náboženství v různých souvislostech?",
-  "a": "Historický přístup.",
-  "b": "Srovnávací přístup.",
-  "c": "Kontextuální přístup.",
-  "ans": "c",
+  "q": "Jak se v religionistice označují přístupy, k jejímu studiu?",
+  "a": "Kombinace kontextuálního, srovnávacího a historického přístupu.",
+  "b": "Kombinace dogmatického, teologického a apologetického přístupu.",
+  "c": "Kombinace psychologického, biologického a matematického přístupu.",
+  "ans": "a",
   "expl": {
-    "a": "Chyba. Historický přístup studuje konkrétní dějiny jednotlivých náboženství v čase.",
-    "b": "Chyba. Srovnávací (komparativní) přístup porovnává různé náboženské jevy mezi sebou.",
-    "c": "Správně. <b>Kontextuální přístup</b> zkoumá náboženství <b>v různých souvislostech</b> (např. sociálních, politických či kulturních)."
+    "a": "Správně. Vědecké studium náboženství se opírá o tyto tři pilíře: <b>historický přístup</b> (dějiny jednotlivých náboženství), <b>srovnávací přístup</b> (porovnává náboženství mezi sebou) a <b>kontextuální přístup</b> (studuje náboženství v širších sociálních, politických a kulturních souvislostech).",
+    "b": "Chyba. Teologický, dogmatický či apologetický přístup obhajuje konkrétní víru, což odporuje neutrální vědecké religionistice.",
+    "c": "Chyba. Ačkoliv psychologie náboženství existuje, biologie ani matematika netvoří základní metodologickou trojici pro komplexní studium náboženských systémů."
   }
 },
+
 {
-  "q": "Které náboženské skupině patří modlitební mlýnky s mantrami zobrazené na fotografii?",
+  "q": "Které náboženské skupině patří modlitební mlýnky s mantrami?",
   "a": "Buddhistům.",
   "b": "Hinduistům.",
   "c": "Muslimům.",
   "ans": "a",
   "expl": {
-    "a": "Správně. Popisek u obrázku vpravo dole uvádí, že <b>buddhisté</b> využívají k modlitbě také modlitební mlýnky, na kterých jsou napsány mantry.<br>Otáčením mlýnku symbolicky vysílají modlitbu do celého světa.",
-    "b": "Chyba. Hinduisté sice používají mantry, ale modlitební mlýnky popsané v textu jsou typické pro tibetský buddhismus.",
+    "a": "Správně. <b>Buddhisté</b> využívají k modlitbě také modlitební mlýnky, na kterých jsou napsány mantry.<br>Otáčením mlýnku symbolicky vysílají modlitbu do celého světa.",
+    "b": "Chyba. Hinduisté sice používají mantry, ale modlitební mlýnky jsou typické pro tibetský buddhismus.",
     "c": "Chyba. Muslimové používají k modlitbě modlitební koberec, nikoli tyto mechanické mlýnky."
   }
 },
@@ -107,8 +108,8 @@ window.data_religionistika_zakladni_prehled = {
   "ans": "a",
   "expl": {
     "a": "Správně. Hlavní světová náboženství se dělí na <b>semitské tradice</b> (judaismus, křesťanství, islám), které vycházejí z prorockého zjevení, a <b>indické tradice</b> (hinduismus, buddhismus), pro které je charakteristická snaha vymanit se z koloběhu životů.",
-    "b": "Chyba. Toto geografické dělení není v religionistice hlavním klasifikačním kritériem pro tyto náboženské rodiny.",
-    "c": "Chyba. Ačkoliv toto dělení existuje, text se drží historicko-geografického původu rodin náboženství, tedy semitské a indické."
+    "b": "Chyba. Toto rozdělení je geografické, nikoli religionistické.<br>Křesťanství má například semitský původ na Blízkém východě, přestože se masově rozšířilo v Evropě, zatímco islám i buddhismus jsou asijského původu, ale patří do zcela odlišných myšlenkových rodin.",
+    "c": "Chyba. Jedná se o dělení podle počtu uctívaných bohů (víra v jednoho boha vs. víra ve více bohů).<br>Tato klasifikace sice existuje, ale nepostihuje hlubší historicko-geografické kořeny a specifika celých náboženských rodin tak, jak je dělí vědecká religionistika."
   }
 },
 
@@ -635,7 +636,7 @@ window.data_religionistika_zakladni_prehled = {
   "expl": {
     "a": "Správně. Nejposvátnějším místem hinduismu je <b>město Váránasí</b>, kterým protéká <b>posvátná řeka Ganga</b>. Hinduisté věří, že koupel v ní očišťuje od hříchů a popel zemřelých vhozený do vody pomáhá k lepšímu znovuzrození.",
     "b": "Chyba. Dillí je hlavní město a řeka Indus protéká převážně Pákistánem, nejde o rituální centrum hinduismu.",
-    "c": "Chyba. Přestože je Jamuna posvátná řeka a protéká kolem Tádž Mahalu, primárním rituálním centrem popsaným v textu je dvojice Váránasí a Ganga."
+    "c": "Chyba. Přestože je Jamuna posvátná řeka a protéká kolem Tádž Mahalu, primárním rituálním centrem je dvojice Váránasí a Ganga."
   }
 },
 {
@@ -994,7 +995,7 @@ window.data_religionistika_zakladni_prehled = {
   "ans": "c",
   "expl": {
     "a": "Chyba. V Ostravě modlitebna vznikla později, nebyla však první oficiální stavbou tohoto typu v zemi.",
-    "b": "Chyba. Olomouc v textu v souvislosti s výstavbou islámského modlitebního centra nefiguruje.",
+    "b": "Chyba. Olomouc v souvislosti s výstavbou islámského modlitebního centra nefiguruje.",
     "c": "Správně. První mešita na území České republiky byla pro potřeby praktikujících muslimů otevřena <b>v roce 1998 v Brně</b>."
   }
 },
@@ -1005,7 +1006,7 @@ window.data_religionistika_zakladni_prehled = {
   "c": "Společenství za rozvoj Diamantové cesty.",
   "ans": "b",
   "expl": {
-    "a": "Chyba. Hnutí Grálu (v textu zmiňované pod vedením Jana Ditricha Dvorského) je jiné nové náboženské hnutí působící na českém území.",
+    "a": "Chyba. Hnutí Grálu (pod vedením Jana Ditricha Dvorského) je jiné nové náboženské hnutí působící na českém území.",
     "b": "Správně. Mezi nová náboženská hnutí a sekty zařazené v českém prostředí patří <b>Vesmírní lidé pod vedením Ivo A. Bendy</b>, což je typický příklad hnutí orientovaného na UFO kulty a okultismus.",
     "c": "Chyba. Diamantová cesta je směr legitimně reprezentující tradiční tibetský buddhismus v ČR, nikoli ufologickou sektu."
   }
