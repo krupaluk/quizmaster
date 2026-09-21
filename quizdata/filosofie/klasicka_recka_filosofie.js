@@ -1,22 +1,34 @@
 window.data_klasicka_recka_filosofie = {
     "groups": {
-        "predsokrate": {
-            "title": "Předsokraté",
+        "sedm_mudrcu": {
+            "title": "Sedm mudrců",
             "questions": [
             {
-                q: "Co znamená řecký pojem 'Arché' v rané filosofii?",
-                a: "Konec světa",
-                b: "Počátek, základní princip všeho",
-                c: "Vláda lidu",
-                ans: "b",
-                expl: {
-                    a: "Konec světa (eschatologie) nebyl hlavním tématem prvních filosofů; ti se ptali po původu, trvání a věčném základě věcí.",
-                    b: "Arché je to, z čeho vše vzniká, v čem to trvá a do čeho to zaniká. Každý předsokratovec hledal jinou arché (vodu, vzduch či oheň).",
-                    c: "Zde dochází k záměně s politickým termínem (např. monarchie). Ve filosofii raného období jde o ontologický a materiální základ reality."
-                },
+            "q": "Do kterého období spadá působení legendárních Sedmi mudrců, kteří stáli u zrodu řecké filozofické moudrosti?",
+            "a": "Do přelomu 7. a 6. století př. n. l.",
+            "b": "Do 4. století př. n. l., tedy do doby Aristotela.",
+            "c": "Do 1. století n. l., tedy do období raného římského císařství.",
+            "ans": "a",
+                "expl": {
+                    "a": "Správně. Legendární <b>Sedm mudrců</b> (mezi které patřil například Thálés z Milétu či Solón z Athén) působilo na <b>přelomu 7. a 6. století př. n. l.</b><br>Jejich praktické životní moudrosti a průrezy předcházely vzniku samotné klasické řecké filozofie.",
+                    "b": "Chyba. Ve 4. století př. n. l. prožívala řecká filozofie svůj vrchol s Platónem a Aristotelem.<br>Sedm mudrců představuje mnohem starší, archaickou vrstvu řeckého myšlení.",
+                    "c": "Chyba. V 1. století n. l. již řecká filozofie fungovala v rámci římského světa po celá staletí.<br>Tato doba nemá se zrodem mudrosloví archaického Řecka žádnou souvislost."
+                }
             },
-                {
-                q: "Kdo je považován za zakladatele milétské školy a předpověděl zatmění Slunce?",
+            {
+            "q": "V jaké geografické oblasti působila většina ze Sedmi mudrců, odkud pocházely kořeny řecké moudrosti?",
+            "a": "V oblasti pevninského Řecka a na pobřeží Malé Asie (Iónie).",
+            "b": "Na ostrově Sicílie a v jižní Itálii (tzv. Velké Řecko).",
+            "c": "V severní Africe, zejména v okolí egyptské Alexandrie.",
+            "ans": "a",
+                "expl": {
+                    "a": "Správně. Většina ze Sedmi mudrců působila v <b>pevninském Řecku</b> (Solón v Athénách, Chilón ve Spartě, Pittakos v Mitiléně, Brias v Priéně, Kleobulos v Lindu na ostrově Rhodos, Thalés v Milétu...) a na <b>pobřeží Malé Asie v Iónii</b> (Thálés z Milétu, Biás z Priény).",
+                    "b": "Chyba. Oblast jižní Itálie a Sicílie (Velké Řecko) proslula až o něco později, a to především působením Pythagorovy školy a eleatů, nikoli jádrem Sedmi mudrců.",
+                    "c": "Chyba. Alexandrie v Egyptě se stala centrem řecké vzdělanosti a filozofie až v helénistickém období, tedy o několik století později po založení města Alexandrem Velikým."
+                }
+            },
+            {
+                q: "Kdo je ze 7 mudrců je považován za zakladatele milétské školy a předpověděl zatmění Slunce?",
                 a: "Thalés z Milétu",
                 b: "Anaximandros",
                 c: "Solón",
@@ -51,112 +63,16 @@ window.data_klasicka_recka_filosofie = {
                     c: "Váha sfingy nebyla předmětem jeho geometrických výpočtů, soustředil se na výšky a vzdálenosti."
                 },
             },
-                {
-                q: "Kdo tvořil Milétskou školu v jejich historickém a chronologickém pořadí?",
-                a: "Thalés, Anaximandros, Anaximenés",
-                b: "Sókratés, Platón, Aristotelés",
-                c: "Parmenidés, Zénón, Melissos",
-                ans: "a",
-                expl: {
-                    a: "Tato trojice iónských myslitelů v 6. stol. př. n. l. postupně rozvíjela debatu o arché a položila základy evropské vědy a filosofie.",
-                    b: "Toto je vrcholná athénská trojice, která žila o 200 let později a zaměřovala se primárně na etiku, logiku a politiku.",
-                    c: "Jde o představitele školy eleatské z jižní Itálie, kteří se proslavili popíráním změny a pohybu skrze logickou dedukci."
-                },
-            },
-                {
-                q: "Co přesně označuje Anaximandrův pojem 'Apeiron'?",
-                a: "Vzduch jako nekonečný plyn",
-                b: "Bezmezno, ze kterého vše vzniká",
-                c: "Pevný bod uprostřed vesmíru",
-                ans: "b",
-                expl: {
-                    a: "Vzduch jako arché definoval až Anaximenés, který chtěl učinit počátek více konkrétním a pochopitelným pro smysly.",
-                    b: "Apeiron je neurčitá, nekonečná a nezničitelná látka. Anaximandros věřil, že počátek nesmí být konkrétním živlem, aby z něj mohlo vzniknout cokoli.",
-                    c: "Apeiron není geometrický bod, ale kvalitativně neurčený a časově nekonečný princip, ze kterého se vydělují protiklady (teplo/chlad)."
-                },
-            },
-                {
-                q: "Anaximandros vynalezl:",
-                a: "Parostroj",
-                b: "Gnomon (slunční hodiny)",
-                c: "Teleskop",
-                ans: "b",
-                expl: {
-                    a: "Parostroj vynalezl až mnohem později Hérón z Alexandrie, Anaximandros žil v archaickém období.",
-                    b: "Anaximandros skutečně sestrojil gnomon a umístil ho ve Spartě, čímž umožnil měření času a astronomických pozorování.",
-                    c: "Teleskop vynalezl až v 17. století, Anaximandros používal jednoduché astronomické nástroje."
-                },
-            },
-                {
-                q: "Anaximandros přišel s odvážnou teorií, že první lidé se vyvinuli:",
-                a: "Z mořských živočichů podobných rybám",
-                b: "Z kůry stromů ozářené sluncem",
-                c: "Z hlíny, kterou oživil blesk",
-                ans: "a",
-                expl: {
-                    a: "Anaximandros věřil, že život vznikl v moři a první lidé se vyvíjeli uvnitř šupinatých živočichů, dokud nebyli schopni přežít na souši.",
-                    b: "Tuto teorii zastávali někteří jiní myslitelé, ale ne Anaximandros.",
-                    c: "Hlínu jako základ používaly spíše mýty o stvoření než Anaximandrova raná vědecká úvaha."
-                },
-            },
-                {
-                q: "Kde podle Anaximandrovy teorie se nachází Země ve vesmíru?",
-                a: "Ve středu vesmíru",
-                b: "Na obloze mezi hvězdami",
-                c: "Na dně oceánu",
-                ans: "a",
-                expl: {
-                    a: "Anaximandros představil revoluční myšlenku, že Země je válcové těleso vznášející se ve středu vesmíru bez podpory.",
-                    b: "Země není na obloze, ale představuje centrální prvek kosmického řádu podle Anaximandrovy teorie.",
-                    c: "Ačkoliv Thalés považoval vodu za základní prvek, Anaximandros viděl Zemi jako nehybný střed světa."
-                }
-            },
             {
-                q: "Anaximenés zvolil za pralátku (arché) vzduch. Jaký byl jeho hlavní argument pro tuto volbu?",
-                a: "Vzduch je neviditelný bůh, který vše stvořil",
-                b: "Vzduch je nekonečný a je nezbytnou podmínkou života (dechu), který vše udržuje v pohybu",
-                c: "Vzduch je nejlehčí ze všech prvků, a proto musel být první",
-                ans: "b",
-                expl: {
-                    a: "Anaximenés hledal přírodní princip, nikoliv náboženské vysvětlení.",
-                    b: "Věřil, že vzduch (pneuma) obklopuje celý svět a drží ho pohromadě podobně, jako duše (dech) drží při životě lidské tělo.",
-                    c: "Lehkost nebyla hlavním kritériem, ale spíše jeho schopnost být všudypřítomný a proměnlivý."
-                }
-            },
-            {
-                q: "V čem spočíval největší vědecký přínos Anaximena oproti Thalétovi?",
-                a: "Dokázal, že země je kulatá a otáčí se kolem Slunce",
-                b: "Popsal konkrétní fyzikální proces změny látek – zhušťování a zřeďování",
-                c: "Vymyslel první mikroskop pro zkoumání částic vzduchu",
-                ans: "b",
-                expl: {
-                    a: "Anaximenés si stále představoval Zemi jako plochý disk plující na vzduchu.",
-                    b: "Zatímco Thalés jen určil látku (vodu), Anaximenés vysvětlil, JAK se mění: zředěním vzduchu vzniká oheň, zhuštěním vítr, mraky, voda a nakonec kámen.",
-                    c: "Antičtí filosofové pracovali pouze s pozorováním a logikou, žádné přístroje jako mikroskopy neměli."
-                },
-            },
-                {
-                q: "Jak Anaximenés vysvětloval vznik tepla a chladu pomocí dechu?",
-                a: "Tvrdil, že teplo pochází ze slunce a chlad z měsíce",
-                b: "Poukázal na to, že vydechujeme-li sevřenými rty, vzduch je studený, zatímco s otevřenými ústy je teplý",
-                c: "Věřil, že teplo je odměna bohů a chlad jejich trest",
-                ans: "b",
-                expl: {
-                    a: "Toto je sice astronomický fakt, ale Anaximenés hledal důkaz v mechanice dechu.",
-                    b: "Tímto pokusem chtěl dokázat, že teplota souvisí s hustotou: stlačený (zhuštěný) vzduch je studený, uvolněný (zředěný) je teplý.",
-                    c: "Anaximenés se snažil o čistě materiální vysvětlení přírodních jevů bez zásahu bohů."
-                },
-            },
-                {
-                q: "Bias z Prieny byl známý svou:",
-                a: "Obhajobou spravedlnosti",
-                b: "Architektonickými díly",
-                c: "Lékařskými znalostmi",
-                ans: "a",
-                expl: {
-                    a: "Bias byl proslulý právník a soudce, který se vždy snažil najít spravedlivé řešení a chránil slabé.",
-                    b: "Architektura byla Biasovi cizí, jeho sláva spočívala v právní a morální integritě.",
-                    c: "Lékařství se věnovali jiní mudrci, Bias se zaměřil na právo a spravedlnost."
+            "q": "Biás z Priény, jeden ze Sedmi mudrců, nabádal lidi k opatrnosti v řeči. Co konkrétně radil ohledně mluvení?",
+            "a": "Mluv jen tehdy, když tě o to někdo požádá.",
+            "b": "Mluv uvážlivě a nespěchej s vyjadřováním, abys nelitoval.",
+            "c": "Kdo mluví pravdu, nepotřebuje mnoho slov.",
+            "ans": "b",
+                "expl": {
+                    "a": "Chyba. Biás nebyl takto radikální, nezakazoval mluvit bez vyzvání, ale vyžadoval správné načasování slov.",
+                    "b": "Správně. Biás z Priény proslul výrokem: <i>„Měj v nenávisti rychlé mluvení, abys nepochybil, neboť pak následuje lítost.“</i> Kladl tedy zásadní důraz na rozvahu před spěchem.",
+                    "c": "Chyba. Toto je spíše obecné přísloví, Biantův autentický důraz směřoval k varování před unáhleným mluvením pod vlivem emocí."
                 }
             },
             {
@@ -256,18 +172,6 @@ window.data_klasicka_recka_filosofie = {
                 }
             },
             {
-                q: "Mysón z Chénu nabádal lidi k opatrnosti v řeči. Co konkrétně radil ohledně mluvení?",
-                a: "Mluv jen tehdy, když tě o to někdo požádá",
-                b: "Mluv uvážlivě a nespěchej s odpovědí",
-                c: "Kdo mluví pravdu, nepotřebuje mnoho slov",
-                ans: "b",
-                expl: {
-                    a: "Mysón nebyl takto radikální, spíše kladl důraz na kvalitu řeči.",
-                    b: "Věřil, že rychlá a neuvážená slova vedou k chybám, proto byla rozvaha v řeči jeho hlavním pravidlem.",
-                    c: "Toto je spíše obecné přísloví, Mysónův důraz byl na proces přemýšlení před mluvením."
-                }
-            },
-            {
                 q: "Jaké bylo Mysónovo hlavní mínění o vztahu mezi slovy a činy?",
                 a: "Slova jsou důležitější, protože formují myšlenky",
                 b: "Skutky jsou důležitější než prázdná slova",
@@ -289,6 +193,18 @@ window.data_klasicka_recka_filosofie = {
                     a: "Mysón praktikoval skromnost a věřil, že štěstí spočívá v minimalizaci potřeb, nikoliv v hromadění majetku.",
                     b: "Přátelství sice cenil, ale jeho filosofie byla zaměřena spíše na osobní skromnost a soběstačnost.",
                     c: "Znalosti byly důležité, ale Mysón zdůrazňoval praktickou moudrost a jednoduchý život nad teoretickým vzděláním."
+                }
+            },
+            {
+                "q": "Proč delfská věštírna označila skromného rolníka Mysóna z Chén za nejmoudřejšího člověka na světě?",
+                "a": "Protože byl ze všech lidí nejvíce vnitřně vyrovnaný a prostý lstivých myšlenek.",
+                "b": "Protože dokázal jako jediný správně rozluštit Apollónovu záhadnou matematickou hádanku.",
+                "c": "Protože napsal rozsáhlé politické pojednání o reformě řeckých městských států.",
+                "ans": "a",
+                "expl": {
+                    "a": "Správně. Když se slavný a mocný Anacharsis ptal v Delfách, zda je někdo moudřejší než on, bůh Apollón mu skrze Pýthii odpověděl, že moudřejší je <b>Mysón z Chén</b>. Ten žil v ústraní jako prostý rolník, byl <b>vnitřně vyrovnaný, skromný a prostý jakékoliv falše či lsti</b>, což bůh cenil nad akademické vědění.",
+                    "b": "Chyba. Mysón nebyl vědcem ani matematikem a delfská věštírna neudělovala tituly na základě řešení kvízů či rébusů.",
+                    "c": "Chyba. Mysón nenapsal žádné knihy ani politické spisy, žil na venkově a proslul právě tím, že se veřejného a politického života stranil."
                 }
             },
             {
@@ -338,7 +254,120 @@ window.data_klasicka_recka_filosofie = {
                     b: "Věřil, že osud se může kdykoliv obrátit a teprve uzavřený život lze hodnotit jako skutečně šťastný.",
                     c: "Solón viděl problém spíše v nespravedlnosti než v penězích jako takových."
                 }
+            }         
+            ]
+        },        
+        "predsokrate": {
+            "title": "Předsokraté",
+            "questions": [
+            {
+                q: "Co znamená řecký pojem 'Arché' v rané filosofii?",
+                a: "Konec světa",
+                b: "Počátek, základní princip všeho",
+                c: "Vláda lidu",
+                ans: "b",
+                expl: {
+                    a: "Konec světa (eschatologie) nebyl hlavním tématem prvních filosofů; ti se ptali po původu, trvání a věčném základě věcí.",
+                    b: "Arché je to, z čeho vše vzniká, v čem to trvá a do čeho to zaniká. Každý předsokratovec hledal jinou arché (vodu, vzduch či oheň).",
+                    c: "Zde dochází k záměně s politickým termínem (např. monarchie). Ve filosofii raného období jde o ontologický a materiální základ reality."
+                },
             },
+                {
+                q: "Kdo tvořil Milétskou školu v jejich historickém a chronologickém pořadí?",
+                a: "Thalés, Anaximandros, Anaximenés",
+                b: "Sókratés, Platón, Aristotelés",
+                c: "Parmenidés, Zénón, Melissos",
+                ans: "a",
+                expl: {
+                    a: "Tato trojice iónských myslitelů v 6. stol. př. n. l. postupně rozvíjela debatu o arché a položila základy evropské vědy a filosofie.",
+                    b: "Toto je vrcholná athénská trojice, která žila o 200 let později a zaměřovala se primárně na etiku, logiku a politiku.",
+                    c: "Jde o představitele školy eleatské z jižní Itálie, kteří se proslavili popíráním změny a pohybu skrze logickou dedukci."
+                },
+            },
+                {
+                q: "Co přesně označuje Anaximandrův pojem 'Apeiron'?",
+                a: "Vzduch jako nekonečný plyn",
+                b: "Bezmezno, ze kterého vše vzniká",
+                c: "Pevný bod uprostřed vesmíru",
+                ans: "b",
+                expl: {
+                    a: "Vzduch jako arché definoval až Anaximenés, který chtěl učinit počátek více konkrétním a pochopitelným pro smysly.",
+                    b: "Apeiron je neurčitá, nekonečná a nezničitelná látka. Anaximandros věřil, že počátek nesmí být konkrétním živlem, aby z něj mohlo vzniknout cokoli.",
+                    c: "Apeiron není geometrický bod, ale kvalitativně neurčený a časově nekonečný princip, ze kterého se vydělují protiklady (teplo/chlad)."
+                },
+            },
+                {
+                q: "Anaximandros vynalezl:",
+                a: "Parostroj",
+                b: "Gnomon (slunční hodiny)",
+                c: "Teleskop",
+                ans: "b",
+                expl: {
+                    a: "Parostroj vynalezl až mnohem později Hérón z Alexandrie, Anaximandros žil v archaickém období.",
+                    b: "Anaximandros skutečně sestrojil gnomon a umístil ho ve Spartě, čímž umožnil měření času a astronomických pozorování.",
+                    c: "Teleskop vynalezl až v 17. století, Anaximandros používal jednoduché astronomické nástroje."
+                },
+            },
+                {
+                q: "Anaximandros přišel s odvážnou teorií, že první lidé se vyvinuli:",
+                a: "Z mořských živočichů podobných rybám",
+                b: "Z kůry stromů ozářené sluncem",
+                c: "Z hlíny, kterou oživil blesk",
+                ans: "a",
+                expl: {
+                    a: "Anaximandros věřil, že život vznikl v moři a první lidé se vyvíjeli uvnitř šupinatých živočichů, dokud nebyli schopni přežít na souši.",
+                    b: "Tuto teorii zastávali někteří jiní myslitelé, ale ne Anaximandros.",
+                    c: "Hlínu jako základ používaly spíše mýty o stvoření než Anaximandrova raná vědecká úvaha."
+                },
+            },
+                {
+                q: "Kde podle Anaximandrovy teorie se nachází Země ve vesmíru?",
+                a: "Ve středu vesmíru",
+                b: "Na obloze mezi hvězdami",
+                c: "Na dně oceánu",
+                ans: "a",
+                expl: {
+                    a: "Anaximandros představil revoluční myšlenku, že Země je válcové těleso vznášející se ve středu vesmíru bez podpory.",
+                    b: "Země není na obloze, ale představuje centrální prvek kosmického řádu podle Anaximandrovy teorie.",
+                    c: "Ačkoliv Thalés považoval vodu za základní prvek, Anaximandros viděl Zemi jako nehybný střed světa."
+                }
+            },
+            {
+                q: "Anaximenés zvolil za pralátku (arché) vzduch. Jaký byl jeho hlavní argument pro tuto volbu?",
+                a: "Vzduch je neviditelný bůh, který vše stvořil",
+                b: "Vzduch je nekonečný a je nezbytnou podmínkou života (dechu), který vše udržuje v pohybu",
+                c: "Vzduch je nejlehčí ze všech prvků, a proto musel být první",
+                ans: "b",
+                expl: {
+                    a: "Anaximenés hledal přírodní princip, nikoliv náboženské vysvětlení.",
+                    b: "Věřil, že vzduch (pneuma) obklopuje celý svět a drží ho pohromadě podobně, jako duše (dech) drží při životě lidské tělo.",
+                    c: "Lehkost nebyla hlavním kritériem, ale spíše jeho schopnost být všudypřítomný a proměnlivý."
+                }
+            },
+            {
+                q: "V čem spočíval největší vědecký přínos Anaximena oproti Thalétovi?",
+                a: "Dokázal, že země je kulatá a otáčí se kolem Slunce",
+                b: "Popsal konkrétní fyzikální proces změny látek – zhušťování a zřeďování",
+                c: "Vymyslel první mikroskop pro zkoumání částic vzduchu",
+                ans: "b",
+                expl: {
+                    a: "Anaximenés si stále představoval Zemi jako plochý disk plující na vzduchu.",
+                    b: "Zatímco Thalés jen určil látku (vodu), Anaximenés vysvětlil, JAK se mění: zředěním vzduchu vzniká oheň, zhuštěním vítr, mraky, voda a nakonec kámen.",
+                    c: "Antičtí filosofové pracovali pouze s pozorováním a logikou, žádné přístroje jako mikroskopy neměli."
+                },
+            },
+                {
+                q: "Jak Anaximenés vysvětloval vznik tepla a chladu pomocí dechu?",
+                a: "Tvrdil, že teplo pochází ze slunce a chlad z měsíce",
+                b: "Poukázal na to, že vydechujeme-li sevřenými rty, vzduch je studený, zatímco s otevřenými ústy je teplý",
+                c: "Věřil, že teplo je odměna bohů a chlad jejich trest",
+                ans: "b",
+                expl: {
+                    a: "Toto je sice astronomický fakt, ale Anaximenés hledal důkaz v mechanice dechu.",
+                    b: "Tímto pokusem chtěl dokázat, že teplota souvisí s hustotou: stlačený (zhuštěný) vzduch je studený, uvolněný (zředěný) je teplý.",
+                    c: "Anaximenés se snažil o čistě materiální vysvětlení přírodních jevů bez zásahu bohů."
+                },
+            },  
             {
                 q: "Xenofanés z Kolofónu je známý především svou:",
                 a: "Kritikou antropomorfního náboženství",
