@@ -3,114 +3,254 @@ window.data_klasicka_recka_filosofie = {
         "sedm_mudrcu": {
             "title": "Sedm mudrců",
             "questions": [
+    // Sedm mudrců: ÚVOD
             {
-            "q": "Do kterého období spadá působení legendárních Sedmi mudrců, kteří stáli u zrodu řecké filozofické moudrosti?",
-            "a": "Do přelomu 7. a 6. století př. n. l.",
-            "b": "Do 4. století př. n. l., tedy do doby Aristotela.",
-            "c": "Do 1. století n. l., tedy do období raného římského císařství.",
-            "ans": "a",
-                "expl": {
-                    "a": "Správně. Legendární <b>Sedm mudrců</b> (mezi které patřil například Thálés z Milétu či Solón z Athén) působilo na <b>přelomu 7. a 6. století př. n. l.</b><br>Jejich praktické životní moudrosti a průrezy předcházely vzniku samotné klasické řecké filozofie.",
-                    "b": "Chyba. Ve 4. století př. n. l. prožívala řecká filozofie svůj vrchol s Platónem a Aristotelem.<br>Sedm mudrců představuje mnohem starší, archaickou vrstvu řeckého myšlení.",
-                    "c": "Chyba. V 1. století n. l. již řecká filozofie fungovala v rámci římského světa po celá staletí.<br>Tato doba nemá se zrodem mudrosloví archaického Řecka žádnou souvislost."
-                }
-            },
-            {
-            "q": "V jaké geografické oblasti působila většina ze Sedmi mudrců, odkud pocházely kořeny řecké moudrosti?",
-            "a": "V oblasti pevninského Řecka a na pobřeží Malé Asie (Iónie).",
-            "b": "Na ostrově Sicílie a v jižní Itálii (tzv. Velké Řecko).",
-            "c": "V severní Africe, zejména v okolí egyptské Alexandrie.",
-            "ans": "a",
-                "expl": {
-                    "a": "Správně. Většina ze Sedmi mudrců působila v <b>pevninském Řecku</b> (Solón v Athénách, Chilón ve Spartě, Pittakos v Mitiléně, Brias v Priéně, Kleobulos v Lindu na ostrově Rhodos, Thalés v Milétu...) a na <b>pobřeží Malé Asie v Iónii</b> (Thálés z Milétu, Biás z Priény).",
-                    "b": "Chyba. Oblast jižní Itálie a Sicílie (Velké Řecko) proslula až o něco později, a to především působením Pythagorovy školy a eleatů, nikoli jádrem Sedmi mudrců.",
-                    "c": "Chyba. Alexandrie v Egyptě se stala centrem řecké vzdělanosti a filozofie až v helénistickém období, tedy o několik století později po založení města Alexandrem Velikým."
-                }
-            },
-            {
-                q: "Kdo je ze 7 mudrců je považován za zakladatele milétské školy a předpověděl zatmění Slunce?",
-                a: "Thalés z Milétu",
-                b: "Anaximandros",
-                c: "Solón",
+                q: "Do kterého období spadá působení legendárních Sedmi mudrců?",
+                a: "Do přelomu 7. a 6. století př. n. l.",
+                b: "Do 4. století př. n. l.",
+                c: "Do 1. století n. l.",
                 ans: "a",
                 expl: {
-                    a: "Thalés určil vodu jako arché (počátek) a jako první se pokusil vysvětlit přírodní úkazy bez pomoci mýtů, čímž položil základy evropské vědy.",
-                    b: "Anaximandros byl sice Thalétovým žákem a členem milétské školy, ale za prvního filosofa v dějinách je tradičně považován právě Thalés.",
-                    c: "Solón byl jedním ze sedmi mudrců a významným athénským zákonodárcem, ale nezabýval se fyzikálními otázkami o počátku světa."
+                    a: "Správně. Legendární <b>Sedm mudrců</b> (mezi které patřil například Thálés z Milétu či Solón z Athén) působilo na <b>přelomu 7. a 6. století př. n. l.</b><br>Jejich praktické životní moudrosti předcházely vzniku samotné klasické řecké filozofie.",
+                    b: "Chyba. Ve 4. století př. n. l. prožívala řecká filozofie svůj vrchol s Platónem a Aristotelem.<br>Sedm mudrců představuje mnohem starší, archaickou vrstvu řeckého myšlení.",
+                    c: "Chyba. V 1. století n. l. již řecká filozofie fungovala v rámci římského světa po celá staletí.<br>Tato doba nemá se zrodem mudrosloví archaického Řecka žádnou souvislost."
                 },
             },
-                {
+            {
+                q: "V jaké geografické oblasti působila většina ze Sedmi mudrců?",
+                a: "V pevninském Řecku a na pobřeží Malé Asie",
+                b: "Na Sicílii a v jižní Itálii",
+                c: "V severní Africe v okolí Alexandrie",
+                ans: "a",
+                expl: {
+                    a: "Správně. Sedm mudrců působilo v těchto oblastech:<br><br><b>Pevninské Řecko:</b> Solón (Athény), Chilón (Sparta), Periandros (Korint), Mysón (Chén v Lakónii).<br><b>Pobřeží Malé Asie a ostrovy (Iónie):</b> Thálés (Milétos), Biás (Priéné), Pittakos (Mytiléné na Lesbu), Kleobúlos (Lindos na Rhodu).",
+                    b: "Chyba. Oblast jižní Itálie a Sicílie (Velké Řecko) proslula až o něco později, a to především působením Pythagorovy školy a eleatů, nikoli jádrem Sedmi mudrců.",
+                    c: "Chyba. Alexandrie v Egyptě se stala centrem řecké vzdělanosti a filozofie až v helénistickém období, tedy o několik století později po založení města Alexandrem Velikým."
+                },
+            },
+
+            {
+                q: "Proč se legendárním sedmi osobnostem říkalo 'mudrcové' a jakou formou předávali své myšlenky?",
+                a: "Byli to akademičtí vědci píšící rozsáhlé logické systémy",
+                b: "Byli to praktičtí životní rádci vyjadřující se pomocí stručných výroků (gnóm)",
+                c: "Byli to náboženští mystici komunikující výhradně v básnických hádankách",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Sedm mudrců nezakládalo akademické školy ani nepsalo teoretické filozofické spisy, jejich přínos byl primárně praktický.",
+                    b: "Správně. Sedm mudrců proslulo jako obratní státníci, zákonodárci a <b>praktičtí životní rádci</b>. Svá moudra formulovali jako <b>Stručné mravní rady (gnómy)</b>, které měly lidem pomáhat v každodenním rozhodování a chování ve společnosti.",
+                    c: "Chyba. Přestože některé jejich výroky byly zapsány v delfské věštírně, mudrcové nebyli náboženskými věštci ani mystickými básníky."
+                },
+            },
+    // Sedm mudrců: THALES
+            {
+                q: "Proč údajně (dle Aristotela) vybral Thalés z Milétu právě vodu jako arché (prvotní princip všeho)?",
+                a: "Protože věřil, že všechny látky lze nakonec proměnit ve vodu",
+                b: "Protože pozoroval, že výživa je vlhká, teplo vzniká z vlhkosti a semena všeho mají vlhkou povahu",
+                c: "Protože voda podle něj představovala jediné neměnné a pevné skupenství ve vesmíru",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Takové vysvětlení Aristotelés ani Diogenés u Thaléta neuvádějí. Thalés pokládal vodu za prvotní princip, nikoli proto, že by všechny látky chápal jako něco, co lze proměnit ve vodu.",
+                    b: "Správně. Aristotelés uvádí, že Thalés mohl vycházet z pozorování, že <b>výživa je vlhká, teplo vzniká z vlhkosti a je jí udržováno a semena všeho mají vlhkou povahu</b>. Voda je přitom podle něj prvotním principem toho, co má vlhkou povahu. Aristotelés zde ale svou formulaci podává opatrně – říká, že Thalés k tomuto názoru <i>možná</i> dospěl právě tímto způsobem.",
+                    c: "Chyba. Voda není pevné skupenství a Aristotelés tento důvod Thalétovi nepřipisuje. Diogenés Laertios pouze uvádí, že Thalés pokládal vodu za univerzální prvotní substanci."
+                },
+            },
+            {
+                q: "Čím se Thalés z Milétu významně lišil od ostatních Sedmi mudrců?",
+                a: "Jako jediný se stal zákonodárcem svého městského státu",
+                b: "Jako jediný založil filosofickou tradici známou jako Milétská škola",
+                c: "Jako jediný odmítal účast na politickém životě a věnoval se výhradně matematice",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Významným zákonodárcem byl především Solón z Athén. Thalés nebyl znám jako zákonodárce.",
+                    b: "Správně. Thalés je tradičně považován za zakladatele <b>Milétské školy</b>, první významné školy předsokratovské filosofie. Na jeho myšlení navázali Anaximandros a Anaximenés, kteří stejně jako Thalés hledali přirozené vysvětlení světa a jeho základní princip (<i>arché</i>). Právě tím se Thalés odlišuje od ostatních Sedmi mudrců, kteří jsou spojováni především s praktickou, politickou a etickou moudrostí.",
+                    c: "Chyba. Thalés se podle antických pramenů zajímal o matematiku, astronomii i přírodu, ale nelze říci, že by odmítal politický život nebo se věnoval výhradně matematice."
+                },
+            },            
+            {
                 q: "Když se Thalétovi smáli, že je chudý, dokázal svou moudrost tím, že:",
                 a: "Ovládl trh s olivovými lisy",
                 b: "Našel poklad v poušti",
                 c: "Vyhrál v tehdejší loterii",
                 ans: "a",
                 expl: {
-                    a: "Předpověděl bohatou úrodu oliv, pronajal si všechny lisy a pak je draze půjčoval, čímž ukázal, že filosofové mohou být bohatí, kdyby chtěli.",
+                    a: "Předpověděl bohatou úrodu oliv, pronajal si lisovny oleje a pak je draze půjčoval, čímž ukázal, že filosofové mohou být bohatí, kdyby chtěli.",
                     b: "Thalés bohatství nezískal náhodou, ale logickým úsudkem.",
                     c: "Loterie v dnešním slova smyslu v té době neexistovaly."
                 },
             },
-                {
-                q: "Thalés z Milétu ohromil egyptské kněze tím, že dokázal změřit:",
+            {
+                q: "Thalés z Milétu podle antické tradice dokázal v Egyptě změřit:",
                 a: "Hloubku řeky Nilu pomocí ozvěny",
-                b: "Výšku pyramid podle délky jejich stínu",
+                b: "Výšku pyramid pomocí jejich stínu",
                 c: "Váhu sfingy pomocí pák a kladek",
                 ans: "b",
                 expl: {
-                    a: "Měření hloubky pomocí ozvěny (sonar) je moderní vynález, Thalés pracoval s geometrií.",
-                    b: "Thalés počkal na okamžik, kdy byl jeho vlastní stín stejně dlouhý jako on sám. V tu chvíli změřil stín pyramidy, který se rovnal její skutečné výšce.",
-                    c: "Váha sfingy nebyla předmětem jeho geometrických výpočtů, soustředil se na výšky a vzdálenosti."
+                    a: "Chyba. Antické prameny Thalétovi takové měření nepřipisují. Příběh o měření se týká výšky pyramid pomocí jejich stínu.",
+                    b: "Správně. Podle Diogena Laertia Thalés změřil výšku pyramid pomocí jejich stínu v okamžiku, kdy byl jeho vlastní stín stejně dlouhý jako jeho tělo. Z poměru podobných trojúhelníků tak mohl určit výšku pyramidy, aniž by ji musel přímo měřit. Podobnou verzi příběhu uvádějí také Plútarchos a Plinius Starší.",
+                    c: "Chyba. Antické prameny Thalétovi takové měření nepřipisují."
                 },
             },
             {
-            "q": "Biás z Priény, jeden ze Sedmi mudrců, nabádal lidi k opatrnosti v řeči. Co konkrétně radil ohledně mluvení?",
-            "a": "Mluv jen tehdy, když tě o to někdo požádá.",
-            "b": "Mluv uvážlivě a nespěchej s vyjadřováním, abys nelitoval.",
-            "c": "Kdo mluví pravdu, nepotřebuje mnoho slov.",
-            "ans": "b",
-                "expl": {
-                    "a": "Chyba. Biás nebyl takto radikální, nezakazoval mluvit bez vyzvání, ale vyžadoval správné načasování slov.",
-                    "b": "Správně. Biás z Priény proslul výrokem: <i>„Měj v nenávisti rychlé mluvení, abys nepochybil, neboť pak následuje lítost.“</i> Kladl tedy zásadní důraz na rozvahu před spěchem.",
-                    "c": "Chyba. Toto je spíše obecné přísloví, Biantův autentický důraz směřoval k varování před unáhleným mluvením pod vlivem emocí."
-                }
-            },
-            {
-                q: "Bias z Priény, jeden ze sedmi mudrců, považoval za největší lidskou sílu a ctnost:",
-                a: "Fyzickou zdatnost",
-                b: "Moudrost (rozumnost)",
-                c: "Velké bohatství",
-                ans: "b",
-                expl: {
-                    a: "Bias věřil, že síla těla je dar přírody, který může zmizet, ale síla ducha je trvalá.",
-                    b: "Slavně prohlásil, že moudrost je jediný majetek, který si člověk odnese i z trosek svého města (všechno své si nosím s sebou).",
-                    c: "Bohatství považoval za pomíjivé a nestálé štěstí, které moudrému člověku nepatří."
-                }
-            },
-            {
-                q: "Kleobulos z Lindu byl podle tradice:",
-                a: "Olympijský vítěz v pěstním zápase",
-                b: "Král ostrova Rhodos",
-                c: "Stavitel slavného chrámu",
-                ans: "b",
-                expl: {
-                    a: "Olympijské hry sice Kleobulos uznával, ale nebyl známý jako sportovec, spíše jako moudrý vládce.",
-                    b: "Kleobulos skutečně vládl na ostrově Rhodos a byl proslulý svou moudrostí a spravedlivým vládnutím.",
-                    c: "Stavitelství chrámů bylo sice důležité v řeckém světě, ale Kleobulos se proslavil spíše jako vládce a mudrc."
-                }
-            },
-            {
-                q: "Který mudrc je autorem slavného výroku 'Všeho s mírou'?",
-                a: "Kleobulos z Lindu",
-                b: "Thalés",
-                c: "Aristotelés",
+                q: "Co říká slavná Thalétova věta o trojúhelníku nakresleném uvnitř kružnice?",
+                a: "Pokud je jedna strana trojúhelníku průměrem kružnice, úhel naproti ní je vždy pravý",
+                b: "Součet čtverců nad dvěma kratšími stranami trojúhelníku se rovná čtverci nad nejdelší stranou",
+                c: "Rovnoběžné čáry vždy rozdělí strany trojúhelníku ve stejném poměru",
                 ans: "a",
                 expl: {
-                    a: "Kleobulos patřil mezi sedm mudrců a prosazoval uměřenost (métron ariston) jako základní životní postoj a ctnost.",
-                    b: "Thalés byl mudrcem, ale proslul spíše výrokem 'Poznej sám sebe' (připisovaným i jiným) a svými astronomickými objevy.",
-                    c: "Aristotelés sice koncept míry rozpracoval do celého systému, ale samotný výrok pochází z mnohem starší archaické doby mudrců."
+                    a: "Správně. <b>Thalétova věta</b> říká, že pokud je jedna strana trojúhelníku zároveň <b>průměrem kružnice</b> a třetí vrchol leží na kružnici, úhel naproti průměru je vždy <b>pravý (90°)</b>.",
+                    b: "Chyba. To je <b>Pythagorova věta</b>: součet čtverců délek odvěsen se rovná čtverci délky přepony.",
+                    c: "Chyba. To popisuje vlastnosti <b>podobných trojúhelníků</b> a poměrů úseků protnutých rovnoběžkami, nikoli Thalétovu větu."
+                },
+            },
+            {
+                q: "Který slavný gnómický výrok údajně patřil Thalétovi z Milétu?",
+                a: "Všeho s mírou",
+                b: "Poznej sám sebe",
+                c: "Nic příliš",
+                ans: "b",
+                expl: {
+                    a: "Chyba. „Všeho s mírou“ (Μηδὲν ἄγαν) je jedním z tradičních výroků spojovaných se Sedmi mudrci, zejména s Chílónem.",
+                    b: "Správně. Diogenés Laertios výslovně uvádí, že <b>„Poznej sám sebe“ (Γνῶθι σεαυτόν) [gnóthi seavtón] patří Thalétovi</b>. Zároveň zaznamenává tradici, podle níž Antisthenés připisoval výrok Phemonoé, ale připouštěl, že si jej později přivlastnil Chílón. Diogenés navíc uvádí, že když se Thaléta ptali, co je obtížné, odpověděl: „Poznat sám sebe.“",
+                    c: "Chyba. „Nic příliš“ (Μηδὲν ἄγαν) patří mezi tradiční delfská maxima a v antické tradici bylo spojováno především s Chílónem."
+                },
+            },
+            {
+                q: "Co údajně jako první vyslovil Thalés o lidské duši?",
+                a: "Že duše vzniká z vody a po smrti se do vody vrací",
+                b: "Že duše je nesmrtelná",
+                c: "Že duše existuje pouze u člověka a nemá nic společného s přírodou",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Vodu považoval za arché, tedy prvotní princip všeho, ale nespojuje ji tímto způsobem s osudem duše.",
+                    b: "Správně. Diogenés Laertios uvádí, že <b>někteří autoři, pokládali Thaléta za prvního, kdo prohlásil duši za nesmrtelnou</b> a také, že Thalés údajně připisoval duši či život dokonce i neživým věcem (např. magnet nebo jantar).",
+                    c: "Chyba. Právě naopak: Thalés údajně připisoval duši či život dokonce i neživým věcem."
+                },
+            },
+
+    // Sedm mudrců: SOLÓN
+            {
+                q: "Solón se proslavil zákonem zvaným σεισάχθεια [seisachtheia], což znamenalo:",
+                a: "Zrušení všech dluhů a dluhového otroctví",
+                b: "Povinnou vojenskou službu pro každého",
+                c: "Zákaz pití vína na veřejnosti",
+                ans: "a",
+                expl: {
+                    a: "Doslova to znamená 'setřesení břemene'. Solón tím osvobodil chudé rolníky, kteří se kvůli dluhům stávali otroky.",
+                    b: "Vojenská služba existovala, ale nebyla jádrem jeho reforem.",
+                    c: "Solón víno nezakázal, naopak byl známý i jako básník, který psal o radostech života."
                 }
             },
+            {
+                q: "K čemu Solón přirovnával zákony?",
+                a: "K pevné zdi, která chrání slabé před silnými",
+                b: "K pavučině, která zachytí malé, ale velké ji snadno protrhnou",
+                c: "K váze, která každému měří stejnou míru spravedlnosti",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Solón zákony přirovnával právě k pavučině, nikoli k pevné zdi.",
+                    b: "Správně. Solón říkal, že zákony jsou jako <b>pavučina</b>: když do ní narazí něco malého a slabého, pavučina to udrží, ale něco velkého a silného ji protrhne a unikne. Výrok vyjadřuje myšlenku, že zákony nemusí mít stejnou účinnost vůči mocným a slabým.",
+                    c: "Chyba. Takové přirovnání Solónovi Diogenés Laertios nepřipisuje."
+                },
+            },
+            {
+                q: "Když Solón dokončil své zákony, udělal neobvyklou věc:",
+                a: "Prohlásil se králem Athén",
+                b: "Odjel na deset let z Athén",
+                c: "Nechal všechny své zákony zrušit",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Solón se naopak snažil zajistit, aby v Athénách vládly jeho zákony, nikoli on sám.",
+                    b: "Správně. Solón po přijetí svých zákonů <b>odjel na deset let z Athén</b>. Athéňané se před jeho odjezdem zavázali přísahou, že se budou jeho zákony po tuto dobu řídit. Solón se tak chtěl vyhnout tomu, aby ho nutili své zákony měnit nebo rušit, a zároveň doufal, že si na ně Athéňané mezitím zvyknou.",
+                    c: "Chyba. Zákony nebyly zrušeny. Naopak byly veřejně vystaveny a Athéňané přísahali, že se jimi budou řídit."
+                }
+            },
+            {
+                q: "Jakou slavnou radu dal Solón podle tradice králi Kroisovi ohledně štěstí?",
+                a: "Nikdy neustupuj nepříteli",
+                b: "Nikoho nenazývej šťastným před jeho smrtí",
+                c: "Peníze jsou kořenem všeho zla",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Taková rada není součástí slavného rozhovoru Solóna s Kroisem.",
+                    b: "Správně. Solón Kroisovi vysvětlil, že <b>člověka nelze označit za skutečně šťastného, dokud není znám celý jeho životní osud</b>. Štěstí se může kdykoli změnit a teprve dobrý konec života umožňuje člověka označit za šťastného.",
+                    c: "Chyba. Takový výrok Solónovi antická tradice nepřipisuje."
+                }
+            },
+            {
+                q: "Před čím Solón varoval Athéňany, když se Peisistratos snažil získat moc?",
+                a: "Před tím, že Peisistratos usiluje o nastolení tyranie",
+                b: "Před tím, že Peisistratos chce rozpoutat válku se Spartou",
+                c: "Před tím, že Peisistratos chce zrušit Solónovy zákony",
+                ans: "a",
+                expl: {
+                    a: "Správně. Solón rozpoznal Peisistratovu snahu získat <b>tyranu</b> a veřejně před ní Athéňany varoval. Dokonce předstoupil před shromáždění ozbrojený kopím a štítem a nabídl, že bude proti Peisistratovi bojovat. Athéňané ho však neposlechli a někteří ho dokonce označili za šílence.",
+                    b: "Chyba. Solónovo varování se týkalo především Peisistratovy snahy získat moc a nastolit tyranii, nikoli války se Spartou.",
+                    c: "Chyba. Solón varoval před Peisistratovým uchopením moci, nikoli před konkrétním plánem zrušit jeho zákony."
+                },
+            },
+            {
+                q: "Který slavný gnómický výrok je podle tradice připisován Solónovi, ale také Chílónovi?",
+                a: "Poznej sám sebe",
+                b: "Ničeho příliš",
+                c: "Vše je voda",
+                ans: "b",
+                expl: {
+                    a: "Chyba. „Poznej sám sebe“ Diogenés Laertios připisuje především Thalétovi, i když zaznamenává i jiné tradice o původu tohoto výroku.",
+                    b: "Správně. Solónovi je podle tradice připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>, vyjadřující zásadu uměřenosti a vyhýbání se krajnostem. Stejný výrok je však v antické tradici připisován také <b>Chílónovi ze Sparty</b>.",
+                    c: "Chyba. „Vše je voda“ je spojováno s Thalétem a jeho učením o vodě jako arché."
+                },
+            },
+            {
+                q: "Jak zní druhá část Solónova výroku „Bohatství plodí nasycenost…“?",
+                a: "…nasycenost plodí moudrost",
+                b: "…nasycenost plodí zpupnost",
+                c: "…nasycenost plodí štěstí",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Solón nespojoval nasycenost s moudrostí, ale s nebezpečím zpupnosti.",
+                    b: "Správně. Výrok pokračuje: <b>„Bohatství plodí nasycenost, nasycenost zpupnost.“</b> Solón tím upozorňuje na nebezpečí, že nadbytek může vést k přesycenosti a následně ke zpupnosti (<i>hybris</i>).",
+                    c: "Chyba. Solón naopak upozorňuje na negativní důsledky nadbytku."
+                },
+            },
+
+    // Sedm mudrců: CHILÓN
+            {
+                q: "Jakým životním stylem a hodnotami byl známý mudrc Chilón ze Sparty?",
+                a: "Spartským stylem založeným na sebekontrole, kázni a lakonické stručnosti",
+                b: "Hedonistickým stylem zaměřeným na vyhledávání tělesných slastí a luxusu",
+                c: "Kosmopolitním stylem spojeným s cestováním a přijímáním cizích tradic",
+                ans: "a",
+                expl: {
+                    a: "Správně. Jako významný efor (státník) ve Spartě ztělesňoval <b>spartský ideál: tvrdý a asketický životní styl, kde klíčovou roli hrála přísná kázeň, sebeovládání</b> a schopnost vyjadřovat se nesmírně stručně a úderně (tzv. lakonismus).",
+                    b: "Chyba. Hedonismus a hromadění luxusu byly v přímém rozporu se spartskými zákony i s Chilónovými morálními zásadami, které varovaly před chamtivostí.",
+                    c: "Chyba. Chilón byl věrný spartským tradicím a naopak varoval před unáhleným přejímáním cizích zvyků, které by mohly narušit stabilitu státu."
+                },
+            },
+            {
+                q: "Na co upozorňoval Chilón ze Sparty, když obhajoval morální čistotu před chamtivostí?",
+                a: "Škodu a nečestný zisk",
+                b: "Moudrost a politickou moc",
+                c: "Slávu a upřímné přátelství",
+                ans: "a",
+                expl: {
+                    a: "Správně. Chilón učil, že je lepší utrpět <b>jednorázovou finanční škodu než získat majetek nečestně</b>. Škoda totiž člověka mrzí jen jednou, ale černé svědomí z nečestného zisku ho provází po celý život.",
+                    b: "Chyba. Ačkoliv byl Chilón státníkem, tento konkrétní výrok se zaměřuje na morální hodnotu majetku, nikoliv na střet moudrosti a moci.",
+                    c: "Chyba. Vztah slávy a přátelství je sice v antice časté téma, ale Chilón v tomto rčení varoval před hanebným obohacováním se."
+                },
+            },
+            {
+                q: "Chilon ze Sparty radil: 'Nepředvídej budoucnost, neboť'",
+                a: "Budeš vždy zklamán",
+                b: "To je proti bohům",
+                c: "To je zbytečné",
+                ans: "a",
+                expl: {
+                    a: "Chilon věřil, že předpovídání budoucnosti vede k zklamání a frustraci, člověk by se měl soustředit na přítomnost.",
+                    b: "Spartané sice respektovali bohy, ale tento výrok má pragmatický charakter, nikoliv náboženský.",
+                    c: "Chilonovo varování má hluboký psychologický význam - chrání člověka před falešnými nadějemi a zklamáním."
+                }
+            },
+    // Sedm mudrců: PITTAKOS
             {
                 q: "Pittakos z Mytilény byl známý svou úctou k lidem. Co radil ohledně nešťastných lidí?",
                 a: "Neurážej nešťastného, protože ho stíhá boží hněv",
@@ -147,30 +287,63 @@ window.data_klasicka_recka_filosofie = {
                     c: "Ačkoliv byl schopný voják, jeho politická moc pocházela z legitimního zvolení, nikoliv vojenského vítězství."
                 }
             },
+
+    // Sedm mudrců: BIAS
             {
-                q: "Který ze sedmi mudrců proslul výrokem 'Poznej sám sebe'?",
-                a: "Chilon ze Sparty",
-                b: "Solón z Athén",
-                c: "Thalés z Milétu",
-                ans: "a",
+                q: "Biás z Priény nabádal lidi k opatrnosti v řeči. Co konkrétně radil ohledně mluvení?",
+                a: "Mluv jen tehdy, když tě o to někdo požádá",
+                b: "Mluv uvážlivě a nespěchej s vyjadřováním",
+                c: "Kdo mluví pravdu, nepotřebuje mnoho slov",
+                ans: "b",
                 expl: {
-                    a: "Chilon byl spartským eforem a jeho výrok zdůrazňuje sebereflexi jako základ moudrosti a ctnosti.",
-                    b: "Solón sice reformoval athénské zákony a byl jedním ze sedmi mudrců, ale tento slavný výrok se tradičně připisuje právě Chilonovi.",
-                    c: "Thalés byl sice mudrcem, ale tento konkrétní výrok je spojen se spartskou tradicí sebeovládání a sebezpytování."
+                    a: "Chyba. Biás nebyl takto radikální, nezakazoval mluvit bez vyzvání, ale vyžadoval správné načasování slov.",
+                    b: "Správně. Biás z Priény proslul výrokem: <i>„Měj v nenávisti rychlé mluvení, abys nepochybil, neboť pak následuje lítost.“</i> Kladl tedy zásadní důraz na rozvahu před spěchem.",
+                    c: "Chyba. Toto je spíše obecné přísloví, Biantův autentický důraz směřoval k varování před unáhleným mluvením pod vlivem emocí."
+                },
+            },
+            {
+                q: "Bias z Priény, jeden ze sedmi mudrců, považoval za největší lidskou sílu a ctnost:",
+                a: "Fyzickou zdatnost",
+                b: "Moudrost (rozumnost)",
+                c: "Velké bohatství",
+                ans: "b",
+                expl: {
+                    a: "Bias věřil, že síla těla je dar přírody, který může zmizet, ale síla ducha je trvalá.",
+                    b: "Slavně prohlásil, že moudrost je jediný majetek, který si člověk odnese i z trosek svého města (všechno své si nosím s sebou).",
+                    c: "Bohatství považoval za pomíjivé a nestálé štěstí, které moudrému člověku nepatří."
+                }
+            },
+
+    // Sedm mudrců: KLEOBULOS
+            {
+                q: "Kleobulos z Lindu byl podle tradice:",
+                a: "Olympijský vítěz v pěstním zápase",
+                b: "Král ostrova Rhodos",
+                c: "Stavitel slavného chrámu",
+                ans: "b",
+                expl: {
+                    a: "Olympijské hry sice Kleobulos uznával, ale nebyl známý jako sportovec, spíše jako moudrý vládce.",
+                    b: "Kleobulos skutečně vládl na ostrově Rhodos a byl proslulý svou moudrostí a spravedlivým vládnutím.",
+                    c: "Stavitelství chrámů bylo sice důležité v řeckém světě, ale Kleobulos se proslavil spíše jako vládce a mudrc."
                 }
             },
             {
-                q: "Chilon ze Sparty radil: 'Nepředvídej budoucnost, neboť'",
-                a: "Budeš vždy zklamán",
-                b: "To je proti bohům",
-                c: "To je zbytečné",
+                q: "Který mudrc je autorem slavného výroku 'Všeho s mírou'?",
+                a: "Kleobulos z Lindu",
+                b: "Thalés",
+                c: "Aristotelés",
                 ans: "a",
                 expl: {
-                    a: "Chilon věřil, že předpovídání budoucnosti vede k zklamání a frustraci, člověk by se měl soustředit na přítomnost.",
-                    b: "Spartané sice respektovali bohy, ale tento výrok má pragmatický charakter, nikoliv náboženský.",
-                    c: "Chilonovo varování má hluboký psychologický význam - chrání člověka před falešnými nadějemi a zklamáním."
+                    a: "Kleobulos patřil mezi sedm mudrců a prosazoval uměřenost (métron ariston) jako základní životní postoj a ctnost.",
+                    b: "Thalés byl mudrcem, ale proslul spíše výrokem 'Poznej sám sebe' (připisovaným i jiným) a svými astronomickými objevy.",
+                    c: "Aristotelés sice koncept míry rozpracoval do celého systému, ale samotný výrok pochází z mnohem starší archaické doby mudrců."
                 }
             },
+
+    // Sedm mudrců: PERIANDROS
+
+
+    // Sedm mudrců: MYSÓN 
             {
                 q: "Jaké bylo Mysónovo hlavní mínění o vztahu mezi slovy a činy?",
                 a: "Slova jsou důležitější, protože formují myšlenky",
@@ -196,65 +369,18 @@ window.data_klasicka_recka_filosofie = {
                 }
             },
             {
-                "q": "Proč delfská věštírna označila skromného rolníka Mysóna z Chén za nejmoudřejšího člověka na světě?",
-                "a": "Protože byl ze všech lidí nejvíce vnitřně vyrovnaný a prostý lstivých myšlenek.",
-                "b": "Protože dokázal jako jediný správně rozluštit Apollónovu záhadnou matematickou hádanku.",
-                "c": "Protože napsal rozsáhlé politické pojednání o reformě řeckých městských států.",
-                "ans": "a",
-                "expl": {
-                    "a": "Správně. Když se slavný a mocný Anacharsis ptal v Delfách, zda je někdo moudřejší než on, bůh Apollón mu skrze Pýthii odpověděl, že moudřejší je <b>Mysón z Chén</b>. Ten žil v ústraní jako prostý rolník, byl <b>vnitřně vyrovnaný, skromný a prostý jakékoliv falše či lsti</b>, což bůh cenil nad akademické vědění.",
-                    "b": "Chyba. Mysón nebyl vědcem ani matematikem a delfská věštírna neudělovala tituly na základě řešení kvízů či rébusů.",
-                    "c": "Chyba. Mysón nenapsal žádné knihy ani politické spisy, žil na venkově a proslul právě tím, že se veřejného a politického života stranil."
-                }
-            },
-            {
-                q: "Solón se proslavil zákonem zvaným 'seisachtheia', což znamenalo:",
-                a: "Zrušení všech dluhů a dluhového otroctví",
-                b: "Povinnou vojenskou službu pro každého",
-                c: "Zákaz pití vína na veřejnosti",
+                q: "Proč delfská věštírna označila skromného rolníka Mysóna z Chén za nejmoudřejšího člověka?",
+                a: "Protože byl vnitřně vyrovnaný a prostý lsti",
+                b: "Protože rozluštil Apollónovu matematickou hádanku",
+                c: "Protože napsal pojednání o politické reformě",
                 ans: "a",
                 expl: {
-                    a: "Doslova to znamená 'setřesení břemene'. Solón tím osvobodil chudé rolníky, kteří se kvůli dluhům stávali otroky.",
-                    b: "Vojenská služba existovala, ale nebyla jádrem jeho reforem.",
-                    c: "Solón víno nezakázal, naopak byl známý i jako básník, který psal o radostech života."
-                }
-            },
-            {
-                q: "Solón rozdělil obyvatele Athén do čtyř tříd podle:",
-                a: "Barvy očí",
-                b: "Velikosti majetku a úrody",
-                c: "Počtu dětí",
-                ans: "b",
-                expl: {
-                    a: "Barva očí neměla na politiku vliv.",
-                    b: "Tento systém (timokracie) umožnil, aby o státu nerozhodoval jen urozený původ, ale i to, jak kdo přispívá hospodářství.",
-                    c: "Počet dětí byl důležitý pro rodinu, ne pro rozdělení do politických tříd."
-                }
-            },
-            {
-                q: "Když Solón dokončil své zákony, udělal neobvyklou věc:",
-                a: "Prohlásil se králem",
-                b: "Odjel na 10 let z Athén",
-                c: "Nechal všechny zákony spálit",
-                ans: "b",
-                expl: {
-                    a: "Solón odmítl být tyranem, chtěl, aby vládly zákony, ne jeden člověk.",
-                    b: "Odjel, aby ho Athéňané nepřemlouvali ke změnám a museli se naučit podle nových pravidel žít sami.",
-                    c: "Zákony nechal vytesat na dřevěné hranoly (kyrbeis), aby byly všem na očích."
-                }
-            },
-            {
-                q: "Solón je autorem slavné rady, kterou dal králi Kroisovi:",
-                a: "Nikdy neustupuj nepříteli",
-                b: "Nikoho nenazývej šťastným před jeho smrtí",
-                c: "Peníze jsou kořenem všeho zla",
-                ans: "b",
-                expl: {
-                    a: "To je spíše vojenské heslo, ne Solónova životní moudrost.",
-                    b: "Věřil, že osud se může kdykoliv obrátit a teprve uzavřený život lze hodnotit jako skutečně šťastný.",
-                    c: "Solón viděl problém spíše v nespravedlnosti než v penězích jako takových."
-                }
-            }         
+                    a: "Správně. Když se slavný Anacharsis ptal v Delfách, zda je někdo moudřejší než on, bůh Apollón mu odpověděl, že moudřejší je <b>Mysón z Chén</b>. Ten žil v ústraní jako rolník, byl <b>vnitřně vyrovnaný a skromný</b>, což bůh cenil nad světskou slávu.",
+                    b: "Chyba. Mysón nebyl vědcem ani matematikem a delfská věštírna neudělovala věštby na základě řešení akademických rébusů.",
+                    c: "Chyba. Mysón nenapsal žádné knihy ani politické spisy, žil na venkově a proslul právě tím, že se veřejného života stranil."
+                },
+            }
+        
             ]
         },        
         "predsokrate": {
@@ -272,7 +398,19 @@ window.data_klasicka_recka_filosofie = {
                     c: "Zde dochází k záměně s politickým termínem (např. monarchie). Ve filosofii raného období jde o ontologický a materiální základ reality."
                 },
             },
-                {
+            {
+                q: "Kdo je považován za zakladatele milétské školy?",
+                a: "Thalés z Milétu",
+                b: "Anaximandros",
+                c: "Solón",
+                ans: "a",
+                expl: {
+                    a: "Thalés jako první se pokusil vysvětlit přírodní úkazy bez pomoci mýtů čímž položil základy evropské vědy.",
+                    b: "Anaximandros byl sice Thalétovým žákem a členem milétské školy, ale za prvního filosofa v dějinách je tradičně považován právě Thalés.",
+                    c: "Solón byl jedním ze sedmi mudrců a významným athénským zákonodárcem, ale nezabýval se fyzikálními otázkami o počátku světa."
+                },
+            },            
+            {
                 q: "Kdo tvořil Milétskou školu v jejich historickém a chronologickém pořadí?",
                 a: "Thalés, Anaximandros, Anaximenés",
                 b: "Sókratés, Platón, Aristotelés",
