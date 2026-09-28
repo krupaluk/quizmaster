@@ -215,103 +215,176 @@ window.data_klasicka_recka_filosofie = {
 
     // Sedm mudrců: CHILÓN
             {
-                q: "Jakým životním stylem a hodnotami byl známý mudrc Chilón ze Sparty?",
-                a: "Spartským stylem založeným na sebekontrole, kázni a lakonické stručnosti",
-                b: "Hedonistickým stylem zaměřeným na vyhledávání tělesných slastí a luxusu",
-                c: "Kosmopolitním stylem spojeným s cestováním a přijímáním cizích tradic",
+                q: "Čím byl Chílón ze Sparty známý mezi Sedmi mudrci?",
+                a: "Byl spartským eforem",
+                b: "Byl athénským archontem",
+                c: "Byl velitelem spartského loďstva",
                 ans: "a",
                 expl: {
-                    a: "Správně. Jako významný efor (státník) ve Spartě ztělesňoval <b>spartský ideál: tvrdý a asketický životní styl, kde klíčovou roli hrála přísná kázeň, sebeovládání</b> a schopnost vyjadřovat se nesmírně stručně a úderně (tzv. lakonismus).",
-                    b: "Chyba. Hedonismus a hromadění luxusu byly v přímém rozporu se spartskými zákony i s Chilónovými morálními zásadami, které varovaly před chamtivostí.",
-                    c: "Chyba. Chilón byl věrný spartským tradicím a naopak varoval před unáhleným přejímáním cizích zvyků, které by mohly narušit stabilitu státu."
+                    a: "Správně. Chílón byl podle Diogena Laertia <b>spartským eforem</b> – jedním z pěti každoročně volených vysokých úředníků, kteří dohlíželi na chod spartského státu a měli významnou kontrolní moc, dokonce i vůči spartským králům.",
+                    b: "Chyba. Archonti byli významní úředníci <b>Athén</b>, nikoli Sparty.",
+                    c: "Chyba. Chílón nebyl znám jako velitel spartského loďstva; jeho významná politická funkce byla právě úřad <b>efora</b>."
                 },
             },
             {
-                q: "Na co upozorňoval Chilón ze Sparty, když obhajoval morální čistotu před chamtivostí?",
-                a: "Škodu a nečestný zisk",
-                b: "Moudrost a politickou moc",
-                c: "Slávu a upřímné přátelství",
-                ans: "a",
+                q: "Co podle Chílóna člověka provází déle: finanční škoda, nebo nečestný zisk?",
+                a: "Finanční škoda",
+                b: "Nečestný zisk",
+                c: "Obojí stejně dlouho",
+                ans: "b",
                 expl: {
-                    a: "Správně. Chilón učil, že je lepší utrpět <b>jednorázovou finanční škodu než získat majetek nečestně</b>. Škoda totiž člověka mrzí jen jednou, ale černé svědomí z nečestného zisku ho provází po celý život.",
-                    b: "Chyba. Ačkoliv byl Chilón státníkem, tento konkrétní výrok se zaměřuje na morální hodnotu majetku, nikoliv na střet moudrosti a moci.",
-                    c: "Chyba. Vztah slávy a přátelství je sice v antice časté téma, ale Chilón v tomto rčení varoval před hanebným obohacováním se."
+                    a: "Chyba. Chílón říká, že finanční škoda člověka bolí pouze v daném okamžiku.",
+                    b: "Správně. Chílón radí <b>dát přednost škodě před nečestným ziskem</b>: škoda přináší bolest na okamžik, zatímco nečestný zisk člověka zatěžuje po celý život.",
+                    c: "Chyba. Právě mezi krátkodobou bolestí ze škody a dlouhodobým následkem nečestného zisku Chílón rozlišuje."
                 },
             },
             {
-                q: "Chilon ze Sparty radil: 'Nepředvídej budoucnost, neboť'",
-                a: "Budeš vždy zklamán",
-                b: "To je proti bohům",
-                c: "To je zbytečné",
+                q: "Co podle Chílóna patří k dokonalosti člověka?",
+                a: "Umět předvídat budoucnost natolik, nakolik ji lze poznat rozumem",
+                b: "Nikdy se nezabývat tím, co teprve přijde",
+                c: "Spoléhat pouze na věštby a znamení bohů",
                 ans: "a",
                 expl: {
-                    a: "Chilon věřil, že předpovídání budoucnosti vede k zklamání a frustraci, člověk by se měl soustředit na přítomnost.",
-                    b: "Spartané sice respektovali bohy, ale tento výrok má pragmatický charakter, nikoliv náboženský.",
-                    c: "Chilonovo varování má hluboký psychologický význam - chrání člověka před falešnými nadějemi a zklamáním."
+                    a: "Správně. Diogenés Laertios uvádí, že Chílón považoval za <b>ctnost člověka schopnost předvídat budoucnost do té míry, do jaké ji lze postihnout rozumem</b>.",
+                    b: "Chyba. Chílón naopak předvídání budoucnosti připisoval člověku jako určitou ctnost.",
+                    c: "Chyba. Chílón zdůrazňuje právě <b>rozumové</b> uchopení budoucnosti, nikoli slepé spoléhání na věštby."
                 }
             },
-    // Sedm mudrců: PITTAKOS
             {
-                q: "Pittakos z Mytilény byl známý svou úctou k lidem. Co radil ohledně nešťastných lidí?",
-                a: "Neurážej nešťastného, protože ho stíhá boží hněv",
-                b: "Nešťastným lidem se raději vyhýbej",
-                c: "Pomoz jen těm, kteří si to zaslouží",
+                q: "Před čím Chílón ze Sparty varoval v souvislosti s ostrovem Kythéra?",
+                a: "Že jeho strategická poloha může ohrozit Spartu",
+                b: "Že na ostrově vypukne velké zemětřesení",
+                c: "Že se ostrov stane centrem athénské filozofie",
                 ans: "a",
                 expl: {
-                    a: "Tento výrok ukazuje na jeho hluboký soucit a víru, že osud (nebo bozi) může postihnout každého, a proto si nikdo nezaslouží výsměch ve svém neštěstí.",
-                    b: "Pittakos naopak nabádal k empatii, nikoliv k izolaci od trpících.",
-                    c: "Jeho morální rady byly obecné a směřovaly k laskavosti vůči všem bez rozdílu."
+                    a: "Správně. Diogenés Laertios uvádí, že Chílón prohlásil, že by bylo nejlepší, kdyby Kythéra vůbec neexistovala nebo byla potopena. Obával se její strategické polohy, protože mohla sloužit jako základna pro útok proti Spartě.",
+                    b: "Chyba. Chílónovo varování se týkalo především strategické polohy ostrova, nikoli přírodní katastrofy.",
+                    c: "Chyba. Chílón se obával především vojenského významu Kythéry pro bezpečnost Sparty."
+                },
+            },
+            {
+                q: "Co podle Chílóna patřilo mezi nejtěžší věci v životě?",
+                a: "Získat bohatství, získat slávu a zvítězit ve válce",
+                b: "Uchovat tajemství, dobře využít volný čas a snášet křivdu",
+                c: "Poznat bohy, porozumět přírodě a předvídat počasí",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Chílón za nejtěžší věci nepovažoval získání bohatství ani slávy, ale především náročné morální a praktické úkoly.",
+                    b: "Správně. Diogenés Laertios uvádí, že Chílón považoval za obtížné <b>uchovat tajemství, dobře využít volný čas a snášet křivdu</b>.",
+                    c: "Chyba. Tyto úkoly Diogenés Laertios mezi Chílónovy odpovědi na otázku, co je obtížné, neuvádí."
+                },
+            },
+            {
+                q: "Který slavný gnómický výrok je podle Diogena Laertia připisován Chílónovi ze Sparty, ale také Thalétovi?",
+                a: "Poznej sám sebe",
+                b: "Ničeho příliš",
+                c: "Vše je voda",
+                ans: "b",
+                expl: {
+                    a: "Chyba. „Poznej sám sebe“ (Γνῶθι σεαυτόν) Diogenés Laertios výslovně připisuje Thalétovi, přičemž uvádí také tradici, podle níž si jej později přivlastnil Chílón.",
+                    b: "Správně. Chílónovi je připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>. Stejný výrok však Diogenés Laertios připisuje také <b>Thalétovi</b> v tradici Sedmi mudrců. Výrok vyjadřuje zásadu uměřenosti a vyhýbání se krajnostem.",
+                    c: "Chyba. „Vše je voda“ je spojováno s Thalétem a jeho učením o vodě jako <i>arché</i>, nikoli s Chílónem."
+                },
+            },
+    // Sedm mudrců: PITTAKOS
+              {
+                q: "Jak se Pittakos z Mytilény dostal k nejvyšší moci ve městě?",
+                a: "Zdědil vládu po svém otci",
+                b: "Mytiléňané mu svěřili vládu po období politických nepokojů",
+                c: "Zmocnil se města po vojenském převratu",
+                ans: "b",
+                expl: {
+                    a: "Chyba. Pittakos nebyl dědičným vládcem. Jeho otec Hyrradios byl podle Diogena Laertia Thrác, ale Pittakos získal moc vlastní politickou a vojenskou činností.",
+                    b: "Správně. Po svých vojenských úspěších získal Pittakos u Mytiléňanů velkou vážnost a ti mu <b>svěřili vládu nad městem</b>. Vládl deset let, uvedl ústavu do pořádku a poté se úřadu vzdal.",
+                    c: "Chyba. Diogenés Laertios říká, že mu Mytiléňané vládu <b>svěřili</b>; nepopisuje jeho nástup k moci jako vojenský převrat."
+                }
+            },
+            {
+                q: "Pittakos z Mytilény radil, jak se chovat k člověku, kterého postihlo neštěstí. Co říkal?",
+                a: "Neurážej ho ani mu nevyčítej jeho neštěstí, z obavy před Nemesis",
+                b: "Nešťastným lidem se raději vyhýbej",
+                c: "Pomoz jen těm, kteří si své neštěstí nezavinili",
+                ans: "a",
+                expl: {
+                    a: "Správně. Diogenés Laertios uvádí Pittakovu radu: <b>„Nikomu nevyčítej jeho neštěstí, z obavy před Nemesis.“</b> Nemesis zde představuje odplatu či odvetu, která může postihnout člověka za jeho vlastní povýšenost vůči nešťastnému.",
+                    b: "Chyba. Pittakos naopak varoval před tím, aby člověk nešťastného ponižoval nebo mu jeho neštěstí vyčítal.",
+                    c: "Chyba. Pittakova rada není podmíněna tím, zda si člověk své neštěstí zavinil."
+                }
+            },
+            {
+                q: "Jaký neobvyklý zákon zavedl Pittakos v Mytiléně?",
+                a: "Za přestupek spáchaný v opilosti stanovil dvojnásobný trest",
+                b: "Za krádež alkoholu stanovil trest smrti",
+                c: "Zakázal pití alkoholu všem občanům",
+                ans: "a",
+                expl: {
+                    a: "Správně. Diogenés Laertios uvádí, že Pittakos zavedl zákon, podle něhož byl <b>trest za přestupek spáchaný v opilosti dvojnásobný</b>. Zákon měl působit jako odstrašení od opíjení.",
+                    b: "Chyba. Pittakos nezavedl trest smrti za krádež alkoholu.",
+                    c: "Chyba. Pittakos pití alkoholu nezakázal; postihoval přísněji <b>provinění spáchaná v opilosti</b>."
                 }
             },
             {
                 q: "Který slavný výrok o lidském charakteru je připisován Pittakovi?",
                 a: "Je lehké být mocný, ale těžké být spravedlivý",
-                b: "Je těžké být dobrým (řádným) člověkem",
+                b: "Je těžké být dobrým člověkem",
                 c: "Dobrý člověk nepotřebuje zákony",
                 ans: "b",
                 expl: {
-                    a: "Tento výrok sice dává smysl, ale nejedná se o Pittakovu nejslavnější tezi.",
-                    b: "Pittakos věřil, že dosáhnout skutečné lidské dokonalosti a řádnosti je nesmírně obtížný úkol, který vyžaduje celoživotní úsilí.",
-                    c: "Pittakos byl sám zákonodárcem, takže věděl, že zákony jsou pro fungování společnosti nezbytné."
-                }
-            },
-            {
-                q: "Jak Pittakos z Mytilény získal své postavení?",
-                a: "Dědictvím po otci",
-                b: "Zvolením občany za tyranida",
-                c: "Vítězstvím v námořní bitvě",
-                ans: "b",
-                expl: {
-                    a: "Pittakos sice pocházel ze šlechtické rodiny, ale jeho moc založil na souhlasu občanů, nikoliv dědictví.",
-                    b: "Mytilénané ho zvolili za tyranida s omezenou mocí na deset let, aby stabilizoval město po nepokojích.",
-                    c: "Ačkoliv byl schopný voják, jeho politická moc pocházela z legitimního zvolení, nikoliv vojenského vítězství."
+                    a: "Chyba. Tento výrok Diogenés Laertios Pittakovi nepřipisuje.",
+                    b: "Správně. Diogenés Laertios uvádí Pittakův výrok <b>„Vskutku je obtížné stát se mužem dobrým“</b>.",
+                    c: "Chyba. Pittakos byl naopak zákonodárcem a Diogenés Laertios mu připisuje výroky zdůrazňující význam zákona."
                 }
             },
 
+
     // Sedm mudrců: BIAS
             {
-                q: "Biás z Priény nabádal lidi k opatrnosti v řeči. Co konkrétně radil ohledně mluvení?",
-                a: "Mluv jen tehdy, když tě o to někdo požádá",
-                b: "Mluv uvážlivě a nespěchej s vyjadřováním",
-                c: "Kdo mluví pravdu, nepotřebuje mnoho slov",
-                ans: "b",
+                q: "Biás z Priény nabádal lidi k opatrnosti v řeči. Před čím varoval?",
+                a: "Před rychlým a unáhleným mluvením",
+                b: "Před přílišným mlčením",
+                c: "Před používáním cizích slov",
+                ans: "a",
                 expl: {
-                    a: "Chyba. Biás nebyl takto radikální, nezakazoval mluvit bez vyzvání, ale vyžadoval správné načasování slov.",
-                    b: "Správně. Biás z Priény proslul výrokem: <i>„Měj v nenávisti rychlé mluvení, abys nepochybil, neboť pak následuje lítost.“</i> Kladl tedy zásadní důraz na rozvahu před spěchem.",
-                    c: "Chyba. Toto je spíše obecné přísloví, Biantův autentický důraz směřoval k varování před unáhleným mluvením pod vlivem emocí."
+                    a: "Správně. Biás podle Diogena Laertia radil: <b>„Měj v nenávisti rychlé mluvení, abys nepochybil, neboť pak následuje lítost.“</b> Varoval tedy před unáhlenými slovy a jejich následky.",
+                    b: "Chyba. Biás nevaroval před mlčením, ale před příliš rychlým a neuváženým mluvením.",
+                    c: "Chyba. Jeho rada se týkala především rychlosti a uváženosti řeči, nikoli slovní zásoby."
                 },
             },
             {
-                q: "Bias z Priény, jeden ze sedmi mudrců, považoval za největší lidskou sílu a ctnost:",
-                a: "Fyzickou zdatnost",
-                b: "Moudrost (rozumnost)",
-                c: "Velké bohatství",
+                q: "Koho podle Bianta můžeme považovat za skutečně nešťastného?",
+                a: "Toho, kdo nedokáže snášet neštěstí",
+                b: "Toho, kdo nemá dostatek majetku",
+                c: "Toho, kdo nikdy nezažil štěstí",
+                ans: "a",
+                expl: {
+                    a: "Správně. Biás říkal, že <b>nešťastný je ten, kdo nedokáže snášet neštěstí</b>. Neštěstí samo tedy podle něj není to nejhorší; rozhodující je schopnost člověka se s ním vyrovnat.",
+                    b: "Chyba. Biás nespojoval skutečné neštěstí s nedostatkem majetku.",
+                    c: "Chyba. Biás kladl důraz především na schopnost člověka snášet nepřízeň osudu."
+                },
+            },
+            {
+                q: "Co podle slavného Biantova výroku člověk skutečně vlastní?",
+                a: "Majetek, který dokázal nashromáždit",
+                b: "Moudrost, kterou si nese s sebou",
+                c: "Slávu, kterou po sobě zanechá",
                 ans: "b",
                 expl: {
-                    a: "Bias věřil, že síla těla je dar přírody, který může zmizet, ale síla ducha je trvalá.",
-                    b: "Slavně prohlásil, že moudrost je jediný majetek, který si člověk odnese i z trosek svého města (všechno své si nosím s sebou).",
-                    c: "Bohatství považoval za pomíjivé a nestálé štěstí, které moudrému člověku nepatří."
-                }
+                    a: "Chyba. Biás zdůrazňoval, že hmotný majetek je pomíjivý.",
+                    b: "Správně. Když byla Priéné dobyta a obyvatelé prchali, Biás na výzvu, aby si také něco odnesl, odpověděl: <b>„Všechno své nesu s sebou.“</b> Tím podle Diogena Laertia mínil svou moudrost, která je skutečným vlastnictvím člověka.",
+                    c: "Chyba. Biás v tomto výroku nemluví o slávě, ale o moudrosti, kterou člověku nikdo nemůže vzít."
+                },
+            },
+            {
+                q: "Jaký poněkud pesimistický výrok je připisován Biantovi z Priény?",
+                a: "Většina lidí je špatná",
+                b: "Člověk je od přirozenosti dobrý",
+                c: "Každý člověk je moudrý, pokud dostane správné vedení",
+                ans: "a",
+                expl: {
+                    a: "Správně. Diogenés Laertios uvádí Biantův výrok <b>„Většina lidí je špatná“</b>. Jde o jeden z jeho stručných gnómických výroků, které vyjadřují jeho střízlivý pohled na lidskou povahu.",
+                    b: "Chyba. Tento optimistický pohled Biantovi Diogenés Laertios nepřipisuje.",
+                    c: "Chyba. Biás naopak upozorňoval na nedostatky lidského charakteru a právě jeho výrok o většině lidí vyjadřuje značnou nedůvěru k lidské povaze."
+                },
             },
 
     // Sedm mudrců: KLEOBULOS
