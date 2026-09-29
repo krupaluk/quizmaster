@@ -107,7 +107,7 @@ window.data_starorectina = {
     c: "Κ κ",
     ans: "a",
     expl: {
-        a: "Správně. Ι ι je ióta. Např. Δίκη – Díke (bohyně spravedlnosti).",
+        a: "Správně. Ι ι je ióta. Např. Δίκη – Díké (bohyně spravedlnosti).",
         b: "Špatně. Η η je éta.",
         c: "Špatně. Κ κ je kappa."
     }
@@ -402,7 +402,7 @@ window.data_starorectina = {
     ans: "b",
     expl: {
         a: "Špatně. Κ κ je kappa.",
-        b: "Správně. Ι ι je ióta. Např. Δ<strong>ι</strong>κη – Díke (spravedlnost).",
+        b: "Správně. Ι ι je ióta. Např. Δ<strong>ι</strong>κη – Díké (spravedlnost).",
         c: "Špatně. Λ λ je lambda."
     }
 },
