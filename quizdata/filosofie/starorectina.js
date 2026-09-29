@@ -251,7 +251,7 @@ window.data_starorectina = {
     c: "Θ θ",
     ans: "a",
     expl: {
-        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – phásthai (říkat).",
+        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
         b: "Špatně. Χ χ je chí.",
         c: "Špatně. Θ θ je théta."
     }
@@ -545,7 +545,7 @@ window.data_starorectina = {
     c: "psí",
     ans: "a",
     expl: {
-        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – phásthai (říkat).",
+        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
         b: "Špatně. Χ χ je chí.",
         c: "Špatně. Ψ ψ je psí."
     }
