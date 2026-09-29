@@ -47,8 +47,8 @@ const quizCategories = {
             },
             starorectina: {
                 id: "starorectina",
-                title: "Starořečtina",
-                desc: "Naučte se řeckou abecedu - překlad písmen z řečtiny do češtiny a naopak.",
+                title: "Starořečtina - základy",
+                desc: "Starořecká alfabeta, transkripce a klíčová terminologie.",
                 summary: false
             }
         }

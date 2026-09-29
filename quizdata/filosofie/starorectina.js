@@ -587,6 +587,347 @@ window.data_starorectina = {
     }
 },
             ]
+        },
+        "transkripce": {
+            "title": "Transkripce",
+            "questions": [
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „καί“?",
+    a: "kaj",
+    b: "kai",
+    c: "kej",
+    ans: "a",
+    expl: {
+        a: "Správně. αι → aj: καί → kaj (a, také).",
+        b: "Špatně. αι se podle pravidel přepisuje jako aj.",
+        c: "Špatně. ει → ej, nikoli αι."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „εἶναι“?",
+    a: "eínaj",
+    b: "ejnaj",
+    c: "ejnai",
+    ans: "b",
+    expl: {
+        a: "Špatně. ει → ej, takže εἶ se přepisuje jako ej.",
+        b: "Správně. ει → ej a αι → aj: εἶναι → ejnaj (být).",
+        c: "Špatně. αι → aj, nikoli ai."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „γενέσθαι“?",
+    a: "genésthaj",
+    b: "genésthai",
+    c: "genéstej",
+    ans: "a",
+    expl: {
+        a: "Správně. αι → aj: γενέσθαι → genésthaj (stát se, vzniknout).",
+        b: "Špatně. αι → aj, nikoli ai.",
+        c: "Špatně. ει → ej, ale zde je αι → aj."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „λείπει“?",
+    a: "léjpej",
+    b: "leípei",
+    c: "léjpi",
+    ans: "a",
+    expl: {
+        a: "Správně. ει → ej: λείπει → léjpej (zbývá, zůstává).",
+        b: "Špatně. ει se přepisuje jako ej, nikoli ei.",
+        c: "Špatně. Ve slově λείπει se přepisuje i koncové ει jako ej."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „εἵνεκεν“?",
+    a: "héjneken",
+    b: "éjneken",
+    c: "heíneken",
+    ans: "a",
+    expl: {
+        a: "Správně. ει → ej a ostrý přídech → h: εἵνεκεν → héjneken (kvůli, pro).",
+        b: "Špatně. εἵ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. ει → ej, nikoli ei."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „τοῖς“?",
+    a: "tojs",
+    b: "toís",
+    c: "tejs",
+    ans: "a",
+    expl: {
+        a: "Správně. οι → oj: τοῖς → tojs (těm, těmto).",
+        b: "Špatně. οι se přepisuje jako oj, nikoli oi.",
+        c: "Špatně. ει → ej, ale zde je οι → oj."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „Κροίσῳ“?",
+    a: "Krojsó",
+    b: "Kroísó",
+    c: "Kréjsó",
+    ans: "a",
+    expl: {
+        a: "Správně. οι → oj a ω → ó: Κροίσῳ → Krojsó (Kroisovi).",
+        b: "Špatně. οι → oj, nikoli oi.",
+        c: "Špatně. η → é a ει → ej, ale zde je οι → oj."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ὁμοῖον“?",
+    a: "homojon",
+    b: "omojon",
+    c: "homoíon",
+    ans: "a",
+    expl: {
+        a: "Správně. Ostrý přídech → h a οι → oj: ὁμοῖον → homojon (podobné, stejné).",
+        b: "Špatně. ὁ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. οι → oj, nikoli oi."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „υἱός“?",
+    a: "hyjós",
+    b: "hyiós",
+    c: "hjós",
+    ans: "a",
+    expl: {
+        a: "Správně. υι → yj a ostrý přídech → h: υἱός → hyjós (syn).",
+        b: "Špatně. υι se přepisuje jako yj, nikoli yi.",
+        c: "Špatně. υι → yj a υ se tedy nepřepisuje jako obyčejné i."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „υἱεῖς“?",
+    a: "hyjejs",
+    b: "hyeís",
+    c: "yjejs",
+    ans: "a",
+    expl: {
+        a: "Správně. υι → yj, ει → ej a ostrý přídech → h: υἱεῖς → hyjejs (synové).",
+        b: "Špatně. υι → yj a ει → ej.",
+        c: "Špatně. υἱ má ostrý přídech, proto se na začátku píše h."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτοῦ“?",
+    a: "autoú",
+    b: "aftoú",
+    c: "autú",
+    ans: "c",
+    expl: {
+        a: "Špatně. ου se přepisuje jako ú, takže αὐτοῦ → autú.",
+        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au, nikoli aft.",
+        c: "Správně. αυ → au a ου → ú: αὐτοῦ → autú (jeho, od něho)."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτό“?",
+    a: "autó",
+    b: "aftó",
+    c: "autú",
+    ans: "a",
+    expl: {
+        a: "Správně. αυ → au: αὐτό → autó (samo, to).",
+        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au.",
+        c: "Špatně. ου → ú, ale zde je αυ → au."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτάρ“?",
+    a: "autár",
+    b: "aftár",
+    c: "autér",
+    ans: "a",
+    expl: {
+        a: "Správně. αυ → au: αὐτάρ → autár (však, ale, potom).",
+        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au.",
+        c: "Špatně. η → é, ale zde je α → a a αυ → au."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „εὐδαιμονία“?",
+    a: "eudajmonía",
+    b: "evdaimonía",
+    c: "eudajmonéa",
+    ans: "a",
+    expl: {
+        a: "Správně. ευ → eu a αι → aj: εὐδαιμονία → eudajmonía (blaženost, šťastný život).",
+        b: "Špatně. Podle našich pravidel se ευ přepisuje jako eu, nikoli ev.",
+        c: "Špatně. αι → aj a η → é; zde je tedy αι → aj."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „εὐλογία“?",
+    a: "eulogía",
+    b: "evlogía",
+    c: "eulogiá",
+    ans: "a",
+    expl: {
+        a: "Správně. ευ → eu: εὐλογία → eulogía (chvála, požehnání).",
+        b: "Špatně. ευ se podle pravidel přepisuje jako eu, nikoli ev.",
+        c: "Špatně. Přízvuk je na α, takže transkripce je eulogía."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ηὕρετο“?",
+    a: "héureto",
+    b: "éureto",
+    c: "hévreto",
+    ans: "a",
+    expl: {
+        a: "Správně. ηυ → éu a ostrý přídech → h: ηὕρετο → héureto (nalezl, nalezla).",
+        b: "Špatně. ηὕ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. ευ → eu, ale zde je ηυ → éu."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ηὗρες“?",
+    a: "héures",
+    b: "éures",
+    c: "hévres",
+    ans: "a",
+    expl: {
+        a: "Správně. ηυ → éu a ostrý přídech → h: ηὗρες → héures (nalezl jsi).",
+        b: "Špatně. ηὗ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. ηυ → éu, nikoli ev."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ηὔξησεν“?",
+    a: "éuxéksen",
+    b: "héuxéksen",
+    c: "éuksen",
+    ans: "a",
+    expl: {
+        a: "Správně. ηυ → éu: ηὔξησεν → éuxéksen (rozmnožil, zvětšil).",
+        b: "Špatně. ηὔ má jemný přídech, takže se h na začátku nepíše.",
+        c: "Špatně. ηυ → éu; druhá část slova obsahuje ξ → x."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „οὐδέ“?",
+    a: "údé",
+    b: "oudé",
+    c: "údé",
+    ans: "a",
+    expl: {
+        a: "Správně. ου → ú: οὐδέ → údé (ani, také ne).",
+        b: "Špatně. ου se podle pravidel přepisuje jako ú, nikoli ou.",
+        c: "Špatně. Správně je údé – první slabika obsahuje ου → ú."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „οὐδέν“?",
+    a: "údén",
+    b: "oudén",
+    c: "úden",
+    ans: "a",
+    expl: {
+        a: "Správně. ου → ú: οὐδέν → údén (nic).",
+        b: "Špatně. ου → ú, nikoli ou.",
+        c: "Špatně. ε → e, ale zde je ε s přízvukem → é."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „οὐλομελές“?",
+    a: "úlomelés",
+    b: "oulomelés",
+    c: "úlamelés",
+    ans: "a",
+    expl: {
+        a: "Správně. ου → ú: οὐλομελές → úlomelés (celistvé, úplné).",
+        b: "Špatně. ου se přepisuje jako ú, nikoli ou.",
+        c: "Špatně. ο → o, nikoli a; ου → ú."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „Μωυσῆς“?",
+    a: "Móusés",
+    b: "Móysés",
+    c: "Móuéss",
+    ans: "a",
+    expl: {
+        a: "Správně. ωυ → óu: Μωυσῆς → Móusés (Mojžíš).",
+        b: "Špatně. ωυ se podle pravidel přepisuje jako óu, nikoli óy.",
+        c: "Špatně. ωυ → óu a σ → s."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ἕν“?",
+    a: "hén",
+    b: "én",
+    c: "hénn",
+    ans: "a",
+    expl: {
+        a: "Správně. ἕ má ostrý přídech → h: ἕν → hén (jedno, jeden).",
+        b: "Špatně. ἕ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. ν se transkribuje pouze jako n."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ἐπεὶ“?",
+    a: "epej",
+    b: "hepej",
+    c: "epei",
+    ans: "a",
+    expl: {
+        a: "Správně. ἐ má jemný přídech → bez h a ει → ej: ἐπεὶ → epej (protože).",
+        b: "Špatně. ἐ má jemný přídech, který se v transkripci nepíše.",
+        c: "Špatně. ει → ej, nikoli ei."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ὅπως“?",
+    a: "hópós",
+    b: "ópós",
+    c: "hópos",
+    ans: "a",
+    expl: {
+        a: "Správně. ὅ má ostrý přídech → h a přízvuk se zachovává: ὅπως → hópós (jak, aby).",
+        b: "Špatně. ὅ má ostrý přídech, proto se na začátku píše h.",
+        c: "Špatně. Přízvuk se v transkripci zachovává: hópós."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ἐόν“?",
+    a: "eón",
+    b: "heón",
+    c: "eon",
+    ans: "a",
+    expl: {
+        a: "Správně. ἐ má jemný přídech → bez h a přízvuk se zachovává: ἐόν → eón (jsoucí).",
+        b: "Špatně. ἐ má jemný přídech, který se v transkripci nepíše.",
+        c: "Špatně. Přízvuk se v transkripci zachovává jako ó."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ὄλλυσθαι“?",
+    a: "óllusthaj",
+    b: "hóllusthaj",
+    c: "óllusthai",
+    ans: "a",
+    expl: {
+        a: "Správně. ὄ má jemný přídech → bez h a αι → aj: ὄλλυσθαι → óllusthaj (zaniknout, zahynout).",
+        b: "Špatně. ὄ má jemný přídech, který se v transkripci nepíše.",
+        c: "Špatně. αι → aj, nikoli ai."
+    }
+},
+{
+    q: "Jak se podle pravidel transkribuje řecké slovo „ἀληθής“?",
+    a: "aléthés",
+    b: "haléthés",
+    c: "aléthes",
+    ans: "a",
+    expl: {
+        a: "Správně. ἀ má jemný přídech → bez h: ἀληθής → aléthés (pravdivý).",
+        b: "Špatně. ἀ má jemný přídech, který se v transkripci nepíše.",
+        c: "Špatně. η → é, proto aléthés."
+    }
+},
+            ]
         }
     }
 };
