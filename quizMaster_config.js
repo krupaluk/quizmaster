@@ -44,6 +44,12 @@ const quizCategories = {
                 title: "Poválečná a česká filozofie",
                 desc: "Poválečná filozofie a česká filozofická tradice od 19. století až po současnost.",
                 summary: false
+            },
+            starorectina: {
+                id: "starorectina",
+                title: "Starořečtina",
+                desc: "Naučte se řeckou abecedu - překlad písmen z řečtiny do češtiny a naopak.",
+                summary: false
             }
         }
     },
