@@ -195,9 +195,9 @@ window.data_klasicka_recka_filosofie = {
                 c: "Vše je voda",
                 ans: "b",
                 expl: {
-                    a: "Chyba. „Poznej sám sebe“ Diogenés Laertios připisuje především Thalétovi, i když zaznamenává i jiné tradice o původu tohoto výroku.",
-                    b: "Správně. Solónovi je podle tradice připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>, vyjadřující zásadu uměřenosti a vyhýbání se krajnostem. Stejný výrok je však v antické tradici připisován také <b>Chílónovi ze Sparty</b>.",
-                    c: "Chyba. „Vše je voda“ je spojováno s Thalétem a jeho učením o vodě jako arché."
+                    a: "Chyba. „Poznej sám sebe“ (Γνῶθι σεαυτόν) Diogenés Laertios připisuje především Thalétovi, i když zaznamenává i jiné tradice o původu tohoto výroku.",
+                    b: "Správně. Solónovi je podle tradice připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>, který vyjadřuje zásadu <b>uměřenosti a vyhýbání se krajnostem</b>. Stejný výrok Diogenés Laertios připisuje také <b>Chílónovi ze Sparty</b>. Je významově blízký Kleobulovu <b>Μέτρον ἄριστον — „Nejlepší je uměřenost“</b>, ale důraz je trochu jiný: Kleobulos pozitivně vybízí k <b>hledání správné míry a rovnováhy</b>, zatímco „Ničeho příliš“ varuje především před <b>nadmírou a překračováním rozumné míry</b>.",
+                    c: "Chyba. „Vše je voda“ je spojováno s Thalétem a jeho učením o vodě jako <i>arché</i>."
                 },
             },
             {
@@ -275,14 +275,14 @@ window.data_klasicka_recka_filosofie = {
                 },
             },
             {
-                q: "Který slavný gnómický výrok je podle Diogena Laertia připisován Chílónovi ze Sparty, ale také Thalétovi?",
+                q: "Který slavný gnómický výrok je podle Diogena Laertia připisován Chílónovi ze Sparty, ale také Solónovi?",
                 a: "Poznej sám sebe",
                 b: "Ničeho příliš",
                 c: "Vše je voda",
                 ans: "b",
                 expl: {
-                    a: "Chyba. „Poznej sám sebe“ (Γνῶθι σεαυτόν) Diogenés Laertios výslovně připisuje Thalétovi, přičemž uvádí také tradici, podle níž si jej později přivlastnil Chílón.",
-                    b: "Správně. Chílónovi je připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>. Stejný výrok však Diogenés Laertios připisuje také <b>Thalétovi</b> v tradici Sedmi mudrců. Výrok vyjadřuje zásadu uměřenosti a vyhýbání se krajnostem.",
+                    a: "Chyba. „Poznej sám sebe“ (Γνῶθι σεαυτόν) Diogenés Laertios připisuje Thalétovi, přičemž uvádí také tradici, podle níž si jej později přivlastnil Chílón.",
+                    b: "Správně. Chílónovi je připisován výrok <b>Μηδὲν ἄγαν — „Ničeho příliš“</b>. Diogenés Laertios jej v Solónově kapitole uvádí také jako výrok připisovaný <b>Solónovi</b>. Výrok vyjadřuje zásadu <b>uměřenosti a vyhýbání se krajnostem</b>: varuje před překročením určité míry. Je významově blízký Kleobulovu <b>Μέτρον ἄριστον — „Nejlepší je uměřenost“</b>, ale důraz je trochu jiný. Kleobulos pozitivně vybízí k <b>hledání správné míry a rovnováhy</b>, zatímco Chílónovo „Ničeho příliš“ upozorňuje především na nebezpečí <b>nadmíry a krajnosti</b>.",
                     c: "Chyba. „Vše je voda“ je spojováno s Thalétem a jeho učením o vodě jako <i>arché</i>, nikoli s Chílónem."
                 },
             },
@@ -389,27 +389,39 @@ window.data_klasicka_recka_filosofie = {
 
     // Sedm mudrců: KLEOBULOS
             {
-                q: "Kleobulos z Lindu byl podle tradice:",
-                a: "Olympijský vítěz v pěstním zápase",
-                b: "Král ostrova Rhodos",
-                c: "Stavitel slavného chrámu",
-                ans: "b",
+                q: "Čím byl Kleobulos z Lindu podle tradice známý?",
+                a: "Jako mudrc, básník a autor hádanek",
+                b: "Jako slavný olympijský vítěz v pěstním zápase",
+                c: "Jako velitel spartského vojska",
+                ans: "a",
                 expl: {
-                    a: "Olympijské hry sice Kleobulos uznával, ale nebyl známý jako sportovec, spíše jako moudrý vládce.",
-                    b: "Kleobulos skutečně vládl na ostrově Rhodos a byl proslulý svou moudrostí a spravedlivým vládnutím.",
-                    c: "Stavitelství chrámů bylo sice důležité v řeckém světě, ale Kleobulos se proslavil spíše jako vládce a mudrc."
+                    a: "Správně. Diogenés Laertios uvádí, že Kleobulos byl autorem <b>písní a hádanek</b> a že vytvořil asi 3000 veršů. Zmiňuje také jeho dceru Kleobulínu, která skládala hádanky v hexametrech.",
+                    b: "Chyba. Diogenés Laertios Kleobula neuvádí jako olympijského vítěze.",
+                    c: "Chyba. Kleobulos pocházel z Lindu na Rhodu a se Spartou není spojován jako vojenský velitel."
                 }
             },
             {
-                q: "Který mudrc je autorem slavného výroku 'Všeho s mírou'?",
-                a: "Kleobulos z Lindu",
-                b: "Thalés",
-                c: "Aristotelés",
+                q: "Který slavný výrok je podle Diogena Laertia připisován Kleobulovi?",
+                a: "Nejlepší je uměřenost",
+                b: "Poznej sám sebe",
+                c: "Ničeho příliš",
                 ans: "a",
                 expl: {
-                    a: "Kleobulos patřil mezi sedm mudrců a prosazoval uměřenost (métron ariston) jako základní životní postoj a ctnost.",
-                    b: "Thalés byl mudrcem, ale proslul spíše výrokem 'Poznej sám sebe' (připisovaným i jiným) a svými astronomickými objevy.",
-                    c: "Aristotelés sice koncept míry rozpracoval do celého systému, ale samotný výrok pochází z mnohem starší archaické doby mudrců."
+                    a: "Správně. Diogenés Laertios uvádí Kleobulův výrok <b>Μέτρον ἄριστον – „Nejlepší je uměřenost“</b>. Výrok zdůrazňuje hledání správné míry jako nejlepšího životního postoje. Je významově blízký výroku <b>Μηδὲν ἄγαν – „Ničeho příliš“</b> (<b>Chílón a Solón</b>), ale není totožný: Kleobulos pozitivně zdůrazňuje správnou míru, zatímco „Ničeho příliš“ varuje před překročením míry a krajnostmi.",
+                    b: "Chyba. „Poznej sám sebe“ (Γνῶθι σεαυτόν) Diogenés Laertios výslovně připisuje Thalétovi.",
+                    c: "Chyba. <b>Μηδὲν ἄγαν – „Ničeho příliš“</b> (<b>Chílón a Solón</b>) je významově velmi blízké Kleobulovu „Nejlepší je uměřenost“, ale jde o jiný výrok."
+                }
+            },
+            {
+                q: "Co podle Kleobula znamená správně vychovávat dívky?",
+                a: "Vychovávat je tak, aby byly věkem dívkami, ale rozumem ženami",
+                b: "Nechat je až do dospělosti bez vzdělání, aby si zachovaly dětskou nevinnost",
+                c: "Vychovávat je především k domácím pracím a poslušnosti",
+                ans: "a",
+                expl: {
+                    a: "Správně. Kleobulos říkal, že <b>dívky je třeba provdat tak, aby byly věkem dívkami, ale rozumem ženami</b>. Tím podle tradice naznačoval, že i dívky mají být před svatbou <b>vzdělávány a rozvíjeny po stránce rozumu</b>.",
+                    b: "Chyba. Kleobulos naopak zdůrazňoval význam vzdělávání dívek a jejich rozumové připravenosti.",
+                    c: "Chyba. Výrok zdůrazňuje především <b>vzdělání a rozumovou vyspělost</b>, nikoli pouze domácí poslušnost."
                 }
             },
 
