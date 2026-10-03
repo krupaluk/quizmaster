@@ -292,18 +292,6 @@ window.data_prijimacky_ff_ou = {
                 }
             },
             {
-                q: "Kdo učí o „panta rhei“ (vše plyne)?",
-                a: "Thalés",
-                b: "Hérakleitos",
-                c: "Anaximenés",
-                ans: "b",
-                expl: {
-                    a: "Thalés byl miléťan, první filosof.",
-                    b: "Hérakleitos z Efesu viděl svět jako věčný pohyb a boj protikladů. Vše se mění, nic není trvalé.",
-                    c: "Anaximenés za pralátku považoval vzduch."
-                }
-            },
-            {
                 q: "Kdo zavedl termín „kategorický imperativ“?",
                 a: "Kant",
                 b: "Hegel",
@@ -313,18 +301,6 @@ window.data_prijimacky_ff_ou = {
                     a: "Immanuel Kant tak nazval nepodmíněný morální příkaz: 'Jednej tak, aby se pravidlo tvého jednání mohlo stát obecným zákonem'.",
                     b: "Hegel se soustředil na objektivního ducha.",
                     c: "Spinoza psal o etice geometrickým způsobem, ale imperativ nepoužíval."
-                }
-            },
-            {
-                q: "Aristotelés označuje boha jako:",
-                a: "Nehybného hybatele",
-                b: "Osobního stvořitele",
-                c: "Energie světa",
-                ans: "a",
-                expl: {
-                    a: "Aristotelův bůh je čisté myšlení a první příčina pohybu, která se sama nepohybuje.",
-                    b: "Osobní stvořitel je koncept abrahámovských náboženství.",
-                    c: "Energie je moderní fyzikální pojem."
                 }
             }
             ]
@@ -563,18 +539,6 @@ window.data_prijimacky_ff_ou = {
                     a: "Sémanticky prázdná věta (např. 'Současný král Francie je holohlavý') dává gramatický smysl, ale protože Francie nemá krále, nelze o větě říct, zda je pravdivá nebo nepravdivá (0 nebo 1). Chybí jí reálný předmět, o kterém vypovídá.",
                     b: "Gramaticky chybná věta je nesprávně utvořená, ale může mít jasný význam.",
                     c: "Cizojazyčná věda má význam, jen mu nerozumíme bez překladu; není prázdná."
-                }
-            },
-            {
-                q: "Který filosof učí o „panta rhei“ (vše plyne) a věčné změně?",
-                a: "Hérakleitos",
-                b: "Thalés",
-                c: "Parmenidés",
-                ans: "a",
-                expl: {
-                    a: "Hérakleitos z Efesu věřil, že svět je proces, nikoliv věc. Dynamika, pohyb a napětí mezi protiklady jsou podle něj podstatou existence. Slavný výrok o řece, do které nelze dvakrát vstoupit, symbolizuje právě tuto neustálou proměnu.",
-                    b: "Thalés hledal pralátku (vodu), ale neřešil dynamiku změny tak jako Hérakleitos.",
-                    c: "Parmenidés tvrdil pravý opak – změna je nemožná a je to jen klam našich smyslů."
                 }
             },
             {

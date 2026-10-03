@@ -7,19 +7,64 @@ const quizCategories = {
                 id: "prijimacky_ff_ou",
                 title: "Otázky z přijímaček FF OU",
                 desc: "Oficiální otázky z přijímaček FF OU z období 2018-2024 rozdělené podle témat.",
+                summary: false
             },
-            pocatkyPoVrcholneReckeObdobi: {
-                id: "pocatky_po_vrcholne_recke_obdobi",
-                title: "Od počátků k vrcholu řecké filosofie",
+            klasicka_recka_filosofie: {
+                id: "klasicka_recka_filosofie",
+                title: "Klasická řecká filosofie",
                 desc: "Od mýtů k logu, přes hledání pralátky (arché) až po vrcholné systémy Platóna a Aristotela.",
+                summary: true
             },            
             helenismus: {
-                id: "obdobi_helenismu",
-                title: "Období Helénismu",
+                id: "helenismus",
+                title: "Helénismus",
                 desc: "Filosofická cesta za vnitřní svobodou v rozbouřeném světě skrze praktickou etiku stoiků, epikurejců a skeptiků.",
+                summary: true
+            },
+            stredovek_a_renesance: {
+                id: "stredovek_a_renesance",
+                title: "Středověk a renesance",
+                desc: "Od hledání harmonie mezi vírou a rozumem v křesťanské dogmatice až po znovuzrození člověka a zrod moderní vědy.",
+                summary: true
+            },
+            klasicka_novoveka_filosofie: {
+                id: "klasicka_novoveka_filosofie",
+                title: "Klasická novověká filosofie",
+                desc: "Od racionalismu a empiricismu přes Kanta a osvícenství až po německou idealistickou filosofii.",
+                summary: true
+            },
+            filosofie_19a20st: {
+                id: "filosofie_19a20st",
+                title: "Filozofie 19-20 století",
+                desc: "Od 2 pol. 19 do začátku 20 století (marxismus, iracionalismus, pragmatismus, existencialismus, fil. antropologie, fenomenologie, atd.).",
+                summary: false
+            },
+            povalecna_a_ceska_filozofie: {
+                id: "povalecna_a_ceska_filozofie",
+                title: "Poválečná a česká filozofie",
+                desc: "Poválečná filozofie a česká filozofická tradice od 19. století až po současnost.",
+                summary: false
+            },
+            starorectina: {
+                id: "starorectina",
+                title: "Starořečtina - základy",
+                desc: "Starořecká alfabeta, transkripce a klíčová terminologie.",
+                summary: false
             }
         }
     },
+    Religionistika: {
+        icon: "✝️",
+        description: "Vztah člověka k transcendentní skutečnosti",
+        quizzes: {
+            religionistika_zakladni_prehled: {
+                id: "religionistika_zakladni_prehled",
+                title: "Religionistika - Základní přehled",
+                desc: "Základní informace o náboženství, historii a kultuře.",
+                summary: false
+            }
+        }
+    },    
     Logika: {
         icon: "🧩",
         description: "Ovládněte abecedu myšlení",
@@ -28,27 +73,32 @@ const quizCategories = {
                 id: "dejiny_a_predstavitele",
                 title: "Dějiny logiky",
                 desc: "Klíčová období a představitelé. Od Aristotelových sylogismů přes Leibnizův sen o univerzálním jazyce až po Gödelovy věty.",
+                summary: false
             },
             teorieLogiky: {
                 id: "teorie_logiky",
                 title: "Teorie Logiky",
                 desc: "Od pojmů a definic přes logické operace až po úsudky, argumentaci a odhalování klamů.",
-            },            
-            formalniLogika: {
-                id: "formalni_logika",
-                title: "Formální Logika",
+                summary: false
+            },
+            logickeHadanky: {
+                id: "logicke_hadanky",
+                title: "Logické hádanky",
+                desc: "První krok k řešení logických úloh formou přirozeného jazyka. Od sylogismů přes logické spojky, klamy, negace až po analytické hádanky a formalizaci logiky.",
+                summary: false
+            },
+            vyrokovaLogika: {
+                id: "vyrokova_logika",
+                title: "Výroková Logika",
                 desc: "Naučíte se číst logické zápisy (¬, ∧, ∨, →), používat De Morganovy zákony a provádět ekvivalentní úpravy.",
+                summary: false
             },
             predikatovaLogika: {
                 id: "predikatova_logika",
                 title: "Predikátová Logika",
                 desc: "Pronikněte do tajů kvantifikátorů (∀, ∃), pochopte kritické rozdíly v jejich pořadí a naučte se precizně negovat i ty nejsložitější věty.",
+                summary: false
             },
-            logickeHadanky: {
-                id: "logicke_hadanky",
-                title: "Logické hádanky",
-                desc: "Ovládněte umění neprůstřelné argumentace, odhalte logické klamy a vyřešte složité situace pomocí čisté dedukce.",
-            }
         }
     },
     Prvouka: {
@@ -59,14 +109,51 @@ const quizCategories = {
                 id: "zvirata_na_statku",
                 title: "Zvířata na statku",
                 desc: "Poznejte zvířátka ze statku, zjistěte, jak se jmenují jejich mláďata, co dobrého papají a jaké zajímavé zvuky vydávají!",
+                summary: false
             }
         }
-    }
+    },
+    vseobecny_prehled: {
+        icon: "📚",
+        description: "Základní znalosti o České republice",
+        quizzes: {
+            obcansky_zaklad: {
+                id: "obcansky_zaklad",
+                title: "Občanský základ",
+                desc: "Základy občanské společnosti, právního a politického systému České republiky.",
+                summary: false
+            },
+            zakladni_geografie_soc_kultura: {
+                id: "zakladni_geografie_soc_kultura",
+                title: "Geografický a sociálně-kulturní základ",
+                desc: "Poloha ČR, přírodní poměry, kraje, města, obyvatelstvo, ekonomika a mezinárodní souvislosti.",
+                summary: false
+            },
+            zakladni_historie_kultura: {
+                id: "zakladni_historie_kultura",
+                title: "Základní historické a kulturní informace",
+                desc: "Historie českých zemí, evropská integrace, kulturní památky a tradiční česká kultura.",
+                summary: false
+            }
+        }
+    },
+    Debug: {
+        icon: "🔧",
+        description: "Debug mode pro testování aplikace",
+        quizzes: {
+            debug3q: {
+                id: "debug_3q",
+                title: "Debug 3 otázky",
+                desc: "Testovací kvíz se 3 jednoduchými otázkami pro ladění aplikace",
+                summary: false
+            },
+            debug5q: {
+                id: "debug_5q",
+                title: "Debug 5 otázek",
+                desc: "Testovací kvíz se 5 jednoduchými otázkami pro ladění aplikace",
+                summary: false
+            }
+        }
+    }    
 };
-
-// Helper function to generate file path from category and id
-function generateQuizFilePath(category, quizId) {
-    const categoryPrefix = category.toLowerCase();
-    return `quizdata/${categoryPrefix}/${quizId}.js`;
-}
 

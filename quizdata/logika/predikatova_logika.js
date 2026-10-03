@@ -143,7 +143,7 @@ window.data_predikatova_logika = {
                 ans: "b",
                 expl: {
                     a: "To by se zapsalo jako ∃x (P(x) ∧ Q(x)).",
-                    b: "Kvantifikátory mají svůj 'dosah'. Zde první ∃x končí u první závorky. Říkáme tedy jen, že někdo má P a někdo (kdokoliv) má Q. Nemusí jít o tutéž osobu.",
+                    b: "Kvantifikátory mají svůj 'dosah'. Zde první ∃x končí u prvé závorky. Říkáme tedy jen, že někdo má P a někdo (kdokoliv) má Q. Nemusí jít o tutéž osobu.",
                     c: "To by vyžadovalo všeobecný kvantifikátor a disjunkci."
                 }
             },
@@ -160,13 +160,13 @@ window.data_predikatova_logika = {
                 }
             },
             {
-                q: "Jak zní negace věty 'Někdo v této místnosti lže'?",
+                q: "Jak zní negace věty: 'Někdo v této místnosti lže'?",
                 a: "Nikdo v této místnosti nelže",
                 b: "Všichni v této místnosti nelžou",
                 c: "Obě možnosti jsou v podstatě správně",
                 ans: "c",
                 expl: {
-                    a: "Původní věta je ∃x (M(x) ∧ L(x)). Negací je ∀x ¬(M(x) ∧ L(x)), což lze upravit na ∀x (M(x) → ¬L(x)). Česky: 'Pro každého v místnosti platí, že nelže'.",
+                    a: "Původní věta je ∃x (M(x) ∧ L(x)). Negace změní ∀ na ∃, ∃ na ∀ a zneguje vnitřek. Výsledek: Existuje x, které je studentem a pro všechna y platí, že ho nemá v oblibě.",
                     b: "To je jen jiný způsob, jak říct totéž co v možnosti A.",
                     c: "V přirozeném jazyce 'nikdo nelže' a 'všichni nelžou' vyjadřují stejný fakt, který je negací 'někdo lže'."
                 }
@@ -383,9 +383,9 @@ window.data_predikatova_logika = {
                     a: "Tento zápis říká: 'Pro každé x platí, že pokud je to člověk, pak k němu existuje aspoň jedno y, které toto x miluje'. Každý má tedy v univerzu aspoň jeden objekt své lásky.",
                     b: "To by vyžadovalo prohození kvantifikátorů: ∃y ∀x (P(x) → Miluje(x, y)).",
                     c: "To by se zapsalo jako ∀x (P(x) → Miluje(x, x))."
-                }
+                },
             },
-            {
+                {
                 q: "Jak zní negace věty 'Existuje někdo (∃x), koho nikdo (∀y) nezná (¬Z(y, x))'?",
                 a: "Všichni lidé někoho znají.",
                 b: "Každého člověka někdo zná.",
@@ -568,9 +568,9 @@ window.data_predikatova_logika = {
                     a: "Tento zápis definuje funkcionalitu (jednoznačnost). Říká: 'Pokud pro nějaké x platí, že y je jeho otcem a zároveň z je jeho otcem, pak y a z musí být tatáž osoba'. Tím vylučujeme existenci dvou různých otců.",
                     b: "Toto znamená 'Každý má alespoň jednoho otce', což neřeší horní limit (nejvýše jednoho).",
                     c: "Toto by znamenalo 'Každý je svým vlastním otcem'."
-                }
+                },
             },
-            {
+                {
                 q: "Co vyjadřuje formule: '∃x (C(x) ∧ ∀y (C(y) ∧ x ≠ y → Starší(x, y)))'?",
                 a: "Všichni lidé (C) jsou stejně staří.",
                 b: "Existuje nejstarší člověk (ten, který je starší než všichni ostatní lidé).",

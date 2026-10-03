@@ -497,7 +497,7 @@
             background: var(--ios-card); 
             border-radius: 25px; 
             padding: 25px; 
-            padding-top: 18px;
+            padding-top: 12px;
             position: relative; 
             overflow: hidden; 
             min-height: 200px; 
@@ -535,6 +535,7 @@
         }
         .ans-group { 
             margin-bottom: 12px; 
+            position: relative;
         }
         .sub-expl { 
             max-height: 0; 
@@ -548,10 +549,14 @@
             background: var(--neutral-bg); 
         }
         .sub-expl.show { 
-            max-height: 400px; 
-            margin-top: 10px; 
-            margin-bottom: 12px; 
-            padding: 12px 15px; 
+            max-height: 500px;
+            padding: 12px 15px;
+            padding-bottom: 28px;
+            margin-top: 8px;
+            margin-bottom: 5px;
+            border-radius: 0 12px 12px 0;
+        }
+        .sub-expl.show { 
             border-left-color: var(--neutral-border); 
         }
         .sub-expl.highlight-correct { 
@@ -624,6 +629,31 @@
             background: linear-gradient(135deg, #ffb300 0%, #f57c00 100%);
         }
         
+        /* Settings button style */
+        .exit-btn-settings {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 76px;
+            height: 52px;
+            background: linear-gradient(135deg, #8e8e93 0%, #636366 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 35px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            line-height: 1;
+            padding: 2px 0 0 0;
+            gap: 3px;
+            box-shadow: 0 2px 8px rgba(99, 99, 102, 0.3);
+        }
+        .exit-btn-settings:active {
+            transform: scale(0.92);
+            background: linear-gradient(135deg, #636366 0%, #48484a 100%);
+        }
+        
         /* Category Headers */
         .category-container {
             margin-bottom: 8px;
@@ -693,10 +723,117 @@
             margin-bottom: 6px;
             border-radius: 12px;
             cursor: pointer;
+            position: relative;
+            overflow: visible;
         }
         .hub-item input {
             margin-right: 15px;
             transform: scale(1.5);
+        }
+        
+        /* Quiz Badges - positioned at top right */
+        .quiz-badges {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 4px;
+            max-width: 120px;
+            z-index: 10;
+        }
+        .quiz-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            opacity: 0.8;
+        }
+        .quiz-badges .badge.flawless {
+            background: var(--border-green);
+        }
+        
+        /* Progress bar at bottom of hub item */
+        .hub-item-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%);
+            border-radius: 0 0 0 12px;
+            transition: width 0.3s ease;
+        }
+        .quiz-badges .badge.started {
+            background: var(--ios-gray);
+        }
+        
+        /* Hub Quiz Badges */
+        .quiz-badges {
+            align-items: center !important;
+        }
+        .quiz-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .quiz-badges .badge.flawless {
+            background: transparent !important;
+            color: #000;
+            border: none;
+            box-shadow: none;
+            font-size: 24px !important;
+            padding: 0;
+            line-height: 1;
+        }
+        .quiz-badges span.badge:not(.flawless) {
+            font-size: 12px !important;
+            padding: 4px 10px !important;
+            background: var(--ios-blue) !important;
+            border-radius: 12px !important;
+            align-self: center !important;
+        }
+        
+        /* Setup Completion Badges */
+        #setup-completion-badges {
+            align-items: center !important;
+        }
+        #setup-completion-badges .badge {
+            background: var(--ios-blue);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px !important;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            white-space: nowrap;
+            line-height: 1;
+        }
+        #setup-completion-badges .badge.flawless {
+            background: transparent !important;
+            color: #000;
+            border: none;
+            box-shadow: none;
+            font-size: 28px !important;
+            padding: 0;
+            line-height: 1;
+        }
+        #setup-completion-badges span.badge:not(.flawless) {
+            font-size: 12px !important;
+            padding: 4px 10px !important;
+            background: var(--ios-blue) !important;
+            border-radius: 12px !important;
+            align-self: center !important;
         }
         
         @keyframes slideDown {
@@ -776,6 +913,25 @@
         .group-filter.active .group-filter-count {
             background: rgba(255,255,255,0.3);
         }
+        .group-filter.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            background: #e5e5ea;
+            border-color: #d1d1d6;
+            pointer-events: none;
+        }
+        .group-filter.disabled .group-filter-count {
+            background: #d1d1d6;
+            color: #888;
+        }
+        .grade-display {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin: 15px 0;
+            color: var(--ios-text);
+            line-height: 1;
+        }
         .hidden { 
             display: none !important; 
         }
@@ -813,6 +969,171 @@
             40% { transform: translate(-50%, -50%) scale(1); }
             100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
         }
+        
+        /* ===== WIKI BUTTON & OVERLAY ===== */
+        .wiki-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            position: absolute;
+            bottom: -7px;
+            right: 0px;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #ffd700;
+            border-radius: 16px;
+            color: #b8860b;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            z-index: 10;
+        }
+        .wiki-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            background: #fffdf5;
+        }
+        .wiki-btn:active {
+            transform: scale(0.95);
+        }
+        .wiki-btn .lightbulb {
+            font-size: 14px;
+        }
+        .wiki-btn .text {
+            font-size: 12px;
+        }
+        
+        /* Wiki Overlay Modal */
+        .wiki-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wiki-overlay-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+        }
+        .wiki-overlay-content {
+            position: relative;
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            max-width: 90%;
+            width: 440px;
+            max-height: 95vh;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+            animation: wikiSlideIn 0.35s ease;
+        }
+        @keyframes wikiSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .wiki-overlay-header {
+            background: linear-gradient(135deg, #ffd700 0%, #ffb700 100%);
+            padding: 20px 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .wiki-overlay-header .icon {
+            font-size: 28px;
+        }
+        .wiki-overlay-header .title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+        .wiki-overlay-body {
+            padding: 25px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #444;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+            max-height: 65vh;
+        }
+        .wiki-overlay-body h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333;
+            margin: 20px 0 10px 0;
+        }
+        .wiki-overlay-body ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        .wiki-overlay-body li {
+            margin: 6px 0;
+        }
+        .wiki-overlay-body strong {
+            color: #222;
+        }
+        
+        /* Wiki Table Styles - reusable classes for wiki.js */
+        .wiki-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        .wiki-table th {
+            background: #fff8dc;
+            padding: 8px;
+            border: 1px solid #ffd700;
+            text-align: left;
+        }
+        .wiki-table td {
+            padding: 6px 8px;
+            border: 1px solid #eee;
+        }
+        .wiki-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+        .wiki-table .w-25 { width: 25%; }
+        .wiki-table .w-35 { width: 35%; }
+        .wiki-table .w-40 { width: 40%; }
+        .wiki-overlay-close {
+            display: block;
+            width: 100%;
+            padding: 16px 25px;
+            background: #f8f8f8;
+            border: none;
+            border-top: 1px solid #e5e5ea;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--ios-blue);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .wiki-overlay-close:hover {
+            background: #f0f0f0;
+        }
+        .wiki-overlay-close:active {
+            background: #e5e5ea;
+        }
     </style>
 </head>
 <body>
@@ -825,6 +1146,65 @@
         <div class="stats-group" id="header-right-slot"></div>
     </div>
 
+    <!-- Advanced Options Modal -->
+    <div id="advanced-options-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeAdvancedOptionsModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">⚙️</span>
+                <h2 class="modal-title">Pokročilé možnosti</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Správa postupu a statistik</p>
+            </div>
+            <div class="modal-body">
+                <div id="advanced-options-stats" style="padding: 12px; background: var(--ios-bg); border-radius: 12px; margin-bottom: 15px; font-size: 14px;">
+                    <!-- Stats will be inserted here -->
+                </div>
+                
+                <!-- Manual points editor -->
+                <div style="padding: 12px; background: #fff9e6; border-radius: 12px; margin-bottom: 15px; border: 1px solid #ffe0b2;">
+                    <div style="font-weight: 600; margin-bottom: 10px; font-size: 14px;">✏️ Upravit body</div>
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-end;">
+                        <div style="flex: 1;">
+                            <label style="font-size: 12px; color: var(--ios-gray); display: block; margin-bottom: 4px;">Počet bodů</label>
+                            <input type="number" id="manual-points" min="0" value="0" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                        </div>
+                    </div>
+                    <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; padding: 10px; border-radius: 8px; border: none; text-align: center; width: 100%;" onclick="saveManualPoints()">
+                        💾 Uložit body
+                    </button>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <button class="btn" style="background: #fff; color: #666; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ddd; text-align: center;" onclick="resetQuizProgress(); closeAdvancedOptionsModal();">
+                        🗑️ Vyčistit postup
+                    </button>
+                    <button class="btn" style="background: #fff; color: #ff3b30; font-size: 14px; padding: 14px; border-radius: 10px; border: 1px solid #ff3b30; text-align: center;" onclick="resetAllPoints(); closeAdvancedOptionsModal();">
+                        🔄 Vynulovat všechny body
+                    </button>
+                </div>
+            </div>
+            <button class="modal-close-btn" onclick="closeAdvancedOptionsModal()">Zavřít</button>
+        </div>
+    </div>
+
+    <!-- Related Topics Modal -->
+    <div id="related-topics-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeRelatedTopicsModal()"></div>
+        <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+            <div class="modal-header">
+                <span class="modal-icon">💡</span>
+                <h2 class="modal-title">Témata [Wiki]</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Prozkoumej všechny informace k tomuto kvízu</p>
+            </div>
+            <div class="modal-body">
+                <div id="related-topics-list" style="display: flex; flex-direction: column; gap: 10px;">
+                    <!-- Topics will be inserted here -->
+                </div>
+            </div>
+            <button class="modal-close-btn" onclick="closeRelatedTopicsModal()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- Info Modal -->
     <div id="info-modal" class="modal hidden">
         <div class="modal-backdrop" onclick="closeInfoModal()"></div>
@@ -832,7 +1212,7 @@
             <div class="modal-header">
                 <span class="modal-icon">📚</span>
                 <h2 class="modal-title">QuizMaster</h2>
-                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.2 | 29. 3. 2026</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Verze 2.6 | 6. 4. 2026</p>
             </div>
             <div class="modal-body">
                 <p><strong>O aplikaci</strong></p>
@@ -840,10 +1220,13 @@
                 
                 <p><strong>Benefity</strong></p>
                 <ul>
-                    <li>⚡ Rychlá zpětná vazba s okamžitým vysvětlením</li>
-                    <li>🎯 Fokus na slabá místa díky statistikám</li>
+                    <li>⚡ Efektivní způsob učení</li>
+                    <li>🎯 Fokus na klíčové znalosti</li>
+                    <li>💾 Ukládání mezivýsledků (localStorage)</li>
                     <li>📚 Flexibilní učení kdykoliv a kdekoliv</li>
-                    <li>🔄 Procvičování chybných otázek dokud nejsou zvládnuty</li>
+                    <li>🔄 Procvičování chybných otázek</li>
+                    <li>🏆 Bodování za dokončení kvízů</li>
+                    <li>💡 Rozšiřující info k vybraným otázkám</li>
                 </ul>
                 
                 <p><strong>Autor</strong></p>
@@ -853,11 +1236,54 @@
         </div>
     </div>
 
+    <!-- Category Filter Settings Modal -->
+    <div id="category-settings-modal" class="modal hidden">
+        <div class="modal-backdrop" onclick="closeCategorySettingsModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="modal-icon">⚙️</span>
+                <h2 class="modal-title">Nastavení zobrazení</h2>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #888;">Vyberte okruhy k zobrazení</p>
+            </div>
+            <div class="modal-body">
+                <div id="category-filters-list" style="display: flex; flex-direction: column; gap: 12px;">
+                    <!-- Category checkboxes will be inserted here -->
+                </div>
+                <p style="margin-top: 15px; font-size: 12px; color: var(--ios-gray); text-align: center;">
+                    Změny se uloží automaticky
+                </p>
+            </div>
+            <button class="modal-close-btn" onclick="closeCategorySettingsModal()">Zavřít</button>
+        </div>
+    </div>
+
+    <!-- Wiki Overlay -->
+    <div id="wiki-overlay" class="wiki-overlay hidden">
+        <div class="wiki-overlay-backdrop" onclick="closeWikiOverlay()"></div>
+        <div class="wiki-overlay-content">
+            <div class="wiki-overlay-header">
+                <span class="icon">💡</span>
+                <h3 class="title" id="wiki-title">víš, že...</h3>
+            </div>
+            <div class="wiki-overlay-nav" style="display: flex; justify-content: space-between; gap: 10px; padding: 10px 20px; background: #fff9e6; border-bottom: 1px solid #ffe0b2;">
+                <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; border: none; flex: 1;" onclick="navigateWikiTopic('prev')">
+                    ← Předchozí
+                </button>
+                <button class="btn" style="background: var(--ios-blue); color: white; font-size: 13px; font-weight: 600; padding: 10px 16px; border-radius: 10px; border: none; flex: 1;" onclick="navigateWikiTopic('next')">
+                    Další →
+                </button>
+            </div>
+            <div class="wiki-overlay-body" id="wiki-body" style="flex: 1; overflow-y: auto;">
+                <!-- Wiki content will be inserted here -->
+            </div>
+            <button class="wiki-overlay-close" style="background: var(--ios-blue); color: white; font-weight: 600;" onclick="closeWikiOverlay()">Zavřít</button>
+        </div>
+    </div>
+
     <!-- HUB -->
     <div id="sc-hub" class="screen">
         <div class="card">
-            <div id="hub-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
-                        <h2 style="font-size: 26px; text-align: center;">Předměty & okruhy</h2>
+            <h2 style="font-size: 26px; text-align: center; margin-bottom: 20px;">Předměty & okruhy</h2>
             <div id="hub-list" style="margin-bottom: 20px;"></div>
         </div>
     </div>
@@ -865,8 +1291,23 @@
     <!-- SETUP -->
     <div id="sc-setup" class="screen hidden">
         <div class="card">
-            <div id="setup-selected-topics-summary" class="quiz-topic-info"><b>Vybrané okruhy</b> → nic nevybráno</div>
-            <h2 style="font-size: 26px; text-align: center;">Nastavení kvízu</h2>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h2 id="setup-screen-title" style="font-size: 26px; text-align: left; margin: 0; flex: 1;">Nastavení kvízu</h2>
+                <div id="setup-completion-badges" style="display: flex; gap: 6px; flex-shrink: 0;"></div>
+            </div>
+            
+            <!-- Progress bar under title -->
+            <div id="quiz-progress-section" class="setup-section" style="display: none; margin-top: 15px;">
+                <div id="quiz-progress-info" style="padding: 12px; background: var(--ios-bg); border-radius: 12px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                        <span style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">📊 Hotovo</span>
+                        <span id="progress-percent" style="font-size: 13px; color: var(--ios-blue); font-weight: 600;">0%</span>
+                    </div>
+                    <div style="width: 100%; height: 12px; background: #e5e5ea; border-radius: 6px; overflow: hidden;">
+                        <div id="progress-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--ios-blue) 0%, var(--border-green) 100%); border-radius: 6px; transition: width 0.3s ease;"></div>
+                    </div>
+                </div>
+            </div>
             
             <!-- Quiz Options -->
             <div class="setup-section">
@@ -881,7 +1322,7 @@
                         <span id="slider-value">10</span> otázek
                     </span>
                 </div>
-                <input type="range" id="question-count-slider" class="question-slider-inline" min="5" max="50" value="10" step="1">
+                <input type="range" id="question-count-slider" class="question-slider-inline" min="1" max="50" value="10" step="1">
             </div>
             
             <div class="shuffle-options-row">
@@ -913,9 +1354,25 @@
                     </div>
                 </div>
             </div>
-        </div>
+            
+            <!-- Summary button at bottom -->
+            <div id="wiki-topics-section" class="setup-section" style="margin-top: 20px; display: none;">
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openQuizSummary()">
+                    💡 Souhrn
+                </button>
+            </div>
+            
+            <!-- Advanced Options button at bottom -->
+            <div class="setup-section" style="margin-top: 10px;">
+                <button class="btn" style="background: var(--ios-bg); color: var(--ios-blue); font-size: 13px; padding: 12px; border-radius: 10px; border: 1px solid var(--ios-blue); text-align: center; width: 100%;" onclick="openAdvancedOptionsModal()">
+                    ⚙️ Pokročilé možnosti
+                </button>
+            </div>
+            
+            </div>
+            
     </div>
-
+    
     <!-- QUIZ -->
     <div id="sc-quiz" class="screen hidden">
         <div class="card">
@@ -932,20 +1389,22 @@
 
     <!-- RESULTS -->
     <div id="sc-res" class="screen hidden">
-        <div class="card">
-            <h2 style="text-align: center;">Výsledek</h2>
+        <div class="card" style="padding: 30px 20px;">
+            <h2 style="text-align: center; font-size: 24px; font-weight: 700; color: var(--ios-dark); margin-bottom: 5px;">Výsledek</h2>
             <div id="res-grade" class="grade-display"></div>
-            <p id="res-stat" style="font-size: 19px; text-align: center;"></p>
+            <p id="res-stat" style="font-size: 17px; text-align: center; color: var(--ios-gray); margin: 10px 0;"></p>
             <div id="res-retry" class="hidden">
-                <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin-bottom: 15px;"></p>
-                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center" onclick="startErrorLoop()">Opravit chyby</button>
+                <p id="res-retry-msg" style="color: var(--border-red); font-weight: 600; text-align: center; margin: 15px 0; padding: 12px; background: rgba(255,59,48,0.08); border-radius: 10px;"></p>
+                <button class="btn" style="background: var(--ios-blue); color:white; text-align:center; width: 100%; padding: 14px; border-radius: 12px; font-size: 16px; font-weight: 600;" onclick="startErrorLoop()">Opravit chyby</button>
             </div>
-            <button class="btn" style="width: 100%; margin-top: 20px; padding: 18px;" onclick="goBackToSetup()">Zpět do nastavení</button>
+            <button class="btn" style="width: 100%; margin-top: 20px; padding: 16px; background: var(--ios-bg); color: var(--ios-blue); border-radius: 12px; font-size: 16px; font-weight: 600; border: 1px solid var(--ios-blue);" onclick="goBackToSetup()">Zpět do nastavení</button>
         </div>
     </div>
 </div>
 
 <script src="quizMaster_config.js"></script>
+<script src="quizdata/summary/summary_stredovek_a_renesance.js"></script>
+<script src="quizdata/summary/summary_helenismus.js"></script>
 
 <script>
 // ===== APP STATE & CONFIGURATION =====
@@ -963,6 +1422,309 @@ const AppState = {
     savedQuizSelections: [],
     savedQuizSettings: null,
     selectedQuizzes: []
+};
+
+// ===== USER DATA MANAGER (LocalStorage) =====
+const UserDataManager = {
+    STORAGE_KEY: 'quizmaster_userdata_v1',
+    
+    // Initialize or get existing data
+    getData() {
+        try {
+            const data = localStorage.getItem(this.STORAGE_KEY);
+            if (data) {
+                return JSON.parse(data);
+            }
+        } catch (e) {
+            console.error('Error reading from LocalStorage:', e);
+        }
+        return this.getDefaultData();
+    },
+    
+    getDefaultData() {
+        return {
+            quizzes: {}, // quizId -> quiz data
+            version: 1
+        };
+    },
+    
+    saveData(data) {
+        try {
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+        } catch (e) {
+            console.error('Error saving to LocalStorage:', e);
+        }
+    },
+    
+    // Get quiz data or initialize if not exists
+    getQuizData(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+            this.saveData(data);
+        }
+        return data.quizzes[quizId];
+    },
+    
+    getDefaultQuizData() {
+        return {
+            started: false,                    // Whether user has launched this quiz at least once
+            completed: false,                  // Whether quiz is marked as 'hotovo'
+            points: 0,                         // Total points (1 for completion with errors, 3 for flawless)
+            hasWikiTopics: false,              // Whether quiz has questions with wiki topics
+            answeredQuestions: {},             // questionKey -> {correct: boolean, timestamp: number}
+            wrongAnswers: [],                  // Array of question keys answered wrong (current attempt)
+            allTimeWrongAnswers: [],           // Array of question keys answered wrong EVER (for flawless tracking)
+            lastSession: null                  // Last time quiz was accessed
+        };
+    },
+    
+    // Mark quiz as started (when user first launches it)
+    markQuizStarted(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        if (!data.quizzes[quizId].started) {
+            data.quizzes[quizId].started = true;
+        }
+        data.quizzes[quizId].lastSession = Date.now();
+        this.saveData(data);
+    },
+    
+    // Save question answer
+    saveQuestionAnswer(quizId, questionKey, isCorrect) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        
+        // Store answer
+        data.quizzes[quizId].answeredQuestions[questionKey] = {
+            correct: isCorrect,
+            timestamp: Date.now()
+        };
+        
+        // Track wrong answers for current attempt
+        if (!isCorrect) {
+            if (!data.quizzes[quizId].wrongAnswers.includes(questionKey)) {
+                data.quizzes[quizId].wrongAnswers.push(questionKey);
+            }
+            // Track wrong answers PERMANENTLY for flawless completion tracking
+            if (!data.quizzes[quizId].allTimeWrongAnswers.includes(questionKey)) {
+                data.quizzes[quizId].allTimeWrongAnswers.push(questionKey);
+            }
+        } else {
+            // Remove from current wrong answers only (not from allTimeWrongAnswers)
+            const idx = data.quizzes[quizId].wrongAnswers.indexOf(questionKey);
+            if (idx > -1) {
+                data.quizzes[quizId].wrongAnswers.splice(idx, 1);
+            }
+        }
+        
+        this.saveData(data);
+    },
+    
+    // Check if question has been answered
+    isQuestionAnswered(quizId, questionKey) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.answeredQuestions[questionKey] !== undefined;
+    },
+    
+    // Get answered questions for a quiz
+    getAnsweredQuestions(quizId) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.answeredQuestions;
+    },
+    
+    // Mark quiz as successfully completed
+    // completionType: 'flawless' = bezchybné (3 body), 'regular' = s opravenými chybami (1 bod)
+    markQuizCompleted(quizId, completionType = 'none') {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        
+        // Add points based on completion type
+        if (completionType === 'flawless') {
+            data.quizzes[quizId].completed = true;
+            data.quizzes[quizId].points += 3;  // 3 body za bezchybné dokončení
+            
+            // Clear progress only after FULL completion (all questions answered)
+            // preservePoints = true to keep the points we just added
+            this.clearQuizProgress(quizId, true);
+        } else if (completionType === 'regular') {
+            data.quizzes[quizId].completed = true;
+            data.quizzes[quizId].points += 1;  // 1 bod za dokončení s chybou
+            
+            // Clear progress after regular completion too
+            // preservePoints = true to keep the points we just added
+            this.clearQuizProgress(quizId, true);
+        }
+        
+        this.saveData(data);
+        return {
+            points: data.quizzes[quizId].points
+        };
+    },
+    
+    // Clear quiz progress (answered questions, wrong answers)
+    // preservePoints = true: keeps points and completed status
+    clearQuizProgress(quizId, preservePoints = true) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        const points = data.quizzes[quizId].points;
+        const completed = data.quizzes[quizId].completed;
+        const started = data.quizzes[quizId].started;
+        
+        // Reset to default but preserve points if requested
+        data.quizzes[quizId] = this.getDefaultQuizData();
+        
+        if (preservePoints) {
+            data.quizzes[quizId].points = points;
+            data.quizzes[quizId].completed = completed;
+            data.quizzes[quizId].started = started;
+        }
+        
+        // Clear wrong answers on manual reset - user gets fresh start
+        data.quizzes[quizId].wrongAnswers = [];
+        data.quizzes[quizId].allTimeWrongAnswers = [];
+        
+        this.saveData(data);
+    },
+    
+    // Set total questions count for a quiz (stored for progress calculation)
+    setQuizTotalQuestions(quizId, totalCount) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) {
+            data.quizzes[quizId] = this.getDefaultQuizData();
+        }
+        data.quizzes[quizId].totalQuestions = totalCount;
+        this.saveData(data);
+    },
+    
+    // Get total questions count for a quiz
+    getQuizTotalQuestions(quizId) {
+        const quizData = this.getQuizData(quizId);
+        return quizData.totalQuestions || 0;
+    },
+    // Reset all points to zero
+    resetPoints(quizId) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        data.quizzes[quizId].points = 0;
+        data.quizzes[quizId].completed = false;
+        
+        this.saveData(data);
+    },
+    
+    // Check if quiz has wiki topics and save it to user data
+    checkAndSaveWikiStatus(quizId, questions) {
+        const data = this.getData();
+        if (!data.quizzes[quizId]) return;
+        
+        const hasWiki = questions.some(question => question.wiki && question.wiki.length >= 2);
+        if (hasWiki !== data.quizzes[quizId].hasWikiTopics) {
+            data.quizzes[quizId].hasWikiTopics = hasWiki;
+            this.saveData(data);
+        }
+        return hasWiki;
+    },
+    
+    // Get quiz statistics
+    getQuizStats(quizId) {
+        const quizData = this.getQuizData(quizId);
+        const answeredKeys = Object.keys(quizData.answeredQuestions);
+        const correctCount = answeredKeys.filter(k => quizData.answeredQuestions[k].correct).length;
+        const wrongCount = answeredKeys.filter(k => !quizData.answeredQuestions[k].correct).length;
+        
+        return {
+            started: quizData.started,
+            completed: quizData.completed,
+            points: quizData.points || 0,
+            hasWikiTopics: quizData.hasWikiTopics || false,
+            totalAnswered: answeredKeys.length,
+            correctCount: correctCount,
+            wrongCount: wrongCount,
+            remainingInSession: AppState.activeQ ? AppState.activeQ.length - AppState.cur : 0
+        };
+    },
+    
+    // Export all data as JSON
+    exportData() {
+        return JSON.stringify(this.getData(), null, 2);
+    },
+    
+    // Import data from JSON
+    importData(jsonString) {
+        try {
+            const data = JSON.parse(jsonString);
+            if (data && data.quizzes) {
+                this.saveData(data);
+                return true;
+            }
+        } catch (e) {
+            console.error('Error importing data:', e);
+        }
+        return false;
+    },
+    
+    // Save last expanded category
+    setLastExpandedCategory(categoryName) {
+        const data = this.getData();
+        data.lastExpandedCategory = categoryName;
+        this.saveData(data);
+    },
+    
+    // Get last expanded category
+    getLastExpandedCategory() {
+        const data = this.getData();
+        return data.lastExpandedCategory || null;
+    },
+    
+    // Save category filter settings
+    setCategoryFilter(categoryName, isVisible) {
+        const data = this.getData();
+        if (!data.categoryFilters) {
+            data.categoryFilters = {};
+        }
+        data.categoryFilters[categoryName] = isVisible;
+        this.saveData(data);
+    },
+    
+    // Get all category filter settings
+    getCategoryFilters() {
+        const data = this.getData();
+        return data.categoryFilters || null;
+    },
+    
+    // Initialize default category filters (all true except Debug)
+    initDefaultCategoryFilters() {
+        const data = this.getData();
+        if (!data.categoryFilters) {
+            data.categoryFilters = {};
+            // Default: all categories visible except Debug
+            if (typeof quizCategories !== 'undefined') {
+                Object.keys(quizCategories).forEach(category => {
+                    data.categoryFilters[category] = category !== 'Debug';
+                });
+            }
+            this.saveData(data);
+        }
+        return data.categoryFilters;
+    },
+    
+    // Check if a category should be visible
+    isCategoryVisible(categoryName) {
+        const filters = this.getCategoryFilters();
+        if (!filters) {
+            // Default: all visible except Debug
+            return categoryName !== 'Debug';
+        }
+        return filters[categoryName] !== false; // Default to true if not set
+    },
 };
 
 // ===== HELPER FUNCTIONS =====
@@ -1019,7 +1781,7 @@ function updateShuffleModeText() {
             slider: '#34c759',
             icon: '📑',
             iconClass: 'chapters-icon',
-            text: 'po 1 otázce z kapitoly',
+            text: 'cyklicky z kapitol',
             textClass: 'green-text'
         },
         unchecked: {
@@ -1039,6 +1801,21 @@ document.addEventListener('DOMContentLoaded', function() {
     updateShuffleText();
     updateShuffleModeText();
 });
+
+// Helper function to get quiz ID by title
+function getQuizIdByTitle(title) {
+    if (typeof quizCategories === 'undefined') return null;
+    
+    for (const category of Object.keys(quizCategories)) {
+        for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+            const quiz = quizCategories[category].quizzes[quizKey];
+            if (quiz.title === title) {
+                return quiz.id;
+            }
+        }
+    }
+    return null;
+}
 
 // ===== UI COMPONENTS =====
 const UI = {
@@ -1062,6 +1839,23 @@ const UI = {
         leftSlot.innerHTML = '';
         rightSlot.innerHTML = '';
         
+        // Check for last expanded category and expand it
+        const lastExpanded = UserDataManager.getLastExpandedCategory();
+        if (lastExpanded) {
+            setTimeout(() => {
+                const containers = document.querySelectorAll('.category-container');
+                containers.forEach(container => {
+                    if (container.dataset.categoryName === lastExpanded) {
+                        const quizzesContainer = container.querySelector('.quizzes-container');
+                        const toggle = container.querySelector('.category-toggle');
+                        if (quizzesContainer) quizzesContainer.style.display = 'block';
+                        if (toggle) toggle.textContent = '▲';
+                        container.classList.remove('collapsed');
+                    }
+                });
+            }, 50);
+        }
+        
         switch(screenId) {
             case 'sc-hub':
                 leftSlot.innerHTML = `
@@ -1069,9 +1863,10 @@ const UI = {
                         <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></span>
                     </button>
                 `;
+                // Settings button on the right side of hub
                 rightSlot.innerHTML = `
-                    <button id="btn-continue-hub" class="exit-btn-blue" onclick="loadAndGoToSetup()">
-                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span>
+                    <button id="btn-settings" class="exit-btn-settings" onclick="openCategorySettingsModal()">
+                        <span style="display: flex; align-items: center; justify-content: center; height: 100%; margin-top: -2px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg></span>
                     </button>
                 `;
                 break;
@@ -1169,6 +1964,16 @@ const QuizEngine = {
     },
     
     start() {
+        // Get the selected quiz ID from AppState
+        const selectedQuiz = AppState.selectedQuizzes && AppState.selectedQuizzes[0];
+        const quizId = selectedQuiz ? getQuizIdByTitle(selectedQuiz.title) : null;
+        AppState.currentQuizId = quizId;
+        
+        // Mark quiz as started in LocalStorage
+        if (quizId) {
+            UserDataManager.markQuizStarted(quizId);
+        }
+        
         // Save current settings before starting
         const questionCount = parseInt(document.getElementById('question-count-slider')?.value || 10);
         const shuffleEnabled = document.getElementById('chk-shuffle').checked;
@@ -1197,7 +2002,37 @@ const QuizEngine = {
             availableQuestions = AppState.db;
         }
         
+        // Filter out correctly answered questions for this quiz (unless in error loop)
+        // Wrong answers should NOT be filtered - user needs to answer them again
+        if (quizId && !AppState.loop) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            const answeredQuestions = quizData.answeredQuestions || {};
+            availableQuestions = availableQuestions.filter(q => {
+                const questionKey = this.getQuestionKey(q);
+                // Only filter out if answered CORRECTLY
+                return answeredQuestions[questionKey]?.correct !== true;
+            });
+        }
+        
         AppState.activeQ = [...availableQuestions];
+        
+        // If no questions available (all answered), show message and reset option
+        if (AppState.activeQ.length === 0 && quizId) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            if (quizData.answeredQuestions && Object.keys(quizData.answeredQuestions).length > 0) {
+                this.showQuizCompletePrompt(quizId);
+                return;
+            } else {
+                // No questions available and no answered questions - show error
+                Hub.showWarningBubble('Chyba: Žádné otázky k zobrazení. Zkuste obnovit stránku.');
+                console.error('No questions available:', { 
+                    dbLength: AppState.db.length, 
+                    activeFilters: quizActiveFilters,
+                    quizId: quizId 
+                });
+                return;
+            }
+        }
         
         // Check shuffle modes - use saved settings
         const quizShuffleEnabled = AppState.savedQuizSettings ? AppState.savedQuizSettings.shuffleEnabled : false;
@@ -1227,11 +2062,42 @@ const QuizEngine = {
         this.render();
     },
     
+    // Helper to generate unique key for a question
+    getQuestionKey(question) {
+        // Use question text as unique identifier (could be enhanced with ID if available)
+        return question.q ? question.q.substring(0, 50) : Math.random().toString();
+    },
+    
+    // Show prompt when all questions are answered
+    showQuizCompletePrompt(quizId) {
+        const quizData = UserDataManager.getQuizData(quizId);
+        const stats = UserDataManager.getQuizStats(quizId);
+        
+        const completedMsg = quizData.completed ? 
+            `✓ Kvíz dokončen ${stats.completionCount}x` : 
+            '📝 Všechny otázky zodpovězeny';
+        
+        const confirmReset = confirm(
+            `${completedMsg}\n\n` +
+            `Správně: ${stats.correctCount}, Špatně: ${stats.wrongCount}\n\n` +
+            `Chcete začít znovu? (Postup bude vyčištěn, ale počet dokončení zůstane.)`
+        );
+        
+        if (confirmReset) {
+            UserDataManager.clearQuizProgress(quizId, true);
+            // Restart quiz
+            this.start();
+        } else {
+            // Go back to setup
+            UI.showScreen('sc-setup');
+        }
+    },
+    
     render() {
         const q = AppState.activeQ[AppState.cur];
         const chapterName = q._groupTitle || q._group || 'Neznámá kapitola';
         document.getElementById('q-topic').innerHTML = `${AppState.selectedTopicName} → <b>${chapterName}</b>`;
-        document.getElementById('q-text').innerText = q.q;
+        document.getElementById('q-text').innerHTML = q.q;
         document.getElementById('btn-continue').style.display = 'none';
         const box = document.getElementById('ans-container'); 
         box.innerHTML = '';
@@ -1248,7 +2114,7 @@ const QuizEngine = {
             const ex = document.createElement('div'); 
             ex.className = 'sub-expl'; 
             ex.id = 'ex-' + k; 
-            ex.innerText = q.expl[k];
+            ex.innerHTML = q.expl[k];
             group.appendChild(b); 
             group.appendChild(ex); 
             box.appendChild(group);
@@ -1263,7 +2129,10 @@ const QuizEngine = {
         });
         const sBtn = document.getElementById('btn-' + k), sEx = document.getElementById('ex-' + k);
         const cBtn = document.getElementById('btn-' + q.ans), cEx = document.getElementById('ex-' + q.ans);
-        if (k === q.ans) { 
+        
+        const isCorrect = k === q.ans;
+        
+        if (isCorrect) { 
             sBtn.classList.add('correct-btn'); 
             sEx.classList.add('show', 'highlight-correct'); 
             if (!AppState.loop) { AppState.score++; AppState.sessCorrect++; } 
@@ -1276,8 +2145,87 @@ const QuizEngine = {
             AppState.errs.push(q); 
             if (!AppState.loop) AppState.sessWrong++; 
         }
-        UI.updateStats(); 
+        
+        // Save answer to LocalStorage (async, won't block UI)
+        if (AppState.currentQuizId) {
+            try {
+                const questionKey = this.getQuestionKey(q);
+                UserDataManager.saveQuestionAnswer(AppState.currentQuizId, questionKey, isCorrect);
+                
+                // Check if this was the last question and answer was correct
+                // If so, count completion immediately (don't wait for Results.show)
+                if (isCorrect && !AppState.loop) {
+                    const remainingCount = DataLoader.getTotalRemainingQuestions(AppState.currentQuizId);
+                    
+                    if (remainingCount === 0) {
+                        // All questions answered - count completion now
+                        // Check allTimeWrongAnswers from LocalStorage for any errors ever made
+                        const quizData = UserDataManager.getQuizData(AppState.currentQuizId);
+                        const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                        if (everHadErrors) {
+                            UserDataManager.markQuizCompleted(AppState.currentQuizId, 'regular');
+                        } else {
+                            UserDataManager.markQuizCompleted(AppState.currentQuizId, 'flawless');
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('Error saving answer:', e);
+            }
+        }
+        
+        // Show continue button immediately
         document.getElementById('btn-continue').style.display = 'block';
+        
+        // Show wiki button if question has wiki attribute (regardless of correct/wrong answer)
+        if (q.wiki && Array.isArray(q.wiki) && q.wiki.length >= 2) {
+            this.showWikiButton(q.wiki);
+        }
+        
+        UI.updateStats(); 
+    },
+    
+    showWikiButton(wikiPath) {
+        const q = AppState.activeQ[AppState.cur];
+        const correctKey = q.ans;
+        const correctBtn = document.getElementById('btn-' + correctKey);
+        const correctGroup = correctBtn ? correctBtn.closest('.ans-group') : null;
+        
+        if (!correctGroup) return;
+        
+        // Get wiki title for the button text
+        let buttonText = 'víš, že...';
+        if (wikiPath && wikiPath.length >= 2) {
+            const [category, entry] = wikiPath;
+            let entryData = null;
+            
+            // Try window.wiki first
+            const wikiData = window.wiki;
+            if (wikiData && wikiData[category] && wikiData[category][entry]) {
+                entryData = wikiData[category][entry];
+            } else {
+                // Try other wiki sources - first try direct category name, then with wiki_ prefix
+                const wikiSource = window[category] || window[`wiki_${category}`];
+                if (wikiSource && wikiSource[entry]) {
+                    entryData = wikiSource[entry];
+                }
+            }
+            
+            if (entryData) {
+                buttonText = entryData.title || buttonText;
+            }
+        }
+        
+        // Remove any existing wiki button
+        const existingBtn = correctGroup.querySelector('.wiki-btn');
+        if (existingBtn) existingBtn.remove();
+        
+        // Create wiki button with topic title
+        const wikiBtn = document.createElement('button');
+        wikiBtn.className = 'wiki-btn';
+        wikiBtn.innerHTML = '<span class="lightbulb">💡</span><span class="text">' + buttonText + '</span>';
+        wikiBtn.onclick = () => openWikiOverlay(wikiPath);
+        correctGroup.appendChild(wikiBtn);
     },
     
     toggleExpl(k) { 
@@ -1311,17 +2259,185 @@ const QuizEngine = {
 const Results = {
     show() {
         UI.showScreen('sc-res');
+        
+        // Save results to LocalStorage
+        const quizId = AppState.currentQuizId;
+        
         if(!AppState.loop) {
             const p = (AppState.score / AppState.total) * 100;
             let g = p >= 90 ? 'A' : p >= 80 ? 'B' : p >= 70 ? 'C' : p >= 60 ? 'D' : p >= 50 ? 'E' : 'F';
             document.getElementById('res-grade').innerText = g;
             document.getElementById('res-stat').innerHTML = `Úspěšnost: <b>${AppState.score} / ${AppState.total}</b> (${Math.round(p)}%)`;
+            
+            // Check if all questions in the quiz are answered CORRECTLY (for full completion)
+            const remainingCount = quizId ? DataLoader.getTotalRemainingQuestions(quizId) : 0;
+            const quizData = quizId ? UserDataManager.getQuizData(quizId) : null;
+            
+            // Completion was already counted in check() for normal flow
+            // Just show the completion badge with current stats
+            const isFullyCompleted = remainingCount === 0 && AppState.sessCorrect > 0;
+            
+            if (isFullyCompleted && quizId) {
+                // Get current stats - if completion wasn't counted in check(), count it now
+                let stats = UserDataManager.getQuizStats(quizId);
+                
+                // If no points were added yet for this completion, add them now
+                if (stats.points === 0 || !quizData.completed) {
+                    // Check allTimeWrongAnswers for any errors in this or previous sessions
+                    const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                    stats = UserDataManager.markQuizCompleted(quizId, everHadErrors ? 'regular' : 'flawless');
+                }
+                
+                // Check for errors to determine which badge to show
+                const everHadErrors = quizData.allTimeWrongAnswers && quizData.allTimeWrongAnswers.length > 0;
+                
+                if (everHadErrors) {
+                    this.showCompletionBadge(stats, 'regular');
+                } else {
+                    this.showCompletionBadge(stats, 'flawless');
+                }
+            } else if (quizId && AppState.sessCorrect > 0) {
+                // Session completed but quiz not fully done yet
+                this.showPartialCompletionMessage(remainingCount);
+            } else if (quizId && AppState.sessWrong > 0 && AppState.sessCorrect === 0) {
+                // All answers were wrong - not a completion
+                const statEl = document.getElementById('res-stat');
+                const msg = document.createElement('div');
+                msg.style.cssText = 'font-size: 14px; color: var(--border-red); margin-top: 10px;';
+                msg.innerHTML = '⚠️ Všechny odpovědi byly špatné. Zkus to znovu!';
+                statEl.appendChild(msg);
+            }
         } else {
             document.getElementById('res-grade').innerText = AppState.errs.length === 0 ? "✓" : "!";
             document.getElementById('res-stat').innerText = AppState.errs.length === 0 ? "Všechny chyby byly opraveny!" : `Stále zbývá opravit ${AppState.errs.length} chyb.`;
+            
+            // If all errors are fixed AND all questions are answered, count as completion
+            if (AppState.errs.length === 0 && quizId) {
+                const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+                
+                if (remainingCount === 0) {
+                    // All questions answered correctly after fixing errors
+                    // In error loop, we can't be flawless since we had errors originally
+                    const stats = UserDataManager.markQuizCompleted(quizId, 'regular');
+                    this.showCompletionBadge(stats, 'regular');
+                }
+            }
         }
         document.getElementById('res-retry').className = AppState.errs.length > 0 ? '' : 'hidden';
         document.getElementById('res-retry-msg').innerText = AppState.loop ? `Zbývá opravit ${AppState.errs.length} chyb.` : "Máte chyby. Musíte je opravit.";
+        
+        // Show quiz stats summary
+        if (quizId) {
+            this.showQuizStats(quizId);
+        }
+    },
+    
+    showCompletionBadge(stats, completionType) {
+        const gradeEl = document.getElementById('res-grade');
+        
+        const medal = getMedalByPoints(stats.points);
+        const hasMedal = medal !== '';
+        const medalColor = completionType === 'flawless' ? '#34c759' : '#007aff';
+        const icon = completionType === 'flawless' ? '✓' : '✓';
+        const title = completionType === 'flawless' ? 'Bezchybně dokončeno!' : 'Dokončeno s chybou';
+        const pointsText = completionType === 'flawless' ? '+3 body' : '+1 bod';
+        
+        // Show big medal if user has one, otherwise show checkmark in circle
+        let iconHtml;
+        if (hasMedal) {
+            iconHtml = `<div style="font-size: 80px; line-height: 1; margin: 10px 0;">${medal}</div>`;
+        } else {
+            iconHtml = `
+                <div style="width: 80px; height: 80px; border-radius: 50%; background: ${medalColor}; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+                    <span style="font-size: 40px; color: white;">${icon}</span>
+                </div>
+            `;
+        }
+        
+        gradeEl.innerHTML = `
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin: 20px 0;">
+                ${iconHtml}
+                <div style="font-size: 20px; font-weight: 700; color: ${medalColor}; text-align: center;">${title}</div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 16px; color: var(--ios-gray);">
+                    <span style="font-weight: 600; color: var(--ios-blue);">${pointsText}</span>
+                    <span>|</span>
+                    <span>Celkem: <b style="color: var(--ios-blue); font-size: 20px;">${stats.points}</b> bodů</span>
+                </div>
+            </div>
+        `;
+    },
+    
+    showPartialCompletionMessage(remainingCount) {
+        const statEl = document.getElementById('res-stat');
+        const msg = document.createElement('div');
+        msg.style.cssText = 'margin: 15px 0; padding: 15px; background: var(--ios-bg); border-radius: 12px; text-align: center; border-left: 4px solid var(--ios-blue);';
+        msg.innerHTML = `
+            <div style="font-size: 14px; color: var(--ios-blue); font-weight: 600; margin-bottom: 5px;">✓ Tato část zodpovězena správně!</div>
+            <div style="font-size: 13px; color: var(--ios-gray);">Zbývá ještě <b style="color: var(--ios-blue);">${remainingCount}</b> otázek v kvízu</div>
+        `;
+        statEl.appendChild(msg);
+    },
+    
+    showErrorMessage() {
+        const statEl = document.getElementById('res-stat');
+        const msg = document.createElement('div');
+        msg.style.cssText = 'font-size: 14px; color: var(--border-red); margin-top: 10px;';
+        msg.innerHTML = '⚠️ Kvíz obsahuje chyby - pro počítání dokončení musíte začít znovu';
+        statEl.appendChild(msg);
+    },
+    
+    showQuizStats(quizId) {
+        const stats = UserDataManager.getQuizStats(quizId);
+        const container = document.getElementById('res-stats-summary') || this.createStatsContainer();
+        
+        const nextMedalPoints = stats.points < 3 ? 3 : stats.points < 6 ? 6 : stats.points < 9 ? 9 : stats.points < 12 ? 12 : stats.points < 15 ? 15 : null;
+        const pointsToNext = nextMedalPoints ? nextMedalPoints - stats.points : 0;
+        
+        let nextMedalHtml = '';
+        if (pointsToNext > 0) {
+            const nextMedal = getMedalByPoints(nextMedalPoints);
+            nextMedalHtml = `
+                <div style="margin-top: 20px; padding: 15px 20px; background: linear-gradient(135deg, #f5f5f7 0%, #fff 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+                    <div style="font-size: 32px;">${nextMedal}</div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 13px; color: var(--ios-gray); font-weight: 500;">Do další medaile</div>
+                        <div style="font-size: 18px; font-weight: 700; color: var(--ios-blue);">${pointsToNext} bodů</div>
+                    </div>
+                </div>
+            `;
+        } else {
+            // All medals achieved - show congratulatory message
+            nextMedalHtml = `
+                <div style="margin-top: 20px; padding: 15px 20px; background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%); border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid rgba(52,199,89,0.2);">
+                    <div style="font-size: 32px;">🏆</div>
+                    <div style="text-align: left;">
+                        <div style="font-size: 13px; color: #34c759; font-weight: 500;">Gratulujeme!</div>
+                        <div style="font-size: 16px; font-weight: 700; color: #34c759;">Všechny medaile získány</div>
+                    </div>
+                </div>
+            `;
+        }
+        
+        container.innerHTML = nextMedalHtml;
+        container.classList.remove('hidden');
+    },
+    
+    createStatsContainer() {
+        const card = document.querySelector('#sc-res .card');
+        if (!card) return null;
+        
+        const container = document.createElement('div');
+        container.id = 'res-stats-summary';
+        container.className = 'hidden';
+        
+        // Try to insert before the back button, otherwise append to card
+        const backBtn = card.querySelector('button:last-child');
+        if (backBtn && backBtn.parentNode === card) {
+            card.insertBefore(container, backBtn);
+        } else {
+            card.appendChild(container);
+        }
+        return container;
     }
 };
 
@@ -1329,41 +2445,60 @@ const Results = {
 const DataLoader = {
     cache: new Map(), // Cache pro načtené kvízy
     
-    async loadQuizzes() {
-        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        if (checks.length === 0) return;
-        AppState.selectedTopicName = (checks.length === 1) ? checks[0].getAttribute('data-title') : "Kombinace vybraných témat";
+    // Load a single quiz and go to setup
+    async loadSingleQuiz(quizId) {
         AppState.db = [];
         
-        // Store selected quizzes for summary
-        AppState.selectedQuizzes = [];
-        
-        // Zobrazit loading indikátor
+        // Show loading indicator
         this.showLoading(true);
         
         try {
-            for (let ch of checks) {
-                const id = ch.value;
-                const quizData = await this.loadQuizData(id);
-                if (quizData) {
-                    // Use processed questions from the grouped structure
-                    if (quizData.questions && Array.isArray(quizData.questions)) {
-                        AppState.db = AppState.db.concat(quizData.questions);
-                    }
-                    
-                    // Add to selected quizzes summary
-                    AppState.selectedQuizzes.push({
-                        title: ch.getAttribute('data-title'),
-                        category: ch.getAttribute('data-category') || 'Ostatní'
-                    });
+            const quizData = await this.loadQuizData(quizId);
+            if (quizData) {
+                // Use processed questions from the grouped structure
+                if (quizData.questions && Array.isArray(quizData.questions)) {
+                    AppState.db = quizData.questions;
                 }
+                
+                // Store selected quiz for summary
+                AppState.selectedQuizzes = [{
+                    title: AppState.selectedTopicName,
+                    category: 'Vybraný kvíz'
+                }];
+                
+                // Update the setup screen summary
+                const summaryEl = document.getElementById('setup-selected-topics-summary');
+                if (summaryEl) {
+                    summaryEl.innerHTML = `<b>Vybraný okruh</b> → ${AppState.selectedTopicName}`;
+                }
+                
+                // Update the setup screen title
+                const titleEl = document.getElementById('setup-screen-title');
+                if (titleEl) {
+                    titleEl.textContent = AppState.selectedTopicName;
+                }
+                
+                if (AppState.db.length === 0) {
+                    Hub.showWarningBubble('Kvíz neobsahuje žádné otázky');
+                    return;
+                }
+                
+                // Store total questions count in UserData for progress calculation
+                UserDataManager.setQuizTotalQuestions(quizId, AppState.db.length);
+                
+                // Check and save wiki status for this quiz
+                UserDataManager.checkAndSaveWikiStatus(quizId, AppState.db);
+                
+                // Load summary file if quiz has summary attribute
+                await this.loadSummaryFile(quizId);
+                
+                this.setupCountSelector();
+                this.setupGroupFilters();
+                this.updateSummaryButton();
+                UI.showScreen('sc-setup');
+            } else {
+                Hub.showWarningBubble('Nepodařilo se načíst kvíz');
             }
-            
-            if (AppState.db.length === 0) return;
-            this.setupCountSelector();
-            this.setupGroupFilters();
-            Hub.updateSelectedTopicsSummary();
-            UI.showScreen('sc-setup');
         } finally {
             this.showLoading(false);
         }
@@ -1382,7 +2517,7 @@ const DataLoader = {
             const s = document.createElement('script'); 
             // Generate file path dynamically if file is undefined
             const filePath = file || this.generateFilePath(id);
-            s.src = filePath; 
+            s.src = filePath + '?t=' + Date.now(); 
             s.setAttribute('data-id', id);
             
             const timeout = setTimeout(() => {
@@ -1451,12 +2586,52 @@ const DataLoader = {
         }
     },
     
+    // Count remaining (unanswered or wrong) questions per group using LocalStorage data
+    getRemainingQuestionsPerGroup(quizId) {
+        const quizData = UserDataManager.getQuizData(quizId);
+        const answeredQuestions = quizData.answeredQuestions || {};
+        
+        const remainingPerGroup = {};
+        
+        AppState.db.forEach(question => {
+            const groupKey = question._group || 'unknown';
+            const questionKey = QuizEngine.getQuestionKey(question);
+            
+            // Check if question has been answered CORRECTLY
+            // Wrong answers should NOT be filtered - user needs to answer them again
+            const isAnsweredCorrectly = answeredQuestions[questionKey]?.correct === true;
+            
+            if (!isAnsweredCorrectly) {
+                remainingPerGroup[groupKey] = (remainingPerGroup[groupKey] || 0) + 1;
+            }
+        });
+        
+        return remainingPerGroup;
+    },
+    
+    // Get total remaining questions (across all groups or filtered)
+    getTotalRemainingQuestions(quizId, groupKeys = null) {
+        const remainingPerGroup = this.getRemainingQuestionsPerGroup(quizId);
+        
+        if (!groupKeys || groupKeys.length === 0) {
+            // Return total across all groups
+            return Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
+        }
+        
+        // Return total for specific groups
+        return groupKeys.reduce((sum, groupKey) => {
+            return sum + (remainingPerGroup[groupKey] || 0);
+        }, 0);
+    },
+    
     setupCountSelector() {
         const slider = document.getElementById('question-count-slider');
         const valueDisplay = document.getElementById('slider-value');
         
-        const maxQ = AppState.db.length;
-        const minQ = Math.min(5, maxQ);
+        // Use remaining questions count instead of total
+        const quizId = AppState.currentQuizId;
+        const maxQ = quizId ? this.getTotalRemainingQuestions(quizId) : AppState.db.length;
+        const minQ = Math.min(1, maxQ);
         
         // Set slider properties
         slider.min = minQ;
@@ -1480,6 +2655,9 @@ const DataLoader = {
         const container = document.getElementById('group-filters');
         container.innerHTML = '';
         
+        // Get remaining questions per group from LocalStorage
+        const quizId = AppState.currentQuizId;
+        const remainingPerGroup = quizId ? this.getRemainingQuestionsPerGroup(quizId) : {};
         
         // Collect all unique groups from loaded questions in their original order
         const groupCounts = {};
@@ -1488,13 +2666,17 @@ const DataLoader = {
         
         AppState.db.forEach(question => {
             if (question._group) {
-                groupCounts[question._group] = (groupCounts[question._group] || 0) + 1;
                 groupTitles[question._group] = question._groupTitle || question._group;
                 // Add to order only first time we see this group
-                if (!groupCounts[question._group] || groupCounts[question._group] === 1 && !groupOrder.includes(question._group)) {
+                if (!groupOrder.includes(question._group)) {
                     groupOrder.push(question._group);
                 }
             }
+        });
+        
+        // Get remaining count for each group
+        groupOrder.forEach(groupKey => {
+            groupCounts[groupKey] = remainingPerGroup[groupKey] || 0;
         });
         
         // Use original order from data file instead of sorting
@@ -1502,26 +2684,32 @@ const DataLoader = {
         
         // Create group filter buttons
         sortedGroups.forEach(groupKey => {
+            const remainingCount = groupCounts[groupKey];
+            const isDisabled = remainingCount === 0;
+            
             const groupFilter = document.createElement('div');
-            groupFilter.className = 'group-filter';
+            groupFilter.className = `group-filter${isDisabled ? ' disabled' : ''}`;
             groupFilter.dataset.group = groupKey;
             groupFilter.innerHTML = `
                 ${groupTitles[groupKey]}
-                <span class="group-filter-count">${groupCounts[groupKey]}</span>
+                <span class="group-filter-count">${remainingCount}</span>
             `;
             
-            groupFilter.onclick = () => {
-                this.toggleGroupFilter(groupKey, groupFilter);
-            };
+            if (!isDisabled) {
+                groupFilter.onclick = () => {
+                    this.toggleGroupFilter(groupKey, groupFilter);
+                };
+            }
             
             container.appendChild(groupFilter);
         });
         
-        // Add "All" button
+        // Add "All" button - count total remaining
+        const totalRemaining = Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
         const allFilter = document.createElement('div');
         allFilter.className = 'group-filter active';
         allFilter.dataset.group = 'all';
-        allFilter.innerHTML = 'Σ';
+        allFilter.innerHTML = `Σ<span class="group-filter-count">${totalRemaining}</span>`;
         allFilter.onclick = () => {
             this.clearAllGroupFilters();
             allFilter.classList.add('active');
@@ -1568,17 +2756,31 @@ const DataLoader = {
     },
     
     updateQuestionCount() {
-        const filteredQuestions = this.getFilteredQuestions();
+        const quizId = AppState.currentQuizId;
+        const remainingPerGroup = quizId ? this.getRemainingQuestionsPerGroup(quizId) : {};
         
-        // Update slider with filtered questions
-        this.updateSliderWithQuestions(filteredQuestions);
+        // Get active filters
+        const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
+            .map(filter => filter.dataset.group);
+        
+        // Calculate remaining questions for selected filters
+        let remainingQuestions;
+        if (activeFilters.length === 0) {
+            // All groups selected - use total remaining
+            remainingQuestions = Object.values(remainingPerGroup).reduce((sum, count) => sum + count, 0);
+        } else {
+            // Specific groups selected
+            remainingQuestions = activeFilters.reduce((sum, groupKey) => {
+                return sum + (remainingPerGroup[groupKey] || 0);
+            }, 0);
+        }
+        
+        // Update slider with remaining questions
+        this.updateSliderWithRemainingQuestions(remainingQuestions);
         
         // Update summary if available
         const summary = document.getElementById('selected-topics-summary');
         if (summary) {
-            const activeFilters = Array.from(document.querySelectorAll('.group-filter.active:not([data-group="all"])'))
-                .map(filter => filter.dataset.group);
-            
             if (activeFilters.length > 0) {
                 const filterText = activeFilters.map(group => {
                     const question = AppState.db.find(q => q._group === group);
@@ -1586,7 +2788,7 @@ const DataLoader = {
                 }).join(', ');
                 summary.innerHTML = AppState.selectedQuizzes.map(q => 
                     `<div class="summary-item">• ${q.title}</div>`
-                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">� Filtry: ${filterText}</div>`;
+                ).join('') + `<div class="summary-item" style="margin-top: 8px; color: var(--ios-blue);">📁 Filtry: ${filterText}</div>`;
             } else {
                 summary.innerHTML = AppState.selectedQuizzes.map(q => 
                     `<div class="summary-item">• ${q.title}</div>`
@@ -1595,12 +2797,12 @@ const DataLoader = {
         }
     },
     
-    updateSliderWithQuestions(questions) {
+    updateSliderWithRemainingQuestions(remainingCount) {
         const slider = document.getElementById('question-count-slider');
         const valueDisplay = document.getElementById('slider-value');
         
-        const maxQ = questions.length;
-        const minQ = Math.min(5, maxQ);
+        const maxQ = remainingCount;
+        const minQ = Math.min(1, maxQ);
         
         // Set slider properties
         slider.min = minQ;
@@ -1610,6 +2812,9 @@ const DataLoader = {
         if (parseInt(slider.value) > maxQ) {
             slider.value = maxQ;
         }
+        if (parseInt(slider.value) < minQ && maxQ > 0) {
+            slider.value = minQ;
+        }
         
         // Update display
         valueDisplay.textContent = slider.value;
@@ -1617,8 +2822,95 @@ const DataLoader = {
     },
     
     
+    // Check if current quiz has summary and update button visibility
+    updateSummaryButton() {
+        const summarySection = document.getElementById('wiki-topics-section');
+        if (!summarySection) return;
+        
+        // Check if current quiz has summary attribute in config
+        let hasSummary = false;
+        if (typeof quizCategories !== 'undefined' && AppState.currentQuizId) {
+            for (const category of Object.keys(quizCategories)) {
+                for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                    const quiz = quizCategories[category].quizzes[quizKey];
+                    if (quiz.id === AppState.currentQuizId) {
+                        hasSummary = quiz.summary === true;
+                        break;
+                    }
+                }
+                if (hasSummary) break;
+            }
+        }
+        
+        summarySection.style.display = hasSummary ? 'block' : 'none';
+    },
+    
     clearCache() {
         this.cache.clear();
+    },
+    
+    // Load summary file if quiz has summary attribute
+    async loadSummaryFile(quizId) {
+        // Find quiz config
+        let quizConfig = null;
+        let categoryName = null;
+        
+        if (typeof quizCategories !== 'undefined') {
+            for (const category of Object.keys(quizCategories)) {
+                for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                    const quiz = quizCategories[category].quizzes[quizKey];
+                    if (quiz.id === quizId && quiz.summary === true) {
+                        quizConfig = quiz;
+                        categoryName = category;
+                        break;
+                    }
+                }
+                if (quizConfig) break;
+            }
+        }
+        
+        // Only load if quiz has summary attribute
+        if (!quizConfig || !quizConfig.summary) {
+            return;
+        }
+        
+        // Check if summary is already loaded
+        if (window.sum && window.sum[quizId]) {
+            return; // Already loaded
+        }
+        
+        // Load summary file
+        return new Promise((resolve) => {
+            const s = document.createElement('script');
+            // Determine file path based on category
+            let filePath;
+            if (categoryName === 'Filosofie') {
+                filePath = `quizdata/summary/summary_${quizId}.js`;
+            } else {
+                // For other categories, use category-specific path
+                let categoryFolder = categoryName.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                // Special case: VseobecnyPrehled -> vseobecny_prehled
+                if (categoryFolder === 'vseobecnyprehled') {
+                    categoryFolder = 'vseobecny_prehled';
+                }
+                filePath = `quizdata/${categoryFolder}/summary_${quizId}.js`;
+            }
+            
+            s.src = filePath + '?t=' + Date.now();
+            s.async = true;
+            
+            s.onload = () => {
+                console.log('Summary loaded:', quizId);
+                resolve(true);
+            };
+            
+            s.onerror = () => {
+                console.warn('Failed to load summary for quiz:', quizId);
+                resolve(false);
+            };
+            
+            document.head.appendChild(s);
+        });
     },
     
     // Generate file path from quiz id
@@ -1628,7 +2920,12 @@ const DataLoader = {
             for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
                 const quiz = quizCategories[category].quizzes[quizKey];
                 if (quiz.id === id) {
-                    return `quizdata/${category.toLowerCase()}/${id}.js`;
+                    let categoryFolder = category.toLowerCase();
+                    // Special case: VseobecnyPrehled -> vseobecny_prehled
+                    if (categoryFolder === 'vseobecnyprehled') {
+                        categoryFolder = 'vseobecny_prehled';
+                    }
+                    return `quizdata/${categoryFolder}/${id}.js`;
                 }
             }
         }
@@ -1648,64 +2945,6 @@ const Hub = {
         }
     },
     
-    updateSelectedTopicsSummary() {
-        const summary = document.getElementById('hub-selected-topics-summary');
-        const setupSummary = document.getElementById('setup-selected-topics-summary');
-        const continueBtn = document.getElementById('btn-continue-hub');
-        if (!summary) return;
-        
-        const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-        
-        // Toggle continue button animation based on selection
-        if (continueBtn) {
-            if (checks.length > 0) {
-                continueBtn.classList.add('btn-ready');
-            } else {
-                continueBtn.classList.remove('btn-ready');
-            }
-        }
-        
-        // Enforce maximum 5 topics selection
-        if (checks.length > 5) {
-            // Show warning bubble
-            this.showWarningBubble('Můžete vybrat nanejvýš 5 okruhů!');
-            
-            // Find most recently checked checkbox and uncheck it
-            const allChecks = Array.from(document.querySelectorAll('.quiz-check'));
-            for (let i = allChecks.length - 1; i >= 0; i--) {
-                if (allChecks[i].checked && !checks.slice(0, 5).includes(allChecks[i])) {
-                    allChecks[i].checked = false;
-                    break;
-                }
-            }
-            // Recalculate checks after enforcement
-            const newChecks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-            if (newChecks.length === 0) {
-                const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
-                if (summary) summary.innerHTML = displayText;
-                if (setupSummary) setupSummary.innerHTML = displayText;
-            } else {
-                const selectedTitles = newChecks.map(ch => ch.getAttribute('data-title'));
-                const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
-                if (summary) summary.innerHTML = displayText;
-                if (setupSummary) setupSummary.innerHTML = displayText;
-            }
-            return;
-        }
-        
-        if (checks.length === 0) {
-            const displayText = '<b>Vybrané okruhy</b> → nic nevybráno';
-            if (summary) summary.innerHTML = displayText;
-            if (setupSummary) setupSummary.innerHTML = displayText;
-        } else {
-            const selectedTitles = checks.map(ch => ch.getAttribute('data-title'));
-            const displayText = `<b>Vybrané okruhy</b> → ${selectedTitles.join(', ')}`;
-            if (summary) summary.innerHTML = displayText;
-            if (setupSummary) setupSummary.innerHTML = displayText;
-        }
-    },
-    
-    
     showWarningBubble(message) {
         // Remove any existing bubbles
         const existingBubbles = document.querySelectorAll('.warning-bubble');
@@ -1722,16 +2961,25 @@ const Hub = {
             if (bubble.parentNode) {
                 bubble.remove();
             }
-        }, 4000);
+        }, 2000);
     },
     
     renderQuizList() {
         const list = document.getElementById('hub-list');
+        list.innerHTML = ''; // Clear previous content
         
         // Use the new nested structure
         if (typeof quizCategories !== 'undefined') {
+            // Initialize default filters if not set
+            UserDataManager.initDefaultCategoryFilters();
+            
             Object.keys(quizCategories).forEach(category => {
                 const categoryData = quizCategories[category];
+                
+                // Skip categories that are hidden by filter settings
+                if (!UserDataManager.isCategoryVisible(category)) {
+                    return;
+                }
                 
                 // Create collapsible category container
                 const categoryContainer = document.createElement('div');
@@ -1759,28 +3007,73 @@ const Hub = {
                     const div = document.createElement('div');
                     div.className = 'hub-item';
                     
+                    // Get quiz stats from LocalStorage
+                    const quizStats = UserDataManager.getQuizStats(q.id);
+                    
+                    // Build badges HTML - show medal based on points
+                    let badgesHtml = '';
+                    if (quizStats.points > 0) {
+                        const medal = getMedalByPoints(quizStats.points);
+                        if (medal) {
+                            badgesHtml += `<span class="badge flawless">${medal}</span>`;
+                        }
+                        badgesHtml += `<span class="badge">${quizStats.points} b</span>`;
+                    }
+                    
+                    // Check if quiz has summary from config (not from user data)
+                    let summaryIconHtml = '';
+                    if (q.summary) {
+                        summaryIconHtml = `<div style="position: absolute; bottom: 8px; right: 12px; font-size: 14px; color: #f5a623; z-index: 1;">💡</div>`;
+                    }
+                    
+                    // Calculate progress for the progress bar
+                    let progressBarHtml = '';
+                    const totalQuestions = UserDataManager.getQuizTotalQuestions(q.id);
+                    // Show progress based on correctly answered questions only
+                    if (quizStats.started && quizStats.correctCount > 0 && totalQuestions > 0) {
+                        const progress = Math.round((quizStats.correctCount / totalQuestions) * 100);
+                        progressBarHtml = `<div class="hub-item-progress" style="width: ${progress}%;"></div>`;
+                    }
+                    
+                    div.style.position = 'relative';
                     div.innerHTML = `
-                        <input type="checkbox" value="${q.id}" data-title="${q.title}" class="quiz-check" onchange="Hub.updateSelectedTopicsSummary()"> 
                         <div class="quiz-info">
                             <div class="quiz-title">${q.title}</div>
                             <div class="quiz-desc">${q.desc}</div>
                         </div>
+                        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 2px;">
+                            ${badgesHtml ? `<div class="quiz-badges">${badgesHtml}</div>` : ''}
+                        </div>
+                        ${summaryIconHtml}
+                        ${progressBarHtml}
                     `;
-                    div.onclick = (e) => { 
-                        if(e.target.tagName !== 'INPUT') { 
-                            const ch = div.querySelector('input'); 
-                            ch.checked = !ch.checked; 
-                            Hub.updateSelectedTopicsSummary(); 
-                        } else {
-                            Hub.updateSelectedTopicsSummary();
-                        }
+                    // Click on quiz item goes directly to setup
+                    div.onclick = () => {
+                        loadQuizAndGoToSetup(q.id, q.title);
                     };
                     quizzesContainer.appendChild(div);
                 });
                 
-                // Add click handler for collapsing
+                // Add click handler for collapsing (accordion behavior)
                 catHeader.onclick = () => {
                     const isExpanded = quizzesContainer.style.display !== 'none';
+                    
+                    // Collapse all other categories first
+                    const allContainers = document.querySelectorAll('.category-container');
+                    allContainers.forEach(container => {
+                        if (container !== categoryContainer) {
+                            const otherQuizzes = container.querySelector('.quizzes-container');
+                            const otherToggle = container.querySelector('.category-toggle');
+                            if (otherQuizzes) otherQuizzes.style.display = 'none';
+                            if (otherToggle) otherToggle.textContent = '▼';
+                            container.classList.add('collapsed');
+                        }
+                    });
+                    
+                    // Save expanded category to LocalStorage
+                    UserDataManager.setLastExpandedCategory(category);
+
+                    // Toggle current category
                     quizzesContainer.style.display = isExpanded ? 'none' : 'block';
                     catHeader.querySelector('.category-toggle').textContent = isExpanded ? '▼' : '▲';
                     categoryContainer.classList.toggle('collapsed', isExpanded);
@@ -1789,6 +3082,9 @@ const Hub = {
                 // Initially collapse all categories
                 quizzesContainer.style.display = 'none';
                 categoryContainer.classList.add('collapsed');
+                
+                // Store references for later expansion
+                categoryContainer.dataset.categoryName = category;
                 
                 // Assemble category
                 categoryContainer.appendChild(catHeader);
@@ -1803,35 +3099,196 @@ const Hub = {
 };
 
 // ===== GLOBAL FUNCTIONS =====
+function loadQuizAndGoToSetup(quizId, quizTitle) {
+    // Clear cache to ensure fresh data (including new wiki attributes)
+    DataLoader.clearCache();
+    
+    // Set current quiz ID
+    AppState.currentQuizId = quizId;
+    AppState.selectedTopicName = quizTitle;
+    
+    // Load the quiz data and go to setup
+    DataLoader.loadSingleQuiz(quizId).then(() => {
+        // Check if all questions were previously answered (remainingCount === 0)
+        // If so, auto-clear progress AFTER data is loaded
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        if (remainingCount === 0) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            // Only auto-clear if there's actually saved progress with correct answers
+            const correctAnswers = Object.values(quizData.answeredQuestions || {}).filter(a => a.correct).length;
+            if (correctAnswers > 0) {
+                UserDataManager.clearQuizProgress(quizId, true);
+                Hub.showWarningBubble('Stávající kvíz dokončen! Všechny otázky byly zodpovězeny. Můžete začít znovu.');
+                
+                // Refresh UI to show updated counts after clearing
+                DataLoader.setupGroupFilters();
+                DataLoader.setupCountSelector();
+            }
+        }
+        
+        // After loading, update the progress section
+        setTimeout(updateQuizProgressSection, 100);
+    });
+}
+
 function loadAndGoToSetup() { 
-    const checks = Array.from(document.querySelectorAll('.quiz-check:checked'));
-    if (checks.length === 0) {
-        Hub.showWarningBubble('Prosím vyberte alespoň jedno téma pro pokračování');
-        return;
-    }
-    // Save current selections before navigating to setup
-    AppState.savedQuizSelections = checks.map(ch => ch.value);
-    DataLoader.loadQuizzes(); 
+    // This function is kept for compatibility but no longer used with checkbox logic
 }
 function goBackToHub() {
     // Return to hub screen
     UI.showScreen('sc-hub');
-    // Restore the saved selections
-    if (AppState.savedQuizSelections.length > 0) {
-        // Uncheck all first
-        document.querySelectorAll('.quiz-check').forEach(ch => {
-            ch.checked = AppState.savedQuizSelections.includes(ch.value);
-        });
-        // Update summary
-        Hub.updateSelectedTopicsSummary();
-    }
+    // Clear current quiz data
+    AppState.currentQuizId = null;
+    AppState.db = [];
+    AppState.selectedTopicName = "";
+    // Refresh quiz list to show updated completion counts
+    Hub.renderQuizList();
 }
 function goBackToSetup() {
+    const quizId = AppState.currentQuizId;
+    
+    // Check if quiz was completed and auto-clear progress
+    if (quizId) {
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        if (remainingCount === 0) {
+            const quizData = UserDataManager.getQuizData(quizId);
+            const correctAnswers = Object.values(quizData.answeredQuestions || {}).filter(a => a.correct).length;
+            if (correctAnswers > 0) {
+                UserDataManager.clearQuizProgress(quizId, true);
+                Hub.showWarningBubble('Kvíz dokončen! Postup automaticky vyčištěn.');
+            }
+        }
+    }
+    
     UI.showScreen('sc-setup');
+    // Refresh group filters and count selector to show updated remaining questions
+    DataLoader.setupGroupFilters();
+    DataLoader.setupCountSelector();
+    updateQuizProgressSection();
 }
-function startQuiz() { QuizEngine.start(); }
+
+function getMedalByPoints(points) {
+    if (points >= 15) return '🏆'; // Trophy
+    if (points >= 12) return '🏅'; // Medal
+    if (points >= 9) return '🥇'; // Gold
+    if (points >= 6) return '🥈'; // Silver
+    if (points >= 3) return '🥉'; // Bronze
+    return '';
+}
+
+function updateQuizProgressSection() {
+    const progressSection = document.getElementById('quiz-progress-section');
+    const progressFill = document.getElementById('progress-fill');
+    const progressPercent = document.getElementById('progress-percent');
+    const badgesContainer = document.getElementById('setup-completion-badges');
+    
+    if (!progressSection) return;
+    
+    const quizId = AppState.currentQuizId;
+    if (!quizId) {
+        progressSection.style.display = 'none';
+        if (badgesContainer) badgesContainer.innerHTML = '';
+        return;
+    }
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    const totalQuestions = UserDataManager.getQuizTotalQuestions(quizId);
+    
+    // Always show progress section for selected quiz
+    progressSection.style.display = 'block';
+    
+    // Calculate progress percentage (1-99 range)
+    let progress = 0;
+    if (totalQuestions > 0 && stats.started) {
+        progress = Math.round((stats.correctCount / totalQuestions) * 100);
+        // Clamp to 1-99 range
+        if (progress < 1 && stats.correctCount > 0) progress = 1;
+        if (progress > 99) progress = 99;
+    }
+    
+    // Update progress bar
+    if (progressFill) {
+        progressFill.style.width = progress + '%';
+    }
+    if (progressPercent) {
+        progressPercent.textContent = progress + '%';
+    }
+    
+    // Update completion badges in header - show medal based on points
+    if (badgesContainer) {
+        let badgesHtml = '';
+        if (stats.points > 0) {
+            const medal = getMedalByPoints(stats.points);
+            if (medal) {
+                badgesHtml += `<span class="badge flawless">${medal}</span>`;
+            }
+            badgesHtml += `<span class="badge">${stats.points} b</span>`;
+        }
+        badgesContainer.innerHTML = badgesHtml;
+    }
+}
+
+function resetQuizProgress() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    const confirmMsg = stats.points > 0 
+        ? `Chcete vyčistit postup tohoto kvízu?\n\nAktuální body: ${stats.points}\n\nPočet bodů zůstane zachován, pouze postup v aktuálním kvízu bude smazán.`
+        : `Chcete vyčistit postup tohoto kvízu?\n\nVšechny zodpovězené otázky budou resetovány.`;
+    
+    if (confirm(confirmMsg)) {
+        UserDataManager.clearQuizProgress(quizId, true);
+        updateQuizProgressSection();
+        DataLoader.setupGroupFilters();
+        DataLoader.setupCountSelector();
+        Hub.showWarningBubble('Postup byl vyčištěn!');
+    }
+}
+
+function resetAllPoints() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const stats = UserDataManager.getQuizStats(quizId);
+    if (stats.points === 0) {
+        Hub.showWarningBubble('Žádné body k vynulování!');
+        return;
+    }
+    
+    const confirmMsg = `Chcete VYNULOVAT VŠECHNY BODY tohoto kvízu?\n\nAktuální body: ${stats.points} → 0\n\nTato akce je nevratná!`;
+    
+    if (confirm(confirmMsg)) {
+        UserDataManager.resetPoints(quizId);
+        updateQuizProgressSection();
+        Hub.showWarningBubble('Body byly vynulovány!');
+    }
+}
+
+function startQuiz() { 
+    QuizEngine.start(); 
+}
+
 function handleQuizExit() {
+    const quizId = AppState.currentQuizId;
+    
+    // Check if all questions are answered correctly (remainingCount === 0)
+    // If so, automatically clear the progress
+    if (quizId) {
+        const remainingCount = DataLoader.getTotalRemainingQuestions(quizId);
+        if (remainingCount === 0) {
+            // All questions answered correctly - auto-clear progress
+            UserDataManager.clearQuizProgress(quizId, true);
+            Hub.showWarningBubble('Kvíz dokončen! Postup automaticky vyčištěn.');
+        }
+    }
+    
     UI.showScreen('sc-setup');
+    // Re-render group filters to show updated remaining question counts
+    DataLoader.setupGroupFilters();
+    // Update slider with new remaining question counts
+    DataLoader.setupCountSelector();
+    updateQuizProgressSection();
 }
 function check(k) { QuizEngine.check(k); }
 function toggleExpl(k) { QuizEngine.toggleExpl(k); }
@@ -1842,6 +3299,277 @@ function openInfoModal() {
 }
 function closeInfoModal() { 
     document.getElementById('info-modal').classList.add('hidden'); 
+}
+
+// ===== WIKI OVERLAY FUNCTIONS =====
+// Store current wiki topics list for navigation
+let currentWikiTopicsList = [];
+let currentWikiTopicIndex = -1;
+
+function openWikiOverlay(wikiPath) {
+    if (!wikiPath || wikiPath.length < 2) return;
+    
+    const [category, entry] = wikiPath;
+    let wikiData = window.wiki;
+    let entryData = null;
+    
+    // Try window.wiki first
+    if (wikiData && wikiData[category] && wikiData[category][entry]) {
+        entryData = wikiData[category][entry];
+    } else {
+        // Try other wiki sources - first try direct category name, then with wiki_ prefix
+        const wikiSource = window[category] || window[`wiki_${category}`];
+        if (wikiSource && wikiSource[entry]) {
+            entryData = wikiSource[entry];
+            wikiData = wikiSource; // Use this for topic navigation
+        }
+    }
+    
+    if (!entryData) {
+        console.error('Wiki entry not found:', wikiPath);
+        return;
+    }
+    
+    // Update overlay content
+    document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
+    document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+    
+    // Build topics list from current quiz if available
+    if (AppState.db && AppState.db.length > 0) {
+        const topics = new Map();
+        AppState.db.forEach(question => {
+            if (question.wiki && question.wiki.length >= 2) {
+                const cat = question.wiki[0];
+                const ent = question.wiki[1];
+                const key = `${cat}:${ent}`;
+                if (!topics.has(key)) {
+                    topics.set(key, { category: cat, entry: ent, title: wikiData[cat]?.[ent]?.title || ent });
+                }
+            }
+        });
+        currentWikiTopicsList = Array.from(topics.values());
+        // Find current topic index
+        currentWikiTopicIndex = currentWikiTopicsList.findIndex(t => t.category === category && t.entry === entry);
+    }
+    
+    // Show overlay
+    document.getElementById('wiki-overlay').classList.remove('hidden');
+}
+
+function navigateWikiTopic(direction) {
+    if (currentWikiTopicsList.length === 0) return;
+    
+    if (direction === 'next') {
+        currentWikiTopicIndex = (currentWikiTopicIndex + 1) % currentWikiTopicsList.length;
+    } else if (direction === 'prev') {
+        currentWikiTopicIndex = (currentWikiTopicIndex - 1 + currentWikiTopicsList.length) % currentWikiTopicsList.length;
+    }
+    
+    const topic = currentWikiTopicsList[currentWikiTopicIndex];
+    if (topic) {
+        let entryData = null;
+        // Try window.wiki first
+        const wikiData = window.wiki;
+        if (wikiData && wikiData[topic.category] && wikiData[topic.category][topic.entry]) {
+            entryData = wikiData[topic.category][topic.entry];
+        } else {
+            // Try other wiki sources - direct name or with wiki_ prefix
+            const wikiSource = window[topic.category] || window[`wiki_${topic.category}`];
+            if (wikiSource && wikiSource[topic.entry]) {
+                entryData = wikiSource[topic.entry];
+            }
+        }
+        if (entryData) {
+            document.getElementById('wiki-title').textContent = entryData.title || 'víš, že...';
+            document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+        }
+    }
+}
+
+function closeWikiOverlay() {
+    document.getElementById('wiki-overlay').classList.add('hidden');
+    // Restore navigation buttons display for next use
+    const navDiv = document.querySelector('.wiki-overlay-nav');
+    if (navDiv) {
+        navDiv.style.display = 'flex';
+    }
+}
+
+function openAdvancedOptionsModal() {
+    const modal = document.getElementById('advanced-options-modal');
+    const stats = UserDataManager.getQuizStats(AppState.currentQuizId);
+    const totalQuestions = UserDataManager.getQuizTotalQuestions(AppState.currentQuizId);
+    
+    // Update stats display in modal
+    const statsContainer = document.getElementById('advanced-options-stats');
+    if (statsContainer) {
+        let statsHtml = '';
+        
+        if (stats.points > 0) {
+            const medal = getMedalByPoints(stats.points);
+            statsHtml += `<div style="font-size: 18px; margin-bottom: 8px;">${medal} <b>${stats.points} bodů</b></div>`;
+            statsHtml += `<div style="font-size: 12px; color: var(--ios-gray);">1 bod = dokončení s chybou | 3 body = bezchybné dokončení</div>`;
+        } else {
+            statsHtml += `<div style="color: var(--ios-gray);">Zatím žádné body</div>`;
+            statsHtml += `<div style="font-size: 12px; color: var(--ios-gray); margin-top: 4px;">1 bod = dokončení s chybou | 3 body = bezchybné dokončení</div>`;
+        }
+        
+        if (stats.totalAnswered > 0) {
+            statsHtml += `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #ddd;">`;
+            statsHtml += `<div>📝 Aktuální postup:</div>`;
+            statsHtml += `<div>• Správně: ${stats.correctCount} / ${totalQuestions}</div>`;
+            statsHtml += `<div>• Špatně: ${stats.wrongCount}</div>`;
+            statsHtml += `</div>`;
+        }
+        
+        statsContainer.innerHTML = statsHtml;
+    }
+    
+    // Update manual edit input
+    const pointsInput = document.getElementById('manual-points');
+    if (pointsInput) pointsInput.value = stats.points;
+    
+    modal.classList.remove('hidden');
+}
+
+function saveManualPoints() {
+    const quizId = AppState.currentQuizId;
+    if (!quizId) return;
+    
+    const pointsInput = document.getElementById('manual-points');
+    let points = parseInt(pointsInput.value) || 0;
+    
+    // Validation: points cannot be negative
+    if (points < 0) {
+        Hub.showWarningBubble('Počet bodů nemůže být záporný!');
+        return;
+    }
+    
+    // Save to UserDataManager
+    const data = UserDataManager.getData();
+    if (!data.quizzes[quizId]) {
+        data.quizzes[quizId] = UserDataManager.getDefaultQuizData();
+    }
+    
+    data.quizzes[quizId].points = points;
+    data.quizzes[quizId].completed = points > 0;
+    
+    UserDataManager.saveData(data);
+    
+    // Refresh display
+    openAdvancedOptionsModal();
+    updateQuizProgressSection();
+    
+    Hub.showWarningBubble('Body uloženy!');
+}
+
+function closeAdvancedOptionsModal() {
+    document.getElementById('advanced-options-modal').classList.add('hidden');
+}
+
+function openQuizSummary() {
+    if (!AppState.currentQuizId) return;
+    
+    // Find quiz config to get the summary data
+    let quizConfig = null;
+    let categoryName = null;
+    
+    if (typeof quizCategories !== 'undefined') {
+        for (const category of Object.keys(quizCategories)) {
+            for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
+                const quiz = quizCategories[category].quizzes[quizKey];
+                if (quiz.id === AppState.currentQuizId) {
+                    quizConfig = quiz;
+                    categoryName = category;
+                    break;
+                }
+            }
+            if (quizConfig) break;
+        }
+    }
+    
+    if (!quizConfig || !quizConfig.summary) {
+        console.warn('No summary available for this quiz');
+        return;
+    }
+    
+    // Try to find summary data
+    // Summary is stored directly under window.sum[quizId]
+    const summaryData = window.sum?.[quizConfig.id];
+    let entryData = null;
+    
+    if (summaryData) {
+        // Get the first entry from the summary object
+        const entries = Object.keys(summaryData);
+        if (entries.length > 0) {
+            entryData = summaryData[entries[0]];
+        }
+    }
+    
+    if (!entryData) {
+        console.error('Summary data not found for quiz:', AppState.currentQuizId);
+        return;
+    }
+    
+    // Update overlay content
+    document.getElementById('wiki-title').textContent = entryData.title || 'Souhrn';
+    document.getElementById('wiki-body').innerHTML = entryData.content || entryData;
+    
+    // Hide navigation buttons since there's only one summary
+    const navDiv = document.querySelector('.wiki-overlay-nav');
+    if (navDiv) {
+        navDiv.style.display = 'none';
+    }
+    
+    // Show overlay
+    document.getElementById('wiki-overlay').classList.remove('hidden');
+}
+
+function closeRelatedTopicsModal() {
+    document.getElementById('related-topics-modal').classList.add('hidden');
+}
+
+// ===== CATEGORY SETTINGS MODAL FUNCTIONS =====
+function openCategorySettingsModal() {
+    const modal = document.getElementById('category-settings-modal');
+    const listContainer = document.getElementById('category-filters-list');
+    
+    // Initialize default filters if not set
+    UserDataManager.initDefaultCategoryFilters();
+    
+    // Build category checkboxes
+    let html = '';
+    if (typeof quizCategories !== 'undefined') {
+        Object.keys(quizCategories).forEach(category => {
+            const categoryData = quizCategories[category];
+            const isVisible = UserDataManager.isCategoryVisible(category);
+            const icon = categoryData.icon || '📁';
+            
+            html += `
+                <label style="display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--ios-bg); border-radius: 12px; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.background='white'" onmouseout="this.style.background='var(--ios-bg)'">
+                    <input type="checkbox" 
+                           ${isVisible ? 'checked' : ''} 
+                           onchange="toggleCategoryFilter('${category}', this.checked)"
+                           style="width: 22px; height: 22px; cursor: pointer; accent-color: var(--ios-blue);">
+                    <span style="font-size: 20px;">${icon}</span>
+                    <span style="font-size: 15px; font-weight: 600; color: var(--ios-text);">${category}</span>
+                </label>
+            `;
+        });
+    }
+    
+    listContainer.innerHTML = html;
+    modal.classList.remove('hidden');
+}
+
+function closeCategorySettingsModal() {
+    document.getElementById('category-settings-modal').classList.add('hidden');
+    // Refresh hub list to apply filters
+    Hub.renderQuizList();
+}
+
+function toggleCategoryFilter(categoryName, isVisible) {
+    UserDataManager.setCategoryFilter(categoryName, isVisible);
 }
 
 // ===== INITIALIZATION =====
