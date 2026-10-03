@@ -629,12 +629,12 @@ window.data_starorectina = {
 },
 {
     q: "Jak se podle pravidel transkribuje řecké slovo „λείπει“?",
-    a: "léjpej",
+    a: "lejpej",
     b: "leípei",
     c: "léjpi",
     ans: "a",
     expl: {
-        a: "Správně. ει → ej: λείπει → léjpej (zbývá, zůstává).",
+        a: "Správně. ει → ej: λείπει → lejpej (zbývá, zůstává).",
         b: "Špatně. ει se přepisuje jako ej, nikoli ei.",
         c: "Špatně. Ve slově λείπει se přepisuje i koncové ει jako ej."
     }
@@ -763,12 +763,12 @@ window.data_starorectina = {
     q: "Jak se podle pravidel transkribuje řecké slovo „εὐλογία“?",
     a: "eulogía",
     b: "evlogía",
-    c: "eulogiá",
+    c: "eudogía",
     ans: "a",
     expl: {
         a: "Správně. ευ → eu: εὐλογία → eulogía (chvála, požehnání).",
         b: "Špatně. ευ se podle pravidel přepisuje jako eu, nikoli ev.",
-        c: "Špatně. Přízvuk je na α, takže transkripce je eulogía."
+        c: "Špatně. λ → l, takže zde nemůže být d."
     }
 },
 {
@@ -811,12 +811,12 @@ window.data_starorectina = {
     q: "Jak se podle pravidel transkribuje řecké slovo „οὐδέ“?",
     a: "údé",
     b: "oudé",
-    c: "údé",
+    c: "úte",
     ans: "a",
     expl: {
         a: "Správně. ου → ú: οὐδέ → údé (ani, také ne).",
         b: "Špatně. ου se podle pravidel přepisuje jako ú, nikoli ou.",
-        c: "Špatně. Správně je údé – první slabika obsahuje ου → ú."
+        c: "Špatně. δ → d, takže správně je údé, nikoli úte."
     }
 },
 {
@@ -905,14 +905,14 @@ window.data_starorectina = {
 },
 {
     q: "Jak se podle pravidel transkribuje řecké slovo „ὄλλυσθαι“?",
-    a: "óllusthaj",
-    b: "hóllusthaj",
-    c: "óllusthai",
+    a: "óllysthaj",
+    b: "hóllysthaj",
+    c: "óllusthaj",
     ans: "a",
     expl: {
-        a: "Správně. ὄ má jemný přídech → bez h a αι → aj: ὄλλυσθαι → óllusthaj (zaniknout, zahynout).",
-        b: "Špatně. ὄ má jemný přídech, který se v transkripci nepíše.",
-        c: "Špatně. αι → aj, nikoli ai."
+        a: "Správně. ὄ má jemný přídech → bez h; υ → y; θ → th a αι → aj: ὄλλυσθαι → óllysthaj.",
+        b: "Špatně. ὄ má jemný přídech, který se v transkripci nepíše jako h.",
+        c: "Špatně. υ se podle pravidel přepisuje jako y, nikoli u."
     }
 },
 {
