@@ -1,7 +1,21 @@
 const quizCategories = {
     Filosofie: {
         icon: "🦉",
-        description: "Cesta ke kořenům západního myšlení",
+        description: "Základy starořečtiny pro studium filosofie",
+        quizzes: {
+            starorectina: {
+                id: "starorectina",
+                title: "Řecká a latinská filosofická terminologie",
+                desc: "Starořecká alfabeta, transkripce a klíčová terminologie.",
+                summary: false
+            }
+        }
+    },
+    "Filosofie - priprava na VŠ": {
+        icon: "📚",
+        description: "Podrobnější příprava na studium filosofie a přijímací zkoušky",
+        dataFolder: "filosofie_priprava_na_vs",
+        summaryFolder: "summary",
         quizzes: {
             prijimackyFFOU: {
                 id: "prijimacky_ff_ou",
@@ -43,12 +57,6 @@ const quizCategories = {
                 id: "povalecna_a_ceska_filozofie",
                 title: "Poválečná a česká filozofie",
                 desc: "Poválečná filozofie a česká filozofická tradice od 19. století až po současnost.",
-                summary: false
-            },
-            starorectina: {
-                id: "starorectina",
-                title: "Starořečtina - základy",
-                desc: "Starořecká alfabeta, transkripce a klíčová terminologie.",
                 summary: false
             }
         }

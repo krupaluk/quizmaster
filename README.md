@@ -18,9 +18,11 @@ Lehký, modulární a mobilně optimalizovaný kvízový systém postavený na �
 * `index.html` – Hlavní aplikace (obsahuje kompletní UI a logiku).
 * `quizMaster_config.js` – Hierarchická konfigurace kategorií a kvízů.
 * `quizdata/` – Hlavní adresář pro kvízová data
-  * `quizdata/filosofie/` – Kvízy z oblasti filosofie
+  * `quizdata/filosofie/` – Základy starořečtiny
+  * `quizdata/filosofie_priprava_na_vs/` – Kvízy pro podrobnější přípravu na studium filosofie
   * `quizdata/logika/` – Kvízy z oblasti logiky  
   * `quizdata/prvouka/` – Kvízy z oblasti prvouky
+  * `quizdata/religionistika/` a `quizdata/vseobecny_prehled/` – Další kvízové oblasti
 
 ## 📝 Jak přidat nový kvíz
 1. Vytvořte datový soubor v příslušném kategorickém adresáři s názvem `{id}.js` (např. `quizdata/dejepis/novovek.js`), který začíná definicí: `window.data_novovek = { ... }`.
@@ -38,7 +40,7 @@ Lehký, modulární a mobilně optimalizovaný kvízový systém postavený na �
        }
    }
    ```
-3. Název souboru se automaticky generuje jako `quizdata/{kategorie}/{id}.js`
+3. Název souboru se automaticky generuje jako `quizdata/{kategorie}/{id}.js`. Kategorie se speciální cestou mohou v `quizMaster_config.js` definovat vlastní `dataFolder`.
 4. Aplikace téma automaticky zobrazí v příslušné kategorii.
 
 ### 📄 Struktura datového souboru kvízu

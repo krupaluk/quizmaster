@@ -2884,7 +2884,10 @@ const DataLoader = {
             const s = document.createElement('script');
             // Determine file path based on category
             let filePath;
-            if (categoryName === 'Filosofie') {
+            const categoryConfig = quizCategories[categoryName];
+            if (categoryConfig.summaryFolder) {
+                filePath = `quizdata/${categoryConfig.summaryFolder}/summary_${quizId}.js`;
+            } else if (categoryName === 'Filosofie') {
                 filePath = `quizdata/summary/summary_${quizId}.js`;
             } else {
                 // For other categories, use category-specific path
@@ -2920,9 +2923,9 @@ const DataLoader = {
             for (const quizKey of Object.keys(quizCategories[category].quizzes)) {
                 const quiz = quizCategories[category].quizzes[quizKey];
                 if (quiz.id === id) {
-                    let categoryFolder = category.toLowerCase();
+                    let categoryFolder = quizCategories[category].dataFolder || category.toLowerCase();
                     // Special case: VseobecnyPrehled -> vseobecny_prehled
-                    if (categoryFolder === 'vseobecnyprehled') {
+                    if (!quizCategories[category].dataFolder && categoryFolder === 'vseobecnyprehled') {
                         categoryFolder = 'vseobecny_prehled';
                     }
                     return `quizdata/${categoryFolder}/${id}.js`;

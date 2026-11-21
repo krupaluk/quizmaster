@@ -1,7 +1,7 @@
 window.data_starorectina = {
     "groups": {
-        "pismena_recka_ceska": {
-            "title": "Název → znak",
+        "alfabeta": {
+            "title": "Alfabeta",
             "questions": [
 
 {
@@ -132,7 +132,7 @@ window.data_starorectina = {
     ans: "b",
     expl: {
         a: "Špatně. Μ μ je mý.",
-        b: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik).",
+        b: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
         c: "Špatně. Ν ν je ný."
     }
 },
@@ -291,13 +291,7 @@ window.data_starorectina = {
         b: "Správně. Ω ω je ó mega. Např. <strong>ὦ</strong>ρσεν – órsen (pohnulo, přimělo).",
         c: "Špatně. Η η je éta."
     }
-}
-
-            ]
-        },
-        "pismena_ceska_recka": {
-            "title": "Znak → název",
-            "questions": [
+},
 {
     q: "Které písmeno odpovídá znaku „Α α“?",
     a: "alfa",
@@ -425,7 +419,7 @@ window.data_starorectina = {
     c: "ný",
     ans: "a",
     expl: {
-        a: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik).",
+        a: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
         b: "Špatně. Μ μ je mý.",
         c: "Špatně. Ν ν je ný."
     }
@@ -588,345 +582,453 @@ window.data_starorectina = {
 },
             ]
         },
-        "transkripce": {
-            "title": "Transkripce",
+        "poznej_recky_text": {
+            "title": "Poznej řecký text",
             "questions": [
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „καί“?",
-    a: "kaj",
-    b: "kai",
-    c: "kej",
-    ans: "a",
-    expl: {
-        a: "Správně. αι → aj: καί → kaj (a, také).",
-        b: "Špatně. αι se podle pravidel přepisuje jako aj.",
-        c: "Špatně. ει → ej, nikoli αι."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „εἶναι“?",
-    a: "eínaj",
-    b: "ejnaj",
-    c: "ejnai",
-    ans: "b",
-    expl: {
-        a: "Špatně. ει → ej, takže εἶ se přepisuje jako ej.",
-        b: "Správně. ει → ej a αι → aj: εἶναι → ejnaj (být).",
-        c: "Špatně. αι → aj, nikoli ai."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „γενέσθαι“?",
-    a: "genésthaj",
-    b: "genésthai",
-    c: "genéstej",
-    ans: "a",
-    expl: {
-        a: "Správně. αι → aj: γενέσθαι → genésthaj (stát se, vzniknout).",
-        b: "Špatně. αι → aj, nikoli ai.",
-        c: "Špatně. ει → ej, ale zde je αι → aj."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „λείπει“?",
-    a: "lejpej",
-    b: "leípei",
-    c: "léjpi",
-    ans: "a",
-    expl: {
-        a: "Správně. ει → ej: λείπει → lejpej (zbývá, zůstává).",
-        b: "Špatně. ει se přepisuje jako ej, nikoli ei.",
-        c: "Špatně. Ve slově λείπει se přepisuje i koncové ει jako ej."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „εἵνεκεν“?",
-    a: "héjneken",
-    b: "éjneken",
-    c: "heíneken",
-    ans: "a",
-    expl: {
-        a: "Správně. ει → ej a ostrý přídech → h: εἵνεκεν → héjneken (kvůli, pro).",
-        b: "Špatně. εἵ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. ει → ej, nikoli ei."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „τοῖς“?",
-    a: "tojs",
-    b: "toís",
-    c: "tejs",
-    ans: "a",
-    expl: {
-        a: "Správně. οι → oj: τοῖς → tojs (těm, těmto).",
-        b: "Špatně. οι se přepisuje jako oj, nikoli oi.",
-        c: "Špatně. ει → ej, ale zde je οι → oj."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „Κροίσῳ“?",
-    a: "Krojsó",
-    b: "Kroísó",
-    c: "Kréjsó",
-    ans: "a",
-    expl: {
-        a: "Správně. οι → oj a ω → ó: Κροίσῳ → Krojsó (Kroisovi).",
-        b: "Špatně. οι → oj, nikoli oi.",
-        c: "Špatně. η → é a ει → ej, ale zde je οι → oj."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ὁμοῖον“?",
-    a: "homojon",
-    b: "omojon",
-    c: "homoíon",
-    ans: "a",
-    expl: {
-        a: "Správně. Ostrý přídech → h a οι → oj: ὁμοῖον → homojon (podobné, stejné).",
-        b: "Špatně. ὁ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. οι → oj, nikoli oi."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „υἱός“?",
-    a: "hyjós",
-    b: "hyiós",
-    c: "hjós",
-    ans: "a",
-    expl: {
-        a: "Správně. υι → yj a ostrý přídech → h: υἱός → hyjós (syn).",
-        b: "Špatně. υι se přepisuje jako yj, nikoli yi.",
-        c: "Špatně. υι → yj a υ se tedy nepřepisuje jako obyčejné i."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „υἱεῖς“?",
-    a: "hyjejs",
-    b: "hyeís",
-    c: "yjejs",
-    ans: "a",
-    expl: {
-        a: "Správně. υι → yj, ει → ej a ostrý přídech → h: υἱεῖς → hyjejs (synové).",
-        b: "Špatně. υι → yj a ει → ej.",
-        c: "Špatně. υἱ má ostrý přídech, proto se na začátku píše h."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτοῦ“?",
-    a: "autoú",
-    b: "aftoú",
-    c: "autú",
-    ans: "c",
-    expl: {
-        a: "Špatně. ου se přepisuje jako ú, takže αὐτοῦ → autú.",
-        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au, nikoli aft.",
-        c: "Správně. αυ → au a ου → ú: αὐτοῦ → autú (jeho, od něho)."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτό“?",
-    a: "autó",
-    b: "aftó",
-    c: "autú",
-    ans: "a",
-    expl: {
-        a: "Správně. αυ → au: αὐτό → autó (samo, to).",
-        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au.",
-        c: "Špatně. ου → ú, ale zde je αυ → au."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „αὐτάρ“?",
-    a: "autár",
-    b: "aftár",
-    c: "autér",
-    ans: "a",
-    expl: {
-        a: "Správně. αυ → au: αὐτάρ → autár (však, ale, potom).",
-        b: "Špatně. Podle našich pravidel se αυ přepisuje jako au.",
-        c: "Špatně. η → é, ale zde je α → a a αυ → au."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „εὐδαιμονία“?",
-    a: "eudajmonía",
-    b: "evdaimonía",
-    c: "eudajmonéa",
-    ans: "a",
-    expl: {
-        a: "Správně. ευ → eu a αι → aj: εὐδαιμονία → eudajmonía (blaženost, šťastný život).",
-        b: "Špatně. Podle našich pravidel se ευ přepisuje jako eu, nikoli ev.",
-        c: "Špatně. αι → aj a η → é; zde je tedy αι → aj."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „εὐλογία“?",
-    a: "eulogía",
-    b: "evlogía",
-    c: "eudogía",
-    ans: "a",
-    expl: {
-        a: "Správně. ευ → eu: εὐλογία → eulogía (chvála, požehnání).",
-        b: "Špatně. ευ se podle pravidel přepisuje jako eu, nikoli ev.",
-        c: "Špatně. λ → l, takže zde nemůže být d."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ηὕρετο“?",
-    a: "héureto",
-    b: "éureto",
-    c: "hévreto",
-    ans: "a",
-    expl: {
-        a: "Správně. ηυ → éu a ostrý přídech → h: ηὕρετο → héureto (nalezl, nalezla).",
-        b: "Špatně. ηὕ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. ευ → eu, ale zde je ηυ → éu."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ηὗρες“?",
-    a: "héures",
-    b: "éures",
-    c: "hévres",
-    ans: "a",
-    expl: {
-        a: "Správně. ηυ → éu a ostrý přídech → h: ηὗρες → héures (nalezl jsi).",
-        b: "Špatně. ηὗ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. ηυ → éu, nikoli ev."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ηὔξησεν“?",
-    a: "éuxéksen",
-    b: "héuxéksen",
-    c: "éuksen",
-    ans: "a",
-    expl: {
-        a: "Správně. ηυ → éu: ηὔξησεν → éuxéksen (rozmnožil, zvětšil).",
-        b: "Špatně. ηὔ má jemný přídech, takže se h na začátku nepíše.",
-        c: "Špatně. ηυ → éu; druhá část slova obsahuje ξ → x."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „οὐδέ“?",
-    a: "údé",
-    b: "oudé",
-    c: "úte",
-    ans: "a",
-    expl: {
-        a: "Správně. ου → ú: οὐδέ → údé (ani, také ne).",
-        b: "Špatně. ου se podle pravidel přepisuje jako ú, nikoli ou.",
-        c: "Špatně. δ → d, takže správně je údé, nikoli úte."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „οὐδέν“?",
-    a: "údén",
-    b: "oudén",
-    c: "úden",
-    ans: "a",
-    expl: {
-        a: "Správně. ου → ú: οὐδέν → údén (nic).",
-        b: "Špatně. ου → ú, nikoli ou.",
-        c: "Špatně. ε → e, ale zde je ε s přízvukem → é."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „οὐλομελές“?",
-    a: "úlomelés",
-    b: "oulomelés",
-    c: "úlamelés",
-    ans: "a",
-    expl: {
-        a: "Správně. ου → ú: οὐλομελές → úlomelés (celistvé, úplné).",
-        b: "Špatně. ου se přepisuje jako ú, nikoli ou.",
-        c: "Špatně. ο → o, nikoli a; ου → ú."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „Μωυσῆς“?",
-    a: "Móusés",
-    b: "Móysés",
-    c: "Móuéss",
-    ans: "a",
-    expl: {
-        a: "Správně. ωυ → óu: Μωυσῆς → Móusés (Mojžíš).",
-        b: "Špatně. ωυ se podle pravidel přepisuje jako óu, nikoli óy.",
-        c: "Špatně. ωυ → óu a σ → s."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ἕν“?",
-    a: "hén",
-    b: "én",
-    c: "hénn",
-    ans: "a",
-    expl: {
-        a: "Správně. ἕ má ostrý přídech → h: ἕν → hén (jedno, jeden).",
-        b: "Špatně. ἕ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. ν se transkribuje pouze jako n."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ἐπεὶ“?",
-    a: "epej",
-    b: "hepej",
-    c: "epei",
-    ans: "a",
-    expl: {
-        a: "Správně. ἐ má jemný přídech → bez h a ει → ej: ἐπεὶ → epej (protože).",
-        b: "Špatně. ἐ má jemný přídech, který se v transkripci nepíše.",
-        c: "Špatně. ει → ej, nikoli ei."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ὅπως“?",
-    a: "hópós",
-    b: "ópós",
-    c: "hópos",
-    ans: "a",
-    expl: {
-        a: "Správně. ὅ má ostrý přídech → h a přízvuk se zachovává: ὅπως → hópós (jak, aby).",
-        b: "Špatně. ὅ má ostrý přídech, proto se na začátku píše h.",
-        c: "Špatně. Přízvuk se v transkripci zachovává: hópós."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ἐόν“?",
-    a: "eón",
-    b: "heón",
-    c: "eon",
-    ans: "a",
-    expl: {
-        a: "Správně. ἐ má jemný přídech → bez h a přízvuk se zachovává: ἐόν → eón (jsoucí).",
-        b: "Špatně. ἐ má jemný přídech, který se v transkripci nepíše.",
-        c: "Špatně. Přízvuk se v transkripci zachovává jako ó."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ὄλλυσθαι“?",
-    a: "óllysthaj",
-    b: "hóllysthaj",
-    c: "óllusthaj",
-    ans: "a",
-    expl: {
-        a: "Správně. ὄ má jemný přídech → bez h; υ → y; θ → th a αι → aj: ὄλλυσθαι → óllysthaj.",
-        b: "Špatně. ὄ má jemný přídech, který se v transkripci nepíše jako h.",
-        c: "Špatně. υ se podle pravidel přepisuje jako y, nikoli u."
-    }
-},
-{
-    q: "Jak se podle pravidel transkribuje řecké slovo „ἀληθής“?",
-    a: "aléthés",
-    b: "haléthés",
-    c: "aléthes",
-    ans: "a",
-    expl: {
-        a: "Správně. ἀ má jemný přídech → bez h: ἀληθής → aléthés (pravdivý).",
-        b: "Špatně. ἀ má jemný přídech, který se v transkripci nepíše.",
-        c: "Špatně. η → é, proto aléthés."
-    }
-},
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἀρχὴν τοῦ παντὸς εἶναι καὶ τέλος τὸ ὕδωρ.</strong>",
+                    "a": "Počátkem a cílem všeho je voda.",
+                    "b": "Všechno se mění v opak.",
+                    "c": "Všechny krásné věci jsou krásné krásnem.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br><strong>Přirozený překlad:</strong> Počátkem a cílem všeho je voda.<br><strong>Autor / zdroj:</strong> Thalés; Hippolytos, Refutatio I, 1, 1, 2–3.<br><strong>Poznámka k prameni:</strong> Zlomek je dochován prostřednictvím Hippolyta.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πάντα πλήρη θεῶν εἶναι.</strong>",
+                    "a": "Rozum vnáší do světa řád a je příčinou všeho.",
+                    "b": "Všechno je plné bohů.",
+                    "c": "Idea dobra je příčinou rozumového vědění a pravdy.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br><strong>Přirozený překlad:</strong> Všechno je plné bohů.<br><strong>Autor / zdroj:</strong> Thalés; DK 11 A22–A23, tradice u Aetia.<br><strong>Poznámka k prameni:</strong> V opoře se objevují dvě související formulace: „πάντα πλήρη θεῶν εἶναι“ a „τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι“.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι.</strong>",
+                    "a": "Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.",
+                    "b": "Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.",
+                    "c": "Vesmír je oduševněný a plný božstev.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> kosmos/svět – oduševněný – a – božstev – plný – být<br><strong>Přirozený překlad:</strong> Vesmír je oduševněný a plný božstev.<br><strong>Autor / zdroj:</strong> Aetios, DK 11 A23, podle Studijní opory."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τὸ ἄπειρον</strong>",
+                    "a": "Neomezené, nekonečné (apeiron).",
+                    "b": "Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.",
+                    "c": "Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> to – neomezené / bezmezné<br><strong>Přirozený překlad:</strong> Neomezené, nekonečné (apeiron).<br><strong>Autor / zdroj:</strong> Anaximandros; DK 12 A1.<br><strong>Poznámka k prameni:</strong> Jde o filosofický výraz, nikoli úplnou větu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἐξ ὧν δὲ ἡ γένεσίς ἐστι τοῖς οὖσι, καὶ τὴν φθορὰν εἰς ταῦτα γίνεσθαι κατὰ τὸ χρεών· διδόναι γὰρ αὐτὰ δίκην καὶ τίσιν ἀλλήλοις τῆς ἀδικίας κατὰ τὴν τοῦ χρόνου τάξιν.</strong>",
+                    "a": "Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.",
+                    "b": "Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.",
+                    "c": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> z čeho – pak – vznik – je – jsoucím – také – zánik – do těchto – stávat se – podle – nutnosti; dávat – totiž – tyto věci – spravedlivou odplatu – a náhradu – sobě navzájem – za bezpráví – podle – řádu – času<br><strong>Přirozený překlad:</strong> Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.<br><strong>Autor / zdroj:</strong> Anaximandros; DK 12 B1, Simplikios, Fyzika (podle Theofrasta).<br><strong>Poznámka k prameni:</strong> Studijní opora označuje zlomek za jeden z nejstarších zachovaných doslovných filosofických textů.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>οἶον ἡ ψυχή, φησίν, ἡ ἡμετέρα ἀὴρ οὖσα συγκρατεῖ ἡμᾶς, καὶ ὅλον τὸν κόσμον πνεῦμα καὶ ἀὴρ περιέχει.</strong>",
+                    "a": "O bozích nemám vědění, ani že jsou, ani že nejsou.",
+                    "b": "Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.",
+                    "c": "Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> jako – duše – říká – naše – vzduch – jsoucí – ovládá / drží pohromadě – nás; a – celý – kosmos – dech – a – vzduch – objímá<br><strong>Přirozený překlad:</strong> Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.<br><strong>Autor / zdroj:</strong> Anaximenés; DK 13 B2, Aetios.<br><strong>Poznámka k prameni:</strong> Znění je převzato z úplné Studijní opory, s. 18; vsuvka φησίν znamená „říká“."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ὁδὸς ἄνω κάτω μία καὶ ὡυτή.</strong>",
+                    "a": "Cesta nahoru a dolů je jedna a táž.",
+                    "b": "Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.",
+                    "c": "Duše je příčinou toho, že tělo žije.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> cesta – nahoru – dolů – jedna – a – táž<br><strong>Přirozený překlad:</strong> Cesta nahoru a dolů je jedna a táž.<br><strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B60.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πόλεμος πάντων μὲν πατήρ ἐστι, πάντων δὲ βασιλεύς.</strong>",
+                    "a": "Všechno je takové, jak se komu jeví.",
+                    "b": "Boj je otcem všech věcí a králem všech věcí.",
+                    "c": "Všechna jsoucna jsou jsoucí na základě Jedna.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> boj/válka – všech – na jedné straně – otec – je – všech – na druhé straně – král<br><strong>Přirozený překlad:</strong> Boj je otcem všech věcí a králem všech věcí.<br><strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B53.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πάντα μεταβάλλει εἰς ἐναντίον.</strong>",
+                    "a": "Domníval se, že všechny ctnosti jsou věděním.",
+                    "b": "Nepříčinná příčina (příčina, která sama není zapříčiněna).",
+                    "c": "Všechno se mění v opak.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všechno – mění se / přechází – v – opak<br><strong>Přirozený překlad:</strong> Všechno se mění v opak.<br><strong>Autor / zdroj:</strong> Připsáno Hérakleitovi v předchozím výběru.<br><strong>Poznámka k prameni:</strong> Přesné znění a odkaz nejsou v dodané Studijní opoře ani prezentacích doloženy; ponecháno kvůli požadavku zahrnout celý předchozí výběr."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>νοῦς ἐστιν ὁ διακοσμῶν τε καὶ πάντων αἴτιος.</strong>",
+                    "a": "Rozum vnáší do světa řád a je příčinou všeho.",
+                    "b": "To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.",
+                    "c": "Setrvání – vycházení – návrat.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> rozum/intelekt – je – ten, který uspořádává – a také – všeho – příčina<br><strong>Přirozený překlad:</strong> Rozum vnáší do světa řád a je příčinou všeho.<br><strong>Autor / zdroj:</strong> Anaxagorás; DK 59 A47, 2–3; Platón, Faidón 97b.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>οὐκ ἔστιν κίνησις οὖσα ἄνευ κενοῦ, τὸ τε κενὸν μὴ ὂν· καὶ τοῦ ὄντος οὐδὲν μὴ ὂν εἶναι.</strong>",
+                    "a": "Naše učení není nic jiného než vzpomínání.",
+                    "b": "Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.",
+                    "c": "Kladná teologie – záporná teologie.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> není – pohyb – jsoucí – bez – prázdna; a – prázdno – nejsoucí; a – jsoucna – nic – nejsoucí – být<br><strong>Přirozený překlad:</strong> Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.<br><strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory.<br><strong>Poznámka k prameni:</strong> Řecké znění zde odpovídá zkrácené podobě citátu uvedené v opoře; nepřidávat jako doslovný originál delší parafrázi.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἐκ δὲ τοῦ κατὰ ἀλήθειαν ἑνὸς οὐκ ἂν γένοιτο πλῆθος, οὐδὲ ἐκ τῶν ἀληθῶς πολλῶν ἕν.</strong>",
+                    "a": "Všechny krásné věci jsou krásné krásnem.",
+                    "b": "Jedno – to, co přesahuje bytí.",
+                    "c": "Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> z – toho – pak – podle pravdy – jednoho – nemohlo by – vzniknout – množství; ani – z – těch – skutečně – mnohých – jedno<br><strong>Přirozený překlad:</strong> Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.<br><strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>νόμῳ γλυκύ, νόμῳ πικρόν, νόμῳ θερμόν, νόμῳ ψυχρόν, νόμῳ χροιή· ἐτεῇ δὲ ἄτομα καὶ κενόν.</strong>",
+                    "a": "Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.",
+                    "b": "Idea dobra je příčinou rozumového vědění a pravdy.",
+                    "c": "Setrvání – vycházení – návrat.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno<br><strong>Přirozený překlad:</strong> Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.<br><strong>Autor / zdroj:</strong> Démokritos; DK 68 B125, Galénos a Sextos.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>περὶ μὲν θεῶν οὐκ ἔχω εἰδέναι οὔθ᾽ ὡς εἰσίν, οὔθ᾽ ὡς οὐκ εἰσίν.</strong>",
+                    "a": "Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.",
+                    "b": "O bozích nemám vědění, ani že jsou, ani že nejsou.",
+                    "c": "Očista – osvícení – dokonalost.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> o – bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou<br><strong>Přirozený překlad:</strong> O bozích nemám vědění, ani že jsou, ani že nejsou.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 B4, Diogenés Laertios IX, 51.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πάντων χρημάτων μέτρον ἄνθρωπος, τῶν μὲν ὄντων ὡς ἔστι, τῶν δὲ οὐκ ὄντων ὡς οὐκ ἔστιν.</strong>",
+                    "a": "Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.",
+                    "b": "Extáze – sjednocení či dovršení.",
+                    "c": "Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou<br><strong>Přirozený překlad:</strong> Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 B1, citováno u Sexta Empirika."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πάντα εἶναι ὅσα πᾶσι φαίνεται.</strong>",
+                    "a": "Všechno je takové, jak se komu jeví.",
+                    "b": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
+                    "c": "Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> všechno – být – tolik/co – všem – jeví se<br><strong>Přirozený překlad:</strong> Všechno je takové, jak se komu jeví.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 A14, Sextos.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>φρονήσει ἑκάστην τῶν ἀρετῶν εἶναι πάσας τὰς ἀρετάς.</strong>",
+                    "a": "Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.",
+                    "b": "Domníval se, že všechny ctnosti jsou věděním.",
+                    "c": "Poznání podobného podobným.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> rozumností / praktickou moudrostí – každou – z – ctností – být – všechny – ctnosti<br><strong>Přirozený překlad:</strong> Domníval se, že všechny ctnosti jsou věděním.<br><strong>Autor / zdroj:</strong> Aristotelés, Etika Nikomachova 1144b18; v opoře v souvislosti se Sókratem.<br><strong>Poznámka k prameni:</strong> Řecká formulace v opoře je citována jako „φρονήσει ἑτο εἶναι πάσας τὰς ἀρετάς“; v souboru je uvedena čitelná normalizovaná podoba, nikoli jistota diplomatického přepisu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τοῦτο δέ ἐστιν ἀνάμνησις ἐκείνων, ἃ ποτ᾽ εἶδεν ἡμῶν ἡ ψυχή ... ἀνακύψασα εἰς τὸ ὂν ὄντως.</strong>",
+                    "a": "Duše je příčinou toho, že tělo žije.",
+                    "b": "Totéž je myslet a být.",
+                    "c": "To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> toto – pak – je – vzpomínání – na ona – která – kdysi – spatřila – naše – duše ... pozdvihnuvši se – k – jsoucnu – skutečně<br><strong>Přirozený překlad:</strong> To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.<br><strong>Autor / zdroj:</strong> Platón, Faidros 249c."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἡ μὲν μάθησις οὐκ ἄλλο τι ἢ ἀνάμνησις.</strong>",
+                    "a": "Naše učení není nic jiného než vzpomínání.",
+                    "b": "Všechna jsoucna jsou jsoucí na základě Jedna.",
+                    "c": "Počátkem a cílem všeho je voda.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> učení – tedy – není – něco jiného – než – rozpomínání<br><strong>Přirozený překlad:</strong> Naše učení není nic jiného než vzpomínání.<br><strong>Autor / zdroj:</strong> Platón, Faidón 72e.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τῷ καλῷ πάντα τὰ καλὰ γίγνεται καλά.</strong>",
+                    "a": "Nepříčinná příčina (příčina, která sama není zapříčiněna).",
+                    "b": "Všechny krásné věci jsou krásné krásnem.",
+                    "c": "Všechno je plné bohů.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> krásnem – všechny – krásné – věci – stávají se – krásnými<br><strong>Přirozený překlad:</strong> Všechny krásné věci jsou krásné krásnem.<br><strong>Autor / zdroj:</strong> Platón, Faidón 100d.<br><strong>Poznámka k prameni:</strong> V opoře je citováno zkráceně jako „τὰ καλὰ πάντα γίγνεται καλά“; zde je doplněna vazba odpovídající doslovnému smyslu citátu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τὴν τοῦ ἀγαθοῦ ἰδέαν ... εἶναι αἰτίαν δ᾽ ἐπιστήμης οὖσαν καὶ ἀληθείας.</strong>",
+                    "a": "Setrvání – vycházení – návrat.",
+                    "b": "Vesmír je oduševněný a plný božstev.",
+                    "c": "Idea dobra je příčinou rozumového vědění a pravdy.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> dobro – ideu ... být – příčinou – pak – vědění – jsoucí – a – pravdy<br><strong>Přirozený překlad:</strong> Idea dobra je příčinou rozumového vědění a pravdy.<br><strong>Autor / zdroj:</strong> Platón, Ústava 508e, podle Studijní opory."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>οὐκ οὐσίας ὄντος τοῦ ἀγαθοῦ, ἀλλ᾽ ἔτι ἐπέκεινα τῆς οὐσίας πρεσβείᾳ καὶ δυνάμει ὑπερέχοντος.</strong>",
+                    "a": "Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.",
+                    "b": "Kladná teologie – záporná teologie.",
+                    "c": "Neomezené, nekonečné (apeiron).",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> ne – jsoucností – jsoucího – dobra, nýbrž – ještě – za/přesahujícího – jsoucnost – důstojností – a – mocí – vynikajícího<br><strong>Přirozený překlad:</strong> Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.<br><strong>Autor / zdroj:</strong> Platón, Ústava 509b, podle Studijní opory.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>εἶδος ἓν ἕκαστον ... ἐπὶ πολλὰ ἄττα, οἷς ταὐτὸν ὄνομα ἐπιφέρομεν.</strong>",
+                    "a": "Jedno – to, co přesahuje bytí.",
+                    "b": "Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.",
+                    "c": "Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> idea/druh – jedno – každé ... – na – mnoho – jednotlivých věcí, kterým – stejné – jméno – přikládáme<br><strong>Přirozený překlad:</strong> Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.<br><strong>Autor / zdroj:</strong> Platón, Ústava 596a.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>φιλόσοφοι = ἕκαστον τὸ ὂν ἀσπαζόμενοι.</strong>",
+                    "a": "Setrvání – vycházení – návrat.",
+                    "b": "Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.",
+                    "c": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> filosofové = každé – jednotlivé – jsoucno – s láskou přijímající / vítající<br><strong>Přirozený překlad:</strong> Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.<br><strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Prezentace uvádí tento výrok jako „VĚTA“, ale bez přesného odkazu na dialog."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>νόησιν μὲν ἐπὶ τῷ ἀνωτάτω, διάνοιαν δὲ ἐπὶ τῷ δευτέρῳ, τῷ τρίτῳ δὲ πίστιν ἀπόδος καὶ τῷ τελευταίῳ εἰκασίαν.</strong>",
+                    "a": "Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.",
+                    "b": "Očista – osvícení – dokonalost.",
+                    "c": "Cesta nahoru a dolů je jedna a táž.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> rozumové poznání – na jedné straně – na nejvyšším; myšlení – pak – na druhém; třetímu – pak – přiřaď – víru – a – poslednímu – domněnku<br><strong>Přirozený překlad:</strong> Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.<br><strong>Autor / zdroj:</strong> Platón, Ústava 511d–e; prezentace Platonismus.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ψυχὴ αἴτιόν ἐστι τοῦ ζῆν αὐτῷ σώματι.</strong>",
+                    "a": "Extáze – sjednocení či dovršení.",
+                    "b": "Duše je příčinou toho, že tělo žije.",
+                    "c": "Boj je otcem všech věcí a králem všech věcí.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> duše – příčinou – je – toho – žít – samotnému – tělu<br><strong>Přirozený překlad:</strong> Duše je příčinou toho, že tělo žije.<br><strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> V prezentaci je věta uvedena jako samostatný výrok bez přesného odkazu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>πάντα τὰ ὄντα τῷ ἑνὶ ἐστιν ὄντα.</strong>",
+                    "a": "Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“",
+                    "b": "Všechno se mění v opak.",
+                    "c": "Všechna jsoucna jsou jsoucí na základě Jedna.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br><strong>Přirozený překlad:</strong> Všechna jsoucna jsou jsoucí na základě Jedna.<br><strong>Autor / zdroj:</strong> Plótínos; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Jde o formulaci uvedenou v prezentaci; přesný spisový odkaz není připojen."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἀναιτίως αἴτιον.</strong>",
+                    "a": "Nepříčinná příčina (příčina, která sama není zapříčiněna).",
+                    "b": "Poznání podobného podobným.",
+                    "c": "Rozum vnáší do světa řád a je příčinou všeho.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> nezapříčiněná / bez příčiny – příčina<br><strong>Přirozený překlad:</strong> Nepříčinná příčina (příčina, která sama není zapříčiněna).<br><strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Filosofický výraz, nikoli úplná věta.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>μονή – πρόοδος – ἐπιστροφή.</strong>",
+                    "a": "Totéž je myslet a být.",
+                    "b": "Setrvání – vycházení – návrat.",
+                    "c": "Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br><strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br><strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus; převzato také v dionysiovském kontextu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>καταφατική θεολογία – ἀποφατική θεολογία.</strong>",
+                    "a": "Počátkem a cílem všeho je voda.",
+                    "b": "Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.",
+                    "c": "Kladná teologie – záporná teologie.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> kladná / afirmativní – teologie; záporná / apofatická – teologie<br><strong>Přirozený překlad:</strong> Kladná teologie – záporná teologie.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Kladná cesta vypovídá o Bohu prostřednictvím jeho účinků a jmen; záporná cesta odnímá tvrzení, která Boha nemohou vystihnout."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἕν – ὑπερούσιος.</strong>",
+                    "a": "Jedno – to, co přesahuje bytí.",
+                    "b": "Všechno je plné bohů.",
+                    "c": "Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> Jedno – nad-jsoucí / nad jsoucností<br><strong>Přirozený překlad:</strong> Jedno – to, co přesahuje bytí.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Nejde o synonyma: ἕν označuje Jedno; ὑπερούσιος charakterizuje jeho přesah vůči bytí.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>μονή – πρόοδος – ἐπιστροφή.</strong>",
+                    "a": "Vesmír je oduševněný a plný božstev.",
+                    "b": "Setrvání – vycházení – návrat.",
+                    "c": "O bozích nemám vědění, ani že jsou, ani že nejsou.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br><strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br><strong>Autor / zdroj:</strong> Proklovská triáda převzatá Dionysiem; prezentace Dionysius Areopagita.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>κάθαρσις – φωτισμός – τελείωσις.</strong>",
+                    "a": "Neomezené, nekonečné (apeiron).",
+                    "b": "Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.",
+                    "c": "Očista – osvícení – dokonalost.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> očištění – osvícení – zdokonalení / dovršení<br><strong>Přirozený překlad:</strong> Očista – osvícení – dokonalost.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita; schéma cesty v církevní hierarchii.<br><strong>Poznámka k prameni:</strong> Prezentace uvádí latinské podoby purificatio, illuminatio, perfectio. Řecké ekvivalenty zde slouží jako terminologické protějšky, nikoli jako doslovný citát z prezentace."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἔκστασις – τελείωσις.</strong>",
+                    "a": "Extáze – sjednocení či dovršení.",
+                    "b": "Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.",
+                    "c": "Všechno je takové, jak se komu jeví.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> vyjití ze sebe – zdokonalení / dovršení<br><strong>Přirozený překlad:</strong> Extáze – sjednocení či dovršení.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Prezentace popisuje extázi a sjednocení s počátkem; přesné řecké spojení jako citát neuvádí.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>οὐ τὸ ὂν καὶ πᾶν.</strong>",
+                    "a": "Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.",
+                    "b": "Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“",
+                    "c": "Domníval se, že všechny ctnosti jsou věděním.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Správně.<br><strong>Doslovný překlad:</strong> ne – jsoucno – a – všechno<br><strong>Přirozený překlad:</strong> Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“<br><strong>Autor / zdroj:</strong> Přesné znění ani zdroj nejsou v dodaných souborech doloženy.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>γνῶσις τοῦ ὁμοίου τῷ ὁμοίῳ.</strong>",
+                    "a": "Cesta nahoru a dolů je jedna a táž.",
+                    "b": "To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.",
+                    "c": "Poznání podobného podobným.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Správně.<br><strong>Doslovný překlad:</strong> poznání – podobného – podobným<br><strong>Přirozený překlad:</strong> Poznání podobného podobným.<br><strong>Autor / zdroj:</strong> Přesné znění a odkaz nebyly v dodaných souborech ověřeny.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>τὸ γὰρ αὐτὸ νοεῖν ἐστίν τε καὶ εἶναι.</strong>",
+                    "a": "Totéž je myslet a být.",
+                    "b": "Boj je otcem všech věcí a králem všech věcí.",
+                    "c": "Naše učení není nic jiného než vzpomínání.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "Správně.<br><strong>Doslovný překlad:</strong> totéž – totiž – myslet – je – a – být<br><strong>Přirozený překlad:</strong> Totéž je myslet a být.<br><strong>Autor / zdroj:</strong> Připsáno Parmenidovi, DK 28 B3, v předchozím výběru. Tento zlomek je důležitý, ale v textovém výpisu dodané opory nebyl nalezen.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
+                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
             ]
         }
     }
