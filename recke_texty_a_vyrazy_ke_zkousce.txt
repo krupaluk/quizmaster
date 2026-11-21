@@ -1,0 +1,427 @@
+ŘECKÉ TEXTY A VÝRAZY KE ZKOUŠCE
+
+Výběr ze Studijní opory a prezentací Platonismus a Dionysius Areopagita
+
+Pořadí sleduje postup Studijní opory od předsokratiků přes Platóna a Aristotela. Platonistické a dionysiovské výrazy z prezentací jsou zařazeny do odpovídajících tematických míst. U každé položky je nejprve doslovný překlad jednotlivých slov v původním pořadí a poté přirozený český překlad.
+
+Poznámka k přesnosti: některé položky jsou ve zdrojích uvedeny jako zlomky dochované u pozdějších autorů, nikoli jako texty zachované přímo v díle daného filosofa. U několika položek převzatých z předchozího seznamu není přesné znění nebo přiřazení v dodaných souborech doloženo; jsou proto výslovně označeny.
+
+I. Předsokratikové a raná řecká filosofie
+
+1. Thalés – počátek a cíl všeho
+
+ἀρχὴν τοῦ παντὸς εἶναι καὶ τέλος τὸ ὕδωρ.
+
+Doslovně (slovo po slově): počátek – všeho – být – a – konec/cíl – voda
+
+Přirozený překlad: Počátkem a cílem všeho je voda.
+
+Autor / zdroj: Thalés; Hippolytos, Refutatio I, 1, 1, 2–3.
+
+Poznámka: Zlomek je dochován prostřednictvím Hippolyta.
+
+2. Thalés – vše je plné bohů
+
+πάντα πλήρη θεῶν εἶναι.
+
+Doslovně (slovo po slově): všechno – plné – bohů – být
+
+Přirozený překlad: Všechno je plné bohů.
+
+Autor / zdroj: Thalés; DK 11 A22–A23, tradice u Aetia.
+
+Poznámka: V opoře se objevují dvě související formulace: „πάντα πλήρη θεῶν εἶναι“ a „τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι“.
+
+3. Thalés – oduševněný kosmos (rozšířená formulace)
+
+τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι.
+
+Doslovně (slovo po slově): kosmos/svět – oduševněný – a – božstev – plný – být
+
+Přirozený překlad: Vesmír je oduševněný a plný božstev.
+
+Autor / zdroj: Aetios, DK 11 A23, podle Studijní opory.
+
+4. Anaximandros – apeiron
+
+τὸ ἄπειρον
+
+Doslovně (slovo po slově): to – neomezené / bezmezné
+
+Přirozený překlad: Neomezené, nekonečné (apeiron).
+
+Autor / zdroj: Anaximandros; DK 12 A1.
+
+Poznámka: Jde o filosofický výraz, nikoli úplnou větu.
+
+5. Anaximandros – vznik a zánik
+
+ἐξ ὧν δὲ ἡ γένεσίς ἐστι τοῖς οὖσι, καὶ τὴν φθορὰν εἰς ταῦτα γίνεσθαι κατὰ τὸ χρεών· διδόναι γὰρ αὐτὰ δίκην καὶ τίσιν ἀλλήλοις τῆς ἀδικίας κατὰ τὴν τοῦ χρόνου τάξιν.
+
+Doslovně (slovo po slově): z čeho – pak – vznik – je – jsoucím – také – zánik – do těchto – stávat se – podle – nutnosti; dávat – totiž – tyto věci – spravedlivou odplatu – a náhradu – sobě navzájem – za bezpráví – podle – řádu – času
+
+Přirozený překlad: Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.
+
+Autor / zdroj: Anaximandros; DK 12 B1, Simplikios, Fyzika (podle Theofrasta).
+
+Poznámka: Studijní opora označuje zlomek za jeden z nejstarších zachovaných doslovných filosofických textů.
+
+6. Anaximenés – duše a vzduch
+
+οἷον ἡ ψυχὴ ἡ ἡμετέρα ἀὴρ οὖσα συγκρατεῖ ἡμᾶς, καὶ ὅλον τὸν κόσμον πνεῦμα καὶ ἀὴρ περιέχει.
+
+Doslovně (slovo po slově): jako – duše – naše – vzduch – jsoucí – drží pohromadě / ovládá – nás; a – celý – kosmos – dech – a – vzduch – objímá
+
+Přirozený překlad: Jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.
+
+Autor / zdroj: Anaximenés; DK 13 B2, Aetios.
+
+7. Hérakleitos – cesta nahoru a dolů
+
+ὁδὸς ἄνω κάτω μία καὶ ὡυτή.
+
+Doslovně (slovo po slově): cesta – nahoru – dolů – jedna – a – táž
+
+Přirozený překlad: Cesta nahoru a dolů je jedna a táž.
+
+Autor / zdroj: Hérakleitos; DK 22 B60.
+
+8. Hérakleitos – válka jako princip
+
+πόλεμος πάντων μὲν πατήρ ἐστι, πάντων δὲ βασιλεύς.
+
+Doslovně (slovo po slově): boj/válka – všech – na jedné straně – otec – je – všech – na druhé straně – král
+
+Přirozený překlad: Boj je otcem všech věcí a králem všech věcí.
+
+Autor / zdroj: Hérakleitos; DK 22 B53.
+
+9. Hérakleitos – změna v opak
+
+πάντα μεταβάλλει εἰς ἐναντίον.
+
+Doslovně (slovo po slově): všechno – mění se / přechází – v – opak
+
+Přirozený překlad: Všechno se mění v opak.
+
+Autor / zdroj: Připsáno Hérakleitovi v předchozím výběru.
+
+Poznámka: Přesné znění a odkaz nejsou v dodané Studijní opoře ani prezentacích doloženy; ponecháno kvůli požadavku zahrnout celý předchozí výběr.
+
+10. Anaxagorás – nous a řád
+
+νοῦς ἐστιν ὁ διακοσμῶν τε καὶ πάντων αἴτιος.
+
+Doslovně (slovo po slově): rozum/intelekt – je – ten, který uspořádává – a také – všeho – příčina
+
+Přirozený překlad: Rozum vnáší do světa řád a je příčinou všeho.
+
+Autor / zdroj: Anaxagorás; DK 59 A47, 2–3; Platón, Faidón 97b.
+
+11. Leukippos – pohyb a prázdno
+
+οὐκ ἔστιν κίνησις οὖσα ἄνευ κενοῦ, τὸ τε κενὸν μὴ ὂν· καὶ τοῦ ὄντος οὐδὲν μὴ ὂν εἶναι.
+
+Doslovně (slovo po slově): není – pohyb – jsoucí – bez – prázdna; a – prázdno – nejsoucí; a – jsoucna – nic – nejsoucí – být
+
+Přirozený překlad: Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.
+
+Autor / zdroj: Leukippos; DK 67 A7, podle Studijní opory.
+
+Poznámka: Řecké znění zde odpovídá zkrácené podobě citátu uvedené v opoře; nepřidávat jako doslovný originál delší parafrázi.
+
+12. Leukippos – jedno a mnohé
+
+ἐκ δὲ τοῦ κατὰ ἀλήθειαν ἑνὸς οὐκ ἂν γένοιτο πλῆθος, οὐδὲ ἐκ τῶν ἀληθῶς πολλῶν ἕν.
+
+Doslovně (slovo po slově): z – toho – pak – podle pravdy – jednoho – nemohlo by – vzniknout – množství; ani – z – těch – skutečně – mnohých – jedno
+
+Přirozený překlad: Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.
+
+Autor / zdroj: Leukippos; DK 67 A7, podle Studijní opory.
+
+13. Démokritos – konvence a skutečnost
+
+νόμῳ γλυκύ, νόμῳ πικρόν, νόμῳ θερμόν, νόμῳ ψυχρόν, νόμῳ χροιή· ἐτεῇ δὲ ἄτομα καὶ κενόν.
+
+Doslovně (slovo po slově): podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno
+
+Přirozený překlad: Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.
+
+Autor / zdroj: Démokritos; DK 68 B125, Galénos a Sextos.
+
+14. Prótagorás – nepoznatelnost bohů
+
+περὶ μὲν θεῶν οὐκ ἔχω εἰδέναι οὔθ᾽ ὡς εἰσίν, οὔθ᾽ ὡς οὐκ εἰσίν.
+
+Doslovně (slovo po slově): o – bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou
+
+Přirozený překlad: O bozích nemám vědění, ani že jsou, ani že nejsou.
+
+Autor / zdroj: Prótagorás; DK 80 B4, Diogenés Laertios IX, 51.
+
+15. Prótagorás – míra všech věcí
+
+πάντων χρημάτων μέτρον ἄνθρωπος, τῶν μὲν ὄντων ὡς ἔστι, τῶν δὲ οὐκ ὄντων ὡς οὐκ ἔστιν.
+
+Doslovně (slovo po slově): všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou
+
+Přirozený překlad: Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.
+
+Autor / zdroj: Prótagorás; DK 80 B1, citováno u Sexta Empirika.
+
+16. Prótagorás – jevení
+
+πάντα εἶναι ὅσα πᾶσι φαίνεται.
+
+Doslovně (slovo po slově): všechno – být – tolik/co – všem – jeví se
+
+Přirozený překlad: Všechno je takové, jak se komu jeví.
+
+Autor / zdroj: Prótagorás; DK 80 A14, Sextos.
+
+II. Sókratés a Platón
+
+17. Sókratés – ctnosti jako vědění
+
+φρονήσει ἑκάστην τῶν ἀρετῶν εἶναι πάσας τὰς ἀρετάς.
+
+Doslovně (slovo po slově): rozumností / praktickou moudrostí – každou – z – ctností – být – všechny – ctnosti
+
+Přirozený překlad: Domníval se, že všechny ctnosti jsou věděním.
+
+Autor / zdroj: Aristotelés, Etika Nikomachova 1144b18; v opoře v souvislosti se Sókratem.
+
+Poznámka: Řecká formulace v opoře je citována jako „φρονήσει ἑτο εἶναι πάσας τὰς ἀρετάς“; v souboru je uvedena čitelná normalizovaná podoba, nikoli jistota diplomatického přepisu.
+
+18. Platón – vzpomínání na skutečné jsoucno
+
+τοῦτο δέ ἐστιν ἀνάμνησις ἐκείνων, ἃ ποτ᾽ εἶδεν ἡμῶν ἡ ψυχή ... ἀνακύψασα εἰς τὸ ὂν ὄντως.
+
+Doslovně (slovo po slově): toto – pak – je – vzpomínání – na ona – která – kdysi – spatřila – naše – duše ... pozdvihnuvši se – k – jsoucnu – skutečně
+
+Přirozený překlad: To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.
+
+Autor / zdroj: Platón, Faidros 249c.
+
+19. Platón – učení jako rozpomínání
+
+ἡ μὲν μάθησις οὐκ ἄλλο τι ἢ ἀνάμνησις.
+
+Doslovně (slovo po slově): učení – tedy – není – něco jiného – než – rozpomínání
+
+Přirozený překlad: Naše učení není nic jiného než vzpomínání.
+
+Autor / zdroj: Platón, Faidón 72e.
+
+20. Platón – krásné věci a Krása
+
+τῷ καλῷ πάντα τὰ καλὰ γίγνεται καλά.
+
+Doslovně (slovo po slově): krásnem – všechny – krásné – věci – stávají se – krásnými
+
+Přirozený překlad: Všechny krásné věci jsou krásné krásnem.
+
+Autor / zdroj: Platón, Faidón 100d.
+
+Poznámka: V opoře je citováno zkráceně jako „τὰ καλὰ πάντα γίγνεται καλά“; zde je doplněna vazba odpovídající doslovnému smyslu citátu.
+
+21. Platón – idea dobra jako příčina poznání
+
+τὴν τοῦ ἀγαθοῦ ἰδέαν ... εἶναι αἰτίαν δ᾽ ἐπιστήμης οὖσαν καὶ ἀληθείας.
+
+Doslovně (slovo po slově): dobro – ideu ... být – příčinou – pak – vědění – jsoucí – a – pravdy
+
+Přirozený překlad: Idea dobra je příčinou rozumového vědění a pravdy.
+
+Autor / zdroj: Platón, Ústava 508e, podle Studijní opory.
+
+22. Platón – dobro nad jsoucností
+
+οὐκ οὐσίας ὄντος τοῦ ἀγαθοῦ, ἀλλ᾽ ἔτι ἐπέκεινα τῆς οὐσίας πρεσβείᾳ καὶ δυνάμει ὑπερέχοντος.
+
+Doslovně (slovo po slově): ne – jsoucností – jsoucího – dobra, nýbrž – ještě – za/přesahujícího – jsoucnost – důstojností – a – mocí – vynikajícího
+
+Přirozený překlad: Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.
+
+Autor / zdroj: Platón, Ústava 509b, podle Studijní opory.
+
+23. Platón – jedno a mnohé
+
+εἶδος ἓν ἕκαστον ... ἐπὶ πολλὰ ἄττα, οἷς ταὐτὸν ὄνομα ἐπιφέρομεν.
+
+Doslovně (slovo po slově): idea/druh – jedno – každé ... – na – mnoho – jednotlivých věcí, kterým – stejné – jméno – přikládáme
+
+Přirozený překlad: Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.
+
+Autor / zdroj: Platón, Ústava 596a.
+
+24. Platón – filosofové a jsoucno
+
+φιλόσοφοι = ἕκαστον τὸ ὂν ἀσπαζόμενοι.
+
+Doslovně (slovo po slově): filosofové = každé – jednotlivé – jsoucno – s láskou přijímající / vítající
+
+Přirozený překlad: Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.
+
+Autor / zdroj: Platón; prezentace Platonismus.
+
+Poznámka: Prezentace uvádí tento výrok jako „VĚTA“, ale bez přesného odkazu na dialog.
+
+25. Platón – čtyři stupně poznání
+
+νόησιν μὲν ἐπὶ τῷ ἀνωτάτω, διάνοιαν δὲ ἐπὶ τῷ δευτέρῳ, τῷ τρίτῳ δὲ πίστιν ἀπόδος καὶ τῷ τελευταίῳ εἰκασίαν.
+
+Doslovně (slovo po slově): rozumové poznání – na jedné straně – na nejvyšším; myšlení – pak – na druhém; třetímu – pak – přiřaď – víru – a – poslednímu – domněnku
+
+Přirozený překlad: Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.
+
+Autor / zdroj: Platón, Ústava 511d–e; prezentace Platonismus.
+
+26. Platón – duše jako příčina života těla
+
+ψυχὴ αἴτιόν ἐστι τοῦ ζῆν αὐτῷ σώματι.
+
+Doslovně (slovo po slově): duše – příčinou – je – toho – žít – samotnému – tělu
+
+Přirozený překlad: Duše je příčinou toho, že tělo žije.
+
+Autor / zdroj: Platón; prezentace Platonismus.
+
+Poznámka: V prezentaci je věta uvedena jako samostatný výrok bez přesného odkazu.
+
+III. Plótínos a Proklos
+
+27. Plótínos – jsoucna a Jedno
+
+πάντα τὰ ὄντα τῷ ἑνὶ ἐστιν ὄντα.
+
+Doslovně (slovo po slově): všechna – jsoucna – skrze Jedno – jsou – jsoucí
+
+Přirozený překlad: Všechna jsoucna jsou jsoucí na základě Jedna.
+
+Autor / zdroj: Plótínos; prezentace Platonismus.
+
+Poznámka: Jde o formulaci uvedenou v prezentaci; přesný spisový odkaz není připojen.
+
+28. Proklos – nepříčinná příčina
+
+ἀναιτίως αἴτιον.
+
+Doslovně (slovo po slově): nezapříčiněná / bez příčiny – příčina
+
+Přirozený překlad: Nepříčinná příčina (příčina, která sama není zapříčiněna).
+
+Autor / zdroj: Proklos; prezentace Platonismus.
+
+Poznámka: Filosofický výraz, nikoli úplná věta.
+
+29. Proklos – triáda emanace
+
+μονή – πρόοδος – ἐπιστροφή.
+
+Doslovně (slovo po slově): setrvání / prodlévání – vycházení – obrat zpět / návrat
+
+Přirozený překlad: Setrvání – vycházení – návrat.
+
+Autor / zdroj: Proklos; prezentace Platonismus; převzato také v dionysiovském kontextu.
+
+IV. Dionysius Areopagita – související termíny v párech a triádách
+
+30. Kladná a záporná teologie
+
+καταφατική θεολογία – ἀποφατική θεολογία.
+
+Doslovně (slovo po slově): kladná / afirmativní – teologie; záporná / apofatická – teologie
+
+Přirozený překlad: Kladná teologie – záporná teologie.
+
+Autor / zdroj: Prezentace Dionysius Areopagita.
+
+Poznámka: Kladná cesta vypovídá o Bohu prostřednictvím jeho účinků a jmen; záporná cesta odnímá tvrzení, která Boha nemohou vystihnout.
+
+31. Jedno a nad-jsoucí
+
+ἕν – ὑπερούσιος.
+
+Doslovně (slovo po slově): Jedno – nad-jsoucí / nad jsoucností
+
+Přirozený překlad: Jedno – to, co přesahuje bytí.
+
+Autor / zdroj: Prezentace Dionysius Areopagita.
+
+Poznámka: Nejde o synonyma: ἕν označuje Jedno; ὑπερούσιος charakterizuje jeho přesah vůči bytí.
+
+32. Setrvání, vycházení a návrat
+
+μονή – πρόοδος – ἐπιστροφή.
+
+Doslovně (slovo po slově): setrvání / prodlévání – vycházení – obrat zpět / návrat
+
+Přirozený překlad: Setrvání – vycházení – návrat.
+
+Autor / zdroj: Proklovská triáda převzatá Dionysiem; prezentace Dionysius Areopagita.
+
+33. Očista, osvícení a dokonalost
+
+κάθαρσις – φωτισμός – τελείωσις.
+
+Doslovně (slovo po slově): očištění – osvícení – zdokonalení / dovršení
+
+Přirozený překlad: Očista – osvícení – dokonalost.
+
+Autor / zdroj: Prezentace Dionysius Areopagita; schéma cesty v církevní hierarchii.
+
+Poznámka: Prezentace uvádí latinské podoby purificatio, illuminatio, perfectio. Řecké ekvivalenty zde slouží jako terminologické protějšky, nikoli jako doslovný citát z prezentace.
+
+34. Extáze a sjednocení
+
+ἔκστασις – τελείωσις.
+
+Doslovně (slovo po slově): vyjití ze sebe – zdokonalení / dovršení
+
+Přirozený překlad: Extáze – sjednocení či dovršení.
+
+Autor / zdroj: Prezentace Dionysius Areopagita.
+
+Poznámka: Prezentace popisuje extázi a sjednocení s počátkem; přesné řecké spojení jako citát neuvádí.
+
+V. Výrazy z předchozího výběru, jejichž přesné znění vyžaduje ověření
+
+Následující položky byly součástí předchozího návrhu, a proto jsou zde zachovány. Jejich přesné řecké znění nebo přiřazení však nelze bezpečně potvrdit z dodaných tří souborů. Nedoporučuji učit se je jako jisté doslovné citáty, dokud je neověříme v konkrétním vydání.
+
+1. Xenofanés – formulace o jsoucnu a celku
+
+οὐ τὸ ὂν καὶ πᾶν.
+
+Doslovně (slovo po slově): ne – jsoucno – a – všechno
+
+Přirozený překlad: Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“
+
+Autor / zdroj: Přesné znění ani zdroj nejsou v dodaných souborech doloženy.
+
+2. Empedoklés – poznání podobného podobným
+
+γνῶσις τοῦ ὁμοίου τῷ ὁμοίῳ.
+
+Doslovně (slovo po slově): poznání – podobného – podobným
+
+Přirozený překlad: Poznání podobného podobným.
+
+Autor / zdroj: Přesné znění a odkaz nebyly v dodaných souborech ověřeny.
+
+3. Parmenidés – myšlení a bytí
+
+τὸ γὰρ αὐτὸ νοεῖν ἐστίν τε καὶ εἶναι.
+
+Doslovně (slovo po slově): totéž – totiž – myslet – je – a – být
+
+Přirozený překlad: Totéž je myslet a být.
+
+Autor / zdroj: Připsáno Parmenidovi, DK 28 B3, v předchozím výběru. Tento zlomek je důležitý, ale v textovém výpisu dodané opory nebyl nalezen.
+
+VI. Praktické pořadí opakování
+
+Při učení postupuj podle pořadí kapitol v tomto dokumentu, nikoli podle úrovně obtížnosti. U každé věty si nejprve zkus bez nápovědy určit autora a zdroj, potom sestavit doslovný překlad v pořadí řeckých slov a nakonec formulovat přirozený český překlad. U výrazů a triád stačí přesně znát jednotlivé významy a filosofickou souvislost.
+
+Doporučení: nejprve se nauč bezpečně doložené položky z hlavní části. Položky v oddílu V ponech zatím jako kontrolní seznam k ověření, nikoli jako pevnou součást memorování.

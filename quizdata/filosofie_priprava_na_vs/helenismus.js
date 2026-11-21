@@ -1,4 +1,4 @@
-window.data_obdobi_helenismu = {
+window.data_helenismus = {
     "groups": {
         "stoicismus": {
             "title": "Stoicismus",
@@ -14,9 +14,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Se zánikem polis ztratil člověk pocit bezpečí a vlivu na veřejné dění. Helénistická filosofie se proto obrátila do nitra jedince a hledala cestu, jak dosáhnout štěstí nezávisle na vnějších okolnostech a politickém chaosu velkých říší.",
                     c: "Chyba. Filosofie v Athénách nebyla zakázána; naopak, Athény zůstaly intelektuálním centrem, kde sídlila Akademie, Lykeion i nové školy jako Zahrada nebo Stoa."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Která historická osobnost svou expanzí umožnila míšení řecké a orientální kultury?",
                 a: "Periklés",
                 b: "Alexandr Veliký",
@@ -27,9 +26,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Alexandr svými výboji propojil řecký svět s Egyptem a Persií, čímž vznikla kosmopolitní kultura. Tento proces 'helénizace' přinesl do řecké filosofie nové náboženské a mystické prvky z Východu a vytvořil prostor pro myšlenku světoobčanství.",
                     c: "Chyba. Caesar žil o několik století později a upevňoval římskou moc, i když z helénistické kultury silně čerpal."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jak se změnil hlavní cíl filosofie při přechodu z klasického období do helénismu?",
                 a: "Od hledání objektivní pravdy k etice a praktickému životu",
                 b: "Od logiky k čistě metafyzickému zkoumání bohů",
@@ -40,9 +38,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Ačkoliv metafyzika existovala, logika zůstala klíčovým nástrojem, zejména u stoiků, kteří ji rozvinuli do vysoké úrovně.",
                     c: "Chyba. Budování ideálního státu bylo doménou Platóna; helénisté byli k politice často skeptičtí nebo ji vnímali jako nutné zlo."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký vliv mělo propojení s východními kulturami na vnímání panovníka v helénismu?",
                 a: "Panovník byl vnímán jako volený úředník",
                 b: "Přijetí konceptu božského původu krále (sakrální monarchie)",
@@ -53,9 +50,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Pod vlivem Egypta a Persie začali být helénističtí vládci uctíváni jako živoucí bohové nebo spasitelé (Sótér). Tento kult osobnosti výrazně ovlivnil pozdější římské císařství a vytvořil specifické napětí mezi světskou mocí a individuální svobodou filosofa.",
                     c: "Chyba. Demokracie byla v tomto období na ústupu a byla nahrazena absolutní mocí diadochů (nástupců Alexandra)."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký byl vztah helénismu k Sókratovu odkazu?",
                 a: "Helénisté Sókrata odmítali jako příliš politického",
                 b: "Všechny hlavní směry se k Sókratovi hlásily jako ke svému vzoru",
@@ -66,9 +62,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoici, kynikové i skeptici viděli v Sókratovi ideál mudrce, který dává přednost pravdě před životem a ovládá své emoce. Každá škola si však ze Sókrata vybrala jiný aspekt – kynikové jeho askezi, skeptici jeho 'vím, že nic nevím' a stoici jeho morální pevnost.",
                     c: "Chyba. Naopak, Aristotelův vliv v raném helénismu paradoxně mírně oslabil a do popředí se vrátil sókratovský étos."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Kdo založil školu stoicismu v Athénách kolem roku 300 př. n. l.?",
                 a: "Seneca",
                 b: "Marcus Aurelius",
@@ -79,9 +74,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Marcus Aurelius byl římský císař a stoik, ale patřil k pozdní fázi školy.",
                     c: "Správně. Zénón byl obchodník, který po ztroskotání lodi v Athénách propadl filosofii. Protože nebyl athénským občanem, nemohl vlastnit budovu, a tak učil v barevném sloupořadí (Stoa poikilé), od čehož škola odvodila svůj název."
                 },
-                tag: "zenon_z_kitia"
             },
-            {
+                {
                 q: "Jak díky Zénonovi z Kitie stoická filosofie dělila filosofii?",
                 a: "Na politiku, estetiku a metafyziku",
                 b: "Na logiku, fyziku a etiku",
@@ -92,9 +86,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoici přirovnávali filosofii k zahradě: logika je plot (ochrana), fyzika je strom (základ) a etika jsou plody (to nejdůležitější). Všechny tři části byly propojeny – člověk musí znát pravidla myšlení a řád vesmíru, aby mohl žít morálně.",
                     c: "Chyba. Toto rozdělení (quadrivium) se ustálilo až mnohem později ve středověkém vzdělávání."
                 },
-                tag: "zenon_z_kitia"
             },
-            {
+                {
                 q: "Co je pro stoiky 'Logos' v rámci jejich fyziky?",
                 a: "Chaos, který náhodně tvoří svět",
                 b: "Božský rozum a řád prostupující veškerou hmotu",
@@ -105,9 +98,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Pro stoiky je svět živým organismem řízeným racionálním principem (Logem). Tento Logos je materiální (oheň nebo pneuma) a určuje osud všeho, co se děje, což vede k jejich fatalistickému pohledu na svět.",
                     c: "Chyba. Logos je naopak základem pravdy a správného úsudku, nikoliv klamu."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jak stoici chápou svobodu člověka v determinovaném světě?",
                 a: "Svoboda neexistuje, jsme jen loutky",
                 b: "Svoboda je pochopená nutnost a vnitřní souhlas s osudem",
@@ -118,9 +110,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoik přirovnává člověka k psu uvázanému za vozem: vůz (osud) jede dál a pes má volbu buď běžet dobrovolně, nebo být vlečen. Svoboda spočívá v tom, že rozumem nahlédneme řád světa a dobrovolně se mu přizpůsobíme.",
                     c: "Chyba. Vnější svět stoik změnit nemůže, může měnit pouze své vnímání a reakce."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký je význam stoického termínu 'apatheia'?",
                 a: "Nezájem o cokoli a lenost",
                 b: "Stav osvobození od afektů a vášní",
@@ -131,9 +122,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Apatheia neznamená 'necitlivost' v moderním smyslu, ale stav, kdy mudrc není ovládán iracionálními emocemi (strachem, hněvem, přehnanou touhou). Rozum má mít nadvládu nad pudy, aby člověk zůstal klidný za každé situace.",
                     c: "Chyba. Stoik se zániku světa (ekpyrósis) nebojí, vnímá ho jako přirozenou součást cyklu vesmíru."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Kdo byl druhým zakladatelem stoicismu, který dal učení pevnou logickou formu?",
                 a: "Chrysippos ze Soloi",
                 b: "Epiktétos",
@@ -144,9 +134,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Epiktétos byl významný stoik, ale žil až v římské době a soustředil se čistě na etiku.",
                     c: "Chyba. Panaitios patří do střední Stoy a proslavil se spíše tím, že stoicismus uvedl do Říma."
                 },
-                tag: "chrysippos"
             },
-            {
+                {
                 q: "Co stoici považují za jediné skutečné dobro?",
                 a: "Zdraví a dlouhý život",
                 b: "Ctnost (areté)",
@@ -157,9 +146,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Pro stoiky je ctnost jediným nepodmíněným dobrem. Vše ostatní – peníze, sláva, zdraví, nebo i smrt – je morálně lhostejné. Ctnost spočívá v životě v souladu s přírodou a rozumem.",
                     c: "Chyba. Bohatství samo o sobě není ani dobré, ani zlé; záleží pouze na tom, jak s ním naloží naše vnitřní já."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jak stoici nazývají věci jako zdraví, majetek či krása, které nejsou ani dobrem, ani zlem?",
                 a: "Adiafora",
                 b: "Katharsis",
@@ -170,9 +158,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Katharsis je Aristotelův pojem pro očistu skrze umění nebo náboženský rituál.",
                     c: "Chyba. Anamnésis je Platónův koncept rozpomínání se duše na svět idejí."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který směr byl největším soupeřem stoicismu v otázce požitku a strachu ze smrti?",
                 a: "Epikureismus",
                 b: "Novoplatonismus",
@@ -183,9 +170,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Novoplatonismus vznikl mnohem později jako pokus o syntézu a mystickou interpretaci Platóna.",
                     c: "Chyba. Peripatetici byli následovníci Aristotela, jejich vliv byl v helénismu sice stabilní, ale méně 'populární' než nové školy."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který stoický filosof byl původem otrok a kladl důraz na to, co můžeme a nemůžeme ovlivnit?",
                 a: "Epiktétos",
                 b: "Seneca",
@@ -196,10 +182,9 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Seneca byl naopak jeden z nejbohatších mužů Říma a poradce císaře Nerona.",
                     c: "Chyba. Zénón byl zakladatel školy v Řecku, v jeho době se stoicismus teprve formoval jako systém."
                 },
-                tag: "epiktetos"
             },
-            {
-                q: "Jak se nazývá dílo císaře Marca Aurelia, které si psal jako osobní deník pro posílení ducha?",
+                {
+                q: "Jak se nazývá dílo císaře Marca Aurelia, ve kterém se objevuje jeho citát: 'Překážka v činnosti se stává činností; co stojí v cestě činu, stává se cestou.'?",
                 a: "Hovory k sobě (Ta eis heauton)",
                 b: "O blaženém životě",
                 c: "Stát",
@@ -209,9 +194,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. 'O blaženém životě' (De vita beata) je název jednoho z mnoha etických spisů Lucia Annaea Senecy.",
                     c: "Chyba. 'Stát' je nejslavnější dialog Platóna, který patří do klasického období řecké filosofie."
                 },
-                tag: "marcus_aurelius"
             },
-            {
+                {
                 q: "Co je pro stoiky 'Kosmopolis'?",
                 a: "Hlavní město v Malé Asii",
                 b: "Světostát, kde jsou si všichni lidé rovni díky společnému rozumu",
@@ -222,9 +206,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoici věřili, že všichni lidé (včetně otroků a barbarů) mají podíl na vesmírném Logu. Z toho vyvodili, že jsme všichni občany jednoho velkého světa (kosmu), což radikálně překonávalo dřívější řecký šovinismus a později ovlivnilo křesťanské pojetí rovnosti lidí před Bohem.",
                     c: "Chyba. Místem jejich schůzek byla Stoa poikilé, ale termín kosmopolis označuje jejich vizi lidstva."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
                 a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
                 b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
@@ -235,9 +218,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Pro stoiky je člověk 'zoon politikon' v kosmickém smyslu a má povinnost prospívat lidstvu. Epikurejci naopak věřili, že politika přináší jen stres, závist a strach, což je v přímém rozporu s jejich ideálem klidu (ataraxie), proto doporučovali žít skrytě.",
                     c: "Chyba. Tyto školy měly v otázce angažovanosti zcela protichůdné názory, což byl častý bod jejich vzájemných polemik."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který filosofický pojem stoiků označuje 'osud' či 'předurčení'?",
                 a: "Heimarmené",
                 b: "Tyche",
@@ -248,9 +230,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Tyche je bohyně náhody a štěstí; stoici však věřili, že náhoda je jen naše neznalost skutečných příčin.",
                     c: "Chyba. Kairós označuje 'příhodný čas' nebo klíčový okamžik pro jednání, je to termín spíše rétorický a praktický."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který filosofický směr nejvíce ovlivnil formování pojmu 'přirozené právo' (ius naturale)?",
                 a: "Stoicismus",
                 b: "Epikureismus",
@@ -261,9 +242,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Epikurejci vnímali právo jako společenskou smlouvu založenou na užitku, nikoliv na věčném přírodním řádu.",
                     c: "Chyba. Skeptici popírali existenci jakéhokoli objektivního zákona, který by bylo možné poznat a definovat."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký byl vztah římského stoika Marca Aurelia k jeho povinnostem císaře?",
                 a: "Považoval je za zbytečné rozptylování od filosofie",
                 b: "Vnímal je jako tragickou, ale nezbytnou roli v divadle světa",
@@ -274,22 +254,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Marcus Aurelius v 'Hovorech k sobě' často píše o tom, že člověk musí svou roli sehrát důstojně, i když je mu nepříjemná. Přirovnával život k hereckému představení, kde si nevybíráme roli, ale odpovídáme za to, jak dobře ji zahrajeme.",
                     c: "Chyba. Z jeho zápisků je patrné, že moc pro něj byla břemenem a neustálým zdrojem vnitřních konfliktů."
                 },
-                tag: "marcus_aurelius"
             },
-            {
-                q: "Jaký byl skeptický postoj k rituálům a náboženskému kultu?",
-                a: "Považovali je za nebezpečné pověry a zakazovali je",
-                b: "Považovali je za pravdivé cesty k bohům",
-                c: "Dodržovali je, aby nepůsobili rozruch, bez ohledu na pravdivost",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Boj proti náboženství by vyžadoval přesvědčení o jeho nepravdivosti, což skeptik odmítá.",
-                    b: "Chyba. Skeptik neuznává nic jako definitivně pravdivé, tedy ani náboženské dogma.",
-                    c: "Správně. Skeptici se řídili fenomény (jevy) a zvyky. Pokud společnost vykonává rituály, skeptik se k nim připojí, protože je to praktické pro společenský smír a protože nemůže dokázat, že bohové neexistují nebo že rituály nefungují."
-                },
-                tag: "ritualy"
-            },
-            {
+                {
                 q: "Jak stoici vnímali sebevraždu?",
                 a: "Jako největší hřích",
                 b: "Jako 'rozumný odchod' (eulogos exagogé) v situaci, kdy nelze žít důstojně",
@@ -300,9 +266,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoik věří, že život je dar, ale 'dveře jsou otevřené'. Pokud nemoc, tyranie nebo stáří znemožňují žít v souladu s rozumem a plnit povinnosti, je sebevražda vnímána jako poslední akt svobody a důstojnosti moudrého člověka.",
                     c: "Chyba. Stoik nenechává věci jen tak plynout, pokud jde o jeho morální integritu."
                 },
-                tag: "zenon"
             },
-            {
+                {
                 q: "Jaký byl hlavní rozdíl v pojetí 'ctnosti' mezi kyniky a stoiky?",
                 a: "Kynikové ctnost odmítali, stoici ji uctívali",
                 b: "Kynikové ji viděli v askezi a provokaci, stoici v rozumném plnění povinností",
@@ -313,9 +278,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Kynikové (Diogenés) věřili, že ctnost vyžaduje radikální rozchod se společností a návrat k 'psímu' (přirozenému) životu. Stoici (Zénón, Seneca) naopak učili, že ctnostný člověk má žít ve společnosti, zastávat úřady a plnit své povinnosti vůči rodině i státu, pokud mu to dovoluje jeho vnitřní integrita.",
                     c: "Chyba. Rozdíl byl zásadní – kynik byl solitérní rebel, stoik byl disciplinovaný občan vesmíru."
                 },
-                tag: "ctnost_rozdil"
             },
-            {
+                {
                 q: "Který helénistický směr byl nejvíce slučitelný s římským ideálem 'virtus' (mužnost, ctnost)?",
                 a: "Stoicismus",
                 b: "Epikureismus",
@@ -326,21 +290,19 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Epikureismus sice v Římě existoval, ale byl často kritizován za to, že nabádá k vyhýbání se veřejným povinnostem.",
                     c: "Chyba. Skepticismus byl pro praktické Římany příliš abstraktní a málo návodný pro každodenní morální život."
                 },
-                tag: "zenon"
             },
-            {
-                q: "Který filosofický směr helénismu je dnes nejvíce populární v moderní psychologii (např. CBT)?",
-                a: "Stoicismus",
-                b: "Eklektismus",
-                c: "Kynismus",
+                {
+                q: "Seneca v díle 'O hněvu' popisuje vznik emoce jako proces, který máme pod kontrolou. Jak jdou za sebou 4 fáze vzniku hněvu?",
+                a: "Představa → Úsudek → Souhlas → Hněv",
+                b: "Hněv → Představa → Úsudek → Souhlas",
+                c: "Souhlas → Představa → Úsudek → Hněv",
                 ans: "a",
                 expl: {
-                    a: "Správně. Kognitivně-behaviorální terapie (CBT) přímo vychází ze stoické myšlenky, že nás netrápí věci samy, ale náš pohled na ně. Epiktétovy a Senecovy techniky práce s myšlenkami a emocemi jsou dodnes základem moderních metod zvládání stresu, depresí a úzkostí. Stoicismus tak zažívá ve 21. století velkou renesanci.",
-                    b: "Chyba. Eklektismus je sice v psychologii běžný (míchání metod), ale stoicismus poskytuje konkrétní filosofické jádro.",
-                    c: "Chyba. Kynismus je pro moderní klinickou praxi příliš asociální a radikální, i když jeho upřímnost může být inspirativní."
-                },
-                tag: "epiktetos"
-            }
+                    a: "Správně. Podle Seneky hněv není instinkt, ale volba: nejprve přijde vnější podnět (Představa), následuje racionální zhodnocení (Úsudek - 'stala se mi křivda'), poté se mysl rozhodne s tímto hodnocením ztotožnit (Souhlas) a teprve pak propuká samotná emoce (Hněv).",
+                    b: "Tento sled je chybný; hněv je až výsledkem celého procesu, nikoliv jeho počátkem.",
+                    c: "Souhlas nemůže předcházet představě; člověk musí nejdříve něco vnímat, aby k tomu mohl zaujmout postoj."
+                }}
+
             ]
         },
         "epikureismus": {
@@ -357,9 +319,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Lucretius byl římský básník, který Epikúrovo učení geniálně sepsal v básni 'O přírodě', ale nebyl zakladatelem.",
                     c: "Chyba. Zénón z Eleje byl předsokratik známý svými aporiemi (želva a Achilleus), nemá s epikureismem nic společného."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Na čem je založena fyzika epikureismu?",
                 a: "Na myšlence čtyř živlů",
                 b: "Na atomismu Démokrita",
@@ -370,9 +331,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Epikúros převzal Démokritovu teorii, že vše se skládá z atomů a prázdna. Přidal však důležitý prvek 'odchylky' (parenklisis/clinamen), čímž do světa vnesl prvek náhody a svobodné vůle, aby se vyhnul stoickému fatalismu.",
                     c: "Chyba. Epikureismus byl ryze materialistický směr, duše byla pro ně také jen shlukem jemných atomů."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Co je hlavním cílem epikurejské etiky?",
                 a: "Hromadění co největšího množství smyslových požitků",
                 b: "Dosažení stavu bezbolestnosti těla a klidu duše (ataraxie)",
@@ -383,9 +343,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Slast (hédoné) je pro Epikúra primárně absence bolesti (aponia) a neklidu (ataraxie). Ideálem je skromný život v kruhu přátel, uspokojování pouze přirozených a nutných potřeb a vyhýbání se stresu z veřejného života.",
                     c: "Chyba. Epikúros razil heslo 'žij v ústraní' (lathé biósas) a politiku považoval za zdroj neklidu."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Jak se epikureismus stavěl k bohům?",
                 a: "Bohové neexistují, svět je náhoda",
                 b: "Bohové existují, ale o lidské záležitosti se vůbec nestarají",
@@ -396,48 +355,32 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Podle Epikúra žijí bohové v prostorech mezi světy (intermundia) a užívají si dokonalou blaženost. Kdyby zasahovali do světa plného utrpení, nebyli by blažení, proto se jich lidé nemusí bát ani je prosit o pomoc.",
                     c: "Chyba. Právě tento strach z božího trestu se Epikúros snažil svou filosofií vymýtit."
                 },
-                tag: "epikuros"
             },
-            {
-                q: "Který římský básník zachoval Epikúrovo učení ve svém díle 'De rerum natura'?",
-                a: "Horatius",
-                b: "Lucretius",
-                c: "Vergilius",
-                ans: "b",
+                {
+                q: "Co tvoří tzv. Epikurův 'Tetrafarmakos' (Čtyřlék), který má vést k duševnímu klidu?",
+                a: "Boha se netřeba bát, smrti se nebát, dobro je snadné získat, zlo je snadné snášet.",
+                b: "Všeho s mírou, poznej sebe sama, nic příliš, osud je neměnný.",
+                c: "Ctnost je vědění, nikdo nechybuje záměrně, svět je oheň, duše je nesmrtelná.",
+                ans: "a",
                 expl: {
-                    a: "Chyba. Horatius byl sice epikureismem ovlivněn (známé 'Carpe diem'), ale nenapsal o něm systematický spis.",
-                    b: "Správně. Titus Lucretius Carus ve své rozsáhlé básni 'O přírodě' podrobně vysvětlil atomismus a epikurejskou etiku. Díky tomuto dílu se epikureismus stal v Římě velmi populárním a ovlivnil myšlení i v době renesance.",
-                    c: "Chyba. Vergilius byl spíše příznivcem stoicismu a jeho díla mají jiný filosofický podtext."
+                    a: "Správně. Epikuros těmito čtyřmi body útočí na hlavní zdroje lidského neklidu. Bohové se o nás nestarají, smrt se nás netýká (dokud jsme tu my, není tu ona), základní potřeby jsou levné a bolest je buď krátká, nebo snesitelná.",
+                    b: "Toto jsou spíše nápisy z delfské věštírny a obecná antická moudra, nikoliv specifický epikurejský lék.",
+                    c: "Toto jsou myšlenky spojené se Sókratem a Hérakleitem, které jsou v přímém rozporu s epikurejským atomismem a etikou."
                 },
-                tag: "lucretius"
             },
-            {
+                {
                 q: "Jaký byl vztah epikurejců k přátelství?",
                 a: "Považovali ho za nejvyšší formu společenského vztahu",
                 b: "Odmítali ho jako slabost, která ohrožuje nezávislost",
                 c: "Považovali ho za nutné zlo pro obchodní účely",
                 ans: "a",
                 expl: {
-                    a: "Správně. Pro Epikúra bylo přátelství klíčem k bezpečí a štěstí. Zatímco rodinu a manželství vnímal často jako zdroj starostí, přátelství je dobrovolný svazek založený na vzájemné podpoře a společném hledání moudrosti.",
+                    a: "Správně. Pro Epikúra bylo přátelství klíčem k bezpečí a štěstí. Často zdůrazňoval, že ke štěstí stačí chléb, voda a přátelé. Rodinu a manželství naopak vnímal často jako zdroj starostí.",
                     b: "Chyba. Naopak, přátelství bylo v 'Zahradě' pěstováno jako posvátná hodnota.",
                     c: "Chyba. Epikurejci se o obchod a hromadění majetku příliš nezajímali, preferovali skromnost."
                 },
-                tag: "epikuros"
             },
-            {
-                q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
-                a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
-                b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
-                c: "Oba směry se v politice shodovali a prosazovali demokracii",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Je to přesně naopak; stoici byli ti, kteří vnímali službu celku jako projev rozumu.",
-                    b: "Správně. Pro stoiky je člověk 'zoon politikon' v kosmickém smyslu a má povinnost prospívat lidstvu. Epikurejci naopak věřili, že politika přináší jen stres, závist a strach, což je v přímém rozporu s jejich ideálem klidu (ataraxie), proto doporučovali žít skrytě.",
-                    c: "Chyba. Tyto školy měly v otázce angažovanosti zcela protichůdné názory, což byl častý bod jejich vzájemných polemik."
-                },
-                tag: "obecne"
-            },
-            {
+                {
                 q: "Jak epikurejci vysvětlovali vznik náboženství?",
                 a: "Jako dar od bohů lidstvu",
                 b: "Jako výsledek strachu z přírodních úkazů a snů",
@@ -448,9 +391,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Podle Epikúra si lidé bohy vymysleli, protože si neuměli vysvětlit blesky nebo smrt a protože v nich vyvolávaly strach živé sny. Cílem jeho filosofie bylo tento strach odstranit tím, že tyto úkazy vysvětlí pomocí atomů a mechanických příčin.",
                     c: "Chyba. Epikurejci viděli vesmír jako výsledek náhodných srážek atomů, nikoliv jako plánované dílo."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Jaký byl postoj Epikúrea k učení se matematice a geometrii?",
                 a: "Považoval je za základ veškeré moudrosti",
                 b: "Považoval je za zbytečné, protože nepřispívají k blaženosti",
@@ -461,9 +403,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Epikúros byl velmi pragmatický. Tvrdil, že vědy, které nemají přímý vliv na odstranění strachu nebo bolesti, jsou jen ztrátou času. Matematiku vnímal jako odtrženou od smyslové reality, která je pro něj jediným zdrojem pravdy.",
                     c: "Chyba. Naopak, Epikúros často nabádal své žáky, aby se 'vzdali vší kultury', pokud je jen břemenem pro jejich klid."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Jaký byl vztah helénismu k osudu (fatum)?",
                 a: "Všechny školy osud bezvýhradně uctívaly",
                 b: "Stoici ho přijímali, epikurejci se mu snažili vyhnout skrze náhodu",
@@ -474,9 +415,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoici viděli v osudu projev božského rozumu a nutnosti, kterému je třeba se podřídit. Epikurejci naopak zavedli teorii o náhodném pohybu atomů (clinamen), aby zachovali prostor pro svobodnou vůli a zbavili lidi strachu z nevyhnutelného údělu.",
                     c: "Chyba. Osud byl jedním z nejdůležitějších témat helénismu, odrážející nejistotu tehdejší doby."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Co v epikureismu znamená pojem 'prolepsis' v epikurejské teorii poznání?",
                 a: "Vrozená idea, kterou nám do mysli vložili bohové",
                 b: "Předběžný pojem či obecná představa vzniklá opakovanou zkušeností",
@@ -487,9 +427,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Prolepsis je to, co nám umožňuje poznat věc, aniž bychom ji právě viděli. Vzniká tím, že si naše mysl po mnoha vjemech (např. psa) vytvoří obecné schéma, díky kterému rozumíme slovům a můžeme o věcech přemýšlet.",
                     c: "Chyba. Prolepsis je naopak jedním ze tří pilířů epikurejské kanoniky (logiky) a je nezbytná pro správné poznání."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Jak epikurejci definovali 'přirozené a nutné' potřeby?",
                 a: "Jídlo, pití a bezpečí",
                 b: "Drahá jídla a luxusní vily",
@@ -500,9 +439,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Luxus je sice příjemný, ale podle Epikúra vytváří závislost a strach z jeho ztráty.",
                     c: "Chyba. Touha po moci a slávě je podle epikurejců 'prázdná' a vede pouze k utrpení a neustálému stresu."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Co v epikureismu znamená pojem 'aponia'?",
                 a: "Stav bez bolesti těla",
                 b: "Hluboký spánek",
@@ -513,9 +451,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Spánek je sice klidný stav, ale štěstí vyžaduje vědomé prožívání absence bolesti.",
                     c: "Chyba. Epikurejci se práci pro stát aktivně vyhýbali, protože ji považovali za zdroj stresu a utrpení."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Která škola jako první umožnila ženám a otrokům studovat filosofii na rovnoprávné úrovni?",
                 a: "Epikurejská Zahrada",
                 b: "Platónova Akademie",
@@ -526,9 +463,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Akademie byla určena spíše pro elitní vzdělávání mužů z vyšších vrstev, i když existovaly vzácné výjimky.",
                     c: "Chyba. Aristotelés považoval ženy a otroky za přirozeně méněcenné bytosti, které nejsou schopny plné filosofické reflexe."
                 },
-                tag: "epikuros"
             },
-            {
+                {
                 q: "Jaký je hlavní rozdíl mezi antickým 'hédonismem' a moderním 'konzumerismem'?",
                 a: "V antice šlo o kvalitu a klid, dnes jde o kvantitu a spotřebu",
                 b: "Antika neznala peníze, moderní doba ano",
@@ -539,21 +475,19 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. V helénismu byla peněžní ekonomika velmi rozvinutá a filosofové se k ní museli jasně vyjadřovat.",
                     c: "Chyba. Rozdíl je v samotné definici slasti – pro antiku je to vnitřní stav, pro moderní dobu často vnější vlastnictví."
                 },
-                tag: "epikuros"
             },
-            {
-                q: "Co je to 'clinamen' v Lucretiově podání epikureismu?",
-                a: "Náhodná odchylka atomu z jeho dráhy",
-                b: "Latinský název pro zahradu",
-                c: "Druh antického oděvu",
+                {
+                q: "Jak římský básník Lucretius ve svém díle 'O přírodě věcí' (De rerum natura) vysvětluje vznik světa a lidskou svobodu pomocí pojmu 'clinamen'?",
+                a: "Jako náhodnou odchylku atomů z jejich přímé dráhy, která umožňuje jejich srážky.",
+                b: "Jako božský zásah, který usměrňuje chaotický pohyb prvků.",
+                c: "Jako neustálý kruhový pohyb atomů, který nemá začátek ani konec.",
                 ans: "a",
                 expl: {
-                    a: "Správně. Clinamen (řecky parenklisis) je klíčový prvek epikurejské fyziky. Kdyby se atomy pohybovaly jen rovně dolů, nikdy by se nesrazily a nevznikl by svět. Tato náhodná odchylka navíc vysvětluje, jak je v materiálním světě možná svobodná vůle člověka.",
-                    b: "Chyba. Zahrada se latinsky řekne 'hortus'.",
-                    c: "Chyba. S módou tento termín nemá nic společného, je to ryze fyzikální koncept."
-                },
-                tag: "lucretius"
-            },
+                    a: "Správně. Lucretius rozvádí Epikúrovu myšlenku: kdyby atomy padaly prázdnem jen svisle dolů, nikdy by se nesetkaly. 'Clinamen' je drobná, nepředvídatelná odchylka, která způsobuje srážky atomů a vznik věcí. Zároveň tím logicky zdůvodňuje existenci svobodné vůle v jinak mechanickém vesmíru.",
+                    b: "Chyba. Epikureismus a Lucretius naopak tvrdili, že bohové do chodu světa a pohybu atomů nijak nezasahují.",
+                    c: "Chyba. Atomisté věřili v lineární pohyb v prázdnu, který je narušen právě onou náhodnou odchylkou, nikoliv v přirozený kruhový pohyb."
+                }},
+
             {
                 q: "Který filosof napsal slavné 'Listy Luciliovi'?",
                 a: "Epiktétos",
@@ -565,9 +499,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Lucius Annaeus Seneca v těchto dopisech podává praktické rady do života, rozebírá otázky přátelství, stáří i smrti. Dílo je ceněno pro svůj vybroušený styl a hlubokou psychologickou vhlednost do lidské duše.",
                     c: "Chyba. Cicero psal listy (Ad Familiares), ale nebyl stoik, nýbrž eklektik, a jeho listy měly často spíše politický charakter."
                 },
-                tag: "seneca"
             },
-            {
+                {
                 q: "Jaký byl hlavní rozdíl mezi epikurejským a křesťanským pojetím posmrtného života?",
                 a: "Oba věřili v peklo a nebe",
                 b: "Křesťané věřili v nesmrtelnost, epikurejci v definitivní rozpad atomů",
@@ -578,8 +511,18 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Epikúros učil, že duše je složena z atomů, které se po smrti rozletí, a vědomí zaniká. Křesťanství naopak postavilo svou celou věrouku na naději na osobní vzkříšení a věčný život, což byl jeden z hlavních důvodů, proč nakonec nad materialistickým epikureismem zvítězilo.",
                     c: "Chyba. V reinkarnaci věřili spíše pythagorejci a orfici, nikoliv epikurejci."
                 },
-                tag: "obecne"
-            }
+            },
+                {
+                q: "Kterému antickému 'archiváři' vděčíme za zachování většiny autentických textů Epikúra, včetně jeho dopisů a hlavních článků víry?",
+                a: "Diogenés ze Sinópé",
+                b: "Diogenés Laertios",
+                c: "Plútarchos",
+                ans: "b",
+                expl: {
+                    a: "Chyba. To byl slavný kynik, který žil v sudu a s Epikúrovým archivem nemá nic společného.",
+                    b: "Správně. Ve svém díle 'Životy, názory a výroky proslulých filosofů' věnoval Epikúrovi celou desátou knihu. Bez jeho mravenčí práce by se nám nedochovaly klíčové dopisy (např. Herodotovi či Menoikeovi), které tvoří jádro našeho poznání epikureismu.",
+                    c: "Chyba. Plútarchos sice o filosofech psal, ale spíše z morálního hlediska a k epikureismu byl velmi kritický."
+                }}
             ]
         },
         "skepticismus": {
@@ -596,9 +539,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Sextus Empiricus žil až o několik století později a je důležitý spíše jako systematizátor a hlavní zdroj informací o skepticismu.",
                     c: "Chyba. Timón byl Pyrrhónovým žákem a autorem satirických básní, ale za otce zakladatele je tradičně označován Pyrrhón."
                 },
-                tag: "zakladatel"
             },
-            {
+                {
                 q: "Co v řecké skeptické terminologii znamená pojem 'epoché'?",
                 a: "Historické období rozkvětu věd",
                 b: "Zdržení se úsudku o povaze věcí",
@@ -606,12 +548,11 @@ window.data_obdobi_helenismu = {
                 ans: "b",
                 expl: {
                     a: "Chyba. Slovo 'epoché' má v moderních jazycích význam časového úseku, ale ve filosofii má technický význam.",
-                    b: "Správně. Skeptici tvrdili, že o každé věci existují protichůdné výpovědi (isostheneia), které jsou stejně přesvědčivé. Pokud se tedy nemůžeme rozhodnout, co je pravda, měli bychom provést 'epoché' – přestat soudit, čímž se zbavíme neklidu pramenícího z hledání absolutní jistoty.",
+                    b: "Správně. Skeptici tvrdili, že o každé věci existují protichůdné výpovědi (isostheneia), které jsou stejně přesvědčivé. Pokud se tedy nemůžeme rozhodnout, co je pravda, měli bychom provést 'epoché' (pozastavení úsudku), který vede k 'afázii' (stav kdy o věcech mlčíme) čímž se dostaneme do stavu ataraxie (duševního klidu), jelikož se zbavíme neklidu pramenícího z hledání absolutní jistoty.",
                     c: "Chyba. Skeptik nepřijímá žádný názor jako definitivně pravdivý, nýbrž zůstává v pozici hledajícího."
                 },
-                tag: "pyrrhon"
             },
-            {
+                {
                 q: "Jak se nazývá stav duševního klidu, o který usilovali skeptici i epikurejci?",
                 a: "Ataraxia",
                 b: "Apatheia",
@@ -622,9 +563,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Apatheia je termín stoiků, který značí vítězství rozumu nad vášněmi, nikoliv klid plynoucí z nepoznatelnosti světa.",
                     c: "Chyba. Anamnésis je Platónův koncept rozpomínání se duše na svět idejí, což skeptici jako dogmatické tvrzení odmítali."
                 },
-                tag: "pyrrhon"
             },
-            {
+                {
                 q: "Která slavná athénská instituce se v helénismu dočasně přiklonila ke skepticismu?",
                 a: "Platónova Akademie",
                 b: "Aristotelův Lykeion",
@@ -635,9 +575,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Lykeion zůstal věrný spíše empirickému zkoumání přírody a sběru dat, i když jeho vliv v helénismu kolísal.",
                     c: "Chyba. Stoici byli hlavními nepřáteli skeptiků, protože věřili v možnost poznání pravdy skrze smyslové vjemy a rozum."
                 },
-                tag: "platon"
             },
-            {
+                {
                 q: "Kdo byl hlavním představitelem 'Mladší Akademie' a mistrem v argumentaci pro i proti?",
                 a: "Karneadés z Kyrény",
                 b: "Platón",
@@ -648,10 +587,9 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Platón školu založil jako dům hledání absolutní pravdy, nikoliv jejího zpochybňování.",
                     c: "Chyba. Pyrrhón nebyl členem Akademie; založil samostatnou skeptickou tradici, která byla ještě radikálnější."
                 },
-                tag: "karneades"
             },
-            {
-                q: "Jak skeptici pohlíželi na náboženství a tradice?",
+                {
+                q: "Jak skeptici pohlíželi na náboženství, rituály a tradice?",
                 a: "Bojovali proti nim jako proti lžím",
                 b: "Dodržovali je z praktických důvodů, i když v ně nevěřili",
                 c: "Zakládali vlastní náboženské sekty",
@@ -661,9 +599,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Skeptik se drží zvyklostí své země, protože nemá žádné kritérium, podle kterého by mohl dokázat, že jsou špatné. Žít podle tradic je pro ně nejpohodlnější cesta, jak se vyhnout zbytečným konfliktům a udržet si klid (ataraxii).",
                     c: "Chyba. Skepticismus je z podstaty protikladem sektářství a dogmatismu."
                 },
-                tag: "pyrrhon"
             },
-            {
+                {
                 q: "Který prvek helénistické filosofie nejvíce ovlivnil moderní vědeckou metodu?",
                 a: "Skeptická kritika smyslového poznání a dogmat",
                 b: "Stoická víra v magii",
@@ -674,22 +611,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Stoici sice věřili v propojenost světa, ale jejich víra v astrologii a věštění vědu spíše brzdila.",
                     c: "Chyba. Kynikové se o vědu nezajímali vůbec, považovali ji za zbytečnou komplikaci prostého života."
                 },
-                tag: "veda"
             },
-            {
-                q: "Jaký byl skeptický postoj k rituálům a náboženskému kultu?",
-                a: "Považovali je za nebezpečné pověry a zakazovali je",
-                b: "Považovali je za pravdivé cesty k bohům",
-                c: "Dodržovali je, aby nepůsobili rozruch, bez ohledu na pravdivost",
-                ans: "c",
-                expl: {
-                    a: "Chyba. Boj proti náboženství by vyžadoval přesvědčení o jeho nepravdivosti, což skeptik odmítá.",
-                    b: "Chyba. Skeptik neuznává nic jako definitivně pravdivé, tedy ani náboženské dogma.",
-                    c: "Správně. Skeptici se řídili fenomény (jevy) a zvyky. Pokud společnost vykonává rituály, skeptik se k nim připojí, protože je to praktické pro společenský smír a protože nemůže dokázat, že bohové neexistují nebo že rituály nefungují."
-                },
-                tag: "ritualy"
-            },
-            {
+                {
                 q: "V čem spočívala hlavní kritika skepticismu vůči stoické logice?",
                 a: "Stoici jsou příliš pesimističtí",
                 b: "Kritéria pravdy (kataleptické představy) jsou subjektivní a nelze je dokázat",
@@ -700,9 +623,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Skeptici namítali, že pokud stoik tvrdí, že pozná pravdu podle 'jasnosti' vjemu, je to jen pocit. Nemáme totiž žádné nezávislé měřítko, kterým bychom ověřili, že tato jasnost odpovídá skutečné realitě mimo naši mysl.",
                     c: "Chyba. Stoici byli spíše panteisté (bůh je všude), což skeptici brali jako jedno z mnoha nedokazatelných tvrzení."
                 },
-                tag: "pyrrhon"
             },
-            {
+                {
                 q: "Jak se nazývá postoj skeptiků, kteří tvrdí, že o ničem nelze říci 'toto je pravda'?",
                 a: "Dogmatismus",
                 b: "Akatalepsie",
@@ -713,9 +635,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Akatalepsie znamená 'neuchopitelnost'. Skeptici tím vyjadřovali přesvědčení, že lidský rozum ani smysly nemají nástroj, jak proniknout k podstatě věcí. Místo abychom tvrdili, že věci známe, máme jen 'dojmy', které se mohou měnit, což nás má vést k pokoře a klidu.",
                     c: "Chyba. Pantheismus je víra, že bůh je všude v přírodě, což zastávali zejména stoici."
                 },
-                tag: "pyrrhon"
             },
-            {
+                {
                 q: "V čem spočíval tzv. 'Aenesidémův desatero' (trópy)?",
                 a: "Deset přikázání pro šťastný život v ústraní",
                 b: "Deset argumentů zpochybňujících možnost objektivního poznání",
@@ -726,9 +647,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Aenesidémos sestavil seznam deseti situací (trópů), které ukazují relativitu našeho vnímání – například jak se tatáž věc jeví jinak různým živočichům, lidem v různých náladách nebo z různých úhlů pohledu. Z těchto rozporů pak skeptici vyvozovali nutnost zdržet se úsudku (epoché).",
                     c: "Chyba. Skeptici se o hromadění majetku nezajímali, jejich cílem bylo intelektuální osvobození od omylů."
                 },
-                tag: "aenesidemos"
             },
-            {
+                {
                 q: "Kdo byl Sextus Empiricus a proč je pro nás dnes tak důležitý?",
                 a: "Byl to slavný vojevůdce, který dobyl Kartágo",
                 b: "Byl to lékař a skeptik, díky němuž známe argumenty antického skepticismu",
@@ -739,9 +659,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Sextus Empiricus (2. stol. n. l.) sepsal rozsáhlá díla jako 'Náčrt pyrrhonismu', kde systematicky shromáždil všechny skeptické argumenty proti ostatním školám. Protože se většina původních spisů jiných skeptiků ztratila, je Sextus naším hlavním zdrojem informací o tomto fascinujícím směru.",
                     c: "Chyba. Papežství je úřad křesťanské církve, Sextus byl pohanský filosof."
                 },
-                tag: "sextus_empiricus"
             },
-            {
+                {
                 q: "Co v skepticismu znamená termín 'isostheneia'?",
                 a: "Rovnováha sil mezi dvěma protikladnými argumenty",
                 b: "Nemoc způsobená nedostatkem jídla",
@@ -751,9 +670,7 @@ window.data_obdobi_helenismu = {
                     a: "Správně. Isostheneia je stav, kdy pro každé tvrzení (např. 'bohové existují') najdeme stejně silné a logické tvrzení opačné ('bohové neexistují'). Protože ani jedna strana nepřevažuje, je jediným racionálním východiskem zdržet se úsudku (epoché).",
                     b: "Chyba. Nejde o medicínský termín, ale o logický nástroj.",
                     c: "Chyba. Je to přesný opak – nemožnost jakéhokoli názoru zvítězit."
-                },
-                tag: "pyrrhon"
-            }
+                }}
             ]
         },
         "kynismus": {
@@ -770,9 +687,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Pythagorejci se soustředili na čísla a mystiku, což mělo na raný stoicismus jen okrajový vliv.",
                     c: "Chyba. Sofisté se zaměřovali na rétoriku a relativismus, zatímco kynikové a stoici hledali pevné morální zásady."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Kdo je nejznámějším představitelem kynismu, proslulý životem v sudu?",
                 a: "Antisthenés",
                 b: "Diogenés ze Sinópé",
@@ -783,9 +699,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Diogenés dotáhl kynické učení do praxe tím, že se vzdal veškerého majetku a žil v hliněné nádobě (pithos). Svými provokacemi poukazoval na umělost lidských potřeb a oslavoval návrat k přirozenosti a naprosté nezávislosti na společnosti.",
                     c: "Chyba. Zénón z Kitia byl zakladatelem stoicismu; u kyniků se sice učil, ale později si založil vlastní školu."
                 },
-                tag: "diogenes"
             },
-            {
+                {
                 q: "Co v kynickém pojetí znamená pojem 'autarkeia'?",
                 a: "Absolutní poslušnost zákonům státu",
                 b: "Soběstačnost a nezávislost na vnějších věcech",
@@ -796,9 +711,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Autarkeia je stav, kdy člověk ke štěstí nepotřebuje nic než svou vlastní ctnost. Kynikové věřili, že čím méně věcí člověk potřebuje, tím blíže je bohům a tím méně může být zraněn nepřízní osudu.",
                     c: "Chyba. Nejde o politickou moc, ale o moc nad sebou samým a svými touhami."
                 },
-                tag: "diogenes"
             },
-            {
+                {
                 q: "Jak kynikové vnímali tradiční společenské hodnoty jako bohatství a sláva?",
                 a: "Jako užitečné nástroje k šíření filosofie",
                 b: "Jako 'kouř' (typhos) – klamné a zbytečné hodnoty",
@@ -809,9 +723,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Vše, co společnost považovala za důležité (původ, peníze, pověst), kynikové označovali za prázdné iluze. Skutečná hodnota spočívá pouze v charakteru, zatímco vše ostatní je jen zátěž, která člověka zotročuje.",
                     c: "Chyba. Podle kyniků je ctnost jediným dobrem a nevyžaduje žádné materiální zázemí."
                 },
-                tag: "diogenes"
             },
-            {
+                {
                 q: "Který termín označuje kynický požadavek mluvit pravdu za každou cenu, i vůči mocným?",
                 a: "Parrhésia",
                 b: "Eudaimonia",
@@ -822,9 +735,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Eudaimonia je obecný řecký termín pro štěstí či životní naplnění, o které usilovala většina škol.",
                     c: "Chyba. Logos je rozumový princip světa, klíčový termín zejména pro Hérakleita a později stoiky."
                 },
-                tag: "diogenes"
             },
-            {
+                {
                 q: "Který směr zavedl pojem 'svědomí' jako vnitřního soudce lidského jednání?",
                 a: "Stoicismus",
                 b: "Skepticismus",
@@ -835,22 +747,20 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Skeptici se vyhýbali morálním soudům, proto u nich koncept svědomí jako soudce nedával smysl.",
                     c: "Chyba. Kynikové jednali instinktivně a přirozeně, vnitřní analýza svědomí nebyla středobodem jejich učení."
                 },
-                tag: "seneca"
             },
-            {
-                q: "Jaký byl hlavní rozdíl v pojetí 'ctnosti' mezi kyniky a stoiky?",
-                a: "Kynikové ctnost odmítali, stoici ji uctívali",
-                b: "Kynikové ji viděli v askezi a provokaci, stoici v rozumném plnění povinností",
-                c: "V pojetí ctnosti mezi nimi nebyl žádný rozdíl",
+                {
+                q: "Co je podle stoiků 'pneuma' a jaká je jeho role v kosmu?",
+                a: "Pneuma je hmotný prvek podobný vzduchu",
+                b: "Pneuma je duchovní síť protkávající celý vesmír a dávající mu soudržnost",
+                c: "Pneuma je pouze metafora pro dechové cvičení",
                 ans: "b",
                 expl: {
-                    a: "Chyba. Pro oba směry byla ctnost jediným dobrem, lišili se jen v jejím obsahu.",
-                    b: "Správně. Kynikové (Diogenés) věřili, že ctnost vyžaduje radikální rozchod se společností a návrat k 'psímu' (přirozenému) životu. Stoici (Zénón, Seneca) naopak učili, že ctnostný člověk má žít ve společnosti, zastávat úřady a plnit své povinnosti vůči rodině i státu, pokud mu to dovoluje jeho vnitřní integrita.",
-                    c: "Chyba. Rozdíl byl zásadní – kynik byl solitérní rebel, stoik byl disciplinovaný občan vesmíru."
+                    a: "Chyba. Ačkoli pneuma může být přirovnáváno k dechu nebo vzduchu, stoici ji nechápali jako pouze hmotný prvek. Byla to aktivní, duchovní síla.",
+                    b: "Správně. Pro stoiky je pneuma (dech, duch) aktivní princip, který proniká celým kosmos a dává mu soudržnost (sýmpnoia). Spojuje všechny části vesmíru do jednoho živého organismu řízeného Logem.",
+                    c: "Chyba. Pneuma není pouze metafora, ale reálná kosmická síla, která umožňuje život a pohyb ve vesmíru."
                 },
-                tag: "ctnost_rozdil"
             },
-            {
+                {
                 q: "Který helénistický směr měl největší vliv na pozdější křesťanskou askezi a mnišství?",
                 a: "Kynismus a novoplatonismus",
                 b: "Epikureismus",
@@ -861,9 +771,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Epikureismus byl křesťany naopak nenáviděn pro svůj materialismus a důraz na slast (byť umírněnou).",
                     c: "Chyba. Skepticismus byl v mnišství nepoužitelný, protože víra vyžaduje naprostou jistotu o pravdě Boží."
                 },
-                tag: "krestanstvi"
             },
-            {
+                {
                 q: "Co znamená kynický termín 'anaideia'?",
                 a: "Beze studu (provokativní upřímnost)",
                 b: "Hluboká úcta k bohům",
@@ -874,9 +783,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Kynikové měli k náboženství často velmi ironický až pohrdavý postoj.",
                     c: "Chyba. Strach je afekt, kterého se kynikové snažili zbavit, nikoliv ho definovat."
                 },
-                tag: "diogenes"
             },
-            {
+                {
                 q: "Jaký byl postoj helénismu k osudu (fatum)?",
                 a: "Všechny školy osud bezvýhradně uctívaly",
                 b: "Stoici ho přijímali, epikurejci se mu snažili vyhnout skrze náhodu",
@@ -887,9 +795,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Stoici viděli v osudu projev božského rozumu a nutnosti, kterému je třeba se podřídit. Epikurejci naopak zavedli teorii o náhodném pohybu atomů (clinamen), aby zachovali prostor pro svobodnou vůli a zbavili lidi strachu z nevyhnutelného údělu.",
                     c: "Chyba. Osud byl jedním z nejdůležitějších témat helénismu, odrážející nejistotu tehdejší doby."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Co v helénistické filosofii označuje termín 'praxe' (proclis)?",
                 a: "Slepé dodržování pravidel",
                 b: "Cvičení k ovládnutí vlastních myšlenek a reakcí",
@@ -899,9 +806,7 @@ window.data_obdobi_helenismu = {
                     a: "Chyba. Filosofická praxe vyžaduje hluboké porozumění, nikoliv slepou poslušnost.",
                     b: "Správně. Helénismus nebyl jen o teoriích, ale o 'duchovních cvičeních'. Filozofové si psali deníky, meditovali o smrti, učili se ovládat hněv nebo si vizualizovali vesmír z ptačí perspektivy. Cílem bylo změnit své myšlení tak, aby se stalo odolným vůči vnějším ranám osudu.",
                     c: "Chyba. Ačkoliv někteří kynikové pracovali rukama, termín praxe se v tomto kontextu vztahuje k mentální disciplíně."
-                },
-                tag: "obecne"
-            }
+                }}
             ]
         },
         "eklektismus": {
@@ -918,9 +823,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Novoplatonismus je spíše mystická syntéza, která sice čerpá z více zdrojů, ale tvoří nový, velmi sevřený a hierarchický systém.",
                     c: "Chyba. Kynismus byl naopak velmi vyhraněný a odmítal většinu civilizačních nánosů i jiných filosofií."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který římský řečník a politik je nejvýznamnějším představitelem eklektismu?",
                 a: "Cicero",
                 b: "Seneca",
@@ -931,9 +835,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Seneca byl sice v mnoha ohledech tolerantní, ale jasně se definoval jako stoik.",
                     c: "Chyba. Cato Mladší byl známý svou až fanatickou oddaností čistému stoicismu, nikoliv eklektickému míchání."
                 },
-                tag: "cicero"
             },
-            {
+                {
                 q: "Proč byl helénismus v Římě tak úspěšný u vyšších vrstev?",
                 a: "Poskytoval ospravedlnění pro luxusní život",
                 b: "Pomáhal aristokratům vyrovnat se s politickou nestabilitou a ztrátou moci",
@@ -944,22 +847,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. V době občanských válek a nástupu císařství byla politická kariéra v Římě nebezpečná. Filosofie stoicismu a skepticismu nabízela 'vnitřní azyl' – možnost zůstat čestným a klidným mužem, i když je stát v troskách nebo v rukou tyrana.",
                     c: "Chyba. Magie a rituály byly spíše doménou lidové religiozity a později hermetismu, nikoliv klasické helénistické filosofie."
                 },
-                tag: "obecne"
             },
-            {
-                q: "Jaký byl hlavní rozdíl mezi stoickým a epikurejským postojem k veřejnému životu?",
-                a: "Stoici politiku zakazovali, epikurejci ji nařizovali",
-                b: "Stoici chápali účast na správě státu jako povinnost, epikurejci radili se jí vyhnout",
-                c: "Oba směry se v politice shodovali a prosazovali demokracii",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Je to přesně naopak; stoici byli ti, kteří vnímali službu celku jako projev rozumu.",
-                    b: "Správně. Pro stoiky je člověk 'zoon politikon' v kosmickém smyslu a má povinnost prospívat lidstvu. Epikurejci naopak věřili, že politika přináší jen stres, závist a strach, což je v přímém rozporu s jejich ideálem klidu (ataraxie), proto doporučovali žít skrytě.",
-                    c: "Chyba. Tyto školy měly v otázce angažovanosti zcela protichůdné názory, což byl častý bod jejich vzájemných polemik."
-                },
-                tag: "obecne"
-            },
-            {
+                {
                 q: "Který filosof napsal 'O povinnostech' (De officiis), základní dílo pro evropskou etiku?",
                 a: "Cicero",
                 b: "Seneca",
@@ -970,9 +859,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Seneca psal o hněvu, o klidu duše nebo o krátkosti života, ale 'De officiis' je dílem Cicerovým.",
                     c: "Chyba. Aristotelés napsal 'Etiku Níkomachovu', která sice řeší podobná témata, ale z jiného filosofického východiska."
                 },
-                tag: "cicero"
             },
-            {
+                {
                 q: "Jaký byl vztah mezi helénistickou filosofií a židovským myšlením v Alexandrii?",
                 a: "Úplná izolace",
                 b: "Vznik syntézy, jejímž vrcholem byl Filón Alexandrijský",
@@ -983,9 +871,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Filón Alexandrijský se pokusil spojit židovskou Tóru s řeckou filosofií (zejména platonismem a stoicismem). Používal alegorický výklad Bible a jako první propojil biblického Boha s filosofickým Logem, čímž zásadně ovlivnil budoucí křesťanskou teologii.",
                     c: "Chyba. Konflikty sice existovaly na politické úrovni, ale v oblasti filosofie šlo o plodný dialog."
                 },
-                tag: "filon"
             },
-            {
+                {
                 q: "Kdo byl Porfyrios a jaká byla jeho role v dějinách logiky?",
                 a: "Napsal úvod k Aristotelovým kategoriím (Isagoge)",
                 b: "Vymyslel první mechanický počítač",
@@ -996,9 +883,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Antika sice znala jednoduché stroje (např. mechanismus z Antikythéry), ale Porfyrios byl čistě teoretický myslitel.",
                     c: "Chyba. Porfyrios naopak věřil, že logika je nezbytným prvním krokem k očištění duše a pochopení metafyziky."
                 },
-                tag: "porfyrios"
             },
-            {
+                {
                 q: "Jaký byl vztah mezi helénismem a nastupujícím 'středověkým' myšlením?",
                 a: "Naprostý rozchod a zapomnutí antiky",
                 b: "Transformace helénistických pojmů do křesťanské teologie",
@@ -1009,9 +895,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Středověk z helénismu převzal logiku (skrze Boethia), etiku (čtyři základní ctnosti) a metafyziku (hierarchii bytí). Ačkoliv byla filosofie prohlášena za služku teologie, její nástroje a základní otázky zůstaly stejné a formovaly scholastiku až do renesance.",
                     c: "Chyba. Nešlo o tajné spiknutí, ale o přirozený proces kulturní asimilace silnějších myšlenkových konceptů."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký vliv měl helénismus na rozvoj 'humanismu'?",
                 a: "Zavedl myšlenku rovnosti všech lidí jako racionálních bytostí",
                 b: "Zavedl uctívání člověka jako jediného boha",
@@ -1022,9 +907,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Helénisté si byli vědomi lidské omezenosti a podřízenosti přírodním zákonům či osudu.",
                     c: "Chyba. Naopak, hledání cesty ke štěstí jednotlivce bylo hlavním motorem celého tohoto období."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Který spisovatel ve 2. století n. l. parodoval filosofické školy ve svých dialozích?",
                 a: "Lúkiános ze Samosaty",
                 b: "Homér",
@@ -1035,9 +919,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Homér žil v archaické době, stovky let před vznikem těchto filosofických směrů.",
                     c: "Chyba. Ezop byl bajkař, jehož příběhy mají morální ponaučení, ale nejedná se o filosofickou satiru."
                 },
-                tag: "lukianos"
             },
-            {
+                {
                 q: "Co znamená skeptický argument 'diatribé'?",
                 a: "Způsob, jakým se měří hvězdy",
                 b: "Populárně-filosofické kázání zaměřené na morálku",
@@ -1047,9 +930,7 @@ window.data_obdobi_helenismu = {
                     a: "Chyba. Astronomie se těmito termíny neoznačovala.",
                     b: "Správně. Diatribé byl literární žánr – krátké, úderné a srozumitelné řeči pro širokou veřejnost. Používali je kynikové i stoici, aby šířili své etické zásady mezi prosté lidi, což přispělo k popularitě filosofie v helénistickém světě.",
                     c: "Chyba. Nemá to nic společného s farmacií, jde o komunikační nástroj."
-                },
-                tag: "obecne"
-            }
+                }}
             ]
         },
         "novoplatonismus": {
@@ -1066,9 +947,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Skepticismus byl v té době již spíše v útlumu, protože lidé v krizi hledali pevné jistoty a spiritualitu, nikoliv pochybnosti.",
                     c: "Chyba. Peripatetická škola (aristotelismus) nadále existovala, ale chyběl jí nábožensko-metafyzický rozměr, který lidé v pozdní antice vyžadovali."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Kdo je zakladatelem novoplatonismu a autorem 'Ennead'?",
                 a: "Plótínos",
                 b: "Porfyrios",
@@ -1079,12 +959,11 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Porfyrios byl nejdůležitější Plótínův žák, který učení svého mistra utřídil, ale sám nebyl jeho původcem.",
                     c: "Chyba. Proklos byl jedním z posledních velkých novoplatoniků v 5. století, který systém dovedl až k extrémní logické složitosti."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Co je v novoplatonismu nejvyšším principem, z něhož vše vyvěrá?",
                 a: "Hmota",
-                b: "Jedno (To Hen)",
+                b: "Jedno",
                 c: "Světová duše",
                 ans: "b",
                 expl: {
@@ -1092,9 +971,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Jedno je absolutní, nepopsatelný a dokonalý počátek. Je nad bytím i nad myšlením. Plótínos tvrdí, že o Jednu můžeme říci jen to, co není (negativní teologie), protože každé kladné vymezení by jeho dokonalost omezovalo.",
                     c: "Chyba. Světová duše (Psyché) je až třetím stupněm v hierarchii (po Jednu a Rozumu/Nús), skrze kterou vzniká materiální svět."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Jak se nazývá proces 'přetékání' bytí z Jedna do nižších úrovní?",
                 a: "Emanace",
                 b: "Evoluce",
@@ -1105,9 +983,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Evoluce předpokládá vývoj od jednoduššího ke složitějšímu; emanace je naopak sestup od dokonalého k méně dokonalému.",
                     c: "Chyba. Revoluce je politický nebo mechanický pohyb, v novoplatonské ontologii tento pojem nehraje roli."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Jaký je cíl lidského života podle Plótína?",
                 a: "Získání co největšího množství vědomostí o přírodě",
                 b: "Návrat duše k Jednu skrze askezi a extázi",
@@ -1118,9 +995,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Duše se cítí v těle jako ve vězení a touží se vrátit ke svému zdroji. Tohoto sjednocení (unio mystica) lze dosáhnout očištěním od tělesných pout (katharsis) a v nejvyšším stupni skrze mystickou extázi, kdy se vědomí rozpustí v Jednu.",
                     c: "Chyba. Plótínos se sice o politiku mírně zajímal (projekt 'Platónopolis'), ale jeho filosofie je primárně introspektivní a metafyzická."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Která významná ženská filosofka a novoplatonička byla zavražděna v Alexandrii?",
                 a: "Hypatia",
                 b: "Sapfó",
@@ -1131,9 +1007,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Sapfó byla lyrická básnířka z archaického období, nikoliv helénistická filosofka.",
                     c: "Chyba. Diotima byla kněžka, o které mluví Sókratés v Platónově dialogu Symposion; není jisté, zda skutečně existovala."
                 },
-                tag: "hypatia"
             },
-            {
+                {
                 q: "Který římský císař se pokusil o obnovu pohanství na základě novoplatonismu?",
                 a: "Konstantin Veliký",
                 b: "Iulianus Apostata",
@@ -1144,9 +1019,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Iulianus, zvaný křesťany 'Odpadlík' (Apostata), byl vzdělaný filosof na trůně. Pokusil se reformovat staré náboženství pomocí novoplatonské hierarchie a etiky, aby vytvořil konkurenceschopnou alternativu ke křesťanské církvi, ale jeho pokus po jeho náhlé smrti zkrachoval.",
                     c: "Chyba. Theodosius byl císař, který naopak křesťanství prohlásil za jediné státní náboženství a zakázal pohanské kulty i olympijské hry."
                 },
-                tag: "iulianus"
             },
-            {
+                {
                 q: "Co znamenal zánik athénské Akademie v roce 529 n. l.?",
                 a: "Konec organizované pohanské filosofie v antice",
                 b: "Začátek nové éry vědeckého výzkumu",
@@ -1157,9 +1031,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Naopak, nastalo období, kdy byla filosofie plně podřízena teologii ('ancilla theologiae').",
                     c: "Chyba. Škola nebyla přestěhována, ale fakticky zrušena; její vliv se však tajně šířil dál skrze opisy děl."
                 },
-                tag: "obecne"
             },
-            {
+                {
                 q: "Jaký vliv měl helénismus na vznik a formování raného křesťanství?",
                 a: "Žádný, křesťanství bylo čistě židovské hnutí",
                 b: "Poskytl mu pojmový aparát (Logos) a etický ideál askeze",
@@ -1170,9 +1043,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Křesťanští teologové (jako svatý Pavel nebo pozdější církevní otcové) využili stoickou etiku, platónskou teorii o nesmrtelnosti duše a pojem 'Logos' pro vysvětlení postavy Ježíše Krista. Helénismus tak vytvořil intelektuální most mezi biblickou vírou a antickou vzdělaností.",
                     c: "Chyba. První křesťané sice s filosofy polemizovali, ale postupně jejich metody (zejména logiku) plně integrovali do své teologie."
                 },
-                tag: "krestanstvi"
             },
-            {
+                {
                 q: "Jaký je vztah mezi 'Rozumem' (Nús) a 'Jednem' v Plótínově systému?",
                 a: "Rozum je totožný s Jednem",
                 b: "Rozum je prvním stupněm emanace z Jedna",
@@ -1183,9 +1055,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Rozum (Nús) obsahuje svět idejí a je první úrovní, která vyvěrá z Jedna. Zatímco Jedno je nad vším popisem, Rozum je sférou nejvyšší inteligence a pravdy, ze které se dále rodí Světová duše. Tento hierarchický model umožnil později křesťanům vysvětlit vztah mezi Bohem Otcem a Logem.",
                     c: "Chyba. V novoplatonismu je vše v harmonickém sestupném vztahu, nikoliv v nepřátelství."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Které helénistické učení nejvíce ovlivnilo křesťanskou nauku o Trojici?",
                 a: "Novoplatonismus",
                 b: "Kynismus",
@@ -1196,9 +1067,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Kynismus se zabýval etikou a způsobem života, nikoliv komplexní strukturou božství.",
                     c: "Chyba. Skepticismus naopak jakoukoli možnost poznání podstaty boha zpochybňoval, což bylo pro církev nepřijatelné."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Co znamená v novoplatonismu návrat duše k počátku, tzv. 'epistrophé'?",
                 a: "Fyzická smrt bez naděje",
                 b: "Vzestup duše zpět k Jednu skrze ctnost a poznání",
@@ -1209,9 +1079,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Epistrophé je proces obrácení pozornosti od vnějšího světa k vnitřnímu 'já' a následně k božskému zdroji. Duše se musí očistit od nánosu hmoty (katharsis) a skrze filosofii a meditaci se pokusit o znovusjednocení s Jednou. Tento pohyb je protikladem k emanaci (vyzařování směrem dolů).",
                     c: "Chyba. Nejedná se o politický akt, ale o ryze spirituální a intelektuální cestu jednotlivce."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Který novoplatonik byl učitelem Porfyria a proslul svou asketickou cudností?",
                 a: "Plótínos",
                 b: "Platón",
@@ -1222,9 +1091,8 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Platón byl zakladatelem Akademie v klasickém období a k tělu měl sice kritický, ale méně extrémní postoj.",
                     c: "Chyba. Epikúros naopak považoval tělesné pocity za jediné vodítko k pravdě a slasti, což je v přímém rozporu s novoplatonismem."
                 },
-                tag: "plotinos"
             },
-            {
+                {
                 q: "Jaký byl vztah mezi novoplatonismem a magií (theurgií)?",
                 a: "Úplné odmítání magie jako podvodu",
                 b: "Pozdní novoplatonici (např. Iamblichos) využívali magii k rituálnímu sjednocení s bohy",
@@ -1235,9 +1103,8 @@ window.data_obdobi_helenismu = {
                     b: "Správně. Pozdní novoplatonismus se stal velmi spirituálním. Theurgie ('božské dílo') byla soustava rituálů, které měly duši pomoci tam, kde už nestačil samotný rozum. Filozofové věřili, že pomocí symbolů a invokací mohou přímo komunikovat s vyššími bytostmi a urychlit svůj návrat k Jednu.",
                     c: "Chyba. Na počátku (Plótínos) šlo o čistou metafyziku a introspekci bez vnějších rituálů."
                 },
-                tag: "iamblichos"
             },
-            {
+                {
                 q: "Kdo byl posledním velkým novoplatonikem, jehož díla ovlivnila středověkou hierarchii andělů?",
                 a: "Pseudo-Dionysios Areopagita",
                 b: "Plótínos",
@@ -1248,21 +1115,7 @@ window.data_obdobi_helenismu = {
                     b: "Chyba. Plótínos byl zakladatelem směru a s křesťanským andělovědou přímo nesouvisí.",
                     c: "Chyba. Platón žil dávno před těmito spekulacemi o hierarchiích bytostí."
                 },
-                tag: "pseudo_dionysios"
             },
-            {
-                q: "Jaký byl hlavní rozdíl mezi epikurejským a křesťanským pojetím posmrtného života?",
-                a: "Oba věřili v peklo a nebe",
-                b: "Křesťané věřili v nesmrtelnost, epikurejci v definitivní rozpad atomů",
-                c: "Epikurejci věřili v reinkarnaci, křesťané v nicotu",
-                ans: "b",
-                expl: {
-                    a: "Chyba. Epikureismus existenci pekla i nebe popíral jako mýty sloužící k zastrašování lidí.",
-                    b: "Správně. Epikúros učil, že duše je složena z atomů, které se po smrti rozletí, a vědomí zaniká. Křesťanství naopak postavilo svou celou věrouku na naději na osobní vzkříšení a věčný život, což byl jeden z hlavních důvodů, proč nakonec nad materialistickým epikureismem zvítězilo.",
-                    c: "Chyba. V reinkarnaci věřili spíše pythagorejci a orfici, nikoliv epikurejci."
-                },
-                tag: "posmrtny_zivot"
-            }
             ]
         }
     }
