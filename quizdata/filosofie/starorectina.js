@@ -592,7 +592,11 @@ window.data_starorectina = {
                     "c": "Všechny krásné věci jsou krásné krásnem.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br><strong>Přirozený překlad:</strong> Počátkem a cílem všeho je voda.<br><strong>Autor / zdroj:</strong> Thalés; Hippolytos, Refutatio I, 1, 1, 2–3.<br><strong>Poznámka k prameni:</strong> Zlomek je dochován prostřednictvím Hippolyta.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br>" +
+                            "<strong>Přirozený překlad:</strong> Počátkem a cílem všeho je voda.<br>" +
+                            "<strong>Autor / zdroj:</strong> Thalés; Hippolytos, Refutatio I, 1, 1, 2–3.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Zlomek je dochován prostřednictvím Hippolyta.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -605,7 +609,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br><strong>Přirozený překlad:</strong> Všechno je plné bohů.<br><strong>Autor / zdroj:</strong> Thalés; DK 11 A22–A23, tradice u Aetia.<br><strong>Poznámka k prameni:</strong> V opoře se objevují dvě související formulace: „πάντα πλήρη θεῶν εἶναι“ a „τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι“.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br>" +
+                            "<strong>Přirozený překlad:</strong> Všechno je plné bohů.<br>" +
+                            "<strong>Autor / zdroj:</strong> Thalés; DK 11 A22–A23, tradice u Aetia.<br>" +
+                            "<strong>Poznámka k prameni:</strong> V opoře se objevují dvě související formulace: „πάντα πλήρη θεῶν εἶναι“ a „τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι“.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -618,7 +626,10 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> kosmos/svět – oduševněný – a – božstev – plný – být<br><strong>Přirozený překlad:</strong> Vesmír je oduševněný a plný božstev.<br><strong>Autor / zdroj:</strong> Aetios, DK 11 A23, podle Studijní opory."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> kosmos/svět – oduševněný – a – božstev – plný – být<br>" +
+                            "<strong>Přirozený překlad:</strong> Vesmír je oduševněný a plný božstev.<br>" +
+                            "<strong>Autor / zdroj:</strong> Aetios, DK 11 A23, podle Studijní opory."
                     }
                 },
                 {
@@ -628,7 +639,11 @@ window.data_starorectina = {
                     "c": "Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> to – neomezené / bezmezné<br><strong>Přirozený překlad:</strong> Neomezené, nekonečné (apeiron).<br><strong>Autor / zdroj:</strong> Anaximandros; DK 12 A1.<br><strong>Poznámka k prameni:</strong> Jde o filosofický výraz, nikoli úplnou větu.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> to – neomezené / bezmezné<br>" +
+                            "<strong>Přirozený překlad:</strong> Neomezené, nekonečné (apeiron).<br>" +
+                            "<strong>Autor / zdroj:</strong> Anaximandros; DK 12 A1.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Jde o filosofický výraz, nikoli úplnou větu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -641,7 +656,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> z čeho – pak – vznik – je – jsoucím – také – zánik – do těchto – stávat se – podle – nutnosti; dávat – totiž – tyto věci – spravedlivou odplatu – a náhradu – sobě navzájem – za bezpráví – podle – řádu – času<br><strong>Přirozený překlad:</strong> Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.<br><strong>Autor / zdroj:</strong> Anaximandros; DK 12 B1, Simplikios, Fyzika (podle Theofrasta).<br><strong>Poznámka k prameni:</strong> Studijní opora označuje zlomek za jeden z nejstarších zachovaných doslovných filosofických textů.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> z čeho – pak – vznik – je – jsoucím – také – zánik – do těchto – stávat se – podle – nutnosti; dávat – totiž – tyto věci – spravedlivou odplatu – a náhradu – sobě navzájem – za bezpráví – podle – řádu – času<br>" +
+                            "<strong>Přirozený překlad:</strong> Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.<br>" +
+                            "<strong>Autor / zdroj:</strong> Anaximandros; DK 12 B1, Simplikios, Fyzika (podle Theofrasta).<br>" +
+                            "<strong>Poznámka k prameni:</strong> Studijní opora označuje zlomek za jeden z nejstarších zachovaných doslovných filosofických textů.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -654,7 +673,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> jako – duše – říká – naše – vzduch – jsoucí – ovládá / drží pohromadě – nás; a – celý – kosmos – dech – a – vzduch – objímá<br><strong>Přirozený překlad:</strong> Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.<br><strong>Autor / zdroj:</strong> Anaximenés; DK 13 B2, Aetios.<br><strong>Poznámka k prameni:</strong> Znění je převzato z úplné Studijní opory, s. 18; vsuvka φησίν znamená „říká“."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> jako – duše – říká – naše – vzduch – jsoucí – ovládá / drží pohromadě – nás; a – celý – kosmos – dech – a – vzduch – objímá<br>" +
+                            "<strong>Přirozený překlad:</strong> Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.<br>" +
+                            "<strong>Autor / zdroj:</strong> Anaximenés; DK 13 B2, Aetios.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Znění je převzato z úplné Studijní opory, s. 18; vsuvka φησίν znamená „říká“."
                     }
                 },
                 {
@@ -664,7 +687,10 @@ window.data_starorectina = {
                     "c": "Duše je příčinou toho, že tělo žije.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> cesta – nahoru – dolů – jedna – a – táž<br><strong>Přirozený překlad:</strong> Cesta nahoru a dolů je jedna a táž.<br><strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B60.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> cesta – nahoru – dolů – jedna – a – táž<br>" +
+                            "<strong>Přirozený překlad:</strong> Cesta nahoru a dolů je jedna a táž.<br>" +
+                            "<strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B60.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -677,7 +703,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> boj/válka – všech – na jedné straně – otec – je – všech – na druhé straně – král<br><strong>Přirozený překlad:</strong> Boj je otcem všech věcí a králem všech věcí.<br><strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B53.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> boj/válka – všech – na jedné straně – otec – je – všech – na druhé straně – král<br>" +
+                            "<strong>Přirozený překlad:</strong> Boj je otcem všech věcí a králem všech věcí.<br>" +
+                            "<strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B53.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -690,7 +719,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všechno – mění se / přechází – v – opak<br><strong>Přirozený překlad:</strong> Všechno se mění v opak.<br><strong>Autor / zdroj:</strong> Připsáno Hérakleitovi v předchozím výběru.<br><strong>Poznámka k prameni:</strong> Přesné znění a odkaz nejsou v dodané Studijní opoře ani prezentacích doloženy; ponecháno kvůli požadavku zahrnout celý předchozí výběr."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechno – mění se / přechází – v – opak<br>" +
+                            "<strong>Přirozený překlad:</strong> Všechno se mění v opak.<br>" +
+                            "<strong>Autor / zdroj:</strong> Připsáno Hérakleitovi v předchozím výběru.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Přesné znění a odkaz nejsou v dodané Studijní opoře ani prezentacích doloženy; ponecháno kvůli požadavku zahrnout celý předchozí výběr."
                     }
                 },
                 {
@@ -700,7 +733,10 @@ window.data_starorectina = {
                     "c": "Setrvání – vycházení – návrat.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> rozum/intelekt – je – ten, který uspořádává – a také – všeho – příčina<br><strong>Přirozený překlad:</strong> Rozum vnáší do světa řád a je příčinou všeho.<br><strong>Autor / zdroj:</strong> Anaxagorás; DK 59 A47, 2–3; Platón, Faidón 97b.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> rozum/intelekt – je – ten, který uspořádává – a také – všeho – příčina<br>" +
+                            "<strong>Přirozený překlad:</strong> Rozum vnáší do světa řád a je příčinou všeho.<br>" +
+                            "<strong>Autor / zdroj:</strong> Anaxagorás; DK 59 A47, 2–3; Platón, Faidón 97b.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -713,7 +749,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> není – pohyb – jsoucí – bez – prázdna; a – prázdno – nejsoucí; a – jsoucna – nic – nejsoucí – být<br><strong>Přirozený překlad:</strong> Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.<br><strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory.<br><strong>Poznámka k prameni:</strong> Řecké znění zde odpovídá zkrácené podobě citátu uvedené v opoře; nepřidávat jako doslovný originál delší parafrázi.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> není – pohyb – jsoucí – bez – prázdna; a – prázdno – nejsoucí; a – jsoucna – nic – nejsoucí – být<br>" +
+                            "<strong>Přirozený překlad:</strong> Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.<br>" +
+                            "<strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Řecké znění zde odpovídá zkrácené podobě citátu uvedené v opoře; nepřidávat jako doslovný originál delší parafrázi.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -726,7 +766,10 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> z – toho – pak – podle pravdy – jednoho – nemohlo by – vzniknout – množství; ani – z – těch – skutečně – mnohých – jedno<br><strong>Přirozený překlad:</strong> Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.<br><strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> z – toho – pak – podle pravdy – jednoho – nemohlo by – vzniknout – množství; ani – z – těch – skutečně – mnohých – jedno<br>" +
+                            "<strong>Přirozený překlad:</strong> Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.<br>" +
+                            "<strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory."
                     }
                 },
                 {
@@ -736,7 +779,10 @@ window.data_starorectina = {
                     "c": "Setrvání – vycházení – návrat.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno<br><strong>Přirozený překlad:</strong> Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.<br><strong>Autor / zdroj:</strong> Démokritos; DK 68 B125, Galénos a Sextos.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno<br>" +
+                            "<strong>Přirozený překlad:</strong> Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.<br>" +
+                            "<strong>Autor / zdroj:</strong> Démokritos; DK 68 B125, Galénos a Sextos.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -749,7 +795,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> o – bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou<br><strong>Přirozený překlad:</strong> O bozích nemám vědění, ani že jsou, ani že nejsou.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 B4, Diogenés Laertios IX, 51.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> o – bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou<br>" +
+                            "<strong>Přirozený překlad:</strong> O bozích nemám vědění, ani že jsou, ani že nejsou.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 B4, Diogenés Laertios IX, 51.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -762,7 +811,10 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou<br><strong>Přirozený překlad:</strong> Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 B1, citováno u Sexta Empirika."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou<br>" +
+                            "<strong>Přirozený překlad:</strong> Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 B1, citováno u Sexta Empirika."
                     }
                 },
                 {
@@ -772,7 +824,10 @@ window.data_starorectina = {
                     "c": "Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> všechno – být – tolik/co – všem – jeví se<br><strong>Přirozený překlad:</strong> Všechno je takové, jak se komu jeví.<br><strong>Autor / zdroj:</strong> Prótagorás; DK 80 A14, Sextos.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechno – být – tolik/co – všem – jeví se<br>" +
+                            "<strong>Přirozený překlad:</strong> Všechno je takové, jak se komu jeví.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 A14, Sextos.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -785,7 +840,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> rozumností / praktickou moudrostí – každou – z – ctností – být – všechny – ctnosti<br><strong>Přirozený překlad:</strong> Domníval se, že všechny ctnosti jsou věděním.<br><strong>Autor / zdroj:</strong> Aristotelés, Etika Nikomachova 1144b18; v opoře v souvislosti se Sókratem.<br><strong>Poznámka k prameni:</strong> Řecká formulace v opoře je citována jako „φρονήσει ἑτο εἶναι πάσας τὰς ἀρετάς“; v souboru je uvedena čitelná normalizovaná podoba, nikoli jistota diplomatického přepisu.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> rozumností / praktickou moudrostí – každou – z – ctností – být – všechny – ctnosti<br>" +
+                            "<strong>Přirozený překlad:</strong> Domníval se, že všechny ctnosti jsou věděním.<br>" +
+                            "<strong>Autor / zdroj:</strong> Aristotelés, Etika Nikomachova 1144b18; v opoře v souvislosti se Sókratem.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Řecká formulace v opoře je citována jako „φρονήσει ἑτο εἶναι πάσας τὰς ἀρετάς“; v souboru je uvedena čitelná normalizovaná podoba, nikoli jistota diplomatického přepisu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -798,7 +857,10 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> toto – pak – je – vzpomínání – na ona – která – kdysi – spatřila – naše – duše ... pozdvihnuvši se – k – jsoucnu – skutečně<br><strong>Přirozený překlad:</strong> To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.<br><strong>Autor / zdroj:</strong> Platón, Faidros 249c."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> toto – pak – je – vzpomínání – na ona – která – kdysi – spatřila – naše – duše ... pozdvihnuvši se – k – jsoucnu – skutečně<br>" +
+                            "<strong>Přirozený překlad:</strong> To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Faidros 249c."
                     }
                 },
                 {
@@ -808,7 +870,10 @@ window.data_starorectina = {
                     "c": "Počátkem a cílem všeho je voda.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> učení – tedy – není – něco jiného – než – rozpomínání<br><strong>Přirozený překlad:</strong> Naše učení není nic jiného než vzpomínání.<br><strong>Autor / zdroj:</strong> Platón, Faidón 72e.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> učení – tedy – není – něco jiného – než – rozpomínání<br>" +
+                            "<strong>Přirozený překlad:</strong> Naše učení není nic jiného než vzpomínání.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Faidón 72e.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -821,7 +886,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> krásnem – všechny – krásné – věci – stávají se – krásnými<br><strong>Přirozený překlad:</strong> Všechny krásné věci jsou krásné krásnem.<br><strong>Autor / zdroj:</strong> Platón, Faidón 100d.<br><strong>Poznámka k prameni:</strong> V opoře je citováno zkráceně jako „τὰ καλὰ πάντα γίγνεται καλά“; zde je doplněna vazba odpovídající doslovnému smyslu citátu.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> krásnem – všechny – krásné – věci – stávají se – krásnými<br>" +
+                            "<strong>Přirozený překlad:</strong> Všechny krásné věci jsou krásné krásnem.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Faidón 100d.<br>" +
+                            "<strong>Poznámka k prameni:</strong> V opoře je citováno zkráceně jako „τὰ καλὰ πάντα γίγνεται καλά“; zde je doplněna vazba odpovídající doslovnému smyslu citátu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -834,7 +903,10 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> dobro – ideu ... být – příčinou – pak – vědění – jsoucí – a – pravdy<br><strong>Přirozený překlad:</strong> Idea dobra je příčinou rozumového vědění a pravdy.<br><strong>Autor / zdroj:</strong> Platón, Ústava 508e, podle Studijní opory."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> dobro – ideu ... být – příčinou – pak – vědění – jsoucí – a – pravdy<br>" +
+                            "<strong>Přirozený překlad:</strong> Idea dobra je příčinou rozumového vědění a pravdy.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Ústava 508e, podle Studijní opory."
                     }
                 },
                 {
@@ -844,7 +916,10 @@ window.data_starorectina = {
                     "c": "Neomezené, nekonečné (apeiron).",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> ne – jsoucností – jsoucího – dobra, nýbrž – ještě – za/přesahujícího – jsoucnost – důstojností – a – mocí – vynikajícího<br><strong>Přirozený překlad:</strong> Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.<br><strong>Autor / zdroj:</strong> Platón, Ústava 509b, podle Studijní opory.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> ne – jsoucností – jsoucího – dobra, nýbrž – ještě – za/přesahujícího – jsoucnost – důstojností – a – mocí – vynikajícího<br>" +
+                            "<strong>Přirozený překlad:</strong> Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Ústava 509b, podle Studijní opory.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -857,7 +932,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> idea/druh – jedno – každé ... – na – mnoho – jednotlivých věcí, kterým – stejné – jméno – přikládáme<br><strong>Přirozený překlad:</strong> Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.<br><strong>Autor / zdroj:</strong> Platón, Ústava 596a.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> idea/druh – jedno – každé ... – na – mnoho – jednotlivých věcí, kterým – stejné – jméno – přikládáme<br>" +
+                            "<strong>Přirozený překlad:</strong> Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Ústava 596a.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -870,7 +948,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> filosofové = každé – jednotlivé – jsoucno – s láskou přijímající / vítající<br><strong>Přirozený překlad:</strong> Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.<br><strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Prezentace uvádí tento výrok jako „VĚTA“, ale bez přesného odkazu na dialog."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> filosofové = každé – jednotlivé – jsoucno – s láskou přijímající / vítající<br>" +
+                            "<strong>Přirozený překlad:</strong> Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Prezentace uvádí tento výrok jako „VĚTA“, ale bez přesného odkazu na dialog."
                     }
                 },
                 {
@@ -880,7 +962,10 @@ window.data_starorectina = {
                     "c": "Cesta nahoru a dolů je jedna a táž.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> rozumové poznání – na jedné straně – na nejvyšším; myšlení – pak – na druhém; třetímu – pak – přiřaď – víru – a – poslednímu – domněnku<br><strong>Přirozený překlad:</strong> Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.<br><strong>Autor / zdroj:</strong> Platón, Ústava 511d–e; prezentace Platonismus.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> rozumové poznání – na jedné straně – na nejvyšším; myšlení – pak – na druhém; třetímu – pak – přiřaď – víru – a – poslednímu – domněnku<br>" +
+                            "<strong>Přirozený překlad:</strong> Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón, Ústava 511d–e; prezentace Platonismus.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -893,7 +978,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> duše – příčinou – je – toho – žít – samotnému – tělu<br><strong>Přirozený překlad:</strong> Duše je příčinou toho, že tělo žije.<br><strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> V prezentaci je věta uvedena jako samostatný výrok bez přesného odkazu.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> duše – příčinou – je – toho – žít – samotnému – tělu<br>" +
+                            "<strong>Přirozený překlad:</strong> Duše je příčinou toho, že tělo žije.<br>" +
+                            "<strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br>" +
+                            "<strong>Poznámka k prameni:</strong> V prezentaci je věta uvedena jako samostatný výrok bez přesného odkazu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -906,7 +995,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br><strong>Přirozený překlad:</strong> Všechna jsoucna jsou jsoucí na základě Jedna.<br><strong>Autor / zdroj:</strong> Plótínos; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Jde o formulaci uvedenou v prezentaci; přesný spisový odkaz není připojen."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br>" +
+                            "<strong>Přirozený překlad:</strong> Všechna jsoucna jsou jsoucí na základě Jedna.<br>" +
+                            "<strong>Autor / zdroj:</strong> Plótínos; prezentace Platonismus.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Jde o formulaci uvedenou v prezentaci; přesný spisový odkaz není připojen."
                     }
                 },
                 {
@@ -916,7 +1009,11 @@ window.data_starorectina = {
                     "c": "Rozum vnáší do světa řád a je příčinou všeho.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> nezapříčiněná / bez příčiny – příčina<br><strong>Přirozený překlad:</strong> Nepříčinná příčina (příčina, která sama není zapříčiněna).<br><strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus.<br><strong>Poznámka k prameni:</strong> Filosofický výraz, nikoli úplná věta.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> nezapříčiněná / bez příčiny – příčina<br>" +
+                            "<strong>Přirozený překlad:</strong> Nepříčinná příčina (příčina, která sama není zapříčiněna).<br>" +
+                            "<strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Filosofický výraz, nikoli úplná věta.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -929,7 +1026,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br><strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br><strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus; převzato také v dionysiovském kontextu.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br>" +
+                            "<strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br>" +
+                            "<strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus; převzato také v dionysiovském kontextu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -942,7 +1042,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> kladná / afirmativní – teologie; záporná / apofatická – teologie<br><strong>Přirozený překlad:</strong> Kladná teologie – záporná teologie.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Kladná cesta vypovídá o Bohu prostřednictvím jeho účinků a jmen; záporná cesta odnímá tvrzení, která Boha nemohou vystihnout."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> kladná / afirmativní – teologie; záporná / apofatická – teologie<br>" +
+                            "<strong>Přirozený překlad:</strong> Kladná teologie – záporná teologie.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Kladná cesta vypovídá o Bohu prostřednictvím jeho účinků a jmen; záporná cesta odnímá tvrzení, která Boha nemohou vystihnout."
                     }
                 },
                 {
@@ -952,7 +1056,11 @@ window.data_starorectina = {
                     "c": "Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> Jedno – nad-jsoucí / nad jsoucností<br><strong>Přirozený překlad:</strong> Jedno – to, co přesahuje bytí.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Nejde o synonyma: ἕν označuje Jedno; ὑπερούσιος charakterizuje jeho přesah vůči bytí.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> Jedno – nad-jsoucí / nad jsoucností<br>" +
+                            "<strong>Přirozený překlad:</strong> Jedno – to, co přesahuje bytí.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Nejde o synonyma: ἕν označuje Jedno; ὑπερούσιος charakterizuje jeho přesah vůči bytí.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -965,7 +1073,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br><strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br><strong>Autor / zdroj:</strong> Proklovská triáda převzatá Dionysiem; prezentace Dionysius Areopagita.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br>" +
+                            "<strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br>" +
+                            "<strong>Autor / zdroj:</strong> Proklovská triáda převzatá Dionysiem; prezentace Dionysius Areopagita.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -978,7 +1089,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> očištění – osvícení – zdokonalení / dovršení<br><strong>Přirozený překlad:</strong> Očista – osvícení – dokonalost.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita; schéma cesty v církevní hierarchii.<br><strong>Poznámka k prameni:</strong> Prezentace uvádí latinské podoby purificatio, illuminatio, perfectio. Řecké ekvivalenty zde slouží jako terminologické protějšky, nikoli jako doslovný citát z prezentace."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> očištění – osvícení – zdokonalení / dovršení<br>" +
+                            "<strong>Přirozený překlad:</strong> Očista – osvícení – dokonalost.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita; schéma cesty v církevní hierarchii.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Prezentace uvádí latinské podoby purificatio, illuminatio, perfectio. Řecké ekvivalenty zde slouží jako terminologické protějšky, nikoli jako doslovný citát z prezentace."
                     }
                 },
                 {
@@ -988,7 +1103,11 @@ window.data_starorectina = {
                     "c": "Všechno je takové, jak se komu jeví.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> vyjití ze sebe – zdokonalení / dovršení<br><strong>Přirozený překlad:</strong> Extáze – sjednocení či dovršení.<br><strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br><strong>Poznámka k prameni:</strong> Prezentace popisuje extázi a sjednocení s počátkem; přesné řecké spojení jako citát neuvádí.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> vyjití ze sebe – zdokonalení / dovršení<br>" +
+                            "<strong>Přirozený překlad:</strong> Extáze – sjednocení či dovršení.<br>" +
+                            "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
+                            "<strong>Poznámka k prameni:</strong> Prezentace popisuje extázi a sjednocení s počátkem; přesné řecké spojení jako citát neuvádí.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -1001,7 +1120,11 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br><strong>Doslovný překlad:</strong> ne – jsoucno – a – všechno<br><strong>Přirozený překlad:</strong> Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“<br><strong>Autor / zdroj:</strong> Přesné znění ani zdroj nejsou v dodaných souborech doloženy.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
+                        "b": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> ne – jsoucno – a – všechno<br>" +
+                            "<strong>Přirozený překlad:</strong> Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“<br>" +
+                            "<strong>Autor / zdroj:</strong> Přesné znění ani zdroj nejsou v dodaných souborech doloženy.<br>" +
+                            "<strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -1014,7 +1137,11 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br><strong>Doslovný překlad:</strong> poznání – podobného – podobným<br><strong>Přirozený překlad:</strong> Poznání podobného podobným.<br><strong>Autor / zdroj:</strong> Přesné znění a odkaz nebyly v dodaných souborech ověřeny.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát."
+                        "c": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> poznání – podobného – podobným<br>" +
+                            "<strong>Přirozený překlad:</strong> Poznání podobného podobným.<br>" +
+                            "<strong>Autor / zdroj:</strong> Přesné znění a odkaz nebyly v dodaných souborech ověřeny.<br>" +
+                            "<strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát."
                     }
                 },
                 {
@@ -1024,7 +1151,11 @@ window.data_starorectina = {
                     "c": "Naše učení není nic jiného než vzpomínání.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br><strong>Doslovný překlad:</strong> totéž – totiž – myslet – je – a – být<br><strong>Přirozený překlad:</strong> Totéž je myslet a být.<br><strong>Autor / zdroj:</strong> Připsáno Parmenidovi, DK 28 B3, v předchozím výběru. Tento zlomek je důležitý, ale v textovém výpisu dodané opory nebyl nalezen.<br><strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
+                        "a": "Správně.<br>" +
+                            "<strong>Doslovný překlad:</strong> totéž – totiž – myslet – je – a – být<br>" +
+                            "<strong>Přirozený překlad:</strong> Totéž je myslet a být.<br>" +
+                            "<strong>Autor / zdroj:</strong> Připsáno Parmenidovi, DK 28 B3, v předchozím výběru. Tento zlomek je důležitý, ale v textovém výpisu dodané opory nebyl nalezen.<br>" +
+                            "<strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
                         "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
