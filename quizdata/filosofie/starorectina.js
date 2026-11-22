@@ -11,9 +11,9 @@ window.data_starorectina = {
     c: "Γ γ",
     ans: "a",
     expl: {
-        a: "Správně. Α α je alfa. Např. <strong>ἀ</strong>ρχή – arché (počátek).",
-        b: "Špatně. Β β je béta.",
-        c: "Špatně. Γ γ je gamma."
+        a: "Α α je alfa. Např. <strong>ἀ</strong>ρχή – arché (počátek).",
+        b: "Β β je béta.",
+        c: "Γ γ je gamma."
     }
 },
 {
@@ -23,9 +23,9 @@ window.data_starorectina = {
     c: "Γ γ",
     ans: "b",
     expl: {
-        a: "Špatně. Δ δ je delta.",
-        b: "Správně. Β β je béta. Např. <strong>β</strong>ίος – bíos (život).",
-        c: "Špatně. Γ γ je gamma."
+        a: "Δ δ je delta.",
+        b: "Β β je béta. Např. <strong>β</strong>ίος – bíos (život).",
+        c: "Γ γ je gamma."
     }
 },
 {
@@ -35,9 +35,9 @@ window.data_starorectina = {
     c: "Δ δ",
     ans: "a",
     expl: {
-        a: "Správně. Γ γ je gamma. Např. ἀ<strong>γ</strong>ένητον – agénéton (nevzniklé).",
-        b: "Špatně. Β β je béta.",
-        c: "Špatně. Δ δ je delta."
+        a: "Γ γ je gamma. Např. ἀ<strong>γ</strong>ένητον – agénéton (nevzniklé).",
+        b: "Β β je béta.",
+        c: "Δ δ je delta."
     }
 },
 {
@@ -47,9 +47,9 @@ window.data_starorectina = {
     c: "Ε ε",
     ans: "b",
     expl: {
-        a: "Špatně. Γ γ je gamma.",
-        b: "Správně. Δ δ je delta. Např. <strong>δ</strong>᾿ → dé (však, tu, pak, potom).",
-        c: "Špatně. Ε ε je epsílon."
+        a: "Γ γ je gamma.",
+        b: "Δ δ je delta. Např. <strong>δ</strong>᾿ → dé (však, tu, pak, potom).",
+        c: "Ε ε je epsílon."
     }
 },
 {
@@ -59,9 +59,9 @@ window.data_starorectina = {
     c: "Ζ ζ",
     ans: "b",
     expl: {
-        a: "Špatně. Η η je éta.",
-        b: "Správně. Ε ε je epsílon. Např. <strong>ἐ</strong>στιν – estin (je).",
-        c: "Špatně. Ζ ζ je zéta."
+        a: "Η η je éta.",
+        b: "Ε ε je epsílon. Např. <strong>ἐ</strong>στιν – estin (je).",
+        c: "Ζ ζ je zéta."
     }
 },
 {
@@ -71,9 +71,9 @@ window.data_starorectina = {
     c: "Ε ε",
     ans: "a",
     expl: {
-        a: "Správně. Ζ ζ je zéta. Např. <strong>ζ</strong>ωή – zóé (život).",
-        b: "Špatně. Θ θ je théta.",
-        c: "Špatně. Ε ε je epsílon."
+        a: "Ζ ζ je zéta. Např. <strong>ζ</strong>ωή – zóé (život).",
+        b: "Θ θ je théta.",
+        c: "Ε ε je epsílon."
     }
 },
 {
@@ -83,9 +83,9 @@ window.data_starorectina = {
     c: "Ζ ζ",
     ans: "b",
     expl: {
-        a: "Špatně. Ι ι je ióta.",
-        b: "Správně. Η η je éta. Např. <strong>ἠ</strong>δ᾿ – édé (a, pak).",
-        c: "Špatně. Ζ ζ je zéta."
+        a: "Ι ι je ióta.",
+        b: "Η η je éta. Např. <strong>ἠ</strong>δ᾿ – édé (a, pak).",
+        c: "Ζ ζ je zéta."
     }
 },
 {
@@ -95,9 +95,9 @@ window.data_starorectina = {
     c: "Τ τ",
     ans: "b",
     expl: {
-        a: "Špatně. Χ χ je chí.",
-        b: "Správně. Θ θ je théta. Např. μῦ<strong>θ</strong>ος – mýthos (příběh, báje).",
-        c: "Špatně. Τ τ je tau."
+        a: "Χ χ je chí.",
+        b: "Θ θ je théta. Např. μῦ<strong>θ</strong>ος – mýthos (příběh, báje).",
+        c: "Τ τ je tau."
     }
 },
 {
@@ -107,9 +107,9 @@ window.data_starorectina = {
     c: "Κ κ",
     ans: "a",
     expl: {
-        a: "Správně. Ι ι je ióta. Např. Δίκη – Díké (bohyně spravedlnosti).",
-        b: "Špatně. Η η je éta.",
-        c: "Špatně. Κ κ je kappa."
+        a: "Ι ι je ióta. Např. Δίκη – Díké (bohyně spravedlnosti).",
+        b: "Η η je éta.",
+        c: "Κ κ je kappa."
     }
 },
 {
@@ -119,9 +119,9 @@ window.data_starorectina = {
     c: "Λ λ",
     ans: "b",
     expl: {
-        a: "Špatně. Χ χ je chí.",
-        b: "Správně. Κ κ je kappa. Např. <strong>κ</strong>ρίσις – krísis (rozsudek, soud).",
-        c: "Špatně. Λ λ je lambda."
+        a: "Χ χ je chí.",
+        b: "Κ κ je kappa. Např. <strong>κ</strong>ρίσις – krísis (rozsudek, soud).",
+        c: "Λ λ je lambda."
     }
 },
 {
@@ -131,9 +131,9 @@ window.data_starorectina = {
     c: "Ν ν",
     ans: "b",
     expl: {
-        a: "Špatně. Μ μ je mý.",
-        b: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
-        c: "Špatně. Ν ν je ný."
+        a: "Μ μ je mý.",
+        b: "Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
+        c: "Ν ν je ný."
     }
 },
 {
@@ -143,9 +143,9 @@ window.data_starorectina = {
     c: "Λ λ",
     ans: "a",
     expl: {
-        a: "Správně. Μ μ je mý. Např. <strong>μ</strong>ῦθος – mýthos (příběh, báje).",
-        b: "Špatně. Ν ν je ný.",
-        c: "Špatně. Λ λ je lambda."
+        a: "Μ μ je mý. Např. <strong>μ</strong>ῦθος – mýthos (příběh, báje).",
+        b: "Ν ν je ný.",
+        c: "Λ λ je lambda."
     }
 },
 {
@@ -155,9 +155,9 @@ window.data_starorectina = {
     c: "Μ μ",
     ans: "b",
     expl: {
-        a: "Špatně. Ξ ξ je ksí.",
-        b: "Správně. Ν ν je ný. Např. <strong>ν</strong>ῦν – nýn (nyní).",
-        c: "Špatně. Μ μ je mý."
+        a: "Ξ ξ je ksí.",
+        b: "Ν ν je ný. Např. <strong>ν</strong>ῦν – nýn (nyní).",
+        c: "Μ μ je mý."
     }
 },
 {
@@ -167,9 +167,9 @@ window.data_starorectina = {
     c: "Ψ ψ",
     ans: "a",
     expl: {
-        a: "Správně. Ξ ξ je ksí. Např. ἀ<strong>ξ</strong>ία – axía (hodnota).",
-        b: "Špatně. Χ χ je chí.",
-        c: "Špatně. Ψ ψ je psí."
+        a: "Ξ ξ je ksí. Např. ἀ<strong>ξ</strong>ία – axía (hodnota).",
+        b: "Χ χ je chí.",
+        c: "Ψ ψ je psí."
     }
 },
 {
@@ -179,9 +179,9 @@ window.data_starorectina = {
     c: "Ε ε",
     ans: "b",
     expl: {
-        a: "Špatně. Ω ω je ó mega.",
-        b: "Správně. Ο ο je omikron. Např. <strong>ὁ</strong>δός – hodós (cesta).",
-        c: "Špatně. Ε ε je epsílon."
+        a: "Ω ω je ó mega.",
+        b: "Ο ο je omikron. Např. <strong>ὁ</strong>δός – hodós (cesta).",
+        c: "Ε ε je epsílon."
     }
 },
 {
@@ -191,9 +191,9 @@ window.data_starorectina = {
     c: "Φ φ",
     ans: "a",
     expl: {
-        a: "Správně. Π π je pí. Např. <strong>π</strong>ίστις – pístis (víra, důvěra).",
-        b: "Špatně. Ρ ρ je ró.",
-        c: "Špatně. Φ φ je fí."
+        a: "Π π je pí. Např. <strong>π</strong>ίστις – pístis (víra, důvěra).",
+        b: "Ρ ρ je ró.",
+        c: "Φ φ je fí."
     }
 },
 {
@@ -203,9 +203,9 @@ window.data_starorectina = {
     c: "Σ σ ς",
     ans: "a",
     expl: {
-        a: "Správně. Ρ ρ je ró. Např. Ῥόδος – <strong>Rh</strong>odos (Rhodos).",
-        b: "Špatně. Π π je pí.",
-        c: "Špatně. Σ σ ς je sígma."
+        a: "Ρ ρ je ró. Např. Ῥόδος – <strong>Rh</strong>odos (Rhodos).",
+        b: "Π π je pí.",
+        c: "Σ σ ς je sígma."
     }
 },
 {
@@ -215,9 +215,9 @@ window.data_starorectina = {
     c: "Ζ ζ",
     ans: "a",
     expl: {
-        a: "Správně. Σ σ ς je sígma. Např. ἐ<strong>σ</strong>τιν – estin (je).",
-        b: "Špatně. Ξ ξ je ksí.",
-        c: "Špatně. Ζ ζ je zéta."
+        a: "Σ σ ς je sígma. Např. ἐ<strong>σ</strong>τιν – estin (je).",
+        b: "Ξ ξ je ksí.",
+        c: "Ζ ζ je zéta."
     }
 },
 {
@@ -227,9 +227,9 @@ window.data_starorectina = {
     c: "Θ θ",
     ans: "a",
     expl: {
-        a: "Správně. Τ τ je tau. Např. <strong>τ</strong>ε – te (a, také).",
-        b: "Špatně. Π π je pí.",
-        c: "Špatně. Θ θ je théta."
+        a: "Τ τ je tau. Např. <strong>τ</strong>ε – te (a, také).",
+        b: "Π π je pí.",
+        c: "Θ θ je théta."
     }
 },
 {
@@ -239,9 +239,9 @@ window.data_starorectina = {
     c: "Η η",
     ans: "b",
     expl: {
-        a: "Špatně. Ι ι je ióta.",
-        b: "Správně. Υ υ je ý psílon. Např. <strong>ὕ</strong>στερον – hýsteron (později, pozdější).",
-        c: "Špatně. Η η je éta."
+        a: "Ι ι je ióta.",
+        b: "Υ υ je ý psílon. Např. <strong>ὕ</strong>στερον – hýsteron (později, pozdější).",
+        c: "Η η je éta."
     }
 },
 {
@@ -251,9 +251,9 @@ window.data_starorectina = {
     c: "Θ θ",
     ans: "a",
     expl: {
-        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
-        b: "Špatně. Χ χ je chí.",
-        c: "Špatně. Θ θ je théta."
+        a: "Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
+        b: "Χ χ je chí.",
+        c: "Θ θ je théta."
     }
 },
 {
@@ -263,9 +263,9 @@ window.data_starorectina = {
     c: "Φ φ",
     ans: "b",
     expl: {
-        a: "Špatně. Ψ ψ je psí.",
-        b: "Správně. Χ χ je chí. Např. χρεών – <strong>ch</strong>reón (nutné, potřebné).",
-        c: "Špatně. Φ φ je fí."
+        a: "Ψ ψ je psí.",
+        b: "Χ χ je chí. Např. χρεών – <strong>ch</strong>reón (nutné, potřebné).",
+        c: "Φ φ je fí."
     }
 },
 {
@@ -275,9 +275,9 @@ window.data_starorectina = {
     c: "Φ φ",
     ans: "a",
     expl: {
-        a: "Správně. Ψ ψ je psí. Např. <strong>ψ</strong>υχή – psyché (duše).",
-        b: "Špatně. Ξ ξ je ksí.",
-        c: "Špatně. Φ φ je fí."
+        a: "Ψ ψ je psí. Např. <strong>ψ</strong>υχή – psyché (duše).",
+        b: "Ξ ξ je ksí.",
+        c: "Φ φ je fí."
     }
 },
 {
@@ -287,9 +287,9 @@ window.data_starorectina = {
     c: "Η η",
     ans: "b",
     expl: {
-        a: "Špatně. Ο ο je omikron.",
-        b: "Správně. Ω ω je ó mega. Např. <strong>ὦ</strong>ρσεν – órsen (pohnulo, přimělo).",
-        c: "Špatně. Η η je éta."
+        a: "Ο ο je omikron.",
+        b: "Ω ω je ó mega. Např. <strong>ὦ</strong>ρσεν – órsen (pohnulo, přimělo).",
+        c: "Η η je éta."
     }
 },
 {
@@ -299,9 +299,9 @@ window.data_starorectina = {
     c: "gamma",
     ans: "a",
     expl: {
-        a: "Správně. Α α je alfa. Např. <strong>ἀ</strong>ρχή – arché (počátek).",
-        b: "Špatně. Β β je béta.",
-        c: "Špatně. Γ γ je gamma."
+        a: "Α α je alfa. Např. <strong>ἀ</strong>ρχή – arché (počátek).",
+        b: "Β β je béta.",
+        c: "Γ γ je gamma."
     }
 },
 {
@@ -311,9 +311,9 @@ window.data_starorectina = {
     c: "delta",
     ans: "b",
     expl: {
-        a: "Špatně. Γ γ je gamma.",
-        b: "Správně. Β β je béta. Např. <strong>β</strong>ίος – bíos (život).",
-        c: "Špatně. Δ δ je delta."
+        a: "Γ γ je gamma.",
+        b: "Β β je béta. Např. <strong>β</strong>ίος – bíos (život).",
+        c: "Δ δ je delta."
     }
 },
 {
@@ -323,9 +323,9 @@ window.data_starorectina = {
     c: "gamma",
     ans: "c",
     expl: {
-        a: "Špatně. Δ δ je delta.",
-        b: "Špatně. Α α je alfa.",
-        c: "Správně. Γ γ je gamma. Např. ἀ<strong>γ</strong>ένητον – agénéton (nevzniklé)."
+        a: "Δ δ je delta.",
+        b: "Α α je alfa.",
+        c: "Γ γ je gamma. Např. ἀ<strong>γ</strong>ένητον – agénéton (nevzniklé)."
     }
 },
 {
@@ -335,9 +335,9 @@ window.data_starorectina = {
     c: "béta",
     ans: "a",
     expl: {
-        a: "Správně. Δ δ je delta. Např. <strong>δ</strong>᾿ → dé (však, tu, pak, potom).",
-        b: "Špatně. Γ γ je gamma.",
-        c: "Špatně. Β β je béta."
+        a: "Δ δ je delta. Např. <strong>δ</strong>᾿ → dé (však, tu, pak, potom).",
+        b: "Γ γ je gamma.",
+        c: "Β β je béta."
     }
 },
 {
@@ -347,9 +347,9 @@ window.data_starorectina = {
     c: "zéta",
     ans: "b",
     expl: {
-        a: "Špatně. Η η je éta.",
-        b: "Správně. Ε ε je epsílon. Např. <strong>ἐ</strong>στιν – estin (je).",
-        c: "Špatně. Ζ ζ je zéta."
+        a: "Η η je éta.",
+        b: "Ε ε je epsílon. Např. <strong>ἐ</strong>στιν – estin (je).",
+        c: "Ζ ζ je zéta."
     }
 },
 {
@@ -359,9 +359,9 @@ window.data_starorectina = {
     c: "epsílon",
     ans: "a",
     expl: {
-        a: "Správně. Ζ ζ je zéta. Např. <strong>ζ</strong>ωή – zóé (život).",
-        b: "Špatně. Θ θ je théta.",
-        c: "Špatně. Ε ε je epsílon."
+        a: "Ζ ζ je zéta. Např. <strong>ζ</strong>ωή – zóé (život).",
+        b: "Θ θ je théta.",
+        c: "Ε ε je epsílon."
     }
 },
 {
@@ -371,9 +371,9 @@ window.data_starorectina = {
     c: "éta",
     ans: "c",
     expl: {
-        a: "Špatně. Ι ι je ióta.",
-        b: "Špatně. Ζ ζ je zéta.",
-        c: "Správně. Η η je éta. Např. <strong>ἠ</strong>δ᾿ – édé (a, pak)."
+        a: "Ι ι je ióta.",
+        b: "Ζ ζ je zéta.",
+        c: "Η η je éta. Např. <strong>ἠ</strong>δ᾿ – édé (a, pak)."
     }
 },
 {
@@ -383,9 +383,9 @@ window.data_starorectina = {
     c: "tau",
     ans: "b",
     expl: {
-        a: "Špatně. Χ χ je chí.",
-        b: "Správně. Θ θ je théta. Např. μῦ<strong>θ</strong>ος – mýthos (příběh, báje).",
-        c: "Špatně. Τ τ je tau."
+        a: "Χ χ je chí.",
+        b: "Θ θ je théta. Např. μῦ<strong>θ</strong>ος – mýthos (příběh, báje).",
+        c: "Τ τ je tau."
     }
 },
 {
@@ -395,9 +395,9 @@ window.data_starorectina = {
     c: "lambda",
     ans: "b",
     expl: {
-        a: "Špatně. Κ κ je kappa.",
-        b: "Správně. Ι ι je ióta. Např. Δ<strong>ι</strong>κη – Díké (spravedlnost).",
-        c: "Špatně. Λ λ je lambda."
+        a: "Κ κ je kappa.",
+        b: "Ι ι je ióta. Např. Δ<strong>ι</strong>κη – Díké (spravedlnost).",
+        c: "Λ λ je lambda."
     }
 },
 {
@@ -407,9 +407,9 @@ window.data_starorectina = {
     c: "kappa",
     ans: "c",
     expl: {
-        a: "Špatně. Χ χ je chí.",
-        b: "Špatně. Λ λ je lambda.",
-        c: "Správně. Κ κ je kappa. Např. <strong>κ</strong>ρίσις – krísis (soud, rozsudek)."
+        a: "Χ χ je chí.",
+        b: "Λ λ je lambda.",
+        c: "Κ κ je kappa. Např. <strong>κ</strong>ρίσις – krísis (soud, rozsudek)."
     }
 },
 {
@@ -419,9 +419,9 @@ window.data_starorectina = {
     c: "ný",
     ans: "a",
     expl: {
-        a: "Správně. Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
-        b: "Špatně. Μ μ je mý.",
-        c: "Špatně. Ν ν je ný."
+        a: "Λ λ je lambda. Např. ὄ<strong>λ</strong>εθρος – ólethros (zkáza, zánik). ὄ má jemný přídech, proto se h nepřepisuje.",
+        b: "Μ μ je mý.",
+        c: "Ν ν je ný."
     }
 },
 {
@@ -431,9 +431,9 @@ window.data_starorectina = {
     c: "lambda",
     ans: "b",
     expl: {
-        a: "Špatně. Ν ν je ný.",
-        b: "Správně. Μ μ je mý. Např. <strong>μ</strong>ῦθος – mýthos (příběh, báje).",
-        c: "Špatně. Λ λ je lambda."
+        a: "Ν ν je ný.",
+        b: "Μ μ je mý. Např. <strong>μ</strong>ῦθος – mýthos (příběh, báje).",
+        c: "Λ λ je lambda."
     }
 },
 {
@@ -443,9 +443,9 @@ window.data_starorectina = {
     c: "mý",
     ans: "a",
     expl: {
-        a: "Správně. Ν ν je ný. Např. <strong>ν</strong>ῦν – nýn (nyní).",
-        b: "Špatně. Ξ ξ je ksí.",
-        c: "Špatně. Μ μ je mý."
+        a: "Ν ν je ný. Např. <strong>ν</strong>ῦν – nýn (nyní).",
+        b: "Ξ ξ je ksí.",
+        c: "Μ μ je mý."
     }
 },
 {
@@ -455,9 +455,9 @@ window.data_starorectina = {
     c: "chí",
     ans: "b",
     expl: {
-        a: "Špatně. Ψ ψ je psí.",
-        b: "Správně. Ξ ξ je ksí. Např. ἀ<strong>ξ</strong>ία – axía (hodnota).",
-        c: "Špatně. Χ χ je chí."
+        a: "Ψ ψ je psí.",
+        b: "Ξ ξ je ksí. Např. ἀ<strong>ξ</strong>ία – axía (hodnota).",
+        c: "Χ χ je chí."
     }
 },
 {
@@ -467,9 +467,9 @@ window.data_starorectina = {
     c: "epsílon",
     ans: "a",
     expl: {
-        a: "Správně. Ο ο je omikron. Např. <strong>ὁ</strong>δός – hodós (cesta).",
-        b: "Špatně. Ω ω je ó mega.",
-        c: "Špatně. Ε ε je epsílon."
+        a: "Ο ο je omikron. Např. <strong>ὁ</strong>δός – hodós (cesta).",
+        b: "Ω ω je ó mega.",
+        c: "Ε ε je epsílon."
     }
 },
 {
@@ -479,9 +479,9 @@ window.data_starorectina = {
     c: "pí",
     ans: "c",
     expl: {
-        a: "Špatně. Ρ ρ je ró.",
-        b: "Špatně. Φ φ je fí.",
-        c: "Správně. Π π je pí. Např. <strong>π</strong>ίστις – pístis (víra, důvěra)."
+        a: "Ρ ρ je ró.",
+        b: "Φ φ je fí.",
+        c: "Π π je pí. Např. <strong>π</strong>ίστις – pístis (víra, důvěra)."
     }
 },
 {
@@ -491,9 +491,9 @@ window.data_starorectina = {
     c: "sígma",
     ans: "a",
     expl: {
-        a: "Správně. Ρ ρ je ró. Např. Ῥόδος – <strong>Rh</strong>odos (Rhodos).",
-        b: "Špatně. Π π je pí.",
-        c: "Špatně. Σ σ ς je sígma."
+        a: "Ρ ρ je ró. Např. Ῥόδος – <strong>Rh</strong>odos (Rhodos).",
+        b: "Π π je pí.",
+        c: "Σ σ ς je sígma."
     }
 },
 {
@@ -503,9 +503,9 @@ window.data_starorectina = {
     c: "tau",
     ans: "b",
     expl: {
-        a: "Špatně. Ζ ζ je zéta.",
-        b: "Správně. Σ σ ς je sígma. Např. ἐ<strong>σ</strong>τιν – estin (je).",
-        c: "Špatně. Τ τ je tau."
+        a: "Ζ ζ je zéta.",
+        b: "Σ σ ς je sígma. Např. ἐ<strong>σ</strong>τιν – estin (je).",
+        c: "Τ τ je tau."
     }
 },
 {
@@ -515,9 +515,9 @@ window.data_starorectina = {
     c: "tau",
     ans: "c",
     expl: {
-        a: "Špatně. Θ θ je théta.",
-        b: "Špatně. Π π je pí.",
-        c: "Správně. Τ τ je tau. Např. <strong>τ</strong>ε – te (a, také)."
+        a: "Θ θ je théta.",
+        b: "Π π je pí.",
+        c: "Τ τ je tau. Např. <strong>τ</strong>ε – te (a, také)."
     }
 },
 {
@@ -527,9 +527,9 @@ window.data_starorectina = {
     c: "éta",
     ans: "a",
     expl: {
-        a: "Správně. Υ υ je ý psílon. Např. <strong>ὕ</strong>στερον – hýsteron (později, pozdější).",
-        b: "Špatně. Ι ι je ióta.",
-        c: "Špatně. Η η je éta."
+        a: "Υ υ je ý psílon. Např. <strong>ὕ</strong>στερον – hýsteron (později, pozdější).",
+        b: "Ι ι je ióta.",
+        c: "Η η je éta."
     }
 },
 {
@@ -539,9 +539,9 @@ window.data_starorectina = {
     c: "psí",
     ans: "a",
     expl: {
-        a: "Správně. Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
-        b: "Špatně. Χ χ je chí.",
-        c: "Špatně. Ψ ψ je psí."
+        a: "Φ φ je fí. Např. <strong>φ</strong>άσθαι – fásthaj (říkat).",
+        b: "Χ χ je chí.",
+        c: "Ψ ψ je psí."
     }
 },
 {
@@ -551,9 +551,9 @@ window.data_starorectina = {
     c: "fí",
     ans: "b",
     expl: {
-        a: "Špatně. Ψ ψ je psí.",
-        b: "Správně. Χ χ je chí. Např. <strong>χ</strong>ρεών – chreón (nutné, potřebné).",
-        c: "Špatně. Φ φ je fí."
+        a: "Ψ ψ je psí.",
+        b: "Χ χ je chí. Např. <strong>χ</strong>ρεών – chreón (nutné, potřebné).",
+        c: "Φ φ je fí."
     }
 },
 {
@@ -563,9 +563,9 @@ window.data_starorectina = {
     c: "psí",
     ans: "c",
     expl: {
-        a: "Špatně. Ξ ξ je ksí.",
-        b: "Špatně. Φ φ je fí.",
-        c: "Správně. Ψ ψ je psí. Např. <strong>ψ</strong>υχή – psyché (duše)."
+        a: "Ξ ξ je ksí.",
+        b: "Φ φ je fí.",
+        c: "Ψ ψ je psí. Např. <strong>ψ</strong>υχή – psyché (duše)."
     }
 },
 {
@@ -575,9 +575,9 @@ window.data_starorectina = {
     c: "ó mega",
     ans: "c",
     expl: {
-        a: "Špatně. Ο ο je omikron.",
-        b: "Špatně. Η η je éta.",
-        c: "Správně. Ω ω je ó mega. Např. <strong>ὦ</strong>ρσεν – órsen (pohnulo, přimělo)."
+        a: "Ο ο je omikron.",
+        b: "Η η je éta.",
+        c: "Ω ω je ó mega. Např. <strong>ὦ</strong>ρσεν – órsen (pohnulo, přimělo)."
     }
 },
             ]
@@ -592,13 +592,15 @@ window.data_starorectina = {
                     "c": "Všechny krásné věci jsou krásné krásnem.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> archén tú pantos eínai kai telos to hýdór.<br>" +
                             "<strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br>" +
                             "<strong>Přirozený překlad:</strong> Počátkem a cílem všeho je voda.<br>" +
                             "<strong>Autor / zdroj:</strong> Thalés; Hippolytos, Refutatio I, 1, 1, 2–3.<br>" +
                             "<strong>Poznámka k prameni:</strong> Zlomek je dochován prostřednictvím Hippolyta.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> archén tú pantos eínai kai telos to hýdór.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> archén tú pantos eínai kai telos to hýdór.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -608,13 +610,15 @@ window.data_starorectina = {
                     "c": "Idea dobra je příčinou rozumového vědění a pravdy.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> pánta pléré theón eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> pánta pléré theón eínai.<br>" +
                             "<strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br>" +
                             "<strong>Přirozený překlad:</strong> Všechno je plné bohů.<br>" +
                             "<strong>Autor / zdroj:</strong> Thalés; DK 11 A22–A23, tradice u Aetia.<br>" +
                             "<strong>Poznámka k prameni:</strong> V opoře se objevují dvě související formulace: „πάντα πλήρη θεῶν εἶναι“ a „τὸν κόσμον ἔμψυχον καὶ δαιμόνων πλήρη εἶναι“.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> pánta pléré theón eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -624,9 +628,11 @@ window.data_starorectina = {
                     "c": "Vesmír je oduševněný a plný božstev.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> ton kosmon empsychon kai daimonón pléré eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> ton kosmon empsychon kai daimonón pléré eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> ton kosmon empsychon kai daimonón pléré eínai.<br>" +
                             "<strong>Doslovný překlad:</strong> kosmos/svět – oduševněný – a – božstev – plný – být<br>" +
                             "<strong>Přirozený překlad:</strong> Vesmír je oduševněný a plný božstev.<br>" +
                             "<strong>Autor / zdroj:</strong> Aetios, DK 11 A23, podle Studijní opory."
@@ -639,13 +645,15 @@ window.data_starorectina = {
                     "c": "Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> to apeiron<br>" +
                             "<strong>Doslovný překlad:</strong> to – neomezené / bezmezné<br>" +
                             "<strong>Přirozený překlad:</strong> Neomezené, nekonečné (apeiron).<br>" +
                             "<strong>Autor / zdroj:</strong> Anaximandros; DK 12 A1.<br>" +
                             "<strong>Poznámka k prameni:</strong> Jde o filosofický výraz, nikoli úplnou větu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> to apeiron<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> to apeiron<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -655,13 +663,15 @@ window.data_starorectina = {
                     "c": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> ex ón de hé genesis esti toís úsi, kai tén fthoran eis taúta ginesthai kata to chreón: didonai gar auta díkén kai tísin allélois tés adikías kata tén tú chronú táxin.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> ex ón de hé genesis esti toís úsi, kai tén fthoran eis taúta ginesthai kata to chreón: didonai gar auta díkén kai tísin allélois tés adikías kata tén tú chronú táxin.<br>" +
                             "<strong>Doslovný překlad:</strong> z čeho – pak – vznik – je – jsoucím – také – zánik – do těchto – stávat se – podle – nutnosti; dávat – totiž – tyto věci – spravedlivou odplatu – a náhradu – sobě navzájem – za bezpráví – podle – řádu – času<br>" +
                             "<strong>Přirozený překlad:</strong> Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.<br>" +
                             "<strong>Autor / zdroj:</strong> Anaximandros; DK 12 B1, Simplikios, Fyzika (podle Theofrasta).<br>" +
                             "<strong>Poznámka k prameni:</strong> Studijní opora označuje zlomek za jeden z nejstarších zachovaných doslovných filosofických textů.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> ex ón de hé genesis esti toís úsi, kai tén fthoran eis taúta ginesthai kata to chreón: didonai gar auta díkén kai tísin allélois tés adikías kata tén tú chronú táxin.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -671,9 +681,11 @@ window.data_starorectina = {
                     "c": "Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> oíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> oíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> oíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br>" +
                             "<strong>Doslovný překlad:</strong> jako – duše – říká – naše – vzduch – jsoucí – ovládá / drží pohromadě – nás; a – celý – kosmos – dech – a – vzduch – objímá<br>" +
                             "<strong>Přirozený překlad:</strong> Říká, že jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.<br>" +
                             "<strong>Autor / zdroj:</strong> Anaximenés; DK 13 B2, Aetios.<br>" +
@@ -687,12 +699,14 @@ window.data_starorectina = {
                     "c": "Duše je příčinou toho, že tělo žije.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> hodos ánó kátó mía kai hóyté.<br>" +
                             "<strong>Doslovný překlad:</strong> cesta – nahoru – dolů – jedna – a – táž<br>" +
                             "<strong>Přirozený překlad:</strong> Cesta nahoru a dolů je jedna a táž.<br>" +
                             "<strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B60.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> hodos ánó kátó mía kai hóyté.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> hodos ánó kátó mía kai hóyté.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -702,12 +716,14 @@ window.data_starorectina = {
                     "c": "Všechna jsoucna jsou jsoucí na základě Jedna.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> polemos pántón men patér esti, pántón de basileús.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> polemos pántón men patér esti, pántón de basileús.<br>" +
                             "<strong>Doslovný překlad:</strong> boj/válka – všech – na jedné straně – otec – je – všech – na druhé straně – král<br>" +
                             "<strong>Přirozený překlad:</strong> Boj je otcem všech věcí a králem všech věcí.<br>" +
                             "<strong>Autor / zdroj:</strong> Hérakleitos; DK 22 B53.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> polemos pántón men patér esti, pántón de basileús.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -717,9 +733,11 @@ window.data_starorectina = {
                     "c": "Všechno se mění v opak.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> pánta metabállei eis enantíon.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> pánta metabállei eis enantíon.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> pánta metabállei eis enantíon.<br>" +
                             "<strong>Doslovný překlad:</strong> všechno – mění se / přechází – v – opak<br>" +
                             "<strong>Přirozený překlad:</strong> Všechno se mění v opak.<br>" +
                             "<strong>Autor / zdroj:</strong> Připsáno Hérakleitovi v předchozím výběru.<br>" +
@@ -733,12 +751,14 @@ window.data_starorectina = {
                     "c": "Setrvání – vycházení – návrat.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> nús estin ho diakosmón te kai pántón aítios.<br>" +
                             "<strong>Doslovný překlad:</strong> rozum/intelekt – je – ten, který uspořádává – a také – všeho – příčina<br>" +
                             "<strong>Přirozený překlad:</strong> Rozum vnáší do světa řád a je příčinou všeho.<br>" +
                             "<strong>Autor / zdroj:</strong> Anaxagorás; DK 59 A47, 2–3; Platón, Faidón 97b.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> nús estin ho diakosmón te kai pántón aítios.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> nús estin ho diakosmón te kai pántón aítios.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -748,13 +768,15 @@ window.data_starorectina = {
                     "c": "Kladná teologie – záporná teologie.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> úk estin kinésis úsa áneu kenú, to te kenon mé on: kai tú ontos úden mé on eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> úk estin kinésis úsa áneu kenú, to te kenon mé on: kai tú ontos úden mé on eínai.<br>" +
                             "<strong>Doslovný překlad:</strong> není – pohyb – jsoucí – bez – prázdna; a – prázdno – nejsoucí; a – jsoucna – nic – nejsoucí – být<br>" +
                             "<strong>Přirozený překlad:</strong> Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.<br>" +
                             "<strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory.<br>" +
                             "<strong>Poznámka k prameni:</strong> Řecké znění zde odpovídá zkrácené podobě citátu uvedené v opoře; nepřidávat jako doslovný originál delší parafrázi.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> úk estin kinésis úsa áneu kenú, to te kenon mé on: kai tú ontos úden mé on eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -764,9 +786,11 @@ window.data_starorectina = {
                     "c": "Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> ek de tú kata alétheian henos úk an genoito pléthos, úde ek tón aléthós pollón hen.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> ek de tú kata alétheian henos úk an genoito pléthos, úde ek tón aléthós pollón hen.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> ek de tú kata alétheian henos úk an genoito pléthos, úde ek tón aléthós pollón hen.<br>" +
                             "<strong>Doslovný překlad:</strong> z – toho – pak – podle pravdy – jednoho – nemohlo by – vzniknout – množství; ani – z – těch – skutečně – mnohých – jedno<br>" +
                             "<strong>Přirozený překlad:</strong> Z toho, co je vpravdě jedno, nevzniká množství, ani z toho, co je opravdu mnohé, jedno.<br>" +
                             "<strong>Autor / zdroj:</strong> Leukippos; DK 67 A7, podle Studijní opory."
@@ -779,12 +803,14 @@ window.data_starorectina = {
                     "c": "Setrvání – vycházení – návrat.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> nomó glyký, nomó pikron, nomó thermon, nomó psychron, nomó chroié: eteé de atoma kai kenon.<br>" +
                             "<strong>Doslovný překlad:</strong> podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno<br>" +
                             "<strong>Přirozený překlad:</strong> Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.<br>" +
                             "<strong>Autor / zdroj:</strong> Démokritos; DK 68 B125, Galénos a Sextos.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> nomó glyký, nomó pikron, nomó thermon, nomó psychron, nomó chroié: eteé de atoma kai kenon.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> nomó glyký, nomó pikron, nomó thermon, nomó psychron, nomó chroié: eteé de atoma kai kenon.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -794,12 +820,14 @@ window.data_starorectina = {
                     "c": "Očista – osvícení – dokonalost.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> peri men theón úk echó eidenai úth᾽ hós eisín, úth᾽ hós úk eisín.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> peri men theón úk echó eidenai úth᾽ hós eisín, úth᾽ hós úk eisín.<br>" +
                             "<strong>Doslovný překlad:</strong> o – bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou<br>" +
                             "<strong>Přirozený překlad:</strong> O bozích nemám vědění, ani že jsou, ani že nejsou.<br>" +
                             "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 B4, Diogenés Laertios IX, 51.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> peri men theón úk echó eidenai úth᾽ hós eisín, úth᾽ hós úk eisín.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -809,9 +837,11 @@ window.data_starorectina = {
                     "c": "Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> pántón chrémátón metron anthrópos, tón men ontón hós esti, tón de úk ontón hós úk estin.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> pántón chrémátón metron anthrópos, tón men ontón hós esti, tón de úk ontón hós úk estin.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> pántón chrémátón metron anthrópos, tón men ontón hós esti, tón de úk ontón hós úk estin.<br>" +
                             "<strong>Doslovný překlad:</strong> všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou<br>" +
                             "<strong>Přirozený překlad:</strong> Mírou všech věcí je člověk – jsoucích, že jsou, a nejsoucích, že nejsou.<br>" +
                             "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 B1, citováno u Sexta Empirika."
@@ -824,12 +854,14 @@ window.data_starorectina = {
                     "c": "Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> pánta eínai hosa pási faínetai.<br>" +
                             "<strong>Doslovný překlad:</strong> všechno – být – tolik/co – všem – jeví se<br>" +
                             "<strong>Přirozený překlad:</strong> Všechno je takové, jak se komu jeví.<br>" +
                             "<strong>Autor / zdroj:</strong> Prótagorás; DK 80 A14, Sextos.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> pánta eínai hosa pási faínetai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> pánta eínai hosa pási faínetai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -839,13 +871,15 @@ window.data_starorectina = {
                     "c": "Poznání podobného podobným.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> fronései hekástén tón aretón eínai pásas tas aretás.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> fronései hekástén tón aretón eínai pásas tas aretás.<br>" +
                             "<strong>Doslovný překlad:</strong> rozumností / praktickou moudrostí – každou – z – ctností – být – všechny – ctnosti<br>" +
                             "<strong>Přirozený překlad:</strong> Domníval se, že všechny ctnosti jsou věděním.<br>" +
                             "<strong>Autor / zdroj:</strong> Aristotelés, Etika Nikomachova 1144b18; v opoře v souvislosti se Sókratem.<br>" +
                             "<strong>Poznámka k prameni:</strong> Řecká formulace v opoře je citována jako „φρονήσει ἑτο εἶναι πάσας τὰς ἀρετάς“; v souboru je uvedena čitelná normalizovaná podoba, nikoli jistota diplomatického přepisu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> fronései hekástén tón aretón eínai pásas tas aretás.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -855,9 +889,11 @@ window.data_starorectina = {
                     "c": "To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> túto de estin anamnésis ekeínón, a pot᾽ eíden hémón hé psyché ... anakypsasa eis to on ontós.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> túto de estin anamnésis ekeínón, a pot᾽ eíden hémón hé psyché ... anakypsasa eis to on ontós.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> túto de estin anamnésis ekeínón, a pot᾽ eíden hémón hé psyché ... anakypsasa eis to on ontós.<br>" +
                             "<strong>Doslovný překlad:</strong> toto – pak – je – vzpomínání – na ona – která – kdysi – spatřila – naše – duše ... pozdvihnuvši se – k – jsoucnu – skutečně<br>" +
                             "<strong>Přirozený překlad:</strong> To je vzpomínání na ona jsoucna, která kdysi spatřila naše duše, když pozdvihla hlavu ke skutečnému jsoucnu.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Faidros 249c."
@@ -870,12 +906,14 @@ window.data_starorectina = {
                     "c": "Počátkem a cílem všeho je voda.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> hé men mathésis úk állo ti é anamnésis.<br>" +
                             "<strong>Doslovný překlad:</strong> učení – tedy – není – něco jiného – než – rozpomínání<br>" +
                             "<strong>Přirozený překlad:</strong> Naše učení není nic jiného než vzpomínání.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Faidón 72e.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> hé men mathésis úk állo ti é anamnésis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> hé men mathésis úk állo ti é anamnésis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -885,13 +923,15 @@ window.data_starorectina = {
                     "c": "Všechno je plné bohů.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> tó kaló pánta ta kala gignetai kalá.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> tó kaló pánta ta kala gignetai kalá.<br>" +
                             "<strong>Doslovný překlad:</strong> krásnem – všechny – krásné – věci – stávají se – krásnými<br>" +
                             "<strong>Přirozený překlad:</strong> Všechny krásné věci jsou krásné krásnem.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Faidón 100d.<br>" +
                             "<strong>Poznámka k prameni:</strong> V opoře je citováno zkráceně jako „τὰ καλὰ πάντα γίγνεται καλά“; zde je doplněna vazba odpovídající doslovnému smyslu citátu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> tó kaló pánta ta kala gignetai kalá.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -901,9 +941,11 @@ window.data_starorectina = {
                     "c": "Idea dobra je příčinou rozumového vědění a pravdy.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> tén tú agathú idean ... eínai aitían d᾽ epistémés úsan kai alétheías.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> tén tú agathú idean ... eínai aitían d᾽ epistémés úsan kai alétheías.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> tén tú agathú idean ... eínai aitían d᾽ epistémés úsan kai alétheías.<br>" +
                             "<strong>Doslovný překlad:</strong> dobro – ideu ... být – příčinou – pak – vědění – jsoucí – a – pravdy<br>" +
                             "<strong>Přirozený překlad:</strong> Idea dobra je příčinou rozumového vědění a pravdy.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Ústava 508e, podle Studijní opory."
@@ -916,12 +958,14 @@ window.data_starorectina = {
                     "c": "Neomezené, nekonečné (apeiron).",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> úk úsías ontos tú agathú, all᾽ eti epekeina tés úsías presbeía kai dynámei hýperechontos.<br>" +
                             "<strong>Doslovný překlad:</strong> ne – jsoucností – jsoucího – dobra, nýbrž – ještě – za/přesahujícího – jsoucnost – důstojností – a – mocí – vynikajícího<br>" +
                             "<strong>Přirozený překlad:</strong> Dobro není jsoucností, nýbrž ji důstojností a mocí ještě přesahuje.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Ústava 509b, podle Studijní opory.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> úk úsías ontos tú agathú, all᾽ eti epekeina tés úsías presbeía kai dynámei hýperechontos.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> úk úsías ontos tú agathú, all᾽ eti epekeina tés úsías presbeía kai dynámei hýperechontos.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -931,12 +975,14 @@ window.data_starorectina = {
                     "c": "Z čeho věci vznikají, do toho také podle nutnosti zanikají; navzájem si totiž dávají pokutu a trest za své bezpráví podle řádu času.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> eídos hen hekaston ... epi polla átta, hoís tauton onoma epiferomen.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> eídos hen hekaston ... epi polla átta, hoís tauton onoma epiferomen.<br>" +
                             "<strong>Doslovný překlad:</strong> idea/druh – jedno – každé ... – na – mnoho – jednotlivých věcí, kterým – stejné – jméno – přikládáme<br>" +
                             "<strong>Přirozený překlad:</strong> Ideou nazýváme určité jedno, které se vztahuje k mnoha věcem, jimž dáváme stejné jméno.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Ústava 596a.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> eídos hen hekaston ... epi polla átta, hoís tauton onoma epiferomen.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -946,9 +992,11 @@ window.data_starorectina = {
                     "c": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> filosofoi = hekaston to on aspazomenoi.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> filosofoi = hekaston to on aspazomenoi.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> filosofoi = hekaston to on aspazomenoi.<br>" +
                             "<strong>Doslovný překlad:</strong> filosofové = každé – jednotlivé – jsoucno – s láskou přijímající / vítající<br>" +
                             "<strong>Přirozený překlad:</strong> Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br>" +
@@ -962,12 +1010,14 @@ window.data_starorectina = {
                     "c": "Cesta nahoru a dolů je jedna a táž.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> noésin men epi tó anótátó, dianoian de epi tó deuteró, tó trító de pístin apodos kai tó teleutaíó eikasían.<br>" +
                             "<strong>Doslovný překlad:</strong> rozumové poznání – na jedné straně – na nejvyšším; myšlení – pak – na druhém; třetímu – pak – přiřaď – víru – a – poslednímu – domněnku<br>" +
                             "<strong>Přirozený překlad:</strong> Nejvyššímu úseku přiřaď rozumové poznání, druhému myšlení, třetímu víru a poslednímu dohadování.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón, Ústava 511d–e; prezentace Platonismus.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> noésin men epi tó anótátó, dianoian de epi tó deuteró, tó trító de pístin apodos kai tó teleutaíó eikasían.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> noésin men epi tó anótátó, dianoian de epi tó deuteró, tó trító de pístin apodos kai tó teleutaíó eikasían.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -977,13 +1027,15 @@ window.data_starorectina = {
                     "c": "Boj je otcem všech věcí a králem všech věcí.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> psyché aítion esti tú zén autó sómati.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> psyché aítion esti tú zén autó sómati.<br>" +
                             "<strong>Doslovný překlad:</strong> duše – příčinou – je – toho – žít – samotnému – tělu<br>" +
                             "<strong>Přirozený překlad:</strong> Duše je příčinou toho, že tělo žije.<br>" +
                             "<strong>Autor / zdroj:</strong> Platón; prezentace Platonismus.<br>" +
                             "<strong>Poznámka k prameni:</strong> V prezentaci je věta uvedena jako samostatný výrok bez přesného odkazu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> psyché aítion esti tú zén autó sómati.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -993,9 +1045,11 @@ window.data_starorectina = {
                     "c": "Všechna jsoucna jsou jsoucí na základě Jedna.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> pánta ta onta tó heni estin onta.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> pánta ta onta tó heni estin onta.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> pánta ta onta tó heni estin onta.<br>" +
                             "<strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br>" +
                             "<strong>Přirozený překlad:</strong> Všechna jsoucna jsou jsoucí na základě Jedna.<br>" +
                             "<strong>Autor / zdroj:</strong> Plótínos; prezentace Platonismus.<br>" +
@@ -1009,13 +1063,15 @@ window.data_starorectina = {
                     "c": "Rozum vnáší do světa řád a je příčinou všeho.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> anaitíós aítion.<br>" +
                             "<strong>Doslovný překlad:</strong> nezapříčiněná / bez příčiny – příčina<br>" +
                             "<strong>Přirozený překlad:</strong> Nepříčinná příčina (příčina, která sama není zapříčiněna).<br>" +
                             "<strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus.<br>" +
                             "<strong>Poznámka k prameni:</strong> Filosofický výraz, nikoli úplná věta.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> anaitíós aítion.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> anaitíós aítion.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1025,12 +1081,14 @@ window.data_starorectina = {
                     "c": "Pohyb není bez prázdna a prázdno je nejsoucí – a žádné jsoucno není nejsoucí.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
                             "<strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br>" +
                             "<strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br>" +
                             "<strong>Autor / zdroj:</strong> Proklos; prezentace Platonismus; převzato také v dionysiovském kontextu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1040,9 +1098,11 @@ window.data_starorectina = {
                     "c": "Kladná teologie – záporná teologie.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> katafatiké theología – apofatiké theología.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> katafatiké theología – apofatiké theología.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> katafatiké theología – apofatiké theología.<br>" +
                             "<strong>Doslovný překlad:</strong> kladná / afirmativní – teologie; záporná / apofatická – teologie<br>" +
                             "<strong>Přirozený překlad:</strong> Kladná teologie – záporná teologie.<br>" +
                             "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
@@ -1056,13 +1116,15 @@ window.data_starorectina = {
                     "c": "Podle zvyku sladké a hořké, teplé a studené, barevné; ve skutečnosti však atomy a prázdno.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> hen – hýperúsios.<br>" +
                             "<strong>Doslovný překlad:</strong> Jedno – nad-jsoucí / nad jsoucností<br>" +
                             "<strong>Přirozený překlad:</strong> Jedno – to, co přesahuje bytí.<br>" +
                             "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
                             "<strong>Poznámka k prameni:</strong> Nejde o synonyma: ἕν označuje Jedno; ὑπερούσιος charakterizuje jeho přesah vůči bytí.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> hen – hýperúsios.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> hen – hýperúsios.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1072,12 +1134,14 @@ window.data_starorectina = {
                     "c": "O bozích nemám vědění, ani že jsou, ani že nejsou.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
                             "<strong>Doslovný překlad:</strong> setrvání / prodlévání – vycházení – obrat zpět / návrat<br>" +
                             "<strong>Přirozený překlad:</strong> Setrvání – vycházení – návrat.<br>" +
                             "<strong>Autor / zdroj:</strong> Proklovská triáda převzatá Dionysiem; prezentace Dionysius Areopagita.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> moné – proodos – epistrofé.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1087,9 +1151,11 @@ window.data_starorectina = {
                     "c": "Očista – osvícení – dokonalost.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> katharsis – fótismos – teleíósis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> katharsis – fótismos – teleíósis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> katharsis – fótismos – teleíósis.<br>" +
                             "<strong>Doslovný překlad:</strong> očištění – osvícení – zdokonalení / dovršení<br>" +
                             "<strong>Přirozený překlad:</strong> Očista – osvícení – dokonalost.<br>" +
                             "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita; schéma cesty v církevní hierarchii.<br>" +
@@ -1103,13 +1169,15 @@ window.data_starorectina = {
                     "c": "Všechno je takové, jak se komu jeví.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> ekstasis – teleíósis.<br>" +
                             "<strong>Doslovný překlad:</strong> vyjití ze sebe – zdokonalení / dovršení<br>" +
                             "<strong>Přirozený překlad:</strong> Extáze – sjednocení či dovršení.<br>" +
                             "<strong>Autor / zdroj:</strong> Prezentace Dionysius Areopagita.<br>" +
                             "<strong>Poznámka k prameni:</strong> Prezentace popisuje extázi a sjednocení s počátkem; přesné řecké spojení jako citát neuvádí.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> ekstasis – teleíósis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> ekstasis – teleíósis.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1119,13 +1187,15 @@ window.data_starorectina = {
                     "c": "Domníval se, že všechny ctnosti jsou věděním.",
                     "ans": "b",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> ú to on kai pán.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> ú to on kai pán.<br>" +
                             "<strong>Doslovný překlad:</strong> ne – jsoucno – a – všechno<br>" +
                             "<strong>Přirozený překlad:</strong> Přibližný význam v předchozím seznamu: „Jsoucno je jedno a všechno.“<br>" +
                             "<strong>Autor / zdroj:</strong> Přesné znění ani zdroj nejsou v dodaných souborech doloženy.<br>" +
                             "<strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "c": "<strong>Transkripce:</strong> ú to on kai pán.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
@@ -1135,9 +1205,11 @@ window.data_starorectina = {
                     "c": "Poznání podobného podobným.",
                     "ans": "c",
                     "expl": {
-                        "a": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> gnósis tú homoíú tó homoíó.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> gnósis tú homoíú tó homoíó.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> gnósis tú homoíú tó homoíó.<br>" +
                             "<strong>Doslovný překlad:</strong> poznání – podobného – podobným<br>" +
                             "<strong>Přirozený překlad:</strong> Poznání podobného podobným.<br>" +
                             "<strong>Autor / zdroj:</strong> Přesné znění a odkaz nebyly v dodaných souborech ověřeny.<br>" +
@@ -1151,13 +1223,15 @@ window.data_starorectina = {
                     "c": "Naše učení není nic jiného než vzpomínání.",
                     "ans": "a",
                     "expl": {
-                        "a": "Správně.<br>" +
+                        "a": "<strong>Transkripce:</strong> to gar auto noeín estín te kai eínai.<br>" +
                             "<strong>Doslovný překlad:</strong> totéž – totiž – myslet – je – a – být<br>" +
                             "<strong>Přirozený překlad:</strong> Totéž je myslet a být.<br>" +
                             "<strong>Autor / zdroj:</strong> Připsáno Parmenidovi, DK 28 B3, v předchozím výběru. Tento zlomek je důležitý, ale v textovém výpisu dodané opory nebyl nalezen.<br>" +
                             "<strong>Upozornění:</strong> Tato položka je v dodaném výběru výslovně označena jako neověřená; neučit se ji jako doložený doslovný citát.",
-                        "b": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "Špatně. Tento překlad neodpovídá zobrazenému řeckému textu."
+                        "b": "<strong>Transkripce:</strong> to gar auto noeín estín te kai eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> to gar auto noeín estín te kai eínai.<br>" +
+                            "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
             ]
