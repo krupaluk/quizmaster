@@ -583,7 +583,7 @@ window.data_starorectina = {
             ]
         },
         "antika": {
-            "title": "Antika",
+            "title": "Výroky: Antika",
             "questions": [
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>ἀρχὴν τοῦ παντὸς εἶναι καὶ τέλος τὸ ὕδωρ.</strong>",
@@ -617,7 +617,7 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> hútos efasken archén kai stoicheíon to apeiron … kai ta men meré metabállein, to de pán ametabléton<br><strong>Doslovný překlad:</strong> tento – tvrdil – počátek – a – prvek – neomezené – části – na jedné straně – měnit se – celek – na druhé straně – neměnný<br><strong>Autor:</strong> Anaximandros.",
+                        "b": "<strong>Transkripce:</strong> hútos efasken archén kai stoicheíon to apeiron … kai ta men meré metabállein, to de pán ametabléton<br><strong>Doslovný překlad:</strong> tento - říkával - počátek - a - prvek - to - nekonečné - … - a - ty - sice - části - měnit se - to - ale - vše - neměnné<br><strong>Autor:</strong> Anaximandros.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -630,7 +630,7 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> oíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br><strong>Doslovný překlad:</strong> jako – duše – říká – naše – vzduch – jsoucí – ovládá / drží pohromadě – nás; a – celý – kosmos – dech – a – vzduch – objímá<br><strong>Autor:</strong> Anaximenés."
+                        "c": "<strong>Transkripce:</strong> hoíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br><strong>Doslovný překlad:</strong> tento - sice - duše - říká - ta - naše - vzduch - jsoucí - udržuje pohromadě - nás - a - celý - ten - svět - dech - a - vzduch - obklopuje<br><strong>Autor:</strong> Anaximenés."
                     }
                 },
                 {
@@ -1128,7 +1128,7 @@ window.data_starorectina = {
             ]
         },
         "stredovek": {
-            "title": "Středověk",
+            "title": "Výroky: Středověk",
             "questions": [
                 {
                     "q": "Co znamená tento latinský text?<br><br><strong>Si enim fallor, sum. Nam qui non est, utique nec falli potest: ac per hoc sum, si fallor.</strong>",
