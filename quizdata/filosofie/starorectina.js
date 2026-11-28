@@ -594,7 +594,9 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> archén tú pantos eínai kai telos to hýdór.<br><strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br><strong>Autor:</strong> Thalés z Mílétu."
+                        "c": "<strong>Transkripce:</strong> archén tú pantos eínai kai telos to hýdór.<br>" +
+                            "<strong>Doslovný překlad:</strong> počátek – všeho – být – a – konec/cíl – voda<br>" +
+                            "<strong>Autor:</strong> Thalés z Mílétu."
                     }
                 },
                 {
@@ -604,7 +606,9 @@ window.data_starorectina = {
                     "c": "Jako naše duše, jsouc vzduchem, nás ovládá, tak dech a vzduch objímají celý svět.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> pánta pléré theón eínai.<br><strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br><strong>Autor:</strong> Thalés z Mílétu.",
+                        "a": "<strong>Transkripce:</strong> pánta pléré theón eínai.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechno – plné – bohů – být<br>" +
+                            "<strong>Autor:</strong> Thalés z Mílétu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -617,7 +621,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> hútos efasken archén kai stoicheíon to apeiron … kai ta men meré metabállein, to de pán ametabléton<br><strong>Doslovný překlad:</strong> tento - říkával - počátek - a - prvek - to - nekonečné - … - a - ty - sice - části - měnit se - to - ale - vše - neměnné<br><strong>Autor:</strong> Anaximandros.",
+                        "b": "<strong>Transkripce:</strong> hútos efasken archén kai stoicheíon to apeiron … kai ta men meré metabállein, to de pán ametabléton.<br>" +
+                            "<strong>Doslovný překlad:</strong> tento - říkával - počátek - a - prvek - to - nekonečné - … - a - ty - sice - části - měnit se - to - ale - vše - neměnné<br>" +
+                            "<strong>Autor:</strong> Anaximandros.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -630,7 +636,9 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> hoíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br><strong>Doslovný překlad:</strong> tento - sice - duše - říká - ta - naše - vzduch - jsoucí - udržuje pohromadě - nás - a - celý - ten - svět - dech - a - vzduch - obklopuje<br><strong>Autor:</strong> Anaximenés."
+                        "c": "<strong>Transkripce:</strong> hoíon hé psyché, fésín, hé hémetera aér úsa synkrateí hémás, kai holon ton kosmon pneúma kai aér periechei.<br>" +
+                            "<strong>Doslovný překlad:</strong> tento - sice - duše - říká - ta - naše - vzduch - jsoucí - udržuje pohromadě - nás - a - celý - ten - svět - dech - a - vzduch - obklopuje<br>" +
+                            "<strong>Autor:</strong> Anaximenés."
                     }
                 },
                 {
@@ -640,7 +648,9 @@ window.data_starorectina = {
                     "c": "Mnohoučenost rozumu nenaučí; jinak by byla naučila Hésioda, Pýthagoru, Xenofana i Hekataia.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> Pythagoras prótos ónomase tén tón holón periochén kosmon ek tés en autó taxeós.<br><strong>Doslovný překlad:</strong> Pýthagorás – první – pojmenoval – veškerenstva – celek/oblast – kosmos – z – řádu – v něm<br><strong>Autor:</strong> Pýthagorás.",
+                        "a": "<strong>Transkripce:</strong> Pythagoras prótos ónomase tén tón holón periochén kosmon ek tés en autó taxeós.<br>" +
+                            "<strong>Doslovný překlad:</strong> Pýthagorás – první – pojmenoval – veškerenstva – celek/oblast – kosmos – z – řádu – v něm<br>" +
+                            "<strong>Autor:</strong> Pýthagorás.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -653,10 +663,12 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> heteroi de tón autón tútón tas archas deka legúsin eínai tas kata systoichían legomenas.<br><strong>Doslovný překlad:</strong> jiní – z týchž – těchto – počátky – deset – říkají – být – ty – podle souvztažné řady – nazývané<br><strong>Autor:</strong> Pýthagorejci (podle Aristotela, Metafyzika I.5).",
+                        "b": "<strong>Transkripce:</strong> heteroi de tón autón tútón tas archas deka legúsin eínai tas kata systoichían legomenas.<br>" +
+                            "<strong>Doslovný překlad:</strong> jiní – z týchž – těchto – počátky – deset – říkají – být – ty – podle souvztažné řady – nazývané<br>" +
+                            "<strong>Autor:</strong> Pýthagorejci (podle Aristotela, Metafyzika I.5).",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
-                },
+                },             
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>πολυμαθίη νόον οὐ διδάσκει· Ἡσίοδον γὰρ ἂν ἐδίδαξε καὶ Πυθαγόρην, αὖτίς τε Ξενοφάνεά τε καὶ Ἑκαταῖον.</strong>",
                     "a": "Lidská povaha nemá záměry, božská je však má.",
@@ -666,9 +678,25 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> polymathíé noon ú didáskei: Hésiodon gar an edidaxe kai Pythagorén, aútís te Xenofanea te kai Hekataíon.<br><strong>Doslovný překlad:</strong> mnohoučenost – rozum – neučí; Hésioda – by totiž – naučila – i – Pýthagoru – a dále – Xenofana – i – Hekataia<br><strong>Autor:</strong> Hérakleitos (B 40)."
+                        "c": "<strong>Transkripce:</strong> polymathíé noon ú didáskei: Hésiodon gar an edidaxe kai Pythagorén, aútís te Xenofanea te kai Hekataíon.<br>" +
+                            "<strong>Doslovný překlad:</strong> mnohoučenost – rozum – neučí; Hésioda – by totiž – naučila – i – Pýthagoru – a dále – Xenofana – i – Hekataia<br>" +
+                            "<strong>Autor:</strong> Hérakleitos (B 40)."
                     }
                 },
+                {
+                    "q": "Co znamená tento řecký text?<br><br><strong>ἐδιζησάμην ἐμεωυτόν.</strong>",
+                    "a": "Mnohoučenost rozumu nenaučí; jinak by byla naučila Hésioda, Pýthagoru, Xenofana i Hekataia.",
+                    "b": "Prohledal jsem sebe sama.",                    
+                    "c": "Jiní z nich říkají, že počátků je deset a uvádějí je ve dvojicích.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> edizésámén emeóuton.<br>" +
+                            "<strong>Doslovný překlad:</strong> hledal jsem - sebe samého<br>" +
+                            "<strong>Autor:</strong> Hérakleitos.",
+                        "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },                   
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>ἦθος γὰρ ἀνθρώπειον μὲν οὐκ ἔχει γνώμας, θεῖον δὲ ἔχει.</strong>",
                     "a": "Lidská povaha nemá záměry, božská je však má.",
@@ -676,7 +704,9 @@ window.data_starorectina = {
                     "c": "Vědomí, rozvaha či myšlení je všem společné.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> éthos gar anthrópeion men úk echei gnómas, theíon de echei.<br><strong>Doslovný překlad:</strong> povaha – totiž – lidská – na jedné straně – nemá – záměry, božská – však – má<br><strong>Autor:</strong> Hérakleitos (B 78).",
+                        "a": "<strong>Transkripce:</strong> éthos gar anthrópeion men úk echei gnómas, theíon de echei.<br>" +
+                            "<strong>Doslovný překlad:</strong> povaha – totiž – lidská – na jedné straně – nemá – záměry, božská – však – má<br>" +
+                            "<strong>Autor:</strong> Hérakleitos (B 78).",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -689,18 +719,22 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> toís egrégorosin hena kai koinon kosmon eínai, tón de koimómenón hekaston eis idion anastrefesthai.<br><strong>Doslovný překlad:</strong> probuzeným – jeden – a – společný – svět – být; spících – však – každý – do – vlastního – obracet se<br><strong>Autor:</strong> Hérakleitos (B 89).",
+                        "b": "<strong>Transkripce:</strong> toís egrégorosin hena kai koinon kosmon eínai, tón de koimómenón hekaston eis idion anastrefesthai.<br>" +
+                            "<strong>Doslovný překlad:</strong> pro bdící - jeden - a - společný - svět - být - těch - ale - spících - každý - do - vlastního - obrací se<br>" +
+                            "<strong>Autor:</strong> Hérakleitos (B 89).",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>Ξυνόν ἐστι πᾶσι τὸ φρονέειν.</strong>",
-                    "a": "Vědomí, rozvaha či myšlení je všem společné.",
+                    "a": "Vědomí je všem společné.",
                     "b": "Když se muž opije, je veden nedospělým chlapcem, vrávorá a nevnímá, kam kráčí, protože má vlhkou duši.",
                     "c": "K duši patří logos, který roste sám sebou.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> Xynon esti pási to froneein.<br><strong>Doslovný překlad:</strong> společné – je – všem – myslet<br><strong>Autor:</strong> Hérakleitos (B 113).",
+                        "a": "<strong>Transkripce:</strong> Xynon esti pási to froneein.<br>" +
+                            "<strong>Doslovný překlad:</strong> společné - je - všem - to - myslet<br>" +
+                            "<strong>Autor:</strong> Hérakleitos.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -712,7 +746,9 @@ window.data_starorectina = {
                     "c": "Skutečná podstata věcí není na první pohled zřejmá.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> Anér hokotan methysthé, agetai hýpo paidos anébú sfallomenos, úk epa-íón hoké baínei, hýgrén tén psychén echón.<br><strong>Doslovný překlad:</strong> muž – kdykoli – opije se – je veden – nedospělým chlapcem – vrávoraje – nevnímaje – kam kráčí – vlhkou – duši – mající<br><strong>Autor:</strong> Hérakleitos (B 117).",
+                        "a": "<strong>Transkripce:</strong> Anér hokotan methysthé, agetai hýpo paidos anébú sfallomenos, úk epa-íón hoké baínei, hýgrén tén psychén echón.<br>" +
+                            "<strong>Doslovný překlad:</strong> muž - když - opije se - veden je - od - dítěte - nedospělého - potácející se - ne-vnímající - kam - kráčí - vlhkou - tu - duši - mající<br>" +
+                            "<strong>Autor:</strong> Hérakleitos (B 117).",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -726,54 +762,22 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> psychés esti logos heauton aúxón.<br><strong>Doslovný překlad:</strong> duše – je – logos – sám sebe – rozvíjející<br><strong>Autor:</strong> Hérakleitos (B 115)."
-                    }
-                },
-                {
-                    "q": "Co vyjadřuje tento výrok?<br><br><strong>Přirozenost se ráda skrývá.</strong>",
-                    "a": "Některé skutečnosti zůstávají lidskému poznání skryté.",
-                    "b": "Skutečná podstata věcí není na první pohled zřejmá.",
-                    "c": "Setkání s poznáním samo nezaručuje porozumění; lidé často zůstávají u vlastního mínění.",
-                    "ans": "b",
-                    "expl": {
-                        "a": "Tento význam neodpovídá zobrazenému výroku.",
-                        "b": "<strong>Autor:</strong> Hérakleitos (B 123).<br><strong>Upozornění:</strong> Podklad uvádí tento výrok pouze v českém překladu.",
-                        "c": "Tento význam neodpovídá zobrazenému výroku."
-                    }
-                },
-                {
-                    "q": "Co vyjadřuje tento výrok?<br><br><strong>Mnohé z božských věcí díky nedůvěře unikají, aby nebyly poznávány.</strong>",
-                    "a": "Setkání s poznáním samo nezaručuje porozumění; lidé často zůstávají u vlastního mínění.",
-                    "b": "Je třeba říkat a myslet, že jsoucí jest, neboť bytí jest, kdežto nic není.",
-                    "c": "Některé skutečnosti zůstávají lidskému poznání skryté.",
-                    "ans": "c",
-                    "expl": {
-                        "a": "Tento význam neodpovídá zobrazenému výroku.",
-                        "b": "Tento význam neodpovídá zobrazenému výroku.",
-                        "c": "<strong>Autor:</strong> Hérakleitos (B 86).<br><strong>Upozornění:</strong> Podklad uvádí tento výrok pouze v českém překladu."
-                    }
-                },
-                {
-                    "q": "Co vyjadřuje tento výrok?<br><br><strong>Mnozí si neuvědomují věci takové, jaké jsou, když se s nimi potkávají; ani když se o nich poučí, nerozpoznávají je; ale sami pro sebe se domnívají.</strong>",
-                    "a": "Setkání s poznáním samo nezaručuje porozumění; lidé často zůstávají u vlastního mínění.",
-                    "b": "Je třeba říkat a myslet, že jsoucí jest, neboť bytí jest, kdežto nic není.",
-                    "c": "To, co se pohybuje, se nepohybuje ani v místě, ve kterém je, ani v místě, ve kterém není.",
-                    "ans": "a",
-                    "expl": {
-                        "a": "<strong>Autor:</strong> Hérakleitos (B 17).<br><strong>Upozornění:</strong> Podklad uvádí tento výrok pouze v českém překladu.",
-                        "b": "Tento význam neodpovídá zobrazenému výroku.",
-                        "c": "Tento význam neodpovídá zobrazenému výroku."
+                        "c": "<strong>Transkripce:</strong> psychés esti logos heauton aúxón.<br>" +
+                            "<strong>Doslovný překlad:</strong> duše – je – logos – sám sebe – rozvíjející<br>" +
+                            "<strong>Autor:</strong> Hérakleitos (B 115)."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>Χρὴ τὸ λέγειν τε νοεῖν τ' ἐὸν ἔμμεναι· ἔστι γὰρ εἶναι, μηδὲν δ' οὐκ ἔστιν.</strong>",
                     "a": "To, co se pohybuje, se nepohybuje ani v místě, ve kterém je, ani v místě, ve kterém není.",
-                    "b": "Je třeba říkat a myslet, že jsoucí jest, neboť bytí jest, kdežto nic není.",
+                    "b": "Je třeba říkat a myslet, že jsoucí jest, neboť bytí jest, kdežto nic věru není.",
                     "c": "Čtyři jsou kořeny všech věcí.",
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> Chré to legein te noeín t' eon emmenai: esti gar eínai, méden d' úk estin.<br><strong>Doslovný překlad:</strong> je třeba – říkat – a – myslet – jsoucí – být; je – totiž – být, nic – však – není<br><strong>Autor:</strong> Parmenidés.",
+                        "b": "<strong>Transkripce:</strong> Chré to legein te noeín t' eon emmenai: esti gar eínai, méden d' úk estin.<br>" +
+                            "<strong>Doslovný překlad:</strong> třeba - to - říkat - i - myslet - i - jsoucí - být - je - totiž - být - nic - ale - ne - je<br>" +
+                            "<strong>Autor:</strong> Parmenidés.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -785,7 +789,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> To kinúmenon út' esti topoi kineítai út' en ó mé esti.<br><strong>Doslovný překlad:</strong> pohybující se – ani – je – v místě – pohybuje se – ani – v tom, kde – není<br><strong>Autor:</strong> Zénón z Eleje.",
+                        "b": "<strong>Transkripce:</strong> To kinúmenon út' esti topoi kineítai út' en ó mé esti.<br>" +
+                            "<strong>Doslovný překlad:</strong> to - pohybující se - ani - je - v místě v němž - pohybuje se - ani - v - němž - ne - je<br>" +
+                            "<strong>Autor:</strong> Zénón z Eleje.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -798,19 +804,23 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> tessara gar pántón rhizómata.<br><strong>Doslovný překlad:</strong> čtyři – totiž – všech – kořeny<br><strong>Autor:</strong> Empedoklés."
+                        "c": "<strong>Transkripce:</strong> tessara gar pántón rhizómata.<br>" +
+                            "<strong>Doslovný překlad:</strong> čtyři – totiž – všech – kořeny<br>" +
+                            "<strong>Autor:</strong> Empedoklés."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>Νόμῳ γλυκύ, νόμῳ πικρόν, νόμῳ θερμόν, νόμῳ ψυχρόν, νόμῳ χροιή, ἐτεῇ δὲ ἄτομα καὶ κενόν.</strong>",
                     "a": "O bozích nemám vědomost – ani že jsou, ani že nejsou.",
                     "b": "Pravda náleží do oblasti vztahovosti (relativa).",
-                    "c": "Podle zvyku (dohody) sladké, hořké, teplé, studené a barevné; ve skutečnosti však atomy a prázdno.",
+                    "c": "Podle zvyku sladké a podle zvyku hořké, podle zvyku teplé a podle zvyku studené, podle zvyku barevné; ve skutečnosti však atomy a prázdno.",
                     "ans": "c",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> nomó glyký, nomó pikron, nomó thermon, nomó psychron, nomó chroié, eteé de atoma kai kenon.<br><strong>Doslovný překlad:</strong> podle zvyku – sladké; podle zvyku – hořké; podle zvyku – teplé; podle zvyku – studené; podle zvyku – barva; ve skutečnosti – však – atomy – a – prázdno<br><strong>Autor:</strong> Démokritos."
+                        "c": "<strong>Transkripce:</strong> Nomó glyký, nomó pikron, nomó thermon, nomó psychron, nomó chroié, eteé de atoma kai kenon.<br>" +
+                            "<strong>Doslovný překlad:</strong> úmluvou - sladké - úmluvou - hořké - úmluvou - teplé - úmluvou - studené - úmluvou - barva - skutečností - pak - atomy - a - prázdno<br>" +
+                            "<strong>Autor:</strong> Démokritos."
                     }
                 },
                 {
@@ -821,7 +831,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> Peri men theón úk echó eidenai úth᾽ hós eisín, úth᾽ hós úk eisín.<br><strong>Doslovný překlad:</strong> o bozích – na jedné straně – nemám – vědět – ani – že – jsou – ani – že – nejsou<br><strong>Autor:</strong> Prótagorás.",
+                        "b": "<strong>Transkripce:</strong> Peri men theón úk echó eidenai úth᾽ hós eisín, úth᾽ hós úk eisín.<br>" +
+                            "<strong>Doslovný překlad:</strong>  o - sice - božích - ne - mám - vědět - ani - že - jsou - ani - že - ne - jsou<br>" +
+                            "<strong>Autor:</strong> Prótagorás.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -833,7 +845,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> tón pros ti eínai tén alétheian.<br><strong>Doslovný překlad:</strong> vztahovým – být – pravdu<br><strong>Autor:</strong> Prótagorás.",
+                        "b": "<strong>Transkripce:</strong> tón pros ti eínai tén alétheian.<br>" +
+                            "<strong>Doslovný překlad:</strong> z těch - ke - vztahu - být - tu - pravdu<br>" +
+                            "<strong>Autor:</strong> Prótagorás.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -845,7 +859,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> pántón chrémátón metron anthrópos, tón men ontón hós esti, tón de úk ontón hós úk estin.<br><strong>Doslovný překlad:</strong> všech – věcí – mírou – člověk; těch – na jedné straně – jsoucích – že – jsou; těch – na druhé straně – nejsoucích – že – nejsou<br><strong>Autor:</strong> Prótagorás.",
+                        "b": "<strong>Transkripce:</strong> Pántón chrémátón metron anthrópos – tón men ontón hós esti, tón de úk ontón hós úk esti.<br>" +
+                            "<strong>Doslovný překlad:</strong> všech - věcí - míra - člověk - těch - sice - jsoucích - že - jsou - těch - ale - ne - jsoucích - že - ne - jsou<br>" +
+                            "<strong>Autor:</strong> Prótagorás.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -858,7 +874,9 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> oída úden eidenai.<br><strong>Doslovný překlad:</strong> vím – nic – vědět<br><strong>Autor:</strong> Sókratés."
+                        "c": "<strong>Transkripce:</strong> oída úden eidenai.<br>" +
+                            "<strong>Doslovný překlad:</strong> vím – nic – vědět<br>" +
+                            "<strong>Autor:</strong> Sókratés."
                     }
                 },
                 {
@@ -868,7 +886,9 @@ window.data_starorectina = {
                     "c": "Filosofové jsou ti, kdo se snaží uchopit každé jednotlivé jsoucí.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> areté esti epistémé.<br><strong>Doslovný překlad:</strong> ctnost – je – vědění<br><strong>Autor:</strong> Sókratés.",
+                        "a": "<strong>Transkripce:</strong> areté esti epistémé.<br>" +
+                            "<strong>Doslovný překlad:</strong> ctnost – je – vědění<br>" +
+                            "<strong>Autor:</strong> Sókratés.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -881,7 +901,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> gnóthi seauton.<br><strong>Doslovný překlad:</strong> poznej – sebe<br><strong>Autor:</strong> Sókratés.",
+                        "b": "<strong>Transkripce:</strong> gnóthi seauton.<br>" +
+                            "<strong>Doslovný překlad:</strong> poznej – sebe<br>" +
+                            "<strong>Autor:</strong> Sókratés.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -892,7 +914,9 @@ window.data_starorectina = {
                     "c": "Učení není ničím jiným než rozpomínáním.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> filosofoi = hekaston to on aspazomenoi.<br><strong>Doslovný překlad:</strong> filosofové – každé – jednotlivé – jsoucno – s láskou přijímající / vítající<br><strong>Autor:</strong> Platón.",
+                        "a": "<strong>Transkripce:</strong> Filosofoi = hekaston to on aspazomenoi.<br>" +
+                            "<strong>Doslovný překlad:</strong> filosofové - každý - ten - jsoucí - milující(vítající)<br>" +
+                            "<strong>Autor:</strong> Platón.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -905,7 +929,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> Kai moi epi toís tettarsi tmémasi tettara taúta pathémata en té psyché gignomena lábe, noésin men epi tó anótátó, dianoian de epi tó deuteró, tó trító de pístin apodos kai tó teleutaíó eikasían …<br><strong>Doslovný překlad:</strong> a – vezmi – čtyřem – úsekům – tyto – čtyři – stavy – v duši – vznikající; rozumové poznání – na nejvyšším – myšlení – na druhém – třetímu – přiřaď – víru – a – poslednímu – dohadování<br><strong>Autor:</strong> Platón (Politeia 511d–e).",
+                        "b": "<strong>Transkripce:</strong> Kai moi epi toís tettarsi tmémasi tettara taúta pathémata en té psyché gignomena lábe, noésin men epi tó anótátó, dianoian de epi tó deuteró, tó trító de pístin apodos kai tó teleutaíó eikasían …<br>" +
+                            "<strong>Doslovný překlad:</strong> a - mně - na - těch - čtyřech - úsecích - čtyři - tyto - stavy - v - té - duši - vznikající - vezmi - rozumové poznání - sice - na - tom - nejvyšším - myšlení - pak - na - tom - druhém - tomu - třetímu - pak - víru - přisuď - a - tomu - poslednímu - dohadování<br>" +
+                            "<strong>Autor:</strong> Platón (Politeia 511d–e).",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -917,7 +943,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> Hýmín hé mathésis úk állo ti é anamnésis.<br><strong>Doslovný překlad:</strong> vám – učení – není – něco jiného – než – rozpomínání<br><strong>Autor:</strong> Platón.",
+                        "b": "<strong>Transkripce:</strong> Hýmín hé mathésis úk állo ti é anamnésis.<br>" +
+                            "<strong>Doslovný překlad:</strong> vám - to - učení - ne - jiné - co - než - rozpomínání<br>" +
+                            "<strong>Autor:</strong> Platón.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -929,20 +957,10 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> (psyché) aítion esti tú zén autó (sómati) …<br><strong>Doslovný překlad:</strong> duše – příčinou – je – toho – žít – jemu – tělu<br><strong>Autor:</strong> Platón.",
+                        "b": "<strong>Transkripce:</strong> (psyché) aítion esti tú zén autó (sómati) …<br>" +
+                            "<strong>Doslovný překlad:</strong> (duše) - příčinou - je - toho - žít - jemu - (tělu)<br>" +
+                            "<strong>Autor:</strong> Platón.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
-                    }
-                },
-                {
-                    "q": "Co vyjadřuje tento výrok?<br><br><strong>Nestanou-li se v obcích filosofové králi nebo neoddají-li se nynější tak zvaní králové a panovníci filosofii, a nespadne-li toto obé v jedno, politická moc a filosofie, není pro obce konce běd…</strong>",
-                    "a": "Idea dobra.",
-                    "b": "Ideální stát může vzniknout pouze spojením filosofického poznání a politické moci; vládnout mají filosofové, protože poznávají dobro.",
-                    "c": "Všechna jsoucna jsou jsoucí na základě Jedna.",
-                    "ans": "b",
-                    "expl": {
-                        "a": "Tento význam neodpovídá zobrazenému výroku.",
-                        "b": "<strong>Autor:</strong> Platón (Politeia 473e–d).<br><strong>Upozornění:</strong> Podklad uvádí tento výrok pouze v českém překladu.",
-                        "c": "Tento význam neodpovídá zobrazenému výroku."
                     }
                 },
                 {
@@ -953,8 +971,52 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> idea tú agathú<br><strong>Doslovný překlad:</strong> idea – dobra<br><strong>Autor:</strong> Platón.",
+                        "b": "<strong>Transkripce:</strong> idea tú agathú<br>" +
+                            "<strong>Doslovný překlad:</strong> idea - toho - dobrého<br>" +
+                            "<strong>Význam:</strong> vrchol hierarchie světa idejí - zdrojem bytí, pravdy a poznání podle platónovy filosofie.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co znamená tento řecký pojem?<br><br><strong>Κοινωνία τῶν γενῶν</strong>",
+                    "a": "Oddělení jednotlivých rodů či idejí, mezi nimiž není žádný vztah.",
+                    "b": "Svět idejí.",
+                    "c": "Přeměna duše v tělesnou látku.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> Koinónía tón genón<br>" +
+                            "<strong>Doslovný překlad:</strong> společenství - těch - rodů<br>" +
+                            "<strong>Význam:</strong> vzájemné propojení či společenství idejí v platónovské filosofii.",
+                        "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co označují pojmy?<br><br><strong>Μῖξις, μέθεξις</strong>",
+                    "a": "Míšení a účast (participace).",
+                    "b": "Oddělení a zbavenost (privace).",
+                    "c": "Paměť a očekávání.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "<strong>Transkripce:</strong> Míxis, methexis<br>" +
+                            "<strong>Doslovný překlad:</strong> míšení – účast/participace<br>" +
+                            "<strong>Význam:</strong> pojmy pro míšení a účast v platonovské filosofii.",
+                        "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Jak je zde charakterizována látka?<br><br><strong>Ὕλη = παντελῶς μὴ ὄν, στέρησις, ἄπειρον.</strong>",
+                    "a": "Jako forma, která věci dává úplné určení.",
+                    "b": "Jako čas, který měří pohyb kosmu.",
+                    "c": "Jako naprosté nebytí, zbavenost a neomezené.",
+                    "ans": "c",
+                    "expl": {
+                        "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "<strong>Transkripce:</strong> Hýlé = pantelós mé on, sterésis, apeiron.<br>" +
+                            "<strong>Doslovný překlad:</strong> hmota - rovná se - úplně - ne - jsoucí - zbavení - neomezené<br>" +
+                            "<strong>Význam:</strong> charakteristika látky uvedená v otázce."
                     }
                 },
                 {
@@ -964,7 +1026,9 @@ window.data_starorectina = {
                     "c": "Každá mnohost je pozdější než Jedno.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> pánta ta onta tó heni estin onta<br><strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br><strong>Autor:</strong> Plótínos.",
+                        "a": "<strong>Transkripce:</strong> pánta ta onta tó heni estin onta.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechna – jsoucna – skrze Jedno – jsou – jsoucí<br>" +
+                            "<strong>Autor:</strong> Plótínos.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -977,19 +1041,39 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> anaitíós aítion.<br><strong>Doslovný překlad:</strong> bez příčiny – příčina<br><strong>Autor:</strong> Proklos.",
+                        "b": "<strong>Transkripce:</strong> Anaitíós aítion.<br>" +
+                            "<strong>Doslovný překlad:</strong> bez příčiny – příčina<br>" +
+                            "<strong>Autor:</strong> Proklos.",
+                        "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+                {
+                    "q": "Co vyjadřuje trojice pojmů v Proklově systému?<br><br><strong>ἡ μονή, ἡ πρόοδος, ἡ ἐπιστροφή.</strong>",
+                    "a": "Vznik, změna a zánik.",
+                    "b": "Setrvání v příčině, vycházení z ní a návrat k ní.",
+                    "c": "Poznávání, vzpomínání a zapomínání.",
+                    "ans": "b",
+                    "expl": {
+                        "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "b": "<strong>Transkripce:</strong> hé moné, hé proodos, hé epistrofé.<br>" +
+                            "<strong>Doslovný překlad:</strong> setrvání/prodlévání – vycházení – návrat<br>" +
+                            "<strong>Význam:</strong> skutečnost setrvává ve své příčině, vychází z ní a obrací se zpět k ní.<br>" +
+                            "Proklós pojal emanaci jako kauzální vztah a v tomto pojetí se řídil třemi otázkami: jak prodlévá důsledek ve svojí příčině, jak zní vychází, a jak se k ní obrací zpět.<br>" +
+                            "<strong>Autor:</strong> Proklos.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>Πᾶν πλῆθος δεύτερόν ἐστι τοῦ ἑνός.</strong>",
-                    "a": "Každá mnohost má nějakým způsobem účast na Jednu.",
+                    "a": "Duše je příčinou, že tělo žije.",
                     "b": "Každá mnohost je pozdější než Jedno.",
                     "c": "Všichni lidé přirozeně touží po vědění.",
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> Pán pléthos deúteron esti tú henos.<br><strong>Doslovný překlad:</strong> každá – mnohost – druhá / následující – je – Jedna<br><strong>Autor:</strong> Proklos.",
+                        "b": "<strong>Transkripce:</strong> Pán pléthos deúteron esti tú henos.<br>" +
+                            "<strong>Doslovný překlad:</strong> každé - množství - druhé - je - toho - jednoho<br>" +
+                            "<strong>Autor:</strong> Proklos.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -1000,7 +1084,9 @@ window.data_starorectina = {
                     "c": "Podstata každé jednotlivé věci je jedním, a to nikoli pouze mimochodem, a stejně tak je i jsoucnem.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> Pán pléthos metechei pé tú henos.<br><strong>Doslovný překlad:</strong> každá – mnohost – má účast – nějakým způsobem – na Jednu<br><strong>Autor:</strong> Proklos.",
+                        "a": "<strong>Transkripce:</strong> Pán pléthos metechei pé tú henos.<br>" +
+                            "<strong>Doslovný překlad:</strong> každá – mnohost – má účast – nějakým způsobem – na Jednu<br>" +
+                            "<strong>Autor:</strong> Proklos.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -1013,19 +1099,23 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> pántes anthrópoi tú eidenai oregontai fýsei.<br><strong>Doslovný překlad:</strong> všichni – lidé – vědění – touží – přirozeně<br><strong>Autor:</strong> Aristotelés.",
+                        "b": "<strong>Transkripce:</strong> pántes anthrópoi tú eidenai oregontai fýsei.<br>" +
+                            "<strong>Doslovný překlad:</strong> všichni - lidé - toho - vědět - touží - přirozeností<br>" +
+                            "<strong>Autor:</strong> Aristotelés.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>ἔτι δ' ἡ ἑκάστου οὐσία ἕν ἐστιν οὐ κατὰ συμβεβηκός, ὁμοίως δὲ καὶ ὅπερ ὄν τι.</strong>",
                     "a": "Jsoucno se vypovídá mnoha způsoby, ale vždy ve vztahu k jednomu a jedné určité přirozenosti, nikoli pouze stejnojmenně, podobně jako všechno zdravé se vztahuje ke zdraví.",
-                    "b": "Podstata každé jednotlivé věci je jedním, a to nikoli pouze mimochodem, a stejně tak je i jsoucnem.",
+                    "b": "Mimo to podstata každé jednotlivé věci je jedním, a to nikoli mimochodem, a stejně tak je i jsoucnem.",
                     "c": "Bytí označuje také jsoucno v možnosti a jsoucno v uskutečnění.",
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> eti d' hé hekástú úsía hen estin ú kata symbebékos, homoíós de kai hoper on ti.<br><strong>Doslovný překlad:</strong> ještě – každé – podstata – jedno – je – nikoli mimochodem – podobně – a – to, co je<br><strong>Autor:</strong> Aristotelés.",
+                        "b": "<strong>Transkripce:</strong> eti d' hé hekástú úsía hen estin ú kata symbebékos, homoíós de kai hoper on ti.<br>" +
+                            "<strong>Doslovný překlad:</strong> ještě - pak - ta - každého - podstata - jedno - je - ne - podle - přípatku - stejně - pak - i - právě to - jsoucí - nějaké<br>" +
+                            "<strong>Autor:</strong> Aristotelés.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -1037,7 +1127,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> to de on legetai men pollachós alla pros hen kai mían tina fýsin kai úch homónýmós all' hósper kai to hýgieinon hápan hýgieian.<br><strong>Doslovný překlad:</strong> jsoucno – vypovídá se – mnoha způsoby – ale – k jednomu – a – určité přirozenosti – nikoli stejnojmenně – jako – všechno zdravé – ke zdraví<br><strong>Autor:</strong> Aristotelés.",
+                        "b": "<strong>Transkripce:</strong> to de on legetai men pollachós alla pros hen kai mían tina fýsin kai úch homónýmós all' hósper kai to hýgieinon hápan hýgieian.<br>" +
+                            "<strong>Doslovný překlad:</strong> to - pak - jsoucí - říká se - sice - mnoha způsoby - ale - ke - jednomu - a - jednu - nějakou - přirozenost - a - ne - stejnojmenně - ale - jako - i - to - zdravé - vše - ke zdraví<br>" +
+                            "<strong>Autor:</strong> Aristotelés.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -1050,9 +1142,27 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> eti to eínai sémaínei kai to on men dynámei rhéton, to d' entelecheía tón eirémenón tútón.<br><strong>Doslovný překlad:</strong> ještě – bytí – znamená – jsoucno – v možnosti – vyslovitelné – v uskutečnění – z – těchto – řečených<br><strong>Autor:</strong> Aristotelés."
+                        "c": "<strong>Transkripce:</strong> eti to eínai sémaínei kai to on men dynámei rhéton, to d' entelecheía tón eirémenón tútón.<br>" +
+                            "<strong>Doslovný překlad:</strong> ještě - to - být - znamená - i - to - jsoucí - sice - v možnosti - řečené - to - pak - ve skutečnosti - z těch - řečených - těchto<br>" +
+                            "<strong>Autor:</strong> Aristotelés."
                     }
                 },
+                {
+                    "q": "Co označuje Aristotelův výraz?<br><br><strong>πρώτη φιλοσοφία</strong>",
+                    "a": "První filosofie, která zkoumá jsoucno jako jsoucno a jeho první příčiny.",
+                    "b": "Praktická filosofie, která zkoumá správné jednání.",
+                    "c": "Fyzika, která zkoumá přírodní jsoucna v pohybu.",
+                    "ans": "a",
+                    "expl": {
+                        "a": "<strong>Transkripce:</strong> próté filosofía<br>" +
+                            "<strong>Doslovný překlad:</strong> první – filosofie<br>" +
+                            "<strong>Význam:</strong> Aristotelovo označení vědy o jsoucnu jako jsoucnu a jeho prvních příčinách.<br>" +
+                            "<strong>Autor:</strong> Aristotelés.",
+                        "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
+                        "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
+                    }
+                },
+
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>ἅπαντα δὲ ταῦτα λέγεται οὐσία ὅτι οὐ καθ' ὑποκειμένου λέγεται ἀλλὰ κατὰ τούτων τὰ ἄλλα.</strong>",
                     "a": "Duše je příčinou a principem živého těla.",
@@ -1062,7 +1172,9 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> hapanta de taúta legetai úsía hoti ú kath' hýpokeimenú legetai alla kata tútón ta álla.<br><strong>Doslovný překlad:</strong> všechny tyto věci – podstata – nazývají se, protože – nevypovídá se – o podmětu – nýbrž – ostatní – o nich<br><strong>Autor:</strong> Aristotelés."
+                        "c": "<strong>Transkripce:</strong> hapanta de taúta legetai úsía hoti ú kath' hýpokeimenú legetai alla kata tútón ta álla.<br>" +
+                            "<strong>Doslovný překlad:</strong> všechna - pak - tato - říká se - podstata - protože - ne - podle - podmětu - říká se - ale - podle - těchto - ty - ostatní<br>" +
+                            "<strong>Autor:</strong> Aristotelés."
                     }
                 },
                 {
@@ -1074,18 +1186,22 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> esti de hé psyché tú zóntos sómatos aitía kai arché.<br><strong>Doslovný překlad:</strong> je – a – duše – živého – těla – příčina – a – princip<br><strong>Autor:</strong> Aristotelés."
+                        "c": "<strong>Transkripce:</strong> esti de hé psyché tú zóntos sómatos aitía kai arché.<br>" +
+                            "<strong>Doslovný překlad:</strong> je - pak - ta - duše - toho - živého - těla - příčina - a - počátek<br>" +
+                            "<strong>Autor:</strong> Aristotelés."
                     }
                 },
                 {
                     "q": "Co znamená tento řecký text?<br><br><strong>τὸ δ' εὖ ζῆν τὸ εὖ πράττειν ταὐτὸν ὑπολαμβάνουσι τῷ εὐδαιμονεῖν.</strong>",
                     "a": "Duše je tedy tělesná.",
-                    "b": "Myslí si, že být blažen je totéž jako dobře žít a dobře jednat.",
+                    "b": "Myslí, že být blažen je totéž, jako dobře žít, dobře jednat a dobře se mít.",
                     "c": "Smrt je oddělení duše od těla.",
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> to d' eú zén to eú práttein tauton hýpolambanúsi tó eudaimoneín.<br><strong>Doslovný překlad:</strong> dobře – žít – dobře – jednat – totéž – považují – za – být blaženým<br><strong>Autor:</strong> Aristotelés (Ethica Nicomachea 1095a 19).",
+                        "b": "<strong>Transkripce:</strong> to d' eú zén to eú práttein tauton hýpolambanúsi tó eudaimoneín.<br>" +
+                            "<strong>Doslovný překlad:</strong> to - pak - dobře - žít - to - dobře - jednat - totéž - pokládají za - s tím - blaženým být<br>" +
+                            "<strong>Autor:</strong> Aristotelés",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 },
@@ -1096,7 +1212,9 @@ window.data_starorectina = {
                     "c": "Čas je rozměr (posloupnost) pohybu světa.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> sóma = ára hé psyché<br><strong>Doslovný překlad:</strong> tělo – tedy – duše<br><strong>Autor:</strong> Stoikové.",
+                        "a": "<strong>Transkripce:</strong> sóma = ára hé psyché<br>" +
+                            "<strong>Doslovný překlad:</strong> tělo = tudíž - ta - duše<br>" +
+                            "<strong>Autor:</strong> Stoikové.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -1108,7 +1226,9 @@ window.data_starorectina = {
                     "c": "Jedno je v ničem a nic není v něm.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> thanatos = chórismos psychés apo tú sómatos<br><strong>Doslovný překlad:</strong> smrt – oddělení – duše – od – těla<br><strong>Autor:</strong> Stoikové.",
+                        "a": "<strong>Transkripce:</strong> thanatos = chórismos psychés apo tú sómatos<br>" +
+                            "<strong>Doslovný překlad:</strong> smrt = oddělení - duše - od - toho - těla<br>" +
+                            "<strong>Autor:</strong> Stoikové.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -1121,7 +1241,9 @@ window.data_starorectina = {
                     "ans": "b",
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "b": "<strong>Transkripce:</strong> chronos = diastéma tés tú kosmú kinéseós<br><strong>Doslovný překlad:</strong> čas – rozměr – pohybu – světa<br><strong>Autor:</strong> Stoikové.",
+                        "b": "<strong>Transkripce:</strong> chronos = diastéma tés tú kosmú kinéseós<br>" +
+                            "<strong>Doslovný překlad:</strong> čas = rozprostranění - toho - z toho - světa - pohybu<br>" +
+                            "<strong>Autor:</strong> Stoikové.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
                 }
@@ -1329,7 +1451,10 @@ window.data_starorectina = {
                     "c": "Ten, který je nade vším a všechno přesahuje.",
                     "ans": "a",
                     "expl": {
-                        "a": "<strong>Transkripce:</strong> hen údeni úden<br><strong>Doslovný překlad:</strong> jedno – v ničem – nic<br><strong>Autor:</strong> Dionýsios Areopagita.<br><strong>Upozornění:</strong> Tato formulace je v podkladu označena jako neověřená; prezentace uvádí i jiné podoby.",
+                        "a": "<strong>Transkripce:</strong> hen údeni úden<br>" +
+                            "<strong>Doslovný překlad:</strong> jedno – v ničem – nic<br>" +
+                            "<strong>Autor:</strong> Dionýsios Areopagita.<br>" +
+                            "<strong>Upozornění:</strong> Tato formulace je v podkladu označena jako neověřená; prezentace uvádí i jiné podoby.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "c": "Tento překlad neodpovídá zobrazenému řeckému textu."
                     }
@@ -1379,7 +1504,9 @@ window.data_starorectina = {
                     "expl": {
                         "a": "Tento překlad neodpovídá zobrazenému řeckému textu.",
                         "b": "Tento překlad neodpovídá zobrazenému řeckému textu.",
-                        "c": "<strong>Transkripce:</strong> ho pántón epekeina.<br><strong>Doslovný překlad:</strong> ten – všeho – přesahující<br><strong>Autor:</strong> Dionýsios Areopagita."
+                        "c": "<strong>Transkripce:</strong> ho pántón epekeina.<br>" +
+                            "<strong>Doslovný překlad:</strong> ten – všeho – přesahující<br>" +
+                            "<strong>Autor:</strong> Dionýsios Areopagita."
                     }
                 },
                 {
